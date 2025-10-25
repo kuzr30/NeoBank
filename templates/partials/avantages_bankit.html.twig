@@ -1,0 +1,248 @@
+{% block avantages_bankit %}
+<section class="avantages-section" id="avantages">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-badge">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                </svg>
+                {{ t('bankit_advantages.section_badge') }}
+            </div>
+            <h2>{{ t('bankit_advantages.section_title') }}</h2>
+            <p>{{ t('bankit_advantages.section_subtitle') }}</p>
+        </div>
+
+        <div class="avantages-grid">
+            <div class="avantage-card featured">
+                <div class="avantage-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                </div>
+                <h3>{{ t('bankit_advantages.coverage.title') }}</h3>
+                <p>{{ t('bankit_advantages.coverage.description') }}</p>
+                <div class="avantage-stats">
+                    <span class="stat">{{ t('bankit_advantages.coverage.discount') }}</span>
+                </div>
+            </div>
+
+            <div class="avantage-card">
+                <div class="avantage-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+                    </svg>
+                </div>
+                <h3>{{ t('bankit_advantages.automatic_payment.title') }}</h3>
+                <p>{{ t('bankit_advantages.automatic_payment.description') }}</p>
+            </div>
+
+            <div class="avantage-card">
+                <div class="avantage-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <h3>{{ t('bankit_advantages.express_processing.title') }}</h3>
+                <p>{{ t('bankit_advantages.express_processing.description') }}</p>
+            </div>
+
+            <div class="avantage-card">
+                <div class="avantage-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                    </svg>
+                </div>
+                <h3>{{ t('bankit_advantages.dedicated_support.title') }}</h3>
+                <p>{{ t('bankit_advantages.dedicated_support.description') }}</p>
+            </div>
+
+            <div class="avantage-card">
+                <div class="avantage-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                    </svg>
+                </div>
+                <h3>{{ t('bankit_advantages.real_time_tracking.title') }}</h3>
+                <p>{{ t('bankit_advantages.real_time_tracking.description') }}</p>
+            </div>
+
+            <div class="avantage-card">
+                <div class="avantage-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                    </svg>
+                </div>
+                <h3>{{ t('bankit_advantages.banking_security.title') }}</h3>
+                <p>{{ t('bankit_advantages.banking_security.description') }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.avantages-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+}
+
+.section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #3b82f6, #10b981);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.section-badge svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.section-header p {
+    font-size: 1.125rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.avantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.avantage-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    border: 1px solid #e2e8f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.avantage-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #3b82f6, #10b981);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.avantage-card:hover::before {
+    transform: scaleX(1);
+}
+
+.avantage-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.avantage-card.featured {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #1e293b, #334155);
+    color: white;
+    transform: scale(1.02);
+}
+
+.avantage-card.featured::before {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+}
+
+.avantage-icon {
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(135deg, #3b82f6, #10b981);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.avantage-card.featured .avantage-icon {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+}
+
+.avantage-icon::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: inherit;
+    opacity: 0.2;
+    transform: scale(1.5);
+    z-index: -1;
+}
+
+.avantage-icon svg {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+}
+
+.avantage-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: inherit;
+}
+
+.avantage-card p {
+    line-height: 1.6;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.avantage-card.featured p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.avantage-stats {
+    display: flex;
+    gap: 1rem;
+}
+
+.stat {
+    background: rgba(251, 191, 36, 0.1);
+    color: #f59e0b;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .avantages-section { padding: 3rem 0; }
+    .section-header h2 { font-size: 2rem; }
+    .avantages-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .avantage-card.featured { grid-column: 1; transform: none; }
+}
+</style>
+{% endblock %}

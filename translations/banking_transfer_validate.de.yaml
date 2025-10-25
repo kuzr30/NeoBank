@@ -1,0 +1,32 @@
+banking_transfer_validate:
+  header:
+    title: "Überweisungsvalidierung"
+    subtitle: "Geben Sie die Sicherheitscodes ein, um Ihre Überweisung zu validieren"
+    back_button: "Zurück"
+  
+  summary:
+    title: "Überweisung in Validierung"
+    amount_label: "Betrag:"
+    beneficiary_label: "Empfänger:"
+    description_label: "Beschreibung:"
+    status_label: "Status:"
+  
+  status:
+    pending: "Ausstehend"
+    executing: "Wird ausgeführt"
+    completed: "Abgeschlossen"
+    expired: "Abgelaufen"
+    cancelled: "Storniert"
+    blocked: "Gesperrt"
+  
+  validation:
+    form_title: "Überweisungsvalidierung"
+    submit_button: "Validieren"
+  
+  alerts:
+    code_expired: "Der Code \"%code%\" ist abgelaufen."
+    transfer_confirmed: "Die Überweisung ist bestätigt."
+    transfer_completed: "Die Überweisung wurde am %date% erfolgreich ausgeführt."
+    transfer_expired: "Diese Überweisung ist abgelaufen und kann nicht mehr validiert werden. Sie müssen eine neue Überweisung erstellen."
+    transfer_cancelled: "Diese Überweisung wurde storniert."
+    transfer_blocked: "Diese Überweisung wurde aufgrund von falschen Validierungsversuchen gesperrt. Kontaktieren Sie den Kundenservice, um Ihr Konto zu entsperren."

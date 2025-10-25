@@ -1,0 +1,26 @@
+email_contract_signed_customer:
+  title: "Bevestiging contractondertekening"
+  subject: "Bevestiging contractondertekening - %referenceNumber%"
+  content:
+    confirmation:
+      title: "Uw contract is succesvol ondertekend!"
+      description: "Beste %customerName%, wij bevestigen dat uw kredietcontract is ondertekend en ontvangen door onze diensten."
+    contract_details:
+      title: "Details van uw contract"
+      reference_number: "Referentienummer"
+      loan_amount: "Leningbedrag"
+      status_label: "Status"
+      status_value: "Ondertekend"
+    next_steps:
+      title: "Volgende stappen"
+      description: "Uw dossier volgt nu het administratieve validatieproces:"
+      validation: "Verificatie en validatie van uw contract door onze teams"
+      processing: "Administratieve verwerking en finalisatie"
+      disbursement: "Vrijgave van middelen naar uw rekening"
+    important_info:
+      title: "Belangrijke informatie"
+      description: "De vrijgave van middelen vindt plaats binnen 24-48 werkdagen na administratieve validatie."
+    cta:
+      button_text: "Mijn dossier bekijken"
+    footer:
+      regards: "Met vriendelijke groet,"

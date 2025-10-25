@@ -1,0 +1,108 @@
+credit_renouvelable:
+  page:
+    title: "Crédito Renovable"
+    description: "Reserva de dinero disponible en cualquier momento con nuestro crédito renovable. Flexibilidad y libertad de uso garantizadas."
+  
+  hero:
+    class: "credit-detail-hero--renouvelable"
+    taux: "{rate}%"
+    montant: "15.000€"
+    duree: "Permanente"
+    title: "Crédito Renovable"
+    subtitle: "Su reserva de dinero disponible"
+  
+  section_1:
+    title: "¿Qué es un crédito renovable?"
+    content:
+      paragraph_1: "El crédito renovable, también llamado crédito revolving, pone a su disposición una reserva de dinero que puede utilizar en cualquier momento, según sus necesidades, sin justificación."
+      paragraph_2: "A medida que realiza sus reembolsos, su reserva se reconstituye automáticamente. Solo paga intereses sobre las sumas efectivamente utilizadas."
+  
+  section_2:
+    title: "Características del crédito"
+  
+  features:
+    montant:
+      value: "De 500€ a 15.000€"
+      detail: "Reserva modular"
+    duree:
+      value: "Duración permanente"
+      detail: "Renovable cada año"
+    taux:
+      value: "A partir del {rate}% TAEG*"
+      detail: "Sobre las sumas utilizadas"
+    garantie:
+      value: "Sin garantía"
+      detail: "Solo con firma"
+  
+  section_3:
+    title: "Ventajas del crédito renovable"
+    advantages:
+      disponibilite:
+        title: "Disponibilidad inmediata"
+        description: "Fondos accesibles 24h/24 por tarjeta o transferencia"
+      reconstruction:
+        title: "Reconstitución automática"
+        description: "Reserva que se reconstituye con sus reembolsos"
+      pas_interets:
+        title: "Sin intereses si no se utiliza"
+        description: "Sin costo mientras no utilice la reserva"
+      remboursement:
+        title: "Reembolso flexible"
+        description: "Monto mínimo bajo, posibilidad de reembolso anticipado"
+      carte:
+        title: "Tarjeta de crédito"
+        description: "Uso por tarjeta bancaria asociada"
+  
+  section_4:
+    title: "Condiciones y criterios de uso"
+    conditions:
+      title: "Condiciones de obtención"
+      items:
+        majeur: "Ser mayor de edad y residir en España"
+        revenus: "Justificar ingresos regulares"
+        surendettement: "No estar en situación de sobreendeudamiento"
+        interdiction: "No tener prohibición bancaria"
+    
+    criteres:
+      title: "Criterios de uso"
+      items:
+        usage: "Uso responsable recomendado"
+        impulsifs: "Evitar compras impulsivas"
+        plan: "Prever un plan de reembolso"
+        surveiller: "Supervisar regularmente el saldo"
+  
+  section_5:
+    title: "Documentos justificativos necesarios"
+    identite:
+      title: "Justificantes de identidad"
+      items:
+        carte: "Cédula de identidad o pasaporte"
+        domicile: "Justificante de domicilio reciente"
+        rib: "Certificado de cuenta bancaria"
+    
+    revenus:
+      title: "Justificantes de ingresos"
+      items:
+        bulletins: "3 últimas nóminas"
+        avis: "Última declaración de la renta"
+        attestation: "Certificado del empleador si es necesario"
+    
+    bancaires:
+      title: "Información bancaria"
+      items:
+        releves: "Extractos de cuenta recientes"
+        credits: "Justificantes de otros créditos"
+        patrimoine: "Declaración de patrimonio"
+  
+  legal:
+    title: "Información legal importante"
+    details:
+      taeg: "TAEG: Ejemplo representativo: para una reserva de 3.000€ utilizada permanentemente al TAEG del 6,9%, con un reembolso de 90€/mes, la duración de reembolso es de 40 meses para un costo total de 597€."
+      utilisation: "Uso: Atención a no utilizar este crédito para gastos corrientes recurrentes."
+      remboursement: "Reembolso: Mensualidad mínima del 3% del capital utilizado o 15€ mínimo."
+      renouvellement: "Renovación: Examen anual de su situación y renovación bajo condiciones."
+      resiliation: "Rescisión: Posible en cualquier momento, reembolso del saldo debido obligatorio."
+  
+  cta:
+    title: "Constituya su reserva"
+    subtitle: "Disponga de una solución de financiación flexible con nuestro crédito renovable"

@@ -1,0 +1,223 @@
+insurance:
+  # Meta tags
+  meta:
+    title: "Bankversicherungen - Vollständiger Schutz - %company_name%"
+    description: "Entdecken Sie unsere umfassenden Bankversicherungslösungen: Auto, Wohngebäude, Gesundheit, Reise und mehr. Optimaler Schutz mit %company_name%."
+
+  # Hero Section
+  hero:
+    title_part1: "Ihr Vertrauens-"
+    title_accent: "Versicherungs"
+    title_part2: "partner"
+    description: "Sparen Sie und vergleichen Sie Autoversicherungsangebote. Passen Sie Ihre Deckung an und erhalten Sie das beste Angebot in wenigen Minuten."
+    email_placeholder: "Ihre E-Mail"
+    cta_button: "Angebot erhalten"
+    support_badge: "Kundensupport"
+    nav:
+      auto: "Auto"
+      home: "Wohngebäude"
+      health: "Gesundheit"
+      life: "Leben"
+      professional: "Beruflich"
+  
+  packages:
+    title: "Unsere Versicherungspakete"
+    subtitle: "Lösungen angepasst an Ihre Bedürfnisse - wählen Sie die für Sie passende aus"
+    essential:
+      title: "Grundversicherung"
+      description: "Grundlegender Schutz für Ihren Seelenfrieden zu einem erschwinglichen Tarif"
+      features:
+        - "Haftpflichtversicherung"
+        - "Pannenhilfe"
+        - "Rechtsschutz"
+    standard:
+      badge: "Empfohlen"
+      title: "Standardversicherung"
+      description: "Ein ausgewogener Plan mit verstärktem Schutz und erweiterten Vorteilen"
+      features:
+        - "Vollkaskoversicherung Kollision"
+        - "Diebstahl und Brand"
+        - "Glasbruch"
+        - "Ersatzfahrzeug"
+    premium:
+      title: "Premium-Versicherung"
+      description: "Vollständige Deckung mit exklusiven Vorteilen für totale Sicherheit"
+      features:
+        - "Vollkaskoversicherung"
+        - "Neuwert 2 Jahre"
+        - "Europa-Assistance"
+        - "Zweitfahrer"
+    custom:
+      title: "Maßgeschneiderte Versicherung"
+      description: "Erstellen Sie Ihren eigenen Plan - wählen Sie die Garantien, die am besten zu Ihnen passen"
+      features:
+        - "Modulare Garantien"
+        - "Personalisierte Preisgestaltung"
+        - "Zugewiesener Berater"
+        - "Flexible Anpassungen"
+
+  # Section hero originale (pour hero_assurances.html.twig)  
+  hero_banner:
+    badge: "Integraler Bankschutz"
+    title: "Schützen Sie Ihr Vermögen mit unseren"
+    title_highlight: "Bankversicherungen"
+    description: "Entdecken Sie unsere Versicherungslösungen, die speziell entwickelt wurden, um Ihre Investitionen, Ihre Kredite und Ihren Seelenfrieden zu schützen. Mehr als 50.000 Kunden vertrauen uns."
+    stats:
+      satisfaction:
+        value: "98%"
+        label: "Kundenzufriedenheit"
+      processing:
+        value: "24h"
+        label: "Angebotbearbeitung"
+      types:
+        value: "12"
+        label: "Versicherungsarten"
+    actions:
+      primary: "Unsere Versicherungen entdecken"
+      secondary: "Warum uns wählen"
+    cards:
+      home:
+        title: "Wohngebäudeversicherung"
+        description: "Vollständiger Schutz Ihres Zuhauses"
+      loan:
+        title: "Kreditversicherung"
+        description: "Sichern Sie Ihre Rückzahlungen"
+      auto:
+        title: "Autoversicherung"
+        description: "Fahren Sie mit voller Sicherheit"
+
+  # Insurance Types Section
+  types:
+    header:
+      title: "Unsere Versicherungslösungen"
+      subtitle: "Ein vollständiges Sortiment an Versicherungen für alle Ihre Bedürfnisse, mit wettbewerbsfähigen Tarifen und außergewöhnlichem Kundendienst."
+    auto:
+      title: "Autoversicherung"
+      description: "Vollständiger Schutz für Ihr Fahrzeug mit 24h/24 Assistance und erweiterten Garantien."
+      features:
+        - "Assistance 24h/24 und 7T/7"
+        - "Reparatur bei allen unseren Partnern"
+        - "Ersatzfahrzeug"
+        - "Fahrerschutz"
+        - "Glasbruch inklusive"
+      cta: "Auto-Angebot erhalten"
+      popular: "Beliebt"
+    credit:
+      title: "Kreditversicherung"
+      description: "Schützen Sie Ihre Familie und Ihre Projekte bei Rückzahlungsunfähigkeit Ihres Kredits."
+      features:
+        - "Deckung Tod und Invalidität"
+        - "Vorübergehende Arbeitsunfähigkeit"
+        - "Arbeitsplatzverlust (Option)"
+        - "Vorzugstarife für Kunden"
+        - "Versicherungsdelegation möglich"
+      cta: "Kredit-Angebot erhalten"
+    home:
+      title: "Wohngebäudeversicherung"
+      description: "Schützen Sie Ihre Wohnung und Ihre Güter gegen alle Risiken des Alltags."
+      features:
+        - "Vollständige Wohngebäude-Mehrrisikoversicherung"
+        - "Haftpflichtversicherung inklusive"
+        - "Pannenhilfe 24h/24"
+        - "Rechtsschutz"
+        - "Mobile Güter abgedeckt"
+      cta: "Wohngebäude-Angebot erhalten"
+    health:
+      title: "Krankenversicherung"
+      description: "Zusatzkrankenversicherung angepasst an Ihre Bedürfnisse mit einem breiten Netzwerk von Fachleuten."
+      features:
+        - "Schnelle Erstattungen"
+        - "Allgemeine Drittübernahme"
+        - "Teleberatung inklusive"
+        - "Sanfte Medizin abgedeckt"
+        - "Verstärkte Optik und Zahnheilkunde"
+      cta: "Gesundheits-Angebot erhalten"
+    life:
+      title: "Lebensversicherung"
+      description: "Bilden und übertragen Sie Ihr Vermögen unter Optimierung Ihrer Steuern."
+      features:
+        - "Freie oder programmierte Einzahlungen"
+        - "Große Auswahl an Trägern"
+        - "Vorschuss auf Vertrag möglich"
+        - "Vorteilhafte Besteuerung"
+        - "Freie oder geleitete Verwaltung"
+      cta: "Lebensversicherungs-Angebot erhalten"
+    travel:
+      title: "Reiseversicherung"
+      description: "Reisen Sie beruhigt mit unserer vollständigen Reisedeckung."
+      features:
+        - "Rückführungsassistance"
+        - "Medizinische Kosten im Ausland"
+        - "Reisestornierung"
+        - "Gepäck und persönliche Gegenstände"
+        - "Haftpflichtversicherung"
+      cta: "Reise-Angebot erhalten"
+    professional:
+      title: "Berufsversicherung"
+      description: "Schützen Sie Ihre berufliche Tätigkeit mit unseren maßgeschneiderten Garantien."
+      features:
+        - "Berufshaftpflicht"
+        - "Rechtsschutz"
+        - "Berufs-Mehrrisikoversicherung"
+        - "Cyber-Risiken inklusive"
+        - "Betriebsausfall"
+      cta: "Berufs-Angebot erhalten"
+    decennial:
+      title: "Zehnjährige Verantwortung"
+      description: "Gesetzliche Verpflichtung für alle Bau- und Konstruktionsfachleute."
+      features:
+        - "Obligatorische 10-Jahre-Deckung"
+        - "Verteidigung und Rückgriff"
+        - "Schäden an Bauwerken"
+        - "Sofortige Bescheinigung"
+        - "Vorzugstarife"
+      cta: "Zehnjährige-Angebot erhalten"
+
+  # Benefits Section
+  benefits:
+    title: "Warum unsere Versicherungen wählen?"
+    competitive_rates:
+      title: "Wettbewerbsfähige Tarife"
+      description: "Angebote für alle Budgets angepasst, ohne Kompromisse bei der Deckungsqualität."
+    support_24_7:
+      title: "Support 24/7"
+      description: "Reaktive und menschliche Assistance, jederzeit verfügbar, um Sie zu begleiten."
+    online_management:
+      title: "100% Online-Verwaltung"
+      description: "Abschluss, Verwaltung und Verfolgung Ihrer Verträge direkt von Ihrem sicheren Kundenbereich."
+    custom_offers:
+      title: "Maßgeschneiderte Angebote"
+      description: "Personalisierte Lösungen entsprechend Ihren Bedürfnissen, ob Sie Privatperson oder Berufstätiger sind."
+
+  # Process Section
+  process:
+    title: "Eine Versicherung abschließen ist einfach!"
+    steps:
+      choose:
+        title: "Wählen Sie Ihre Versicherungsart"
+        description: "Wählen Sie die Art der Deckung, die Ihren Bedürfnissen entspricht"
+      form:
+        title: "Füllen Sie das Online-Angebot-Formular aus"
+        description: "Wenige Informationen reichen aus, um Ihr Angebot zu erhalten"
+      proposal:
+        title: "Erhalten Sie ein personalisiertes Angebot"
+        description: "Unser Team prüft Ihren Antrag und bietet Ihnen das beste Angebot"
+      subscribe:
+        title: "Abschließen und sofort geschützt sein"
+        description: "Online-Validierung und effektiver Schutz ab Unterzeichnung"
+
+  # Contact CTA Section
+  contact_cta:
+    title: "Benötigen Sie eine Beratung oder ein Angebot?"
+    description: "Unsere Berater hören Ihnen zu, um Sie bei Ihrem Versicherungsprojekt zu begleiten."
+    button: "Kontaktieren Sie uns"
+
+  # Common elements
+  common:
+    get_quote: "Angebot erhalten"
+    learn_more: "Mehr erfahren"
+    contact_us: "Uns kontaktieren"
+    from: "Ab"
+    per_month: "pro Monat"
+    popular: "Beliebt"
+    recommended: "Empfohlen"

@@ -1,0 +1,27 @@
+banking_transfer_new:
+  header:
+    title: "Nouveau virement"
+    subtitle: "Transférez de l'argent vers un compte bénéficiaire"
+    back_button: "Retour"
+  
+  process_steps:
+    step1: "Informations"
+    step2: "Validation"
+    step3: "Confirmation"
+  
+  source_account:
+    title: "Compte source"
+    main_account: "Compte Principal"
+    available_balance: "Solde disponible :"
+    no_account_warning: "Aucun compte source disponible. Contactez votre conseiller."
+  
+  destination_account:
+    title: "Compte bénéficiaire"
+    help_text: "Sélectionnez le compte vers lequel vous souhaitez effectuer le virement"
+  
+  transfer_details:
+    title: "Détails du virement"
+    description_help: "Décrivez le motif de ce virement (facultatif)"
+  
+  actions:
+    cancel: "Annuler"

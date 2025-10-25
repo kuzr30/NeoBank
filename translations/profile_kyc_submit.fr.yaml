@@ -1,0 +1,73 @@
+profile_kyc_submit:
+  page:
+    title: "Soumettre les documents KYC - %company_name%"
+  
+  header:
+    title: "Soumettre mes documents KYC"
+    title_resubmission: "Soumettre de nouveaux documents KYC"
+    subtitle: "Complétez votre dossier en téléchargeant les documents requis"
+    subtitle_resubmission: "Votre précédente soumission a été refusée. Veuillez corriger et re-soumettre vos documents"
+  
+  rejection:
+    title: "Raison du refus de votre précédente demande"
+  
+  info:
+    title: "Information importante"
+    title_resubmission: "Points d'attention pour votre nouvelle soumission"
+    requirements:
+      resubmit_attention: "Vérifiez que vos documents correspondent aux exigences mentionnées"
+      resubmit_readable: "Assurez-vous que tous les documents sont bien lisibles"
+      readable_color: "Tous les documents doivent être lisibles et en couleur"
+      formats: "Formats acceptés : PDF, JPG, PNG"
+      max_size: "Taille maximale : 4 Mo par fichier"
+      date_limit: "Les documents doivent dater de moins de 3 mois"
+  
+  actions:
+    back: Retour
+    submit: "Soumettre les documents"
+    submit_resubmission: "Re-soumettre les documents"
+    save_draft: "Sauvegarder le brouillon"
+    cancel: "Annuler"
+  
+  form:
+    labels:
+      identity_document: "Pièce d'identité (CNI, Passeport, etc.)"
+      income_document: "Justificatif de revenus (Fiche de paie, Avis d'impôt, etc.)"
+      address_document: "Justificatif de domicile (Facture, Quittance de loyer, etc.)"
+      selfie_document: "Selfie avec votre pièce d'identité (optionnel)"
+    
+    help:
+      pdf_jpg_png: "Format PDF, JPG ou PNG, max 4Mo"
+      jpg_png_only: "Format JPG ou PNG uniquement, max 4Mo"
+    
+    declaration:
+      title: "Déclaration"
+      text: "En soumettant ces documents, je certifie que les informations fournies sont exactes et à jour. Je comprends que de fausses informations peuvent entraîner la fermeture de mon compte."
+      text_resubmission: "En re-soumettant ces documents, je certifie que les informations fournies sont exactes, à jour et corrigées selon les recommandations. Je comprends que de fausses informations peuvent entraîner la fermeture de mon compte."
+    
+    personal_info:
+      title: "Informations personnelles"
+      first_name: "Prénom"
+      last_name: "Nom de famille"
+      birth_date: "Date de naissance"
+      nationality: "Nationalité"
+      
+    documents:
+      title: "Documents d'identité"
+      identity_document: "Pièce d'identité"
+      identity_document_help: "Téléchargez une photo claire de votre passeport, carte d'identité ou permis de conduire"
+      proof_of_address: "Justificatif de domicile"
+      proof_of_address_help: "Facture d'électricité, de gaz ou relevé bancaire de moins de 3 mois"
+      selfie: "Photo selfie"
+      selfie_help: "Prenez une photo de vous tenant votre pièce d'identité"
+      
+    file_requirements:
+      title: "Exigences pour les fichiers"
+      formats: "Formats acceptés : JPG, PNG, PDF"
+      max_size: "Taille maximale : 5MB par fichier"
+      quality: "Assurez-vous que les documents sont lisibles et de bonne qualité"
+    
+  validation:
+    required_field: "Ce champ est obligatoire"
+    invalid_file: "Format de fichier non valide"
+    file_too_large: "Le fichier est trop volumineux"

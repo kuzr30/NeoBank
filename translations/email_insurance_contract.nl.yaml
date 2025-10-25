@@ -1,0 +1,33 @@
+email_insurance_contract:
+    title: "Uw verzekeringscontract insuranceType"
+    
+    content:
+        page_title: "Uw verzekeringscontract insuranceType"
+        greeting: "Hallo customerName,"
+        
+        contract_ready:
+            title: "Uw contract is klaar!"
+            description: "U vindt uw verzekeringscontract insuranceType in de bijlage. Dit officiële document bevestigt uw dekking."
+        
+        contract_details:
+            title: "Details van uw contract"
+            contract_number: "Contract nr. contractNumber"
+            insurance_type: "Type verzekering"
+            monthly_premium: "Maandelijkse premie"
+            activation_date: "Activeringsdatum"
+            status: "Status"
+        
+        important_info:
+            title: "Belangrijke informatie"
+            point_1: "Dit contract gaat in op de genoemde activeringsdatum"
+            point_2: "Uw maandelijkse premie wordt elke maand automatisch afgeschreven"
+            point_3: "U heeft een herroepingsrecht van 14 kalenderdagen"
+            point_4: "Bewaar dit document zorgvuldig, het wordt gevraagd bij een claim"
+        
+        footer:
+            company_info: "%company_name%"
+            contact_email: "E-mail: %company_email%"
+            privacy_notice: "Deze e-mail en bijgevoegde documenten kunnen vertrouwelijke informatie bevatten. Als u niet de beoogde ontvanger bent, gelieve ons onmiddellijk te informeren en deze e-mail te vernietigen."
+        
+        closing: "Wij danken u voor uw vertrouwen en blijven tot uw beschikking."
+        signature: "Met vriendelijke groeten,<br><strong>Het %company_name% team</strong>"

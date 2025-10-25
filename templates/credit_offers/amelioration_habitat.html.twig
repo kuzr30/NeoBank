@@ -1,0 +1,140 @@
+{% extends 'credit_offers/credit_page_structure.html.twig' %}
+
+{% set page_title = tp('amelioration_habitat.page.title', [], 'amelioration_habitat') %}
+{% set page_description = tp('amelioration_habitat.page.description', [], 'amelioration_habitat') %}
+{% set hero_class = 'credit-detail-hero--amelioration' %}
+
+{% block taux_value %}{{ credit_rate('home_improvement') }}%{% endblock %}
+{% block montant_value %}{{ tp('amelioration_habitat.hero.values.montant', [], 'amelioration_habitat') }}{% endblock %}
+{% block duree_value %}{{ tp('amelioration_habitat.hero.values.duree', [], 'amelioration_habitat') }}{% endblock %}
+
+{% block hero_title %}{{ tp('amelioration_habitat.hero.title', [], 'amelioration_habitat') }}{% endblock %}
+{% block hero_subtitle %}{{ tp('amelioration_habitat.hero.subtitle', [], 'amelioration_habitat') }}{% endblock %}
+
+{% block section_1_title %}{{ tp('amelioration_habitat.section_1.title', [], 'amelioration_habitat') }}{% endblock %}
+
+{% block section_1_content %}
+<p>{{ tp('amelioration_habitat.section_1.content.paragraph_1', [], 'amelioration_habitat') }}</p>
+<p>{{ tp('amelioration_habitat.section_1.content.paragraph_2', [], 'amelioration_habitat') }}</p>
+{% endblock %}
+
+{% block feature_montant %}{{ tp('amelioration_habitat.features.montant', [], 'amelioration_habitat') }}{% endblock %}
+{% block feature_montant_detail %}{{ tp('amelioration_habitat.features.montant_detail', [], 'amelioration_habitat') }}{% endblock %}
+{% block feature_duree %}{{ tp('amelioration_habitat.features.duree', [], 'amelioration_habitat') }}{% endblock %}
+{% block feature_duree_detail %}{{ tp('amelioration_habitat.features.duree_detail', [], 'amelioration_habitat') }}{% endblock %}
+{% block feature_taux %}{{ tp('amelioration_habitat.features.taux', [], 'amelioration_habitat')|replace({'{rate}': credit_rate('amelioration')})|raw }}{% endblock %}
+{% block feature_taux_detail %}{{ tp('amelioration_habitat.features.taux_detail', [], 'amelioration_habitat') }}{% endblock %}
+{% block feature_garantie %}{{ tp('amelioration_habitat.features.garantie', [], 'amelioration_habitat') }}{% endblock %}
+{% block feature_garantie_detail %}{{ tp('amelioration_habitat.features.garantie_detail', [], 'amelioration_habitat') }}{% endblock %}
+
+{% block section_3_content %}
+<ul class="credit-detail-advantages">
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('amelioration_habitat.advantages.taux_avantageux.title', [], 'amelioration_habitat') }}</strong> {{ tp('amelioration_habitat.advantages.taux_avantageux.text', [], 'amelioration_habitat') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('amelioration_habitat.advantages.usage_specialise.title', [], 'amelioration_habitat') }}</strong> {{ tp('amelioration_habitat.advantages.usage_specialise.text', [], 'amelioration_habitat') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('amelioration_habitat.advantages.deblocage_progressif.title', [], 'amelioration_habitat') }}</strong> {{ tp('amelioration_habitat.advantages.deblocage_progressif.text', [], 'amelioration_habitat') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('amelioration_habitat.advantages.accompagnement.title', [], 'amelioration_habitat') }}</strong> {{ tp('amelioration_habitat.advantages.accompagnement.text', [], 'amelioration_habitat') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('amelioration_habitat.advantages.plus_value.title', [], 'amelioration_habitat') }}</strong> {{ tp('amelioration_habitat.advantages.plus_value.text', [], 'amelioration_habitat') }}</span>
+    </li>
+</ul>
+{% endblock %}
+
+{% block section_4_content %}
+<div class="credit-detail-requirements">
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('amelioration_habitat.requirements.conditions_emprunteur.title', [], 'amelioration_habitat') }}</h3>
+        <ul>
+            <li>{{ tp('amelioration_habitat.requirements.conditions_emprunteur.items.proprietaire', [], 'amelioration_habitat') }}</li>
+            <li>{{ tp('amelioration_habitat.requirements.conditions_emprunteur.items.revenus', [], 'amelioration_habitat') }}</li>
+            <li>{{ tp('amelioration_habitat.requirements.conditions_emprunteur.items.endettement', [], 'amelioration_habitat') }}</li>
+            <li>{{ tp('amelioration_habitat.requirements.conditions_emprunteur.items.incidents', [], 'amelioration_habitat') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('amelioration_habitat.requirements.conditions_projet.title', [], 'amelioration_habitat') }}</h3>
+        <ul>
+            <li>{{ tp('amelioration_habitat.requirements.conditions_projet.items.travaux', [], 'amelioration_habitat') }}</li>
+            <li>{{ tp('amelioration_habitat.requirements.conditions_projet.items.devis', [], 'amelioration_habitat') }}</li>
+            <li>{{ tp('amelioration_habitat.requirements.conditions_projet.items.normes', [], 'amelioration_habitat') }}</li>
+            <li>{{ tp('amelioration_habitat.requirements.conditions_projet.items.professionnels', [], 'amelioration_habitat') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block section_5_content %}
+<div class="credit-detail-documents">
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('amelioration_habitat.documents.dossier_personnel.title', [], 'amelioration_habitat') }}</h3>
+        <ul>
+            <li>{{ tp('amelioration_habitat.documents.dossier_personnel.items.piece', [], 'amelioration_habitat') }}</li>
+            <li>{{ tp('amelioration_habitat.documents.dossier_personnel.items.domicile', [], 'amelioration_habitat') }}</li>
+            <li>{{ tp('amelioration_habitat.documents.dossier_personnel.items.bulletins', [], 'amelioration_habitat') }}</li>
+            <li>{{ tp('amelioration_habitat.documents.dossier_personnel.items.avis', [], 'amelioration_habitat') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('amelioration_habitat.documents.justificatifs_patrimoniaux.title', [], 'amelioration_habitat') }}</h3>
+        <ul>
+            <li>{{ tp('amelioration_habitat.documents.justificatifs_patrimoniaux.items.titre', [], 'amelioration_habitat') }}</li>
+            <li>{{ tp('amelioration_habitat.documents.justificatifs_patrimoniaux.items.taxe', [], 'amelioration_habitat') }}</li>
+            <li>{{ tp('amelioration_habitat.documents.justificatifs_patrimoniaux.items.releves', [], 'amelioration_habitat') }}</li>
+            <li>{{ tp('amelioration_habitat.documents.justificatifs_patrimoniaux.items.tableau', [], 'amelioration_habitat') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('amelioration_habitat.documents.documents_travaux.title', [], 'amelioration_habitat') }}</h3>
+        <ul>
+            <li>{{ tp('amelioration_habitat.documents.documents_travaux.items.devis', [], 'amelioration_habitat') }}</li>
+            <li>{{ tp('amelioration_habitat.documents.documents_travaux.items.permis', [], 'amelioration_habitat') }}</li>
+            <li>{{ tp('amelioration_habitat.documents.documents_travaux.items.plans', [], 'amelioration_habitat') }}</li>
+            <li>{{ tp('amelioration_habitat.documents.documents_travaux.items.attestations', [], 'amelioration_habitat') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block legal_details %}
+<div class="credit-legal-notice__details">
+    <h4>{{ tp('amelioration_habitat.legal.title', [], 'amelioration_habitat') }}</h4>
+    <ul>
+        <li><strong>{{ tp('amelioration_habitat.legal.taeg.title', [], 'amelioration_habitat') }}</strong> {{ tp('amelioration_habitat.legal.taeg.text', [], 'amelioration_habitat') }}</li>
+        <li><strong>{{ tp('amelioration_habitat.legal.deblocage.title', [], 'amelioration_habitat') }}</strong> {{ tp('amelioration_habitat.legal.deblocage.text', [], 'amelioration_habitat') }}</li>
+        <li><strong>{{ tp('amelioration_habitat.legal.travaux.title', [], 'amelioration_habitat') }}</strong> {{ tp('amelioration_habitat.legal.travaux.text', [], 'amelioration_habitat') }}</li>
+        <li><strong>{{ tp('amelioration_habitat.legal.garanties.title', [], 'amelioration_habitat') }}</strong> {{ tp('amelioration_habitat.legal.garanties.text', [], 'amelioration_habitat') }}</li>
+        <li><strong>{{ tp('amelioration_habitat.legal.retractation.title', [], 'amelioration_habitat') }}</strong> {{ tp('amelioration_habitat.legal.retractation.text', [], 'amelioration_habitat') }}</li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block cta_title %}{{ tp('amelioration_habitat.cta.title', [], 'amelioration_habitat') }}{% endblock %}
+{% block cta_subtitle %}{{ tp('amelioration_habitat.cta.subtitle', [], 'amelioration_habitat') }}{% endblock %}
+
+{% block custom_styles %}
+{{ parent() }}
+<style>
+/* Couleur spécifique pour le crédit amélioration habitat */
+.credit-detail-hero--amelioration {
+    background: 
+        linear-gradient(135deg, rgba(97, 172, 125, 0.4) 0%, rgba(69, 114, 85, 0.6) 100%),
+        url('/images/home.jpg') center/cover no-repeat fixed;
+}
+
+.credit-detail-hero--amelioration .credit-highlight__value {
+    color: #4ade80;
+}
+</style>
+{% endblock %}

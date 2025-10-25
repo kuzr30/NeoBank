@@ -1,0 +1,90 @@
+banking_transactions:
+  # Meta tags
+  meta:
+    title: "Mijn transacties - %company_name%"
+    description: "Bekijk de geschiedenis van uw transacties met %company_name%"
+
+  # Navigation
+  nav:
+    dashboard: "Dashboard"
+    transactions: "Transacties"
+    transaction_detail: "Transactie details"
+    back: "Terug"
+
+  # Page headers
+  page:
+    title: "Mijn transacties"
+    subtitle: "Bekijk de geschiedenis van al uw transacties"
+    transaction_detail_title: "Transactie details"
+    
+  # Transaction info
+  transaction:
+    amount: "Bedrag"
+    date: "Datum"
+    time: "Tijd"
+    description: "Beschrijving"
+    type: "Type"
+    status: "Status"
+    account: "Rekening"
+    reference: "Referentie"
+    balance_after: "Saldo na transactie"
+    recipient: "Ontvanger"
+    sender: "Afzender"
+    
+  # Transaction types
+  types:
+    transfer: "Overschrijving"
+    payment: "Betaling"
+    withdrawal: "Opname"
+    deposit: "Storting"
+    fee: "Kosten"
+    interest: "Rente"
+    refund: "Terugbetaling"
+    direct_debit: "Automatische incasso"
+    card_payment: "Kaartbetaling"
+    
+  # Status
+  status:
+    completed: "Voltooid"
+    pending: "In behandeling"
+    cancelled: "Geannuleerd"
+    failed: "Mislukt"
+    processing: "Wordt verwerkt"
+    
+  # Filters
+  filters:
+    title: "Filters"
+    date_range: "Periode"
+    transaction_type: "Transactie type"
+    amount_min: "Minimum bedrag"
+    amount_max: "Maximum bedrag"
+    account_filter: "Rekening"
+    apply_filters: "Filters toepassen"
+    clear_filters: "Filters wissen"
+    
+  # Actions
+  actions:
+    view_details: "Details bekijken"
+    download_receipt: "Ontvangstbewijs downloaden"
+    export_transactions: "Transacties exporteren"
+    search: "Zoeken"
+    
+  # Date ranges
+  date_ranges:
+    today: "Vandaag"
+    this_week: "Deze week"
+    this_month: "Deze maand"
+    last_month: "Vorige maand"
+    last_3_months: "Laatste 3 maanden"
+    last_6_months: "Laatste 6 maanden"
+    this_year: "Dit jaar"
+    custom: "Aangepaste periode"
+    
+  # Messages
+  messages:
+    no_transactions: "Geen transacties gevonden"
+    loading: "Transacties laden..."
+    export_success: "Export succesvol"
+    
+  # Currency
+  currency: "€"

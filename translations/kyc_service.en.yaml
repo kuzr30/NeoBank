@@ -1,0 +1,18 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: kyc_service.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+exceptions:
+  submission_already_exists: "A KYC submission is already in progress or approved for this user."
+  invalid_status: "Invalid KYC submission status"
+  user_not_found: "User not found"
+  documents_required: "Documents are required for KYC submission"
+
+log_messages:
+  submission_created: "KYC submission created"
+  submission_approved: "KYC submission approved"
+  submission_rejected: "KYC submission rejected"
+  document_uploaded: "KYC document successfully uploaded"
+  validation_completed: "KYC validation completed"
+  status_updated: "KYC status updated"

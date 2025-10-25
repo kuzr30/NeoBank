@@ -1,0 +1,33 @@
+email_user_blocked:
+  title: "Cuenta temporalmente bloqueada"
+  
+  content:
+    page_title: "Cuenta temporalmente bloqueada"
+    greeting: "Hola {firstName},"
+    
+    account_blocked:
+      title: "Su cuenta ha sido temporalmente bloqueada"
+      description: "Por razones de seguridad, su cuenta ha sido temporalmente bloqueada debido a varios intentos de validación incorrectos."
+    
+    transfer_details:
+      title: "Detalles de la transferencia involucrada"
+      reference: "Referencia transferencia"
+      amount: "Monto"
+      amount_value: "{amount} €"
+      blocked_at: "Bloqueado el"
+    
+    reason:
+      title: "Razón del bloqueo"
+      description: "Este bloqueo se debe a 3 intentos consecutivos de ingreso de un código de validación incorrecto. Esta medida de seguridad protege su cuenta contra accesos no autorizados."
+    
+    next_steps:
+      title: "¿Qué hacer ahora?"
+      step1: "1. Contacte a nuestro servicio al cliente para desbloquear su cuenta"
+      step2: "2. Verifique que dispone del código de validación correcto"
+      step3: "3. Una vez desbloqueado, podrá reanudar la validación de su transferencia"
+    
+    security_notice:
+      title: "Seguridad de su cuenta"
+      description: "Si usted no es el origen de estos intentos de validación, contacte inmediatamente a nuestro servicio de seguridad. Su cuenta permanecerá bloqueada hasta la intervención de nuestro equipo."
+    
+    footer: "%company_name% - Servicio de Seguridad<br>Esta notificación ha sido generada automáticamente tras el bloqueo de su cuenta."

@@ -1,0 +1,27 @@
+profile_sidebar:
+  nav:
+    profile: "Mein Profil"
+    edit_profile: "Profil bearbeiten"
+    kyc_verification: "Identitätsprüfung"
+    security: "Sicherheit"
+    preferences: "Einstellungen"
+    
+  kyc_status:
+    pending: "Ausstehend"
+    rejected: "!"
+    required: "Erforderlich"
+  
+  menu:
+    profile: "Profil"
+    edit: "Profil bearbeiten"
+    security: "Sicherheit"
+    preferences: "Einstellungen"
+    kyc: "Identitätsprüfung"
+    kyc_status: "KYC-Status"
+    
+  user_info:
+    member_since: "Mitglied seit"
+    last_login: "Letzte Anmeldung"
+    account_type: "Kontotyp"
+    account_verified: "Konto verifiziert"
+    account_unverified: "Konto nicht verifiziert"

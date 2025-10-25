@@ -1,0 +1,17 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: transaction_validator_service.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+transaction_validator_service:
+  exceptions:
+    positive_amount_required: "Transaction amount must be positive."
+    
+  user_messages:
+    empty_account_debit: "Your account has a balance of €0. Please fund your account before performing this operation."
+    insufficient_funds: "Insufficient balance. Your current balance is €{currentBalance} and you are attempting to debit €{amount}."
+    
+  log_messages:
+    empty_account_attempt: "Attempted debit on empty account"
+    negative_balance_attempt: "Attempted debit creating negative balance"
+    debit_validation_success: "Debit validation successful"

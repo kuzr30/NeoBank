@@ -1,0 +1,12 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_rib_controller.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+flash:
+  iban_already_exists: "The entered IBAN is already registered in your account. Please check or use another IBAN."
+  rib_added_success: "Your RIB has been added successfully."
+  rib_deleted_success: "The RIB has been deleted successfully."
+
+form_error:
+  iban_duplicate: "The entered IBAN is already registered in your account. Please use another IBAN."

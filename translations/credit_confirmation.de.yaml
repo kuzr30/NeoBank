@@ -1,0 +1,68 @@
+# Übersetzungsdatei für Kreditbestätigungsseiten
+# Domäne: credit_confirmation
+# Kompatibel mit der bestehenden Architektur des %company_name%-Projekts
+
+# === BESTÄTIGUNGSSEITE ===
+confirmation:
+  title: "Antrag bestätigt!"
+  subtitle: "Ihr Kreditantrag wurde erfolgreich eingereicht"
+  icon_success: "✓"
+  
+  reference:
+    label: "Referenznummer"
+    
+  details:
+    loan_amount_label: "Beantragter Betrag"
+    duration_label: "Laufzeit"
+    monthly_payment_label: "Geschätzte Monatsrate"
+    credit_type_label: "Kredittyp"
+    email_label: "Kontakt-E-Mail"
+    
+  timeline:
+    title: "Nächste Schritte"
+    steps:
+      confirmation_sent: "Bestätigung per E-Mail gesendet"
+      review_process: "Prüfung Ihres Dossiers (24-48h)"
+      decision_notification: "Entscheidungsbenachrichtigung"
+      contract_signing: "Vertragsunterzeichnung"
+      funds_disbursement: "Freigabe der Mittel"
+      
+  actions:
+    back_to_home: "Zurück zur Startseite"
+    new_application: "Neuer Antrag"
+    
+  notices:
+    title: "Wichtige Informationen:"
+    email_sent: "Eine Bestätigungs-E-Mail wurde an {email} gesendet"
+    keep_reference: "Bewahren Sie Ihre Referenznummer auf, um Ihren Antrag zu verfolgen"
+    contact_info: "Unser Team wird Sie innerhalb von 48h für die Fortsetzung Ihres Dossiers kontaktieren"
+    no_fees: "Es werden keine Gebühren vor der endgültigen Annahme Ihres Dossiers erhoben"
+
+# === VERTRAGSSTATUS ===
+contract_status:
+  title: "Vertragsstatus"
+  contract_number: "Vertrag: {number}"
+  amount_info: "Betrag: {amount} €"
+  duration_info: "Laufzeit: {duration} {unit}"
+  current_status: "Aktueller Status:"
+  
+  timeline:
+    approved: "Antrag genehmigt"
+    approved_desc: "Ihr Kreditantrag wurde geprüft und genehmigt."
+    contract_sent: "Vertrag erstellt und versendet"
+    contract_sent_desc: "Der Kreditvertrag wurde erstellt und per E-Mail versendet."
+    contract_signed: "Vertragsunterzeichnung"
+    contract_signed_pending: "Warten auf Ihre Unterschrift."
+    contract_signed_completed: "Vertrag unterzeichnet und erhalten."
+    contract_validated: "Administrative Validierung"
+    contract_validated_pending: "Wird von unserem Team validiert (24-48h)."
+    contract_validated_completed: "Vertrag vom Verwaltungsteam validiert."
+    contract_validated_waiting: "Warten auf die Vertragsunterzeichnung."
+    funds_disbursed: "Freigabe der Mittel"
+    funds_disbursed_completed: "Die Mittel wurden auf Ihr Konto überwiesen."
+    funds_disbursed_pending: "Freigabe läuft..."
+    funds_disbursed_waiting: "Warten auf die Vertragsvalidierung."
+    
+  actions:
+    download_contract: "Unterschriebenen Vertrag herunterladen"
+    back_to_dashboard: "Zurück zum Dashboard"

@@ -1,0 +1,100 @@
+banking_loans:
+  # Meta tags
+  meta:
+    title: "Mes prêts - %company_name%"
+    description: "Gérez vos prêts et emprunts avec %company_name%"
+
+  # Navigation
+  nav:
+    dashboard: "Tableau de bord"
+    loans: "Prêts"
+    loan_detail: "Détail du prêt"
+    back: "Retour"
+
+  # Page headers
+  page:
+    title: "Mes prêts"
+    subtitle: "Consultez et gérez tous vos prêts en cours"
+    loan_detail_title: "Détail du prêt"
+    
+  # Loan info
+  loan:
+    amount: "Montant emprunté"
+    remaining_balance: "Capital restant dû"
+    monthly_payment: "Mensualité"
+    interest_rate: "Taux d'intérêt"
+    duration: "Durée totale"
+    remaining_duration: "Durée restante"
+    start_date: "Date de début"
+    end_date: "Date de fin prévue"
+    next_payment_date: "Prochaine échéance"
+    payment_day: "Jour de prélèvement"
+    loan_type: "Type de prêt"
+    status: "Statut"
+    account: "Compte associé"
+    
+  # Loan types
+  types:
+    personal: "Prêt personnel"
+    mortgage: "Prêt immobilier"
+    auto: "Prêt automobile"
+    student: "Prêt étudiant"
+    business: "Prêt professionnel"
+    consumer: "Crédit à la consommation"
+    bridge: "Crédit relais"
+    renovation: "Prêt travaux"
+    
+  # Status
+  status:
+    active: "Actif"
+    completed: "Remboursé"
+    suspended: "Suspendu"
+    in_default: "En défaut"
+    early_repayment: "Remboursement anticipé"
+    
+  # Payment info
+  payment:
+    payment_number: "Échéance n°"
+    payment_date: "Date de paiement"
+    amount: "Montant"
+    principal: "Capital"
+    interest: "Intérêts"
+    remaining_balance: "Capital restant"
+    status: "Statut"
+    
+  # Payment status
+  payment_status:
+    paid: "Payé"
+    pending: "En attente"
+    overdue: "En retard"
+    failed: "Échec"
+    
+  # Actions
+  actions:
+    view_details: "Voir les détails"
+    view_payments: "Voir les échéances"
+    view_amortization: "Voir le tableau d'amortissement"
+    make_payment: "Effectuer un paiement"
+    early_repayment: "Remboursement anticipé"
+    download_statement: "Télécharger le relevé"
+    contact_advisor: "Contacter un conseiller"
+    
+  # Amortization table
+  amortization:
+    title: "Tableau d'amortissement"
+    payment_number: "N°"
+    date: "Date"
+    payment: "Échéance"
+    principal: "Capital"
+    interest: "Intérêts"
+    remaining: "Capital restant"
+    
+  # Messages
+  messages:
+    no_loans: "Aucun prêt en cours"
+    access_denied: "Accès refusé à ce prêt"
+    payment_success: "Paiement effectué avec succès"
+    payment_failed: "Échec du paiement"
+    
+  # Currency
+  currency: "€"

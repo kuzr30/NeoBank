@@ -1,0 +1,59 @@
+banking_dashboard:
+  # Meta tags
+  meta:
+    title: "Banque en Ligne - %company_name%"
+    description: "Tableau de bord bancaire - Gérez vos comptes, virements et services bancaires"
+
+  # Navigation tabs
+  nav:
+    accounts: "Comptes"
+    cards: "Cartes"
+    transfers: "Virements"
+    ribs: "RIB/IBAN"
+    savings: "Épargne"
+    credits: "Crédits"
+    insurance: "Assurances"
+
+  # User info
+  user:
+    status: "Client Particulier"
+    status_business: "Client Professionnel"
+    status_premium: "Client Premium"
+
+  # Sidebar
+  sidebar:
+    my_accounts: "Mes Comptes"
+    quick_actions: "Actions Rapides"
+    
+  # Account types
+  accounts:
+    main_account: "Compte Principal"
+    credit_account: "Compte Crédit"
+    card_account: "Compte Carte"
+    savings_account: "Compte Épargne"
+    insurance_account: "Compte Assurance"
+    no_account: "Aucun compte"
+    
+  # Account status
+  status:
+    available_credit: "Crédit disponible"
+    card_balance: "Solde carte"
+    savings_built: "Épargne constituée"
+    insurance_provision: "Provision assurance"
+    contact_advisor: "Contactez votre conseiller"
+    this_month: "ce mois"
+    
+  # Quick actions
+  actions:
+    transfer: "Virement"
+    card_opposition: "Opposition carte"
+    rib_iban: "RIB/IBAN"
+    contact_us: "Nous contacter"
+    
+  # Messages
+  messages:
+    loading: "Chargement en cours..."
+    no_data: "Aucune donnée disponible"
+    
+  # Currency
+  currency: "€"

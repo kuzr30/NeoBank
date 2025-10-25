@@ -1,0 +1,54 @@
+terms_conditions:
+  page_title: "Términos y Condiciones Generales de Uso"
+  page_description: "Términos de uso de los servicios bancarios de %company_name%"
+
+  scope:
+    title: "Objeto"
+    content: |
+      Los presentes Términos y Condiciones Generales de Uso (TCG) definen las modalidades y condiciones de uso
+      de los servicios bancarios propuestos por <strong>%company_name%</strong> en este sitio web.
+
+  acceptance:
+    title: "Aceptación de las condiciones"
+    content: |
+      El uso de nuestros servicios implica la aceptación plena y total de los presentes TCG.
+      Si no acepta estas condiciones, por favor no utilice nuestros servicios.
+
+  services:
+    title: "Descripción de los servicios"
+    content: |
+      %company_name% propone una gama completa de servicios bancarios incluyendo:
+      <ul>
+        <li>Cuentas bancarias particulares y profesionales</li>
+        <li>Servicios de crédito y financiamiento</li>
+        <li>Productos de ahorro e inversión</li>
+        <li>Servicios de pago e intercambio</li>
+      </ul>
+
+  obligations:
+    title: "Obligaciones del cliente"
+    content: |
+      El cliente se compromete a:
+      <ul>
+        <li>Proporcionar información exacta y actualizada</li>
+        <li>Respetar las condiciones de uso de los servicios</li>
+        <li>Proteger sus identificadores de conexión</li>
+        <li>Reportar cualquier incidente de seguridad</li>
+      </ul>
+
+  liability:
+    title: "Responsabilidad"
+    content: |
+      %company_name% se compromete a proporcionar sus servicios con diligencia y profesionalismo.
+      Nuestra responsabilidad está limitada conforme a la regulación bancaria vigente.
+
+  modification:
+    title: "Modificación de las condiciones"
+    content: |
+      %company_name% se reserva el derecho de modificar los presentes TCG en cualquier momento.
+      Las modificaciones entran en vigor desde su publicación en el sitio.
+
+  contact:
+    title: "Contacto"
+    content: |
+      Para cualquier pregunta relativa a los presentes TCG, contáctenos en la dirección %email%.

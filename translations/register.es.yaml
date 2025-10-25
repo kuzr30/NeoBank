@@ -1,0 +1,50 @@
+register:
+  title: "Crear su cuenta"
+  subtitle: "Únase a %company_name% y acceda a nuestros servicios bancarios innovadores con un procedimiento simplificado y seguro"
+  
+  sections:
+    personal_info: "Información personal"
+    connection_info: "Información de conexión"
+    terms: "Términos de uso"
+  fields:
+    first_name_label: "Nombre"
+    first_name_placeholder: "Su nombre"
+    last_name_label: "Apellido"
+    last_name_placeholder: "Su apellido"
+    email_label: "Dirección de email"
+    email_placeholder: "su.email@ejemplo.com"
+    password_label: "Contraseña"
+    password_placeholder: "••••••••"
+    password_confirm_label: "Confirmar contraseña"
+    password_confirm_placeholder: "••••••••"
+    agree_terms: 'Acepto los <a href="#" class="form-link">términos de uso</a> y la <a href="#" class="form-link">política de privacidad</a>'
+    newsletter: "Deseo recibir noticias y ofertas de %company_name% por email"
+  buttons:
+    create_account: "Crear mi cuenta"
+    login: "Iniciar sesión"
+    
+  links:
+    terms_of_use: "términos de uso"
+    privacy_policy: "política de privacidad"
+    already_account: "¿Ya tiene una cuenta?"
+    back_home: "Volver al inicio"
+  security:
+    ssl_secure: "SSL Seguro"
+    data_protected: "Datos protegidos"
+    support_24_7: "Soporte 24/7"
+  messages:
+    account_created: "Su cuenta debe ser activada por nuestro equipo antes de su primera conexión. Esta validación generalmente toma menos de 24h."
+errors:
+  first_name_required: "El nombre es obligatorio"
+  first_name_min: "El nombre debe tener al menos {{ limit }} caracteres"
+  first_name_max: "El nombre no puede exceder {{ limit }} caracteres"
+  last_name_required: "El apellido es obligatorio"
+  last_name_min: "El apellido debe tener al menos {{ limit }} caracteres"
+  last_name_max: "El apellido no puede exceder {{ limit }} caracteres"
+  email_required: "El email es obligatorio"
+  email_invalid: "El email no es válido"
+  email_exists: "Ya existe una cuenta con este email"
+  password_required: "La contraseña es obligatoria"
+  password_min: "Su contraseña debe contener al menos {{ limit }} caracteres"
+  password_mismatch: "Las contraseñas no coinciden"
+  terms_required: "Debe aceptar nuestros términos"

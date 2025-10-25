@@ -1,0 +1,106 @@
+amelioration_habitat:
+  page:
+    title: "Krediet Woningverbetering"
+    description: "Financier al uw woningverbeteringswerken met ons toegewijde krediet. Voordelige tarieven en geleidelijke vrijgave."
+
+  hero:
+    title: "Krediet Woningverbetering"
+    subtitle: "Transformeer uw woning naar uw wensen"
+    values:
+      taux: "{rate}% JKP*"
+      montant: "120 000€"
+      duree: "20 jaar"
+
+  section_1:
+    title: "Wat is een krediet voor woningverbetering?"
+    content:
+      paragraph_1: "Het krediet voor woningverbetering stelt u in staat al uw projecten voor verfraaiing en modernisering van uw woning te financieren. Of het nu gaat om renoveren, uitbreiden of het comfort van uw huis verbeteren."
+      paragraph_2: "Deze flexibele oplossing past zich aan al uw behoeften aan: van de eenvoudige renovatie van een kamer tot grote uitbreidingswerken of energienormering."
+
+  features:
+    montant: "Van 2 000€ tot 120 000€"
+    montant_detail: "Volgens de omvang van uw werken"
+    duree: "Van 1 jaar tot 20 jaar"
+    duree_detail: "Looptijd aangepast aan uw budget"
+    taux: "Vanaf {rate}% JKP*"
+    taux_detail: "Preferentieel woningtarief"
+    garantie: "Hypotheek of waarborg"
+    garantie_detail: "Volgens geleend bedrag"
+
+  advantages:
+    taux_avantageux:
+      title: "Voordelig tarief:"
+      text: "Preferentiële voorwaarden voor woningverbetering"
+    usage_specialise:
+      title: "Gespecialiseerd gebruik:"
+      text: "Financiering gewijd aan verbeteringswerken"
+    deblocage_progressif:
+      title: "Geleidelijke vrijgave:"
+      text: "Fondsen vrijgegeven naarmate de werken vorderen"
+    accompagnement:
+      title: "Begeleiding:"
+      text: "Gepersonaliseerd advies voor uw projecten"
+    plus_value:
+      title: "Meerwaarde:"
+      text: "Waardevermeerdering van uw vastgoedpatrimonium"
+
+  requirements:
+    conditions_emprunteur:
+      title: "Leningsvoorwaarden"
+      items:
+        proprietaire: "Eigenaar zijn van de te verbeteren woning"
+        revenus: "Stabiele inkomsten aantonen"
+        endettement: "Schuldgraad minder dan 35%"
+        incidents: "Geen inschrijving in incidentenbestanden"
+    conditions_projet:
+      title: "Projectvoorwaarden"
+      items:
+        travaux: "Werken aan hoofdverblijf of tweede verblijf"
+        devis: "Gedetailleerde offertes van bedrijven"
+        normes: "Naleving van geldende normen"
+        professionnels: "Werken uitgevoerd door professionals"
+
+  documents:
+    dossier_personnel:
+      title: "Persoonlijk dossier"
+      items:
+        piece: "Geldig identiteitsbewijs"
+        domicile: "Recent bewijs van woonplaats"
+        bulletins: "3 laatste loonstroken"
+        avis: "Belastingaangifte"
+    justificatifs_patrimoniaux:
+      title: "Vermogensbewijzen"
+      items:
+        titre: "Eigendomsakte van het goed"
+        taxe: "Onroerende voorheffing van het lopende jaar"
+        releves: "Bankuittreksels"
+        tableau: "Aflossingschema van lopende kredieten"
+    documents_travaux:
+      title: "Werkendocumenten"
+      items:
+        devis: "Gedetailleerde offertes van bedrijven"
+        permis: "Bouwvergunning indien nodig"
+        plans: "Plannen en beschrijvingen van de werken"
+        attestations: "Verzekeringsattesten van bedrijven"
+
+  legal:
+    title: "Belangrijke juridische informatie"
+    taeg:
+      title: "*JKP:"
+      text: "Representatief voorbeeld: voor een krediet woningverbetering van 60 000€ over 15 jaar tegen een JKP van 3,1%, betaalt u 180 maandlasten van 416€ terug, ofwel een totaalbedrag van 74 880€ (kosten van het krediet: 14 880€)."
+    deblocage:
+      title: "Vrijgave:"
+      text: "De fondsen worden geleidelijk vrijgegeven volgens de voortgang van de werken bij voorlegging van facturen."
+    travaux:
+      title: "Werken:"
+      text: "Verplichting om de aangegeven werken uit te voeren binnen een termijn van 2 jaar."
+    garanties:
+      title: "Garanties:"
+      text: "Hypotheek of waarborg volgens het bedrag en de looptijd van de lening."
+    retractation:
+      title: "Herroepingstermijn:"
+      text: "U heeft 14 dagen de tijd om uw krediet op te zeggen na aanvaarding van het aanbod."
+
+  cta:
+    title: "Transformeer uw woning"
+    subtitle: "Financier uw verbeteringsprojecten met ons toegewijde krediet"

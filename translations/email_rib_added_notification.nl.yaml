@@ -1,0 +1,32 @@
+email_rib_added_notification:
+  title: "Nieuwe IBAN toegevoegd"
+  content:
+    page_title: "Nieuwe IBAN toegevoegd aan uw account"
+    greeting: "Hallo {firstName},"
+    confirmation: "We bevestigen dat een nieuwe IBAN succesvol is toegevoegd aan uw %company_name% account."
+    details_section:
+      title: "Details van de toegevoegde IBAN"
+      account_name: "Accountnaam:"
+      bank_name: "Bank:"
+      iban: "IBAN:"
+      added_date: "Datum toegevoegd:"
+    info_section:
+      title: "Belangrijke informatie"
+      description: "Uw nieuwe IBAN is nu beschikbaar in uw klantenruimte en kan worden gebruikt voor uw overschrijvingen en banktransacties."
+    security_section:
+      title: "Beveiliging"
+      warning: "Als u deze toevoeging niet heeft gedaan, neem dan onmiddellijk contact op met onze klantenservice:"
+      phone_label: "Telefoon:"
+      email_label: "Email:"
+    buttons:
+      view_ribs: "Bekijk mijn IBAN's"
+      access_account: "Toegang tot mijn account"
+    footer_text: "Deze beveiligingsmelding wordt automatisch verzonden om u te informeren over wijzigingen aan uw account."
+    help_text: "Als u vragen heeft, aarzel dan niet om contact met ons op te nemen."
+  
+  # Log berichten voor de MessageHandler
+  logs:
+    sending: "Verzenden van IBAN toevoeging notificatie"
+    success: "IBAN toevoeging notificatie succesvol verzonden"
+    error: "Fout bij het verzenden van IBAN toevoeging notificatie"
+    send_failed: "Verzenden van IBAN toevoeging notificatie mislukt"

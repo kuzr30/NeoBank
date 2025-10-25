@@ -1,0 +1,59 @@
+banking_dashboard:
+  # Meta tags
+  meta:
+    title: "Banca Online - %company_name%"
+    description: "Panel de control bancario - Gestione sus cuentas, transferencias y servicios bancarios"
+
+  # Navigation tabs
+  nav:
+    accounts: "Cuentas"
+    cards: "Tarjetas"
+    transfers: "Transferencias"
+    ribs: "Cuentas/IBAN"
+    savings: "Ahorro"
+    credits: "Créditos"
+    insurance: "Seguros"
+
+  # User info
+  user:
+    status: "Cliente Particular"
+    status_business: "Cliente Profesional"
+    status_premium: "Cliente Premium"
+
+  # Sidebar
+  sidebar:
+    my_accounts: "Mis Cuentas"
+    quick_actions: "Acciones Rápidas"
+    
+  # Account types
+  accounts:
+    main_account: "Cuenta Principal"
+    credit_account: "Cuenta Crédito"
+    card_account: "Cuenta Tarjeta"
+    savings_account: "Cuenta Ahorro"
+    insurance_account: "Cuenta Seguro"
+    no_account: "Ninguna cuenta"
+    
+  # Account status
+  status:
+    available_credit: "Crédito disponible"
+    card_balance: "Saldo tarjeta"
+    savings_built: "Ahorro constituido"
+    insurance_provision: "Provisión seguro"
+    contact_advisor: "Contacte con su asesor"
+    this_month: "este mes"
+    
+  # Quick actions
+  actions:
+    transfer: "Transferencia"
+    card_opposition: "Oposición tarjeta"
+    rib_iban: "Cuentas/IBAN"
+    contact_us: "Contáctanos"
+    
+  # Messages
+  messages:
+    loading: "Cargando..."
+    no_data: "Ningún dato disponible"
+    
+  # Currency
+  currency: "€"

@@ -1,0 +1,33 @@
+email_card_subscription_approved:
+  title: "Uw kaartaanvraag is goedgekeurd"
+  
+  content:
+    page_title: "Uitstekend nieuws! Uw kaart is goedgekeurd"
+    greeting: "Beste %firstName% %lastName%,"
+    
+    approval:
+      title: "Aanvraag goedgekeurd"
+      description: "Gefeliciteerd! Uw aanvraag voor een %cardType% is goedgekeurd door onze teams."
+    
+    card_details:
+      title: "Details van uw kaart"
+      type: "Kaarttype"
+      reference: "Referentie"
+      account: "Gekoppelde rekening"
+    
+    contract_required:
+      title: "Contractondertekening vereist"
+      description: "Om uw abonnement af te ronden, dient u elektronisch een contract te ondertekenen dat de kosten en gebruiksvoorwaarden van uw kaart specificeert."
+    
+    next_step:
+      title: "Volgende stap"
+      access_button: "Naar mijn ruimte"
+      instruction: "U ontvangt binnenkort het te ondertekenen contract per e-mail"
+    
+    delivery_info:
+      title: "Leveringsinformatie"
+      description: "Uw fysieke kaart wordt 5-7 werkdagen na contractondertekening en kostenvalidatie naar uw adres verzonden."
+    
+    assistance: "Ons team blijft ter beschikking om u bij deze laatste stap te begeleiden."
+    
+    footer: "Deze e-mail werd automatisch verzonden door uw bank. <br><strong>Gefeliciteerd met de goedkeuring van uw aanvraag!</strong>"

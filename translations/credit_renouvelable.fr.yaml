@@ -1,0 +1,108 @@
+credit_renouvelable:
+  page:
+    title: "Crédit Renouvelable"
+    description: "Réserve d'argent disponible à tout moment avec notre crédit renouvelable. Flexibilité et liberté d'usage garanties."
+  
+  hero:
+    class: "credit-detail-hero--renouvelable"
+    taux: "{rate}%"
+    montant: "15 000€"
+    duree: "Permanent"
+    title: "Crédit Renouvelable"
+    subtitle: "Votre réserve d'argent disponible"
+  
+  section_1:
+    title: "Qu'est-ce qu'un crédit renouvelable ?"
+    content:
+      paragraph_1: "Le crédit renouvelable, aussi appelé crédit revolving, met à votre disposition une réserve d'argent que vous pouvez utiliser à tout moment, selon vos besoins, sans justification."
+      paragraph_2: "Au fur et à mesure de vos remboursements, votre réserve se reconstitue automatiquement. Vous ne payez des intérêts que sur les sommes effectivement utilisées."
+  
+  section_2:
+    title: "Caractéristiques du crédit"
+  
+  features:
+    montant:
+      value: "De 500€ à 15 000€"
+      detail: "Réserve modulable"
+    duree:
+      value: "Durée permanente"
+      detail: "Renouvelable chaque année"
+    taux:
+      value: "À partir de {rate}% TAEG*"
+      detail: "Sur les sommes utilisées"
+    garantie:
+      value: "Sans garantie"
+      detail: "Sur signature uniquement"
+  
+  section_3:
+    title: "Avantages du crédit renouvelable"
+    advantages:
+      disponibilite:
+        title: "Disponibilité immédiate"
+        description: "Fonds accessibles 24h/24 par carte ou virement"
+      reconstruction:
+        title: "Reconstruction automatique"
+        description: "Réserve qui se reconstitue avec vos remboursements"
+      pas_interets:
+        title: "Pas d'intérêts si inutilisé"
+        description: "Aucun coût tant que vous n'utilisez pas la réserve"
+      remboursement:
+        title: "Remboursement souple"
+        description: "Montant minimum faible, possibilité de remboursement anticipé"
+      carte:
+        title: "Carte de crédit"
+        description: "Utilisation par carte bancaire associée"
+  
+  section_4:
+    title: "Conditions et critères d'usage"
+    conditions:
+      title: "Conditions d'obtention"
+      items:
+        majeur: "Être majeur et résider en France"
+        revenus: "Justifier de revenus réguliers"
+        surendettement: "Ne pas être en situation de surendettement"
+        interdiction: "Pas d'interdiction bancaire"
+    
+    criteres:
+      title: "Critères d'utilisation"
+      items:
+        usage: "Usage responsable recommandé"
+        impulsifs: "Éviter les achats impulsifs"
+        plan: "Prévoir un plan de remboursement"
+        surveiller: "Surveiller régulièrement le solde"
+  
+  section_5:
+    title: "Pièces justificatives nécessaires"
+    identite:
+      title: "Justificatifs d'identité"
+      items:
+        carte: "Carte d'identité ou passeport"
+        domicile: "Justificatif de domicile récent"
+        rib: "Relevé d'identité bancaire"
+    
+    revenus:
+      title: "Justificatifs de revenus"
+      items:
+        bulletins: "3 derniers bulletins de salaire"
+        avis: "Dernier avis d'imposition"
+        attestation: "Attestation employeur si nécessaire"
+    
+    bancaires:
+      title: "Informations bancaires"
+      items:
+        releves: "Relevés de compte récents"
+        credits: "Justificatifs d'autres crédits"
+        patrimoine: "Déclaration de patrimoine"
+  
+  legal:
+    title: "Informations légales importantes"
+    details:
+      taeg: "TAEG : Exemple représentatif : pour une réserve de 3 000€ utilisée en permanence au TAEG de 6,9%, avec un remboursement de 90€/mois, la durée de remboursement est de 40 mois pour un coût total de 597€."
+      utilisation: "Utilisation : Attention à ne pas utiliser ce crédit pour des dépenses courantes récurrentes."
+      remboursement: "Remboursement : Mensualité minimale de 3% du capital utilisé ou 15€ minimum."
+      renouvellement: "Renouvellement : Examen annuel de votre situation et renouvellement sous conditions."
+      resiliation: "Résiliation : Possible à tout moment, remboursement du solde dû obligatoire."
+  
+  cta:
+    title: "Constituez votre réserve"
+    subtitle: "Disposez d'une solution de financement flexible avec notre crédit renouvelable"

@@ -1,0 +1,610 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'credit_simulation.amortization_title'|trans({}, 'simulation') }} - {{ 'credit_simulation.title'|trans({}, 'simulation') }}{% endblock %}
+
+{% block body %}
+<main class="table_amortissement">
+  <!-- Navigation Header -->
+  <section class="table_amortissement__header">
+    <div class="table_amortissement__header-container">
+      <div class="table_amortissement__nav">
+        <a href="{{ path('credit_simulation_index') }}" class="table_amortissement__back-link">
+          ← {{ 'credit_simulation.amortization.back_to_simulation'|trans({}, 'simulation') }}
+        </a>
+        <h1 class="table_amortissement__title">{{ 'credit_simulation.amortization_title'|trans({}, 'simulation') }}</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Summary Section -->
+  <section class="table_amortissement__summary">
+    <div class="table_amortissement__summary-container">
+      <div class="table_amortissement__summary-content">
+        <div class="table_amortissement__summary-grid">
+          
+          <div class="table_amortissement__summary-card">
+            <div class="table_amortissement__summary-label">{{ 'credit_simulation.amortization.summary.amount_borrowed'|trans({}, 'simulation') }}</div>
+            <div class="table_amortissement__summary-value">{{ (amount)|number_format(0, ',', ' ') }} €</div>
+          </div>
+          
+          <div class="table_amortissement__summary-card">
+            <div class="table_amortissement__summary-label">{{ 'credit_simulation.results.duration'|trans({}, 'simulation') }}</div>
+            <div class="table_amortissement__summary-value">{{ duration }} mois</div>
+          </div>
+          
+          <div class="table_amortissement__summary-card">
+            <div class="table_amortissement__summary-label">{{ 'credit_simulation.results.rate'|trans({}, 'simulation') }}</div>
+            <div class="table_amortissement__summary-value">{{ rate|number_format(2, ',', ' ') }}%</div>
+          </div>
+          
+          <div class="table_amortissement__summary-card table_amortissement__summary-card--highlighted">
+            <div class="table_amortissement__summary-label">{{ 'credit_simulation.amortization.summary.monthly_payment'|trans({}, 'simulation') }}</div>
+            <div class="table_amortissement__summary-value">{{ monthlyPayment|number_format(2, ',', ' ') }} €</div>
+          </div>
+          
+          <div class="table_amortissement__summary-card">
+            <div class="table_amortissement__summary-label">{{ 'credit_simulation.results.total_interest'|trans({}, 'simulation') }}</div>
+            <div class="table_amortissement__summary-value">{{ totalInterest|number_format(2, ',', ' ') }} €</div>
+          </div>
+          
+          <div class="table_amortissement__summary-card">
+            <div class="table_amortissement__summary-label">{{ 'credit_simulation.results.total_amount'|trans({}, 'simulation') }}</div>
+            <div class="table_amortissement__summary-value">{{ totalCost|number_format(2, ',', ' ') }} €</div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Table Section -->
+  <section class="table_amortissement__content">
+    <div class="table_amortissement__content-container">
+      
+      <div class="table_amortissement__table-header">
+        <h2 class="table_amortissement__table-title">{{ 'credit_simulation.amortization.subtitle'|trans({}, 'simulation') }}</h2>
+        <p class="table_amortissement__table-subtitle">{{ 'credit_simulation.amortization.subtitle'|trans({}, 'simulation') }}</p>
+      </div>
+      
+      <div class="table_amortissement__table-wrapper">
+        <div class="table_amortissement__table-container">
+          <table class="table_amortissement__table">
+            <thead class="table_amortissement__table-head">
+              <tr class="table_amortissement__table-row table_amortissement__table-row--header">
+                <th class="table_amortissement__table-cell table_amortissement__table-cell--header table_amortissement__table-cell--month">{{ 'credit_simulation.amortization.table.month'|trans({}, 'simulation') }}</th>
+                <th class="table_amortissement__table-cell table_amortissement__table-cell--header table_amortissement__table-cell--payment">{{ 'credit_simulation.amortization.table.payment'|trans({}, 'simulation') }}</th>
+                <th class="table_amortissement__table-cell table_amortissement__table-cell--header table_amortissement__table-cell--interest">{{ 'credit_simulation.amortization.table.interest'|trans({}, 'simulation') }}</th>
+                <th class="table_amortissement__table-cell table_amortissement__table-cell--header table_amortissement__table-cell--principal">{{ 'credit_simulation.amortization.table.principal'|trans({}, 'simulation') }}</th>
+                <th class="table_amortissement__table-cell table_amortissement__table-cell--header table_amortissement__table-cell--balance">{{ 'credit_simulation.amortization.table.balance'|trans({}, 'simulation') }}</th>
+              </tr>
+            </thead>
+            <tbody class="table_amortissement__table-body">
+              {% for row in amortizationTable %}
+                <tr class="table_amortissement__table-row {% if loop.index is even %}table_amortissement__table-row--even{% else %}table_amortissement__table-row--odd{% endif %}">
+                  <td class="table_amortissement__table-cell table_amortissement__table-cell--month">
+                    <span class="table_amortissement__month-number">{{ row.month }}</span>
+                  </td>
+                  <td class="table_amortissement__table-cell table_amortissement__table-cell--payment">
+                    <span class="table_amortissement__amount table_amortissement__amount--payment">{{ row.monthlyPayment|number_format(2, ',', ' ') }} €</span>
+                  </td>
+                  <td class="table_amortissement__table-cell table_amortissement__table-cell--interest">
+                    <span class="table_amortissement__amount table_amortissement__amount--interest">{{ row.interestPayment|number_format(2, ',', ' ') }} €</span>
+                  </td>
+                  <td class="table_amortissement__table-cell table_amortissement__table-cell--principal">
+                    <span class="table_amortissement__amount table_amortissement__amount--principal">{{ row.capitalPayment|number_format(2, ',', ' ') }} €</span>
+                  </td>
+                  <td class="table_amortissement__table-cell table_amortissement__table-cell--balance">
+                    <span class="table_amortissement__amount table_amortissement__amount--balance">{{ row.remainingCapital|number_format(2, ',', ' ') }} €</span>
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="table_amortissement__actions">
+        <a href="{{ path('credit_simulation_index') }}" class="table_amortissement__action-button table_amortissement__action-button--secondary">
+          {{ 'credit_simulation.results.actions.modify'|trans({}, 'simulation') }}
+        </a>
+        <a href="{{ path('credit_application_start', {
+          amount: amount,
+          duration: duration,
+          creditType: creditType.value,
+          monthlyPayment: monthlyPayment|number_format(2, '.', '')
+        }) }}" class="table_amortissement__action-button table_amortissement__action-button--primary">
+          → {{ 'credit_simulation.results.actions.apply'|trans({}, 'simulation') }}
+        </a>
+      </div>
+      
+    </div>
+  </section>
+
+</main>
+
+<style>
+/* ===== TABLE AMORTISSEMENT STYLES - BEM METHODOLOGY ===== */
+
+/* Base Styles */
+.table_amortissement {
+  background: #f8fafc;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Header Section */
+.table_amortissement__header {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+  padding: 2rem 0 1rem;
+}
+
+.table_amortissement__header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.table_amortissement__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.table_amortissement__back-link {
+  display: inline-flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.table_amortissement__back-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-2px);
+}
+
+.table_amortissement__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Summary Section */
+.table_amortissement__summary {
+  padding: 2rem 0;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table_amortissement__summary-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.table_amortissement__summary-content {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.table_amortissement__summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.table_amortissement__summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.table_amortissement__summary-card--highlighted {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+  border-color: #3b82f6;
+  transform: scale(1.02);
+}
+
+.table_amortissement__summary-card:not(.table_amortissement__summary-card--highlighted):hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.table_amortissement__summary-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.table_amortissement__summary-card--highlighted .table_amortissement__summary-label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.table_amortissement__summary-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.2;
+}
+
+.table_amortissement__summary-card--highlighted .table_amortissement__summary-value {
+  color: white;
+  font-size: 1.75rem;
+}
+
+/* Content Section */
+.table_amortissement__content {
+  padding: 3rem 0;
+}
+
+.table_amortissement__content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.table_amortissement__table-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.table_amortissement__table-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.table_amortissement__table-subtitle {
+  font-size: 1rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Table Wrapper */
+.table_amortissement__table-wrapper {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.table_amortissement__table-container {
+  max-height: 70vh;
+  overflow-y: auto;
+  /* Suppression de l'overflow-x pour un design plus propre */
+    overflow-x: hidden;
+}
+
+/* Table Styles */
+.table_amortissement__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  min-width: 700px; /* Largeur minimale pour éviter l'écrasement */
+}
+
+.table_amortissement__table-head {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.table_amortissement__table-row--header {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+}
+
+.table_amortissement__table-cell--header {
+  color: white;
+  font-weight: 600;
+  padding: 1.25rem 0.75rem;
+  text-align: center;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.table_amortissement__table-cell--month {
+  text-align: center;
+  width: 10%;
+  min-width: 80px;
+}
+
+.table_amortissement__table-cell--payment,
+.table_amortissement__table-cell--interest,
+.table_amortissement__table-cell--principal,
+.table_amortissement__table-cell--balance {
+  text-align: right;
+  width: 22.5%;
+  min-width: 120px;
+}
+
+/* Table Body */
+.table_amortissement__table-body {
+  background: white;
+}
+
+.table_amortissement__table-row {
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table_amortissement__table-row--even {
+  background: #f8fafc;
+}
+
+.table_amortissement__table-row--odd {
+  background: white;
+}
+
+.table_amortissement__table-row:hover {
+  background: #f1f5f9 !important;
+  transform: scale(1.005);
+}
+
+.table_amortissement__table-cell {
+  padding: 1rem 0.75rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+/* Month Cell */
+.table_amortissement__month-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #1e40af;
+  color: white;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin: 0 auto;
+}
+
+/* Amount Styling */
+.table_amortissement__amount {
+  font-weight: 600;
+  font-family: 'SF Mono', 'Monaco', 'Cascadia Code', monospace;
+  font-size: 0.875rem;
+  display: block;
+  text-align: right;
+}
+
+.table_amortissement__amount--payment {
+  color: #1e40af;
+}
+
+.table_amortissement__amount--interest {
+  color: #dc2626;
+}
+
+.table_amortissement__amount--principal {
+  color: #059669;
+}
+
+.table_amortissement__amount--balance {
+  color: #64748b;
+}
+
+/* Actions */
+.table_amortissement__actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.table_amortissement__action-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.table_amortissement__action-button--primary {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+}
+
+.table_amortissement__action-button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
+}
+
+.table_amortissement__action-button--secondary {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+.table_amortissement__action-button--secondary:hover {
+  background: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .table_amortissement__summary-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  
+  .table_amortissement__nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .table_amortissement__title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .table_amortissement__header {
+    padding: 1.5rem 0 1rem;
+  }
+  
+  .table_amortissement__title {
+    font-size: 1.5rem;
+  }
+  
+  .table_amortissement__summary {
+    padding: 1.5rem 0;
+  }
+  
+  .table_amortissement__summary-content {
+    padding: 1.5rem;
+  }
+  
+  .table_amortissement__summary-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .table_amortissement__content {
+    padding: 2rem 0;
+  }
+  
+  .table_amortissement__table-title {
+    font-size: 1.5rem;
+  }
+  
+  /* Table responsive avec scroll horizontal limité */
+  .table_amortissement__table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .table_amortissement__table {
+    min-width: 600px;
+    font-size: 0.75rem;
+  }
+  
+  .table_amortissement__table-cell {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .table_amortissement__table-cell--header {
+    padding: 1rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .table_amortissement__month-number {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.75rem;
+  }
+  
+  .table_amortissement__amount {
+    font-size: 0.75rem;
+  }
+  
+  .table_amortissement__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .table_amortissement__action-button {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .table_amortissement__table-container {
+    max-height: 60vh;
+  }
+  
+  .table_amortissement__table {
+    min-width: 500px;
+  }
+  
+  .table_amortissement__table-cell--payment,
+  .table_amortissement__table-cell--interest,
+  .table_amortissement__table-cell--principal,
+  .table_amortissement__table-cell--balance {
+    min-width: 90px;
+  }
+  
+  .table_amortissement__summary-card {
+    padding: 1rem;
+  }
+  
+  .table_amortissement__summary-value {
+    font-size: 1.25rem;
+  }
+  
+  .table_amortissement__summary-card--highlighted .table_amortissement__summary-value {
+    font-size: 1.5rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .table_amortissement__header,
+  .table_amortissement__actions {
+    display: none;
+  }
+  
+  .table_amortissement {
+    background: white;
+  }
+  
+  .table_amortissement__summary,
+  .table_amortissement__content {
+    padding: 1rem 0;
+  }
+  
+  .table_amortissement__table-container {
+    max-height: none;
+    overflow: visible;
+  }
+  
+  .table_amortissement__table-wrapper {
+    box-shadow: none;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .table_amortissement__table-row:hover {
+    background: inherit !important;
+    transform: none;
+  }
+}
+</style>
+
+{% endblock %}

@@ -1,0 +1,631 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ page_title }} - SEDEF BANK{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/insurance.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/insurance-errors.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="devis-hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>{{ page_title }}</h1>
+            <p>{{ meta_description }}</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="devis-form-container">
+        <div class="form-header">
+            <div class="assurance-type-display">
+                <div class="type-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        {% if assuranceType.value == 'auto' %}
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                        {% elseif assuranceType.value == 'habitation' %}
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        {% elseif assuranceType.value == 'sante' %}
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        {% elseif assuranceType.value == 'vie' %}
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+                        {% elseif assuranceType.value == 'voyage' %}
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        {% else %}
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        {% endif %}
+                    </svg>
+                </div>
+                <div class="type-info">
+                    <h2>{{ tp(assuranceType.getLabel(), [], 'enums') }}</h2>
+                    <p>{{ tp(assuranceType.getDescription(), [], 'enums') }}</p>
+                </div>
+            </div>
+        </div>
+
+        {{ form_start(form, {'attr': {'class': 'devis-form', 'novalidate': 'novalidate'}}) }}
+            
+            <div class="form-steps">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Informations personnelles</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Détails de l'assurance</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Confirmation</div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>{{ tp('devis_form.personal_info_title', [], 'devis') }}</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        {{ form_label(form.nom) }}
+                        {{ form_widget(form.nom) }}
+                        {{ form_errors(form.nom) }}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form_label(form.prenom) }}
+                        {{ form_widget(form.prenom) }}
+                        {{ form_errors(form.prenom) }}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form_label(form.email) }}
+                        {{ form_widget(form.email) }}
+                        {{ form_errors(form.email) }}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form_label(form.telephone) }}
+                        {{ form_widget(form.telephone) }}
+                        {{ form_errors(form.telephone) }}
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>{{ tp('devis_form.insurance_details_title', [], 'devis') }}</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        {{ form_label(form.typeAssurance) }}
+                        {{ form_widget(form.typeAssurance) }}
+                        {{ form_errors(form.typeAssurance) }}
+                    </div>
+                    
+                    
+                    <div class="form-group full-width">
+                        {{ form_label(form.preferenceContact) }}
+                        {{ form_widget(form.preferenceContact) }}
+                        {{ form_errors(form.preferenceContact) }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>{{ tp('devis_form.additional_info_title', [], 'devis') }}</h3>
+                <div class="form-group">
+                    {{ form_label(form.commentaires) }}
+                    {{ form_widget(form.commentaires) }}
+                    {{ form_errors(form.commentaires) }}
+                    <div class="form-help">
+                        {{ tp('devis_form.additional_info_help', [], 'devis') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                {{ form_widget(form.submit) }}
+                
+                <div class="form-notes">
+                    <div class="note-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>{{ tp('devis_form.notes.free_quote', [], 'devis') }}</span>
+                    </div>
+                    
+                    <div class="note-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                        <span>{{ tp('devis_form.notes.data_protection', [], 'devis') }}</span>
+                    </div>
+                    
+                    <div class="note-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>{{ tp('devis_form.notes.response_time', [], 'devis') }}</span>
+                    </div>
+                </div>
+            </div>
+
+            {{ form_rest(form) }}
+        {{ form_end(form) }}
+    </div>
+
+    <div class="advantages-section">
+        <div class="advantages-container">
+            <h2>{{ tp('devis_form.why_choose_title', {'type': tp(assuranceType.getLabel(), [], 'enums')|lower}, 'devis') }}</h2>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3>{{ tp('devis_form.advantages.optimal_coverage.title', [], 'devis') }}</h3>
+                    <p>{{ tp('devis_form.advantages.optimal_coverage.description', [], 'devis') }}</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+                        </svg>
+                    </div>
+                    <h3>{{ tp('devis_form.advantages.competitive_rates.title', [], 'devis') }}</h3>
+                    <p>{{ tp('devis_form.advantages.competitive_rates.description', [], 'devis') }}</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <h3>{{ tp('devis_form.advantages.customer_service.title', [], 'devis') }}</h3>
+                    <p>{{ tp('devis_form.advantages.customer_service.description', [], 'devis') }}</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3>{{ tp('devis_form.advantages.fast_processing.title', [], 'devis') }}</h3>
+                    <p>{{ tp('devis_form.advantages.fast_processing.description', [], 'devis') }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.devis-hero {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    color: white;
+    padding: 4rem 0 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.devis-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.125rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.devis-form-container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    margin: -2rem auto 3rem;
+    max-width: 900px;
+    padding: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.form-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.assurance-type-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+}
+
+.type-icon {
+    width: 3rem;
+    height: 3rem;
+    background: #3b82f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.type-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.type-info h2 {
+    color: #1e293b;
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.type-info p {
+    color: #64748b;
+    margin: 0;
+}
+
+.form-steps {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    gap: 2rem;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #9ca3af;
+}
+
+.step.active {
+    color: #3b82f6;
+}
+
+.step-number {
+    width: 2rem;
+    height: 2rem;
+    background: #e5e7eb;
+    color: #6b7280;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.step.active .step-number {
+    background: #3b82f6;
+    color: white;
+}
+
+.form-section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+}
+
+.form-section h3 {
+    color: #1e293b;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: #374151;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s;
+    background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Styles pour les champs avec erreurs - seulement après soumission */
+.form-group input.is-invalid,
+.form-group select.is-invalid,
+.form-group textarea.is-invalid {
+    border-color: #dc2626;
+    background-color: #fef2f2;
+}
+
+.form-group input.is-invalid:focus,
+.form-group select.is-invalid:focus,
+.form-group textarea.is-invalid:focus {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-help {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
+
+.form-errors {
+    color: #dc2626;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.form-errors:before {
+    content: "⚠";
+    font-size: 1rem;
+}
+
+/* Cache les erreurs par défaut si le formulaire n'a pas été soumis */
+.form-group .form-errors:empty {
+    display: none;
+}
+
+/* Au chargement initial, masquer toutes les erreurs */
+.devis-form .form-errors {
+    display: none;
+}
+
+/* Afficher les erreurs seulement après soumission */
+.devis-form.was-validated .form-errors {
+    display: block;
+}
+
+/* Style pour les champs avec erreurs après validation */
+.devis-form.was-validated .form-group:has(.form-errors:not(:empty)) input,
+.devis-form.was-validated .form-group:has(.form-errors:not(:empty)) select,
+.devis-form.was-validated .form-group:has(.form-errors:not(:empty)) textarea {
+    border-color: #dc2626;
+    background-color: #fef2f2;
+}
+
+.form-actions {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.form-actions button {
+    background: #3b82f6;
+    color: white;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-block;
+}
+
+.form-actions button:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.form-notes {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.note-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.note-item svg {
+    width: 1rem;
+    height: 1rem;
+    color: #10b981;
+}
+
+.advantages-section {
+    background: #f8fafc;
+    padding: 4rem 0;
+    margin-top: 4rem;
+}
+
+.advantages-container {
+    text-align: center;
+}
+
+.advantages-container h2 {
+    color: #1e293b;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.advantage-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.advantage-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.advantage-icon {
+    width: 3rem;
+    height: 3rem;
+    background: #3b82f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+}
+
+.advantage-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.advantage-card h3 {
+    color: #1e293b;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.advantage-card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .devis-hero {
+        padding: 3rem 0 2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .devis-form-container {
+        margin: -1rem 1rem 2rem;
+        padding: 1.5rem;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-steps {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .step {
+        justify-content: center;
+    }
+    
+    .assurance-type-display {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .form-notes {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.devis-form');
+    
+    if (form) {
+        // Marquer le formulaire comme validé seulement après soumission
+        form.addEventListener('submit', function() {
+            form.classList.add('was-validated');
+        });
+        
+        // Si le formulaire contient des erreurs (après rechargement), l'afficher
+        const hasErrors = form.querySelector('.form-errors') && 
+                        form.querySelector('.form-errors').textContent.trim() !== '';
+        
+        if (hasErrors) {
+            form.classList.add('was-validated');
+        }
+    }
+});
+</script>
+{% endblock %}

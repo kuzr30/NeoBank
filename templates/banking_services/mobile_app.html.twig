@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ page_title }} | SEDEF BANK{% endblock %}
+{% block meta_description %}{{ meta_description }}{% endblock %}
+
+{% block body %}
+ {% include 'banking_services/components/mobile_app/_mobile_app_hero.html.twig' %}
+ {% include 'banking_services/components/mobile_app/_mobile_app_features.html.twig' %}
+ {% include 'banking_services/components/mobile_app/_mobile_app_security.html.twig' %}
+ {% include 'banking_services/components/mobile_app/_mobile_app_download.html.twig' %}
+ {% include 'banking_services/components/mobile_app/_mobile_app_support.html.twig' %}
+{% endblock %}

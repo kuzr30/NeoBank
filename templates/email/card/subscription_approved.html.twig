@@ -1,0 +1,91 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_card_subscription_approved.title', {}, 'email_card_subscription_approved') }} - {{ parent() }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('email_card_subscription_approved.content.page_title', {}, 'email_card_subscription_approved') }}</h2>
+    
+    <p class="content-text">
+        {{ tp('email_card_subscription_approved.content.greeting', {firstName: user.firstName, lastName: user.lastName}, 'email_card_subscription_approved') }}
+    </p>
+
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #2e7d32;">{{ tp('email_card_subscription_approved.content.approval.title', {}, 'email_card_subscription_approved') }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {{ tp('email_card_subscription_approved.content.approval.description', {cardType: subscription.cardBrand|title ~ ' ' ~ subscription.cardType|title}, 'email_card_subscription_approved') }}
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_card_subscription_approved.content.card_details.title', {}, 'email_card_subscription_approved') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #f8f9fa; border-radius: 6px;">
+                    <div style="margin-bottom: 12px;">
+                        <strong style="color: #1976d2;">{{ tp('email_card_subscription_approved.content.card_details.type', {}, 'email_card_subscription_approved') }}</strong><br>
+                        <span style="color: #424242;">{{ subscription.cardBrand|title }} {{ subscription.cardType|title }}</span>
+                    </div>
+                    <div style="margin-bottom: 12px;">
+                        <strong style="color: #1976d2;">{{ tp('email_card_subscription_approved.content.card_details.reference', {}, 'email_card_subscription_approved') }}</strong><br>
+                        <span style="color: #424242; font-family: monospace;">{{ subscription.reference }}</span>
+                    </div>
+                    <div>
+                        <strong style="color: #1976d2;">{{ tp('email_card_subscription_approved.content.card_details.account', {}, 'email_card_subscription_approved') }}</strong><br>
+                        <span style="color: #424242;">{{ subscription.account.accountNumber }}</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ tp('email_card_subscription_approved.content.contract_required.title', {}, 'email_card_subscription_approved') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #fff8e1; border-radius: 6px;">
+                    <p style="margin: 0; color: #000000;">
+                        {{ tp('email_card_subscription_approved.content.contract_required.description', {}, 'email_card_subscription_approved') }}
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_card_subscription_approved.content.next_step.title', {}, 'email_card_subscription_approved') }}</h3>
+        <table style="width: 100%; border-spacing: 12px 0;">
+            <tr>
+                <td style="padding: 0; text-align: center;">
+                    <a href="{{ url('app_banking_card_index', {'_locale': user.language ?? 'fr'}) }}" 
+                       style="display: block; background: linear-gradient(135deg, #1976d2 0%, #2196f3 100%); color: white; text-decoration: none; padding: 16px 24px; border-radius: 8px; font-weight: 600; text-align: center; box-shadow: 0 3px 6px rgba(25, 118, 210, 0.4); font-size: 16px;">
+                        {{ tp('email_card_subscription_approved.content.next_step.access_button', {}, 'email_card_subscription_approved') }}
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <p style="margin: 15px 0 0; font-size: 14px; color: #666; text-align: center;">
+            {{ tp('email_card_subscription_approved.content.next_step.instruction', {}, 'email_card_subscription_approved') }}
+        </p>
+    </div>
+
+    <div class="error-box">
+        <h3 style="margin-top: 0; color: #d32f2f;">{{ tp('email_card_subscription_approved.content.delivery_info.title', {}, 'email_card_subscription_approved') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #ffebee; border-left: 4px solid #d32f2f; border-radius: 6px;">
+                    <p style="margin: 0; color: #000000;">
+                        {{ tp('email_card_subscription_approved.content.delivery_info.description', {}, 'email_card_subscription_approved') }}
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p class="content-text">
+        {{ tp('email_card_subscription_approved.content.assistance', {}, 'email_card_subscription_approved') }}
+    </p>
+
+    <p class="footer-text">
+        {{ tp('email_card_subscription_approved.content.footer', {}, 'email_card_subscription_approved')|raw }}
+    </p>
+{% endblock %}

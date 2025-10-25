@@ -1,0 +1,317 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tp('summary.page_title', {}, 'credit_step_forms') }}{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .credit-summary {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .credit-summary__header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .credit-summary__title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .credit-summary__subtitle {
+            font-size: 1.125rem;
+            color: #6b7280;
+        }
+
+        .credit-summary__card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .credit-summary__section {
+            margin-bottom: 2rem;
+        }
+
+        .credit-summary__section:last-child {
+            margin-bottom: 0;
+        }
+
+        .credit-summary__section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .credit-summary__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .credit-summary__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .credit-summary__item:last-child {
+            border-bottom: none;
+        }
+
+        .credit-summary__label {
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .credit-summary__value {
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .credit-summary__value--highlight {
+            color: #059669;
+            font-size: 1.125rem;
+        }
+
+        .credit-summary__value--amount {
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+        }
+
+        .credit-summary__highlight {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border: 2px solid #0ea5e9;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .credit-summary__highlight-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0c4a6e;
+            margin-bottom: 0.5rem;
+        }
+
+        .credit-summary__highlight-amount {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #0369a1;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+        }
+
+        .credit-summary__highlight-details {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: #0c4a6e;
+        }
+
+        .credit-summary__actions {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .credit-summary__btn {
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0 0.5rem;
+        }
+
+        .credit-summary__btn--primary {
+            background: linear-gradient(135deg, #059669, #047857);
+            color: white;
+            font-size: 1.125rem;
+        }
+
+        .credit-summary__btn--primary:hover {
+            background: linear-gradient(135deg, #047857, #065f46);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(5, 150, 105, 0.4);
+        }
+
+        .credit-summary__btn--secondary {
+            background: #f9fafb;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+
+        .credit-summary__btn--secondary:hover {
+            background: #f3f4f6;
+            border-color: #9ca3af;
+        }
+
+        .credit-summary__notice {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            font-size: 0.875rem;
+            color: #78350f;
+        }
+
+        @media (max-width: 768px) {
+            .credit-summary {
+                margin: 1rem auto;
+                padding: 0 0.5rem;
+            }
+
+            .credit-summary__card {
+                padding: 1.5rem 1rem;
+            }
+
+            .credit-summary__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .credit-summary__highlight-amount {
+                font-size: 2rem;
+            }
+
+            .credit-summary__btn {
+                width: 100%;
+                justify-content: center;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="credit-summary">
+    <header class="credit-summary__header">
+        <h1 class="credit-summary__title">{{ tp('summary.title', {}, 'credit_step_forms') }}</h1>
+        <p class="credit-summary__subtitle">{{ tp('summary.subtitle', {}, 'credit_step_forms') }}</p>
+    </header>
+
+    <!-- Highlight section -->
+    <div class="credit-summary__highlight">
+        <h2 class="credit-summary__highlight-title">{{ tp('summary.highlight.title', {}, 'credit_step_forms') }}</h2>
+        <div class="credit-summary__highlight-amount">{{ dto.loanAmount|number_format(0, ',', ' ') }} €</div>
+        <div class="credit-summary__highlight-details">
+            {{ tp('summary.highlight.monthly_payment_text', {}, 'credit_step_forms') }} <strong>{{ dto.monthlyPayment|number_format(2, ',', ' ') }} €</strong> 
+            {{ tp('summary.highlight.duration_text', {duration: dto.duration}, 'credit_step_forms') }}
+        </div>
+    </div>
+
+    <!-- Personal Information -->
+    <div class="credit-summary__card">
+        <div class="credit-summary__section">
+            <h3 class="credit-summary__section-title">{{ tp('summary.personal_info.title', {}, 'credit_step_forms') }}</h3>
+            <div class="credit-summary__item">
+                <span class="credit-summary__label">{{ tp('summary.personal_info.full_name', {}, 'credit_step_forms') }}</span>
+                <span class="credit-summary__value">{{ dto.fullName }}</span>
+            </div>
+            <div class="credit-summary__item">
+                <span class="credit-summary__label">{{ tp('summary.personal_info.email', {}, 'credit_step_forms') }}</span>
+                <span class="credit-summary__value">{{ dto.email }}</span>
+            </div>
+            <div class="credit-summary__item">
+                <span class="credit-summary__label">{{ tp('summary.personal_info.phone', {}, 'credit_step_forms') }}</span>
+                <span class="credit-summary__value">{{ dto.phone }}</span>
+            </div>
+            <div class="credit-summary__item">
+                <span class="credit-summary__label">{{ tp('summary.personal_info.age', {}, 'credit_step_forms') }}</span>
+                <span class="credit-summary__value">{{ dto.age }} {{ tp('summary.personal_info.age_suffix', {}, 'credit_step_forms') }}</span>
+            </div>
+            <div class="credit-summary__item">
+                <span class="credit-summary__label">{{ tp('summary.personal_info.address', {}, 'credit_step_forms') }}</span>
+                <span class="credit-summary__value">{{ dto.address }}, {{ dto.postalCode }} {{ dto.city }}</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Financial Information -->
+    <div class="credit-summary__card">
+        <div class="credit-summary__section">
+            <h3 class="credit-summary__section-title">{{ tp('summary.financial_info.title', {}, 'credit_step_forms') }}</h3>
+            <div class="credit-summary__item">
+                <span class="credit-summary__label">{{ tp('summary.financial_info.monthly_income', {}, 'credit_step_forms') }}</span>
+                <span class="credit-summary__value credit-summary__value--amount">{{ dto.monthlyIncome|number_format(2, ',', ' ') }} €</span>
+            </div>
+            <div class="credit-summary__item">
+                <span class="credit-summary__label">{{ tp('summary.financial_info.monthly_expenses', {}, 'credit_step_forms') }}</span>
+                <span class="credit-summary__value credit-summary__value--amount">{{ dto.monthlyExpenses|number_format(2, ',', ' ') }} €</span>
+            </div>
+            {% if dto.existingLoans %}
+            <div class="credit-summary__item">
+                <span class="credit-summary__label">{{ tp('summary.financial_info.existing_loans', {}, 'credit_step_forms') }}</span>
+                <span class="credit-summary__value credit-summary__value--amount">{{ dto.existingLoans|number_format(2, ',', ' ') }} €</span>
+            </div>
+            {% endif %}
+            <div class="credit-summary__item">
+                <span class="credit-summary__label">{{ tp('summary.financial_info.remaining_income', {}, 'credit_step_forms') }}</span>
+                <span class="credit-summary__value credit-summary__value--highlight credit-summary__value--amount">
+                    {{ (dto.monthlyIncome - dto.monthlyExpenses - (dto.existingLoans ?? 0) - dto.monthlyPayment)|number_format(2, ',', ' ') }} €
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Credit Details -->
+    <div class="credit-summary__card">
+        <div class="credit-summary__section">
+            <h3 class="credit-summary__section-title">{{ tp('summary.credit_details.title', {}, 'credit_step_forms') }}</h3>
+            <div class="credit-summary__item">
+                <span class="credit-summary__label">{{ tp('summary.credit_details.credit_type', {}, 'credit_step_forms') }}</span>
+                <span class="credit-summary__value">{{ tp(dto.creditType.getLabel(), {}, 'credit_simulation') }}</span>
+            </div>
+            <div class="credit-summary__item">
+                <span class="credit-summary__label">{{ tp('summary.credit_details.interest_rate', {}, 'credit_step_forms') }}</span>
+                <span class="credit-summary__value">{{ dto.creditType.getRate() }}%</span>
+            </div>
+            <div class="credit-summary__item">
+                <span class="credit-summary__label">{{ tp('summary.credit_details.duration', {}, 'credit_step_forms') }}</span>
+                <span class="credit-summary__value">{{ tp('summary.credit_details.duration_months', {duration: dto.duration}, 'credit_step_forms') }}</span>
+            </div>
+            <div class="credit-summary__item">
+                <span class="credit-summary__label">{{ tp('summary.credit_details.total_cost', {}, 'credit_step_forms') }}</span>
+                <span class="credit-summary__value credit-summary__value--amount">{{ (dto.totalCost - dto.loanAmount)|number_format(2, ',', ' ') }} €</span>
+            </div>
+            <div class="credit-summary__item">
+                <span class="credit-summary__label">{{ tp('summary.credit_details.total_amount', {}, 'credit_step_forms') }}</span>
+                <span class="credit-summary__value credit-summary__value--amount">{{ dto.totalCost|number_format(2, ',', ' ') }} €</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="credit-summary__actions">
+        <a href="{{ path('credit_application_step', {'step': 3}) }}" 
+           class="credit-summary__btn credit-summary__btn--secondary">
+            {{ tp('summary.actions.modify', {}, 'credit_step_forms') }}
+        </a>
+        
+        <form method="post" action="{{ path('credit_application_submit') }}" style="display: inline;" data-turbo="false">
+            <input type="hidden" name="_token" value="{{ csrfToken }}">
+            <button type="submit" class="credit-summary__btn credit-summary__btn--primary">
+                {{ tp('summary.actions.confirm', {}, 'credit_step_forms') }}
+            </button>
+        </form>
+    </div>
+
+    <div class="credit-summary__notice">
+        <strong>{{ tp('summary.important', {}, 'credit_step_forms') }}</strong> {{ tp('summary.legal_notice', {}, 'credit_step_forms') }}
+    </div>
+</div>
+{% endblock %}

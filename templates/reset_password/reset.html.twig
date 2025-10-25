@@ -1,0 +1,290 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.reset_password_title'|trans({}, 'reset_password') }} - SEDEF BANK{% endblock %}
+
+{% block body %}
+
+<style>
+/* Reset Password Page Specific Styles */
+.reset-password__container {
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    padding: 24px !important;
+    background: #f8f9fa !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.reset-password__card {
+    background: #ffffff !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 12px !important;
+    padding: 40px !important;
+    width: 100% !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+}
+
+.reset-password__header {
+    text-align: center !important;
+    margin-bottom: 32px !important;
+}
+
+.reset-password__icon {
+    width: 80px !important;
+    height: 80px !important;
+    background: linear-gradient(135deg, #e74c3c, #c0392b) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 24px !important;
+}
+
+.reset-password__icon-svg {
+    width: 40px !important;
+    height: 40px !important;
+    color: white !important;
+}
+
+.reset-password__title {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 8px !important;
+}
+
+.reset-password__subtitle {
+    font-size: 16px !important;
+    color: #7f8c8d !important;
+}
+
+.reset-password__form {
+    margin-bottom: 24px !important;
+}
+
+.reset-password__field {
+    margin-bottom: 20px !important;
+}
+
+.reset-password__label {
+    display: block !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 8px !important;
+}
+
+.reset-password__input {
+    width: 100% !important;
+    padding: 12px 16px !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 6px !important;
+    font-size: 16px !important;
+    background: #ffffff !important;
+    transition: border-color 0.2s ease !important;
+    box-sizing: border-box !important;
+}
+
+.reset-password__input:focus {
+    outline: none !important;
+    border-color: #0066cc !important;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1) !important;
+}
+
+.reset-password__error {
+    color: #e74c3c !important;
+    font-size: 14px !important;
+    margin-top: 8px !important;
+}
+
+.reset-password__submit {
+    width: 100% !important;
+    padding: 12px !important;
+    background: #0066cc !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+}
+
+.reset-password__submit:hover {
+    background: #0052a3 !important;
+    transform: translateY(-1px) !important;
+}
+
+.reset-password__submit:active {
+    transform: translateY(0) !important;
+}
+
+.reset-password__submit-icon {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.reset-password__back {
+    text-align: center !important;
+    margin-top: 24px !important;
+}
+
+.reset-password__back-link {
+    color: #0066cc !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 8px !important;
+    border-radius: 4px !important;
+    transition: background-color 0.2s ease !important;
+}
+
+.reset-password__back-link:hover {
+    background: #f8f9fa !important;
+    color: #0066cc !important;
+}
+
+.reset-password__back-icon {
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.reset-password__requirements {
+    background: #e8f4fd !important;
+    border: 1px solid #bee5eb !important;
+    border-radius: 6px !important;
+    padding: 16px !important;
+    margin-bottom: 20px !important;
+}
+
+.reset-password__requirements-title {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #0c5460 !important;
+    margin-bottom: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+.reset-password__requirements-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+    color: #0c5460 !important;
+}
+
+.reset-password__requirements-item {
+    padding: 2px 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+.reset-password__requirements-icon {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+/* Error styles */
+.reset-password__error {
+    color: #dc3545 !important;
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    display: block !important;
+    background: #f8d7da !important;
+    border: 1px solid #f5c6cb !important;
+    border-radius: 4px !important;
+    padding: 8px 12px !important;
+}
+
+.reset-password__error ul {
+    margin: 0 !important;
+    padding-left: 20px !important;
+}
+
+.reset-password__error li {
+    margin: 2px 0 !important;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .reset-password__container {
+        padding: 16px !important;
+    }
+    
+    .reset-password__card {
+        padding: 24px !important;
+    }
+}
+</style>
+
+<div class="reset-password__container">
+    <div class="reset-password__card">
+        <div class="reset-password__header">
+            <div class="reset-password__icon">
+                {{ ux_icon('heroicons:key', {'class': 'reset-password__icon-svg'}) }}
+            </div>
+            <h1 class="reset-password__title">{{ 'page.reset_password_heading'|trans({}, 'reset_password') }}</h1>
+            <p class="reset-password__subtitle">{{ 'form.password_instructions'|trans({}, 'reset_password') }}</p>
+        </div>
+
+        {{ form_start(resetForm, {'attr': {'class': 'reset-password__form'}}) }}
+            <div class="reset-password__requirements">
+                <div class="reset-password__requirements-title">
+                    {{ ux_icon('heroicons:shield-check', {'class': 'reset-password__requirements-icon'}) }}
+                    {{ 'form.password_requirements_title'|trans({}, 'reset_password') }}
+                </div>
+                <ul class="reset-password__requirements-list">
+                    <li class="reset-password__requirements-item" style="color: red; font-weight: 600;">
+                        {{ ux_icon('heroicons:check', {'class': 'reset-password__requirements-icon'}) }}
+                        {{ 'form.min_length'|trans({}, 'reset_password') }}
+                    </li>
+                    <li class="reset-password__requirements-item" style="color: red; font-weight: 600;">
+                        {{ ux_icon('heroicons:check', {'class': 'reset-password__requirements-icon'}) }}
+                        {{ 'form.uppercase_required'|trans({}, 'reset_password') }}
+                    </li>
+                    <li class="reset-password__requirements-item" style="color: red; font-weight: 600;">
+                        {{ ux_icon('heroicons:check', {'class': 'reset-password__requirements-icon'}) }}
+                        {{ 'form.number_required'|trans({}, 'reset_password') }}
+                    </li>
+                </ul>
+            </div>
+
+            <div class="reset-password__field">
+                {{ form_label(resetForm.plainPassword.first, 'form.password_label'|trans({}, 'reset_password'), {'label_attr': {'class': 'reset-password__label'}}) }}
+                {{ form_widget(resetForm.plainPassword.first, {'attr': {'class': 'reset-password__input', 'placeholder': ('form.password_placeholder'|trans({}, 'reset_password'))}}) }}
+                <span style="color: red; font-weight: 200;">{{ form_errors(resetForm.plainPassword.first, {'attr': {'class': 'reset-password__error'}}) }}</span>
+            </div>
+
+            <div class="reset-password__field">
+                {{ form_label(resetForm.plainPassword.second, 'form.password_confirm_label'|trans({}, 'reset_password'), {'label_attr': {'class': 'reset-password__label'}}) }}
+                {{ form_widget(resetForm.plainPassword.second, {'attr': {'class': 'reset-password__input', 'placeholder': ('form.password_confirm_placeholder'|trans({}, 'reset_password'))}}) }}
+                <span style="color: red; font-weight: 200;">{{ form_errors(resetForm.plainPassword.second, {'attr': {'class': 'reset-password__error'}}) }}</span>
+            </div>
+
+            <button type="submit" class="reset-password__submit">
+                {{ ux_icon('heroicons:check', {'class': 'reset-password__submit-icon'}) }}
+                {{ 'form.reset_button'|trans({}, 'reset_password') }}
+            </button>
+        {{ form_end(resetForm) }}
+
+        <div class="reset-password__back">
+            <a href="{{ path('app_login') }}" class="reset-password__back-link">
+                {{ ux_icon('heroicons:arrow-left', {'class': 'reset-password__back-icon'}) }}
+                {{ 'help.back_to_login'|trans({}, 'reset_password') }}
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

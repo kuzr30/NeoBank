@@ -1,0 +1,109 @@
+travaux:
+  page:
+    title: "Baukredit"
+    description: "Renovieren und gestalten Sie Ihre Wohnung mit unserem Baukredit. Finanzieren Sie alle Ihre Verbesserungsprojekte."
+  
+  hero:
+    class: "credit-detail-hero--travaux"
+    taux: "3,2%"
+    montant: "100 000€"
+    duree: "15 ans"
+    title: "Baukredit"
+    subtitle: "Verwandeln Sie Ihr Zuhause"
+  
+  section_1:
+    title: "Was ist ein Baukredit?"
+    content:
+      paragraph_1: "Der Baukredit finanziert alle Ihre Ausbau-, Renovierungs- und Verbesserungsprojekte für Ihre Wohnung: Küche, Badezimmer, Isolierung, Heizung, Anbau, Schwimmbad..."
+      paragraph_2: "Als speziell für das Wohnen konzipierte Lösung profitiert er von Vorzugskonditionen und kann dem Rhythmus Ihrer Arbeiten mit einer schrittweisen Freigabe der Mittel angepasst werden."
+  
+  features:
+    title: "Merkmale des Baukredits"
+    montant:
+      value: "Bis zu 100 000€"
+      detail: "Je nach Umfang der Arbeiten"
+    duree:
+      value: "Von 1 bis 15 Jahren"
+      detail: "An das Projekt angepasste Laufzeit"
+    taux:
+      value: "Ab 3,2% effektiver Jahreszins*"
+      detail: "Vorzugszins für Bauarbeiten"
+    garantie:
+      value: "Je nach Betrag"
+      detail: "Hypothek falls erforderlich"
+  
+  section_3:
+    title: "Vorteile des Baukredits"
+    advantage_1:
+      title: "Vorteilhafte Zinssätze"
+      content: "Vorzugskonditionen für Verbesserungsarbeiten"
+    advantage_2:
+      title: "Angepasste Freigabe"
+      content: "Mittel werden je nach Fortschritt der Arbeiten freigegeben"
+    advantage_3:
+      title: "Alle Projekte"
+      content: "Renovierung, Anbau, Ausbau, Ausstattung"
+    advantage_4:
+      title: "Wertsteigerung"
+      content: "Erhebliche Wertsteigerung Ihres Vermögens"
+    advantage_5:
+      title: "Begleitung"
+      content: "Beratung zur Optimierung Ihres Projekts"
+  
+  section_4:
+    title: "Förderfähigkeitsbedingungen"
+    conditions:
+      title: "Projektbedingungen"
+      condition_1: "Arbeiten am Hauptwohnsitz oder Zweitwohnsitz"
+      condition_2: "Detaillierte Kostenvoranschläge qualifizierter Unternehmen"
+      condition_3: "Einhaltung der Bauvorschriften"
+      condition_4: "Verwaltungsgenehmigungen falls erforderlich"
+    documents:
+      title: "Nachweisdokumente"
+      document_1: "Rechnungen oder Kostenvoranschläge der Fachbetriebe"
+      document_2: "Aktuelle Einkommensnachweise"
+      document_3: "Eigentumsnachweis oder Mietvertrag"
+      document_4: "Kontoauszüge der letzten 3 Monate"
+  
+  section_5:
+    title: "Erforderliche Unterlagen"
+    personal:
+      title: "Persönliche Dokumente"
+      document_1: "Identitäts- und Wohnsitznachweise"
+      document_2: "3 letzte Gehaltsabrechnungen"
+      document_3: "Steuerbescheid"
+      document_4: "Kontoauszüge"
+    property:
+      title: "Immobilie"
+      document_1: "Eigentumsnachweis"
+      document_2: "Grundsteuer"
+      document_3: "Wohngebäudeversicherung"
+      document_4: "Wohnungspläne"
+    project:
+      title: "Bauprojekt"
+      document_1: "Detaillierte unterzeichnete Kostenvoranschläge"
+      document_2: "Arbeitsbeschreibung"
+      document_3: "Verwaltungsgenehmigungen"
+      document_4: "Vorläufiger Zeitplan"
+  
+  legal:
+    title: "Wichtige rechtliche Informationen"
+    taeg:
+      title: "*Effektiver Jahreszins"
+      content: "Repräsentatives Beispiel: Für einen Baukredit von 40 000€ über 10 Jahre zum effektiven Jahreszins von 3,2% zahlen Sie 120 Monatsraten von 387€, also einen Gesamtbetrag von 46 440€ (Kreditkosten: 6 440€)."
+    deblocage:
+      title: "Freigabe"
+      content: "Mittel werden schrittweise gegen Vorlage der bezahlten Rechnungen freigegeben."
+    travaux:
+      title: "Arbeiten"
+      content: "Verpflichtung zur Durchführung der Arbeiten gemäß den Kostenvoranschlägen."
+    garanties:
+      title: "Garantien"
+      content: "Hypothek je nach Betrag möglich, Darlehensprivileg."
+    assurance:
+      title: "Versicherung"
+      content: "Todesfall-Invaliditätsversicherung empfohlen."
+  
+  cta:
+    title: "Verwirklichen Sie Ihre Bauprojekte"
+    subtitle: "Renovieren und verbessern Sie Ihre Wohnung mit unserem speziellen Kredit"

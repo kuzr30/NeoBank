@@ -1,0 +1,96 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_credit_application_confirmation.title', {}, 'email_credit_application_confirmation') }}{% endblock %}
+
+{% block content %}
+    <div style="background-color: #f8f9fa; padding: 30px; border-radius: 8px; margin-bottom: 30px;">
+        <h1 style="color: #007bff; margin: 0 0 20px 0; font-size: 28px; text-align: center;">
+            {{ tp('email_credit_application_confirmation.content.page_title', {}, 'email_credit_application_confirmation') }}
+        </h1>
+        
+        <p style="font-size: 18px; color: #6c757d; text-align: center; margin: 0;">
+            {{ tp('email_credit_application_confirmation.content.subtitle', {}, 'email_credit_application_confirmation') }}
+        </p>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+        <h2 style="color: #212529; font-size: 20px; margin-bottom: 15px;">
+            {{ tp('email_credit_application_confirmation.content.greeting', {customerName: customerName}, 'email_credit_application_confirmation') }}
+        </h2>
+        
+        <p style="color: #495057; line-height: 1.6; margin-bottom: 20px;">
+            {{ tp('email_credit_application_confirmation.content.introduction', {}, 'email_credit_application_confirmation') }}
+        </p>
+    </div>
+
+    <div style="background-color: #fff; border: 1px solid #e9ecef; border-radius: 8px; padding: 25px; margin-bottom: 30px;">
+        <h3 style="color: #007bff; font-size: 18px; margin: 0 0 20px 0; border-bottom: 1px solid #e9ecef; padding-bottom: 10px;">
+            {{ tp('email_credit_application_confirmation.content.summary.title', {}, 'email_credit_application_confirmation') }}
+        </h3>
+        
+        <div style="display: grid; gap: 15px;">
+            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f8f9fa;">
+                <span style="font-weight: 600; color: #495057;">{{ tp('email_credit_application_confirmation.content.summary.request_number', {}, 'email_credit_application_confirmation') }}</span>
+                <span style="color: #212529; font-family: monospace;">#{{ '%06d'|format(creditApplicationId) }}</span>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f8f9fa;">
+                <span style="font-weight: 600; color: #495057;">{{ tp('email_credit_application_confirmation.content.summary.amount_requested', {}, 'email_credit_application_confirmation') }}</span>
+                <span style="color: #28a745; font-weight: 600; font-size: 16px;">{{ loanAmount|number_format(2, ',', ' ') }} €</span>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f8f9fa;">
+                <span style="font-weight: 600; color: #495057;">{{ tp('email_credit_application_confirmation.content.summary.request_date', {}, 'email_credit_application_confirmation') }}</span>
+                <span style="color: #212529;">{{ "now"|date("d/m/Y à H:i") }}</span>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; padding: 10px 0;">
+                <span style="font-weight: 600; color: #495057;">{{ tp('email_credit_application_confirmation.content.summary.status', {}, 'email_credit_application_confirmation') }}</span>
+                <span style="color: #ffc107; font-weight: 600;">{{ tp('email_credit_application_confirmation.content.summary.status_value', {}, 'email_credit_application_confirmation') }}</span>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: #e3f2fd; border-left: 4px solid #2196f3; padding: 20px; margin-bottom: 30px;">
+        <h4 style="color: #1976d2; margin: 0 0 10px 0; font-size: 16px;">
+            {{ tp('email_credit_application_confirmation.content.next_steps.title', {}, 'email_credit_application_confirmation') }}
+        </h4>
+        <ul style="color: #424242; margin: 0; padding-left: 20px; line-height: 1.6;">
+            <li>{{ tp('email_credit_application_confirmation.content.next_steps.step1', {}, 'email_credit_application_confirmation') }}</li>
+            <li>{{ tp('email_credit_application_confirmation.content.next_steps.step2', {}, 'email_credit_application_confirmation') }}</li>
+            <li>{{ tp('email_credit_application_confirmation.content.next_steps.step3', {}, 'email_credit_application_confirmation') }}</li>
+            <li>{{ tp('email_credit_application_confirmation.content.next_steps.step4', {}, 'email_credit_application_confirmation') }}</li>
+        </ul>
+    </div>
+
+    <div style="text-align: center; margin: 30px 0;">
+        <a href="{{ confirmationUrl }}" 
+           style="display: inline-block; background-color: #007bff; color: white; padding: 15px 30px; 
+                  text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px;">
+            {{ tp('email_credit_application_confirmation.content.track_button', {}, 'email_credit_application_confirmation') }}
+        </a>
+    </div>
+
+    <div style="background-color: #f8f9fa; border-radius: 8px; padding: 20px; margin-bottom: 30px;">
+        <h4 style="color: #495057; margin: 0 0 15px 0; font-size: 16px;">
+            {{ tp('email_credit_application_confirmation.content.help_section.title', {}, 'email_credit_application_confirmation') }}
+        </h4>
+        <p style="color: #6c757d; margin: 0 0 10px 0; line-height: 1.6;">
+            {{ tp('email_credit_application_confirmation.content.help_section.intro', {}, 'email_credit_application_confirmation') }}
+        </p>
+        <ul style="color: #6c757d; margin: 0; padding-left: 20px; line-height: 1.6;">
+            <li>{{ tp('email_credit_application_confirmation.content.help_section.phone', {}, 'email_credit_application_confirmation')|raw }}</li>
+            <li>{{ tp('email_credit_application_confirmation.content.help_section.email', {}, 'email_credit_application_confirmation')|raw }}</li>
+            <li>{{ tp('email_credit_application_confirmation.content.help_section.chat', {}, 'email_credit_application_confirmation')|raw }}</li>
+        </ul>
+    </div>
+
+    <div style="border-top: 1px solid #e9ecef; padding-top: 20px; color: #6c757d; font-size: 14px;">
+        <p style="margin: 0 0 10px 0;">
+            {{ tp('email_credit_application_confirmation.content.important_note', {}, 'email_credit_application_confirmation')|raw }}
+        </p>
+        <p style="margin: 0;">
+            {{ tp('email_credit_application_confirmation.content.disclaimer', {}, 'email_credit_application_confirmation') }}
+        </p>
+    </div>
+{% endblock %}

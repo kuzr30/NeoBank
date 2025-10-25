@@ -1,0 +1,335 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: services.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+services:
+  # Comptes & Cartes
+  accounts_cards:
+    page:
+      title: "Accounts & Cards"
+      description: "Discover our bank accounts and credit cards adapted to your needs."
+    
+    hero:
+      title: "Accounts & Cards"
+      subtitle: "Banking solutions adapted to all your needs"
+      cta: "Learn more"
+    
+    products:
+      title: "Our Products"
+      subtitle: "Choose the solution that suits you best"
+      
+      current_account:
+        title: "Current Account"
+        description: "The ideal account for managing your daily life"
+        features:
+          - "Free bank card"
+          - "Unlimited transfers"
+          - "Mobile app"
+        cta: "Get Started"
+      
+      savings_account:
+        title: "Savings Account"
+        description: "Grow your money in complete safety"
+        features:
+          - "Attractive rate"
+          - "Immediate availability"
+          - "No fees"
+        cta: "Get Started"
+      
+      credit_card:
+        title: "Credit Card"
+        description: "More flexibility for your purchases"
+        features:
+          - "Deferred payment"
+          - "Insurance included"
+          - "Loyalty programs"
+        cta: "Get Started"
+    
+    features:
+      title: "Why Choose Us"
+      subtitle: "Exclusive benefits for our customers"
+      
+      security:
+        title: "Maximum Security"
+        description: "3D Secure protection and real-time alerts"
+      
+      simple:
+        title: "Easy to Use"
+        description: "Intuitive interface and opening in 5 minutes"
+      
+      fast:
+        title: "Fast Transactions"
+        description: "Instant transfers 24/7"
+      
+      support:
+        title: "Expert Support"
+        description: "Dedicated team available by phone and chat"
+    
+    comparison:
+      title: "Why Choose %company_name%?"
+      subtitle: "Compare our benefits with the competition and discover why over 500,000 customers trust us"
+      table_title: "Banking Services Comparison"
+      table_subtitle: "Detailed analysis of %company_name% benefits vs traditional competitors"
+      
+      features:
+        - "Features"
+        - "Free bank card"
+        - "Instant transfers"
+        - "Advanced mobile app"
+        - "24/7 customer support"
+        - "Free authorized overdraft"
+        - "Savings rate"
+      
+      bankit: "%company_name%"
+      competitor_a: "Bank A"
+      competitor_b: "Bank B"
+      
+      values:
+        card_free: "Free"
+        transfers_free: "Free"
+        app_advanced: "Advanced"
+        support_24h: "24/7"
+        overdraft: "Up to €500"
+        savings_rate: "3.2%"
+      
+      competitor_values:
+        a:
+          card_fee: "€5/month"
+          transfers_fee: "€1/transfer"
+          app_quality: "Basic"
+          support_hours: "9am-5pm"
+          overdraft_limit: "€200"
+          savings_rate: "1.8%"
+        b:
+          card_fee: "€8/month"
+          transfers_fee: "✗"
+          app_quality: "Basic"
+          support_hours: "9am-6pm"
+          overdraft_limit: "€150"
+          savings_rate: "2.1%"
+    
+    process:
+      title: "Simplified Account Opening"
+      subtitle: "A 100% digital process, secure and ultra-fast. Your account is operational in less than 10 minutes."
+      time: "⚡ Opening in 10 minutes maximum"
+      
+      steps:
+        step1:
+          title: "Your Information"
+          description: "Enter your personal and professional data securely on our encrypted platform"
+          time: "2 minutes"
+        
+        step2:
+          title: "Identity Verification"
+          description: "Instant validation of your identity via our facial recognition technology and document scan"
+          time: "3 minutes"
+        
+        step3:
+          title: "Validation & Activation"
+          description: "Automatic confirmation and immediate activation of your account with all services included"
+          time: "2 minutes"
+        
+        step4:
+          title: "Card & IBAN"
+          description: "Receive your bank card within 48 hours and IBAN available immediately for your transfers"
+          time: "Instant"
+    
+    services:
+      title: "Premium Banking Services"
+      subtitle: "A complete range of modern banking services to simplify your daily financial management"
+      
+      items:
+        payment_management:
+          title: "Payment Management"
+          description: "All your payment methods centralized in an intuitive and secure interface"
+          features:
+            - "Free instant SEPA transfers"
+            - "Automatic direct debits"
+            - "Apple Pay / Google Pay mobile payments"
+            - "Temporary virtual cards"
+            - "Real-time notifications"
+        
+        financial_analysis:
+          title: "Financial Analysis"
+          description: "Advanced analysis tools to optimize your personal financial management"
+          features:
+            - "Automatic expense categorization"
+            - "Detailed charts and reports"
+            - "Personalized budget alerts"
+            - "Smart savings goals"
+            - "Cash flow forecasts"
+        
+        personalized_advice:
+          title: "Personalized Advice"
+          description: "Tailor-made support for all your financial projects and investments"
+          features:
+            - "Dedicated advisor available 24/7"
+            - "Real-time credit simulations"
+            - "Personalized investment advice"
+            - "Assistance for your real estate projects"
+            - "Tax optimization"
+      
+      payments:
+        title: "Payment Management"
+        description: "All your payment methods centralized in an intuitive and secure interface"
+        features:
+          - "Free instant SEPA transfers"
+          - "Automatic direct debits"
+          - "Apple Pay / Google Pay mobile payments"
+          - "Temporary virtual cards"
+          - "Real-time notifications"
+      
+      analysis:
+        title: "Financial Analysis"
+        description: "Advanced analysis tools to optimize your personal financial management"
+        features:
+          - "Automatic expense categorization"
+          - "Detailed charts and reports"
+          - "Personalized budget alerts"
+          - "Smart savings goals"
+          - "Cash flow forecasts"
+      
+      advice:
+        title: "Personalized Advice"
+        description: "Tailor-made support for all your financial projects and investments"
+        features:
+          - "Dedicated advisor available 24/7"
+          - "Real-time credit simulations"
+          - "Personalized investment advice"
+          - "Assistance for your real estate projects"
+          - "Tax optimization"
+    
+    benefits:
+      title: "Exclusive %company_name% Benefits"
+      subtitle: "Enjoy unique advantages and privileged offers reserved for our loyal customers"
+      
+      items:
+        instant_transactions:
+          title: "Instant Transactions"
+          description: "Transfers and payments processed in less than 3 seconds, 24/7"
+          value: "< 3 seconds"
+        
+        cashback:
+          title: "Guaranteed Cashback"
+          description: "Get up to 2% cashback on all your daily purchases without conditions"
+          value: "Up to 2%"
+        
+        insurance:
+          title: "Insurance Included"
+          description: "Complete protection with travel insurance, purchase insurance and 24/7 assistance included"
+          value: "Included"
+        
+        global_access:
+          title: "Global Access"
+          description: "Use your card in over 210 countries without hidden fees or commissions"
+          value: "210+ countries"
+        
+        loyalty_program:
+          title: "Loyalty Program"
+          description: "Loyalty points convertible into benefits and exclusive partner offers"
+          value: "VIP Points"
+        
+        automatic_savings:
+          title: "Automatic Savings"
+          description: "Automatic rounding up and scheduled transfers to save effortlessly"
+          value: "Automatic"
+      
+      instant:
+        title: "Instant Transactions"
+        description: "Transfers and payments processed in less than 3 seconds, 24/7"
+        value: "< 3 seconds"
+      
+      cashback:
+        title: "Guaranteed Cashback"
+        description: "Get up to 2% cashback on all your daily purchases without conditions"
+        value: "Up to 2%"
+      
+      insurance:
+        title: "Insurance Included"
+        description: "Complete protection with travel insurance, purchase insurance and 24/7 assistance included"
+        value: "Included"
+      
+      worldwide:
+        title: "Global Access"
+        description: "Use your card in over 210 countries without hidden fees or commissions"
+        value: "210+ countries"
+      
+      loyalty:
+        title: "Loyalty Program"
+        description: "Loyalty points convertible into benefits and exclusive partner offers"
+        value: "VIP Points"
+      
+      savings:
+        title: "Automatic Savings"
+        description: "Automatic rounding up and scheduled transfers to save effortlessly"
+        value: "Automatic"
+    
+    support:
+      title: "Excellent Customer Support"
+      subtitle: "A team of dedicated experts at your service to answer all your questions, 24/7"
+      
+      channels:
+        live_chat:
+          title: "Live Chat"
+          description: "Instant assistance via our integrated chat with expert agents available immediately"
+          availability: "24/7"
+          response_time: "Response < 30 seconds"
+        
+        phone_hotline:
+          title: "Phone Hotline"
+          description: "Premium phone service with specialized advisors for all your complex questions"
+          availability: "24/7"
+          response_time: "Free from France"
+        
+        email_form:
+          title: "Email & Form"
+          description: "Detailed email support with personalized responses from our banking experts"
+          availability: "Guaranteed response"
+          response_time: "Within 2 hours"
+        
+        interactive_faq:
+          title: "Interactive FAQ"
+          description: "Complete knowledge base with smart search and step-by-step guides"
+          availability: "Free access"
+          response_time: "Instant answers"
+    
+    cta:
+      title: "Ready to Get Started?"
+      description: "Open your account in a few minutes and enjoy our exclusive benefits"
+      primary_button: "Get Started"
+      secondary_button: "Contact Us"
+  
+  # Épargne & Placements
+  savings_investments:
+    page:
+      title: "Savings & Investments"
+      description: "Optimize your savings with our secure and profitable investment solutions."
+  
+  # Assurances
+  insurances:
+    page:
+      title: "Insurance"
+      description: "Protect your assets and your family with our comprehensive insurance solutions."
+  
+  # Devis
+  devis:
+    page:
+      title: "Quote Request - %type%"
+      description: "Request your quote for %type% online. %description%"
+    
+    confirmation:
+      page:
+        title: "Confirmation - Quote %numero%"
+        description: "Your quote request has been successfully registered."
+    
+    success:
+      message: "Your quote request %numero% has been registered. You will receive a confirmation by email."
+    
+    error:
+      type_not_found: "Insurance type not found"
+      save_failed: "An error occurred while saving your request. Please try again."
+      detailed: "Detailed error: %message%"
+      validation_failed: "The form contains errors. Please check your data."
+      validation_error: "Error: %message%"
+      not_found: "Quote request not found"

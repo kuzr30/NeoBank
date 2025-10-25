@@ -1,0 +1,38 @@
+email_contract_signed_notification:
+  title: "URGENT - Ondertekend contract ontvangen - Administratieve validatie vereist"
+  content:
+    priority_notification:
+      title: "PRIORITAIRE ADMINISTRATIEVE MELDING"
+      description: "Een nieuw ondertekend kredietcontract is ontvangen en vereist onmiddellijke validatie."
+    file_reference:
+      title: "Dossierreferentie"
+      contract_number: "Contractnummer"
+      request_id: "Aanvraag ID"
+      status_label: "Status"
+      status_value: "WACHTEND OP VALIDATIE"
+    customer_profile:
+      title: "Klantprofiel"
+      full_name: "Volledige naam"
+      email: "Email"
+    credit_details:
+      title: "Kredietdetails"
+      requested_amount: "Aangevraagd bedrag"
+      duration: "Looptijd"
+      monthly_payment: "Maandelijkse betaling"
+    actions_required:
+      title: "Vereiste acties"
+      validation: "Juridische validatie - Contractconformiteit verifiëren"
+      financial_approval: "Financiële goedkeuring - Voorwaarden bevestigen"
+      fund_transfer: "Fondsenovermaking - Vrijgave voorbereiden"
+      archiving: "Veilige archivering - Document opgeslagen in systeem"
+    footer:
+      auto_notification: "Automatisch gegenereerde melding"
+      system: "%company_name% kredietbeheersysteem"
+      service: "Administratieve Validatiedienst"
+  
+  # Log berichten voor de MessageHandler
+  logs:
+    sending: "Verzenden van ondertekend contract notificatie"
+    success: "Ondertekend contract notificatie succesvol verzonden"
+    error: "Fout bij het verzenden van ondertekend contract notificatie"
+    send_failed: "Verzenden van ondertekend contract notificatie mislukt"

@@ -1,0 +1,110 @@
+# ENGLISH TRANSLATION - Translated from French
+# Professional credit translation file
+# Domain: credit_professionnel
+# Language: English (en)
+
+credit_professionnel:
+  page:
+    title: "Business Loan"
+    description: "Develop your business with our professional credit. Solutions adapted to the needs of companies and professionals."
+
+  hero:
+    title: "Business Loan"
+    subtitle: "Develop your business"
+    values:
+      taux: "{rate}%"
+      montant: "500,000€"
+      duree: "15 years"
+
+  section_1:
+    title: "What is a business loan?"
+    content:
+      paragraph_1: "The business loan supports you in developing your business: financing equipment, commercial vehicles, premises work, working capital needs or acquisition of shares."
+      paragraph_2: "Flexible solution adapted to professionals, craftsmen, merchants and SMEs, with preferential conditions to support your growth."
+
+  features:
+    montant: "Up to 500,000€"
+    montant_detail: "According to the professional project"
+    duree: "From 2 to 15 years"
+    duree_detail: "Duration adapted to investment"
+    taux: "From {rate}% APR*"
+    taux_detail: "Preferential professional rate"
+    garantie: "Mortgage or pledge"
+    garantie_detail: "According to amount"
+
+  advantages:
+    taux_preferentiel:
+      title: "Preferential rate:"
+      text: "Advantageous conditions for professionals"
+    accompagnement:
+      title: "Support:"
+      text: "Dedicated advisor for professionals"
+    souplesse:
+      title: "Flexibility:"
+      text: "Modulation of installments according to activity"
+    deblocage_rapide:
+      title: "Quick release:"
+      text: "Funds available within 15 days"
+    deductibilite:
+      title: "Deductibility:"
+      text: "Interest fiscally deductible"
+
+  requirements:
+    conditions_activite:
+      title: "Activity conditions"
+      items:
+        creation: "Company created for more than 2 years"
+        declaration: "Activity declared and in compliance"
+        chiffre_affaires: "Regular turnover"
+        difficultes: "No financial difficulties"
+    criteres_financiers:
+      title: "Financial criteria"
+      items:
+        capacite: "Demonstrated repayment capacity"
+        fonds_propres: "Sufficient equity"
+        apport: "Minimum 20% personal contribution"
+        garanties: "Guarantees to propose"
+
+  documents:
+    title: "Required documents"
+    entreprise:
+      title: "Company documents"
+      kbis: "Kbis less than 3 months old"
+      statuts: "Company articles"
+      bilans: "Last 3 balance sheets"
+      liasse_fiscale: "Complete tax package"
+      situation_banque: "Bank statements for the last 6 months"
+    dirigeant:
+      title: "Director documents"
+      identite: "Director's identity document"
+      revenus: "Income proof"
+      patrimoine: "Asset declaration"
+      releves: "Personal account statements"
+    projet:
+      title: "Investment project"
+      plan_financement: "Detailed financing plan"
+      devis: "Supplier quotes"
+      business_plan: "3-year business plan"
+      garanties: "Proposed guarantees"
+
+  legal:
+    title: "Important legal information"
+    taeg:
+      title: "APR:"
+      text: "Representative example: for a business loan of €100,000 over 10 years at APR of 3.8%, you repay 120 monthly payments of €1,017, for a total amount of €122,040 (credit cost: €22,040)."
+    garanties:
+      title: "Guarantees:"
+      text: "Mortgage, pledge or guarantee according to amount and duration."
+    assurance:
+      title: "Insurance:"
+      text: "Key person insurance recommended to secure the loan."
+    fiscalite:
+      title: "Taxation:"
+      text: "Loan interest deductible from taxable income."
+    remboursement:
+      title: "Repayment:"
+      text: "Possibility of modulation according to activity seasonality."
+
+  cta:
+    title: "Boost your business"
+    subtitle: "Finance your professional projects with our dedicated credit"

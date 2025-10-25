@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contrat de souscription de carte à signer</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; text-align: center; border-radius: 8px 8px 0 0; }
+        .content { background: #f8f9fa; padding: 30px; border-radius: 0 0 8px 8px; }
+        .card-info { background: white; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #667eea; }
+        .highlight { color: #667eea; font-weight: bold; }
+        .warning { background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 5px; margin: 20px 0; }
+        .btn { display: inline-block; background: #667eea; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 20px 0; }
+        .footer { text-align: center; margin-top: 30px; font-size: 0.9em; color: #666; }
+        .fees-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .fees-table th, .fees-table td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        .fees-table th { background: #f8f9fa; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏦 SEDEF BANK</h1>
+            <h2>Contrat de souscription de carte</h2>
+            <p>Votre carte {{ contract.cardTypeDisplayName }} {{ contract.cardBrandDisplayName }} est prête !</p>
+        </div>
+        
+        <div class="content">
+            <p>Bonjour <strong>{{ user.firstName }} {{ user.lastName }}</strong>,</p>
+            
+            <p>Félicitations ! Votre demande de souscription pour une carte <span class="highlight">{{ contract.cardTypeDisplayName }} {{ contract.cardBrandDisplayName }}</span> a été approuvée par nos équipes.</p>
+            
+            <div class="card-info">
+                <h3>📋 Détails de votre carte</h3>
+                <p><strong>Type :</strong> {{ contract.cardTypeDisplayName }}</p>
+                <p><strong>Marque :</strong> {{ contract.cardBrandDisplayName }}</p>
+                <p><strong>Référence contrat :</strong> {{ contract.reference }}</p>
+                <p><strong>Compte associé :</strong> {{ cardSubscription.account.accountNumber }}</p>
+            </div>
+            
+            <div class="warning">
+                <strong>⚠️ Action requise :</strong> Pour finaliser votre souscription et recevoir votre carte, vous devez signer électroniquement le contrat ci-joint avant le <strong>{{ contract.expiresAt|date('d/m/Y à H:i') }}</strong>.
+            </div>
+            
+            <h3>💰 Tarification et conditions</h3>
+            <table class="fees-table">
+                <tr>
+                    <th>Élément</th>
+                    <th>Montant/Limite</th>
+                </tr>
+                {% if cardSubscription.activationFee and cardSubscription.activationFee > 0 %}
+                <tr>
+                    <td>Frais d'activation</td>
+                    <td class="highlight">{{ cardSubscription.activationFee }}€</td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td>Frais d'activation</td>
+                    <td><span style="color: green;">Gratuits</span></td>
+                </tr>
+                {% endif %}
+                {% if cardSubscription.monthlyFee and cardSubscription.monthlyFee > 0 %}
+                <tr>
+                    <td>Frais mensuels</td>
+                    <td>{{ cardSubscription.monthlyFee }}€</td>
+                </tr>
+                {% endif %}
+                <tr>
+                    <td>Plafond de retrait quotidien</td>
+                    <td>{{ cardSubscription.dailyLimit ? cardSubscription.dailyLimit ~ '€' : 'N/A' }}</td>
+                </tr>
+                <tr>
+                    <td>Plafond de paiement mensuel</td>
+                    <td>{{ cardSubscription.monthlyLimit ? cardSubscription.monthlyLimit ~ '€' : 'N/A' }}</td>
+                </tr>
+                {% if cardSubscription.creditLimit %}
+                <tr>
+                    <td>Limite de crédit</td>
+                    <td>{{ cardSubscription.creditLimit }}€</td>
+                </tr>
+                {% endif %}
+            </table>
+            
+            <h3>📄 Documents inclus</h3>
+            <ul>
+                <li>Contrat de souscription (PDF joint)</li>
+                <li>Conditions générales d'utilisation</li>
+                <li>Conditions particulières pour votre type de carte</li>
+                <li>Grille tarifaire détaillée</li>
+            </ul>
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="{{ signatureUrl }}" class="btn">
+                    ✍️ Signer le contrat maintenant
+                </a>
+            </div>
+            
+            <h3>🔒 Signature électronique sécurisée</h3>
+            <p>La signature électronique que nous utilisons a la même valeur juridique qu'une signature manuscrite. Vos données sont protégées et chiffrées.</p>
+            
+            <h3>⏰ Prochaines étapes</h3>
+            <ol>
+                <li>Lisez attentivement le contrat joint</li>
+                <li>Cliquez sur le lien de signature ci-dessus</li>
+                <li>Signez électroniquement le document</li>
+                <li>Votre carte sera produite et expédiée sous 3-5 jours ouvrés</li>
+                <li>Vous recevrez un SMS avec le code de suivi</li>
+            </ol>
+            
+            <div class="warning">
+                <strong>⚠️ Important :</strong> Si vous ne signez pas le contrat avant la date d'expiration, votre demande sera automatiquement annulée et vous devrez recommencer la procédure.
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Besoin d'aide ? Contactez-nous :</p>
+            <p>📧 hello@sedef.fr | 📞 01 23 45 67 89</p>
+            <p>Du lundi au vendredi, 9h-18h</p>
+            <hr>
+            <p><small>Cet email a été envoyé automatiquement. Merci de ne pas y répondre directement.</small></p>
+        </div>
+    </div>
+</body>
+</html>

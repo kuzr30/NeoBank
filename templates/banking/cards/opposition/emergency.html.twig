@@ -1,0 +1,193 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Opposition d'urgence{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .emergency-container {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            min-height: 80vh;
+            padding: 40px 0;
+        }
+        .emergency-card {
+            background: white;
+            color: #333;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .quick-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .quick-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .quick-card.selected {
+            border-color: #e74c3c;
+            transform: scale(1.05);
+        }
+        .emergency-button {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            border: none;
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .phone-number {
+            background: #fff;
+            color: #e74c3c;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="emergency-container">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="emergency-card text-center">
+                    <h1 class="text-danger mb-4">
+                        <i class="fas fa-exclamation-triangle fa-3x"></i><br>
+                        {{ tp('emergency.title', [], 'banking_card_opposition') }}
+                    </h1>
+                    
+                    <p class="lead mb-4">
+                        {{ tp('emergency.subtitle', [], 'banking_card_opposition') }}
+                    </p>
+                    
+                    {% if active_cards|length > 0 %}
+                        <form method="post" id="emergencyForm">
+                            <h4 class="mb-3">{{ tp('emergency.select_card', [], 'banking_card_opposition') }}</h4>
+                            
+                            {% for card in active_cards %}
+                                <div class="quick-card" data-card-id="{{ card.id }}">
+                                    <div class="row align-items-center">
+                                        <div class="col-8 text-start">
+                                            <h6>
+                                                {% if card.category == 'visa' %}
+                                                    <i class="fab fa-cc-visa"></i> VISA
+                                                {% elseif card.category == 'mastercard' %}
+                                                    <i class="fab fa-cc-mastercard"></i> MASTERCARD
+                                                {% endif %}
+                                                {{ card.cardType|title }}
+                                            </h6>
+                                            <div style="font-family: 'Courier New', monospace; font-size: 1.1em;">
+                                                •••• •••• •••• {{ card.cardNumber|slice(-4) }}
+                                            </div>
+                                            <small>{{ card.account.accountNumber }}</small>
+                                        </div>
+                                        <div class="col-4 text-end">
+                                            <i class="fas fa-check-circle fa-2x" style="display: none;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            
+                            <input type="hidden" name="card_id" id="selectedCardId">
+                            
+                            <div class="mt-4 mb-3">
+                                <label class="form-label"><strong>{{ tp('emergency.reason_label', [], 'banking_card_opposition') }}</strong></label>
+                                <select name="reason" class="form-select" required>
+                                    <option value="lost">{{ tp('card_controllers.opposition.reasons.lost', [], 'card_controllers') }}</option>
+                                    <option value="stolen">{{ tp('card_controllers.opposition.reasons.stolen', [], 'card_controllers') }}</option>
+                                    <option value="compromised">{{ tp('card_controllers.opposition.reasons.compromised', [], 'card_controllers') }}</option>
+                                    <option value="fraudulent_activity">{{ tp('card_controllers.opposition.reasons.fraudulent_activity', [], 'card_controllers') }}</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-danger emergency-button w-100" disabled>
+                                🚨 {{ tp('emergency.submit_button', [], 'banking_card_opposition') }}
+                            </button>
+                        </form>
+                    {% else %}
+                        <div class="alert alert-warning">
+                            <i class="fas fa-info-circle"></i>
+                            {{ tp('emergency.no_active_cards', [], 'banking_card_opposition') }}
+                        </div>
+                    {% endif %}
+                    
+                    <hr class="my-4">
+                    
+                    <h5 class="text-primary">
+                        <i class="fas fa-phone"></i> {{ tp('emergency.customer_service', [], 'banking_card_opposition') }}
+                    </h5>
+                    <div class="phone-number">
+                        📞 02/XXX.XX.XX
+                    </div>
+                    <p class="text-muted">
+                        {{ tp('emergency.phone_help', [], 'banking_card_opposition') }}
+                    </p>
+                    
+                    <hr class="my-4">
+                    
+                    <div class="row text-center">
+                        <div class="col-6">
+                            <a href="{{ path('app_card_opposition_index') }}" class="btn btn-outline-primary w-100">
+                                <i class="fas fa-arrow-left"></i><br>
+                                {{ tp('emergency.normal_opposition', [], 'banking_card_opposition') }}
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="{{ path('app_card_subscription_index') }}" class="btn btn-outline-secondary w-100">
+                                <i class="fas fa-credit-card"></i><br>
+                                {{ tp('emergency.my_cards', [], 'banking_card_opposition') }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.quick-card');
+    const cardIdInput = document.getElementById('selectedCardId');
+    const submitButton = document.querySelector('.emergency-button');
+    const form = document.getElementById('emergencyForm');
+    
+    cards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Désélectionner toutes les cartes
+            cards.forEach(c => {
+                c.classList.remove('selected');
+                c.querySelector('.fa-check-circle').style.display = 'none';
+            });
+            
+            // Sélectionner cette carte
+            this.classList.add('selected');
+            this.querySelector('.fa-check-circle').style.display = 'block';
+            
+            // Mettre à jour le champ caché et activer le bouton
+            cardIdInput.value = this.dataset.cardId;
+            submitButton.disabled = false;
+        });
+    });
+    
+    // Confirmation avant soumission
+    form.addEventListener('submit', function(e) {
+        if (!confirm('{{ tp('emergency.confirm_message', [], 'banking_card_opposition') }}')) {
+            e.preventDefault();
+        }
+    });
+});
+</script>
+{% endblock %}

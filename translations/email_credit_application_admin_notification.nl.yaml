@@ -1,0 +1,40 @@
+email_credit_application_admin_notification:
+  title: "Nieuwe kredietaanvraag - #%applicationId%"
+  
+  content:
+    page_title: "Nieuwe kredietaanvraag"
+    subtitle: "Er is een nieuwe kredietaanvraag ingediend die uw aandacht vereist."
+    
+    request_details:
+      title: "Aanvraagdetails"
+      request_number: "Aanvragnummer:"
+      submission_date: "Indieningsdatum:"
+    
+    client_info:
+      title: "👤 Klantinformatie"
+      full_name: "Volledige naam:"
+      email: "E-mail:"
+    
+    credit_details:
+      title: "Kredietdetails"
+      amount_requested: "Aangevraagd bedrag:"
+      credit_type: "Krediettype:"
+      duration: "Looptijd:"
+      duration_months: "%duration% maanden"
+    
+    required_actions:
+      title: "Vereiste acties"
+      review_within_24h: "Dossier onderzoeken binnen 24u"
+      verify_solvency: "Solvabiliteit van de klant verifiëren"
+      analyze_documents: "Verstrekte documenten analyseren"
+      make_decision: "Beslissing nemen binnen 3-5 werkdagen"
+    
+    view_admin_button: "📂 Bekijken in admin"
+    contact_client_button: "Klant contacteren"
+    
+    footer_note: "<strong>Opmerking:</strong> Deze melding is automatisch gegenereerd. Gelieve deze aanvraag binnen de gestelde termijnen te behandelen om de servicekwaliteit te behouden."
+
+  logs:
+    credit_admin_notification_sent: "Krediet-adminmelding verzonden voor aanvraag #%applicationId%"
+    credit_admin_notification_failed: "Fout bij het verzenden van krediet-adminmelding"
+    credit_application_assigned: "Kredietaanvraag #%applicationId% toegewezen voor onderzoek"

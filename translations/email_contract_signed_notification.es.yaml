@@ -1,0 +1,38 @@
+email_contract_signed_notification:
+  title: "URGENTE - Contrato firmado recibido - Validación administrativa requerida"
+  content:
+    priority_notification:
+      title: "NOTIFICACIÓN ADMINISTRATIVA PRIORITARIA"
+      description: "Un nuevo contrato de crédito firmado acaba de ser recibido y necesita una validación inmediata."
+    file_reference:
+      title: "Referencia del expediente"
+      contract_number: "Número de contrato"
+      request_id: "ID de la solicitud"
+      status_label: "Estado"
+      status_value: "EN ESPERA DE VALIDACIÓN"
+    customer_profile:
+      title: "Perfil del cliente"
+      full_name: "Nombre completo"
+      email: "Correo electrónico"
+    credit_details:
+      title: "Detalles del crédito"
+      requested_amount: "Importe solicitado"
+      duration: "Duración"
+      monthly_payment: "Cuota mensual"
+    actions_required:
+      title: "Acciones requeridas"
+      validation: "Validación jurídica - Verificar la conformidad del contrato"
+      financial_approval: "Aprobación financiera - Confirmar las condiciones"
+      fund_transfer: "Transferencia de fondos - Preparar el desembolso"
+      archiving: "Archivo seguro - Documento almacenado en el sistema"
+    footer:
+      auto_notification: "Notificación generada automáticamente"
+      system: "Sistema de gestión de créditos %company_name%"
+      service: "Servicio Validación Administrativa"
+  
+  # Mensajes de log para el MessageHandler
+  logs:
+    sending: "Enviando notificación de contrato firmado"
+    success: "Notificación de contrato firmado enviada con éxito"
+    error: "Error al enviar notificación de contrato firmado"
+    send_failed: "Fallo en el envío de notificación de contrato firmado"

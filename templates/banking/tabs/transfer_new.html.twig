@@ -1,0 +1,429 @@
+<style>
+/* Styles pour le formulaire de nouveau virement - intégré au design global */
+.banking__process-steps {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem 0;
+    gap: 0.5rem;
+}
+
+.banking__step {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    background: var(--color-gray-100);
+    color: var(--color-gray-600);
+    font-weight: 500;
+    font-size: 0.875rem;
+    min-width: 100px;
+    justify-content: center;
+}
+
+.banking__step--active {
+    background: var(--color-primary);
+    color: white;
+}
+
+.banking__step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.banking__form-section {
+    margin-bottom: .2rem;
+    padding: 1.5rem;
+    background: white;
+  
+}
+
+.banking__form-section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-gray-900);
+    margin-bottom: .1rem;
+    padding-bottom: 0.5rem;
+}
+
+.banking__form-section-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--color-primary);
+}
+
+.banking__account-source {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--color-blue-50);
+    border-radius: 6px;
+}
+
+.banking__account-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.banking__account-name {
+    font-weight: 600;
+    color: var(--color-blue-900);
+    font-size: 0.875rem;
+}
+
+.banking__account-number {
+    color: var(--color-blue-700);
+    font-size: 0.8rem;
+}
+
+.banking__account-balance {
+    text-align: right;
+}
+
+.banking__balance-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--color-gray-600);
+    margin-bottom: 0.25rem;
+}
+
+.banking__balance-amount {
+    font-weight: 700;
+    color: var(--color-green-600);
+    font-size: 1.125rem;
+}
+
+.banking__form-group {
+    margin-bottom: 1rem;
+}
+
+.banking__form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--color-gray-700);
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.banking__form-group input,
+.banking__form-group select,
+.banking__form-group textarea {
+    width: 97%;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: white;
+}
+
+.banking__form-group input:focus,
+.banking__form-group select:focus,
+.banking__form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.banking__form-help {
+    font-size: 0.875rem;
+    color: var(--color-gray-600);
+    margin-top: 0.25rem;
+}
+
+.banking__form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.banking__form-group--half {
+    flex: 1;
+}
+
+.banking__alert {
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.banking__alert--info {
+    background: var(--color-blue-50);
+    border: 1px solid var(--color-blue-200);
+    color: var(--color-blue-800);
+}
+
+.banking__alert--warning {
+    background: var(--color-yellow-50);
+    border: 1px solid var(--color-yellow-200);
+    color: var(--color-yellow-800);
+}
+
+.banking__alert-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.banking__alert-content {
+    flex: 1;
+}
+
+.banking__alert-content strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.banking__alert-content ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.banking__alert-content li {
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.banking__form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.banking__action-secondary {
+    padding: 0.75rem 1.5rem;
+    background: var(--color-gray-100);
+    color: var(--color-gray-700);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.banking__action-secondary:hover {
+    background: var(--color-gray-200);
+    text-decoration: none;
+}
+
+.banking__form button[type="submit"] {
+    padding: 0.75rem 1.5rem;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.banking__form button[type="submit"]:hover {
+    background: var(--color-primary-dark);
+}
+
+/* Variables CSS pour la cohérence */
+:root {
+    --color-primary: #3b82f6;
+    --color-primary-dark: #2563eb;
+    --color-border: #e5e7eb;
+    --color-gray-50: #f9fafb;
+    --color-gray-100: #f3f4f6;
+    --color-gray-200: #e5e7eb;
+    --color-gray-600: #6b7280;
+    --color-gray-700: #374151;
+    --color-gray-900: #111827;
+    --color-blue-50: #eff6ff;
+    --color-blue-200: #bfdbfe;
+    --color-blue-700: #1d4ed8;
+    --color-blue-800: #1e40af;
+    --color-blue-900: #1e3a8a;
+    --color-green-600: #059669;
+    --color-yellow-50: #fefce8;
+    --color-yellow-200: #fde047;
+    --color-yellow-800: #92400e;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .banking__process-steps {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .banking__step {
+        margin: 0;
+    }
+    
+    .banking__account-source {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .banking__form-row {
+        flex-direction: column;
+    }
+    
+    .banking__form-actions {
+        flex-direction: column;
+    }
+    
+    .banking__form-section {
+        padding: 1rem;
+    }
+}
+
+/* Override pour les erreurs de formulaire */
+.invalid-feedback {
+    color: #dc2626;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.is-invalid {
+    border-color: #dc2626 !important;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+}
+</style>
+
+<!-- Nouveau Virement -->
+<section class="banking__content">
+    
+    <!-- Header -->
+    <div class="banking__operations-header">
+        <div class="banking__section-info">
+            <h2 class="banking__section-title">{{ tp('banking_transfer_new.header.title', [], 'banking_transfer_new') }}</h2>
+            <div class="banking__section-subtitle">{{ tp('banking_transfer_new.header.subtitle', [], 'banking_transfer_new') }}</div>
+        </div>
+        <div class="banking__section-actions">
+            <a href="{{ path('banking_transfers') }}" class="banking__action-secondary">
+                {{ ux_icon('heroicons:arrow-left', {'class': 'banking__action-icon'}) }}
+                {{ tp('banking_transfer_new.header.back_button', [], 'banking_transfer_new') }}
+            </a>
+        </div>
+    </div>
+
+    <!-- Formulaire de virement -->
+    <div class="banking__form-container">
+        {{ form_start(form, {
+            'attr': {
+                'class': 'banking__form',
+                'data-turbo': 'false'
+            }
+        }) }}
+
+        <!-- Étapes du processus -->
+        <div class="banking__process-steps">
+            <div class="banking__step banking__step--active">
+                <span class="banking__step-number">1</span>
+                <span class="banking__step-label">{{ tp('banking_transfer_new.process_steps.step1', [], 'banking_transfer_new') }}</span>
+            </div>
+            <div class="banking__step">
+                <span class="banking__step-number">2</span>
+                <span class="banking__step-label">{{ tp('banking_transfer_new.process_steps.step2', [], 'banking_transfer_new') }}</span>
+            </div>
+            <div class="banking__step">
+                <span class="banking__step-number">3</span>
+                <span class="banking__step-label">{{ tp('banking_transfer_new.process_steps.step3', [], 'banking_transfer_new') }}</span>
+            </div>
+        </div>
+
+        <!-- Informations du compte source -->
+        <div class="banking__form-section">
+            <h3 class="banking__form-section-title">
+                {{ ux_icon('heroicons:building-library', {'class': 'banking__form-section-icon'}) }}
+                {{ tp('banking_transfer_new.source_account.title', [], 'banking_transfer_new') }}
+            </h3>
+            
+            {% if user_accounts is defined and user_accounts|length > 0 %}
+                {% set sourceAccount = user_accounts[0] %}
+                <div class="banking__account-source">
+                    <div class="banking__account-info">
+                        <span class="banking__account-name">{{ tp('banking_transfer_new.source_account.main_account', [], 'banking_transfer_new') }}</span>
+                        <span class="banking__account-number">{{ sourceAccount.accountNumber }}</span>
+                    </div>
+                    <div class="banking__account-balance">
+                        <span class="banking__balance-label">{{ tp('banking_transfer_new.source_account.available_balance', [], 'banking_transfer_new') }}</span>
+                        <span class="banking__balance-amount">{{ sourceAccount.balance|number_format(2, ',', ' ') }} €</span>
+                    </div>
+                </div>
+            {% else %}
+                <div class="banking__alert banking__alert--warning">
+                    <p>{{ tp('banking_transfer_new.source_account.no_account_warning', [], 'banking_transfer_new') }}</p>
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Compte bénéficiaire -->
+        <div class="banking__form-section">
+            <h3 class="banking__form-section-title">
+                {{ ux_icon('heroicons:arrow-right', {'class': 'banking__form-section-icon'}) }}
+                {{ tp('banking_transfer_new.destination_account.title', [], 'banking_transfer_new') }}
+            </h3>
+            
+            <div class="banking__form-group">
+                {{ form_label(form.destinationAccount) }}
+                {{ form_widget(form.destinationAccount) }}
+                <div class="banking__form-help">
+                    {{ tp('banking_transfer_new.destination_account.help_text', [], 'banking_transfer_new') }}
+                </div>
+                {{ form_errors(form.destinationAccount) }}
+            </div>
+        </div>
+
+        <!-- Montant et détails -->
+        <div class="banking__form-section">
+            <h3 class="banking__form-section-title">
+                {{ ux_icon('heroicons:banknotes', {'class': 'banking__form-section-icon'}) }}
+                {{ tp('banking_transfer_new.transfer_details.title', [], 'banking_transfer_new') }}
+            </h3>
+            
+            <div class="banking__form-row">
+                <div class="banking__form-group banking__form-group--half">
+                    {{ form_label(form.amount) }}
+                    {{ form_widget(form.amount) }}
+                    {{ form_errors(form.amount) }}
+                </div>
+            </div>
+            
+            <div class="banking__form-group">
+                {{ form_label(form.description) }}
+                {{ form_widget(form.description) }}
+                <div class="banking__form-help">
+                    {{ tp('banking_transfer_new.transfer_details.description_help', [], 'banking_transfer_new') }}
+                </div>
+                {{ form_errors(form.description) }}
+            </div>
+        </div>
+
+      
+        <!-- Actions -->
+        <div class="banking__form-actions">
+            <a href="{{ path('banking_transfers') }}" class="banking__action-secondary">
+                {{ tp('banking_transfer_new.actions.cancel', [], 'banking_transfer_new') }}
+            </a>
+            {{ form_widget(form.submit) }}
+        </div>
+
+        {{ form_end(form) }}
+    </div>
+
+</section>

@@ -1,0 +1,64 @@
+banking_savings:
+  header:
+    title: "Sparen & Geldanlagen"
+    subtitle: "Verwalten Sie Ihre Sparprodukte"
+    last_update: "Letzte Aktualisierung:"
+    total_savings: "Gesamtersparnis"
+  
+  products:
+    livret_a: "Sparbuch A"
+    pea: "Aktiensparpläne"
+    term_deposit: "Festgeld"
+  
+  labels:
+    ceiling: "Höchstgrenze"
+    available: "Verfügbar"
+    interests_2025: "Zinsen 2025"
+    plus_minus_value: "+/- Wert"
+    performance_ytd: "Performance YTD"
+    maturity: "Fälligkeit"
+    remaining_duration: "Verbleibende Laufzeit"
+    expected_interests: "Erwartete Zinsen"
+    days: "Tage"
+  
+  actions:
+    fund: "Einzahlen"
+    withdraw: "Abheben"
+    invest: "Investieren"
+    arbitrate: "Umschichten"
+    blocked: "Gesperrt"
+    details: "Details"
+  
+  opportunities:
+    section_title: "Sparmöglichkeiten"
+    section_subtitle: "Entdecken Sie unsere Produkte zur Optimierung Ihrer Ersparnisse"
+    pel_title: "Bausparvertrag"
+    pel_description: "Bereiten Sie Ihr Immobilienprojekt mit einem garantierten Zinssatz vor"
+    pel_rate: "2,20% + Staatsprämie"
+    youth_savings_title: "Jugendsparbuch"
+    youth_savings_description: "Für 12-25-Jährige, ein Sparbuch zu vorteilhaften Konditionen"
+    youth_savings_rate: "3,50% steuerfrei"
+    life_insurance_title: "Lebensversicherung"
+    life_insurance_description: "Bauen Sie Ihr Vermögen mit unserem Mehrfonds-Vertrag auf"
+    life_insurance_rate: "Attraktive Rendite"
+    discover_button: "Entdecken"
+  
+  movements:
+    section_title: "Letzte Bewegungen"
+    table_headers:
+      date: "Datum"
+      product: "Produkt"
+      operation: "Vorgang"
+      amount: "Betrag"
+      new_balance: "Neuer Saldo"
+      actions: "Aktionen"
+    operations:
+      transfer_from_checking: "Überweisung vom Girokonto"
+      interest_capitalization: "Zinszuführung"
+      stock_purchase: "Aktienkauf LVMH"
+      livret_a_interests: "Zinsen Sparbuch A"
+  
+  pagination:
+    previous: "Vorherige"
+    next: "Weiter"
+    page_info: "Seite %current% von %total% (%count% Bewegungen)"

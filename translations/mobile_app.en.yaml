@@ -1,0 +1,161 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: mobile_app.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+mobile_app:
+  # Meta tags
+  meta:
+    mobile_app:
+      title: "%company_name% Mobile App"
+      description: "Discover our %company_name% mobile app: account management, transfers, and much more from your smartphone."
+  
+  hero:
+    subtitle: "Revolutionize your banking management with the %company_name% mobile app. A new generation banking experience, simple, secure and completely free."
+    features:
+      security:
+        title: "Military-grade banking security"
+        description: "AES-256 encryption and biometric authentication for maximum protection of your data"
+      transfers:
+        title: "Instant SEPA transfers"
+        description: "Transfer money in real time, 24/7, to all European accounts"
+      analysis:
+        title: "Intelligent financial analysis"
+        description: "Advanced AI to analyze your habits and automatically optimize your budget"
+    actions:
+      discover: "Discover the app"
+      download: "Download for free"
+    preview:
+      balance_card:
+        available_balance: "Available balance"
+        amount: "€12,847.50"
+        growth: "+2.8% this month"
+      quick_actions:
+        transfer: "Transfer"
+        cards: "Cards"
+        savings: "Savings"
+
+  features:
+    title: "Advanced features"
+    subtitle: "Discover all the features that make %company_name% the most comprehensive banking app on the market."
+    items:
+      instant_transfers:
+        title: "Instant transfers"
+        description: "Make SEPA transfers in real time, 24/7, to all European accounts."
+      expense_analysis:
+        title: "Expense analysis"
+        description: "Artificial intelligence to analyze your habits and automatically optimize your budget."
+      smart_notifications:
+        title: "Smart notifications"
+        description: "Personalized alerts for every transaction, spending threshold and savings opportunity."
+      virtual_cards:
+        title: "Virtual cards"
+        description: "Create temporary virtual cards for your online purchases securely."
+      automatic_savings:
+        title: "Automatic savings"
+        description: "Save effortlessly with our algorithms that automatically round up your purchases."
+      multi_currency:
+        title: "Multi-currency"
+        description: "Manage over 25 currencies with real-time exchange rates and no commission."
+
+  security:
+    badge: "Military-grade banking security"
+    title: "Your security is our absolute priority"
+    subtitle: "%company_name% uses the most advanced security technologies to protect your data and transactions. Our systems meet the strictest banking standards."
+    features:
+      encryption:
+        title: "AES-256 encryption"
+        description: "Your data is protected by the same level of encryption as central banks"
+      biometric:
+        title: "Biometric authentication"
+        description: "Secure login with facial recognition, fingerprint or Face ID"
+      monitoring:
+        title: "24/7 monitoring"
+        description: "Automatic fraud detection and instant alerts in case of suspicious activity"
+    certifications:
+      title: "Certifications and compliance"
+      items:
+        pci_dss: "PCI DSS Level 1"
+        iso: "ISO 27001:2013"
+        gdpr: "GDPR compliant"
+        psd2: "PSD2 Directive"
+
+  support:
+    title: "24/7 customer support"
+    subtitle: "Our team of experts is available at all times to support you in your banking experience."
+    channels:
+      live_chat:
+        title: "Live chat"
+        description: "Immediate response via our integrated app chat"
+        availability: "Available 24/7"
+      phone:
+        title: "Phone support"
+        description: "Personalized assistance with our banking advisors"
+        availability: "Monday to Sunday"
+      priority_email:
+        title: "Priority email"
+        description: "Guaranteed response in less than 2 business hours"
+        availability: "hello@sedef.fr"
+    stats:
+      satisfaction:
+        value: "98.5%"
+        label: "customer satisfaction"
+      resolution_time:
+        value: "4.2 min"
+        label: "average resolution time"
+      response_time:
+        value: "< 30 sec"
+        label: "chat response time"
+    faq:
+      title: "Frequently asked questions"
+      items:
+        account_opening:
+          question: "How do I open an account?"
+          answer: "Account opening takes 5 minutes via the app. All you need is your ID and proof of address."
+        is_free:
+          question: "Is the app free?"
+          answer: "Yes, %company_name% is 100% free: download, account management, SEPA transfers and virtual card with no fees."
+        data_security:
+          question: "Is my data secure?"
+          answer: "Absolutely. We use AES-256 banking encryption and are PCI DSS level 1 and ISO 27001 certified."
+        international:
+          question: "Can I use %company_name% abroad?"
+          answer: "Yes, %company_name% works in over 50 countries with multi-currency support and free international transfers."
+    contact:
+      title: "Have a specific question?"
+      description: "Our team of experts is ready to help you. Contact us directly via your preferred channel."
+      actions:
+        start_chat: "Start a chat"
+        phone_number: "%company_phone%"
+      agent:
+        name: "Sophie Martin"
+        role: "Senior banking advisor"
+        status: "Online now"
+
+  download:
+    title: "Download %company_name% now"
+    subtitle: "Join over 2 million users who trust %company_name% to manage their finances. Free app, no ads and no hidden fees."
+    stats:
+      rating:
+        value: "4.9"
+        label: "Average rating"
+      users:
+        value: "2M+"
+        label: "Active users"
+      countries:
+        value: "50+"
+        label: "Available countries"
+    buttons:
+      ios:
+        label: "Download on the"
+        store: "App Store"
+      android:
+        label: "Get it on"
+        store: "Google Play"
+    features:
+      - "Free and secure installation"
+      - "No download fees"
+      - "Compatible iOS 13+ and Android 8+"
+    app:
+      name: "%company_name%"
+      description: "Digital banking"

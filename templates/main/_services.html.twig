@@ -1,0 +1,491 @@
+<!-- Services Section -->
+<section class="services">
+  <div class="services-container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <div class="header-badge">
+        {{ ux_icon('heroicons:building-library', {'class': 'badge-icon'}) }}
+        <span>{{ tp('services.badge', {}, 'home') }}</span>
+      </div>
+      <h2 class="section-title">
+        {{ tp('services.title', {}, 'home') }} <span class="title-accent">{{ tp('services.title_accent', {}, 'home') }}</span>
+      </h2>
+      <p class="section-description">
+        {{ tp('services.description', {}, 'home') }}
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="services-grid">
+      <!-- Service 1: Comptes & Cartes -->
+      <div class="service-card">
+        <div class="service-icon">
+          {{ ux_icon('heroicons:credit-card', {'class': 'icon'}) }}
+        </div>
+        <h3 class="service-title">{{ tp('services.account.title', {}, 'home') }}</h3>
+        <p class="service-description">
+          {{ tp('services.account.description', {}, 'home') }}
+        </p>
+        <ul class="service-features">
+          <li>{{ ux_icon('heroicons:check', {'class': 'check-icon'}) }} {{ tp('services.account.features.foreign_fees', {}, 'home') }}</li>
+          <li>{{ ux_icon('heroicons:check', {'class': 'check-icon'}) }} {{ tp('services.account.features.overdraft', {}, 'home') }}</li>
+          <li>{{ ux_icon('heroicons:check', {'class': 'check-icon'}) }} {{ tp('services.account.features.mobile_app', {}, 'home') }}</li>
+        </ul>
+        <a href="{{ path('services_accounts_cards') }}" class="service-cta">
+          <span>{{ tp('services.account.cta', {}, 'home') }}</span>
+          {{ ux_icon('heroicons:arrow-right', {'class': 'cta-arrow'}) }}
+        </a>
+        <div class="regulatory-note">
+          <small>{{ tp('services.account.regulatory', {}, 'home') }}</small>
+        </div>
+      </div>
+
+      <!-- Service 2: Épargne & Placements -->
+      <div class="service-card featured">
+        <div class="featured-badge">
+          <span>{{ tp('services.savings.badge', {}, 'home') }}</span>
+        </div>
+        <div class="service-icon">
+          {{ ux_icon('heroicons:chart-bar', {'class': 'icon'}) }}
+        </div>
+        <h3 class="service-title">{{ tp('services.savings.title', {}, 'home') }}</h3>
+        <p class="service-description">
+          {{ tp('services.savings.description', {}, 'home') }}
+        </p>
+        <ul class="service-features">
+          <li>{{ ux_icon('heroicons:check', {'class': 'check-icon'}) }} {{ tp('services.savings.features.savings_accounts', {}, 'home') }}</li>
+          <li>{{ ux_icon('heroicons:check', {'class': 'check-icon'}) }} {{ tp('services.savings.features.life_insurance', {}, 'home') }}</li>
+          <li>{{ ux_icon('heroicons:check', {'class': 'check-icon'}) }} {{ tp('services.savings.features.pea', {}, 'home') }}</li>
+        </ul>
+        <a href="{{ path('services_savings_investments') }}" class="service-cta">
+          <span>{{ tp('services.savings.cta', {}, 'home') }}</span>
+          {{ ux_icon('heroicons:arrow-right', {'class': 'cta-arrow'}) }}
+        </a>
+        <div class="regulatory-note">
+          <small>{{ tp('services.savings.regulatory', {}, 'home') }}</small>
+        </div>
+      </div>
+
+      <!-- Service 3: Crédits & Prêts -->
+      <div class="service-card">
+        <div class="service-icon">
+          {{ ux_icon('heroicons:banknotes', {'class': 'icon'}) }}
+        </div>
+        <h3 class="service-title">{{ tp('services.credit.title', {}, 'home') }}</h3>
+        <p class="service-description">
+          {{ tp('services.credit.description', {}, 'home') }}
+        </p>
+        <ul class="service-features">
+          <li>{{ ux_icon('heroicons:check', {'class': 'check-icon'}) }} {{ tp('services.credit.features.mortgage', {}, 'home') }}</li>
+          <li>{{ ux_icon('heroicons:check', {'class': 'check-icon'}) }} {{ tp('services.credit.features.auto_loan', {}, 'home') }}</li>
+          <li>{{ ux_icon('heroicons:check', {'class': 'check-icon'}) }} {{ tp('services.credit.features.quick_response', {}, 'home') }}</li>
+        </ul>
+        <a href="{{ path('credit_offers_index') }}" class="service-cta">
+          <span>{{ tp('services.credit.cta', {}, 'home') }}</span>
+          {{ ux_icon('heroicons:arrow-right', {'class': 'cta-arrow'}) }}
+        </a>
+        <div class="regulatory-note">
+          <small>{{ tp('services.credit.regulatory', {}, 'home') }}</small>
+        </div>
+      </div>
+
+      <!-- Service 4: Assurances -->
+      <div class="service-card">
+        <div class="service-icon">
+          {{ ux_icon('heroicons:shield-check', {'class': 'icon'}) }}
+        </div>
+        <h3 class="service-title">{{ tp('services.insurance.title', {}, 'home') }}</h3>
+        <p class="service-description">
+          {{ tp('services.insurance.description', {}, 'home') }}
+        </p>
+        <ul class="service-features">
+          <li>{{ ux_icon('heroicons:check', {'class': 'check-icon'}) }} {{ tp('services.insurance.features.home_insurance', {}, 'home') }}</li>
+          <li>{{ ux_icon('heroicons:check', {'class': 'check-icon'}) }} {{ tp('services.insurance.features.auto_bonus', {}, 'home') }}</li>
+          <li>{{ ux_icon('heroicons:check', {'class': 'check-icon'}) }} {{ tp('services.insurance.features.assistance', {}, 'home') }}</li>
+        </ul>
+        <a href="{{ path('services_insurances') }}" class="service-cta">
+          <span>{{ tp('services.insurance.cta', {}, 'home') }}</span>
+          {{ ux_icon('heroicons:arrow-right', {'class': 'cta-arrow'}) }}
+        </a>
+        <div class="regulatory-note">
+          <small>{{ tp('services.insurance.regulatory', {}, 'home') }}</small>
+        </div>
+      </div>
+
+      <!-- Service 5: Services Professionnels -->
+      <div class="service-card">
+        <div class="service-icon">
+          {{ ux_icon('heroicons:briefcase', {'class': 'icon'}) }}
+        </div>
+        <h3 class="service-title">{{ tp('services.professional.title', {}, 'home') }}</h3>
+        <p class="service-description">
+          {{ tp('services.professional.description', {}, 'home') }}
+        </p>
+        <ul class="service-features">
+          <li>{{ ux_icon('heroicons:check', {'class': 'check-icon'}) }} {{ tp('services.professional.features.business_account', {}, 'home') }}</li>
+          <li>{{ ux_icon('heroicons:check', {'class': 'check-icon'}) }} {{ tp('services.professional.features.payment_terminal', {}, 'home') }}</li>
+          <li>{{ ux_icon('heroicons:check', {'class': 'check-icon'}) }} {{ tp('services.professional.features.dedicated_advisor', {}, 'home') }}</li>
+        </ul>
+        <a href="{{ path('services_accounts_cards') }}" class="service-cta">
+          <span>{{ tp('services.professional.cta', {}, 'home') }}</span>
+          {{ ux_icon('heroicons:arrow-right', {'class': 'cta-arrow'}) }}
+        </a>
+        <div class="regulatory-note">
+          <small>{{ tp('services.professional.regulatory', {}, 'home') }}</small>
+        </div>
+      </div>
+
+      <!-- Service 6: Banque Privée -->
+      <div class="service-card premium">
+        <div class="premium-badge">
+          <span>{{ tp('services.private.badge', {}, 'home') }}</span>
+        </div>
+        <div class="service-icon">
+          {{ ux_icon('heroicons:star', {'class': 'icon'}) }}
+        </div>
+        <h3 class="service-title">{{ tp('services.private.title', {}, 'home') }}</h3>
+        <p class="service-description">
+          {{ tp('services.private.description', {}, 'home') }}
+        </p>
+        <ul class="service-features">
+          <li>{{ ux_icon('heroicons:check', {'class': 'check-icon'}) }} {{ tp('services.private.features.dedicated_advisor', {}, 'home') }}</li>
+          <li>{{ ux_icon('heroicons:check', {'class': 'check-icon'}) }} {{ tp('services.private.features.vip_access', {}, 'home') }}</li>
+          <li>{{ ux_icon('heroicons:check', {'class': 'check-icon'}) }} {{ tp('services.private.features.concierge', {}, 'home') }}</li>
+        </ul>
+        <a href="{{ path('services_accounts_cards') }}" class="service-cta">
+          <span>{{ tp('services.private.cta', {}, 'home') }}</span>
+          {{ ux_icon('heroicons:arrow-right', {'class': 'cta-arrow'}) }}
+        </a>
+        <div class="regulatory-note">
+          <small>{{ tp('services.private.regulatory', {}, 'home') }}</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compliance Footer -->
+ 
+  </div>
+</section>
+
+<style>
+/* ===== SERVICES SECTION STYLES ===== */
+.services {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  position: relative;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.875rem;
+  background: rgba(30, 64, 175, 0.1);
+  color: #1e40af;
+  border-radius: 1.5rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.badge-icon {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.title-accent {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #64748b;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  animation: fadeInUp 0.6s ease-out 0.6s both;
+}
+
+/* Service Cards */
+.service-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+  border-color: #3b82f6;
+}
+
+.service-card.featured {
+  border: 2px solid #3b82f6;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+}
+
+.service-card.premium {
+  border: 2px solid #f59e0b;
+  background: linear-gradient(135deg, #ffffff 0%, #fffbeb 100%);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #3b82f6;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.premium-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #f59e0b;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.service-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-icon .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.service-description {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.service-features {
+  list-style: none;
+  margin: 0 0 2rem 0;
+  padding: 0;
+}
+
+.service-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.check-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+.service-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1e40af;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.service-cta:hover {
+  color: #3b82f6;
+  transform: translateX(4px);
+}
+
+.cta-arrow {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.service-cta:hover .cta-arrow {
+  transform: translateX(2px);
+}
+
+.regulatory-note {
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 1rem;
+}
+
+.regulatory-note small {
+  color: #6b7280;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+/* Compliance Section */
+.services-compliance {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+}
+
+.compliance-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.compliance-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.compliance-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #1e40af;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.compliance-item strong {
+  color: #1e293b;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.compliance-item p {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services {
+    padding: 4rem 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .service-card {
+    padding: 1.5rem;
+  }
+  
+  .compliance-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .header-badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+  }
+  
+  .badge-icon {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header {
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .section-description {
+    font-size: 1rem;
+  }
+  
+  .service-card {
+    padding: 1.25rem;
+  }
+}
+</style>

@@ -1,0 +1,290 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tp('help_center.page.title', {}, 'help_center') }} - {{ companySettings.companyName }}{% endblock %}
+
+{% block body %}
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title">{{ tp('help_center.hero.title', {}, 'help_center') }}</h1>
+                <p class="hero__subtitle">{{ tp('help_center.hero.subtitle', {}, 'help_center') }}</p>
+                
+                <div class="hero__search">
+                    <div class="search-box">
+                        <input type="text" class="search-box__input" placeholder="{{ tp('help_center.hero.search.placeholder', {}, 'help_center') }}">
+                        <button class="search-box__button">
+                            <twig:ux:icon name="heroicons:magnifying-glass" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Détails du Centre d'Aide -->
+    <section class="help-details">
+        <div class="help-details__container">
+            <h2 class="help-details__title">{{ tp('help_center.sections.main_title', {}, 'help_center') }}</h2>
+            
+            <div class="help-grid">
+                <div class="help-card">
+                    <div class="help-card__icon">
+                        <twig:ux:icon name="heroicons:credit-card" />
+                    </div>
+                    <h3 class="help-card__title">{{ tp('help_center.sections.accounts_cards.title', {}, 'help_center') }}</h3>
+                    <p class="help-card__description">{{ tp('help_center.sections.accounts_cards.description', {}, 'help_center') }}</p>
+                    <ul class="help-card__links">
+                        <li><a href="{{ path('banking_accounts') }}">{{ tp('help_center.sections.accounts_cards.links.balance', {}, 'help_center') }}</a></li>
+                        <li><a href="{{ path('banking_transfers') }}">{{ tp('help_center.sections.accounts_cards.links.transfers', {}, 'help_center') }}</a></li>
+                    </ul>
+                </div>
+
+                <div class="help-card">
+                    <div class="help-card__icon">
+                        <twig:ux:icon name="heroicons:shield-check" />
+                    </div>
+                    <h3 class="help-card__title">{{ tp('help_center.sections.security.title', {}, 'help_center') }}</h3>
+                    <p class="help-card__description">{{ tp('help_center.sections.security.description', {}, 'help_center') }}</p>
+                    <ul class="help-card__links">
+                        <li><a href="{{ path('support_security') }}">{{ tp('help_center.sections.security.links.authentication', {}, 'help_center') }}</a></li>
+                        <li><a href="{{ path('support_contact') }}">{{ tp('help_center.sections.security.links.fraud', {}, 'help_center') }}</a></li>
+                    </ul>
+                </div>
+
+                <div class="help-card">
+                    <div class="help-card__icon">
+                        <twig:ux:icon name="heroicons:phone" />
+                    </div>
+                    <h3 class="help-card__title">{{ tp('help_center.sections.contact.title', {}, 'help_center') }}</h3>
+                    <p class="help-card__description">{{ tp('help_center.sections.contact.description', {}, 'help_center') }}</p>
+                    <ul class="help-card__links">
+                        <li><a href="{{ path('support_contact') }}">{{ tp('help_center.sections.contact.links.chat', {}, 'help_center') }}</a></li>
+                        <li><a href="{{ path('support_branches') }}">{{ tp('help_center.sections.contact.links.appointment', {}, 'help_center') }}</a></li>
+                    </ul>
+                </div>
+
+                <div class="help-card">
+                    <div class="help-card__icon">
+                        <twig:ux:icon name="heroicons:cog-6-tooth" />
+                    </div>
+                    <h3 class="help-card__title">{{ tp('help_center.sections.services.title', {}, 'help_center') }}</h3>
+                    <p class="help-card__description">{{ tp('help_center.sections.services.description', {}, 'help_center') }}</p>
+                    <ul class="help-card__links">
+                        <li><a href="{{ path('app_login') }}">{{ tp('help_center.sections.services.links.login', {}, 'help_center') }}</a></li>
+                        <li><a href="{{ path('banking_accounts') }}">{{ tp('help_center.sections.services.links.settings', {}, 'help_center') }}</a></li>
+                    </ul>
+                </div>
+
+                <div class="help-card">
+                    <div class="help-card__icon">
+                        <twig:ux:icon name="heroicons:currency-euro" />
+                    </div>
+                    <h3 class="help-card__title">{{ tp('help_center.sections.credits_savings.title', {}, 'help_center') }}</h3>
+                    <p class="help-card__description">{{ tp('help_center.sections.credits_savings.description', {}, 'help_center') }}</p>
+                    <ul class="help-card__links">
+                        <li><a href="{{ path('credit_simulation_index') }}">{{ tp('help_center.sections.credits_savings.links.simulation', {}, 'help_center') }}</a></li>
+                        <li><a href="{{ path('services_savings_investments') }}">{{ tp('help_center.sections.credits_savings.links.savings', {}, 'help_center') }}</a></li>
+                    </ul>
+                </div>
+
+                <div class="help-card">
+                    <div class="help-card__icon">
+                        <twig:ux:icon name="heroicons:document-text" />
+                    </div>
+                    <h3 class="help-card__title">{{ tp('help_center.sections.documents.title', {}, 'help_center') }}</h3>
+                    <p class="help-card__description">{{ tp('help_center.sections.documents.description', {}, 'help_center') }}</p>
+                    <ul class="help-card__links">
+                        <li><a href="{{ path('banking_accounts') }}">{{ tp('help_center.sections.documents.links.rib', {}, 'help_center') }}</a></li>
+                        <li><a href="{{ path('banking_accounts') }}">{{ tp('help_center.sections.documents.links.statements', {}, 'help_center') }}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.hero__title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero__search {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-box {
+    display: flex;
+    background: white;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.search-box__input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    color: #374151;
+}
+
+.search-box__button {
+    padding: 1rem 1.5rem;
+    background: #1e40af;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box__button:hover {
+    background: #1d4ed8;
+}
+
+/* Section Détails */
+.help-details {
+    padding: 4rem 0;
+    background: #f8fafc;
+}
+
+.help-details__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.help-details__title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 3rem;
+}
+
+.help-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.help-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.help-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.help-card__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: linear-gradient(135deg, #1e40af, #3b82f6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.help-card__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.help-card__description {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.help-card__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.help-card__links li {
+    margin-bottom: 0.75rem;
+}
+
+.help-card__links a {
+    color: #1e40af;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    display: block;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.help-card__links a:hover {
+    color: #1d4ed8;
+    background: #f8fafc;
+    padding-left: 0.5rem;
+}
+
+.help-card__links li:last-child a {
+    border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero__title {
+        font-size: 2rem;
+    }
+    
+    .hero__subtitle {
+        font-size: 1rem;
+    }
+    
+    .help-details__title {
+        font-size: 2rem;
+    }
+    
+    .help-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .help-card {
+        padding: 1.5rem;
+    }
+}
+</style>
+{% endblock %}

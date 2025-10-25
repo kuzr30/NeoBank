@@ -1,0 +1,429 @@
+# Navegación
+nav:
+  home: "Inicio"
+  services: "Servicios"
+  about: "Acerca de"
+  contact: "Contacto"
+  login: "Iniciar sesión"
+  signup: "Registrarse"
+  mobile: "Banca Móvil"
+  loans: "Créditos"
+  credit_simulation: "Simulación de Crédito"
+  mobile_app: "Aplicación Móvil"
+  credit_card: "Tarjeta de Crédito"
+  our_credit_offers: "Nuestras Ofertas de Crédito"
+  personal_loan: "Préstamo Personal"
+  travel_loan: "Préstamo Viaje"
+  auto_loan: "Préstamo Auto"
+  home_loan: "Préstamo Inmobiliario"
+  client_space: "Espacio Cliente"
+  banking_dashboard: "Mi Espacio Bancario"
+  branches: "Sucursales"
+  help: "Ayuda"
+
+# Menú desplegable de usuario  
+user_menu:
+  access_profile: "Acceder a mi perfil"
+  identity_verification: "Verificación de identidad"
+  access_banking: "Acceder a mi cuenta bancaria"
+  administration: "Administración" 
+  logout: "Cerrar sesión"
+
+# Estado KYC
+kyc_status:
+  pending: "Pendiente"
+  rejected: "!"
+  required: "Requerido"
+
+# Sección Ventajas %company_name%
+bankit_advantages:
+  section_badge: "Excelencia %company_name%"
+  section_title: "¿Por qué elegir %company_name% para sus seguros?"
+  section_subtitle: "Nuestra experiencia bancaria al servicio de su protección"
+  
+  coverage:
+    title: "Cobertura Bancaria Integrada"
+    description: "Sus seguros directamente vinculados a sus cuentas bancarias para una gestión simplificada y tarifas preferenciales."
+    discount: "-30% en las cotizaciones"
+    
+  automatic_payment:
+    title: "Débito Automático"
+    description: "Sin más preocupaciones de pago con el débito automático en su cuenta %company_name%."
+    
+  express_processing:
+    title: "Procesamiento Express"
+    description: "Presupuesto en 24h, suscripción inmediata e indemnización rápida gracias a nuestro sistema bancario."
+    
+  dedicated_support:
+    title: "Soporte Bancario Dedicado"
+    description: "Sus consejeros bancarios %company_name% también le acompañan para sus seguros."
+    
+  real_time_tracking:
+    title: "Seguimiento en Tiempo Real"
+    description: "Consulte sus contratos y siniestros directamente desde su espacio bancario en línea."
+    
+  banking_security:
+    title: "Seguridad Bancaria"
+    description: "Sus datos protegidos por los estándares de seguridad bancaria más altos."
+
+# Botones comunes
+buttons:
+  learn_more: "Saber más"
+  get_started: "Comenzar"
+  contact_us: "Contáctenos"
+  sign_up: "Hacer una simulación"
+  login: "Conectarse"
+  simulate: "Simular"
+  calculate: "Calcular"
+  apply: "Solicitar un préstamo"
+
+# Perfil de usuario
+profile:
+  update_success: "Su perfil ha sido actualizado con éxito."
+  email_change_initiated: "Se ha enviado un email de confirmación a %email%. Por favor haga clic en el enlace para confirmar su nueva dirección de email."
+  notification:
+    update:
+      subject: "Actualización de su perfil %company_name%"
+
+# Mensajes KYC
+kyc:
+  already_submitted: "Ya ha enviado una solicitud de verificación de identidad."
+  submission_success: "Su solicitud de verificación de identidad ha sido enviada con éxito. Nuestro equipo la examinará a la mayor brevedad."
+  submission_error: "Se produjo un error al enviar su solicitud. Por favor, inténtelo de nuevo."
+
+# Validación de email
+email_verification:
+  subject: "Validación de su nueva dirección de email - %company_name%"
+  success: "Su dirección de email ha sido validada con éxito."
+  error: "Error durante la validación: %message%"
+  no_pending_change: "Ningún cambio de dirección de email en curso."
+  cancelled: "El cambio de dirección de email ha sido cancelado."
+
+# Seguridad
+security:
+  csrf_invalid: "Token de seguridad inválido. Por favor inténtelo de nuevo."
+  invalid_credentials: "Email o contraseña incorrecto"
+  account_locked: "Su cuenta ha sido bloqueada temporalmente"
+  account_disabled: "Su cuenta ha sido desactivada"
+  bad_credentials: "Email o contraseña incorrecto"
+
+# Simulación de crédito
+credit_simulation:
+  title: "Simulación de Crédito"
+  subtitle: "Descubra su capacidad de préstamo en unos pocos clics"
+  form:
+    credit_type: "Tipo de crédito"
+    amount: "Monto deseado"
+    duration: "Duración"
+    duration_unit: "Unidad de duración"
+    calculate: "Calcular mi simulación"
+  results:
+    monthly_payment: "Cuota mensual"
+    total_cost: "Costo total del crédito"
+    total_interest: "Intereses totales"
+    interest_rate: "Tasa de interés"
+  units:
+    months: "Meses"
+    years: "Años"
+  validation:
+    amount_required: "El monto es requerido"
+    amount_min: "El monto mínimo es de 1 000 €"
+    amount_max: "El monto máximo es de 500 000 €"
+    duration_required: "La duración es requerida"
+    duration_min: "La duración mínima es de 12 meses"
+    duration_max_months: "La duración máxima es de 360 meses"
+    duration_max_years: "La duración máxima es de 30 años"
+  book_appointment: "Programar cita"
+  call_advisor: "Llamar a un consejero"
+  chat_online: "Chat en línea"
+
+# Etiquetas comunes
+labels:
+  amount: "Monto"
+  duration: "Duración"
+  monthly_payment: "Pago mensual"
+  interest_rate: "Tasa de interés"
+  example: "Ejemplo"
+  from: "Desde"
+  to: "Hasta"
+  per_month: "por mes"
+  per_year: "por año"
+  years: "años"
+  months: "meses"
+
+# Mensajes de error
+errors:
+  required_field: "Este campo es requerido"
+  invalid_email: "Dirección de email inválida"
+  invalid_phone: "Número de teléfono inválido"
+  invalid_amount: "Monto inválido"
+  min_amount: "El monto mínimo es {min}"
+  max_amount: "El monto máximo es {max}"
+
+# Mensajes de éxito
+success:
+  form_submitted: "Formulario enviado con éxito"
+  appointment_booked: "Cita programada con éxito"
+  simulation_complete: "Simulación terminada"
+
+# Servicios
+services:
+  # Cuentas y Tarjetas
+  accounts_cards:
+    title: "Cuentas y Tarjetas"
+    subtitle: "Soluciones bancarias adaptadas a todas sus necesidades"
+    products_title: "Nuestros Productos"
+    products_subtitle: "Elija la solución que mejor le convenga"
+    current_account:
+      title: "Cuenta Corriente"
+      description: "La cuenta ideal para gestionar su día a día"
+      feature_1: "Tarjeta bancaria gratuita"
+      feature_2: "Transferencias ilimitadas"
+      feature_3: "Aplicación móvil"
+    savings_account:
+      title: "Cuenta de Ahorro"
+      description: "Haga fructificar su dinero con total seguridad"
+      feature_1: "Tasa atractiva"
+      feature_2: "Disponibilidad inmediata"
+      feature_3: "Sin comisiones"
+    credit_card:
+      title: "Tarjeta de Crédito"
+      description: "Más flexibilidad para sus compras"
+      feature_1: "Pago diferido"
+      feature_2: "Seguro incluido"
+      feature_3: "Programas de fidelidad"
+    features_title: "Por Qué Elegirnos"
+    features_subtitle: "Ventajas exclusivas para nuestros clientes"
+    feature_security:
+      title: "Seguridad Máxima"
+      description: "Protección 3D Secure y alertas en tiempo real"
+    feature_simple:
+      title: "Fácil de Usar"
+      description: "Interfaz intuitiva y apertura en 5 minutos"
+    feature_fast:
+      title: "Transacciones Rápidas"
+      description: "Transferencias instantáneas 24h/24 7d/7"
+    feature_support:
+      title: "Soporte Experto"
+      description: "Equipo dedicado disponible por teléfono y chat"
+    cta:
+      title: "¿Listo para Comenzar?"
+      description: "Abra su cuenta en unos minutos y disfrute de nuestras ventajas exclusivas"
+
+  # Ahorro e Inversiones
+  savings_investments:
+    title: "Ahorro e Inversiones"
+    subtitle: "Optimice su ahorro con nuestras soluciones expertas"
+    products_title: "Nuestras Soluciones de Ahorro"
+    products_subtitle: "Productos adaptados a su perfil de inversor"
+    livret_a:
+      title: "Libreta A"
+      description: "El ahorro seguro y exento de impuestos"
+      feature_1: "Límite 22 950 €"
+      feature_2: "Disponibilidad inmediata"
+      feature_3: "Intereses no gravables"
+    life_insurance:
+      title: "Seguro de Vida"
+      description: "La herramienta patrimonial imprescindible"
+      feature_1: "Rendimiento atractivo"
+      feature_2: "Fiscalidad ventajosa"
+      feature_3: "Transmisión facilitada"
+    retirement_plan:
+      title: "Plan de Ahorro Jubilación"
+      description: "Prepare su jubilación optimizando sus impuestos"
+      feature_1: "Deducción fiscal"
+      feature_2: "Gestión pilotada"
+      feature_3: "Salida en renta o capital"
+    calculator_title: "Simulador de Ahorro"
+    calculator_subtitle: "Calcule el potencial de su ahorro"
+    initial_amount: "Monto inicial"
+    monthly_payment: "Aporte mensual"
+    duration: "Duración"
+    interest_rate: "Tasa de interés"
+    projection_results: "Proyección sobre la duración elegida"
+    total_amount: "Capital total"
+    total_invested: "Total aportado"
+    total_gains: "Plusvalía"
+    benefits_title: "Nuestras Ventajas"
+    benefits_subtitle: "Por qué elegir nuestras soluciones de ahorro"
+    benefit_security:
+      title: "Seguridad Garantizada"
+      description: "Fondos garantizados y establecimiento autorizado"
+    benefit_flexible:
+      title: "Flexibilidad Total"
+      description: "Aportes y retiros según sus necesidades"
+    benefit_expert:
+      title: "Consejo Experto"
+      description: "Acompañamiento personalizado por nuestros consejeros"
+    cta:
+      title: "Comience Su Ahorro"
+      description: "Aproveche nuestras tasas atractivas y nuestra experiencia para hacer fructificar su ahorro"
+
+  # Seguros
+  insurances:
+    title: "Seguros"
+    subtitle: "Proteja lo que más importa para usted"
+    products_title: "Nuestros Seguros"
+    products_subtitle: "Una protección completa para todos los aspectos de su vida"
+    auto:
+      title: "Seguro Auto"
+      price: "Desde 29€/mes"
+      description: "Protección completa para su vehículo"
+      feature_1: "Todo riesgo incluido"
+      feature_2: "Asistencia 24h/24"
+      feature_3: "Vehículo de reemplazo"
+    home:
+      title: "Seguro de Hogar"
+      price: "Desde 15€/mes"
+      description: "Su vivienda protegida contra todos los riesgos"
+      feature_1: "Multirriesgo hogar"
+      feature_2: "Responsabilidad civil"
+      feature_3: "Protección jurídica"
+    health:
+      title: "Mutua de Salud"
+      price: "Desde 45€/mes"
+      description: "Sus gastos de salud reembolsados"
+      feature_1: "Reembolso 100%"
+      feature_2: "Tercero pagador generalizado"
+      feature_3: "Medicina alternativa incluida"
+    travel:
+      title: "Seguro de Viaje"
+      price: "Desde 8€/viaje"
+      description: "Viaje con tranquilidad"
+      feature_1: "Anulación/interrupción"
+      feature_2: "Gastos médicos en el extranjero"
+      feature_3: "Repatriación incluida"
+    life:
+      title: "Seguro de Fallecimiento"
+      price: "Desde 12€/mes"
+      description: "Proteja financieramente a sus seres queridos"
+      feature_1: "Capital garantizado"
+      feature_2: "Pago inmediato"
+      feature_3: "Exoneración de derechos"
+    professional:
+      title: "Seguro Profesional"
+      price: "Desde 35€/mes"
+      description: "Su actividad profesional asegurada"
+      feature_1: "Responsabilidad civil profesional"
+      feature_2: "Protección jurídica"
+      feature_3: "Multirriesgo oficinas"
+    claims_title: "Proceso de Siniestro"
+    claims_subtitle: "Una atención rápida y eficaz"
+    step_1:
+      title: "Declaración"
+      description: "Declare su siniestro en línea o por teléfono"
+    step_2:
+      title: "Peritaje"
+      description: "Un experto evalúa los daños en 48h"
+    step_3:
+      title: "Indemnización"
+      description: "Cálculo y validación de su indemnización"
+    step_4:
+      title: "Reembolso"
+      description: "Pago en máximo 5 días hábiles"
+    benefits_title: "Nuestras Garantías"
+    benefits_subtitle: "Un servicio de excelencia para su protección"
+    benefit_fast:
+      title: "Procesamiento Rápido"
+      description: "Atención en menos de 24h"
+    benefit_support:
+      title: "Asistencia 24h/24"
+      description: "Un equipo a su disposición permanentemente"
+    benefit_secure:
+      title: "Garantías Sólidas"
+      description: "Contratos claros y completos"
+    cta:
+      title: "Protéjase Ahora Mismo"
+      description: "Solicite su presupuesto gratuito y personalizado en unos pocos clics"
+
+
+
+# Contacto
+contact:
+  phone: "Teléfono"
+  email: "Email"
+  address: "Dirección"
+  opening_hours: "Horarios de apertura"
+  customer_service: "Servicio al cliente"
+  monday_friday: "Lunes - Viernes"
+  saturday: "Sábado"
+  sunday: "Domingo"
+  closed: "Cerrado"
+  phone_number: "Teléfono"
+  email_address: "Email"
+  business_hours: "Lun-Vie 8h-18h"
+
+# Avisos legales
+legal:
+  credit_warning: "Un crédito le compromete y debe ser reembolsado. Verifique su capacidad de reembolso antes de comprometerse."
+  licensed_bank: "Servicios financieros de confianza"
+  insurance_broker: "Corredor de seguros"
+  under_supervision: "Consejo financiero profesional"
+
+# Pie de página
+footer:
+  rights_reserved: "Todos los derechos reservados"
+  privacy_policy: "Política de confidencialidad"
+  terms_conditions: "Condiciones generales"
+  cookies: "Cookies"
+  sitemap: "Mapa del sitio"
+  # Descripción principal
+  description: "Su socio financiero de confianza. Descubra nuestras soluciones bancarias modernas y seguras para todos sus proyectos."
+  
+  # Secciones del footer
+  sections:
+    services_title: "Servicios Bancarios"
+    support_title: "Soporte y Ayuda"
+    legal_title: "Información Legal"
+    contact_title: "Contáctenos"
+  
+  # Servicios bancarios
+  services:
+    accounts_cards: "Cuentas y Tarjetas"
+    savings_investments: "Ahorro e Inversiones"
+    credits_loans: "Créditos y Préstamos"
+    insurance: "Seguros"
+    private_banking: "Banca Privada"
+    business_banking: "Banca Empresarial"
+  
+  # Soporte y ayuda
+  support:
+    help_center: "Centro de Ayuda"
+    contact: "Contacto"
+    branches: "Sucursales"
+    faq: "FAQ"
+    security: "Seguridad"
+    complaints: "Reclamaciones"
+  
+  # Información legal
+  legal_links:
+    legal_notices: "Avisos Legales"
+    terms_conditions: "Condiciones Generales"
+    privacy_policy: "Política de Confidencialidad"
+    cookies: "Cookies"
+    pricing: "Tarifas"
+    accessibility: "Accesibilidad"
+  
+  # Contacto
+  contact_info:
+    customer_service: "Servicio al Cliente"
+    email: "Email"
+    headquarters: "Sede Social"
+    phone_number: "Teléfono"
+    email_address: "Email"
+    address: "Dirección"
+  
+  # Pie inferior
+  bottom:
+    rights_reserved: "Todos los derechos reservados"
+    licensed_bank: "Su banco de confianza"
+    orias_number: ""
+    ssl_secured: "Seguro SSL"
+    acpr_approved: ""
+  
+  # Redes sociales (aria-labels)
+  social:
+    facebook: "Facebook"
+    twitter: "Twitter"
+    linkedin: "LinkedIn"
+    instagram: "Instagram"

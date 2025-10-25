@@ -1,0 +1,137 @@
+help_center_contact:
+  page:
+    title: "Kontakt Aufnehmen"
+    breadcrumb: "Startseite > Hilfezentrum > Kontakt Aufnehmen"
+  
+  hero:
+    title: "Kontaktieren Sie uns"
+    subtitle: "Wir sind da, um Ihnen zu helfen. Finden Sie den besten Weg, uns je nach Ihren Bedürfnissen zu kontaktieren."
+    
+  contact_methods:
+    title: "Kontaktmöglichkeiten"
+    
+    phone:
+      title: "Telefon"
+      subtitle: "Sprechen Sie direkt mit unseren Beratern"
+      number: "Téléphone"
+      hours: "Mo-Fr: 8:00-18:00, Sa: 9:00-13:00"
+      description: "Für Ihre dringenden Fragen und persönliche Beratung"
+      
+    chat:
+      title: "Live-Chat"
+      subtitle: "Sofortiges Gespräch mit einem Agenten"
+      status_online: "Online"
+      status_offline: "Offline"
+      hours: "Mo-Fr: 8:00-20:00"
+      description: "Schnelle Antwort für Ihre häufigen Fragen"
+      button_start: "Chat starten"
+      
+    email:
+      title: "E-Mail"
+      subtitle: "Senden Sie uns eine detaillierte Nachricht"
+      address: "Email"
+      response_time: "Antwort innerhalb von 24h"
+      description: "Für Ihre komplexen Anfragen, die Dokumente erfordern"
+      
+    branch:
+      title: "Filialen"
+      subtitle: "Persönlicher Termin"
+      button_find: "Filiale finden"
+      description: "Persönliche Beratung und vollständige Dienstleistungen"
+      
+  contact_form:
+    title: "Kontaktformular"
+    subtitle: "Hinterlassen Sie uns eine Nachricht und wir antworten schnell"
+    
+    fields:
+      subject: "Betreff"
+      name: "Vollständiger Name"
+      email: "E-Mail"
+      phone: "Telefon (optional)"
+      category: "Kategorie"
+      message: "Nachricht"
+      attachment: "Anhang (optional)"
+      
+    categories:
+      general: "Allgemeine Frage"
+      account: "Kontoverwaltung"
+      card: "Bankkarten"
+      transfer: "Überweisungen"
+      credit: "Kredite"
+      insurance: "Versicherungen"
+      technical: "Technisches Problem"
+      
+    placeholders:
+      subject: "Zusammenfassung Ihrer Anfrage"
+      name: "Ihr Vor- und Nachname"
+      email: "ihre.email@beispiel.com"
+      phone: "+32 xxx xx xx xx"
+      message: "Beschreiben Sie Ihre Anfrage im Detail..."
+      
+    buttons:
+      send: "Nachricht senden"
+      clear: "Löschen"
+      
+    validation:
+      required: "Dieses Feld ist erforderlich"
+      email_invalid: "Ungültiges E-Mail-Format"
+      message_min: "Die Nachricht muss mindestens 10 Zeichen enthalten"
+      
+    success:
+      title: "Nachricht gesendet!"
+      message: "Wir haben Ihre Nachricht erfolgreich erhalten. Wir antworten so schnell wie möglich."
+      reference: "Referenz"
+      
+  emergency:
+    title: "Notfälle"
+    subtitle: "Bei dringenden Problemen mit Ihrem Konto"
+    
+    card_lost:
+      title: "Karte verloren/gestohlen"
+      number: "+32 2 987 65 43"
+      description: "Verfügbar 24/7"
+      
+    fraud:
+      title: "Betrug vermutet"
+      number: "+32 2 987 65 44"
+      description: "Sichere direkte Leitung"
+      
+    account_blocked:
+      title: "Konto gesperrt"
+      number: "+32 2 987 65 45"
+      description: "Sofortige Hilfe"
+      
+  faq:
+    title: "Häufig Gestellte Fragen"
+    subtitle: "Vielleicht finden Sie hier Ihre Antwort"
+    button_view: "Alle FAQs anzeigen"
+    
+  social:
+    title: "Soziale Medien"
+    subtitle: "Folgen Sie uns für die neuesten Nachrichten"
+    facebook: "Facebook"
+    twitter: "Twitter"
+    linkedin: "LinkedIn"
+    instagram: "Instagram"
+    
+  office_hours:
+    title: "Öffnungszeiten"
+    
+    customer_service:
+      title: "Kundendienst"
+      hours:
+        monday_friday: "Montag - Freitag: 8:00 - 18:00"
+        saturday: "Samstag: 9:00 - 13:00"
+        sunday: "Sonntag: Geschlossen"
+        
+    technical_support:
+      title: "Technischer Support"
+      hours:
+        monday_friday: "Montag - Freitag: 8:00 - 20:00"
+        saturday: "Samstag: 9:00 - 17:00"
+        sunday: "Sonntag: 10:00 - 16:00"
+        
+    emergency:
+      title: "Notfälle"
+      hours:
+        always: "Verfügbar 24/7"

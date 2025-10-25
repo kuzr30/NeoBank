@@ -1,0 +1,40 @@
+email_credit_rejected:
+  title: "Antwoord op uw kredietaanvraag"
+  content:
+    page_title: "Antwoord op uw financieringsaanvraag"
+    greeting: "Hallo <strong>{customerName}</strong>,"
+    decision_section:
+      title: "Beslissing betreffende uw aanvraag"
+      message: "Na grondige studie van uw kredietdossier moeten we u helaas meedelen dat we uw financieringsaanvraag van <strong style=\"color: #d32f2f;\">{loanAmount} €</strong> op dit moment niet kunnen accepteren."
+    context_section:
+      title: "Context van deze beslissing"
+      explanation: "Deze beslissing stelt de kwaliteit van uw klantprofiel niet ter discussie en kan verband houden met verschillende interne evaluatiecriteria, de economische conjunctuur of het huidige risicobeleid van onze instelling."
+    alternatives_section:
+      title: "Beschikbare alternatieve oplossingen"
+      revised_request:
+        title: "💼 Herziene aanvraag"
+        description: "Dien een nieuwe aanvraag in met een ander bedrag of andere voorwaarden"
+      personalized_advice:
+        title: "🎯 Persoonlijk advies"
+        description: "Neem contact op met onze adviseurs om andere aangepaste financieringsopties te bestuderen"
+      profile_improvement:
+        title: "📈 Profielverbetering"
+        description: "Ons team kan u begeleiden bij het optimaliseren van uw financieel dossier"
+    contact_section:
+      title: "Contact en begeleiding"
+      description: "Onze klantenservice blijft volledig tot uw beschikking om uw vragen te beantwoorden en u te begeleiden bij uw toekomstige projecten."
+      button_text: "Contact een adviseur"
+      phone: "Telefoon: %company_phone%"
+      email: "Email: hello@sedef.fr"
+      hours: "Beschikbaar van maandag tot vrijdag van 9u tot 18u"
+    future_section:
+      title: "Nieuwe kansen"
+      message: "Deze beslissing is niet definitief. Uw persoonlijke en financiële situatie evolueert, en we zullen graag een nieuwe aanvraag in de toekomst herbestuderen."
+    thanks_message: "We danken u voor het vertrouwen dat u in ons heeft gesteld en hopen u binnenkort te kunnen begeleiden bij uw projecten."
+    footer: "%company_name% - Kredietservice<br>Automatisch antwoord op uw financieringsaanvraag"
+  
+  logs:
+    sending: "Verzenden van krediet afgewezen notificatie"
+    success: "Krediet afgewezen notificatie succesvol verzonden"
+    error: "Fout bij het verzenden van krediet afgewezen notificatie"
+    send_failed: "Verzenden van krediet afgewezen notificatie mislukt"

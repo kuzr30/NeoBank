@@ -1,0 +1,91 @@
+<div class="profile__sidebar">
+    <nav class="profile__nav">
+        <a href="{{ path('profile_index') }}" class="profile__nav-item {{ app.request.attributes.get('_route') == 'profile_index' ? 'active' : '' }}">
+            <i class="fas fa-user me-2"></i>
+            {{ tp('profile_sidebar.nav.profile', {}, 'profile_sidebar') }}
+        </a>
+        
+        <a href="{{ path('profile_edit') }}" class="profile__nav-item {{ app.request.attributes.get('_route') == 'profile_edit' ? 'active' : '' }}">
+            <i class="fas fa-edit me-2"></i>
+            {{ tp('profile_sidebar.nav.edit_profile', {}, 'profile_sidebar') }}
+        </a>
+        
+        {% set kyc_status = app.user.kycSubmission ? app.user.kycSubmission.status : 'not_submitted' %}
+        {% if kyc_status != 'approved' %}
+            <a href="{{ path('kyc_index') }}" class="profile__nav-item {{ app.request.attributes.get('_route') starts with 'kyc_' ? 'active' : '' }}">
+                <i class="fas fa-shield-alt me-2"></i>
+                {{ tp('profile_sidebar.nav.kyc_verification', {}, 'profile_sidebar') }}
+                {% if kyc_status == 'pending' %}
+                    <span class="badge bg-warning ms-auto">{{ tp('profile_sidebar.kyc_status.pending', {}, 'profile_sidebar') }}</span>
+                {% elseif kyc_status == 'rejected' %}
+                    <span class="badge bg-danger ms-auto">{{ tp('profile_sidebar.kyc_status.rejected', {}, 'profile_sidebar') }}</span>
+                {% else %}
+                    <span class="badge bg-secondary ms-auto">{{ tp('profile_sidebar.kyc_status.required', {}, 'profile_sidebar') }}</span>
+                {% endif %}
+            </a>
+        {% endif %}
+        
+        <a href="{{ path('profile_security') }}" class="profile__nav-item {{ app.request.attributes.get('_route') == 'profile_security' ? 'active' : '' }}">
+            <i class="fas fa-lock me-2"></i>
+            {{ tp('profile_sidebar.nav.security', {}, 'profile_sidebar') }}
+        </a>
+        
+        <a href="{{ path('profile_preferences') }}" class="profile__nav-item {{ app.request.attributes.get('_route') == 'profile_preferences' ? 'active' : '' }}">
+            <i class="fas fa-cog me-2"></i>
+            {{ tp('profile_sidebar.nav.preferences', {}, 'profile_sidebar') }}
+        </a>
+    </nav>
+</div>
+
+<style>
+.profile__sidebar {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    padding: 20px;
+    height: fit-content;
+}
+
+.profile__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profile__nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #6c757d;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.profile__nav-item:hover {
+    background-color: #f8f9fa;
+    color: #495057;
+    text-decoration: none;
+}
+
+.profile__nav-item.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.profile__nav-item.active:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.profile__nav-item i {
+    width: 20px;
+    text-align: center;
+}
+
+.profile__nav-item .badge {
+    font-size: 10px;
+    padding: 2px 6px;
+}
+</style>

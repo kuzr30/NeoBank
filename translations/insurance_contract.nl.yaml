@@ -1,0 +1,318 @@
+title: "Verzekeringscontract Nr. %contract_number%"
+contract_title: "VERZEKERINGSCONTRACT"
+
+# Header
+header:
+  logo_alt: "Logo %company_name%"
+  contract_number: "CONTRACT NR. %contract_number%"
+
+# Hoofdsectie
+main:
+  logo_alt: "Logo %company_name%"
+
+# Bedrijfsinformatie
+company_info:
+  title: "Bedrijfsinformatie en contractreferentie"
+  establishment: "Financiële Instelling - Verzekeringen"
+  contract_number: "CONTRACT NR. %number%"
+  establishment_date: "Oprichtingsdatum: %date%"
+  signature_date: "Ondertekeningsdatum: %date%"
+  activation_date: "Activeringsdatum: %date%"
+  expiration_date: "Vervaldatum: %date%"
+
+# Hoofdstuk I - De Contractpartijen
+chapter_1:
+  title: "Hoofdstuk I - De Contractpartijen"
+  insurer:
+    title: "De Verzekeraar"
+    establishment: "Financiële Instelling"
+    capital: "Maatschappelijk kapitaal: %capital% €"
+    headquarters: "Maatschappelijke zetel: %address%"
+    siren: "SIREN: %siren%"
+    ape: "APE-code: %ape%"
+    represented: "Vertegenwoordigd door zijn Algemeen Directeur"
+    designation: "Hierna \"De Verzekeraar\" genoemd"
+  insured:
+    title: "De Verzekerde"
+    residing: "Wonende:"
+    address_placeholder: "[Adres aan te vullen]"
+    born: "Geboren op: %date%"
+    phone: "Telefoon: %phone%"
+    email: "E-mail: %email%"
+    quote_number: "Offerte nr.: %number%"
+    designation: "Hierna \"De Verzekerde\" genoemd"
+  agreement: "Partijen hebben het volgende overeengekomen en vastgesteld"
+
+# Hoofdstuk II - Voorwerp en Garanties
+chapter_2:
+  title: "Hoofdstuk II - Voorwerp en Garanties"
+  article_1:
+    title: "Artikel 1 - Voorwerp van het Contract"
+    paragraph_1: "Dit verzekeringscontract heeft tot doel de Verzekerde, tegen betaling van de overeengekomen premies en bijdragen, dekking te verlenen voor de financiële gevolgen voortvloeiend uit de realisatie van de risico's gedefinieerd in deze algemene en bijzondere voorwaarden."
+    paragraph_2: "De Verzekeraar verbindt zich, binnen de grenzen van de afgesloten garanties en de overeengekomen plafonds, de Verzekerde of zijn rechtsopvolgers te vergoeden voor de geleden schade ten gevolge van het optreden van een schadegeval dat valt onder het toepassingsgebied van dit verzekeringscontract %insurance_type%."
+    paragraph_3: "De garanties worden verleend volgens de modaliteiten, voorwaarden, grenzen, uitsluitingen en eigen risico's gedefinieerd in deze bepalingen, onder voorbehoud van de daadwerkelijke betaling van de premies op de overeengekomen vervaldagen en de naleving door de Verzekerde van zijn contractuele verplichtingen."
+  article_2:
+    title: "Artikel 2 - Duur en Inwerkingtreding"
+    duration_label: "Contractduur:"
+    duration_text: "Dit verzekeringscontract wordt afgesloten voor een duur van %duration% maanden, ingaand op %start_date% om nul uur en eindigend op %end_date% om vierentwintig uur, behalve bij vervroegde opzegging onder de in deze bepalingen voorziene voorwaarden."
+    renewal_label: "Hernieuwing:"
+    renewal_text: "Behalve bij opzegging door een der partijen met een opzegtermijn van twee maanden voor de vervaldatum, wordt het contract stilzwijgend verlengd voor opeenvolgende perioden van een jaar, onder de voorwaarden die gelden op de verlengingsdatum."
+    effective_label: "Inwerkingtreding van de garanties:"
+    effective_text: "De garanties treden in werking op de hierboven aangegeven datum, onder voorbehoud van de daadwerkelijke betaling van de eerste premie of premiedeel en eventuele dossierkosten. Bij betalingsachterstand worden de garanties van rechtswege opgeschort."
+    territory_label: "Garantiegebied:"
+    territory_text: "De garanties zijn van toepassing binnen de geografische grenzen van de Europese Unie, behalve bij uitdrukkelijk in de bijzondere voorwaarden voorziene afwijkende bepalingen."
+  article_3:
+    title: "Artikel 3 - Verleende Garanties"
+    definition_label: "Definitie van de garanties:"
+    definition_text: "De Verzekeraar verleent de Verzekerde de hieronder gedefinieerde garanties, binnen de grenzen van de plafonds, eigen risico's en voorwaarden bepaald in deze algemene en bijzondere voorwaarden."
+    coverage_label: "Omvang van de dekkingen:"
+    coverage_text: "De garanties gelden voor schadegevallen die zijn opgetreden tijdens de geldigheidsperiode van het contract, gemeld binnen de voorgeschreven termijnen en voortvloeiend uit gebeurtenissen die niet zijn uitgesloten van deze voorwaarden."
+  guarantees:
+    auto:
+      civil_liability: "Verplichte Wettelijke Aansprakelijkheid"
+      defense_recourse: "Rechtsbijstand en Verhaal"
+      all_accidents: "Allriskschade"
+      theft_fire: "Diefstal en brand"
+      glass_breakage: "Glasbreuk"
+      assistance: "24u/24 Pechverhelping"
+    home:
+      fire_explosion: "Brand en explosies"
+      water_damage: "Waterschade"
+      theft_vandalism: "Diefstal en vandalisme"
+      civil_liability: "Burgerlijke Aansprakelijkheid privéleven"
+      glass_breakage: "Glasbreuk"
+      natural_disasters: "Natuurrampen"
+    health:
+      medical_pharma: "Medische en farmaceutische kosten"
+      hospitalization: "Ziekenhuisopname"
+      dental_care: "Tandheelkundige zorg"
+      optical: "Optiek"
+      alternative_medicine: "Alternatieve geneeskunde"
+      repatriation_assistance: "Repatriëringshulp"
+    life:
+      death_all_causes: "Overlijden alle oorzaken"
+      permanent_disability: "Totale permanente invaliditeit"
+      temporary_incapacity: "Tijdelijke arbeidsongeschiktheid"
+      education_pension: "Studierente"
+      funeral_capital: "Begrafeniskapitaal"
+      legal_assistance: "Juridische bijstand"
+    default:
+      main_coverage: "Hoofddekking volgens de gedefinieerde risico's"
+      civil_liability: "Burgerlijke Aansprakelijkheid"
+      assistance_advice: "Hulp en advies"
+      defense_recourse: "Rechtsbijstand en verhaal"
+  table:
+    guarantee: "Garantie"
+    coverage_amount: "Dekkingsbedrag"
+    deductible: "Eigen risico"
+    variable_deductible: "Variabel per garantie"
+
+# Hoofdstuk III - Financiële Voorwaarden
+chapter_3:
+  title: "Hoofdstuk III - Financiële Voorwaarden"
+  article_4:
+    title: "Artikel 4 - Premie en Kosten"
+    calculation_label: "Premieberekening:"
+    calculation_text: "De verzekeringspremie is berekend op basis van de door de Verzekerde aangegeven risico-elementen en de afgesloten garanties. Elke wijziging van deze elementen kan leiden tot een premieherziening."
+    payment_schedule_label: "Betalingstermijnen:"
+    payment_schedule_text: "De premie is maandelijks achteraf betaalbaar, uiterlijk op de laatste dag van elke maand. De eerste betaling is verschuldigd bij contractsluiting."
+    amounts_detail_label: "Specificatie van de bedragen:"
+    amounts_detail_text: "De onderstaande tabel toont de samenstelling van de maandelijkse premie evenals de aan het contract verbonden kosten, inclusief verzekeringskosten en eventueel dossierkosten."
+  article_5:
+    title: "Artikel 5 - Betalingsmodaliteiten en Verplichtingen"
+    payment_method_label: "Betalingswijze:"
+    payment_method_text: "De premie is maandelijks betaalbaar via automatische afschrijving van de door de Verzekerde aangewezen bankrekening. De eerste afschrijving vindt plaats op de activeringsdatum van het contract."
+    payment_default_label: "Betalingsachterstand:"
+    payment_default_text: "Bij betalingsachterstand van een premie op haar vervaldatum stuurt de Verzekeraar de Verzekerde een ingebrekestelling per aangetekende brief. Als deze ingebrekestelling tien dagen zonder gevolg blijft, worden de garanties van rechtswege opgeschort."
+    processing_fees_label: "Dossierkosten:"
+    processing_fees_text: "De dossier- en verzekeringskosten worden afgeschreven bij contractsluiting en zijn niet terugbetaalbaar, behalve bij herroeping binnen 14 dagen na ondertekening."
+    indexation_label: "Indexering:"
+    indexation_text: "De premie kan jaarlijks worden herzien op basis van de evolutie van de door het INSEE gepubliceerde consumentenprijsindex."
+  table:
+    element: "Element"
+    amount: "Bedrag"
+    frequency: "Periodiciteit"
+    description: "Beschrijving"
+    monthly_premium: "Maandelijkse premie"
+    monthly: "Maandelijks"
+    main_premium: "Hoofdverzekeringspremie"
+    insurance_fees: "Verzekeringskosten"
+    one_time_payment: "Eenmalige betaling"
+    additional_fees: "Aanvullende verzekeringskosten"
+    processing_fees: "Dossierkosten"
+    administrative_fees: "Administratieve kosten voor dossierbehandeling"
+    monthly_total: "Maandelijks totaal"
+    monthly_deduction: "Maandelijks af te schrijven bedrag"
+  payment_obligation:
+    title: "BETALINGSVERPLICHTING:"
+    text: "De betaling van de maandelijkse premie, de verzekeringskosten en de dossierkosten is verplicht om de geldigheid van het contract te behouden. Elke betalingsachterstand leidt tot onmiddellijke opschorting van de garanties na een 10 dagen zonder gevolg gebleven ingebrekestelling."
+
+# Hoofdstuk IV - Verplichtingen en Uitsluitingen
+chapter_4:
+  title: "Hoofdstuk IV - Verplichtingen en Uitsluitingen"
+  article_6:
+    title: "Artikel 6 - Verplichtingen van de Verzekerde"
+    risk_declaration_label: "Risicoverklaring:"
+    risk_declaration_text: "De Verzekerde verbindt zich ertoe bij contractsluiting en gedurende het contract alle hem bekende omstandigheden oprecht en volledig aan te geven die van aard zijn de Verzekeraar in staat te stellen de door hem overgenomen risico's te beoordelen."
+    claim_declaration_label: "Schademelding:"
+    claim_declaration_text: "Bij een schade moet de Verzekerde deze schriftelijk aan de Verzekeraar melden binnen vijf werkdagen na de dag waarop hij er kennis van heeft gekregen, behalve bij overmacht of toeval."
+    safeguard_measures_label: "Veiligheidsmaatregelen:"
+    safeguard_measures_text: "De Verzekerde moet alle redelijke maatregelen nemen om de omvang van de schade te beperken en verhaalsmogelijkheden tegen verantwoordelijke derden te bewaren."
+    investigation_assistance_label: "Onderzoeksondersteuning:"
+    investigation_assistance_text: "De Verzekerde verbindt zich ertoe de Verzekeraar alle documenten, inlichtingen en bewijsstukken te verstrekken die nodig zijn voor de behandeling van het schadedossier."
+  article_7:
+    title: "Artikel 7 - Algemene Uitsluitingen"
+    never_covered: "Nooit gedekt zijn:"
+    exclusion_1: "Schade opzettelijk veroorzaakt door de Verzekerde of met zijn medeplichtigheid"
+    exclusion_2: "Gevolgen van burger- of buitenlandse oorlog, opstanden, volksbeweging"
+    exclusion_3: "Directe of indirecte gevolgen van explosie, warmteontwikkeling of nucleaire straling"
+    exclusion_4: "Schade voortvloeiend uit opzettelijke of bedrieglijke fouten van de Verzekerde"
+    exclusion_5: "Schadegevallen opgetreden voor de inwerkingtreding van het contract of na het verstrijken ervan"
+    exclusion_6: "Boetes, geldboetes en geldelijke sancties van welke aard ook"
+
+# Hoofdstuk V - Schadegevallen en Vergoeding
+chapter_5:
+  title: "Hoofdstuk V - Schadegevallen en Vergoeding"
+  article_8:
+    title: "Artikel 8 - Meldingsprocedure"
+    declaration_deadline_label: "Meldingstermijn:"
+    declaration_deadline_text: "Elke schade moet worden gemeld binnen vijf werkdagen na het optreden ervan of de kennis die de Verzekerde ervan kan hebben. Voor diefstalschade wordt deze termijn teruggebracht tot twee werkdagen."
+    declaration_methods_label: "Meldingswijzen:"
+    declaration_methods_text: "De melding moet worden verzonden per aangetekende brief met ontvangstbevestiging of door elk middel dat de ontvangst kan bevestigen naar het adres van de maatschappelijke zetel van de Verzekeraar."
+    declaration_content_label: "Inhoud van de melding:"
+    declaration_content_text: "De melding moet de omstandigheden, de datum, de plaats van de schade, de waarschijnlijke oorzaken, de aard en de geschatte omvang van de schade specificeren."
+  article_9:
+    title: "Artikel 9 - Expertise en Afwikkeling"
+    expertise_label: "Expertise:"
+    expertise_text: "De Verzekeraar behoudt zich het recht voor een expertise van de schade te laten uitvoeren door een expert van zijn keuze. De Verzekerde kan bij meningsverschil zijn eigen expert aanwijzen."
+    settlement_label: "Vergoedingsafwikkeling:"
+    settlement_text: "De vergoeding wordt uitbetaald binnen de maand die volgt op de overeenstemming tussen partijen of de definitieve gerechtelijke beslissing, na aftrek van eventuele eigen risico's."
+    subrogation_label: "Subrogatie:"
+    subrogation_text: "De Verzekeraar wordt gesubrogeerd in de rechten en vorderingen van de Verzekerde tegen verantwoordelijke derden, tot het bedrag van de uitbetaalde vergoeding."
+
+# Hoofdstuk VI - Opzegging en Wijziging
+chapter_6:
+  title: "Hoofdstuk VI - Opzegging en Wijziging"
+  article_10:
+    title: "Artikel 10 - Contractopzegging"
+    termination_maturity_label: "Opzegging bij vervaldatum:"
+    termination_maturity_text: "Elke partij kan het contract opzeggen bij zijn jaarlijkse vervaldatum met een opzegtermijn van twee maanden, gegeven per aangetekende brief."
+    termination_during_label: "Opzegging tijdens het contract:"
+    termination_during_text: "Het contract kan tijdens de looptijd worden opgezegd bij risicowijziging, schade, betalingsachterstand of in andere door het Verzekeringsgesetboek voorziene gevallen."
+    termination_nonpayment_label: "Opzegging wegens niet-betaling:"
+    termination_nonpayment_text: "Bij niet-betaling van een premie kan de Verzekeraar het contract opzeggen tien dagen na een zonder gevolg gebleven ingebrekestelling."
+  article_11:
+    title: "Artikel 11 - Contractwijziging"
+    risk_aggravation_label: "Risicoverzwaring:"
+    risk_aggravation_text: "De Verzekerde moet de Verzekeraar elke wijziging melden die geschikt is de risico's te verzwaren of nieuwe te creëren. Deze aangifte kan leiden tot een premieherziening."
+    risk_reduction_label: "Risicovermindering:"
+    risk_reduction_text: "Als het risico merkbaar afneemt, kan de Verzekerde een overeenkomstige premievermindering vragen."
+
+# Hoofdstuk VII - Overzicht van Verplichte Kosten
+chapter_7:
+  title: "Hoofdstuk VII - Overzicht van Verplichte Kosten"
+  article_12:
+    title: "Artikel 12 - Specificatie van Te Betalen Bedragen"
+  mandatory_amounts_title: "VERPLICHT TE BETALEN BEDRAGEN"
+  insurance_fees_label: "Verzekeringskosten (eenmalige betaling):"
+  processing_fees_label: "Dossierkosten (eenmalige betaling):"
+  mandatory_payment: "VERPLICHTE BETALING"
+  deducted_subscription: "Afgeschreven bij contractsluiting"
+  administrative_fees_non_refundable: "Niet-terugbetaalbare administratieve kosten"
+  attention_mandatory: "LET OP: De betaling van deze kosten is VERPLICHT en vormt een conditio sine qua non voor de geldigheid en inwerkingtreding van dit verzekeringscontract."
+  automatic_deduction_note: "Deze bedragen worden automatisch afgeschreven bij contractsluiting en kunnen geen terugbetaling krijgen, behalve bij uitoefening van het herroepingsrecht binnen 14 dagen."
+
+# Hoofdstuk VIII - Slotbepalingen
+chapter_8:
+  title: "Hoofdstuk VIII - Slotbepalingen"
+  article_13:
+    title: "Artikel 13 - Toepasselijk Recht en Rechtsmacht"
+    applicable_law_label: "Toepasselijk recht:"
+    applicable_law_text: "Dit contract wordt beheerst door het Franse recht en in het bijzonder door de bepalingen van het Verzekeringsgesetboek."
+    jurisdiction_label: "Bevoegde rechtsmacht:"
+    jurisdiction_text: "Bij geschillen zijn uitsluitend de Franse rechtbanken bevoegd. De Verzekerde kan echter de rechtbank van zijn woonplaats aanzetten."
+    mediation_label: "Bemiddeling:"
+    mediation_text: "Bij meningsverschil kan de Verzekerde de verzekeringsbemiddelaar inschakelen wiens contactgegevens beschikbaar zijn op de website van de Franse Verzekeringsvereniging."
+  article_14:
+    title: "Artikel 14 - Gegevensbescherming"
+    data_processing_label: "Gegevensverwerking:"
+    data_processing_text: "De verzamelde persoonsgegevens zijn noodzakelijk voor het contractbeheer en de wettelijke verplichtingen van de Verzekeraar. Ze worden onderworpen aan een geautomatiseerde verwerking conform de AVG."
+    insured_rights_label: "Rechten van de Verzekerde:"
+    insured_rights_text: "De Verzekerde beschikt over een recht van toegang, rectificatie, wissing en overdraagbaarheid van zijn persoonsgegevens, evenals het recht zich te verzetten tegen hun verwerking."
+  article_15:
+    title: "Artikel 15 - Diverse Bepalingen"
+    partial_nullity_label: "Gedeeltelijke nietigheid:"
+    partial_nullity_text: "Mocht een clausule van dit contract nietig worden verklaard, dan zou deze nietigheid de geldigheid van de andere clausules niet aantasten."
+    contract_language_label: "Contracttaal:"
+    contract_language_text: "Bij vertaling van dit contract is alleen de Franse versie bindend."
+    prescription_label: "Verjaring:"
+    prescription_text: "Alle uit dit contract voortvloeiende vorderingen verjaren na twee jaar vanaf de gebeurtenis die eraan ten grondslag ligt."
+
+# Hoofdstukken IX-XII
+chapter_9:
+  title: "Hoofdstuk IX - Verplichtingen en Uitsluitingen"
+  insured_obligations: "Verplichtingen van de Verzekerde"
+  insured_obligations_text: "De Verzekerde verbindt zich ertoe alle elementen waarheidsgetrouw aan te geven die een risicobeoordeling mogelijk maken en elke wijziging tijdens het contract te melden."
+  claim_declaration: "Schademelding"
+  claim_declaration_text: "De Verzekerde moet elke schade melden binnen 5 werkdagen vanaf het moment dat hij er kennis van heeft gekregen, behalve bij toeval of overmacht."
+  general_exclusions: "Algemene Uitsluitingen"
+  general_exclusions_text: "Uitgesloten van de garantie zijn: oorlogshandelingen, nucleaire rampen, opzettelijke handelingen van de verzekerde, en schadegevallen opgetreden in staat van dronkenschap."
+  prevention: "Preventie"
+  prevention_text: "De Verzekerde verbindt zich ertoe alle redelijke preventiemaatregelen te nemen om het optreden van een schade te voorkomen."
+
+chapter_10:
+  title: "Hoofdstuk X - Schadegevallen en Vergoeding"
+  article_5:
+    title: "Artikel 5 - Meldingsprocedure"
+    item_1: "De schade melden binnen de wettelijke termijnen."
+    item_2: "Alle gevraagde bewijsstukken overleggen."
+    item_3: "De expertise indien nodig vergemakkelijken."
+    item_4: "De verantwoordelijkheid niet erkennen zonder toestemming van de Verzekeraar."
+  article_6:
+    title: "Artikel 6 - Schadeafwikkeling"
+    item_1: "De Verzekeraar heeft 30 dagen voor zijn vergoedingsaanbod."
+    item_2: "De afwikkeling vindt plaats binnen 15 dagen na de overeenstemming."
+    item_3: "Bij meningsverschil, beroep op contradictoire expertise."
+    item_4: "Verjaring van vorderingen na 2 jaar vanaf het causale feit."
+
+chapter_11:
+  title: "Hoofdstuk XI - Duur en Opzegging"
+  article_7:
+    title: "Artikel 7 - Contractduur"
+    duration_with_expiration: "Dit contract treedt in werking op %start_date% om 0u00 en vervalt op %end_date%, datum overeenkomend met de laatste afschrijving van het gekoppelde krediet. Het contract is niet automatisch verlengbaar."
+    duration_renewable: "Dit contract treedt in werking op %start_date% om 0u00 voor een duur van een jaar. Het wordt verlengd door stilzwijgende verlenging behalve bij opzegging door een der partijen."
+  article_8:
+    title: "Artikel 8 - Opzegging"
+    item_1: "Jaarlijkse opzegging: opzegtermijn van 2 maanden voor vervaldatum."
+    item_2: "Opzegging wegens niet-betaling na ingebrekestelling."
+    item_3: "Opzegging wegens risicoverzwaring."
+    item_4: "Herroepingsrecht van 14 dagen voor nieuwe contracten."
+
+chapter_12:
+  title: "Hoofdstuk XII - Algemene Bepalingen"
+  article_9:
+    title: "Artikel 9 - Toepasselijk Recht en Rechtsmacht"
+    text: "Dit contract is onderworpen aan het Franse recht en het Verzekeringsgesetboek. Bij geschillen exclusieve bevoegdheid van de Franse rechtbanken."
+  article_10:
+    title: "Artikel 10 - Klachten"
+    text: "Elke klacht moet worden gericht aan de Klantenservice van %company_name%. Bij aanhoudend meningsverschil, inschakeling van de Verzekeringsbemiddelaar."
+  article_11:
+    title: "Artikel 11 - Gegevensbescherming"
+    text: "De Verzekeraar verbindt zich ertoe persoonsgegevens te verwerken conform AVG en de wet Informatica en Vrijheden. Bewaartermijn: 5 jaar na opzegging."
+
+# Bijzondere voorwaarden
+special_conditions:
+  title: "Bijzondere Voorwaarden"
+
+# Handtekeningen
+signatures:
+  title: "Handtekeningen"
+  insured: "De Verzekerde"
+  insurer: "De Verzekeraar"
+  assureur: "De Verzekeraar"
+  date_and_signature: "Datum en handtekening"
+  read_and_approved: "Gelezen en goedgekeurd"
+  represented_by_ceo: "Vertegenwoordigd door de Algemeen Directeur"
+  directeur_general: "Algemeen Directeur"
+  habilite: "Bevoegd om de onderneming te verbinden"
+  company_stamp: "Bedrijfsstempel"

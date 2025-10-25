@@ -1,0 +1,32 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_email_verification.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+email_email_verification:
+  title: "Validation of your new email address - %company_name%"
+  content:
+    page_title: "Validation of your new email address"
+    greeting: "Hello <strong>{firstName}</strong>,"
+    intro: "You have requested to change the email address of your %company_name% account."
+    new_email:
+      title: "New email address"
+      label: "New address:"
+      value: "{newEmail}"
+    instruction: "To confirm this change and validate your new email address, click the button below:"
+    button_text: "Validate my email address"
+    warning:
+      title: "⏰ Temporary link"
+      description: "<strong>Important:</strong> This validation link expires on <strong>{expirationDate}</strong>. After this date, you will need to make a new change request."
+    security:
+      title: "Security"
+      description: "If you did not request this email address change, ignore this email and log in to your account immediately to check your security."
+    manual_link: "If the button doesn't work, you can copy and paste this link into your browser:"
+    signature: "Best regards,<br><strong>The %company_name% team</strong>"
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Sending email address verification email"
+    success: "Verification email sent successfully"
+    error: "Error sending verification email"
+    send_failed: "Failed to send verification email"

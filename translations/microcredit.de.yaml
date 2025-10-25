@@ -1,0 +1,106 @@
+microcredit:
+  page:
+    title: "Mikrokredit"
+    description: "Zugängliche Finanzierungslösung mit unserem Mikrokredit. Beträge angepasst an kleine private oder berufliche Projekte."
+  
+  hero:
+    class: "credit-detail-hero--microcredit"
+    taux: "{rate}%"
+    montant: "5 000€"
+    duree: "5 ans"
+    title: "Mikrokredit"
+    subtitle: "Zugängliche Finanzierung für Ihre kleinen Projekte"
+  
+  section_1:
+    title: "Was ist ein Mikrokredit?"
+    content:
+      paragraph_1: "Der Mikrokredit ist eine Finanzierungslösung für Personen, die keinen Zugang zu klassischen Bankkrediten haben. Er finanziert private oder berufliche Projekte mit geringen Beträgen."
+      paragraph_2: "Begleitet von einem Beratungs- und Betreuungssystem fördert der Mikrokredit die finanzielle Inklusion und ermöglicht die Verwirklichung wesentlicher Projekte wie den Kauf eines Fahrzeugs für die Arbeit oder die Gründung eines Kleinbetriebs."
+  
+  features:
+    title: "Merkmale des Mikrokredits"
+    montant:
+      value: "Von 300€ bis 5 000€"
+      detail: "An die Bedürfnisse angepasste Beträge"
+    duree:
+      value: "Von 6 Monaten bis 5 Jahren"
+      detail: "Flexible Laufzeit"
+    taux:
+      value: "Ab {rate}% effektiver Jahreszins*"
+      detail: "Vorteilhafter Sozialtarif"
+    garantie:
+      value: "Garantiefonds"
+      detail: "Oder Solidarbürgschaft"
+  
+  section_3:
+    title: "Vorteile des Mikrokredits"
+    advantages:
+      accessibilite:
+        title: "Zugänglichkeit"
+        description: "Offen für vom traditionellen Kredit ausgeschlossene Bevölkerungsgruppen"
+      accompagnement:
+        title: "Begleitung"
+        description: "Persönliche Beratung und Projektbetreuung"
+      taux_modere:
+        title: "Moderater Zinssatz"
+        description: "Vorzugskonditionen mit sozialem Charakter"
+      projets_varies:
+        title: "Vielfältige Projekte"
+        description: "Privat, beruflich oder Wiedereingliederung"
+      pas_frais:
+        title: "Keine Gebühren"
+        description: "Keine Bearbeitungsgebühren oder Strafen"
+  
+  section_4:
+    title: "Bedingungen und förderfähige Projekte"
+    conditions:
+      title: "Förderfähigkeitsbedingungen"
+      items:
+        exclusion: "Ausschluss vom klassischen Bankkredit"
+        projet: "Tragfähiges und kohärentes Projekt"
+        situation: "Prekäre soziale Situation"
+        accompagnement: "Akzeptierte Begleitung"
+    projets:
+      title: "Projektarten"
+      items:
+        vehicule: "Fahrzeugkauf für die Arbeit"
+        entreprise: "Gründung eines Kleinbetriebs"
+        formation: "Berufsausbildung"
+        equipement: "Wesentliche Haushaltsausstattung"
+  
+  section_5:
+    title: "Erforderliche Unterlagen"
+    personnelle:
+      title: "Persönliche Situation"
+      items:
+        identite: "Personalausweis"
+        domicile: "Wohnsitznachweis"
+        ressources: "Einkommensnachweise"
+        attestations: "Situationsbestätigungen"
+    projet:
+      title: "Zu finanzierendes Projekt"
+      items:
+        descriptif: "Detaillierte Projektbeschreibung"
+        devis: "Kostenvoranschläge oder Proforma-Rechnungen"
+        financement: "Finanzierungsplan"
+        echeancier: "Voraussichtlicher Tilgungsplan"
+    accompagnement:
+      title: "Begleitung"
+      items:
+        avis: "Stellungnahme des Sozialbetreuers"
+        dossier: "Präsentationsmappe"
+        engagement: "Betreuungsverpflichtung"
+        references: "Projektreferenzen"
+  
+  legal:
+    details:
+      title: "Wichtige rechtliche Informationen"
+      taeg: "<strong>*Effektiver Jahreszins:</strong> Repräsentatives Beispiel: Für einen Mikrokredit von 2 000€ über 36 Monate zum effektiven Jahreszins von 7,5% zahlen Sie 36 Monatsraten von 63€, also einen Gesamtbetrag von 2 268€ (Kreditkosten: 268€)."
+      eligibilite: "<strong>Förderfähigkeit:</strong> Vorbehalten für Personen in prekären Situationen oder mit Bankausschluss."
+      accompagnement: "<strong>Begleitung:</strong> Obligatorische Betreuung durch einen Sozialarbeiter oder eine Vereinigung."
+      garantie: "<strong>Garantie:</strong> Solidarischer Garantiefonds, keine persönliche Bürgschaft erforderlich."
+      finalite: "<strong>Zweck:</strong> Verwendung strikt gemäß dem erklärten Projekt."
+  
+  cta:
+    title: "Verwirklichen Sie Ihr Projekt"
+    subtitle: "Profitieren Sie von einer zugänglichen Finanzierung mit unserem Mikrokredit"

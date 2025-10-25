@@ -1,0 +1,607 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'login.title'|trans({}, 'login') }} - SEDEF BANK{% endblock %}
+
+{% block body %}
+<div class="auth-page">
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- Logo et En-tête -->
+            <div class="auth-header">
+                <div class="auth-logo">
+                    {{ ux_icon('heroicons:user-circle', {'class': 'auth-logo-icon'}) }}
+                </div>
+                <h1 class="auth-title">{{ 'login.title'|trans({}, 'login') }}</h1>
+                <p class="auth-subtitle">{{ 'login.subtitle'|trans({}, 'login') }}</p>
+            </div>
+
+            <!-- Messages d'erreur -->
+            {% if error %}
+                <div class="auth-alert auth-alert--error">
+                    {{ ux_icon('heroicons:exclamation-triangle', {'class': 'auth-alert-icon'}) }}
+                    {% if error.messageKey == 'Invalid CSRF token.' %}
+                        Une erreur est survenue. Veuillez réessayer.
+                    {% elseif error.messageKey == 'Invalid credentials.' %}
+                        Email ou mot de passe incorrect.
+                    {% else %}
+                        {{ error.messageKey|trans(error.messageData, 'security') }}
+                    {% endif %}
+                </div>
+            {% endif %}
+
+            <!-- Formulaire de connexion -->
+            <form method="post" class="auth-form">
+                <div class="form-group">
+                    <label for="inputEmail" class="form-label">{{ 'login.email_label'|trans({}, 'login') }}</label>
+                    <div class="form-input-wrapper">
+                        {{ ux_icon('heroicons:at-symbol', {'class': 'form-input-icon'}) }}
+                        <input type="email" 
+                               value="{{ last_username }}" 
+                               name="_username" 
+                               id="inputEmail" 
+                               class="form-input" 
+                               placeholder="{{ 'login.email_placeholder'|trans({}, 'login') }}"
+                               autocomplete="email" 
+                               required 
+                               autofocus>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPassword" class="form-label">{{ 'login.password_label'|trans({}, 'login') }}</label>
+                    <div class="form-input-wrapper">
+                        {{ ux_icon('heroicons:lock-closed', {'class': 'form-input-icon'}) }}
+                        <input type="password" 
+                               name="_password" 
+                               id="inputPassword" 
+                               class="form-input" 
+                               placeholder="{{ 'login.password_placeholder'|trans({}, 'login') }}"
+                               autocomplete="current-password" 
+                               required>
+                        <button type="button" class="form-toggle-password" onclick="togglePassword('inputPassword')">
+                            {{ ux_icon('heroicons:eye', {'class': 'toggle-icon'}) }}
+                        </button>
+                    </div>
+                </div>
+
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('form') }}">
+
+                <div class="form-options">
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="_remember_me" class="checkbox-input" id="remember_me">
+                        <label class="checkbox-label" for="remember_me">{{ 'login.remember_me'|trans({}, 'login') }}</label>
+                    </div>
+                    <a href="{{ path('app_forgot_password_request', {'_locale': app.request.locale}) }}" class="form-link">{{ 'login.forgot_password'|trans({}, 'login') }}</a>
+                </div>
+
+                <button type="submit" class="auth-btn auth-btn--primary">
+                    {{ ux_icon('heroicons:arrow-right-on-rectangle', {'class': 'btn-icon'}) }}
+                    {{ 'login.login_button'|trans({}, 'login') }}
+                </button>
+            </form>
+
+            <!-- Lien d'inscription -->
+            <div class="auth-divider">
+                <span>{{ 'login.no_account'|trans({}, 'login') }}</span>
+            </div>
+
+            <a href="{{ path('app_register', {'_locale': app.request.locale}) }}" class="auth-btn auth-btn--secondary">
+                {{ ux_icon('heroicons:user-plus', {'class': 'btn-icon'}) }}
+                {{ 'login.create_account'|trans({}, 'login') }}
+            </a>
+
+            <!-- Informations de sécurité -->
+            <div class="auth-info">
+                <div class="info-item">
+                    {{ ux_icon('heroicons:shield-check', {'class': 'info-icon'}) }}
+                    <span>{{ 'login.security_ssl'|trans({}, 'login') }}</span>
+                </div>
+                <div class="info-item">
+                    {{ ux_icon('heroicons:lock-closed', {'class': 'info-icon'}) }}
+                    <span>{{ 'login.security_data'|trans({}, 'login') }}</span>
+                </div>
+                <div class="info-item">
+                    {{ ux_icon('heroicons:clock', {'class': 'info-icon'}) }}
+                    <span>{{ 'login.security_support'|trans({}, 'login') }}</span>
+                </div>
+            </div>
+
+            <!-- Lien retour -->
+            <div class="auth-back">
+                <a href="{{ path('home_index', {'_locale': app.request.locale}) }}" class="back-link">
+                    {{ ux_icon('heroicons:arrow-left', {'class': 'back-icon'}) }}
+                    {{ 'login.back_home'|trans({}, 'login') }}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* ===== AUTH PAGE STYLES ===== */
+.auth-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.auth-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* En-tête */
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-logo {
+    margin-bottom: 1rem;
+}
+
+.auth-logo-icon {
+    width: 4rem;
+    height: 4rem;
+    color: var(--color-primary);
+}
+
+.auth-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+}
+
+.auth-subtitle {
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+/* Alertes */
+.auth-alert {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.auth-alert--error {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.auth-alert-icon {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+}
+
+/* Formulaire */
+.auth-form {
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.form-input-wrapper {
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.75rem;
+    border: 2px solid var(--color-border);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+.form-input::placeholder {
+    color: #9ca3af;
+}
+
+.form-input-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #6b7280;
+    pointer-events: none;
+}
+
+.form-toggle-password {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+}
+
+.form-toggle-password:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.toggle-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #6b7280;
+}
+
+/* Options du formulaire */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-input {
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--color-primary);
+}
+
+.checkbox-label {
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.form-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-link:hover {
+    text-decoration: underline;
+}
+
+/* Boutons */
+.auth-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.auth-btn--primary {
+    background: var(--color-primary);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(30, 64, 175, 0.3);
+}
+
+.auth-btn--primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 8px -1px rgba(30, 64, 175, 0.4);
+}
+
+.auth-btn--secondary {
+    background: white;
+    color: var(--color-primary);
+    border: 2px solid var(--color-border);
+}
+
+.auth-btn--secondary:hover {
+    background: var(--color-background);
+    border-color: var(--color-primary);
+}
+
+.btn-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Séparateur */
+.auth-divider {
+    text-align: center;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.auth-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--color-border);
+}
+
+.auth-divider span {
+    background: white;
+    padding: 0 1rem;
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    position: relative;
+}
+
+/* Informations de sécurité */
+.auth-info {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+}
+
+.info-icon {
+    width: 1rem;
+    height: 1rem;
+    color: var(--color-success);
+}
+
+/* Lien retour */
+.auth-back {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--color-primary);
+}
+
+.back-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Erreurs de formulaire Symfony */
+.form-error {
+    color: var(--color-error, #dc2626);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* Classes d'erreur Symfony */
+.invalid-feedback {
+    display: block !important;
+    color: var(--color-error, #dc2626) !important;
+    font-size: 0.8125rem;
+    margin-top: 0.375rem;
+    font-weight: 500;
+}
+
+/* Classes d'erreur de Symfony */
+ul.form-error-list {
+    margin: 0.375rem 0 0 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+ul.form-error-list li {
+    display: flex !important;
+    align-items: center;
+    gap: 0.375rem;
+    margin-bottom: 0.25rem;
+    color: var(--color-error, #dc2626) !important;
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+ul.form-error-list li::before {
+    content: '⚠' !important;
+    color: var(--color-error, #dc2626) !important;
+    font-weight: bold;
+}
+
+/* Tous les éléments d'erreur */
+.form-errors, 
+.form-error, 
+.invalid-feedback,
+ul.form-error-list,
+ul.form-error-list li {
+    color: var(--color-error, #dc2626) !important;
+}
+
+/* Input avec erreur */
+.form-input.is-invalid {
+    border-color: var(--color-error);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* Supprimer la validation automatique des navigateurs */
+.form-input:invalid {
+    box-shadow: none;
+}
+
+/* Input avec erreur uniquement après interaction */
+.form-input.is-invalid:not(:focus) {
+    border-color: var(--color-error);
+}
+
+/* Wrapper d'input avec erreur */
+.form-input-wrapper.has-error .form-input {
+    border-color: var(--color-error);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.form-input-wrapper.has-error .form-input-icon {
+    color: var(--color-error);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .auth-page {
+        padding: 1rem;
+    }
+    
+    .auth-card {
+        padding: 1.5rem;
+    }
+    
+    .auth-title {
+        font-size: 1.5rem;
+    }
+    
+    .auth-info {
+        gap: 1rem;
+    }
+    
+    .info-item {
+        font-size: 0.6875rem;
+    }
+}
+</style>
+
+<script>
+// Fonction pour toggle le password
+function togglePassword(inputId) {
+    const input = document.getElementById(inputId);
+    if (!input) return;
+    
+    const toggleButton = input.parentElement.querySelector('.form-toggle-password');
+    const icon = toggleButton?.querySelector('.toggle-icon');
+    
+    if (!icon) return;
+    
+    if (input.type === 'password') {
+        input.type = 'text';
+        // Icône eye-slash (œil barré)
+        icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21"/>`;
+    } else {
+        input.type = 'password';
+        // Icône eye (œil normal)
+        icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>`;
+    }
+}
+
+// Gestion des erreurs
+document.addEventListener('DOMContentLoaded', function() {
+    // Ajouter la classe d'erreur aux inputs avec erreurs existantes (soumission du formulaire)
+    const errorElements = document.querySelectorAll('.invalid-feedback, .auth-alert--error');
+    errorElements.forEach(function(errorEl) {
+        const formGroup = errorEl.closest('.form-group') || errorEl.previousElementSibling?.closest('.form-group');
+        if (formGroup) {
+            const input = formGroup.querySelector('.form-input');
+            const wrapper = formGroup.querySelector('.form-input-wrapper');
+            
+            if (input) {
+                input.classList.add('is-invalid');
+            }
+            if (wrapper) {
+                wrapper.classList.add('has-error');
+            }
+        }
+    });
+    
+    // Gestion des inputs - supprimer les erreurs lors de la saisie
+    const inputs = document.querySelectorAll('.form-input');
+    inputs.forEach(function(input) {
+        // Marquer comme "touché" lors du premier focus
+        input.addEventListener('focus', function() {
+            this.setAttribute('data-touched', 'true');
+        });
+        
+        // Supprimer les erreurs lors de la saisie
+        input.addEventListener('input', function() {
+            this.classList.remove('is-invalid');
+            const wrapper = this.closest('.form-input-wrapper');
+            if (wrapper) {
+                wrapper.classList.remove('has-error');
+            }
+        });
+        
+        // Validation lors de la perte de focus (blur) seulement si le champ a été touché
+        input.addEventListener('blur', function() {
+            if (this.getAttribute('data-touched') === 'true') {
+                validateField(this);
+            }
+        });
+    });
+    
+    // Fonction de validation d'un champ
+    function validateField(input) {
+        const isRequired = input.hasAttribute('required');
+        const isEmpty = !input.value.trim();
+        
+        if (isRequired && isEmpty) {
+            input.classList.add('is-invalid');
+            const wrapper = input.closest('.form-input-wrapper');
+            if (wrapper) {
+                wrapper.classList.add('has-error');
+            }
+        }
+    }
+});
+</script>
+{% endblock %}

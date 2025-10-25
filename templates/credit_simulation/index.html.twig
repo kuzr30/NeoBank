@@ -1,0 +1,746 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tp('credit_simulation.title', {}, 'simulation') }}{% endblock %}
+
+{% block body %}
+<main class="simulator">
+  <!-- Hero Header -->
+  <section class="simulator__hero">
+    <div class="simulator__hero-container">
+      <div class="simulator__hero-content">
+        <h1 class="simulator__hero-title">{{ tp('credit_simulation.hero.title', {}, 'simulation') }}</h1>
+        <p class="simulator__hero-subtitle">{{ tp('credit_simulation.hero.subtitle', {}, 'simulation') }}</p>
+        <div class="simulator__hero-disclaimer">
+          <span class="simulator__disclaimer-text">{{ tp('credit_simulation.hero.disclaimer', {}, 'simulation') }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Simulator -->
+  <section class="simulator__main" 
+           data-controller="credit-simulation"
+           data-credit-simulation-per-month-value="{{ tp('credit_simulation.results.summary.per_month', {}, 'simulation') }}">
+    <div class="simulator__main-container">
+      <div class="simulator__layout">
+        
+        <!-- Left Panel - Form -->
+        <div class="simulator__form-panel">
+          <div class="simulator__form-content">
+            <form class="simulator__form"
+                  data-credit-simulation-target="form">
+                
+                <!-- Credit Type Selection -->
+                <div class="simulator__field-group">
+                  <label class="simulator__field-label" for="creditType">{{ tp('credit_simulation.form.credit_type.label', {}, 'simulation') }}</label>
+                  <div class="simulator__select-wrapper">
+                    <select id="creditType" 
+                            name="creditType" 
+                            class="simulator__select"
+                            data-credit-simulation-target="creditType"
+                            data-action="change->credit-simulation#updateRate">
+                      {% for creditType in creditTypes %}
+                        <option value="{{ creditType.value }}" 
+                                data-rate="{{ creditType.getRate() }}"
+                                {% if loop.first %}selected{% endif %}>
+                          {{ creditType.getLabel()|trans({}, 'credit_simulation_enum') }}
+                        </option>
+                      {% endfor %}
+                    </select>
+                    <span class="simulator__select-arrow">▼</span>
+                  </div>
+                  <div class="simulator__rate-info">
+                    <span class="simulator__rate-text">{{ tp('credit_simulation.form.rate_info', {}, 'simulation') }} </span>
+                    <span class="simulator__rate-value" data-credit-simulation-target="rateDisplay">{{ creditTypes[0].getRate() }}%</span>
+                  </div>
+                </div>
+
+                <!-- Amount Input -->
+                <div class="simulator__field-group">
+                  <label class="simulator__field-label" for="amount">{{ tp('credit_simulation.form.amount.label', {}, 'simulation') }}</label>
+                  <div class="simulator__input-wrapper">
+                    <input type="text" 
+                           id="amount" 
+                           name="amount" 
+                           class="simulator__input"
+                           data-credit-simulation-target="amount"
+                           data-action="input->credit-simulation#updateCalculation"
+                           placeholder="{{ tp('credit_simulation.form.amount.placeholder', {}, 'simulation') }}"
+                           value="50000">
+                    <span class="simulator__input-currency">{{ tp('credit_simulation.form.amount.currency', {}, 'simulation') }}</span>
+                  </div>
+                  <p class="simulator__field-help">{{ tp('credit_simulation.form.amount.help', {}, 'simulation') }}</p>
+                </div>
+
+                <!-- Duration Input -->
+                <div class="simulator__field-group">
+                  <label class="simulator__field-label" for="duration">{{ tp('credit_simulation.form.duration.label', {}, 'simulation') }}</label>
+                  <div class="simulator__input-wrapper">
+                    <input type="text" 
+                           id="duration"
+                           name="duration" 
+                           class="simulator__input"
+                           data-credit-simulation-target="duration"
+                           data-action="input->credit-simulation#updateCalculation"
+                           placeholder="{{ tp('credit_simulation.form.duration.placeholder', {}, 'simulation') }}"
+                           value="240">
+                    <span class="simulator__input-currency">{{ tp('credit_simulation.duration_units.months', {}, 'simulation') }}</span>
+                  </div>
+                  <p class="simulator__field-help">{{ tp('credit_simulation.form.duration.help', {}, 'simulation') }}</p>
+                </div>
+
+              </form>
+          </div>
+        </div>
+
+        <!-- Right Panel - Results -->
+        <div class="simulator__results-panel">
+          <div class="simulator__results-content">
+            
+            <!-- Main Result Display -->
+            <div class="simulator__main-result">
+              <div class="simulator__result-label">{{ tp('credit_simulation.results.monthly_payment', {}, 'simulation') }}</div>
+              <div class="simulator__result-amount" data-credit-simulation-target="monthlyPayment">
+                <span class="simulator__amount-value">0</span>
+                <span class="simulator__amount-currency">{{ tp('credit_simulation.form.amount.currency', {}, 'simulation') }}</span>
+              </div>
+            </div>
+
+            <!-- Detailed Results -->
+            <div class="simulator__details">
+              <div class="simulator__detail-row">
+                <span class="simulator__detail-label">{{ tp('credit_simulation.form.amount.label', {}, 'simulation') }} :</span>
+                <span class="simulator__detail-value" data-credit-simulation-target="loanAmount">0€</span>
+              </div>
+              <div class="simulator__detail-row simulator__detail-row--secondary">
+                <span class="simulator__detail-label">{{ tp('credit_simulation.results.summary.insurance_rate', {}, 'simulation') }} :</span>
+                <span class="simulator__detail-value">0,34% {{ tp('credit_simulation.results.summary.per_year', {}, 'simulation') }}</span>
+              </div>
+              <div class="simulator__detail-row">
+                <span class="simulator__detail-label">{{ tp('credit_simulation.results.monthly_payment', {}, 'simulation') }} :</span>
+                <span class="simulator__detail-value" data-credit-simulation-target="monthlyDetail">0€/mois</span>
+              </div>
+              <div class="simulator__detail-row simulator__detail-row--secondary">
+                <span class="simulator__detail-label">{{ tp('credit_simulation.results.summary.insurance_monthly', {}, 'simulation') }} :</span>
+                <span class="simulator__detail-value" data-credit-simulation-target="insuranceAmount">0€{{ tp('credit_simulation.results.summary.per_month', {}, 'simulation') }}</span>
+              </div>
+              <div class="simulator__detail-row simulator__detail-row--secondary">
+                <span class="simulator__detail-label">{{ tp('credit_simulation.results.summary.interest_monthly', {}, 'simulation') }} :</span>
+                <span class="simulator__detail-value" data-credit-simulation-target="interestAmount">0€{{ tp('credit_simulation.results.summary.per_month', {}, 'simulation') }}</span>
+              </div>
+              <div class="simulator__detail-row">
+                <span class="simulator__detail-label">{{ tp('credit_simulation.results.summary.total_cost', {}, 'simulation') }} :</span>
+                <span class="simulator__detail-value" data-credit-simulation-target="totalCost">0€</span>
+              </div>
+              <div class="simulator__detail-row simulator__detail-row--secondary">
+                <span class="simulator__detail-label">{{ tp('credit_simulation.results.summary.interest_total', {}, 'simulation') }} :</span>
+                <span class="simulator__detail-value" data-credit-simulation-target="totalInterest">0€</span>
+              </div>
+              <div class="simulator__detail-row simulator__detail-row--secondary">
+                <span class="simulator__detail-label">{{ tp('credit_simulation.results.summary.insurance_total', {}, 'simulation') }} :</span>
+                <span class="simulator__detail-value" data-credit-simulation-target="totalInsurance">0€</span>
+              </div>
+            </div>
+            
+            <!-- Chart Container -->
+            <div class="simulator__chart-container" style="display: none;">
+              <canvas id="amortizationChart" width="400" height="200"></canvas>
+            </div>
+            
+            <!-- CTA Buttons -->
+            <div class="simulator__cta">
+              <div class="simulator__cta-buttons">
+                <form action="{{ path('credit_simulation_amortization_table') }}" method="GET" class="simulator__cta-form">
+                  <input type="hidden" name="amount" data-credit-simulation-target="hiddenAmount" value="50000">
+                  <input type="hidden" name="duration" data-credit-simulation-target="hiddenDuration" value="240">
+                  <input type="hidden" name="creditType" data-credit-simulation-target="hiddenCreditType" value="IMMOBILIER">
+                  
+                  <button type="submit" class="simulator__cta-button simulator__cta-button--secondary">
+                    {{ ux_icon('heroicons:chart-bar', {class: 'icon'}) }}{{ tp('credit_simulation.cta.view_amortization_table', {}, 'simulation') }}
+                  </button>
+                </form>
+                
+                <form action="{{ path('credit_application_start') }}" method="GET" class="simulator__cta-form">
+                  <input type="hidden" name="amount" data-credit-simulation-target="hiddenAmount" value="50000">
+                  <input type="hidden" name="duration" data-credit-simulation-target="hiddenDuration" value="240">
+                  <input type="hidden" name="creditType" data-credit-simulation-target="hiddenCreditType" value="IMMOBILIER">
+                  
+                  <button type="submit" class="simulator__cta-button simulator__cta-button--primary">
+                    {{ ux_icon('heroicons:document-text', {class: 'icon'}) }}{{ tp('credit_simulation.cta.apply_for_credit', {}, 'simulation') }}
+                  </button>
+                </form>
+              </div>
+              
+              <p class="simulator__cta-time">
+                {{ ux_icon('heroicons:clock', {'class': 'simulator__time-icon'}) }}
+                {{ tp('credit_simulation.cta.monthly_details', {}, 'simulation') }}
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Legal Notice -->
+  <section class="simulator__legal">
+    <div class="simulator__legal-container">
+      <div class="simulator__legal-content">
+        <p class="simulator__legal-text">
+          {{ tp('credit_simulation.legal.credit_warning', {}, 'simulation') }}
+        </p>
+        <div class="simulator__legal-badges">
+          <span class="simulator__legal-badge">{{ tp('credit_simulation.legal.licensed_bank', {}, 'simulation') }}</span>
+          <span class="simulator__legal-badge">{{ tp('credit_simulation.legal.insurance_broker', {}, 'simulation') }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<style>
+/* ===== CREDIT SIMULATOR STYLES ===== */
+
+/* Base Styles */
+.simulator {
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.simulator__hero {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+  padding: 3rem 0 2rem;
+}
+
+.simulator__hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.simulator__hero-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.simulator__hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.simulator__hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.simulator__hero-disclaimer {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.simulator__disclaimer-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Main Layout */
+.simulator__main {
+  padding: 3rem 0;
+}
+
+.simulator__main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.simulator__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Form Panel */
+.simulator__form-panel {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.simulator__form-content {
+  padding: 2rem;
+}
+
+.simulator__form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Field Groups */
+.simulator__field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.simulator__field-label {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 1rem;
+}
+
+.simulator__field-help {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Select Styles */
+.simulator__select-wrapper {
+  position: relative;
+}
+
+.simulator__select {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e293b;
+  background: white;
+  cursor: pointer;
+  appearance: none;
+  transition: all 0.2s ease;
+}
+
+.simulator__select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.simulator__select-arrow {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  pointer-events: none;
+  font-size: 0.875rem;
+}
+
+/* Input Styles */
+.simulator__input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.simulator__input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e293b;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.simulator__input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.simulator__input-currency {
+  position: absolute;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #64748b;
+  pointer-events: none;
+}
+
+/* Rate Info */
+.simulator__rate-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #f1f5f9;
+  border-radius: 0.5rem;
+  border-left: 4px solid #3b82f6;
+}
+
+.simulator__rate-text {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.simulator__rate-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e40af;
+}
+
+/* Results Panel */
+.simulator__results-panel {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: sticky;
+  top: 2rem;
+}
+
+.simulator__results-content {
+  padding: 2rem;
+}
+
+/* Main Result */
+.simulator__main-result {
+  text-align: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+
+.simulator__result-label {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.simulator__result-amount {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.5rem;
+  color: #1e40af;
+}
+
+.simulator__amount-value {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.simulator__amount-currency {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Details */
+.simulator__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.simulator__detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+
+.simulator__detail-row--secondary {
+  padding-left: 1rem;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.simulator__detail-label {
+  color: #374151;
+}
+
+.simulator__detail-value {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Actions */
+.simulator__actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.simulator__action-btn {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.simulator__action-btn--primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.simulator__action-btn--primary:hover {
+  background: #2563eb;
+}
+
+.simulator__action-btn--secondary {
+  background: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+
+.simulator__action-btn--secondary:hover {
+  background: #e2e8f0;
+}
+
+/* CTA */
+.simulator__cta {
+  text-align: center;
+}
+
+.simulator__cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.simulator__cta-form {
+  flex: 1;
+}
+
+.simulator__cta-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.simulator__cta-button--primary {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: white;
+}
+
+.simulator__cta-button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
+}
+
+.simulator__cta-button--secondary {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+}
+
+.simulator__cta-button--secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+.simulator__cta-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.simulator__time-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Legal Section */
+.simulator__legal {
+  background: #ea580c;
+  padding: 2rem 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.simulator__legal-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.simulator__legal-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.simulator__legal-text {
+  font-size: 0.875rem;
+  color: #ffffffff;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.simulator__legal-badges {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.simulator__legal-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .simulator__layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .simulator__results-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .simulator__hero {
+    padding: 2rem 0 1.5rem;
+  }
+  
+  .simulator__hero-title {
+    font-size: 2rem;
+  }
+  
+  .simulator__hero-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .simulator__main {
+    padding: 2rem 0;
+  }
+  
+  .simulator__form-content,
+  .simulator__results-content {
+    padding: 1.5rem;
+  }
+  
+  .simulator__amount-value {
+    font-size: 2.5rem;
+  }
+  
+  .simulator__legal-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .simulator__hero-title {
+    font-size: 1.75rem;
+  }
+  
+  .simulator__amount-value {
+    font-size: 2rem;
+  }
+  
+  .simulator__form-content,
+  .simulator__results-content {
+    padding: 1rem;
+  }
+  
+  .simulator__input,
+  .simulator__select {
+    padding: 0.875rem;
+  }
+  
+  .simulator__actions {
+    flex-direction: column;
+  }
+  
+  .simulator__cta-buttons {
+    flex-direction: column;
+  }
+}
+
+/* ===== ICÔNES SYMFONY UX ===== */
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  color: currentColor;
+}
+
+.icon--large {
+  width: 2rem;
+  height: 2rem;
+}
+
+.icon--small {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+}
+
+/* Icônes dans les titres */
+h1 .icon,
+h2 .icon,
+h3 .icon {
+  margin-right: 0.75rem;
+  color: var(--color-primary);
+}
+
+/* Icônes dans les boutons */
+.btn .icon {
+  margin-right: 0.5rem;
+}
+
+.btn--primary .icon {
+  color: white;
+}
+
+.btn--secondary .icon {
+  color: var(--color-primary);
+}
+</style>
+
+{% endblock %}

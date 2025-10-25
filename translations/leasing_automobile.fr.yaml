@@ -1,0 +1,106 @@
+leasing_automobile:
+  page:
+    title: "Leasing Automobile"
+    description: "Roulez dans le véhicule de vos rêves avec notre leasing automobile. Location avec option d'achat flexible."
+  
+  hero:
+    class: "credit-detail-hero--leasing"
+    taux: "2,9%"
+    montant: "80 000€"
+    duree: "5 ans"
+    title: "Leasing Automobile"
+    subtitle: "Votre véhicule en location avec option d'achat"
+  
+  section_1:
+    title: "Qu'est-ce que le leasing automobile ?"
+    content:
+      paragraph_1: "Le leasing automobile, ou Location avec Option d'Achat (LOA), vous permet de rouler dans un véhicule neuf en payant uniquement sa dépréciation pendant la durée du contrat."
+      paragraph_2: "À l'échéance, vous pouvez soit acheter le véhicule pour sa valeur résiduelle, soit le restituer, soit le remplacer par un modèle plus récent."
+  
+  features:
+    title: "Caractéristiques du leasing"
+    montant:
+      value: "Jusqu'à 80 000€"
+      detail: "Tous types de véhicules"
+    duree:
+      value: "De 2 à 5 ans"
+      detail: "Contrat flexible"
+    taux:
+      value: "À partir de {rate}% TAEG*"
+      detail: "Financement avantageux"
+    garantie:
+      value: "Véhicule en garantie"
+      detail: "Propriété jusqu'à levée d'option"
+  
+  section_3:
+    title: "Avantages du leasing automobile"
+    advantages:
+      vehicule_recent:
+        title: "Véhicule récent"
+        description: "Toujours sous garantie constructeur"
+      loyers_reduits:
+        title: "Loyers réduits"
+        description: "Plus faibles qu'un crédit auto classique"
+      flexibilite:
+        title: "Flexibilité"
+        description: "3 options en fin de contrat"
+      entretien:
+        title: "Entretien inclus"
+        description: "Package maintenance possible"
+      deductibilite:
+        title: "Déductibilité"
+        description: "Avantages fiscaux pour les professionnels"
+  
+  section_4:
+    title: "Conditions du contrat"
+    contrat:
+      title: "Conditions du contrat"
+      items:
+        vehicule: "Véhicule neuf ou récent (moins de 2 ans)"
+        kilometrage: "Kilométrage annuel prédéfini"
+        entretien: "Entretien chez concessionnaire agréé"
+        assurance: "Assurance tous risques obligatoire"
+    locataire:
+      title: "Conditions locataire"
+      items:
+        permis: "Permis de conduire valide"
+        revenus: "Revenus stables justifiés"
+        interdiction: "Pas d'interdiction bancaire"
+        domicile: "Domicile en France métropolitaine"
+  
+  section_5:
+    title: "Documents nécessaires"
+    personnels:
+      title: "Documents personnels"
+      items:
+        permis: "Permis de conduire"
+        identite: "Pièce d'identité"
+        domicile: "Justificatif de domicile"
+        rib: "RIB du compte"
+    financiers:
+      title: "Justificatifs financiers"
+      items:
+        salaires: "3 derniers bulletins de salaire"
+        impots: "Avis d'imposition"
+        comptes: "Relevés de comptes"
+        contrat: "Contrat de travail"
+    vehicule:
+      title: "Véhicule"
+      items:
+        commande: "Bon de commande du concessionnaire"
+        fiche: "Fiche technique du véhicule"
+        devis_assurance: "Devis d'assurance tous risques"
+        certificat: "Certificat de conformité"
+  
+  legal:
+    details:
+      title: "Informations légales importantes"
+      taeg: "<strong>*TAEG :</strong> Exemple représentatif : pour un véhicule de 25 000€ en leasing sur 48 mois au TAEG de 2,9%, 48 loyers de 315€ + option d'achat de 10 000€, coût total si achat : 25 120€."
+      kilometrage: "<strong>Kilométrage :</strong> Respect du kilométrage contractuel, pénalités en cas de dépassement."
+      etat: "<strong>État du véhicule :</strong> Restitution en bon état, hors usure normale."
+      assurance: "<strong>Assurance :</strong> Tous risques obligatoire avec vol et incendie."
+      resiliation: "<strong>Résiliation :</strong> Anticipée possible sous conditions, pénalités applicables."
+  
+  cta:
+    title: "Roulez dans votre véhicule idéal"
+    subtitle: "Découvrez les avantages du leasing automobile"

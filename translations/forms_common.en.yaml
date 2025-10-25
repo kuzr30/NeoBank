@@ -1,0 +1,52 @@
+form_common:
+  labels:
+    insurance_type: "Insurance Type"
+    lastname: "Last Name"
+    firstname: "First Name"
+    email_address: "Email Address"
+    phone_number: "Phone Number"
+    contact_preference: "Contact Preference"
+    additional_comments: "Additional Comments"
+    request_quote: "Request Quote"
+    
+  placeholders:
+    select_insurance_type: "Select insurance type"
+    lastname: "Your last name"
+    firstname: "Your first name"
+    email_placeholder: "your@email.com"
+    phone_example: "%company_phone%"
+    how_to_contact: "How would you like to be contacted?"
+    
+  contact_preference:
+    email: "By email"
+    phone: "By phone"
+    indifferent: "No preference"
+    
+  additional_comments_placeholder: "Describe your specific needs or ask your questions..."
+
+# Form error messages
+form_errors:
+  required: "This field is required"
+  email_invalid: "Please enter a valid email address"
+  phone_invalid: "Please enter a valid phone number"
+  too_long: "This field cannot exceed {{ limit }} characters"
+  too_short: "This field must contain at least {{ limit }} characters"
+
+# Common labels used in multiple forms
+common_labels:
+  submit: "Submit"
+  cancel: "Cancel"
+  save: "Save"
+  delete: "Delete"
+  edit: "Edit"
+  back: "Back"
+  next: "Next"
+  previous: "Previous"
+  close: "Close"
+
+# Password validation messages
+password_min_12_chars: "Password must be at least 8 characters long"
+password_required: "Password is required"
+new_password: "New password"
+repeat_password: "Repeat password"
+password_fields_must_match: "Password fields must match"

@@ -1,0 +1,61 @@
+banking_card_subscription_controller:
+  # Gebruikersinterface
+  ui:
+    confirm_card_title: "Bevestig uw"
+    advantages_title: "Inbegrepen voordelen"
+    limits_title: "Limieten"
+    request_card_button: "Deze kaart aanvragen"
+    cancel_button: "Annuleren"
+  
+  flash:
+    kyc_required: "U moet uw identiteitsverificatie voltooien om toegang te krijgen tot bankkaartdiensten."
+    existing_card_or_subscription: "U heeft al een kaart of een lopende aanvraag."
+    no_active_account: "U moet een actieve rekening hebben om een kaart aan te vragen."
+    subscription_success: "Uw abonnementsaanvraag is succesvol geregistreerd. U ontvangt een melding zodra deze wordt verwerkt."
+    subscription_error: "Er is een fout opgetreden bij het registreren van uw aanvraag. Probeer het opnieuw."
+    access_denied_subscription: "Toegang geweigerd tot dit abonnement."
+    cannot_cancel_subscription: "Alleen abonnementen in behandeling kunnen worden geannuleerd."
+    invalid_security_token: "Ongeldig beveiligingstoken."
+    subscription_cancelled: "Uw abonnementsaanvraag is succesvol geannuleerd."
+    cancellation_error: "Er is een fout opgetreden tijdens de annulering."
+  card_info:
+    classic:
+      title: "Classic Kaart"
+      description: "Ideaal om mee te beginnen, gratis het eerste jaar"
+      price: "Gratis het eerste jaar"
+      features:
+        - "Contactloos betalen"
+        - "Gratis opnames in heel Europa"
+        - "Aankoopverzekering inbegrepen"
+        - "Toegewijde mobiele applicatie"
+      limits:
+        - "Opnamelimiet: €300/dag"
+        - "Betalingslimiet: €1.000/dag"
+    gold:
+      title: "Gold Kaart"
+      description: "De populairste keuze voor dagelijks gebruik"
+      price: "€5 per maand"
+      features:
+        - "Alle voordelen van de Classic kaart"
+        - "Reisverzekering inbegrepen"
+        - "Garantie-extensiegarantie"
+        - "24/7 conciërgedienst"
+        - "1% cashback terugbetaling"
+      limits:
+        - "Opnamelimiet: €500/dag"
+        - "Betalingslimiet: €2.500/dag"
+    platinum:
+      title: "Platinum Kaart"
+      description: "Het toppunt van bancaire excellentie"
+      price: "€15 per maand"
+      features:
+        - "Alle voordelen van de Gold kaart"
+        - "Toegang tot VIP-lounges op luchthavens"
+        - "Premium reisverzekering"
+        - "Premium 24/7 conciërgedienst"
+        - "2% cashback terugbetaling"
+        - "Toegewijde accountmanager"
+      limits:
+        - "Opnamelimiet: €1.000/dag"
+        - "Betalingslimiet: €5.000/dag"
+  automated_request: "Automatische aanvraag via bankinterface"

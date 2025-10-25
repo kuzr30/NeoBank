@@ -1,0 +1,446 @@
+# Nederlandse vertalingen - Kredietaanvraag Applicatie
+# Professionele hiërarchische structuur voor het nieuwe vertaalsysteem
+
+# ========== SYSTEEMBERICHTEN ==========
+credit_application:
+  messages:
+    step_completed: "Stap {step} succesvol voltooid!"
+    complete_previous_steps: "Voltooi eerst de vorige stappen."
+    complete_all_steps: "Voltooi eerst alle vorige stappen."
+    form_errors: "Corrigeer {count} fout{plural} in het formulier."
+    application_submitted: "Uw kredietaanvraag is succesvol ingediend! U ontvangt binnen 48 uur een reactie."
+    confirmation_not_found: "Bevestigingspagina niet gevonden of verlopen."
+    technical_error: "Er is een technische fout opgetreden. Probeer het opnieuw."
+  # ========== PROCESSTAPPEN ==========
+  steps:
+    step1:
+      title: "Persoonlijke informatie"
+      subtitle: "Om te beginnen hebben we uw basis persoonlijke informatie nodig"
+      description: "Vul uw basis persoonlijke informatie in"
+    step2:
+      title: "Adres en gezinssituatie"
+      subtitle: "Geef ons uw huidige adres en gezinssituatie door"
+      description: "Voltooi uw adres en gezinssituatie"
+    step3:
+      title: "Professionele situatie"
+      subtitle: "Vertel ons over uw professionele situatie en inkomsten"
+      description: "Geef uw professionele informatie en inkomsten op"
+    step4:
+      title: "Afronding en validatie"
+      subtitle: "Controleer uw gegevens en valideer uw aanvraag"
+      description: "Finaliseer met uw bankinformatie"
+    credit_details:
+      title: "Kredietdetails"
+      description: "Configureer de parameters van uw lening"
+  # ========== NAVIGATIE ==========
+  navigation:
+    back: "Terug naar simulatie"
+    title: "Kredietaanvraag"
+    step_progress: "Stap {step} van {total}"
+    continue: "Doorgaan"
+    previous: "Vorige"
+    submit: "Aanvraag indienen"
+  # ========== SAMENVATTING ==========
+  summary:
+    title: "Samenvatting van uw aanvraag"
+    sections:
+      personal_info: "Persoonlijke informatie"
+      credit_request: "Kredietaanvraag"
+      financial_situation: "Financiële situatie"
+      additional_info: "Aanvullende informatie"
+    
+    personal:
+      name: "Volledige naam"
+      email: "E-mail"
+      income: "Maandelijks inkomen"
+    credit:
+      amount: "Bedrag"
+      duration: "Duur"
+      monthly_payment: "Maandtermijn"
+      total_cost: "Totale kosten van het krediet"
+    financial:
+      monthly_expenses: "Maandelijkse lasten"
+      existing_loans: "Bestaande kredieten"
+  # ========== ALGEMEEN ==========
+  common:
+    months: "maanden"
+  # ========== BEVESTIGING ==========
+  confirmation:
+    title: "Kredietaanvraag bevestigd"
+    subtitle: "Uw aanvraag is succesvol geregistreerd"
+    reference: "Referentie van uw aanvraag"
+    reference_text: "Bewaar deze referentie zorgvuldig voor uw communicatie"
+    summary:
+      title: "Samenvatting van uw aanvraag"
+    next_steps:
+      title: "Volgende stappen"
+      step1:
+        title: "Aanvraag ontvangen"
+        description: "Uw aanvraag is geregistreerd en wordt verwerkt"
+        time: "Nu"
+      step2:
+        title: "Dossieronderzoek"
+        description: "Ons team analyseert uw aanvraag en profiel"
+        time: "Binnen 24u"
+      step3:
+        title: "Contact opnemen"
+        description: "Een adviseur neemt contact met u op om uw dossier af te ronden"
+        time: "Binnen 48u"
+      step4:
+        title: "Afronding van het contract"
+        description: "Ondertekening en implementatie van uw krediet"
+        time: "Binnen een week"
+  # ========== ACTIES ==========
+  actions:
+    new_simulation: "Nieuwe simulatie"
+    print: "Afdrukken"
+  # ========== FORMULIEREN ==========
+  forms:
+    personal_info:
+      first_name:
+        label: "Voornaam"
+        placeholder: "Uw voornaam"
+        help: "Voer uw voornaam in zoals deze op uw officiële documenten staat"
+        errors:
+          required: "Voornaam is verplicht"
+          min_length: "Voornaam moet minimaal 2 karakters bevatten"
+          max_length: "Voornaam mag niet meer dan 50 karakters bevatten"
+          invalid_format: "Voornaam mag alleen letters, spaties, streepjes en apostrofen bevatten"
+      last_name:
+        label: "Achternaam"
+        placeholder: "Uw achternaam"
+        help: "Voer uw achternaam in zoals deze op uw officiële documenten staat"
+        errors:
+          required: "Achternaam is verplicht"
+          min_length: "Achternaam moet minimaal 2 karakters bevatten"
+          max_length: "Achternaam mag niet meer dan 50 karakters bevatten"
+          invalid_format: "Achternaam mag alleen letters, spaties, streepjes en apostrofen bevatten"
+      email:
+        label: "E-mailadres"
+        placeholder: "uw.email@voorbeeld.nl"
+        help: "Gebruik een geldig e-mailadres waar we contact met u kunnen opnemen"
+        errors:
+          required: "E-mailadres is verplicht"
+          invalid: "Voer een geldig e-mailadres in"
+      phone_number:
+        label: "Telefoonnummer"
+        placeholder: "+31 6 12 34 56 78"
+        help: "Voer uw mobiele of vaste telefoonnummer in"
+        errors:
+          required: "Telefoonnummer is verplicht"
+          invalid: "Voer een geldig telefoonnummer in"
+      birth_date:
+        label: "Geboortedatum"
+        help: "Selecteer uw geboortedatum (u moet meerderjarig zijn)"
+        errors:
+          required: "Geboortedatum is verplicht"
+          underage: "U moet meerderjarig zijn om een kredietaanvraag te doen"
+      nationality:
+        label: "Nationaliteit"
+        placeholder: "Selecteer uw nationaliteit"
+        help: "Geef uw huidige nationaliteit aan"
+        choices:
+          french: "Franse"
+          eu: "Europese Unie"
+          non_eu: "Buiten Europese Unie"
+        errors:
+          required: "Nationaliteit is verplicht"
+      birth_country:
+        label: "Geboorteland"
+        placeholder: "Nederland"
+        help: "Geef het land aan waar u geboren bent"
+        errors:
+          required: "Geboorteland is verplicht"
+          min_length: "Geboorteland moet minimaal 2 karakters bevatten"
+          max_length: "Geboorteland mag niet meer dan 50 karakters bevatten"
+      birth_city:
+        label: "Geboorteplaats"
+        placeholder: "Amsterdam"
+        help: "Geef de stad aan waar u geboren bent"
+        errors:
+          required: "Geboorteplaats is verplicht"
+          min_length: "Geboorteplaats moet minimaal 2 karakters bevatten"
+          max_length: "Geboorteplaats mag niet meer dan 50 karakters bevatten"
+    address_info:
+      address:
+        label: "Adres"
+        placeholder: "Hoofdstraat 123"
+        help: "Vul uw volledige woonadres in"
+        errors:
+          required: "Adres is verplicht"
+          min_length: "Adres moet minimaal 5 karakters bevatten"
+          max_length: "Adres mag niet meer dan 100 karakters bevatten"
+      postal_code:
+        label: "Postcode"
+        placeholder: "Postcode van uw stad"
+        help: "Vul de postcode van uw woonplaats in"
+        errors:
+          required: "Postcode is verplicht"
+          invalid_format: "Postcode moet in Nederlands formaat zijn (1234 AB)"
+      city:
+        label: "Stad"
+        placeholder: "Woonplaats"
+        help: "Geef aan in welke stad u momenteel woont"
+        errors:
+          required: "Stad is verplicht"
+          min_length: "Stad moet minimaal 2 karakters bevatten"
+          max_length: "Stad mag niet meer dan 50 karakters bevatten"
+      country:
+        label: "Land"
+        default_value: "Land van verblijf"
+        help: "Selecteer uw land van verblijf"
+        errors:
+          required: "Land is verplicht"
+      marital_status:
+        label: "Burgerlijke staat"
+        placeholder: "Uw huidige gezinssituatie"
+        help: "Geef uw huidige burgerlijke staat aan"
+        choices:
+          single: "Alleenstaand"
+          married: "Getrouwd"
+          divorced: "Gescheiden"
+          widowed: "Weduwe/Weduwnaar"
+          partnership: "Samenwonend"
+          civil_union: "Burgerlijke unie"
+        errors:
+          required: "Burgerlijke staat is verplicht"
+      dependents:
+        label: "Aantal ten laste komende personen"
+        placeholder: "Aantal personen ten laste"
+        help: "Geef het totaal aantal personen aan dat u ten laste heeft"
+        choices:
+          none: "Geen"
+          one: "1 persoon"
+          two: "2 personen"
+          three: "3 personen"
+          four: "4 personen"
+          five_or_more: "5 personen of meer"
+        errors:
+          required: "Aantal ten laste komende personen is verplicht"
+          min: "Aantal ten laste komende personen kan niet negatief zijn"
+          max: "Aantal ten laste komende personen lijkt te hoog"
+          range: "Aantal ten laste komende personen moet tussen 0 en 20 zijn"
+      housing_type:
+        label: "Type woning"
+        placeholder: "Uw huidige woonsituatie"
+        help: "Specificeer uw huidige woonsituatie"
+        choices:
+          owner: "Eigenaar"
+          tenant: "Huurder"
+          family: "Bij familie"
+          free_housing: "Dienstwoning"
+          other: "Anders"
+        errors:
+          required: "Woningtype is verplicht"
+          invalid_choice: "Kies een geldige optie"
+      housing_duration:
+        label: "Woonperiode"
+        placeholder: "Hoe lang woont u al op dit adres?"
+        help: "Geef aan hoe lang u al op uw huidige adres woont"
+        choices:
+          less_6_months: "Minder dan 6 maanden"
+          6_months_1_year: "Tussen 6 maanden en 1 jaar"
+          1_2_years: "Tussen 1 en 2 jaar"
+          2_5_years: "Tussen 2 en 5 jaar"
+          more_5_years: "Meer dan 5 jaar"
+          less_than_1_year: "Minder dan 1 jaar"
+          between_1_and_3_years: "Tussen 1 en 3 jaar"
+          between_3_and_5_years: "Tussen 3 en 5 jaar"
+          more_than_5_years: "Meer dan 5 jaar"
+        errors:
+          required: "Woonperiode is verplicht"
+    professional_info:
+      sections:
+        employment: "Huidige baan"
+        financial: "Financiële situatie"
+        banking: "Hoofdbank"
+      employment_type:
+        label: "Type werk"
+        placeholder: "Selecteer uw type werk"
+        help: "Uw huidige professionele situatie"
+        choices:
+          employee: "Werknemer"
+          civil_servant: "Ambtenaar"
+          freelance: "Freelancer"
+          manager: "Manager"
+          retired: "Gepensioneerd"
+          unemployed: "Werkloos"
+          self_employed: "Zelfstandige"
+          executive: "Leidinggevende"
+          student: "Student"
+        errors:
+          required: "Type werk is verplicht"
+      employer:
+        label: "Werkgever"
+        placeholder: "Naam van uw bedrijf"
+        help: "Naam van uw werkgever of bedrijf"
+        errors:
+          required: "Naam van werkgever is verplicht"
+          min_length: "Naam van werkgever moet minimaal 2 karakters bevatten"
+          max_length: "Naam van werkgever mag niet meer dan 255 karakters bevatten"
+      job_title:
+        label: "Functietitel"
+        placeholder: "Uw functie"
+        help: "Uw functie of rol"
+        errors:
+          required: "Functietitel is verplicht"
+          min_length: "Functietitel moet minimaal 2 karakters bevatten"
+          max_length: "Functietitel mag niet meer dan 255 karakters bevatten"
+      employment_start_date:
+        label: "Startdatum werkrelatie"
+        placeholder: "Startdatum"
+        help: "Datum waarop u met deze functie bent begonnen"
+        errors:
+          required: "Startdatum werkrelatie is verplicht"
+          future_date: "Datum kan niet in de toekomst liggen"
+      monthly_income:
+        label: "Maandelijks netto inkomen (€)"
+        placeholder: "3000"
+        help: "Uw netto maandinkomen (salaris, pensioen, etc.)"
+        errors:
+          required: "Maandelijks inkomen is verplicht"
+          min_amount: "Inkomen moet minimaal 1000 € zijn"
+          min: "Inkomen moet hoger zijn dan 0"
+          max: "Inkomen lijkt te hoog"
+      monthly_expenses:
+        label: "Maandelijkse lasten (€)"
+        placeholder: "1500"
+        help: "Uw maandelijkse lasten (huur, rekeningen, etc.)"
+        errors:
+          required: "Maandelijkse lasten zijn verplicht"
+          negative: "Lasten kunnen niet negatief zijn"
+          min: "Lasten moeten 0 of hoger zijn"
+          max: "Lasten lijken te hoog"
+      existing_loans:
+        label: "Lopende kredieten (€)"
+        placeholder: "500"
+        help: "Maandelijkse termijnen van uw huidige kredieten (0 indien geen)"
+        errors:
+          required: "Dit veld is verplicht"
+          negative: "Bedrag kan niet negatief zijn"
+          min: "Lopende kredieten kunnen niet negatief zijn"
+          max: "Lopende kredieten lijken te hoog"
+      bank_name:
+        label: "Naam van uw bank"
+        placeholder: "ING Bank"
+        help: "Naam van uw hoofdbank"
+        errors:
+          required: "Banknaam is verplicht"
+          min_length: "Banknaam moet minimaal 2 karakters bevatten"
+          max_length: "Banknaam mag niet meer dan 255 karakters bevatten"
+    banking_info:
+      account_number:
+        label: "Rekeningnummer (IBAN)"
+        placeholder: "NL91 ABNA 0417 1643 00"
+        errors:
+          required: "Rekeningnummer is verplicht"
+          invalid_format: "Voer een geldige IBAN in"
+    bank_validation:
+      account_duration:
+        label: "Anciënniteit van uw rekening"
+        placeholder: "Selecteer de duur"
+        help: "Hoe lang heeft u al een rekening bij uw hoofdbank?"
+        choices:
+          less_1_year: "Minder dan 1 jaar"
+          1_3_years: "Tussen 1 en 3 jaar"
+          3_5_years: "Tussen 3 en 5 jaar"
+        errors:
+          required: "Anciënniteit van de rekening is verplicht"
+          invalid: "Kies een geldige optie"
+      has_other_loans:
+        label: "Heeft u andere lopende kredieten?"
+        help: "Geef aan of u momenteel andere kredieten of leningen aan het terugbetalen bent"
+        choices:
+          yes: "Ja"
+          no: "Nee"
+        errors:
+          required: "Deze informatie is verplicht"
+    consents:
+      required_consents: "Verplichte toestemmingen"
+      optional_consents: "Optionele toestemmingen"
+      terms_accepted:
+        label: "Ik accepteer de algemene voorwaarden"
+        errors:
+          required: "U moet de algemene voorwaarden accepteren"
+      data_processing_accepted:
+        label: "Ik accepteer de verwerking van mijn persoonlijke gegevens"
+        errors:
+          required: "U moet de verwerking van persoonlijke gegevens accepteren"
+      marketing_accepted:
+        label: "Ik accepteer het ontvangen van marketingcommunicatie (optioneel)"
+      confirmation_accepted:
+        label: "Ik bevestig de juistheid van de verstrekte informatie"
+        details: "Kredietkenmerken"
+        errors:
+          required: "U moet de juistheid van de informatie bevestigen"
+      loan_amount:
+        label: "Gewenst kredietbedrag"
+        placeholder: "Bedrag in euro's"
+        help: "Totaalbedrag dat u wilt lenen"
+        errors:
+          required: "Het kredietbedrag is verplicht"
+          range: "Het bedrag moet tussen {{ min }}€ en {{ max }}€ liggen"
+      duration:
+        label: "Kredietduur (in maanden)"
+        placeholder: "Duur in maanden"
+        help: "Gewenste terugbetalingsduur in maanden"
+        errors:
+          required: "De kredietduur is verplicht"
+          range: "De duur moet tussen {{ min }} en {{ max }} maanden liggen"
+      credit_type:
+        label: "Type krediet"
+        placeholder: "Selecteer het type krediet"
+        help: "Kies het type krediet dat bij uw project past"
+        choices:
+          personal: "Persoonlijke lening"
+          auto: "Autokrediet"
+          home_improvement: "Verbouwingskrediet"
+          mortgage: "Hypotheek"
+          debt_consolidation: "Kredietherfinanciering"
+          consumption: "Consumentenkrediet"
+          renewable: "Doorlopend krediet"
+          student: "Studiefinanciering"
+          bridge: "Overbruggingslening"
+          microcredit: "Persoonlijk microkrediet"
+          leasing: "Leasing"
+          travel: "Reiskrediet"
+          professional: "Zakelijk krediet"
+        errors:
+          required: "Het type krediet is verplicht"
+      monthly_payment:
+        label: "Gewenste maandtermijn (optioneel)"
+        placeholder: "Maandtermijn in euro's"
+        help: "Als u dit veld niet invult, berekenen wij automatisch de maandtermijn"
+        errors:
+          range: "De maandtermijn moet tussen {{ min }}€ en {{ max }}€ liggen"
+      messages:
+        simulation_detected: "Simulatie gedetecteerd"
+        simulation_info: "De bovenstaande velden zijn vooraf ingevuld met de gegevens van uw simulatie. U kunt deze indien nodig wijzigen."
+        simulation_recommended: "Simulatie aanbevolen"
+        simulation_link: "Voor een nauwkeurigere schatting raden wij u aan onze %link%kredietsimulator%endlink% te gebruiken."
+
+# ========== NAVIGATIE ==========
+navigation:
+  home: "Home"
+  simulation: "Simulatie"
+  application: "Aanvraag"
+  about: "Over ons"
+  contact: "Contact"
+  language: "Taal"
+
+# ========== KNOPPEN ==========
+buttons:
+  next: "Volgende"
+  previous: "Vorige"
+  submit: "Verzenden"
+  cancel: "Annuleren"
+  back_home: "Terug naar home"
+  start_application: "Start aanvraag"
+  
+# ========== ALGEMEEN ==========
+general:
+  loading: "Laden..."
+  optional: "Optioneel"
+  required: "Verplicht"
+  yes: "Ja"
+  no: "Nee"

@@ -1,0 +1,56 @@
+devis_confirmation:
+  title: "Anfrage erfolgreich gesendet!"
+  description: "Ihre Angebotsanfrage wurde an unser Team weitergeleitet. Sie erhalten so schnell wie möglich eine Antwort."
+  reference_number: "Referenznummer"
+  summary_title: "Zusammenfassung Ihrer Anfrage"
+  summary:
+    insurance_type: "Versicherungstyp"
+    full_name: "Vollständiger Name"
+    email: "E-Mail"
+    phone: "Telefon"
+    contact_preference: "Kontaktpräferenz"
+    request_date: "Anfragedatum"
+  next_steps_title: "Nächste Schritte"
+  next_steps:
+    step1: "Unser Team wird Ihre Anfrage innerhalb von 24 Stunden analysieren"
+    step2: "Sie erhalten ein personalisiertes Angebot per E-Mail"
+    step3: "Ein Berater wird Sie nach Ihrer Präferenz kontaktieren"
+  other_insurances: "Andere Versicherungen"
+  back_to_home: "Zurück zur Startseite"
+
+devis_form:
+  personal_info_title: "Ihre persönlichen Daten"
+  insurance_details_title: "Details Ihrer Versicherung"
+  additional_info_title: "Zusätzliche Informationen"
+  additional_info_help: "Beschreiben Sie Ihre spezifischen Bedürfnisse oder Informationen, die uns helfen könnten, Ihr Angebot zu personalisieren"
+  why_choose_title: "Warum unsere %type% Versicherung wählen?"
+  advantages:
+    optimal_coverage:
+      title: "Optimale Abdeckung"
+      description: "Schutz angepasst an Ihre spezifischen Bedürfnisse mit vollständigen Garantien."
+    competitive_rates:
+      title: "Wettbewerbsfähige Tarife"
+      description: "Die besten Marktpreise dankzur unserer privilegierten Partnerschaften."
+    customer_service:
+      title: "24/7 Kundenservice"
+      description: "Ein engagiertes Team steht Ihnen jederzeit zur Verfügung."
+    fast_processing:
+      title: "Schnelle Bearbeitung"
+      description: "Vereinfachte Verfahren für eine schnelle Bearbeitung Ihrer Unterlagen."
+  notes:
+    free_quote: "Kostenloses und unverbindliches Angebot"
+    data_protection: "Ihre Daten sind geschützt und vertraulich"
+    response_time: "Antwort innerhalb von 24 Arbeitsstunden"
+  
+  validation:
+    lastname_required: "Der Nachname ist erforderlich"
+    lastname_max: "Der Nachname darf nicht mehr als {{ limit }} Zeichen enthalten"
+    firstname_required: "Der Vorname ist erforderlich"
+    firstname_max: "Der Vorname darf nicht mehr als {{ limit }} Zeichen enthalten"
+    email_required: "Die E-Mail ist erforderlich"
+    email_invalid: "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+    phone_required: "Die Telefonnummer ist erforderlich"
+    phone_invalid: "Bitte geben Sie eine gültige Telefonnummer ein"
+    insurance_type_required: "Bitte wählen Sie einen Versicherungstyp aus"
+    contact_preference_invalid: "Bitte wählen Sie eine gültige Kontaktpräferenz aus"
+    comments_max: "Die Kommentare dürfen nicht mehr als {{ limit }} Zeichen enthalten"

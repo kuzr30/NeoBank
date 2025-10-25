@@ -1,0 +1,27 @@
+banking_transfer_new:
+  header:
+    title: "Nieuwe overschrijving"
+    subtitle: "Geld overmaken naar een begunstigde rekening"
+    back_button: "Terug"
+  
+  process_steps:
+    step1: "Informatie"
+    step2: "Validatie"
+    step3: "Bevestiging"
+  
+  source_account:
+    title: "Bronrekening"
+    main_account: "Hoofdrekening"
+    available_balance: "Beschikbaar saldo:"
+    no_account_warning: "Geen bronrekening beschikbaar. Neem contact op met uw adviseur."
+  
+  destination_account:
+    title: "Begunstigde rekening"
+    help_text: "Selecteer de rekening waarnaar u de overschrijving wilt maken"
+  
+  transfer_details:
+    title: "Overschrijvingsdetails"
+    description_help: "Beschrijf het doel van deze overschrijving (optioneel)"
+  
+  actions:
+    cancel: "Annuleren"

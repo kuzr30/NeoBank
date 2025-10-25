@@ -1,0 +1,391 @@
+{% extends 'banking/base_layout.html.twig' %}
+
+{% block title %}Confirmer votre {{ cardInfo.title }}{% endblock %}
+
+{% set activeTab = 'cartes' %}
+
+{% block banking_content %}
+<div class="subscription-page">
+    <div class="subscription-page__container">
+        {# En-tête de la page #}
+        <div class="subscription-page__header">
+            <a href="{{ path('app_banking_card_index') }}" class="subscription-page__back">
+                <i class="fas fa-arrow-left"></i>
+                Retour aux cartes
+            </a>
+            <h1 class="subscription-page__title">
+                Confirmer votre {{ cardInfo.title }}
+            </h1>
+            <p class="subscription-page__subtitle">
+                {{ cardInfo.description }}
+            </p>
+        </div>
+
+        {# Contenu principal en 2 colonnes #}
+        <div class="subscription-grid">
+            {# COLONNE 1 - Carte + Plafonds #}
+            <div class="column column--left">
+                <div class="card-preview-container">
+                    <div class="card-preview card-preview--{{ cardType }}">
+                        <div class="card-preview__header">
+                            <div class="card-preview__logo">
+                                {% if cardBrand == 'mastercard' %}
+                                    <i class="fab fa-cc-mastercard"></i>
+                                {% else %}
+                                    <i class="fab fa-cc-visa"></i>
+                                {% endif %}
+                            </div>
+                            <div class="card-preview__type">{{ cardType|upper }}</div>
+                        </div>
+                        <div class="card-preview__chip">
+                            <div class="card-chip"></div>
+                        </div>
+                        <div class="card-preview__number">•••• •••• •••• ••••</div>
+                        <div class="card-preview__holder">{{ app.user.firstName|upper }} {{ app.user.lastName|upper }}</div>
+                    </div>
+                </div>
+                
+                <div class="card-limits">
+                    <h3 class="section-title">Plafonds</h3>
+                    <ul class="limits-list">
+                        {% for limit in cardInfo.limits %}
+                            <li class="limits-item">
+                                <i class="fas fa-info-circle"></i>
+                                {{ limit }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            {# COLONNE 2 - Prix + Avantages + Boutons #}
+            <div class="column column--right">
+                <div class="card-price">
+                    <div class="card-price__amount">{{ cardInfo.price }}</div>
+                    <div class="card-price__brand">{{ cardBrand|title }}</div>
+                </div>
+
+                <div class="card-features">
+                    <h3 class="section-title">Avantages inclus</h3>
+                    <ul class="features-list">
+                        {% for feature in cardInfo.features %}
+                            <li class="features-item">
+                                <i class="fas fa-check"></i>
+                                {{ feature }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="action-buttons">
+                    <form method="POST" style="flex: 1;">
+                        <button type="submit" class="btn btn--primary btn--half">
+                            <i class="fas fa-credit-card"></i>
+                            Demander cette carte
+                        </button>
+                    </form>
+                    
+                    <a href="{{ path('app_banking_card_index') }}" class="btn btn--secondary btn--half">
+                        <i class="fas fa-times"></i>
+                        Annuler
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.subscription-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 2rem 1rem;
+}
+
+.subscription-page__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.subscription-page__header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.subscription-page__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #6b7280;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.subscription-page__back:hover {
+    color: #374151;
+}
+
+.subscription-page__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 0.5rem 0;
+}
+
+.subscription-page__subtitle {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* GRILLE PRINCIPALE EN 2 COLONNES */
+.subscription-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 2rem;
+    height: 500px;
+}
+
+.column {
+    background: white;
+    border-radius: 0;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.column--left {
+    border: 2px dashed #e5e7eb;
+    border-right: 1px dashed #e5e7eb;
+}
+
+.column--right {
+    border: 2px dashed #e5e7eb;
+    border-left: 1px dashed #e5e7eb;
+}
+
+/* COLONNE 1 - CARTE + PLAFONDS */
+.card-preview-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+}
+
+.card-preview {
+    width: 260px;
+    height: 160px;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-preview--classic {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+.card-preview--gold {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.card-preview--platinum {
+    background: linear-gradient(135deg, #6b7280, #374151);
+}
+
+.card-preview__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-preview__logo i {
+    font-size: 2rem;
+}
+
+.card-preview__type {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.card-preview__chip {
+    margin: 0.75rem 0;
+}
+
+.card-chip {
+    width: 28px;
+    height: 20px;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    border-radius: 4px;
+    position: relative;
+}
+
+.card-chip::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: linear-gradient(135deg, #fcd34d, #fbbf24);
+    border-radius: 2px;
+}
+
+.card-preview__number {
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.25rem;
+}
+
+.card-preview__holder {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+/* COLONNE 2 - CONTENU */
+.card-price {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #e5e7eb;
+    flex-shrink: 0;
+}
+
+.card-price__amount {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #059669;
+    margin-bottom: 0.25rem;
+}
+
+.card-price__brand {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.features-list, .limits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.features-item, .limits-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0;
+    color: #374151;
+    font-size: 0.875rem;
+}
+
+.features-item i {
+    color: #10b981;
+    font-size: 0.75rem;
+}
+
+.limits-item i {
+    color: #3b82f6;
+    font-size: 0.75rem;
+}
+
+/* BOUTONS D'ACTION */
+.action-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.btn--half {
+    flex: 1;
+}
+
+.btn--primary {
+    background: #059669;
+    color: white;
+    border: 2px solid #059669;
+}
+
+.btn--primary:hover {
+    background: #047857;
+    border-color: #047857;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
+}
+
+.btn--secondary {
+    background: transparent;
+    color: #6b7280;
+    border: 2px solid #e5e7eb;
+}
+
+.btn--secondary:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
+    color: #374151;
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .subscription-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .subscription-page__title {
+        font-size: 2rem;
+    }
+    
+    .card-preview {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .column {
+        padding: 1.5rem;
+    }
+}
+</style>
+{% endblock %}

@@ -1,0 +1,107 @@
+help_center_security:
+  page:
+    title: "Beveiliging en Bescherming - Helpcentrum %company_name%"
+    
+  hero:
+    title: "Beveiliging en Bescherming"
+    subtitle: "Bescherm uw accounts en transacties met onze geavanceerde beveiligingsmaatregelen"
+    
+  sections:
+    main_title: "Uw Veiligheid is Onze Prioriteit"
+    
+    authentication:
+      title: "Authenticatie en Toegang"
+      description: "Beveilig de toegang tot uw accounts met onze robuuste authenticatiesystemen"
+      items:
+        two_factor:
+          title: "Tweefactor Authenticatie (2FA)"
+          description: "Versterk de beveiliging van uw account met dubbele verificatie"
+          details: "Activeer 2FA in uw beveiligingsinstellingen. Gebruik een authenticatie-app (Google Authenticator, Authy) of ontvang codes via SMS."
+        strong_passwords:
+          title: "Veilige Wachtwoorden"
+          description: "Creëer robuuste wachtwoorden om uw accounts te beschermen"
+          details: "Gebruik minstens 12 karakters met hoofdletters, kleine letters, cijfers en symbolen. Vermijd persoonlijke informatie die gemakkelijk te raden is."
+        biometric:
+          title: "Biometrische Authenticatie"
+          description: "Gebruik uw vingerafdruk of gezichtsherkenning"
+          details: "Activeer Touch ID of Face ID op de mobiele app voor snelle en veilige toegang tot uw accounts."
+        session_management:
+          title: "Sessiebeheer"
+          description: "Controleer uw actieve verbindingen en toegangsgeschiedenis"
+          details: "Monitor uw actieve sessies, log uit van niet-herkende apparaten en bekijk de geschiedenis van uw verbindingen."
+          
+    fraud_prevention:
+      title: "Fraudepreventie"
+      description: "Onze geavanceerde systemen beschermen uw transacties tegen fraude"
+      items:
+        real_time_monitoring:
+          title: "Real-time Monitoring"
+          description: "Automatische detectie van verdachte activiteiten"
+          details: "Onze AI-algoritmen analyseren elke transactie in real-time om abnormaal gedrag te detecteren en fraudepogingen te blokkeren."
+        transaction_alerts:
+          title: "Transactie Waarschuwingen"
+          description: "Directe meldingen voor al uw operaties"
+          details: "Ontvang meldingen via SMS of email voor elke transactie. Stel persoonlijke drempels in om gewaarschuwd te worden bij grote bedragen."
+        card_controls:
+          title: "Kaartcontroles"
+          description: "Beheer uw kaarten en beperk hun gebruik"
+          details: "Blokkeer tijdelijk uw kaarten, stel geografische en bedraglimieten in, activeer/deactiveer online betalingen."
+        merchant_verification:
+          title: "Handelaar Verificatie"
+          description: "Validatie van de identiteit van online handelaren"
+          details: "Wij verifiëren de identiteit en reputatie van handelaren om frauderisico's bij uw online aankopen te verminderen."
+          
+    data_protection:
+      title: "Gegevensbescherming"
+      description: "Uw persoonlijke informatie wordt beschermd volgens de hoogste standaarden"
+      items:
+        encryption:
+          title: "End-to-End Versleuteling"
+          description: "Al uw gegevens zijn versleuteld met de nieuwste standaarden"
+          details: "Wij gebruiken AES-256 versleuteling om uw gegevens in transit en at rest te beschermen. Uw informatie is onleesbaar zonder de juiste sleutels."
+        gdpr_compliance:
+          title: "GDPR Naleving"
+          description: "Volledige naleving van de Algemene Verordening Gegevensbescherming"
+          details: "Wij respecteren uw rechten: toegang, rectificatie, wissing en overdraagbaarheid van uw gegevens. Neem contact op met onze DPO voor elke aanvraag."
+        data_minimization:
+          title: "Gegevensminimalisatie"
+          description: "Wij verzamelen alleen strikt noodzakelijke gegevens"
+          details: "Minimalisatieprincipe: wij beperken de verzameling tot gegevens die essentieel zijn voor onze diensten en bewaren ze alleen zolang nodig."
+        secure_storage:
+          title: "Veilige Opslag"
+          description: "Gecertificeerde en zeer veilige datacenters"
+          details: "Onze servers worden gehost in ISO 27001 gecertificeerde datacenters, met 24/7 fysieke beveiliging en geografische redundantie."
+          
+    incident_response:
+      title: "Incidentrespons"
+      description: "Snelle procedures bij beveiligingsproblemen"
+      items:
+        immediate_action:
+          title: "Onmiddellijke Actie"
+          description: "Wat te doen als u verdachte activiteit detecteert"
+          details: "Neem onmiddellijk contact op met onze 24/7 beveiligingslijn op Téléphone. Wijzig uw wachtwoorden en controleer uw laatste transacties."
+        account_recovery:
+          title: "Account Herstel"
+          description: "Herstelprocedure bij compromittering"
+          details: "Versterkt identiteitsverificatieproces, veilige reset van toegangen en volledige audit van uw account."
+        investigation:
+          title: "Onderzoek en Opvolging"
+          description: "Grondige onderzoek van beveiligingsincidenten"
+          details: "Ons cybersecurity team analyseert elk incident, identificeert oorzaken en implementeert aanvullende preventieve maatregelen."
+        compensation:
+          title: "Bescherming en Terugbetaling"
+          description: "Garantie van terugbetaling bij bewezen fraude"
+          details: "Volledige bescherming tegen fraude: snelle terugbetaling van gestolen bedragen en persoonlijke assistentie voor regularisatie."
+          
+    tips:
+      title: "Beveiligingstips"
+      description: "Goede praktijken om uw accounts dagelijks te beschermen"
+      items:
+        - "Deel nooit uw inloggegevens"
+        - "Controleer altijd de URL voordat u uw gegevens invoert"
+        - "Gebruik beveiligde WiFi-netwerken voor uw bankactiviteiten"
+        - "Update regelmatig uw apps en browsers"
+        - "Log altijd uit na gebruik op een gedeeld apparaat"
+        - "Monitor regelmatig uw rekeningafschriften"
+        - "Rapporteer onmiddellijk elke verdachte activiteit"
+        - "Activeer meldingen voor al uw transacties"

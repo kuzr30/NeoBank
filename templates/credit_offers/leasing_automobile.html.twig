@@ -1,0 +1,147 @@
+{% extends 'credit_offers/credit_page_structure.html.twig' %}
+
+{% set seo_title = tp('leasing_automobile.page.title', [], 'leasing_automobile') %}
+{% set page_title = tp('leasing_automobile.page.title', [], 'leasing_automobile') %}
+{% set seo_description = tp('leasing_automobile.page.description', [], 'leasing_automobile') %}
+{% set hero_class = 'credit-detail-hero--leasing' %}
+
+{% block taux_value %}{{ credit_rate('leasing') }}%{% endblock %}
+{% block montant_value %}{{ tp('leasing_automobile.hero.montant', [], 'leasing_automobile') }}{% endblock %}
+{% block duree_value %}{{ tp('leasing_automobile.hero.duree', [], 'leasing_automobile') }}{% endblock %}
+
+{% block hero_title %}{{ tp('leasing_automobile.hero.title', [], 'leasing_automobile') }}{% endblock %}
+{% block hero_subtitle %}{{ tp('leasing_automobile.hero.subtitle', [], 'leasing_automobile') }}{% endblock %}
+
+{% block section_1_title %}{{ tp('leasing_automobile.section_1.title', [], 'leasing_automobile') }}{% endblock %}
+
+{% block section_1_content %}
+<p>{{ tp('leasing_automobile.section_1.content.paragraph_1', [], 'leasing_automobile') }}</p>
+<p>{{ tp('leasing_automobile.section_1.content.paragraph_2', [], 'leasing_automobile') }}</p>
+{% endblock %}
+
+{% block feature_montant %}{{ tp('leasing_automobile.features.montant.value', [], 'leasing_automobile') }}{% endblock %}
+{% block feature_montant_detail %}{{ tp('leasing_automobile.features.montant.detail', [], 'leasing_automobile') }}{% endblock %}
+{% block feature_duree %}{{ tp('leasing_automobile.features.duree.value', [], 'leasing_automobile') }}{% endblock %}
+{% block feature_duree_detail %}{{ tp('leasing_automobile.features.duree.detail', [], 'leasing_automobile') }}{% endblock %}
+{% block feature_taux %}{{ tp('leasing_automobile.features.taux.value', [], 'leasing_automobile')|replace({'{rate}': credit_rate('leasing')})|raw }}{% endblock %}
+{% block feature_taux_detail %}{{ tp('leasing_automobile.features.taux.detail', [], 'leasing_automobile') }}{% endblock %}
+{% block feature_garantie %}{{ tp('leasing_automobile.features.garantie.value', [], 'leasing_automobile') }}{% endblock %}
+{% block feature_garantie_detail %}{{ tp('leasing_automobile.features.garantie.detail', [], 'leasing_automobile') }}{% endblock %}
+
+{% block section_3_title %}{{ tp('leasing_automobile.section_3.title', [], 'leasing_automobile') }}{% endblock %}
+
+{% block section_3_content %}
+<ul class="credit-detail-advantages">
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('leasing_automobile.section_3.advantages.vehicule_recent.title', [], 'leasing_automobile') }} :</strong> {{ tp('leasing_automobile.section_3.advantages.vehicule_recent.description', [], 'leasing_automobile') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('leasing_automobile.section_3.advantages.loyers_reduits.title', [], 'leasing_automobile') }} :</strong> {{ tp('leasing_automobile.section_3.advantages.loyers_reduits.description', [], 'leasing_automobile') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('leasing_automobile.section_3.advantages.flexibilite.title', [], 'leasing_automobile') }} :</strong> {{ tp('leasing_automobile.section_3.advantages.flexibilite.description', [], 'leasing_automobile') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('leasing_automobile.section_3.advantages.entretien.title', [], 'leasing_automobile') }} :</strong> {{ tp('leasing_automobile.section_3.advantages.entretien.description', [], 'leasing_automobile') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('leasing_automobile.section_3.advantages.deductibilite.title', [], 'leasing_automobile') }} :</strong> {{ tp('leasing_automobile.section_3.advantages.deductibilite.description', [], 'leasing_automobile') }}</span>
+    </li>
+</ul>
+{% endblock %}
+
+{% block section_4_title %}{{ tp('leasing_automobile.section_4.title', [], 'leasing_automobile') }}{% endblock %}
+
+{% block section_4_content %}
+<div class="credit-detail-requirements">
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('leasing_automobile.section_4.contrat.title', [], 'leasing_automobile') }}</h3>
+        <ul>
+            <li>{{ tp('leasing_automobile.section_4.contrat.items.vehicule', [], 'leasing_automobile') }}</li>
+            <li>{{ tp('leasing_automobile.section_4.contrat.items.kilometrage', [], 'leasing_automobile') }}</li>
+            <li>{{ tp('leasing_automobile.section_4.contrat.items.entretien', [], 'leasing_automobile') }}</li>
+            <li>{{ tp('leasing_automobile.section_4.contrat.items.assurance', [], 'leasing_automobile') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('leasing_automobile.section_4.locataire.title', [], 'leasing_automobile') }}</h3>
+        <ul>
+            <li>{{ tp('leasing_automobile.section_4.locataire.items.permis', [], 'leasing_automobile') }}</li>
+            <li>{{ tp('leasing_automobile.section_4.locataire.items.revenus', [], 'leasing_automobile') }}</li>
+            <li>{{ tp('leasing_automobile.section_4.locataire.items.interdiction', [], 'leasing_automobile') }}</li>
+            <li>{{ tp('leasing_automobile.section_4.locataire.items.domicile', [], 'leasing_automobile') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block section_5_title %}{{ tp('leasing_automobile.section_5.title', [], 'leasing_automobile') }}{% endblock %}
+
+{% block section_5_content %}
+<div class="credit-detail-documents">
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('leasing_automobile.section_5.personnels.title', [], 'leasing_automobile') }}</h3>
+        <ul>
+            <li>{{ tp('leasing_automobile.section_5.personnels.items.permis', [], 'leasing_automobile') }}</li>
+            <li>{{ tp('leasing_automobile.section_5.personnels.items.identite', [], 'leasing_automobile') }}</li>
+            <li>{{ tp('leasing_automobile.section_5.personnels.items.domicile', [], 'leasing_automobile') }}</li>
+            <li>{{ tp('leasing_automobile.section_5.personnels.items.rib', [], 'leasing_automobile') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('leasing_automobile.section_5.financiers.title', [], 'leasing_automobile') }}</h3>
+        <ul>
+            <li>{{ tp('leasing_automobile.section_5.financiers.items.salaires', [], 'leasing_automobile') }}</li>
+            <li>{{ tp('leasing_automobile.section_5.financiers.items.impots', [], 'leasing_automobile') }}</li>
+            <li>{{ tp('leasing_automobile.section_5.financiers.items.comptes', [], 'leasing_automobile') }}</li>
+            <li>{{ tp('leasing_automobile.section_5.financiers.items.contrat', [], 'leasing_automobile') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('leasing_automobile.section_5.vehicule.title', [], 'leasing_automobile') }}</h3>
+        <ul>
+            <li>{{ tp('leasing_automobile.section_5.vehicule.items.commande', [], 'leasing_automobile') }}</li>
+            <li>{{ tp('leasing_automobile.section_5.vehicule.items.fiche', [], 'leasing_automobile') }}</li>
+            <li>{{ tp('leasing_automobile.section_5.vehicule.items.devis_assurance', [], 'leasing_automobile') }}</li>
+            <li>{{ tp('leasing_automobile.section_5.vehicule.items.certificat', [], 'leasing_automobile') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block legal_details %}
+<div class="credit-legal-notice__details">
+    <h4>{{ tp('leasing_automobile.legal.details.title', [], 'leasing_automobile') }}</h4>
+    <ul>
+        <li>{{ tp('leasing_automobile.legal.details.taeg', [], 'leasing_automobile')|raw }}</li>
+        <li>{{ tp('leasing_automobile.legal.details.kilometrage', [], 'leasing_automobile')|raw }}</li>
+        <li>{{ tp('leasing_automobile.legal.details.etat', [], 'leasing_automobile')|raw }}</li>
+        <li>{{ tp('leasing_automobile.legal.details.assurance', [], 'leasing_automobile')|raw }}</li>
+        <li>{{ tp('leasing_automobile.legal.details.resiliation', [], 'leasing_automobile')|raw }}</li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block cta_title %}{{ tp('leasing_automobile.cta.title', [], 'leasing_automobile') }}{% endblock %}
+{% block cta_subtitle %}{{ tp('leasing_automobile.cta.subtitle', [], 'leasing_automobile') }}{% endblock %}
+
+{% block custom_styles %}
+{{ parent() }}
+<style>
+/* Specific color for automobile leasing */
+.credit-detail-hero--leasing {
+    background: 
+        linear-gradient(135deg, rgba(124, 58, 237, 0.4) 0%, rgba(109, 40, 217, 0.6) 100%),
+        url('/images/5d1e85a4d2.jpg') center/cover no-repeat;
+}
+
+.credit-detail-hero--leasing .credit-highlight__value {
+    color: #c4b5fd;
+}
+</style>
+{% endblock %}

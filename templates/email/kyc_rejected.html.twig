@@ -1,0 +1,62 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_kyc_rejected.title', {}, 'email_kyc_rejected') }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('email_kyc_rejected.content.page_title', {}, 'email_kyc_rejected') }}</h2>
+    
+    <p class="content-text">
+        {{ tp('email_kyc_rejected.content.greeting', {firstName: user.firstName}, 'email_kyc_rejected')|raw }}
+    </p>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_kyc_rejected.content.correction_required.title', {}, 'email_kyc_rejected') }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {{ tp('email_kyc_rejected.content.correction_required.message', {}, 'email_kyc_rejected') }}
+        </p>
+    </div>
+            
+    {% if submission.adminNotes %}
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_kyc_rejected.content.rejection_reasons.title', {}, 'email_kyc_rejected') }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {{ submission.adminNotes|translate_kyc_reason }}
+        </p>
+    </div>
+    {% endif %}
+
+    <p class="content-text">
+        {{ tp('email_kyc_rejected.content.correction_process.title', {}, 'email_kyc_rejected') }}
+    </p>
+    
+    <ul style="color: #000000; font-size: 18px; line-height: 1.7; padding-left: 30px; margin: 0 0 30px 0;">
+        <li style="margin: 0 0 12px 0;">{{ tp('email_kyc_rejected.content.correction_process.step1', {}, 'email_kyc_rejected') }}</li>
+        <li style="margin: 0 0 12px 0;">{{ tp('email_kyc_rejected.content.correction_process.step2', {}, 'email_kyc_rejected') }}</li>
+        <li style="margin: 0 0 12px 0;">{{ tp('email_kyc_rejected.content.correction_process.step3', {}, 'email_kyc_rejected') }}</li>
+    </ul>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_kyc_rejected.content.required_documents.title', {}, 'email_kyc_rejected') }}</h3>
+        <ul style="color: #000000; font-size: 16px; line-height: 1.6; padding-left: 20px; margin: 0;">
+            <li style="margin: 0 0 8px 0;"><strong>{{ tp('email_kyc_rejected.content.required_documents.identity_document', {}, 'email_kyc_rejected') }}</strong>: {{ tp('email_kyc_rejected.content.required_documents.identity_desc', {}, 'email_kyc_rejected') }}</li>
+            <li style="margin: 0 0 8px 0;"><strong>{{ tp('email_kyc_rejected.content.required_documents.income_proof', {}, 'email_kyc_rejected') }}</strong>: {{ tp('email_kyc_rejected.content.required_documents.income_desc', {}, 'email_kyc_rejected') }}</li>
+            <li style="margin: 0 0 8px 0;"><strong>{{ tp('email_kyc_rejected.content.required_documents.address_proof', {}, 'email_kyc_rejected') }}</strong>: {{ tp('email_kyc_rejected.content.required_documents.address_desc', {}, 'email_kyc_rejected') }}</li>
+            <li style="margin: 0 0 0 0;"><strong>{{ tp('email_kyc_rejected.content.required_documents.verification_photo', {}, 'email_kyc_rejected') }}</strong>: {{ tp('email_kyc_rejected.content.required_documents.photo_desc', {}, 'email_kyc_rejected') }}</li>
+        </ul>
+    </div>
+
+    <div class="btn-container" style="text-align:center;margin:50px 0;">
+        <a href="{{ url('kyc_submit') }}" class="btn" style="display:inline-block;margin:0;padding:22px 45px;background:#2c3e50;color:#ffffff!important;font-size:20px;font-weight:700;line-height:1;text-decoration:none;text-align:center;border-radius:50px;border:none;cursor:pointer;box-shadow:0 15px 35px rgba(44,62,80,0.4);text-transform:uppercase;letter-spacing:1px;transition:all 0.3s ease;">{{ tp('email_kyc_rejected.content.action_required.submit_button', {}, 'email_kyc_rejected') }}</a>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_kyc_rejected.content.support.title', {}, 'email_kyc_rejected') }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {{ tp('email_kyc_rejected.content.support.message', {}, 'email_kyc_rejected') }}
+        </p>
+    </div>
+
+    <p class="footer-text">
+        {{ tp('email_kyc_rejected.content.footer', {}, 'email_kyc_rejected')|raw }}
+    </p>
+{% endblock %}

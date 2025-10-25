@@ -1,0 +1,151 @@
+card_contract:
+  # Titre du document
+  title: "Bankkaart Abonnementcontract Nr. %reference%"
+  
+  # Header et meta
+  header:
+    document_lang: "nl"
+    watermark: "%company_name%"
+    
+  # Titre principal
+  main:
+    title: "BANKKAART ABONNEMENTCONTRACT"
+    card_subtitle: "KAART %card_type% %card_brand%"
+    
+  # Company info
+  company:
+    payment_institution: "Betalingsinstelling"
+    share_capital: "Maatschappelijk kapitaal: %amount% €"
+    head_office: "Hoofdkantoor: %address%"
+    siren: "SIREN: %number%"
+    ape_code: "APE-code: %code%"
+    represented_by: "Vertegenwoordigd door de Algemeen Directeur"
+    
+  # Contract info
+  contract:
+    number: "CONTRACT Nr. %reference%"
+    establishment_date: "Contractdatum: %date%"
+    signature_date: "Ondertekeningsdatum: %date%"
+    
+  # Chapter I - Contracting Parties
+  chapter_one:
+    title: "Hoofdstuk I - De Contractpartijen"
+    issuing_institution: "De Uitgevende Instelling"
+    cardholder: "De Kaarthouder"
+    hereinafter_institution: "Hierna genoemd \"De Instelling\""
+    hereinafter_cardholder: "Hierna genoemd \"De Kaarthouder\""
+    residing_at: "Wonende te:"
+    address_not_provided: "[Adres niet opgegeven]"
+    postal_code_city: "[Postcode] [Stad]"
+    born_on: "Geboren op: %birth_date%"
+    phone: "Telefoon: %phone%"
+    phone_not_provided: "[Niet opgegeven]"
+    email: "E-mail: %email%"
+    parties_agreed: "Partijen zijn het volgende overeengekomen:"
+    
+  # Chapter II - Object and Characteristics
+  chapter_two:
+    title: "Hoofdstuk II - Doel en Kenmerken van de Kaart"
+    article_1_title: "Artikel 1 - Doel van het Contract"
+    article_1_content: "De Instelling stelt aan de Kaarthouder een bankkaart van het type %card_type% %card_brand% ter beschikking die betalings- en opnametransacties mogelijk maakt volgens de hieronder gedefinieerde voorwaarden."
+    
+    article_2_title: "Artikel 2 - Technische Kenmerken"
+    table_card_type: "Kaarttype"
+    table_brand: "Merk"
+    table_technology: "Technologie"
+    table_technology_value: "Chip en contactloos"
+    table_validity: "Geldigheid"
+    table_validity_value: "3 jaar verlengbaar"
+    table_usage_zone: "Gebruikszone"
+    table_usage_zone_value: "Wereldwijd"
+    
+  # Chapter III - Financial Conditions
+  chapter_three:
+    title: "Hoofdstuk III - Financiële Voorwaarden"
+    article_3_title: "Artikel 3 - Kosten en Bijdragen"
+    table_designation: "Aanduiding"
+    table_amount: "Bedrag"
+    table_frequency: "Frequentie"
+    
+    activation_fees: "Activeringskosten"
+    annual_fees: "Jaarlijkse bijdrage"
+    opposition_fees: "Blokkeringskosten"
+    card_renewal: "Kaartvernieuwing"
+    replacement_fees: "Vervangingskosten"
+    
+    frequency_unique: "Eenmalig bij opening"
+    frequency_annual: "Jaarlijks"
+    frequency_per_incident: "Per incident"
+    frequency_at_expiry: "Bij verloop"
+    frequency_per_replacement: "Per vervanging"
+    
+    free: "Gratis"
+    
+    article_4_title: "Artikel 4 - Gebruikslimieten"
+    daily_withdrawal_limit: "Dagelijkse opnamelimiet"
+    monthly_payment_limit: "Maandelijkse betalingslimiet"
+    contactless_payment: "Contactloze betaling"
+    contactless_amount: "50 € per transactie"
+    limits_modification_note: "Deze limieten kunnen worden gewijzigd op verzoek van de Kaarthouder, onder voorbehoud van goedkeuring door de Instelling."
+    
+  # Chapter IV - Usage Conditions
+  chapter_four:
+    title: "Hoofdstuk IV - Gebruiksvoorwaarden"
+    security_code_title: "Veiligheid en Geheime Code"
+    security_code_content: "De Kaarthouder verbindt zich ertoe zijn geheime code geheim te houden en deze nooit op te schrijven of aan derden mee te delen. De code mag nooit samen met de kaart worden bewaard."
+    
+    authorized_use_title: "Geautoriseerd Gebruik"
+    authorized_use_content: "De kaart is strikt persoonlijk en mag alleen door de Kaarthouder worden gebruikt. Elk gebruik door een onbevoegde derde valt onder de verantwoordelijkheid van de Kaarthouder."
+    
+    card_conservation_title: "Kaartbewaring"
+    card_conservation_content: "De Kaarthouder moet zijn kaart zorgvuldig bewaren en beschermen tegen frauduleus gebruik, diefstal, verlies of beschadiging."
+    
+    opposition_title: "Kaartblokkering"
+    opposition_content: "Bij verlies, diefstal of frauduleus gebruik moet de Kaarthouder onmiddellijk een kaartblokkering laten uitvoeren door contact op te nemen met de klantenservice 24/7 op het nummer dat op de achterkant van de kaart staat."
+    
+  # Chapter V - Responsibilities
+  chapter_five:
+    title: "Hoofdstuk V - Verantwoordelijkheden en Garanties"
+    article_5_title: "Artikel 5 - Verantwoordelijkheid van de Kaarthouder"
+    cardholder_responsibility_1: "De Kaarthouder is verantwoordelijk voor alle transacties die met zijn kaart worden uitgevoerd tot de datum en het tijdstip van de blokkering."
+    cardholder_responsibility_2: "Bij frauduleus gebruik vóór blokkering is de aansprakelijkheid van de Kaarthouder beperkt tot 50 € behalve bij grove nalatigheid."
+    cardholder_responsibility_3: "De Kaarthouder garandeert de juistheid van de bij de aanmelding verstrekte informatie."
+    
+    article_6_title: "Artikel 6 - Verantwoordelijkheid van de Instelling"
+    institution_responsibility_1: "De Instelling verbindt zich ertoe een functionele en veilige kaart ter beschikking te stellen."
+    institution_responsibility_2: "De Instelling garandeert de behandeling van blokkeringen 24/7."
+    institution_responsibility_3: "De Instelling zorgt voor de beschikbaarheid van haar netwerk onder de beste technische omstandigheden."
+    
+  # Chapter VI - Duration and Termination
+  chapter_six:
+    title: "Hoofdstuk VI - Looptijd en Beëindiging"
+    article_7_title: "Artikel 7 - Contractduur"
+    contract_duration: "Dit contract wordt gesloten voor een periode van 3 jaar vanaf de ondertekeningsdatum. Het wordt stilzwijgend verlengd met periodes van één jaar, tenzij het door een van de partijen wordt opgezegd."
+    
+    article_8_title: "Artikel 8 - Beëindiging"
+    termination_1: "Elke partij kan het contract op elk moment opzeggen met een opzegtermijn van 2 maanden."
+    termination_2: "De opzegging moet worden gemeld per aangetekende brief met ontvangstbevestiging."
+    termination_3: "Bij beëindiging moet de kaart door de Kaarthouder worden teruggegeven of vernietigd."
+    termination_4: "Reeds geheven kosten worden niet terugbetaald behalve bij opzegging binnen 14 dagen (herroepingsrecht)."
+    
+  # Chapter VII - General Provisions
+  chapter_seven:
+    title: "Hoofdstuk VII - Algemene Bepalingen"
+    article_9_title: "Artikel 9 - Toepasselijk Recht en Rechtsmacht"
+    applicable_law: "Dit contract is onderworpen aan Nederlands recht. Bij geschillen zijn uitsluitend de Nederlandse rechtbanken bevoegd."
+    
+    article_10_title: "Artikel 10 - Contractwijziging"
+    contract_modification: "Elke wijziging van dit contract moet het onderwerp zijn van een door beide partijen ondertekend addendum of een kennisgeving 2 maanden voor de inwerkingtreding."
+    
+    article_11_title: "Artikel 11 - Gegevensbescherming"
+    data_protection: "De Instelling verbindt zich ertoe de persoonlijke gegevens van de Kaarthouder te verwerken in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG) en de Nederlandse privacywetgeving."
+    
+  # Signatures
+  signatures:
+    cardholder_signature: "De Kaarthouder"
+    institution_signature: "De Instelling"
+    general_director: "Vertegenwoordigd door de Algemeen Directeur"
+    date_signature: "Datum en handtekening"
+    date_label: "Datum:"
+    signed_electronically: "Elektronisch ondertekend op %date%"
+    current_date: "Datum: %date%"

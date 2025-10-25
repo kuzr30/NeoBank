@@ -1,0 +1,144 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}Nouvelle demande de devis - {{ demande.typeAssurance.getLabel()|trans({}, 'enums') }} - {{ company_name() }}{% endblock %}
+
+{% block content %}
+    <!-- En-tête d'alerte -->
+    <div style="background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); border-radius: 12px; padding: 30px; text-align: center; margin-bottom: 30px;">
+        <h1 style="color: white; margin: 0; font-size: 26px; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            {{ 'email_devis_notification.content.page_title'|trans({}, 'email_devis_notification')|upper }}
+        </h1>
+        <p style="color: #fecaca; margin: 15px 0 0 0; font-size: 16px; font-weight: 500;">
+            {{ company_name() }} - Administration
+        </p>
+    </div>
+    
+    <!-- Alerte priorité -->
+    <div style="background: #fef3c7; border: 2px solid #f59e0b; border-radius: 12px; padding: 20px; margin-bottom: 30px; text-align: center;">
+        <h2 style="margin: 0; color: #92400e; font-size: 18px; font-weight: 700;">
+            {{ 'email_devis_notification.content.priority.title'|trans({}, 'email_devis_notification')|upper }}
+        </h2>
+        <p style="margin: 10px 0 0 0; color: #78350f; font-size: 15px; font-weight: 500;">
+            {{ 'email_devis_notification.content.priority.message'|trans({}, 'email_devis_notification') }}
+        </p>
+    </div>
+
+    <!-- Informations de référence -->
+    <div style="background: white; border: 2px solid #3b82f6; border-radius: 12px; overflow: hidden; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+        <div style="background: #3b82f6; padding: 20px; text-align: center;">
+            <h2 style="margin: 0; color: white; font-size: 20px; font-weight: 700;">
+                {{ 'email_devis_notification.content.reference.title'|trans({}, 'email_devis_notification')|upper }}
+            </h2>
+        </div>
+        <div style="padding: 25px; text-align: center;">
+            <div style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                <p style="margin: 0; font-size: 14px; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px;">{{ 'email_devis_notification.content.reference.number'|trans({}, 'email_devis_notification') }}</p>
+                <p style="margin: 5px 0 0 0; font-size: 24px; font-weight: 700; letter-spacing: 2px;">{{ demande.numeroDevis }}</p>
+            </div>
+            <div style="background: #f1f5f9; padding: 15px; border-radius: 8px;">
+                <p style="margin: 0; color: #475569; font-size: 16px; font-weight: 600;">
+                    {{ 'email_devis_notification.content.reference.insurance_type'|trans({}, 'email_devis_notification') }} : <span style="color: #1e40af; font-weight: 700;">{{ demande.typeAssurance.getLabel()|trans({}, 'enums') }}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Informations client -->
+    <div style="background: white; border: 2px solid #10b981; border-radius: 12px; overflow: hidden; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+        <div style="background: #10b981; padding: 20px;">
+            <h2 style="margin: 0; color: white; font-size: 20px; font-weight: 700;">
+                {{ 'email_devis_notification.content.client_info.title'|trans({}, 'email_devis_notification')|upper }}
+            </h2>
+        </div>
+        <div style="padding: 0;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <td style="padding: 20px; font-weight: 700; color: #065f46; width: 30%; border-bottom: 1px solid #d1fae5; background: #ecfdf5;">{{ 'email_devis_notification.content.client_info.full_name'|trans({}, 'email_devis_notification') }}</td>
+                    <td style="padding: 20px; color: #1f2937; border-bottom: 1px solid #d1fae5; font-weight: 600; font-size: 16px;">{{ demande.prenom }} {{ demande.nom }}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 20px; font-weight: 700; color: #065f46; border-bottom: 1px solid #d1fae5; background: #ecfdf5;">{{ 'email_devis_notification.content.client_info.email'|trans({}, 'email_devis_notification') }}</td>
+                    <td style="padding: 20px; border-bottom: 1px solid #d1fae5;">
+                        <a href="mailto:{{ demande.email }}" style="color: #1e40af; text-decoration: none; font-weight: 600; font-size: 16px;">
+                            {{ demande.email }}
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 20px; font-weight: 700; color: #065f46; border-bottom: 1px solid #d1fae5; background: #ecfdf5;">{{ 'email_devis_notification.content.client_info.phone'|trans({}, 'email_devis_notification') }}</td>
+                    <td style="padding: 20px; border-bottom: 1px solid #d1fae5;">
+                        <a href="tel:{{ demande.telephone }}" style="color: #1e40af; text-decoration: none; font-weight: 600; font-size: 16px;">
+                            {{ demande.telephone }}
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 20px; font-weight: 700; color: #065f46; border-bottom: 1px solid #d1fae5; background: #ecfdf5;">{{ 'email_devis_notification.content.client_info.contact_preference'|trans({}, 'email_devis_notification') }}</td>
+                    <td style="padding: 20px; border-bottom: 1px solid #d1fae5;">
+                        <span style="background: {% if demande.preferenceContact == 'telephone' %}#fef3c7{% elseif demande.preferenceContact == 'email' %}#dbeafe{% else %}#f3f4f6{% endif %}; 
+                              color: {% if demande.preferenceContact == 'telephone' %}#92400e{% elseif demande.preferenceContact == 'email' %}#1e40af{% else %}#374151{% endif %}; 
+                              padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 700;">
+                            {% if demande.preferenceContact == 'telephone' %}{{ 'email_devis_confirmation.preferences.telephone'|trans({}, 'email_devis_confirmation')|upper }} (PRIORITAIRE)
+                            {% elseif demande.preferenceContact == 'email' %}{{ 'email_devis_confirmation.preferences.email'|trans({}, 'email_devis_confirmation')|upper }}
+                            {% else %}{{ 'email_devis_confirmation.preferences.indifferent'|trans({}, 'email_devis_confirmation')|upper }}
+                            {% endif %}
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 20px; font-weight: 700; color: #065f46; background: #ecfdf5;">{{ 'email_devis_notification.content.client_info.request_date'|trans({}, 'email_devis_notification') }}</td>
+                    <td style="padding: 20px; color: #1f2937; font-weight: 600;">{{ demande.createdAt|date('d/m/Y à H:i') }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+    <!-- Actions à effectuer -->
+    <div style="background: #dc2626; border-radius: 12px; padding: 25px; margin-bottom: 30px;">
+        <h3 style="margin: 0 0 20px 0; color: white; font-size: 18px; font-weight: 700;">
+            {{ 'email_devis_notification.content.action_plan.title'|trans({}, 'email_devis_notification')|upper }}
+        </h3>
+        <div style="space-y: 15px;">
+            <div style="display: flex; align-items: center; margin-bottom: 15px; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+                <div style="background: white; color: #dc2626; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; font-size: 16px;">1</div>
+                <p style="margin: 0; color: white; font-size: 16px; font-weight: 500;">
+                    {% if demande.preferenceContact == 'telephone' %}
+                        {{ 'email_devis_notification.content.action_plan.telephone_priority'|trans({}, 'email_devis_notification') }}
+                    {% elseif demande.preferenceContact == 'email' %}
+                        {{ 'email_devis_notification.content.action_plan.email_priority'|trans({}, 'email_devis_notification') }}
+                    {% else %}
+                        {{ 'email_devis_notification.content.action_plan.appointment_priority'|trans({}, 'email_devis_notification') }}
+                    {% endif %}
+                </p>
+            </div>
+            <div style="display: flex; align-items: center; margin-bottom: 15px; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+                <div style="background: white; color: #dc2626; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; font-size: 16px;">2</div>
+                <p style="margin: 0; color: white; font-size: 16px; font-weight: 500;">{{ 'email_devis_notification.content.action_plan.analysis'|trans({}, 'email_devis_notification') }}</p>
+            </div>
+            <div style="display: flex; align-items: center; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+                <div style="background: white; color: #dc2626; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; font-size: 16px;">3</div>
+                <p style="margin: 0; color: white; font-size: 16px; font-weight: 500;">{{ 'email_devis_notification.content.action_plan.offer_prep'|trans({}, 'email_devis_notification') }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accès rapide -->
+    <div style="background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 25px; text-align: center;">
+        <h3 style="margin: 0 0 20px 0; color: #374151; font-size: 18px; font-weight: 700;">
+            {{ 'email_devis_notification.content.client_info.title'|trans({}, 'email_devis_notification')|upper }}
+        </h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+            <a href="mailto:{{ demande.email }}?subject={{ 'email_devis_notification.title'|trans({'%typeAssurance%': demande.typeAssurance.getLabel()|trans({}, 'enums')}, 'email_devis_notification') }}" 
+               style="background: #3b82f6; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">
+                {{ 'email_devis_confirmation.preferences.email'|trans({}, 'email_devis_confirmation') }}
+            </a>
+            <a href="tel:{{ demande.telephone }}" 
+               style="background: #10b981; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">
+                {{ 'email_devis_confirmation.preferences.telephone'|trans({}, 'email_devis_confirmation') }}
+            </a>
+        </div>
+    </div>
+
+{% endblock %}

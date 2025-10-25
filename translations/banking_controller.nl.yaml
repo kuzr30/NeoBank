@@ -1,0 +1,5 @@
+banking_controller:
+  flash:
+    kyc_required: "U moet uw identiteitsverificatie (KYC) voltooien om toegang te krijgen tot bankdiensten."
+  transactions:
+    transfer_outgoing: "Uitgaande overboeking"

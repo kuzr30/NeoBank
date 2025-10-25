@@ -1,0 +1,105 @@
+credit_etudiant:
+  page:
+    title: "Crédit Étudiant"
+    description: "Financez vos études supérieures avec notre crédit étudiant. Conditions préférentielles et remboursement différé."
+
+  hero:
+    title: "Crédit Étudiant"
+    subtitle: "Investissez dans votre avenir"
+    values:
+      taux: "{rate}% TAEG*"
+      montant: "50 000€"
+      duree: "15 ans"
+
+  section_1:
+    title: "Qu'est-ce qu'un crédit étudiant ?"
+    content:
+      paragraph_1: "Le crédit étudiant est conçu pour financer vos études supérieures : frais de scolarité, logement étudiant, matériel pédagogique, séjours à l'étranger et frais de vie courante."
+      paragraph_2: "Avec des conditions préférentielles et la possibilité de différer le remboursement, ce crédit vous accompagne tout au long de votre parcours académique."
+
+  features:
+    montant: "Jusqu'à 50 000€"
+    montant_detail: "Pour toute la durée des études"
+    duree: "Jusqu'à 15 ans"
+    duree_detail: "Avec différé possible"
+    taux: "À partir de {rate}% TAEG*"
+    taux_detail: "Taux préférentiel étudiant"
+    garantie: "Caution parentale"
+    garantie_detail: "Ou garantie d'État"
+
+  advantages:
+    taux_preferentiel:
+      title: "Taux préférentiel :"
+      text: "Conditions avantageuses réservées aux étudiants"
+    differe_remboursement:
+      title: "Différé de remboursement :"
+      text: "Jusqu'à la fin des études + 2 ans"
+    deblocage_progressif:
+      title: "Déblocage progressif :"
+      text: "Fonds disponibles selon les besoins"
+    garantie_etat:
+      title: "Garantie d'État :"
+      text: "Possible avec le dispositif public"
+    pas_frais:
+      title: "Pas de frais de dossier :"
+      text: "Aucun coût supplémentaire"
+
+  requirements:
+    conditions_etudiant:
+      title: "Conditions étudiant"
+      items:
+        inscription: "Être inscrit dans un établissement d'enseignement supérieur"
+        age: "Avoir entre 18 et 28 ans"
+        nationalite: "Nationalité française ou UE"
+        residence: "Résider en France"
+    garanties_requises:
+      title: "Garanties requises"
+      items:
+        caution: "Caution parentale solidaire"
+        garantie_etat: "Ou garantie d'État (si éligible)"
+        justificatifs: "Justificatifs de revenus des garants"
+        engagement: "Engagement de remboursement signé"
+
+  documents:
+    dossier_etudiant:
+      title: "Dossier étudiant"
+      items:
+        certificat: "Certificat de scolarité"
+        carte: "Carte d'identité ou passeport"
+        domicile: "Justificatif de domicile"
+        devis: "Devis ou factures des frais à financer"
+    dossier_garants:
+      title: "Dossier garants"
+      items:
+        identites: "Pièces d'identité des garants"
+        bulletins: "3 derniers bulletins de salaire"
+        avis: "Avis d'imposition"
+        patrimoine: "Justificatifs de patrimoine"
+    informations_bancaires:
+      title: "Informations bancaires"
+      items:
+        rib: "RIB du compte étudiant"
+        releves: "Relevés de comptes"
+        attestation: "Attestation bancaire"
+
+  legal:
+    title: "Informations légales importantes"
+    taeg:
+      title: "*TAEG :"
+      text: "Exemple représentatif : pour un crédit étudiant de 20 000€ sur 10 ans au TAEG de 1,9%, vous remboursez 120 mensualités de 184€, soit un montant total de 22 080€ (coût du crédit : 2 080€)."
+    differe:
+      title: "Différé :"
+      text: "Possibilité de différer le remboursement du capital pendant les études."
+    garantie_etat:
+      title: "Garantie d'État :"
+      text: "Sous conditions d'éligibilité, sans caution parentale."
+    modulation:
+      title: "Modulation :"
+      text: "Adaptation des mensualités selon l'évolution de la situation."
+    assurance:
+      title: "Assurance :"
+      text: "Décès-invalidité incluse, chômage en option."
+
+  cta:
+    title: "Donnez vie à vos ambitions"
+    subtitle: "Financez vos études avec notre crédit étudiant avantageux"

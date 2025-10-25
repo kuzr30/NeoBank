@@ -1,0 +1,142 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: help_center_contact.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+help_center_contact:
+  page:
+    title: "Contact Us"
+    breadcrumb: "Home > Help Center > Contact Us"
+  
+  hero:
+    title: "Contact Us"
+    subtitle: "We're here to help. Find the best way to contact us according to your needs."
+    
+  contact_methods:
+    title: "Contact Methods"
+    
+    phone:
+      title: "Phone"
+      subtitle: "Speak directly with our advisors"
+      number: "Phone"
+      hours: "Mon-Fri: 8:00 AM-6:00 PM, Sat: 9:00 AM-1:00 PM"
+      description: "For your urgent questions and personalized advice"
+      
+    chat:
+      title: "Live Chat"
+      subtitle: "Instant conversation with an agent"
+      status_online: "Online"
+      status_offline: "Offline"
+      hours: "Mon-Fri: 8:00 AM-8:00 PM"
+      description: "Quick response for your common questions"
+      button_start: "Start chat"
+      
+    email:
+      title: "Email"
+      subtitle: "Send us a detailed message"
+      address: "Email"
+      response_time: "Response within 24h"
+      description: "For your complex requests requiring documents"
+      
+    branch:
+      title: "Branches"
+      subtitle: "Visit in person"
+      button_find: "Find a branch"
+      description: "Personalized advice and complete services"
+      
+  contact_form:
+    title: "Contact Form"
+    subtitle: "Leave us a message and we'll get back to you quickly"
+    
+    fields:
+      subject: "Subject"
+      name: "Full name"
+      email: "Email"
+      phone: "Phone (optional)"
+      category: "Category"
+      message: "Message"
+      attachment: "Attachment (optional)"
+      
+    categories:
+      general: "General question"
+      account: "Account management"
+      card: "Bank cards"
+      transfer: "Transfers"
+      credit: "Loans"
+      insurance: "Insurance"
+      technical: "Technical issue"
+      
+    placeholders:
+      subject: "Summary of your request"
+      name: "Your first and last name"
+      email: "your.email@example.com"
+      phone: "+32 xxx xx xx xx"
+      message: "Describe your request in detail..."
+      
+    buttons:
+      send: "Send message"
+      clear: "Clear"
+      
+    validation:
+      required: "This field is required"
+      email_invalid: "Invalid email format"
+      message_min: "Message must contain at least 10 characters"
+      
+    success:
+      title: "Message sent!"
+      message: "We have received your message. We will respond to you as soon as possible."
+      reference: "Reference"
+      
+  emergency:
+    title: "Emergencies"
+    subtitle: "In case of urgent problem with your account"
+    
+    card_lost:
+      title: "Lost/stolen card"
+      number: "+32 2 987 65 43"
+      description: "Available 24/7"
+      
+    fraud:
+      title: "Suspected fraud"
+      number: "+32 2 987 65 44"
+      description: "Secure direct line"
+      
+    account_blocked:
+      title: "Blocked account"
+      number: "+32 2 987 65 45"
+      description: "Immediate assistance"
+      
+  faq:
+    title: "Frequently Asked Questions"
+    subtitle: "Maybe your answer is here"
+    button_view: "View all FAQs"
+    
+  social:
+    title: "Social Media"
+    subtitle: "Follow us for the latest news"
+    facebook: "Facebook"
+    twitter: "Twitter"
+    linkedin: "LinkedIn"
+    instagram: "Instagram"
+    
+  office_hours:
+    title: "Opening Hours"
+    
+    customer_service:
+      title: "Customer Service"
+      hours:
+        monday_friday: "Monday - Friday: 8:00 AM - 6:00 PM"
+        saturday: "Saturday: 9:00 AM - 1:00 PM"
+        sunday: "Sunday: Closed"
+        
+    technical_support:
+      title: "Technical Support"
+      hours:
+        monday_friday: "Monday - Friday: 8:00 AM - 8:00 PM"
+        saturday: "Saturday: 9:00 AM - 5:00 PM"
+        sunday: "Sunday: 10:00 AM - 4:00 PM"
+        
+    emergency:
+      title: "Emergencies"
+      hours:
+        always: "Available 24/7"

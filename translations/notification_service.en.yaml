@@ -1,0 +1,44 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: notification_service.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+notification_service:
+  email_subjects:
+    account_created: "Your %company_name% account is ready!"
+    account_suspended: "Temporary suspension of your %company_name% accounts"
+    
+  email_content:
+    account_created:
+      greeting: "Congratulations %firstName%!"
+      intro: "Your %company_name% account has been successfully created."
+      account_details: "Your account details:"
+      account_number: "Account number"
+      iban: "IBAN"
+      country: "Country"
+      access_info: "Access to your customer area"
+      access_info_text: "You can now access your customer area to perform your banking operations."
+      support_info: "If you have any questions, our support team is at your disposal."
+      signature: "The %company_name% team"
+      
+    account_suspended:
+      greeting: "Dear %s,"
+      suspension_notice: "We inform you that your %company_name% accounts have been temporarily suspended."
+      reason_security: "This security measure was taken following unusual activity detected."
+      next_steps: "Our team is currently reviewing your account and will contact you within 48 hours."
+      contact_info: "In case of emergency, contact our customer service."
+      signature: "The %company_name% team"
+      
+  log_messages:
+    account_created_sent: "Account creation email sent"
+    account_suspended_sent: "Account suspension email sent"
+    account_created_error: "Account creation email send error"
+    account_suspended_error: "Account suspension email send error"
+    
+  countries:
+    FR: "France"
+    BE: "Belgium"
+    NL: "Netherlands"
+    DE: "Germany"
+    IT: "Italy"
+    ES: "Spain"

@@ -1,0 +1,19 @@
+email_card_contract_signed:
+  title: "Vertrag unterzeichnet - Ihre Karte ist bald verfügbar"
+  content:
+    page_title: "Vertrag erfolgreich unterzeichnet!"
+    greeting: "Liebe(r) {firstName} {lastName},"
+    success:
+      title: "Herzlichen Glückwunsch!"
+      description: "Ihr Kartenabonnement-Vertrag wurde erfolgreich unterzeichnet. Wir haben Ihre elektronische Unterschrift erhalten."
+    contract_details:
+      title: "Details Ihres Vertrags"
+      reference: "Referenz"
+      card_type: "Kartentyp"
+      signed_date: "Datum der Unterzeichnung"
+    next_steps:
+      title: "Nächste Schritte"
+      step1: "Unser Team wird nun Ihre Unterlagen validieren"
+      step2: "Ihre Zahlung wird schnellstmöglich bearbeitet"
+      step3: "Ihre Karte wird innerhalb von 5-7 Werktagen produziert und versendet"
+    closing: "Wir halten Sie per E-Mail über den Fortschritt Ihres Antrags auf dem Laufenden. Vielen Dank für Ihr Vertrauen!"

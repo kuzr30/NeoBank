@@ -1,0 +1,71 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: help_center_complaints.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+help_center_complaints:
+  # Breadcrumb
+  breadcrumb:
+    home: "Home"
+    support: "Support"
+    complaints: "Complaints"
+  
+  # Hero section
+  title: "Complaints"
+  subtitle: "Your satisfaction is our priority. We handle every complaint seriously and transparently."
+  
+  # Process section
+  process:
+    title: "Complaint Process"
+    subtitle: "How we handle your complaints"
+    
+    step1:
+      title: "Filing the complaint"
+      description: "Submit your complaint via the online form or directly at a branch"
+      
+    step2:
+      title: "Acknowledgment of receipt"
+      description: "Confirmation within 2 business days with a tracking number assigned"
+      
+    step3:
+      title: "Analysis and processing"
+      description: "Thorough review of your case by our qualified specialists"
+      
+    step4:
+      title: "Resolution and response"
+      description: "Detailed response and proposed solution within maximum 15 business days"
+  
+  # Contact section
+  contact:
+    title: "Contact Us"
+    subtitle: "Several ways to share your concerns with us"
+    
+    phone:
+      title: "By Phone"
+      hours: "Monday to Friday from 8 AM to 6 PM"
+      
+    email:
+      title: "By Email"
+      response_time: "Response within 48h"
+      
+    branch:
+      title: "At a Branch"
+      address: "Address"
+      hours: "Monday to Friday from 9 AM to 5 PM"
+  
+  # Tracking section
+  tracking:
+    title: "Track Your Complaint"
+    subtitle: "Enter your reference number to check the progress"
+    placeholder: "E.g.: REF-2024-123456"
+    search: "Search"
+    searching: "Searching..."
+    
+    status:
+      received: "Complaint received"
+      in_progress: "Being processed"
+      resolved: "Resolved"
+      
+    error:
+      empty: "Please enter a tracking number"
+      invalid: "Tracking number must contain at least 5 characters"

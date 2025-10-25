@@ -1,0 +1,378 @@
+# ENGLISH TRANSLATION - Translated from French
+# Credit offers index translation file
+# Domain: credit_offers_index
+# Language: English (en)
+
+credit_offers_index:
+  # Generic labels for credit characteristics
+  labels:
+    amount: "Financeable amount"
+    amount_available: "Available amount"
+    amount_eco: "Eco-responsible amount"
+    amount_important: "Important financing"
+    amount_vehicle: "Vehicle financing"
+    amount_work: "Work financing"
+    amount_without_justification: "Credit without justification"
+    amount_equipment: "Equipment financing"
+    amount_travel: "Travel financing"
+    amount_consolidation: "Optimal consolidation"
+    amount_reserve: "Available reserve"
+    amount_company: "Company financing"
+    amount_studies: "Study financing"
+    amount_small: "Small amounts"
+    amount_leasing: "Rental with purchase option"
+    
+    duration: "Repayment period"
+    duration_flexible: "Flexible duration"
+    duration_adaptable: "Adaptable duration"
+    duration_temporary: "Temporary solution"
+    duration_adapted: "Adapted duration"
+    duration_contract: "Flexible contract"
+    duration_flexible_repayment: "Flexible repayment"
+    duration_modular: "Modular duration"
+    duration_extended: "Extended repayment"
+    duration_long: "Extended duration"
+    duration_business: "Business duration"
+    duration_short: "Short duration"
+    
+    contribution: "Personal contribution"
+    contribution_none: "No contribution"
+    
+    insurance: "Borrower insurance"
+    insurance_travel: "Travel insurance included"
+    
+    guarantee: "Mortgage guarantee"
+    guarantee_none: "No guarantee"
+    guarantee_sold_property: "Guarantee on sold property"
+    guarantee_parental: "Parental guarantee"
+    
+    usage: "Free use"
+    usage_specialized: "Specialized use"
+    usage_versatile: "Versatile use"
+    
+    release: "Progressive release"
+    
+    eco: "Eco-PTZ compatible"
+    tax: "Tax advantages"
+    
+    repayment: "Bullet repayment"
+    
+    financing: "Complete financing"
+    vehicles: "New and used vehicles"
+    
+    option: "Final double option"
+    
+    justification: "No proof required"
+    speed: "Quick release"
+    
+    partners: "Partner network"
+    partnerships: "Agency partnerships"
+    
+    savings: "Significant savings"
+    additional: "Additional cash flow"
+    
+    renewal: "Automatic renewal"
+    freedom: "Completely free use"
+    access: "Multiple access"
+    
+    sectors: "All business sectors"
+    
+    deferment: "Repayment deferral"
+    
+    conditions: "Simplified conditions"
+    inclusion: "Financial inclusion"
+
+  hero:
+    badge: "Financing Solutions"
+    stats:
+      taux_min: "Minimum rate"
+      reponse: "Response" 
+      types: "Credit types"
+    actions:
+      simuler: "Simulate"
+      demander: "Apply"
+
+  categories:
+    header:
+      title: "Our Financing Solutions"
+      subtitle: "Competitive rates for all your projects"
+    
+    immobilier_habitat:
+      title: "Real Estate & Housing"
+      subtitle: "Finance your real estate assets"
+      
+      credit_immobilier:
+        title: "Mortgage Loan"
+        description: "Main residence and rental investment. Finance up to 100% of your real estate project with preferential conditions."
+        rate: "{rate}%"
+        rate_label: "APR*"
+        features:
+          amount: "From €50,000 to €1,000,000 to finance your main residence or rental investment."
+          duration: "Spread your repayments over 5 to 30 years according to your financial capacity and real estate project."
+          contribution: "A minimum contribution of 10% is required, including notary fees and bank guarantees."
+          insurance: "Complete protection included covering death, disability and work incapacity."
+        actions:
+          learn_more: "Learn more"
+          apply: "Apply"
+      
+      pret_hypothecaire:
+        title: "Mortgage Loan"
+        description: "Guarantee on your existing real estate. Flexible solution for all your projects with a property as guarantee."
+        rate: "{rate}%"
+        rate_label: "APR*"
+        features:
+          amount: "Between €20,000 and €500,000 using your real estate as mortgage guarantee."
+          duration: "Repayment over 5 to 25 years adapted to your financial situation and objectives."
+          guarantee: "Your real estate serves as guarantee, allowing preferential rates."
+          usage: "No proof of use required - investment, work, debt consolidation."
+        actions:
+          learn_more: "Learn more"
+          apply: "Apply"
+      
+      credit_travaux:
+        title: "Home Improvement Loan"
+        description: "Renovation and home improvement. Transform your home according to your desires with adapted financing."
+        rate: "{rate}%"
+        rate_label: "APR*"
+        features:
+          amount: "From €1,000 to €150,000 for all your renovation and home improvement projects."
+          duration: "Flexible repayment from 6 months to 15 years according to the scope of your work."
+          guarantee: "Credit without mortgage or guarantee, based solely on your repayment capacity."
+          release: "Funds are released progressively as your work progresses."
+        actions:
+          learn_more: "Learn more"
+          apply: "Apply"
+      
+      amelioration_habitat:
+        title: "Housing Improvement"
+        description: "Modernization and equipment. Improve the comfort and energy performance of your home."
+        rate: "{rate}%"
+        rate_label: "APR*"
+        features:
+          amount: "Between €500 and €75,000 to modernize and improve the energy efficiency of your home."
+          duration: "Spread your payments over 6 months to 10 years according to your budget and the nature of improvements."
+          eco: "Combinable with ecological zero-rate loan to maximize your financing."
+          tax: "Benefit from tax credits available for the energy transition of your home."
+        actions:
+          learn_more: "Learn more"
+          apply: "Apply"
+      
+      credit_relais:
+        title: "Bridging Loan"
+        description: "Transition between purchase and sale. Buy your new home before having sold the old one with complete peace of mind."
+        rate: "{rate}%"
+        rate_label: "APR*"
+        features:
+          amount: "From €50,000 to €2,000,000 to facilitate the purchase of your new property before selling the old one."
+          duration: "Transition credit of 6 to 24 months while finalizing the sale of your current property."
+          repayment: "You only pay interest during the period, capital is repaid upon sale."
+          guarantee: "Your current home serves as guarantee to secure the bridging financing."
+        actions:
+          learn_more: "Learn more"
+          apply: "Apply"
+    
+    automobile_mobilite:
+      title: "Automotive & Mobility"
+      subtitle: "Finance your vehicle and mobility"
+      
+      credit_auto:
+        title: "Auto Loan"
+        description: "New and used vehicles. Finance your mobility with preferential conditions and complete service."
+        rate: "{rate}%"
+        rate_label: "APR*"
+        features:
+          amount: "From €5,000 to €100,000 for purchasing your new or used car with the best conditions."
+          duration: "Repayment over 12 to 96 months according to your budget and the value of the chosen vehicle."
+          financing: "Possibility to finance up to 100% of the purchase price, accessories and insurance included."
+          vehicles: "Complete solution for all types of vehicles with trade-in service included."
+        actions:
+          learn_more: "Learn more"
+          apply: "Apply"
+      
+      leasing_automobile:
+        title: "Automotive Leasing"
+        description: "Rental with purchase option. Drive a new vehicle with reduced monthly payments and a purchase option."
+        rate: "{rate}%"
+        rate_label: "APR*"
+        features:
+          amount: "From €10,000 to €80,000 to drive a new vehicle without initial purchase commitment."
+          duration: "Duration of 24 to 60 months with reduced monthly payments compared to a conventional loan."
+          contribution: "Possibility to start your leasing with €0 down payment according to your profile and the chosen vehicle."
+          option: "At the end of the contract, choose to buy the vehicle or return it in perfect condition."
+        actions:
+          learn_more: "Learn more"
+          apply: "Apply"
+    
+    personnel_consommation:
+      title: "Personal & Consumer"
+      subtitle: "Realize all your personal projects"
+      
+      credit_personnel:
+        title: "Personal Loan"
+        description: "Personal projects without justification. Free use of your credit for all your life projects."
+        rate: "{rate}%"
+        rate_label: "APR*"
+        features:
+          amount: "From €1,000 to €75,000 to finance all your personal projects without having to justify the use of funds."
+          duration: "Spread your payments over 12 to 84 months according to your financial capacity and preferences."
+          justification: "Maximum simplicity - only your repayment capacity is evaluated."
+          speed: "Response in 24h and immediate fund availability after file acceptance."
+        actions:
+          learn_more: "Learn more"
+          apply: "Apply"
+      
+      credit_consommation:
+        title: "Consumer Credit"
+        description: "Equipment and consumer goods. Finance your daily purchases with advantageous conditions."
+        rate: "{rate}%"
+        rate_label: "APR*"
+        features:
+          amount: "From €500 to €35,000 for purchasing equipment and everyday consumer products."
+          duration: "Repayment over 6 to 60 months adapted to the type of purchase and your monthly budget."
+          usage: "Credit dedicated to home equipment, appliances, IT and furniture."
+          partners: "Over 500 partner stores to benefit from exclusive offers and payment facilities."
+        actions:
+          learn_more: "Learn more"
+          apply: "Apply"
+      
+      credit_voyage:
+        title: "Travel Credit"
+        description: "Finance your travels and getaways. Realize your dreams of escape with a credit specially designed for travel."
+        rate: "{rate}%"
+        rate_label: "APR*"
+        features:
+          amount: "From €500 to €25,000 to make all your escape and discovery projects around the world come true."
+          duration: "Enjoy your vacations and pay back peacefully over 6 to 60 months according to your possibilities."
+          insurance: "Complete protection with cancellation insurance, repatriation and 24h/7d assistance."
+          partnerships: "Benefit from preferential offers at our partner travel agencies worldwide."
+        actions:
+          learn_more: "Learn more"
+          apply: "Apply"
+      
+      regroupement_credits:
+        title: "Credit Consolidation"
+        description: "Consolidate your existing credits. Simplify your management and reduce your monthly payments into a single credit."
+        rate: "{rate}%"
+        rate_label: "APR*"
+        features:
+          amount: "From €3,000 to €200,000 to consolidate all your current credits into a single simplified monthly payment."
+          duration: "Spread your repayments over 12 to 180 months to significantly reduce your monthly charges."
+          savings: "Possible reduction of your monthly payments up to 60% thanks to renegotiation and extension."
+          additional: "Possibility to add additional cash to finance new projects."
+        actions:
+          learn_more: "Learn more"
+          apply: "Apply"
+      
+      credit_renouvelable:
+        title: "Revolving Credit"
+        description: "Available money reserve. A flexible solution that renews as you make repayments."
+        rate: "{rate}%"
+        rate_label: "APR*"
+        features:
+          amount: "From €500 to €6,000 in permanent cash flow that automatically replenishes as you make repayments."
+          renewal: "The more you repay, the more your credit is replenished for new purchases or unexpected expenses."
+          freedom: "No purchase justification, use your reserve when you want, how you want."
+          access: "Available by credit card or bank transfer, for maximum daily flexibility."
+        actions:
+          learn_more: "Learn more"
+          apply: "Apply"
+    
+    professionnel_specialise:
+      title: "Professional & Specialized"
+      subtitle: "Dedicated solutions for specific needs"
+      
+      credit_professionnel:
+        title: "Business Loan"
+        description: "Financing for professionals. Develop your business with financing solutions adapted to companies."
+        rate: "{rate}%"
+        rate_label: "APR*"
+        features:
+          amount: "From €5,000 to €500,000 to support the development of your professional activity and investments."
+          duration: "Repayment over 12 to 84 months adapted to economic cycles and your company's profitability."
+          usage: "Financing of professional equipment, commercial vehicles, working capital and cash flow needs."
+          sectors: "Solutions adapted to craftsmen, merchants, liberal professions and SMEs from all sectors."
+        actions:
+          learn_more: "Learn more"
+          apply: "Apply"
+      
+      credit_etudiant:
+        title: "Student Loan"
+        description: "Higher education financing. Invest in your future with preferential conditions."
+        rate: "{rate}%"
+        rate_label: "APR*"
+        features:
+          amount: "From €1,000 to €60,000 to finance your higher education, tuition fees and student living expenses."
+          duration: "Duration from 12 months to 10 years to adapt to your future professional situation and income."
+          deferment: "Possibility to defer repayment up to 7 years during the duration of your studies."
+          guarantee: "Loan security through parental or legal guardian guarantee for the best conditions."
+        actions:
+          learn_more: "Learn more"
+          apply: "Apply"
+      
+      microcredit:
+        title: "Microcredit"
+        description: "Small amounts for specific projects. Financial inclusion solution for all your small projects."
+        rate: "{rate}%"
+        rate_label: "APR*"
+        features:
+          amount: "From €100 to €5,000 to finance your local projects and essential daily needs."
+          duration: "Quick repayment over 6 to 48 months to avoid long-term debt and quickly regain your autonomy."
+          conditions: "Simplified procedure and acceptance criteria adapted to particular situations and modest incomes."
+          inclusion: "Solution accessible to all profiles, even in situations of precariousness or banking exclusion."
+        actions:
+          learn_more: "Learn more"
+          apply: "Apply"
+
+  advantages:
+    header:
+      title: "Why choose %company_name%?"
+      subtitle: "The expertise and trust of over 2 million customers"
+    
+    items:
+      competitive_rates:
+        number: "01"
+        title: "Competitive Rates"
+        description: "Our rates are negotiated directly with our banking partners to offer you the best market conditions."
+      
+      express_response:
+        number: "02"
+        title: "Express Response"
+        description: "Agreement in principle within 24h thanks to our automated analysis system and partner network."
+      
+      expert_support:
+        number: "03"
+        title: "Expert Support"
+        description: "Our specialized advisors support you from simulation to signing at the notary."
+      
+      custom_solutions:
+        number: "04"
+        title: "Tailor-Made Solutions"
+        description: "15 types of credits adapted to all your projects, from real estate to professional needs."
+    
+    stats:
+      clients:
+        number: "2M+"
+        label: "Clients"
+      
+      years:
+        number: "15+"
+        label: "Years"
+      
+      satisfaction:
+        number: "98%"
+        label: "Satisfaction"
+      
+      response_time:
+        number: "24h"
+        label: "Response"
+
+  cta:
+    title: "Ready to realize your project?"
+    subtitle: "Simulate your credit in 2 minutes and get an immediate response"
+    
+    actions:
+      simulate:
+        text: "Simulate my credit"
+      
+      apply:
+        text: "Apply"

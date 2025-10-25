@@ -1,0 +1,52 @@
+form_common:
+  labels:
+    insurance_type: "Type d'assurance"
+    lastname: "Nom"
+    firstname: "Prénom"
+    email_address: "Adresse email"
+    phone_number: "Numéro de téléphone"
+    contact_preference: "Préférence de contact"
+    additional_comments: "Commentaires additionnels"
+    request_quote: "Demander un devis"
+    
+  placeholders:
+    select_insurance_type: "Sélectionnez le type d'assurance"
+    lastname: "Votre nom de famille"
+    firstname: "Votre prénom"
+    email_placeholder: "votre@email.com"
+    phone_example: "%company_phone%"
+    how_to_contact: "Comment souhaitez-vous être contacté ?"
+    
+  contact_preference:
+    email: "Par email"
+    phone: "Par téléphone"
+    indifferent: "Indifférent"
+    
+  additional_comments_placeholder: "Décrivez vos besoins spécifiques ou posez vos questions..."
+
+# Messages d'erreur pour les formulaires
+form_errors:
+  required: "Ce champ est obligatoire"
+  email_invalid: "Veuillez saisir une adresse email valide"
+  phone_invalid: "Veuillez saisir un numéro de téléphone valide"
+  too_long: "Ce champ ne peut pas dépasser {{ limit }} caractères"
+  too_short: "Ce champ doit contenir au moins {{ limit }} caractères"
+
+# Labels communs utilisés dans plusieurs formulaires
+common_labels:
+  submit: "Valider"
+  cancel: "Annuler"
+  save: "Enregistrer"
+  delete: "Supprimer"
+  edit: "Modifier"
+  back: "Retour"
+  next: "Suivant"
+  previous: "Précédent"
+  close: "Fermer"
+
+# Password validation messages
+password_min_12_chars: "Le mot de passe doit contenir au moins 8 caractères"
+password_required: "Le mot de passe est requis"
+new_password: "Nouveau mot de passe"
+repeat_password: "Répéter le mot de passe"
+password_fields_must_match: "Les mots de passe doivent être identiques"

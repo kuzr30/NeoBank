@@ -1,0 +1,101 @@
+profile_index:
+  page:
+    tit    personal_info:
+      title: Información personal
+      edit: Modificar
+      fields:
+        first_name: Nombre
+        last_name: Apellidos
+        email: Email
+        phone: Teléfono
+        birth_date: Fecha de nacimiento
+        not_provided: No proporcionado
+        not_provided_feminine: No proporcionadafil - %company_name%"
+  
+  header:
+    default_user: "Usuario"
+    default_surname: "Desconocido" 
+    default_first_letter: "U"
+    default_surname_letter: "D"
+    account_verified: "Cuenta verificada"
+    edit_profile: "Modificar el perfil"
+    security: "Seguridad"
+    alt_profile_picture: "Foto de perfil"
+  
+  kyc:
+    alerts:
+      not_submitted:
+        title: "Verificación de identidad requerida"
+        text: "Para acceder a todos nuestros servicios bancarios, debe completar su verificación de identidad (KYC)."
+        action: "Iniciar la verificación"
+      pending:
+        title: "Verificación en curso"
+        text: "Su solicitud de verificación de identidad está siendo examinada. Será notificado por email tan pronto como sea procesada."
+        action: "Ver el estado"
+      rejected:
+        title: "Verificación rechazada"
+        text: "Su solicitud de verificación de identidad ha sido rechazada. Por favor consulte las observaciones y envíe nuevos documentos."
+        action: "Iniciar la verificación"
+  
+  sections:
+    personal_info:
+      title: Información personal
+      edit: Modifier
+      fields:
+        first_name: Nombre
+        last_name: Apellidos
+        email: Email
+        phone: Teléfono
+        birth_date: Date de naissance
+        not_provided: No proporcionado
+        not_provided_feminine: No proporcionada
+    
+    security:
+      title: Seguridad
+      manage: Gestionar
+      fields:
+        password: Contraseña
+        configured: Configurada
+        two_factor: Autenticación de 2 factores
+        disabled: Desactivada
+        last_password_change: Último cambio de contraseña
+        not_provided: No proporcionado
+    
+    preferences:
+      title: Preferencias
+      edit: Modificar
+      fields:
+        language: Idioma
+        currency: Moneda
+        timezone: Zona horaria
+        timezone_default: Europa/París (CET)
+        notifications: Notificaciones
+        notifications_default: Email + SMS
+      languages:
+        french: Francés
+        english: Inglés
+        german: Alemán
+        spanish: Español
+        dutch: Holandés
+      currencies:
+        eur: Euro (EUR)
+        usd: Dólar americano (USD)
+        gbp: Libra esterlina (GBP)
+        chf: Franco suizo (CHF)
+        cad: Dólar canadiense (CAD)
+      
+      values:
+        languages:
+          fr: "Francés"
+          en: "Inglés"
+          de: "Alemán"
+          es: "Español"
+          nl: "Holandés"
+        currencies:
+          EUR: "Euro (EUR)"
+          USD: "Dólar americano (USD)"
+          GBP: "Libra esterlina (GBP)"
+          CHF: "Franco suizo (CHF)"
+          CAD: "Dólar canadiense (CAD)"
+        default_timezone: "Europa/París (CET)"
+        notifications_value: "Email + SMS"

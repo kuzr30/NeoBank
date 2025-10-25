@@ -1,0 +1,65 @@
+{% for document in field.value %}
+    <div class="document-card mb-3">
+        <div class="card border-light shadow-sm">
+            <div class="card-body p-4">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="document-info">
+                        <h6 class="mb-2 text-primary">{{ document|kyc_document_type_label }}</h6>
+                        <div class="text-muted small">
+                            <div class="mb-1">
+                                <i class="fas fa-file-alt me-2"></i>{{ document.originalName }}
+                            </div>
+                            <div class="mb-1">
+                                <i class="fas fa-weight me-2"></i>{{ document.formattedFileSize }}
+                            </div>
+                            <div>
+                                <i class="fas fa-calendar me-2"></i>{{ document.uploadedAt|date('d/m/Y H:i') }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="document-action">
+                        <a href="{{ path('kyc_view_document', {'filename': document.filename}) }}" 
+                           class="btn btn-outline-primary btn-sm px-3" 
+                           target="_blank"
+                           title="Visualiser le document">
+                            <i class="fas fa-eye me-1"></i> Visualiser
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% else %}
+    <div class="alert alert-info border-0 shadow-sm">
+        <i class="fas fa-info-circle me-2"></i>
+        Aucun document n'a été uploadé pour cette soumission KYC.
+    </div>
+{% endfor %}
+
+<style>
+.document-card .card {
+    border: 1px solid #e9ecef;
+    transition: all 0.2s ease;
+}
+
+.document-card .card:hover {
+    border-color: #0d6efd;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15) !important;
+}
+
+.document-info h6 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.document-action .btn {
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.document-action .btn:hover {
+    transform: scale(1.02);
+}
+</style>
+

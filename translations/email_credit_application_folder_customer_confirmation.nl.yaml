@@ -1,0 +1,58 @@
+email_credit_application_folder_customer_confirmation:
+  title: "Bevestiging van uw kredietaanvraag - %company_name%"
+  
+  content:
+    page_title: "Bevestiging van uw kredietaanvraag"
+    greeting: "Hallo {firstName} {lastName},"
+    received_message: "We hebben uw kredietaanvraag goed ontvangen. Hier is een samenvatting van uw aanvraag:"
+    
+    reference_section:
+      title: "Referentie van uw aanvraag"
+      reference_number: "{referenceNumber}"
+    
+    request_details:
+      title: "Details van uw aanvraag"
+      requested_amount: "Aangevraagd bedrag"
+      amount_value: "{amount} €"
+      credit_type: "Type krediet"
+      duration: "Duur"
+      duration_months: "{duration} maanden"
+      estimated_monthly: "Geschatte maandelijkse betaling"
+      monthly_value: "{monthlyPayment} €"
+      total_cost: "Totale kosten"
+      total_cost_value: "{totalCost} €"
+    
+    your_information:
+      title: "Uw informatie"
+      email: "E-mail"
+      phone: "Telefoon"
+      address: "Adres"
+      address_format: "{address}, {postalCode} {city}"
+    
+    next_steps:
+      title: "🔄 Volgende stappen"
+      step1: "Ons team zal uw aanvraag zo spoedig mogelijk onderzoeken"
+      step2: "U ontvangt een antwoord binnen 48 werkuren"
+      step3: "Bij acceptatie nemen we contact met u op om uw dossier te finaliseren"
+    
+    account_section:
+      title: "Uw aanvraag volgen"
+      login_info: "Om de voortgang van uw kredietaanvraag in real-time te volgen:"
+      existing_account: "• Als u al een %company_name% account heeft: <strong>Log in</strong> op uw klantenportaal"
+      new_account: "• Als u nog geen account heeft: <strong>Maak uw account aan</strong> met het e-mailadres van deze aanvraag"
+      benefits: "Met uw klantenportaal kunt u:"
+      benefit1: "• De status van uw aanvraag in real-time bekijken"
+      benefit2: "• Benodigde documenten downloaden"
+      benefit3: "• Direct communiceren met uw adviseur"
+      login_button: "Inloggen"
+      register_button: "Account aanmaken"
+    
+    questions_section:
+      title: "Vragen"
+      contact_info: "Als u vragen heeft, aarzel dan niet om contact met ons op te nemen en vermeld uw referentie {referenceNumber}."
+    
+    signature: "Met vriendelijke groet,<br><strong>Het %company_name% team</strong><br><em>Uw vertrouwde financiële partner</em>"
+  
+  log:
+    customer_confirmation_sent: "Bevestiging verzonden naar klant voor aanvraag {referenceNumber}"
+    email_sent: "Bevestigingsmail verzonden naar {customerEmail}"

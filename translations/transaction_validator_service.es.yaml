@@ -1,0 +1,12 @@
+transaction_validator_service:
+  exceptions:
+    positive_amount_required: "El monto de la transacción debe ser positivo."
+    
+  user_messages:
+    empty_account_debit: "Su cuenta tiene un saldo de 0 €. Por favor alimente su cuenta antes de realizar esta operación."
+    insufficient_funds: "Saldo insuficiente. Su saldo actual es de {currentBalance} € y está intentando debitar {amount} €."
+    
+  log_messages:
+    empty_account_attempt: "Intento de débito en cuenta vacía"
+    negative_balance_attempt: "Intento de débito creando un saldo negativo"
+    debit_validation_success: "Validación de débito exitosa"

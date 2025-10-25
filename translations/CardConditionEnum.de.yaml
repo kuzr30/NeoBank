@@ -1,0 +1,119 @@
+# Übersetzungsdatei für CardConditionEnum
+# Domäne: CardConditionEnum
+# Sprache: Deutsch (de)
+
+CardConditionEnum:
+  # Kartentypen - Bezeichnungen
+  labels:
+    classic: "Classic Karte"
+    gold: "Gold Karte"
+    platinum: "Platinum Karte"
+  
+  # Kartentypen - Marketing-Beschreibungen
+  descriptions:
+    classic: "Ideale Karte für Einsteiger mit essentiellen Services"
+    gold: "Premium-Karte mit Versicherungen und inklusivem Cashback"
+    platinum: "Prestige-Karte mit exklusiven Services und Concierge"
+  
+  # Allgemeine Informationen
+  info:
+    title: "Bankkarten-Kategorien"
+    subtitle: "Services für jeden Profiltyp"
+    
+  # Jahresgebühren
+  annual_fees:
+    classic: "Kostenlos"
+    gold: "60€/Jahr"
+    platinum: "180€/Jahr"
+    
+  # Detaillierte Bedingungen
+  conditions:
+    classic:
+      title: "BESONDERE BEDINGUNGEN - CLASSIC KARTE"
+      pricing:
+        title: "PREISGESTALTUNG"
+        annual_fee: "Jahresbeitrag: Erstes Jahr kostenlos, dann 24€/Jahr"
+        withdrawal_eurozone: "Abhebung in der Eurozone: Kostenlos (3 pro Monat), dann 1€"
+        foreign_payment: "Zahlung in Fremdwährung: 2% Provision"
+      limits:
+        title: "LIMITS"
+        daily_withdrawal: "Tägliche Abhebung: 500€"
+        monthly_payment: "Monatliche Zahlung: 2.000€"
+      services:
+        title: "INKLUDIERTE SERVICES"
+        insurance: "Einkaufsversicherung: 500€"
+        support: "24/7 Telefonsupport"
+        
+    gold:
+      title: "BESONDERE BEDINGUNGEN - GOLD KARTE"
+      pricing:
+        title: "PREISGESTALTUNG"
+        annual_fee: "Jahresbeitrag: 60€"
+        withdrawal_worldwide: "Kostenlose Abhebungen weltweit"
+        payment_eurozone: "Zahlungen ohne Provision in der Eurozone"
+      limits:
+        title: "LIMITS"
+        daily_withdrawal: "Tägliche Abhebung: 1.000€"
+        monthly_payment: "Monatliche Zahlung: 5.000€"
+        revolving_credit: "Revolving-Kredit: 2.000€"
+      services:
+        title: "INKLUDIERTE SERVICES"
+        travel_insurance: "Internationale Reiseversicherung"
+        cashback: "1% Cashback auf alle Einkäufe"
+        concierge: "Telefon-Concierge"
+        purchase_insurance: "Einkaufsversicherung: 2.000€"
+        
+    platinum:
+      title: "BESONDERE BEDINGUNGEN - PLATINUM KARTE"
+      pricing:
+        title: "PREISGESTALTUNG"
+        annual_fee: "Jahresbeitrag: 180€"
+        global_services: "Alle Services weltweit kostenlos"
+        exchange_rates: "Vorzugswechselkurse"
+      limits:
+        title: "LIMITS"
+        daily_withdrawal: "Tägliche Abhebung: 2.500€"
+        monthly_payment: "Monatliche Zahlung: 10.000€"
+        revolving_credit: "Revolving-Kredit: 5.000€"
+      services:
+        title: "PREMIUM-SERVICES"
+        premium_travel: "Premium-Reiseversicherung + Familie"
+        premium_cashback: "2% Cashback auf alle Einkäufe"
+        vip_access: "VIP-Zugang zu Flughafen-Lounges"
+        premium_concierge: "Premium-Concierge 24/7"
+        premium_insurance: "Einkaufsversicherung: 5.000€"
+        ticket_service: "Flugticket-Rückkaufservice"
+  
+  # Limits nach Typ
+  limits:
+    classic:
+      daily: "500€"
+      monthly: "2.000€"
+    gold:
+      daily: "1.000€"
+      monthly: "5.000€"
+      credit: "2.000€"
+    platinum:
+      daily: "2.500€"
+      monthly: "10.000€"
+      credit: "5.000€"
+      
+  # Nachrichten für Formulare
+  form:
+    placeholder: "Wählen Sie Ihre Kartenkategorie"
+    help: "Die Kategorie bestimmt die Services und Limits Ihrer Karte"
+    
+  # Hauptvorteile
+  key_benefits:
+    classic:
+      - "Karte kostenlos im ersten Jahr"
+      - "Grundlegende Banking-Services"
+      - "24/7 Hilfe"
+    gold:
+      - "Kostenlose Abhebungen weltweit"
+      - "Cashback auf Ihre Einkäufe"
+      - "Reiseversicherung inklusive"
+    platinum:
+      - "Exklusive Premium-Services"
+      - "Dedizierter Concierge"
+      - "VIP-Lounge-Zugang"

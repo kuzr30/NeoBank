@@ -1,0 +1,90 @@
+banking_transactions:
+  # Meta tags
+  meta:
+    title: "Mes transactions - %company_name%"
+    description: "Consultez l'historique de vos transactions avec %company_name%"
+
+  # Navigation
+  nav:
+    dashboard: "Tableau de bord"
+    transactions: "Transactions"
+    transaction_detail: "Détail de la transaction"
+    back: "Retour"
+
+  # Page headers
+  page:
+    title: "Mes transactions"
+    subtitle: "Consultez l'historique de toutes vos transactions"
+    transaction_detail_title: "Détail de la transaction"
+    
+  # Transaction info
+  transaction:
+    amount: "Montant"
+    date: "Date"
+    time: "Heure"
+    description: "Description"
+    type: "Type"
+    status: "Statut"
+    account: "Compte"
+    reference: "Référence"
+    balance_after: "Solde après transaction"
+    recipient: "Bénéficiaire"
+    sender: "Expéditeur"
+    
+  # Transaction types
+  types:
+    transfer: "Virement"
+    payment: "Paiement"
+    withdrawal: "Retrait"
+    deposit: "Dépôt"
+    fee: "Frais"
+    interest: "Intérêts"
+    refund: "Remboursement"
+    direct_debit: "Prélèvement automatique"
+    card_payment: "Paiement par carte"
+    
+  # Status
+  status:
+    completed: "Terminée"
+    pending: "En attente"
+    cancelled: "Annulée"
+    failed: "Échouée"
+    processing: "En cours de traitement"
+    
+  # Filters
+  filters:
+    title: "Filtres"
+    date_range: "Période"
+    transaction_type: "Type de transaction"
+    amount_min: "Montant minimum"
+    amount_max: "Montant maximum"
+    account_filter: "Compte"
+    apply_filters: "Appliquer les filtres"
+    clear_filters: "Effacer les filtres"
+    
+  # Actions
+  actions:
+    view_details: "Voir les détails"
+    download_receipt: "Télécharger le reçu"
+    export_transactions: "Exporter les transactions"
+    search: "Rechercher"
+    
+  # Date ranges
+  date_ranges:
+    today: "Aujourd'hui"
+    this_week: "Cette semaine"
+    this_month: "Ce mois"
+    last_month: "Mois dernier"
+    last_3_months: "3 derniers mois"
+    last_6_months: "6 derniers mois"
+    this_year: "Cette année"
+    custom: "Période personnalisée"
+    
+  # Messages
+  messages:
+    no_transactions: "Aucune transaction trouvée"
+    loading: "Chargement des transactions..."
+    export_success: "Export réussi"
+    
+  # Currency
+  currency: "€"

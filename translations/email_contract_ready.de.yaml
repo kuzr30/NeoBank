@@ -1,0 +1,47 @@
+email_contract_ready:
+  title: "Ihr Kreditvertrag ist bereit - Unterschrift erforderlich"
+  content:
+    page_title: "Ihr personalisierter Vertrag ist bereit"
+    greeting: "Hallo,"
+    contract_finalized:
+      title: "Vertrag von unseren Experten fertiggestellt"
+      description: "Ausgezeichnete Nachrichten! Ihr Kreditvertrag wurde von unserem Rechtsteam fertiggestellt und ist nun zur Unterzeichnung bereit. Unsere Berater haben Ihr Dossier sorgfältig vorbereitet."
+    contract_details:
+      title: "Vertragsdetails"
+      contract_number: "Vertragsnummer: {contractNumber}"
+      document_info: "Dokument vorbereitet von unseren Rechtsspezialisten im sicheren PDF-Format"
+    signature_process:
+      title: "Unterschriftsprozess"
+      step_1:
+        title: "1. Download"
+        description: "Vertrag als Anhang dieser E-Mail herunterladen"
+      step_2:
+        title: "2. Gründliche Durchsicht"
+        description: "Alle Klauseln und Vertragsbedingungen sorgfältig studieren"
+      step_3:
+        title: "3. Vollständige Unterschrift"
+        description: "Letzte Seite unterschreiben und jede Seite des Dokuments paraphieren"
+      step_4:
+        title: "4. Sichere Rücksendung"
+        description: "Vertrag per E-Mail, Post oder Filialabgabe an uns zurücksenden"
+    return_methods:
+      title: "Rücksendungsmethoden für den unterschriebenen Vertrag"
+      email_secure: "Sichere E-Mail"
+      email_description: "Scan oder Foto in professioneller Qualität"
+      postal_mail: "Postversand"
+      postal_description: "Einschreiben an unsere Services"
+      agency_deposit: "Filialabgabe"
+      agency_description: "Direkte Übergabe in unseren Büros"
+    express_processing:
+      title: "Express-Bearbeitung"
+      processing_time: "Bearbeitungszeit: 24-48 Arbeitsstunden"
+      processing_description: "Nach Erhalt Ihres unterschriebenen Vertrags wird unser Team die finale Validierung vornehmen und unser Buchhaltungsservice die Mittel direkt auf Ihr Bankkonto überweisen."
+    support_text: "Bei Fragen zu Ihrem Vertrag oder dem Unterschriftsprozess stehen Ihnen unsere spezialisierten Berater zur Verfügung."
+    footer: "%company_name% - Kreditabteilung<br>Benachrichtigung über unterschriftsbereiten Vertrag"
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Versendung der Vertragsbereits-Benachrichtigung"
+    success: "Vertragsbereits-Benachrichtigung erfolgreich versendet"
+    error: "Fehler beim Versenden der Vertragsbereits-Benachrichtigung"
+    send_failed: "Versenden der Vertragsbereits-Benachrichtigung fehlgeschlagen"

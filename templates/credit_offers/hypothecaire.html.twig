@@ -1,0 +1,164 @@
+{% extends 'credit_offers/credit_page_structure.html.twig' %}
+
+{% set page_title = tp('hypothecaire.page_title', [], 'hypothecaire') %}
+{% set page_description = tp('hypothecaire.page_description', [], 'hypothecaire') %}
+{% set hero_class = 'credit-detail-hero--hypothecaire' %}
+
+{% block taux_value %}{{ credit_rate('mortgage') }}%{% endblock %}
+{% block montant_value %}{{ tp('hypothecaire.hero.amount_value', [], 'hypothecaire') }}{% endblock %}
+{% block duree_value %}{{ tp('hypothecaire.hero.duration_value', [], 'hypothecaire') }}{% endblock %}
+
+{% block section_1_title %}{{ tp('hypothecaire.section_1.title', [], 'hypothecaire') }}{% endblock %}
+
+{% block section_1_content %}
+<p>{{ tp('hypothecaire.section_1.paragraph_1', [], 'hypothecaire') }}</p>
+<p>{{ tp('hypothecaire.section_1.paragraph_2', [], 'hypothecaire') }}</p>
+{% endblock %}
+
+{% block feature_montant %}{{ tp('hypothecaire.features.amount', [], 'hypothecaire') }}{% endblock %}
+{% block feature_montant_detail %}{{ tp('hypothecaire.features.amount_detail', [], 'hypothecaire') }}{% endblock %}
+{% block feature_duree %}{{ tp('hypothecaire.features.duration', [], 'hypothecaire') }}{% endblock %}
+{% block feature_duree_detail %}{{ tp('hypothecaire.features.duration_detail', [], 'hypothecaire') }}{% endblock %}
+{% block feature_taux %}{{ tp('hypothecaire.features.rate', [], 'hypothecaire')|replace({'{rate}': credit_rate('hypothecaire')})|raw }}{% endblock %}
+{% block feature_taux_detail %}{{ tp('hypothecaire.features.rate_detail', [], 'hypothecaire') }}{% endblock %}
+{% block feature_garantie %}{{ tp('hypothecaire.features.guarantee', [], 'hypothecaire') }}{% endblock %}
+{% block feature_garantie_detail %}{{ tp('hypothecaire.features.guarantee_detail', [], 'hypothecaire') }}{% endblock %}
+
+{% block section_3_content %}
+<ul class="credit-detail-advantages">
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text">{{ tp('hypothecaire.advantages.advantage_1', [], 'hypothecaire')|raw }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text">{{ tp('hypothecaire.advantages.advantage_2', [], 'hypothecaire')|raw }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text">{{ tp('hypothecaire.advantages.advantage_3', [], 'hypothecaire')|raw }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text">{{ tp('hypothecaire.advantages.advantage_4', [], 'hypothecaire')|raw }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text">{{ tp('hypothecaire.advantages.advantage_5', [], 'hypothecaire')|raw }}</span>
+    </li>
+</ul>
+{% endblock %}
+
+{% block section_4_content %}
+<div class="credit-detail-requirements">
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('hypothecaire.requirements.borrower.title', [], 'hypothecaire') }}</h3>
+        <ul>
+            <li>{{ tp('hypothecaire.requirements.borrower.item_1', [], 'hypothecaire') }}</li>
+            <li>{{ tp('hypothecaire.requirements.borrower.item_2', [], 'hypothecaire') }}</li>
+            <li>{{ tp('hypothecaire.requirements.borrower.item_3', [], 'hypothecaire') }}</li>
+            <li>{{ tp('hypothecaire.requirements.borrower.item_4', [], 'hypothecaire') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('hypothecaire.requirements.property.title', [], 'hypothecaire') }}</h3>
+        <ul>
+            <li>{{ tp('hypothecaire.requirements.property.item_1', [], 'hypothecaire') }}</li>
+            <li>{{ tp('hypothecaire.requirements.property.item_2', [], 'hypothecaire') }}</li>
+            <li>{{ tp('hypothecaire.requirements.property.item_3', [], 'hypothecaire') }}</li>
+            <li>{{ tp('hypothecaire.requirements.property.item_4', [], 'hypothecaire') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block section_5_content %}
+<div class="credit-detail-documents">
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('hypothecaire.documents.personal.title', [], 'hypothecaire') }}</h3>
+        <ul>
+            <li>{{ tp('hypothecaire.documents.personal.item_1', [], 'hypothecaire') }}</li>
+            <li>{{ tp('hypothecaire.documents.personal.item_2', [], 'hypothecaire') }}</li>
+            <li>{{ tp('hypothecaire.documents.personal.item_3', [], 'hypothecaire') }}</li>
+            <li>{{ tp('hypothecaire.documents.personal.item_4', [], 'hypothecaire') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('hypothecaire.documents.property.title', [], 'hypothecaire') }}</h3>
+        <ul>
+            <li>{{ tp('hypothecaire.documents.property.item_1', [], 'hypothecaire') }}</li>
+            <li>{{ tp('hypothecaire.documents.property.item_2', [], 'hypothecaire') }}</li>
+            <li>{{ tp('hypothecaire.documents.property.item_3', [], 'hypothecaire') }}</li>
+            <li>{{ tp('hypothecaire.documents.property.item_4', [], 'hypothecaire') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('hypothecaire.documents.financial.title', [], 'hypothecaire') }}</h3>
+        <ul>
+            <li>{{ tp('hypothecaire.documents.financial.item_1', [], 'hypothecaire') }}</li>
+            <li>{{ tp('hypothecaire.documents.financial.item_2', [], 'hypothecaire') }}</li>
+            <li>{{ tp('hypothecaire.documents.financial.item_3', [], 'hypothecaire') }}</li>
+            <li>{{ tp('hypothecaire.documents.financial.item_4', [], 'hypothecaire') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block legal_details %}
+<div class="credit-legal-notice__details">
+    <h4>{{ tp('hypothecaire.legal.title', [], 'hypothecaire') }}</h4>
+    <ul>
+        <li>{{ tp('hypothecaire.legal.taeg', [], 'hypothecaire')|raw }}</li>
+        <li>{{ tp('hypothecaire.legal.mortgage', [], 'hypothecaire')|raw }}</li>
+        <li>{{ tp('hypothecaire.legal.fees', [], 'hypothecaire')|raw }}</li>
+        <li>{{ tp('hypothecaire.legal.expertise', [], 'hypothecaire')|raw }}</li>
+        <li>{{ tp('hypothecaire.legal.discharge', [], 'hypothecaire')|raw }}</li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block cta_title %}{{ tp('hypothecaire.cta.title', [], 'hypothecaire') }}{% endblock %}
+{% block cta_subtitle %}{{ tp('hypothecaire.cta.subtitle', [], 'hypothecaire') }}{% endblock %}
+
+{% block sidebar_card_title %}{{ tp('hypothecaire.sidebar.evaluation_title', [], 'hypothecaire') }}{% endblock %}
+{% block sidebar_card_content %}
+<div class="credit-detail-timeline">
+    <div class="credit-detail-timeline__item">
+        <div class="credit-detail-timeline__icon">1</div>
+        <div class="credit-detail-timeline__content">
+            <div class="credit-detail-timeline__title">{{ tp('hypothecaire.sidebar.step_1.title', [], 'hypothecaire') }}</div>
+            <div class="credit-detail-timeline__time">{{ tp('hypothecaire.sidebar.step_1.time', [], 'hypothecaire') }}</div>
+        </div>
+    </div>
+    <div class="credit-detail-timeline__item">
+        <div class="credit-detail-timeline__icon">2</div>
+        <div class="credit-detail-timeline__content">
+            <div class="credit-detail-timeline__title">{{ tp('hypothecaire.sidebar.step_2.title', [], 'hypothecaire') }}</div>
+            <div class="credit-detail-timeline__time">{{ tp('hypothecaire.sidebar.step_2.time', [], 'hypothecaire') }}</div>
+        </div>
+    </div>
+    <div class="credit-detail-timeline__item">
+        <div class="credit-detail-timeline__icon">3</div>
+        <div class="credit-detail-timeline__content">
+            <div class="credit-detail-timeline__title">{{ tp('hypothecaire.sidebar.step_3.title', [], 'hypothecaire') }}</div>
+            <div class="credit-detail-timeline__time">{{ tp('hypothecaire.sidebar.step_3.time', [], 'hypothecaire') }}</div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block custom_styles %}
+{{ parent() }}
+<style>
+/* Couleur spécifique pour le crédit hypothécaire */
+.credit-detail-hero--hypothecaire {
+    background: 
+        linear-gradient(135deg, rgba(124, 58, 237, 0.4) 0%, rgba(109, 40, 217, 0.6) 100%),
+        url('/images/a0362a1358.jpg') center/cover no-repeat;
+}
+
+.credit-detail-hero--hypothecaire .credit-highlight__value {
+    color: #c4b5fd;
+}
+</style>
+{% endblock %}

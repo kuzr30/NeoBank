@@ -1,0 +1,28 @@
+email_notification_created_account:
+  title: "Votre compte %company_name% est créé !"
+  
+  content:
+    page_title: "Félicitations %firstName%!"
+    intro: "Votre compte %company_name% a été créé avec succès."
+    
+    account_details:
+      title: "Détails de votre compte"
+      account_number: "Numéro de compte"
+      iban: "IBAN"
+      country: "Pays"
+    
+    access_info:
+      title: "Accès à votre espace client"
+      text: "Vous pouvez maintenant vous connecter à votre espace client pour gérer vos services bancaires."
+    
+    support_info: "Si vous avez des questions, notre équipe support est à votre disposition."
+    signature: "L'équipe %company_name%"
+      
+  countries:
+    FR: "France"
+    BE: "Belgique"  
+    NL: "Pays-Bas"
+    DE: "Allemagne"
+    IT: "Italie"
+    ES: "Espagne"
+    LU: "Luxembourg"

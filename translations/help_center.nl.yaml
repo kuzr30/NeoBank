@@ -1,0 +1,56 @@
+help_center:
+  page:
+    title: "Helpcentrum - %company_name%"
+    meta:
+      description: "Vind snel antwoorden op uw vragen over onze bankdiensten"
+  
+  hero:
+    title: "Helpcentrum"
+    subtitle: "Vind snel antwoorden op uw vragen over onze bankdiensten"
+    search:
+      placeholder: "Zoeken in de hulp..."
+  
+  sections:
+    main_title: "Hoe kunnen we u helpen?"
+    
+    accounts_cards:
+      title: "Rekeningen en Kaarten"
+      description: "Beheer van uw rekeningen, bankkaarten, overschrijvingen en betalingen"
+      links:
+        balance: "Mijn saldo bekijken"
+        transfers: "Een overschrijving maken"
+    
+    security:
+      title: "Beveiliging"
+      description: "Bescherming van uw gegevens en bankbeveiligingsadvies"
+      links:
+        authentication: "Sterke authenticatie"
+        fraud: "Fraude melden"
+    
+    contact:
+      title: "Contact"
+      description: "Verschillende manieren om contact met ons op te nemen, afhankelijk van uw behoeften"
+      links:
+        chat: "Online chat"
+        appointment: "Afspraak maken"
+    
+    services:
+      title: "Online Diensten"
+      description: "Hulp bij het gebruik van ons online bankplatform"
+      links:
+        login: "Inloggen"
+        settings: "Account instellingen"
+    
+    credits_savings:
+      title: "Kredieten en Sparen"
+      description: "Informatie over onze krediet- en spaarproducten"
+      links:
+        simulation: "Krediet simuleren"
+        savings: "Spaarproducten"
+    
+    documents:
+      title: "Documenten"
+      description: "Toegang tot en beheer van uw bankdocumenten"
+      links:
+        rib: "RIB downloaden"
+        statements: "Mijn afschriften"

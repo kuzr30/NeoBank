@@ -1,0 +1,42 @@
+banking_transfer:
+  # Meta tags
+  meta:
+    title: "Nouveau virement - %company_name%"
+    description: "Effectuez un virement bancaire en toute sécurité avec %company_name%"
+
+  # Navigation
+  nav:
+    dashboard: "Tableau de bord"
+    transfers: "Virements"
+    logout: "Déconnexion"
+
+  # Process Steps
+  steps:
+    details: "Détails"
+    validation: "Validation"
+    confirmation: "Confirmation"
+
+  # Form Header
+  form:
+    title: "Nouveau virement"
+    subtitle: "Transférez de l'argent vers un compte bénéficiaire"
+
+  # Account Info
+  account:
+    available_balance: "Solde disponible :"
+
+  # Form Fields
+  fields:
+    destination_account: "Compte bénéficiaire"
+    amount: "Montant"
+    amount_placeholder: "0,00"
+    description: "Description (optionnel)"
+    description_placeholder: "Motif du virement..."
+
+  # Actions
+  actions:
+    cancel: "Annuler"
+    continue: "Continuer"
+
+  # Currency
+  currency: "€"

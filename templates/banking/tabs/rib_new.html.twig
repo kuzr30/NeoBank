@@ -1,0 +1,287 @@
+<style>
+/* Form Styles for RIB Creation in Dashboard */
+.banking__form-container {
+    padding: 24px;
+}
+
+.banking__form-header {
+    margin-bottom: 32px;
+}
+
+.banking__form-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.banking__form-subtitle {
+    font-size: 14px;
+    color: #7f8c8d;
+    line-height: 1.5;
+}
+
+.banking__form {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    padding: 32px;
+}
+
+.banking__form-group {
+    margin-bottom: 24px;
+}
+
+.banking__form-group:last-child {
+    margin-bottom: 0;
+}
+
+.banking__form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.banking__form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #2c3e50;
+    background: #ffffff;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.banking__form-input:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.banking__form-input.is-invalid {
+    border-color: #e74c3c;
+}
+
+.banking__form-error {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+}
+
+.banking__form-help {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+.banking__form-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #f1f3f4;
+}
+
+.banking__btn {
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid;
+}
+
+.banking__btn--primary {
+    background: #0066cc;
+    color: white;
+    border-color: #0066cc;
+}
+
+.banking__btn--primary:hover {
+    background: #0056b3;
+    border-color: #0056b3;
+}
+
+.banking__btn--secondary {
+    background: #ffffff;
+    color: #7f8c8d;
+    border-color: #ddd;
+}
+
+.banking__btn--secondary:hover {
+    background: #f8f9fa;
+    color: #2c3e50;
+}
+
+.banking__btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Alert Styles */
+.banking__alert {
+    padding: 16px;
+    border-radius: 6px;
+    margin-bottom: 24px;
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.banking__alert--danger {
+    background: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .banking__form-container {
+        padding: 16px;
+    }
+    
+    .banking__form {
+        padding: 24px 20px;
+    }
+    
+    .banking__form-actions {
+        flex-direction: column;
+    }
+    
+    .banking__btn {
+        justify-content: center;
+    }
+}
+</style>
+
+<div class="banking__content">
+    <div class="banking__form-container">
+        <div class="banking__form-header">
+            <h2 class="banking__form-title">{{ tp('banking_ribs.new_form.title', [], 'banking_ribs') }}</h2>
+            <p class="banking__form-subtitle">
+                {{ tp('banking_ribs.new_form.subtitle', [], 'banking_ribs') }}
+            </p>
+        </div>
+
+        {% for flash_message in app.flashes('success') %}
+            <div class="banking__alert banking__alert--success">
+                {{ flash_message }}
+            </div>
+        {% endfor %}
+
+        {% for flash_message in app.flashes('error') %}
+            <div class="banking__alert banking__alert--danger">
+                {{ flash_message }}
+            </div>
+        {% endfor %}
+
+        {{ form_start(form, {'attr': {'class': 'banking__form'}}) }}
+            
+            <div class="banking__form-group">
+                {{ form_label(form.accountName, tp('banking_ribs.form_fields.account_name_label', [], 'banking_ribs'), {'label_attr': {'class': 'banking__form-label'}}) }}
+                {{ form_widget(form.accountName, {'attr': {'class': 'banking__form-input', 'placeholder': tp('banking_ribs.form_fields.account_name_placeholder', [], 'banking_ribs')}}) }}
+                {{ form_errors(form.accountName, {'attr': {'class': 'banking__form-error'}}) }}
+                <small class="banking__form-help">
+                    {{ tp('banking_ribs.form_fields.account_name_help', [], 'banking_ribs') }}
+                </small>
+            </div>
+
+            <div class="banking__form-group">
+                {{ form_label(form.bankName, tp('banking_ribs.form_fields.bank_name_label', [], 'banking_ribs'), {'label_attr': {'class': 'banking__form-label'}}) }}
+                {{ form_widget(form.bankName, {'attr': {'class': 'banking__form-input', 'placeholder': tp('banking_ribs.form_fields.bank_name_placeholder', [], 'banking_ribs')}}) }}
+                {{ form_errors(form.bankName, {'attr': {'class': 'banking__form-error'}}) }}
+            </div>
+
+                        <div class="banking__form-group">
+                {{ form_label(form.iban, tp('banking_ribs.form_fields.iban_label', [], 'banking_ribs'), {'label_attr': {'class': 'banking__form-label'}}) }}
+                {{ form_widget(form.iban, {'attr': {'class': 'banking__form-input', 'placeholder': tp('banking_ribs.form_fields.iban_placeholder', [], 'banking_ribs'), 'id': 'iban-input'}}) }}
+                {{ form_errors(form.iban, {'attr': {'class': 'banking__form-error'}}) }}
+                <small class="banking__form-help">
+                    {{ tp('banking_ribs.form_fields.iban_help', [], 'banking_ribs') }}
+                </small>
+            </div>
+
+            <div class="banking__form-actions">
+                <a href="{{ path('banking_ribs') }}" class="banking__btn banking__btn--secondary" onclick="loadBankingTab('ribs'); return false;">
+                    {{ ux_icon('heroicons:arrow-left') }}
+                    {{ tp('banking_ribs.form_actions.back_button', [], 'banking_ribs') }}
+                </a>
+                <button type="submit" class="banking__btn banking__btn--primary">
+                    {{ ux_icon('heroicons:check') }}
+                    {{ tp('banking_ribs.form_actions.save_button', [], 'banking_ribs') }}
+                </button>
+            </div>
+
+        {{ form_end(form) }}
+    </div>
+</div>
+
+<script>
+// Script pour formater automatiquement l'IBAN pendant la saisie
+document.addEventListener('DOMContentLoaded', function() {
+    const ibanInput = document.getElementById('iban-input');
+    
+    if (ibanInput) {
+        ibanInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\s/g, '').toUpperCase();
+            let formattedValue = '';
+            
+            // Ajouter des espaces tous les 4 caractères
+            for (let i = 0; i < value.length; i++) {
+                if (i > 0 && i % 4 === 0) {
+                    formattedValue += ' ';
+                }
+                formattedValue += value[i];
+            }
+            
+            // Limiter à 34 caractères + espaces
+            if (formattedValue.replace(/\s/g, '').length <= 34) {
+                e.target.value = formattedValue;
+            }
+        });
+        
+        // Validation visuelle en temps réel
+        ibanInput.addEventListener('blur', function(e) {
+            const value = e.target.value.replace(/\s/g, '');
+            const countryCode = value.substring(0, 2);
+            
+            // Liste des pays européens supportés
+            const europeanCountries = [
+                'AD', 'AT', 'BE', 'BG', 'CH', 'CY', 'CZ', 'DE', 'DK', 'EE', 
+                'ES', 'FI', 'FO', 'FR', 'GB', 'GI', 'GL', 'GR', 'HR', 'HU', 
+                'IE', 'IS', 'IT', 'LI', 'LT', 'LU', 'LV', 'MC', 'ME', 'MK', 
+                'MT', 'NL', 'NO', 'PL', 'PT', 'RO', 'RS', 'SE', 'SI', 'SK', 
+                'SM', 'VA', 'XK'
+            ];
+            
+            if (value.length > 0) {
+                if (!europeanCountries.includes(countryCode)) {
+                    e.target.style.borderColor = '#e74c3c';
+                } else if (value.length >= 15) { // Minimum viable IBAN length
+                    e.target.style.borderColor = '#27ae60';
+                } else {
+                    e.target.style.borderColor = '#f39c12';
+                }
+            } else {
+                e.target.style.borderColor = '#ddd';
+            }
+        });
+    }
+});
+</script>
+    </div>
+</div>

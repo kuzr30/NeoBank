@@ -1,0 +1,9 @@
+{% if field.value %}
+    {{ field.value.format('d/m/Y à H:i') }}
+{% else %}
+    {% if field.property == 'lastLoginAt' %}
+        <span class="text-muted">Jamais</span>
+    {% else %}
+        <span class="text-muted">-</span>
+    {% endif %}
+{% endif %}

@@ -1,0 +1,145 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'legal_notices.page_title'|trans([], 'legal_notices') }} - {{ parent() }}{% endblock %}
+
+{% block body %}
+<div class="legal-page">
+    <div class="legal-page__container">
+        <div class="legal-page__header">
+            <h1 class="legal-page__title">{{ 'legal_notices.page_title'|trans([], 'legal_notices') }}</h1>
+            <p class="legal-page__subtitle">{{ 'legal_notices.page_description'|trans({'%company_name%': companySettings.companyName}, 'legal_notices') }}</p>
+        </div>
+
+        <div class="legal-page__content">
+                        <section class="legal-section">
+                <h2 class="legal-section__title">{{ 'legal_notices.company_info.title'|trans([], 'legal_notices') }}</h2>
+                <div class="legal-section__content">
+                    <p>{{ 'legal_notices.company_info.content'|trans({
+                        '%company_name%': companySettings.companyName,
+                        '%company_address%': companySettings.address,
+                        '%company_phone%': companySettings.phone,
+                        '%company_email%': companySettings.email,
+                        '%company_siret%': companySettings.siret,
+                        '%company_website%': companySettings.website
+                    }, 'legal_notices')|raw }}</p>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2 class="legal-section__title">{{ 'legal_notices.hosting.title'|trans([], 'legal_notices') }}</h2>
+                <div class="legal-section__content">
+                    <p>{{ 'legal_notices.hosting.content'|trans({
+                        '%hosting_provider%': 'OVH',
+                        '%hosting_address%': '2 rue Kellermann - 59100 Roubaix - France',
+                        '%hosting_website%': 'https://www.ovh.com'
+                    }, 'legal_notices')|raw }}</p>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2 class="legal-section__title">{{ 'legal_notices.intellectual_property.title'|trans([], 'legal_notices') }}</h2>
+                <div class="legal-section__content">
+                    <p>{{ 'legal_notices.intellectual_property.content'|trans([], 'legal_notices')|raw }}</p>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2 class="legal-section__title">{{ 'legal_notices.liability.title'|trans([], 'legal_notices') }}</h2>
+                <div class="legal-section__content">
+                    <p>{{ 'legal_notices.liability.content'|trans({'%company_name%': companySettings.companyName}, 'legal_notices')|raw }}</p>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2 class="legal-section__title">{{ 'legal_notices.gdpr.title'|trans([], 'legal_notices') }}</h2>
+                <div class="legal-section__content">
+                    <p>{{ 'legal_notices.gdpr.content'|trans({
+                        '%company_name%': companySettings.companyName,
+                        '%company_email%': companySettings.email
+                    }, 'legal_notices')|raw }}</p>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2 class="legal-section__title">{{ 'legal_notices.contact.title'|trans([], 'legal_notices') }}</h2>
+                <div class="legal-section__content">
+                    <p>{{ 'legal_notices.contact.content'|trans({'%email%': companySettings.email}, 'legal_notices')|raw }}</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+{% block custom_styles %}
+<style>
+.legal-page {
+    min-height: 100vh;
+    background: #fafbfc;
+    padding: 4rem 0;
+}
+
+.legal-page__container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.legal-page__header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.legal-page__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.legal-page__subtitle {
+    font-size: 1.125rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.legal-page__content {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.legal-section {
+    margin-bottom: 3rem;
+}
+
+.legal-section:last-child {
+    margin-bottom: 0;
+}
+
+.legal-section__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #10b981;
+    padding-bottom: 0.5rem;
+}
+
+.legal-section__content p {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.legal-section__content p:last-child {
+    margin-bottom: 0;
+}
+
+.legal-section__content strong {
+    color: #0f172a;
+}
+</style>
+{% endblock %}
+{% endblock %}

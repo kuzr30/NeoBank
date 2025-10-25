@@ -1,0 +1,377 @@
+credit_offers_index:
+  # Etiquetas genéricas para las características de crédito
+  labels:
+    amount: "Importe financiable"
+    amount_available: "Importe disponible"
+    amount_eco: "Importe eco-responsable"
+    amount_important: "Financiación importante"
+    amount_vehicle: "Financiación vehículo"
+    amount_work: "Financiación obras"
+    amount_without_justification: "Crédito sin justificante"
+    amount_equipment: "Financiación equipamiento"
+    amount_travel: "Financiación viajes"
+    amount_consolidation: "Consolidación óptima"
+    amount_reserve: "Reserva disponible"
+    amount_company: "Financiación empresa"
+    amount_studies: "Financiación estudios"
+    amount_small: "Importes pequeños"
+    amount_leasing: "Alquiler con opción de compra"
+    
+    duration: "Duración de reembolso"
+    duration_flexible: "Duración flexible"
+    duration_adaptable: "Duración adaptable"
+    duration_temporary: "Solución temporal"
+    duration_adapted: "Duración adaptada"
+    duration_contract: "Contrato flexible"
+    duration_flexible_repayment: "Reembolso flexible"
+    duration_modular: "Duración modular"
+    duration_extended: "Reembolso escalonado"
+    duration_long: "Duración alargada"
+    duration_business: "Duración business"
+    duration_short: "Duración corta"
+    
+    contribution: "Aporte personal"
+    contribution_none: "Sin aporte"
+    
+    insurance: "Seguro de prestatario"
+    insurance_travel: "Seguro de viaje incluido"
+    
+    guarantee: "Garantía hipotecaria"
+    guarantee_none: "Sin garantía"
+    guarantee_sold_property: "Garantía sobre bien vendido"
+    guarantee_parental: "Aval parental"
+    
+    usage: "Uso libre"
+    usage_specialized: "Uso especializado"
+    usage_versatile: "Uso polivalente"
+    
+    release: "Desbloqueo progresivo"
+    
+    eco: "Compatible Eco-PTZ"
+    tax: "Ventajas fiscales"
+    
+    repayment: "Reembolso al final"
+    
+    financing: "Financiación integral"
+    vehicles: "Vehículos nuevos y usados"
+    
+    option: "Doble opción final"
+    
+    justification: "Sin justificante requerido"
+    speed: "Desbloqueo rápido"
+    
+    partners: "Red de socios"
+    partnerships: "Alianzas con agencias"
+    
+    savings: "Ahorros importantes"
+    additional: "Tesorería adicional"
+    
+    renewal: "Reconstitución automática"
+    freedom: "Uso totalmente libre"
+    access: "Acceso múltiple"
+    
+    sectors: "Todos los sectores de actividad"
+    
+    deferment: "Diferimiento de reembolso"
+    
+    conditions: "Condiciones simplificadas"
+    inclusion: "Inclusión financiera"
+
+  hero:
+    badge: "Soluciones de Financiación"
+    stats:
+      taux_min: "Tasa mínima"
+      reponse: "Respuesta" 
+      types: "Tipos de crédito"
+    actions:
+      simuler: "Simular"
+      demander: "Solicitar"
+
+  categories:
+    header:
+      title: "Nuestras Soluciones de Financiación"
+      subtitle: "Tasas competitivas para todos sus proyectos"
+    
+    immobilier_habitat:
+      title: "Inmobiliario & Hábitat"
+      subtitle: "Financie su patrimonio inmobiliario"
+      
+      credit_immobilier:
+        title: "Crédito Inmobiliario"
+        description: "Residencia principal e inversión de alquiler. Financie hasta el 100% de su proyecto inmobiliario con condiciones preferenciales."
+        rate: "{rate}%"
+        rate_label: "TAEG*"
+        features:
+          amount: "De 50.000€ a 1.000.000€ para financiar su residencia principal o su inversión de alquiler."
+          duration: "Escalone sus reembolsos de 5 a 30 años según su capacidad financiera y su proyecto inmobiliario."
+          contribution: "Se requiere un aporte mínimo del 10%, incluyendo gastos notariales y garantías bancarias."
+          insurance: "Protección completa incluida que cubre fallecimiento, invalidez e incapacidad laboral."
+        actions:
+          learn_more: "Saber más"
+          apply: "Hacer mi solicitud"
+      
+      pret_hypothecaire:
+        title: "Préstamo Hipotecario"
+        description: "Garantía sobre su bien inmobiliario existente. Solución flexible para todos sus proyectos con un bien en garantía."
+        rate: "{rate}%"
+        rate_label: "TAEG*"
+        features:
+          amount: "Entre 20.000€ y 500.000€ utilizando su bien inmobiliario como garantía hipotecaria."
+          duration: "Reembolso de 5 a 25 años adaptado a su situación financiera y sus objetivos."
+          guarantee: "Su bien inmobiliario sirve de garantía, permitiendo tasas preferenciales."
+          usage: "Ningún justificante de uso requerido - inversión, obras, consolidación de deudas."
+        actions:
+          learn_more: "Saber más"
+          apply: "Hacer mi solicitud"
+      
+      credit_travaux:
+        title: "Crédito Obras"
+        description: "Renovación y mejora del hábitat. Transforme su vivienda según sus deseos con una financiación adaptada."
+        rate: "{rate}%"
+        rate_label: "TAEG*"
+        features:
+          amount: "De 1.000€ a 150.000€ para todos sus proyectos de renovación y mejora del hábitat."
+          duration: "Reembolso flexible de 6 meses a 15 años según la amplitud de sus obras."
+          guarantee: "Crédito sin hipoteca ni aval, basado únicamente en su capacidad de reembolso."
+          release: "Los fondos se liberan progresivamente según el avance de sus obras."
+        actions:
+          learn_more: "Saber más"
+          apply: "Hacer mi solicitud"
+      
+      actions:
+          learn_more: "Saber más"
+          apply: "Hacer mi solicitud"
+      
+      amelioration_habitat:
+        title: "Mejora del Hábitat"
+        description: "Modernización y equipamiento. Mejore el confort y el rendimiento energético de su vivienda."
+        rate: "{rate}%"
+        rate_label: "TAEG*"
+        features:
+          amount: "Entre 500€ y 75.000€ para modernizar y mejorar la eficiencia energética de su vivienda."
+          duration: "Escalone sus pagos de 6 meses a 10 años según su presupuesto y la naturaleza de las mejoras."
+          eco: "Acumulable con el Préstamo a Tasa Cero ecológico para maximizar su financiación."
+          tax: "Aproveche los créditos fiscales disponibles para la transición energética de su hábitat."
+        actions:
+          learn_more: "Saber más"
+          apply: "Hacer mi solicitud"
+      
+      credit_relais:
+        title: "Crédito Puente"
+        description: "Transición entre compra y venta. Compre su nueva vivienda antes de haber vendido la anterior con total tranquilidad."
+        rate: "{rate}%"
+        rate_label: "TAEG*"
+        features:
+          amount: "De 50.000€ a 2.000.000€ para facilitar la compra de su nuevo bien antes de la venta del anterior."
+          duration: "Crédito de transición de 6 a 24 meses mientras finaliza la venta de su bien actual."
+          repayment: "Solo paga los intereses durante la duración, el capital se reembolsa con la venta."
+          guarantee: "Su vivienda actual sirve de garantía para asegurar la financiación puente."
+        actions:
+          learn_more: "Saber más"
+          apply: "Hacer mi solicitud"
+    
+    automobile_mobilite:
+      title: "Automóvil & Movilidad"
+      subtitle: "Financie su vehículo y movilidad"
+      
+      credit_auto:
+        title: "Crédito Auto"
+        description: "Vehículos nuevos y de ocasión. Financie su movilidad con condiciones preferenciales y un servicio completo."
+        rate: "{rate}%"
+        rate_label: "TAEG*"
+        features:
+          amount: "De 5.000€ a 100.000€ para la compra de su coche nuevo o de ocasión con las mejores condiciones."
+          duration: "Reembolso en 12 a 96 meses según su presupuesto y el valor del vehículo elegido."
+          financing: "Posibilidad de financiar hasta el 100% del precio de compra, accesorios y seguros incluidos."
+          vehicles: "Solución completa para todos los tipos de vehículos con servicio de recogida incluido."
+        actions:
+          learn_more: "Saber más"
+          apply: "Hacer mi solicitud"
+      
+      leasing_automobile:
+        title: "Leasing Automovilístico"
+        description: "Alquiler con opción de compra. Conduzca un vehículo nuevo con mensualidades reducidas y una opción de compra."
+        rate: "{rate}%"
+        rate_label: "TAEG*"
+        features:
+          amount: "De 10.000€ a 80.000€ para conducir un vehículo nuevo sin compromiso de compra inicial."
+          duration: "Duración de 24 a 60 meses con mensualidades reducidas comparado con un crédito clásico."
+          contribution: "Posibilidad de comenzar su leasing con 0€ de aporte según su perfil y el vehículo elegido."
+          option: "Al final del contrato, elija comprar el vehículo o devolverlo en perfecto estado."
+        actions:
+          learn_more: "Saber más"
+          apply: "Hacer mi solicitud"
+    
+    personnel_consommation:
+      title: "Personal y Consumo"
+      subtitle: "Realice todos sus proyectos personales"
+      
+      credit_personnel:
+        title: "Crédito Personal"
+        description: "Proyectos personales sin justificante. Libre utilización de su crédito para todos sus proyectos de vida."
+        rate: "{rate}%"
+        rate_label: "TAEG*"
+        features:
+          amount: "De 1.000€ a 75.000€ para financiar todos sus proyectos personales sin tener que justificar el uso de los fondos."
+          duration: "Escalone sus pagos en 12 a 84 meses según su capacidad financiera y sus preferencias."
+          justification: "Simplicidad máxima - solo se evalúa su capacidad de reembolso."
+          speed: "Respuesta en 24h y puesta a disposición de fondos inmediata tras la aceptación del expediente."
+        actions:
+          learn_more: "Saber más"
+          apply: "Hacer mi solicitud"
+      
+      credit_consommation:
+        title: "Crédito de Consumo"
+        description: "Equipamiento y bienes de consumo. Financie sus compras cotidianas con condiciones ventajosas."
+        rate: "{rate}%"
+        rate_label: "TAEG*"
+        features:
+          amount: "De 500€ a 35.000€ para la compra de bienes de equipamiento y productos de consumo corriente."
+          duration: "Reembolso en 6 a 60 meses adaptado al tipo de compra y a su presupuesto mensual."
+          usage: "Crédito dedicado al equipamiento del hogar, electrodomésticos, informática y mobiliario."
+          partners: "Más de 500 tiendas asociadas para beneficiarse de ofertas exclusivas y facilidades de pago."
+        actions:
+          learn_more: "Saber más"
+          apply: "Hacer mi solicitud"
+      
+      credit_voyage:
+        title: "Crédito Viaje"
+        description: "Financie sus viajes y escapadas. Realice sus sueños de evasión con un crédito especialmente diseñado para el viaje."
+        rate: "{rate}%"
+        rate_label: "TAEG*"
+        features:
+          amount: "De 500€ a 25.000€ para concretar todos sus proyectos de evasión y descubrimientos a través del mundo."
+          duration: "Disfrute de sus vacaciones y reembolse tranquilamente en 6 a 60 meses según sus posibilidades."
+          insurance: "Protección completa con seguro de cancelación, repatriación y asistencia 24h/7d."
+          partnerships: "Benéficiese de ofertas preferenciales en nuestras agencias de viaje asociadas en todo el mundo."
+        actions:
+          learn_more: "Saber más"
+          apply: "Hacer mi solicitud"
+      
+      regroupement_credits:
+        title: "Reagrupación de Créditos"
+        description: "Consolide sus créditos existentes. Simplifique su gestión y reduzca sus mensualidades en un solo crédito."
+        rate: "{rate}%"
+        rate_label: "TAEG*"
+        features:
+          amount: "De 3.000€ a 200.000€ para reagrupar todos sus créditos en curso en una sola mensualidad simplificada."
+          duration: "Escalone sus reembolsos en 12 a 180 meses para reducir significativamente sus cargas mensuales."
+          savings: "Reducción posible de sus mensualidades hasta el 60% gracias a la renegociación y alargamiento."
+          additional: "Posibilidad de añadir una tesorería suplementaria para financiar nuevos proyectos."
+        actions:
+          learn_more: "Saber más"
+          apply: "Hacer mi solicitud"
+      
+      credit_renouvelable:
+        title: "Crédito Renovable"
+        description: "Reserva de dinero disponible. Una solución flexible que se renueva a medida de sus reembolsos."
+        rate: "{rate}%"
+        rate_label: "TAEG*"
+        features:
+          amount: "De 500€ a 6.000€ de tesorería permanente que se reconstituye automáticamente a medida de sus reembolsos."
+          renewal: "Cuanto más reembolsa, más se reconstituye su crédito para nuevas compras o imprevistos."
+          freedom: "Ninguna justificación de compra, utilice su reserva cuando quiera, como quiera."
+          access: "Disponible por tarjeta de crédito o transferencia bancaria, para una flexibilidad máxima cotidiana."
+        actions:
+          learn_more: "Saber más"
+          apply: "Hacer mi solicitud"
+    
+    professionnel_specialise:
+      title: "Profesional y Especializado"
+      subtitle: "Soluciones dedicadas a necesidades específicas"
+      
+      credit_professionnel:
+        title: "Crédito Profesional"
+        description: "Financiación para profesionales. Desarrolle su actividad con soluciones de financiación adaptadas a las empresas."
+        rate: "{rate}%"
+        rate_label: "TAEG*"
+        features:
+          amount: "De 5.000€ a 500.000€ para acompañar el desarrollo de su actividad profesional y sus inversiones."
+          duration: "Reembolso en 12 a 84 meses adaptado a los ciclos económicos y a la rentabilidad de su empresa."
+          usage: "Financiación de equipamientos profesionales, vehículos utilitarios, fondo de maniobra y necesidades de tesorería."
+          sectors: "Soluciones adaptadas a artesanos, comerciantes, profesiones liberales y PYME de todos los ámbitos."
+        actions:
+          learn_more: "Saber más"
+          apply: "Hacer mi solicitud"
+      
+      credit_etudiant:
+        title: "Crédito Estudiantil"
+        description: "Financiación de estudios superiores. Invierta en su futuro con condiciones preferenciales."
+        rate: "{rate}%"
+        rate_label: "TAEG*"
+        features:
+          amount: "De 1.000€ a 60.000€ para financiar sus estudios superiores, gastos de escolaridad y gastos de vida estudiantil."
+          duration: "Duración de 12 meses a 10 años para adaptarse a su futura situación profesional e ingresos."
+          deferment: "Posibilidad de diferir el reembolso hasta 7 años durante la duración de sus estudios."
+          guarantee: "Securización del préstamo por aval de los padres o tutores legales para las mejores condiciones."
+        actions:
+          learn_more: "Saber más"
+          apply: "Hacer mi solicitud"
+      
+      microcredit:
+        title: "Microcrédito"
+        description: "Importes pequeños para proyectos específicos. Solución de inclusión financiera para todos sus pequeños proyectos."
+        rate: "{rate}%"
+        rate_label: "TAEG*"
+        features:
+          amount: "De 100€ a 5.000€ para financiar sus proyectos de proximidad y necesidades esenciales cotidianas."
+          duration: "Reembolso rápido en 6 a 48 meses para evitar el endeudamiento a largo plazo y recuperar rápidamente su autonomía."
+          conditions: "Procedimiento aligerado y criterios de aceptación adaptados a situaciones particulares e ingresos modestos."
+          inclusion: "Solución accesible a todos los perfiles, incluso en situación de precariedad o exclusión bancaria."
+        actions:
+          learn_more: "Saber más"
+          apply: "Hacer mi solicitud"
+
+  advantages:
+    header:
+      title: "¿Por qué elegir %company_name%?"
+      subtitle: "La experiencia y confianza de más de 2 millones de clientes"
+    
+    items:
+      competitive_rates:
+        number: "01"
+        title: "Tipos Competitivos"
+        description: "Nuestros tipos se negocian directamente con nuestros socios bancarios para ofrecerle las mejores condiciones del mercado."
+      
+      express_response:
+        number: "02"
+        title: "Respuesta Exprés"
+        description: "Acuerdo de principio en 24h gracias a nuestro sistema de análisis automatizado y nuestra red de socios."
+      
+      expert_support:
+        number: "03"
+        title: "Acompañamiento Experto"
+        description: "Nuestros consejeros especializados le acompañan desde la simulación hasta la firma en el notario."
+      
+      custom_solutions:
+        number: "04"
+        title: "Soluciones a Medida"
+        description: "15 tipos de créditos adaptados a todos sus proyectos, desde inmobiliario hasta necesidades profesionales."
+    
+    stats:
+      clients:
+        number: "2M+"
+        label: "Clientes"
+      
+      years:
+        number: "15+"
+        label: "Años"
+      
+      satisfaction:
+        number: "98%"
+        label: "Satisfacción"
+      
+      response_time:
+        number: "24h"
+        label: "Respuesta"
+
+  cta:
+    title: "¿Listo para concretar su proyecto?"
+    subtitle: "Simule su crédito en 2 minutos y obtenga una respuesta inmediata"
+    
+    actions:
+      simulate:
+        text: "Simular mi crédito"
+      
+      apply:
+        text: "Hacer mi solicitud"

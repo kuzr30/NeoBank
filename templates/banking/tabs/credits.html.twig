@@ -1,0 +1,1008 @@
+<style>
+/* Credits (Crédits) Specific Styles */
+.banking__credit-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.banking__credit-stat {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.banking__credit-stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.banking__credit-stat-label {
+    font-size: 13px;
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+.banking__credits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.banking__credit-card {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    padding: 24px;
+    transition: box-shadow 0.2s ease;
+}
+
+.banking__credit-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.banking__credit-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.banking__credit-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.banking__credit-icon--mortgage {
+    background: linear-gradient(135deg, #3498db, #5dade2);
+}
+
+.banking__credit-icon--auto {
+    background: linear-gradient(135deg, #e67e22, #f39c12);
+}
+
+.banking__credit-icon--personal {
+    background: linear-gradient(135deg, #9b59b6, #bb6bd9);
+}
+
+.banking__credit-icon-svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+.banking__credit-info {
+    flex: 1;
+}
+
+.banking__credit-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 4px;
+}
+
+.banking__credit-ref {
+    font-size: 12px;
+    color: #7f8c8d;
+    font-family: monospace;
+    margin: 0;
+}
+
+.banking__credit-rate {
+    font-size: 14px;
+    font-weight: 600;
+    color: #e67e22;
+}
+
+.banking__credit-amount {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 16px;
+}
+
+.banking__credit-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.banking__credit-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.banking__credit-label {
+    font-size: 12px;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.banking__credit-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.banking__credit-progress {
+    margin-bottom: 20px;
+}
+
+.banking__credit-progress-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.banking__credit-progress-text {
+    font-size: 13px;
+    color: #7f8c8d;
+}
+
+.banking__credit-progress-percent {
+    font-size: 13px;
+    font-weight: 600;
+    color: #27ae60;
+}
+
+.banking__credit-progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e1e8ed;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.banking__credit-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #27ae60, #2ecc71);
+    transition: width 0.3s ease;
+}
+
+.banking__credit-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.banking__credit-btn {
+    flex: 1;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.banking__credit-btn--primary {
+    background: #0066cc;
+    color: white;
+}
+
+.banking__credit-btn--primary:hover {
+    background: #0052a3;
+}
+
+.banking__credit-btn--secondary {
+    background: #f8f9fa;
+    color: #0066cc;
+    border: 1px solid #e1e8ed;
+}
+
+.banking__credit-btn--secondary:hover {
+    background: #f1f5f9;
+    border-color: #0066cc;
+}
+
+.banking__credit-offers {
+    background: #f8f9fa;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+}
+
+.banking__credit-offers-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 16px;
+}
+
+.banking__credit-offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.banking__credit-offer {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.banking__credit-offer:hover {
+    border-color: #0066cc;
+    box-shadow: 0 4px 16px rgba(0,102,204,0.1);
+}
+
+.banking__credit-offer-type {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.banking__credit-offer-rate {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0066cc;
+    margin-bottom: 12px;
+}
+
+.banking__credit-offer-description {
+    font-size: 13px;
+    color: #7f8c8d;
+    margin-bottom: 16px;
+}
+
+.banking__credit-offer-btn {
+    width: 100%;
+    padding: 10px 16px;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.banking__credit-offer-btn:hover {
+    background: #0052a3;
+}
+
+.banking__payment-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.banking__payment-type {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.banking__payment-ref {
+    font-size: 12px;
+    color: #7f8c8d;
+    font-family: monospace;
+}
+
+.banking__payment-next {
+    font-size: 13px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Additional Credit Styles */
+.banking__credit-reference {
+    font-size: 12px;
+    color: #7f8c8d;
+    font-family: monospace;
+    margin: 0 0 4px 0;
+}
+
+.banking__credit-property {
+    font-size: 13px;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.banking__credit-amounts {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.banking__credit-amount-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.banking__credit-amount-item:last-child {
+    margin-bottom: 0;
+}
+
+.banking__credit-amount-label {
+    font-size: 13px;
+    color: #7f8c8d;
+}
+
+.banking__credit-amount-value {
+    font-size: 13px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.banking__credit-amount-value--main {
+    font-size: 16px;
+    font-weight: 700;
+    color: #e67e22;
+}
+
+.banking__credit-progress {
+    margin-bottom: 20px;
+}
+
+.banking__credit-progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e1e8ed;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.banking__credit-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #27ae60, #2ecc71);
+    transition: width 0.3s ease;
+}
+
+.banking__credit-progress-text {
+    font-size: 12px;
+    color: #27ae60;
+    font-weight: 600;
+    text-align: center;
+}
+
+.banking__credit-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.banking__credit-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.banking__credit-detail-label {
+    font-size: 12px;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.banking__credit-detail-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Credit Offers Section */
+.banking__offer-card {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.banking__offer-card:hover {
+    border-color: #0066cc;
+    box-shadow: 0 4px 20px rgba(0,102,204,0.1);
+    transform: translateY(-2px);
+}
+
+.banking__offer-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0066cc, #3b82f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px auto;
+}
+
+.banking__offer-icon-svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+.banking__offer-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+.banking__offer-description {
+    font-size: 14px;
+    color: #7f8c8d;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.banking__offer-rate {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0066cc;
+    margin-bottom: 16px;
+}
+
+.banking__offer-features {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.banking__offer-feature {
+    font-size: 13px;
+    color: #2c3e50;
+    margin-bottom: 4px;
+}
+
+.banking__offer-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.banking__offer-btn:hover {
+    background: #0052a3;
+}
+
+/* Loan Details for Table */
+.banking__loan-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.banking__loan-name {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.banking__loan-ref {
+    font-size: 12px;
+    color: #7f8c8d;
+    font-family: monospace;
+}
+
+/* Section Headers */
+.banking__section-header {
+    margin: 32px 0 16px 0;
+}
+
+.banking__section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 4px;
+}
+
+.banking__section-subtitle {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin: 0;
+}
+
+/* Action buttons */
+.banking__action-primary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.banking__action-primary:hover {
+    background: #0052a3;
+}
+
+.banking__action-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Amount styling */
+.banking__amount--credit {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.banking__amount--debit {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+/* Status styling */
+.banking__status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.banking__status--completed {
+    background: rgba(39, 174, 96, 0.1);
+    color: #27ae60;
+}
+
+.banking__status--processing {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+
+.banking__status--pending {
+    background: rgba(149, 165, 166, 0.1);
+    color: #95a5a6;
+}
+
+.banking__status--rejected {
+    background: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+}
+
+.banking__status--contract {
+    background: rgba(52, 152, 219, 0.1);
+    color: #3498db;
+}
+
+.banking__status--signed {
+    background: rgba(155, 89, 182, 0.1);
+    color: #9b59b6;
+}
+
+.banking__status--validated {
+    background: rgba(46, 204, 113, 0.1);
+    color: #2ecc71;
+}
+
+.banking__status--disbursed {
+    background: rgba(22, 160, 133, 0.1);
+    color: #16a085;
+}
+
+.banking__status--requires-docs {
+    background: rgba(230, 126, 34, 0.1);
+    color: #e67e22;
+}
+
+.banking__status--cancelled {
+    background: rgba(127, 140, 141, 0.1);
+    color: #7f8c8d;
+}
+
+/* Empty State */
+.banking__empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banking__empty-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px auto;
+}
+
+.banking__empty-icon-svg {
+    width: 36px;
+    height: 36px;
+    color: #95a5a6;
+}
+
+.banking__empty-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+.banking__empty-description {
+    font-size: 16px;
+    color: #7f8c8d;
+    line-height: 1.5;
+    max-width: 500px;
+    margin: 0 auto 32px auto;
+}
+
+.banking__empty-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.banking__empty-actions .banking__action-primary,
+.banking__empty-actions .banking__credit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.banking__empty-actions .banking__action-primary {
+    background: #0066cc;
+    color: white;
+    border: none;
+}
+
+.banking__empty-actions .banking__action-primary:hover {
+    background: #0052a3;
+    transform: translateY(-1px);
+}
+
+.banking__empty-actions .banking__credit-btn--secondary {
+    background: #f8f9fa;
+    color: #0066cc;
+    border: 1px solid #e1e8ed;
+}
+
+.banking__empty-actions .banking__credit-btn--secondary:hover {
+    background: #f1f5f9;
+    border-color: #0066cc;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+    .banking__empty-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .banking__empty-actions .banking__action-primary,
+    .banking__empty-actions .banking__credit-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.banking__balance-display a {
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .banking__credits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .banking__credit-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .banking__credit-amounts {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<!-- Crédits -->
+<section class="banking__content">
+    
+    <!-- Credits Header -->
+    <div class="banking__operations-header">
+        <div class="banking__account-summary">
+            <h1 class="banking__account-title">{{ tp('banking_credits.header.title', [], 'banking_credits') }}</h1>
+            <div class="banking__account-details">
+                <span class="banking__account-type">{{ tp('banking_credits.header.breadcrumb_banking', [], 'banking_credits') }}</span>
+                <span class="banking__account-updated">{{ tp('banking_credits.header.last_update', [], 'banking_credits') }} : {{ "now"|date('d/m/Y à H:i') }}</span>
+            </div>
+        </div>
+        <div class="banking__balance-display">
+            <a href="{{ path('credit_application_start') }}" class="banking__action-primary">
+                {{ ux_icon('heroicons:plus', {'class': 'banking__action-icon'}) }}
+                {{ tp('banking_credits.available_credits.apply', [], 'banking_credits') }}
+            </a>
+        </div>
+    </div>
+
+    {% if hasCredits or hasApplications or (creditSubAccounts is defined and creditSubAccounts|length > 0) %}
+        <!-- Credit Summary -->
+        <div class="banking__credit-summary">
+            <div class="banking__credit-stat">
+                <div class="banking__credit-stat-value">{{ creditStats.validatedCount }}</div>
+                <div class="banking__credit-stat-label">{{ tp('banking_credits.statistics.total_credits', [], 'banking_credits') }}</div>
+            </div>
+            <div class="banking__credit-stat">
+                <div class="banking__credit-stat-value">{{ creditStats.totalCreditAmount|number_format(2, ',', ' ') }} €</div>
+                <div class="banking__credit-stat-label">{{ tp('banking_credits.statistics.total_amount', [], 'banking_credits') }}</div>
+            </div>
+            <div class="banking__credit-stat">
+                <div class="banking__credit-stat-value">{{ creditStats.totalCreditBalance|number_format(2, ',', ' ') }} €</div>
+                <div class="banking__credit-stat-label">{{ tp('banking_credits.statistics.total_remaining', [], 'banking_credits') }}</div>
+            </div>
+            <div class="banking__credit-stat">
+                <div class="banking__credit-stat-value">{{ creditStats.totalAvailableBalance|number_format(2, ',', ' ') }} €</div>
+                <div class="banking__credit-stat-label">{{ tp('banking_credits.statistics.available_balance', [], 'banking_credits') }}</div>
+            </div>
+            <div class="banking__credit-stat">
+                <div class="banking__credit-stat-value">{{ creditStats.totalMonthlyPayments|number_format(2, ',', ' ') }} €</div>
+                <div class="banking__credit-stat-label">{{ tp('banking_credits.statistics.monthly_payments', [], 'banking_credits') }}</div>
+            </div>
+        </div>
+
+        {% if creditSubAccounts is defined and creditSubAccounts|length > 0 %}
+            <!-- Available Credit Accounts -->
+            <div class="banking__section-header">
+                <h2 class="banking__section-title">{{ tp('banking_credits.available_credits.title', [], 'banking_credits') }}</h2>
+                <p class="banking__section-subtitle">{{ tp('banking_credits.available_credits.subtitle', [], 'banking_credits') }}</p>
+            </div>
+
+            <div class="banking__credits-grid">
+                {% for subAccount in creditSubAccounts %}
+                    <div class="banking__credit-card" style="border-left: 4px solid #16a085;">
+                        <div class="banking__credit-header">
+                            <div class="banking__credit-icon" style="background: linear-gradient(135deg, #16a085, #1abc9c);">
+                                {{ ux_icon('heroicons:banknotes', {'class': 'banking__credit-icon-svg'}) }}
+                            </div>
+                            <div class="banking__credit-info">
+                                <h3 class="banking__credit-name">{{ tp('banking_credits.available_credits.credit_account', [], 'banking_credits') }}</h3>
+                                <p class="banking__credit-ref">{{ subAccount.account.accountNumber }}</p>
+                            </div>
+                            <div class="banking__status banking__status--disbursed">{{ tp('banking_credits.available_credits.available', [], 'banking_credits') }}</div>
+                        </div>
+                        
+                        <div class="banking__credit-amount" style="color: #16a085;">
+                            {{ subAccount.amount|number_format(2, ',', ' ') }} €
+                        </div>
+
+                        <div class="banking__credit-details">
+                            <div class="banking__credit-detail">
+                                <span class="banking__credit-label">{{ tp('banking_credits.labels.status', [], 'banking_credits') }}</span>
+                                <span class="banking__credit-value" style="color: #16a085;">{{ tp('banking_credits.available_credits.funds_released', [], 'banking_credits') }}</span>
+                            </div>
+                        </div>
+
+                        <div class="banking__credit-actions">
+                            <a href="{{ path('banking_credit_transfer_form', {id: subAccount.id}) }}" 
+                               class="banking__credit-btn banking__credit-btn--primary">
+                                {{ ux_icon('heroicons:arrow-down-circle', {'class': 'banking__action-icon'}) }}
+                                {{ tp('banking_credits.available_credits.transfer_to_main', [], 'banking_credits') }}
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% if hasCredits %}
+            <!-- Active Credits -->
+            <div class="banking__section-header">
+                <h2 class="banking__section-title">{{ tp('banking_credits.active_credits.title', [], 'banking_credits') }}</h2>
+            </div>
+
+            <div class="banking__credits-grid">
+                {% for credit in approvedCredits %}
+                    <div class="banking__credit-card" style="cursor: pointer;" onclick="window.location.href='{{ path('banking_credit_application_detail', {id: credit.id}) }}'">
+                        <div class="banking__credit-header">
+                            <div class="banking__credit-icon banking__credit-icon--{{ credit.creditType.value == 'mortgage' ? 'mortgage' : (credit.creditType.value == 'auto' ? 'auto' : 'personal') }}">
+                                {% if credit.creditType.value == 'mortgage' %}
+                                    {{ ux_icon('heroicons:home', {'class': 'banking__credit-icon-svg'}) }}
+                                {% elseif credit.creditType.value == 'auto' %}
+                                    {{ ux_icon('heroicons:truck', {'class': 'banking__credit-icon-svg'}) }}
+                                {% else %}
+                                    {{ ux_icon('heroicons:credit-card', {'class': 'banking__credit-icon-svg'}) }}
+                                {% endif %}
+                            </div>
+                            <div class="banking__credit-info">
+                                <h3 class="banking__credit-name">{{ tp(credit.creditType.getLabel(), [], 'credit_step_forms') }}</h3>
+                                <p class="banking__credit-reference">{{ tp('banking_credits.applications.reference', [], 'banking_credits') }} {{ credit.id|str_pad(6, '0', 'left') }}</p>
+                                {% if credit.creditType.value == 'mortgage' %}
+                                    <p class="banking__credit-property">{{ credit.address ?: tp('banking_credits.active_credits.real_estate', [], 'banking_credits') }}</p>
+                                {% endif %}
+                            </div>
+                            <div class="banking__credit-rate">1,45%</div>
+                        </div>
+                        
+                        <div class="banking__credit-amounts">
+                            <div class="banking__credit-amount-item">
+                                <span class="banking__credit-amount-label">{{ tp('banking_credits.labels.initial_capital', [], 'banking_credits') }}</span>
+                                <span class="banking__credit-amount-value">{{ credit.loanAmount|number_format(2, ',', ' ') }} €</span>
+                            </div>
+                            <div class="banking__credit-amount-item">
+                                <span class="banking__credit-amount-label">{{ tp('banking_credits.active_credits.remaining_capital', [], 'banking_credits') }}</span>
+                                <span class="banking__credit-amount-value banking__credit-amount-value--main">{{ credit.loanAmount|number_format(2, ',', ' ') }} €</span>
+                            </div>
+                            <div class="banking__credit-amount-item">
+                                <span class="banking__credit-amount-label">{{ tp('banking_credits.active_credits.monthly_payment', [], 'banking_credits') }}</span>
+                                <span class="banking__credit-amount-value">{{ credit.monthlyPayment|number_format(2, ',', ' ') }} €</span>
+                            </div>
+                        </div>
+
+                        <div class="banking__credit-progress">
+                            <div class="banking__credit-progress-bar">
+                                <div class="banking__credit-progress-fill" style="width: 5%"></div>
+                            </div>
+                            <div class="banking__credit-progress-text">{{ tp('banking_credits.active_credits.progress', [], 'banking_credits') }}</div>
+                        </div>
+
+                        <div class="banking__credit-details">
+                            <div class="banking__credit-detail">
+                                <span class="banking__credit-detail-label">{{ tp('banking_credits.labels.duration', [], 'banking_credits') }}</span>
+                                <span class="banking__credit-detail-value">{{ credit.duration }} {{ tp('banking_credits.labels.months', [], 'banking_credits') }}</span>
+                            </div>
+                            <div class="banking__credit-detail">
+                                <span class="banking__credit-detail-label">{{ tp('banking_credits.labels.start_date', [], 'banking_credits') }}</span>
+                                <span class="banking__credit-detail-value">{{ credit.createdAt|date('d/m/Y') }}</span>
+                            </div>
+                            <div class="banking__credit-detail">
+                                <span class="banking__credit-detail-label">{{ tp('banking_credits.labels.status', [], 'banking_credits') }}</span>
+                                <span class="banking__credit-detail-value">{{ tp(credit.status.getLabel(), [], 'enums') }}</span>
+                            </div>
+                        </div>
+
+                        <div class="banking__credit-actions" onclick="event.stopPropagation();">
+                            {% if credit.status.value in ['funds_disbursed'] and credit.loan %}
+                                <a href="{{ path('banking_credit_amortization', {id: credit.loan.id}) }}" class="banking__credit-btn banking__credit-btn--primary">{{ tp('banking_credits.active_credits.view_amortization', [], 'banking_credits') }}</a>
+                            {% endif %}
+                            <a href="{{ path('banking_credit_application_detail', {id: credit.id}) }}" class="banking__credit-btn banking__credit-btn--secondary">{{ tp('banking_credits.active_credits.view_details', [], 'banking_credits') }}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <!-- Applications History -->
+        {% if creditApplications|length > 0 %}
+            <div class="banking__section-header">
+                <h2 class="banking__section-title">{{ tp('banking_credits.applications.title', [], 'banking_credits') }}</h2>
+            </div>
+
+            <div class="banking__operations">
+                <table class="banking__table">
+                    <thead class="banking__table-head">
+                        <tr>
+                            <th class="banking__table-th">{{ tp('banking_credits.applications.date', [], 'banking_credits') }}</th>
+                            <th class="banking__table-th">{{ tp('banking_credits.applications.credit_type', [], 'banking_credits') }}</th>
+                            <th class="banking__table-th">{{ tp('banking_credits.applications.amount', [], 'banking_credits') }}</th>
+                            <th class="banking__table-th">{{ tp('banking_credits.labels.duration', [], 'banking_credits') }}</th>
+                            <th class="banking__table-th">{{ tp('banking_credits.active_credits.monthly_payment', [], 'banking_credits') }}</th>
+                            <th class="banking__table-th">{{ tp('banking_credits.applications.status', [], 'banking_credits') }}</th>
+                        </tr>
+                    </thead>
+                    <tbody class="banking__table-body">
+                        {% for application in creditApplications %}
+                            <tr class="banking__table-row banking__table-row--clickable" 
+                                onclick="window.location.href='{{ path('banking_credit_application_detail', {id: application.id}) }}'">
+                                <td class="banking__table-td">{{ application.createdAt|date('d/m/Y') }}</td>
+                                <td class="banking__table-td">
+                                    <div class="banking__loan-detail">
+                                        <div class="banking__loan-name">{{ tp(application.creditType.getLabel(), [], 'credit_step_forms') }}</div>
+                                        <div class="banking__loan-ref">{{ application.id|str_pad(6, '0', 'left') }}</div>
+                                    </div>
+                                </td>
+                                <td class="banking__table-td">{{ application.loanAmount|number_format(2, ',', ' ') }} €</td>
+                                <td class="banking__table-td">{{ application.duration }} {{ tp('banking_credits.labels.months', [], 'banking_credits') }}</td>
+                                <td class="banking__table-td">{{ application.monthlyPayment|number_format(2, ',', ' ') }} €</td>
+                                <td class="banking__table-td">
+                                    <span class="banking__status {{ application.status.getBadgeClass() }}">
+                                        {{ tp(application.status.getLabel(), [], 'enums') }}
+                                    </span>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            {% if creditApplications|length > 10 %}
+                <div class="banking__pagination">
+                    <button class="banking__page-btn banking__page-btn--disabled">{{ tp('banking_credits.pagination.previous', [], 'banking_credits') }}</button>
+                    <span class="banking__page-info">{{ tp('banking_credits.pagination.page_info', {page: 1, total: (creditApplications|length / 10)|round(0, 'ceil'), count: creditApplications|length}, 'banking_credits') }}</span>
+                    <button class="banking__page-btn">{{ tp('banking_credits.pagination.next', [], 'banking_credits') }}</button>
+                </div>
+            {% endif %}
+        {% endif %}
+
+    {% else %}
+        <!-- Empty State -->
+        <div class="banking__empty-state">
+            <div class="banking__empty-icon">
+                {{ ux_icon('heroicons:credit-card', {'class': 'banking__empty-icon-svg'}) }}
+            </div>
+            <h2 class="banking__empty-title">{{ tp('banking_credits.empty_state.title', [], 'banking_credits') }}</h2>
+            <p class="banking__empty-description">
+                {{ tp('banking_credits.empty_state.message', [], 'banking_credits') }}
+            </p>
+            <div class="banking__empty-actions">
+                <a href="{{ path('credit_application_start') }}" class="banking__action-primary">
+                    {{ ux_icon('heroicons:plus', {'class': 'banking__action-icon'}) }}
+                    {{ tp('banking_credits.available_credits.apply', [], 'banking_credits') }}
+                </a>
+                <a href="{{ path('credit_simulation_index') }}" class="banking__credit-btn banking__credit-btn--secondary">
+                    {{ ux_icon('heroicons:calculator', {'class': 'banking__action-icon'}) }}
+                    {{ tp('banking_credits.available_credits.simulate', [], 'banking_credits') }}
+                </a>
+            </div>
+        </div>
+    {% endif %}
+
+</section>
+
+<style>
+.banking__table-row--clickable {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.banking__table-row--clickable:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.banking__table-row--clickable:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+</style>

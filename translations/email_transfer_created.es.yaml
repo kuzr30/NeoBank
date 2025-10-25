@@ -1,0 +1,44 @@
+email_transfer_created:
+  title: "Transferencia creada con éxito"
+  
+  content:
+    page_title: "Transferencia bancaria iniciada"
+    greeting: "Hola {firstName} {lastName},"
+    
+    transfer_created:
+      title: "Solicitud de transferencia creada"
+      description: "Su solicitud de transferencia ha sido creada con éxito y está ahora en proceso de tratamiento seguro. El proceso de validación multi-etapas va a comenzar."
+    
+    transaction_details:
+      title: "Detalles de la transacción"
+      reference: "Referencia transferencia"
+      amount: "Importe a transferir"
+      amount_value: "{amount} €"
+      beneficiary_account: "Cuenta beneficiaria"
+      transfer_reason: "Motivo de la transferencia"
+      creation_date: "Fecha de creación"
+      created_at: "{createdAt}"
+    
+    validation_process:
+      title: "Proceso de validación seguro"
+      step1: "1. La administración genera códigos de validación sucesivos"
+      step2: "2. Notificación por email para cada nuevo código disponible"
+      step3: "3. Validación requerida en un plazo máximo de 6 horas"
+      step4: "4. Ejecución automática después de validación completa"
+    
+    tracking:
+      title: "Seguimiento de su transferencia"
+      view_details_button: "📊 Consultar los detalles de la transferencia"
+      access_instruction: "Acceda a su espacio bancario para seguir el progreso en tiempo real"
+    
+    security_info:
+      title: "Seguridad y trazabilidad"
+      description: "Todas las etapas de validación están registradas y aseguradas. Recibirá una confirmación final por email una vez que la transferencia sea ejecutada con éxito."
+    
+    supervision_note: "Nuestro equipo de seguridad bancaria supervisa el proceso para garantizar la conformidad de su transacción."
+    
+    footer: "<strong>%company_name% - Servicio Transferencias</strong><br>Notificación automática de creación de transferencia"
+  
+  log:
+    transfer_created: "Transferencia creada {transferId} por un importe de {amount}€"
+    email_sent: "Email de creación de transferencia enviado a {userEmail}"

@@ -1,0 +1,104 @@
+credit_consommation:
+  page:
+    title: "Crédit Consommation"
+    description: "Financer vos projets personnels avec notre crédit consommation. Taux avantageux et remboursement flexible."
+
+  hero:
+    title: "Crédit Consommation"
+    subtitle: "Réalisez tous vos projets personnels"
+    values:
+      taux: "{rate}% TAEG*"
+      montant: "75 000€"
+      duree: "10 ans"
+
+  section_1:
+    title: "Qu'est-ce qu'un crédit consommation ?"
+    content:
+      paragraph_1: "Le crédit consommation vous permet de financer tous vos projets personnels : achat d'une voiture, équipement de la maison, voyage, mariage ou toute autre dépense importante."
+      paragraph_2: "Solution flexible et rapide, ce crédit non affecté vous donne la liberté d'utiliser les fonds comme vous le souhaitez, sans avoir à justifier de leur utilisation."
+
+  features:
+    montant: "De 2 000€ à 75 000€"
+    montant_detail: "Selon vos besoins"
+    duree: "De 12 mois à 10 ans"
+    duree_detail: "Remboursement adapté"
+    taux: "À partir de {rate}% TAEG*"
+    taux_detail: "Taux compétitif garanti"
+    garantie: "Sans garantie"
+    garantie_detail: "Sur signature uniquement"
+
+  advantages:
+    liberte_usage:
+      title: "Liberté d'usage :"
+      text: "Aucune justification d'utilisation des fonds"
+    reponse_rapide:
+      title: "Réponse rapide :"
+      text: "Décision sous 48h et déblocage immédiat"
+    sans_garantie:
+      title: "Sans garantie :"
+      text: "Financement sur signature uniquement"
+    remboursement_anticipe:
+      title: "Remboursement anticipé :"
+      text: "Possible à tout moment sans pénalités"
+    mensualites_fixes:
+      title: "Mensualités fixes :"
+      text: "Budget maîtrisé sur toute la durée"
+
+  requirements:
+    conditions_octroi:
+      title: "Conditions d'octroi"
+      items:
+        majeur: "Être majeur et résider en France"
+        revenus: "Justifier de revenus réguliers"
+        endettement: "Taux d'endettement inférieur à 35%"
+        incidents: "Pas d'incidents de paiement"
+    criteres_eligibilite:
+      title: "Critères d'éligibilité"
+      items:
+        contrat: "CDI, CDD ou profession libérale"
+        anciennete: "Ancienneté professionnelle minimum 6 mois"
+        capacite: "Capacité de remboursement vérifiée"
+        age: "Âge maximum 75 ans en fin de prêt"
+
+  documents:
+    pieces_identite:
+      title: "Pièces d'identité"
+      items:
+        carte: "Carte d'identité ou passeport"
+        domicile: "Justificatif de domicile récent"
+        livret: "Livret de famille si marié(e)"
+    justificatifs_revenus:
+      title: "Justificatifs de revenus"
+      items:
+        bulletins: "3 derniers bulletins de salaire"
+        avis: "Dernier avis d'imposition"
+        contrat: "Contrat de travail"
+        attestation: "Attestation employeur"
+    informations_bancaires:
+      title: "Informations bancaires"
+      items:
+        releves: "3 derniers relevés de compte"
+        rib: "RIB du compte de domiciliation"
+        tableau: "Tableau d'amortissement crédits en cours"
+
+  legal:
+    title: "Informations légales importantes"
+    taeg:
+      title: "*TAEG :"
+      text: "Exemple représentatif : pour un crédit consommation de 15 000€ sur 60 mois au TAEG de 4,5%, vous remboursez 60 mensualités de 279€, soit un montant total de 16 740€ (coût du crédit : 1 740€)."
+    retractation:
+      title: "Délai de rétractation :"
+      text: "Vous disposez d'un délai de 14 jours pour renoncer à votre crédit."
+    remboursement:
+      title: "Remboursement anticipé :"
+      text: "Possible à tout moment, frais limités par la loi."
+    assurance:
+      title: "Assurance :"
+      text: "Facultative mais recommandée pour sécuriser vos remboursements."
+    fichage:
+      title: "Fichage :"
+      text: "En cas d'impayé, vous risquez d'être inscrit aux fichiers de la Banque de France."
+
+  cta:
+    title: "Concrétisez vos projets"
+    subtitle: "Obtenez votre crédit consommation rapidement et simplement"

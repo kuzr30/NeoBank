@@ -1,0 +1,36 @@
+profile_edit:
+  page:
+    title: "Modifier le profil - %company_name%"
+  
+  header:
+    title: "Modifier le profil"
+  
+  email_pending:
+    title: "Nouvelle adresse email en attente :"
+    text: "Cliquez sur le lien dans l'email de validation pour confirmer le changement."
+    instruction: "Cliquez sur le lien dans l'email de validation pour confirmer le changement."
+    cancel: "Annuler"
+    confirm_cancel: "Voulez-vous vraiment annuler ce changement d'email ?"
+    cancel_confirm: "Voulez-vous vraiment annuler ce changement d'email ?"
+  
+  sections:
+    avatar:
+      title: "Photo de profil"
+      alt: "Photo de profil"
+      info: "Format JPG, PNG ou WEBP. Taille maximale de 2MB."
+      default_first_letter: "U"
+      default_surname_letter: "S"
+    
+    personal_info:
+      title: "Informations personnelles"
+      email_help: "Cette adresse sera utilisée pour les notifications importantes."
+    
+    address:
+      title: "Adresse"
+    
+    preferences:
+      title: "Préférences"
+  
+  actions:
+    cancel: Annuler
+    save: Enregistrer les modifications

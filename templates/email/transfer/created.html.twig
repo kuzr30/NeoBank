@@ -1,0 +1,116 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_transfer_created.title', {}, 'email_transfer_created') }} - {{ parent() }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('email_transfer_created.content.page_title', {}, 'email_transfer_created') }}</h2>
+    
+    <p class="content-text">
+        {{ tp('email_transfer_created.content.greeting', {firstName: user.firstName, lastName: user.lastName}, 'email_transfer_created') }}
+    </p>
+
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #2e7d32;">{{ tp('email_transfer_created.content.transfer_created.title', {}, 'email_transfer_created') }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {{ tp('email_transfer_created.content.transfer_created.description', {}, 'email_transfer_created') }}
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_transfer_created.content.transaction_details.title', {}, 'email_transfer_created') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 12px 16px; background: #e3f2fd; font-weight: 600; color: #0d47a1; width: 35%; border-right: 1px solid #bbdefb;">{{ tp('email_transfer_created.content.transaction_details.reference', {}, 'email_transfer_created') }}</td>
+                <td style="padding: 12px 16px; font-family: monospace; font-weight: 700; color: #1976d2; font-size: 16px;">#{{ ('TRF' ~ transfer.createdAt|date('YmdHis') ~ random(999)) | upper }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px 16px; background: #f5f5f5; font-weight: 600; color: #0d47a1; border-right: 1px solid #bbdefb;">{{ tp('email_transfer_created.content.transaction_details.amount', {}, 'email_transfer_created') }}</td>
+                <td style="padding: 12px 16px;">
+                    <span style="font-size: 20px; font-weight: 700; color: #2e7d32;">{{ tp('email_transfer_created.content.transaction_details.amount_value', {amount: transfer.amount|number_format(2, ',', ' ')}, 'email_transfer_created') }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 12px 16px; background: #e3f2fd; font-weight: 600; color: #0d47a1; border-right: 1px solid #bbdefb;">{{ tp('email_transfer_created.content.transaction_details.beneficiary_account', {}, 'email_transfer_created') }}</td>
+                <td style="padding: 12px 16px; font-weight: 500;">{{ transfer.destinationAccount.accountName }}</td>
+            </tr>
+            {% if transfer.description %}
+            <tr>
+                <td style="padding: 12px 16px; background: #f5f5f5; font-weight: 600; color: #0d47a1; border-right: 1px solid #bbdefb;">{{ tp('email_transfer_created.content.transaction_details.transfer_reason', {}, 'email_transfer_created') }}</td>
+                <td style="padding: 12px 16px; font-style: italic; color: #424242;">{{ transfer.description }}</td>
+            </tr>
+            {% endif %}
+            <tr>
+                <td style="padding: 12px 16px; background: #e3f2fd; font-weight: 600; color: #0d47a1; border-right: 1px solid #bbdefb;">{{ tp('email_transfer_created.content.transaction_details.creation_date', {}, 'email_transfer_created') }}</td>
+                <td style="padding: 12px 16px; color: #1976d2; font-weight: 600;">{{ tp('email_transfer_created.content.transaction_details.created_at', {createdAt: transfer.createdAt|date('d/m/Y à H:i')}, 'email_transfer_created') }}</td>
+            </tr>
+        </table>
+    </div>
+            
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ tp('email_transfer_created.content.validation_process.title', {}, 'email_transfer_created') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 10px 16px; background: #fff8e1; border-left: 4px solid #f57c00; border-bottom: 1px solid #ffcc02;">
+                    <strong style="color: #e65100;">{{ tp('email_transfer_created.content.validation_process.step1', {}, 'email_transfer_created') }}</strong>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 16px; background: #f9f9f9; border-left: 4px solid #f57c00; border-bottom: 1px solid #ffcc02;">
+                    <strong style="color: #e65100;">{{ tp('email_transfer_created.content.validation_process.step2', {}, 'email_transfer_created') }}</strong>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 16px; background: #fff8e1; border-left: 4px solid #f57c00; border-bottom: 1px solid #ffcc02;">
+                    <strong style="color: #e65100;">{{ tp('email_transfer_created.content.validation_process.step3', {}, 'email_transfer_created') }}</strong>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 16px; background: #f9f9f9; border-left: 4px solid #f57c00;">
+                    <strong style="color: #e65100;">{{ tp('email_transfer_created.content.validation_process.step4', {}, 'email_transfer_created') }}</strong>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_transfer_created.content.tracking.title', {}, 'email_transfer_created') }}</h3>
+        <table style="width: 100%; border-spacing: 12px 0;">
+            <tr>
+                <td style="padding: 0; text-align: center;">
+                    {% if transfer.id %}
+                        <a href="{{ url('banking_transfer_details', {'id': transfer.id, '_locale': 'fr'}) }}" 
+                           style="display: block; background: linear-gradient(135deg, #1976d2 0%, #2196f3 100%); color: white; text-decoration: none; padding: 16px 24px; border-radius: 8px; font-weight: 600; text-align: center; box-shadow: 0 3px 6px rgba(25, 118, 210, 0.4); font-size: 16px;">
+                            {{ tp('email_transfer_created.content.tracking.view_details_button', {}, 'email_transfer_created') }}
+                        </a>
+                    {% else %}
+                        <div style="display: block; background: #cccccc; color: white; text-decoration: none; padding: 16px 24px; border-radius: 8px; font-weight: 600; text-align: center; font-size: 16px;">
+                            {{ tp('email_transfer_created.content.tracking.view_details_button', {}, 'email_transfer_created') }}
+                        </div>
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+        <p style="margin: 15px 0 0; font-size: 14px; color: #666; text-align: center;">
+            {{ tp('email_transfer_created.content.tracking.access_instruction', {}, 'email_transfer_created') }}
+        </p>
+    </div>
+
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #2e7d32;">{{ tp('email_transfer_created.content.security_info.title', {}, 'email_transfer_created') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #e8f5e8; border-left: 4px solid #2e7d32; color: #1b5e20; line-height: 1.6;">
+                    {{ tp('email_transfer_created.content.security_info.description', {}, 'email_transfer_created') }}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p class="content-text">
+        {{ tp('email_transfer_created.content.supervision_note', {}, 'email_transfer_created') }}
+    </p>
+
+    <p class="footer-text">
+        {{ tp('email_transfer_created.content.footer', {}, 'email_transfer_created')|raw }}
+    </p>
+{% endblock %}

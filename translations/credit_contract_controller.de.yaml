@@ -1,0 +1,6 @@
+# Übersetzungen für CreditContractController
+flash:
+  contract_not_found: "Vertrag nicht gefunden."
+  contract_uploaded_success: "Unterschriebener Vertrag erfolgreich hochgeladen. Wir werden so schnell wie möglich mit der Validierung fortfahren."
+  upload_error: "Fehler beim Hochladen der Datei."
+  no_file_selected: "Bitte wählen Sie eine Datei aus."

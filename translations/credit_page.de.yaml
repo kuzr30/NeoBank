@@ -1,0 +1,131 @@
+credit_page:
+  index:
+    page_title: "Unsere Kreditangebote"
+    page_description: "Entdecken Sie alle unsere an Ihre Bedürfnisse angepassten Finanzierungslösungen."
+  
+  breadcrumb:
+    credit_offers: "Unsere Kreditangebote"
+
+  hero:
+    highlights:
+      rate_from: "Effektiver Jahreszins ab"
+      max_amount: "Höchstbetrag"
+      max_duration: "Maximale Laufzeit"
+    actions:
+      simulate: "Meinen Kredit simulieren"
+      apply: "Antrag stellen"
+
+  sections:
+    section_1:
+      title: "Was ist dieser Kredit?"
+      paragraph_1: "Diese Finanzierungslösung ermöglicht es Ihnen, Ihre Projekte unter den besten Bedingungen zu verwirklichen."
+      paragraph_2: "Kontaktieren Sie unsere Berater, um personalisierte Informationen zu erhalten, die an Ihre Situation angepasst sind."
+
+    section_2:
+      title: "Finanzierungskonditionen"
+      features:
+        amount:
+          title: "Betrag"
+          description: "Von 1.000€ bis 100.000€"
+          detail: "An Ihr Projekt angepasst"
+        duration:
+          title: "Laufzeit"
+          description: "Von 6 Monaten bis 15 Jahren"
+          detail: "Modulierbar nach Ihrer Kapazität"
+        rate:
+          title: "Zinssatz"
+          description: "Ab 3,5% effektiver Jahreszins*"
+          detail: "Vorzugskonditionen"
+        guarantee:
+          title: "Garantie"
+          description: "Je nach Betrag"
+          detail: "An Ihr Profil angepasst"
+
+    section_3:
+      title: "Vorteile dieses Kredits"
+      advantages:
+        advantage_1: "<strong>Vorteilhafte Zinssätze:</strong> Profitieren Sie von Vorzugskonditionen"
+        advantage_2: "<strong>Flexibilität:</strong> An Ihre Bedürfnisse angepasste Lösung"
+        advantage_3: "<strong>Schnelligkeit:</strong> Schnelle Antwort auf Ihren Antrag"
+    
+    section_4:
+      title: "Bedingungen und Kriterien"
+    
+    section_5:
+      title: "Erforderliche Dokumente"
+
+  section_4:
+    title: "Berechtungsvoraussetzungen"
+    requirements:
+      borrower_profile:
+        title: "Kreditnehmerprofil"
+        item_1: "Volljährig sein und in Frankreich wohnen"
+        item_2: "Regelmäßige Einkommen nachweisen"
+        item_3: "Nicht im FICP eingetragen sein"
+        item_4: "Verschuldungsgrad unter 35%"
+      general_conditions:
+        title: "Allgemeine Bedingungen"
+        item_1: "Höchstalter: 75 Jahre am Ende des Kredits"
+        item_2: "Bankdomizilierung erwünscht"
+        item_3: "Kreditversicherung möglich"
+        item_4: "Bearbeitungsgebühren anwendbar"
+
+  section_5:
+    title: "Erforderliche Dokumente"
+    documents:
+      identity:
+        title: "Ausweisdokumente"
+        item_1: "Personalausweis oder Reisepass"
+        item_2: "Wohnsitznachweis weniger als 3 Monate alt"
+        item_3: "Familienbuch (falls verheiratet oder in eingetragener Partnerschaft)"
+      income:
+        title: "Einkommensnachweise"
+        item_1: "Die letzten 3 Gehaltsabrechnungen"
+        item_2: "Die letzten 2 Steuerbescheide"
+        item_3: "Arbeitsvertrag oder Arbeitgeberbescheinigung"
+        item_4: "Kontoauszüge der letzten 3 Monate"
+      additional:
+        title: "Zusätzliche Dokumente"
+        item_1: "Tilgungsplan der laufenden Kredite"
+        item_2: "Nachweise der Belastungen (Miete, Renten...)"
+        item_3: "Kostenvoranschläge oder Rechnungen (je nach Kreditart)"
+        item_4: "Andere Dokumente je nach Ihrer Situation"
+
+  sidebar:
+    simulation:
+      title: "Ihren Kredit simulieren"
+      text: "Berechnen Sie in wenigen Klicks die Höhe Ihrer monatlichen Raten und erhalten Sie eine personalisierte Schätzung."
+      button: "Simulation durchführen"
+    help:
+      title: "Brauchen Sie Hilfe?"
+      text: "Unsere Berater stehen Ihnen zur Verfügung, um alle Ihre Fragen zu beantworten."
+      phone: company_phone
+      email: company_email
+    processing:
+      title: "Bearbeitungszeiten"
+      step_1:
+        title: "Vorabprüfung"
+        time: "24h"
+      step_2:
+        title: "Bearbeitung"
+        time: "2 Tage"
+      step_3:
+        title: "Zusage & Unterzeichnung"
+        time: "1 Tag"
+
+  legal:
+    warning:
+      title: "Ein Kredit verpflichtet Sie und muss zurückgezahlt werden. Überprüfen Sie Ihre Rückzahlungsfähigkeit, bevor Sie sich verpflichten."
+    details:
+      title: "Wichtige rechtliche Informationen"
+      taeg: "<strong>Effektiver Jahreszins:</strong> Jährlicher Effektivzinssatz vorbehaltlich der Annahme Ihres Dossiers."
+      amount: "<strong>Betrag:</strong> Angebot gültig für jeden Kredit zwischen 500€ und 200.000€."
+      duration: "<strong>Laufzeit:</strong> Rückzahlung möglich von 6 Monaten bis 25 Jahren je nach Kreditart."
+      retraction: "<strong>Widerrufsfrist:</strong> Sie haben eine Frist von 14 Tagen, um nach Annahme des Angebots von Ihrem Kredit zurückzutreten."
+    footer: "%company_name% Ihr finanzieller Partner im Alltag. Ein Kredit verpflichtet Sie und muss zurückgezahlt werden. Überprüfen Sie Ihre Rückzahlungsfähigkeit, bevor Sie sich verpflichten."
+
+  cta:
+    title: "Bereit, Ihr Projekt zu verwirklichen?"
+    subtitle: "Stellen Sie Ihren Kreditantrag online oder kontaktieren Sie unsere Berater"
+    apply_button: "Meinen Antrag stellen"
+    simulate_button: "Meinen Kredit simulieren"

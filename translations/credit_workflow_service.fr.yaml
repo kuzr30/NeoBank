@@ -1,0 +1,20 @@
+credit_workflow_service:
+  admin_notes:
+    approved: "Demande approuvée le {date}"
+    rejected: "Demande rejetée le {date}"
+    contract_generated: "Contrat généré et envoyé le {date}"
+    contract_signed: "Contrat signé par le client le {date}"
+    contract_admin_signed: "Contrat marqué comme signé par l'administrateur le {date}"
+    contract_validated: "Contrat validé par l'administrateur le {date}"
+    funds_released: "Fonds débloqués le {date}"
+    
+  exceptions:
+    contract_not_validated: "Le contrat doit être validé avant de débloquer les fonds."
+    user_not_found: "Utilisateur non trouvé pour l'email: {email}"
+    main_account_not_found: "Compte principal non trouvé pour l'utilisateur: {email}"
+    
+  transaction_descriptions:
+    credit_release: "Déblocage crédit - Contrat {contractNumber}"
+    
+  log_messages:
+    contract_generation_error: "Erreur génération contrat pour application #{id}: {error}"

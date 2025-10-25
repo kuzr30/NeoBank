@@ -1,0 +1,148 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_ribs.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_ribs:
+  # Meta tags
+  meta:
+    title: "My beneficiaries - %company_name%"
+    description: "Manage your beneficiary accounts with %company_name%"
+
+  # Navigation
+  nav:
+    dashboard: "Dashboard"
+    beneficiaries: "Beneficiaries"
+    rib_new: "New beneficiary"
+    rib_detail: "Beneficiary details"
+    back: "Back"
+
+  # Page headers
+  page:
+    title: "My beneficiaries"
+    subtitle: "Manage your beneficiary accounts for your transfers"
+    new_rib_title: "Add beneficiary"
+    rib_detail_title: "Beneficiary details"
+    
+  # Header section (for ribs.html.twig)
+  header:
+    title: "My RIB/IBAN"
+    subtitle: "Manage your bank account details"
+    add_button: "Add RIB"
+  
+  # Empty state
+  empty_state:
+    title: "No RIB registered"
+    description: "Add your RIBs to facilitate your transfers and receive funds more easily."
+    add_first_button: "Add my first RIB"
+    
+  # RIB detail page (rib_show.html.twig)
+  detail_page:
+    title: "RIB details"
+    subtitle: "Detailed information of your bank account details"
+    back_to_list: "Back to list"
+    
+  # Detail fields
+  detail_fields:
+    account_name: "Account name:"
+    bank_name: "Bank name:"
+    full_iban: "Full IBAN:"
+    copy_button: "Copy"
+    creation_date: "Date added:"
+    last_modification: "Last modification:"
+    
+  # Actions
+  detail_actions:
+    delete_this_rib: "Delete this RIB"
+    
+  # JavaScript messages
+  js_messages:
+    iban_copied: "IBAN copied to clipboard"
+    
+  # New RIB form (rib_new.html.twig)
+  new_form:
+    title: "Add a new RIB"
+    subtitle: "Register your bank details to facilitate your transfers and receive funds."
+    
+  # Form fields and labels
+  form_fields:
+    account_name_label: "Account name"
+    account_name_placeholder: "E.g.: Main account, Savings account..."
+    account_name_help: "Give this account a descriptive name to easily recognize it."
+    bank_name_label: "Bank name"
+    bank_name_placeholder: "E.g.: BNP Paribas, Crédit Agricole..."
+    iban_label: "IBAN"
+    iban_placeholder: "FR76 1234 5678 9012 3456 7890 123"
+    iban_help: "Enter your European IBAN. Spaces will be automatically added."
+    
+  # Form actions
+  form_actions:
+    back_button: "Back"
+    save_button: "Save RIB"
+    
+  # Form fields
+  form:
+    bank_name: "Bank name"
+    bank_name_placeholder: "Enter bank name"
+    account_holder: "Account holder"
+    account_holder_placeholder: "Holder name"
+    iban: "IBAN"
+    iban_placeholder: "FR76 1234 5678 9012 3456 7890 123"
+    swift: "SWIFT/BIC code"
+    swift_placeholder: "BNPAFRPPXXX"
+    nickname: "Nickname (optional)"
+    nickname_placeholder: "E.g.: My savings account"
+    address: "Bank address"
+    address_placeholder: "Complete bank address"
+    
+  # RIB info
+  rib:
+    bank_name: "Bank"
+    account_holder: "Holder"
+    iban: "IBAN"
+    swift: "SWIFT/BIC"
+    nickname: "Nickname"
+    created_date: "Date added"
+    last_used: "Last use"
+    usage_count: "Number of uses"
+    
+  # Actions
+  actions:
+    add_rib: "Add beneficiary"
+    save: "Save"
+    cancel: "Cancel"
+    edit: "Edit"
+    delete: "Delete"
+    view_details: "View details"
+    use_for_transfer: "Use for transfer"
+    
+  # Validation messages
+  validation:
+    iban_required: "IBAN is required"
+    iban_invalid: "Invalid IBAN format"
+    iban_exists: "This IBAN already exists in your beneficiaries"
+    account_holder_required: "Account holder name is required"
+    bank_name_required: "Bank name is required"
+    swift_invalid: "Invalid SWIFT/BIC format"
+    
+  # Messages
+  messages:
+    no_ribs: "No beneficiaries registered"
+    rib_added_success: "Beneficiary added successfully"
+    rib_updated_success: "Beneficiary updated successfully"
+    rib_deleted_success: "Beneficiary deleted successfully"
+    confirm_delete: "Are you sure you want to delete this beneficiary?"
+    access_denied: "Access denied to this beneficiary"
+    
+  # Card actions  
+  card_actions:
+    view_details: "View details"
+    delete_button: "Delete"
+    delete_confirm: "Are you sure you want to delete this RIB?"
+    
+  # Status
+  status:
+    active: "Active"
+    inactive: "Inactive"
+    verified: "Verified"
+    pending: "Pending verification"

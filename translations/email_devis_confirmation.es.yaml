@@ -1,0 +1,53 @@
+email_devis_confirmation:
+  subject: "Confirmación de su solicitud de presupuesto"
+  title: "Confirmación de su solicitud de presupuesto"
+  
+  content:
+    page_title: "Solicitud de presupuesto confirmada"
+    department: "Departamento Seguros"
+    greeting: "Hola <strong>%prenom% %nom%</strong>,"
+    
+    success:
+      title: "Solicitud recibida con éxito"
+      message: "Hemos recibido correctamente su solicitud de presupuesto para %typeAssurance%. Su expediente está ahora en proceso por nuestros expertos."
+    
+    reference:
+      title: "Referencia de su solicitud"
+      number: "Número de presupuesto: %numeroDevis%"
+    
+    recap:
+      title: "Resumen de su solicitud"
+      insurance_type: "Tipo de seguro"
+      contact_email: "Correo de contacto"
+      phone: "Teléfono"
+      contact_preference: "Preferencia de contacto"
+      request_date: "Fecha de solicitud"
+    
+    comments:
+      title: "Sus comentarios"
+    
+    process:
+      title: "Proceso de tratamiento"
+      step1: "Paso 1: Contacto personalizado en 24h vía %preference%"
+      step2: "Paso 2: Análisis profundo de su perfil y necesidades específicas"
+      step3: "Paso 3: Presentación de una oferta personalizada y competitiva"
+    
+    contact:
+      title: "Datos de contacto"
+      phone_service: "Servicio telefónico"
+      phone_number: "06 23 45 67 89"
+      email_support: "Soporte por correo"
+      support_email: "contact@sedef.fr"
+    
+    closing_message: "Nuestro equipo de especialistas en seguros le contactará muy próximamente para finalizar su expediente."
+    footer: "{{ company_name() }} - Departamento Seguros<br>Confirmación automática de solicitud de presupuesto"
+
+  preferences:
+    telephone: "Por teléfono"
+    email: "Por correo electrónico"
+    indifferent: "Indiferente"
+
+  logs:
+    devis_confirmation_sent: "Correo de confirmación de presupuesto enviado con éxito a %email%"
+    devis_confirmation_failed: "Error al enviar la confirmación de presupuesto a %email%"
+    quote_request_processed: "Solicitud de presupuesto %numeroDevis% tratada para %nom% %prenom%"

@@ -1,0 +1,695 @@
+<style>
+/* Savings (Épargne) Specific Styles */
+.banking__savings-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)) !important;
+    gap: 24px !important;
+    margin-bottom: 32px !important;
+}
+
+.banking__savings-card {
+    background: #ffffff !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    transition: box-shadow 0.2s ease !important;
+}
+
+.banking__savings-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+}
+
+.banking__savings-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+    margin-bottom: 20px !important;
+}
+
+.banking__savings-icon {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+}
+
+.banking__savings-icon--livret {
+    background: linear-gradient(135deg, #27ae60, #2ecc71) !important;
+}
+
+.banking__savings-icon--pea {
+    background: linear-gradient(135deg, #3498db, #5dade2) !important;
+}
+
+.banking__savings-icon--term {
+    background: linear-gradient(135deg, #e67e22, #f39c12) !important;
+}
+
+.banking__savings-icon--investment {
+    background: linear-gradient(135deg, #8e44ad, #a569bd) !important;
+}
+
+.banking__savings-icon-svg {
+    width: 24px !important;
+    height: 24px !important;
+    color: white !important;
+}
+
+.banking__savings-info {
+    flex: 1 !important;
+}
+
+.banking__savings-name {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 4px !important;
+}
+
+.banking__savings-account {
+    font-size: 12px !important;
+    color: #7f8c8d !important;
+    font-family: monospace !important;
+    margin: 0 !important;
+}
+
+.banking__savings-rate {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #27ae60 !important;
+}
+
+.banking__savings-balance {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 20px !important;
+}
+
+.banking__savings-details {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    margin-bottom: 24px !important;
+}
+
+.banking__savings-detail {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.banking__savings-label {
+    font-size: 13px !important;
+    color: #7f8c8d !important;
+}
+
+.banking__savings-value {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+}
+
+.banking__savings-actions {
+    display: flex !important;
+    gap: 12px !important;
+}
+
+.banking__savings-btn {
+    flex: 1 !important;
+    padding: 10px 16px !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.banking__savings-btn--primary {
+    background: #0066cc !important;
+    color: white !important;
+}
+
+.banking__savings-btn--primary:hover {
+    background: #0052a3 !important;
+}
+
+.banking__savings-btn--secondary {
+    background: #f8f9fa !important;
+    color: #0066cc !important;
+    border: 1px solid #e1e8ed !important;
+}
+
+.banking__savings-btn--secondary:hover {
+    background: #f1f5f9 !important;
+    border-color: #0066cc !important;
+}
+
+.banking__savings-new {
+    border: 2px dashed #e1e8ed !important;
+    background: #f8f9fa !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-height: 300px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.banking__savings-new:hover {
+    border-color: #0066cc !important;
+    background: #f1f5f9 !important;
+}
+
+.banking__savings-new-icon {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    background: #0066cc !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 16px !important;
+}
+
+.banking__savings-new-icon-svg {
+    width: 24px !important;
+    height: 24px !important;
+    color: white !important;
+}
+
+.banking__savings-new-title {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 8px !important;
+}
+
+.banking__savings-new-description {
+    font-size: 13px !important;
+    color: #7f8c8d !important;
+    line-height: 1.5 !important;
+}
+
+.banking__investment-opportunities {
+    background: #f8f9fa !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    margin-bottom: 32px !important;
+}
+
+.banking__investment-title {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 16px !important;
+}
+
+.banking__investment-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 16px !important;
+}
+
+.banking__investment-card {
+    background: #ffffff !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    text-align: center !important;
+    transition: all 0.2s ease !important;
+    cursor: pointer !important;
+}
+
+.banking__investment-card:hover {
+    border-color: #0066cc !important;
+    box-shadow: 0 4px 16px rgba(0,102,204,0.1) !important;
+}
+
+.banking__investment-type {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 8px !important;
+}
+
+.banking__investment-return {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #27ae60 !important;
+    margin-bottom: 12px !important;
+}
+
+.banking__investment-description {
+    font-size: 13px !important;
+    color: #7f8c8d !important;
+    margin-bottom: 16px !important;
+}
+
+.banking__investment-btn {
+    width: 100% !important;
+    padding: 10px 16px !important;
+    background: #0066cc !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: background 0.2s ease !important;
+}
+
+.banking__investment-btn:hover {
+    background: #0052a3 !important;
+}
+
+/* Additional Savings Styles */
+.banking__savings-rate--performance {
+    color: #27ae60 !important;
+}
+
+.banking__savings-card--limited {
+    border-color: #f39c12 !important;
+    background: linear-gradient(135deg, rgba(243, 156, 18, 0.05), rgba(230, 126, 34, 0.05)) !important;
+}
+
+.banking__savings-btn--disabled {
+    background: #e1e8ed !important;
+    color: #95a5a6 !important;
+    cursor: not-allowed !important;
+}
+
+.banking__savings-btn--disabled:hover {
+    background: #e1e8ed !important;
+    color: #95a5a6 !important;
+}
+
+/* Opportunities Section */
+.banking__opportunities-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 24px !important;
+    margin-bottom: 32px !important;
+}
+
+.banking__opportunity-card {
+    background: #ffffff !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    text-align: center !important;
+    transition: all 0.2s ease !important;
+    cursor: pointer !important;
+}
+
+.banking__opportunity-card:hover {
+    border-color: #0066cc !important;
+    box-shadow: 0 4px 20px rgba(0,102,204,0.1) !important;
+    transform: translateY(-2px) !important;
+}
+
+.banking__opportunity-icon {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    background: linear-gradient(135deg, #0066cc, #3b82f6) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 16px auto !important;
+}
+
+.banking__opportunity-icon-svg {
+    width: 24px !important;
+    height: 24px !important;
+    color: white !important;
+}
+
+.banking__opportunity-title {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 12px !important;
+}
+
+.banking__opportunity-description {
+    font-size: 14px !important;
+    color: #7f8c8d !important;
+    line-height: 1.5 !important;
+    margin-bottom: 16px !important;
+}
+
+.banking__opportunity-rate {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #27ae60 !important;
+    margin-bottom: 20px !important;
+}
+
+.banking__opportunity-btn {
+    width: 100% !important;
+    padding: 12px 20px !important;
+    background: #0066cc !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: background 0.2s ease !important;
+}
+
+.banking__opportunity-btn:hover {
+    background: #0052a3 !important;
+}
+
+/* Product Detail for Tables */
+.banking__product-detail {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+}
+
+.banking__product-name {
+    font-weight: 500 !important;
+    color: #2c3e50 !important;
+}
+
+.banking__product-account {
+    font-size: 12px !important;
+    color: #7f8c8d !important;
+    font-family: monospace !important;
+}
+
+/* Section Headers */
+.banking__section-header {
+    margin: 32px 0 16px 0 !important;
+}
+
+.banking__section-title {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 4px !important;
+}
+
+.banking__section-subtitle {
+    font-size: 14px !important;
+    color: #7f8c8d !important;
+    margin: 0 !important;
+}
+
+/* Action buttons */
+.banking__action-primary {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 12px 20px !important;
+    background: #0066cc !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: background 0.2s ease !important;
+}
+
+.banking__action-primary:hover {
+    background: #0052a3 !important;
+}
+
+.banking__action-icon {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+/* Amount styling */
+.banking__amount--credit {
+    color: #27ae60 !important;
+    font-weight: 600 !important;
+}
+
+.banking__amount--debit {
+    color: #e74c3c !important;
+    font-weight: 600 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .banking__savings-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .banking__opportunities-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .banking__savings-details {
+        grid-template-columns: 1fr !important;
+    }
+}
+</style>
+
+<!-- Épargne -->
+<section class="banking__content">
+    
+    <!-- Savings Header -->
+    <div class="banking__operations-header">
+        <div class="banking__account-summary">
+            <h1 class="banking__account-title">{{ tp('banking_savings.header.title', [], 'banking_savings') }}</h1>
+            <div class="banking__account-details">
+                <span class="banking__account-type">{{ tp('banking_savings.header.subtitle', [], 'banking_savings') }}</span>
+                <span class="banking__account-updated">{{ tp('banking_savings.header.last_update', [], 'banking_savings') }} {{ "now"|date('d/m/Y à H:i') }}</span>
+            </div>
+        </div>
+        <div class="banking__balance-display">
+            <div class="banking__balance-main">24 099,00 €</div>
+            <div class="banking__balance-available">{{ tp('banking_savings.header.total_savings', [], 'banking_savings') }}</div>
+        </div>
+    </div>
+
+    <!-- Savings Products -->
+    <div class="banking__savings-grid">
+        <!-- Livret A -->
+        <div class="banking__savings-card">
+            <div class="banking__savings-header">
+                <div class="banking__savings-icon banking__savings-icon--livret">
+                    {{ ux_icon('heroicons:banknotes', {'class': 'banking__savings-icon-svg'}) }}
+                </div>
+                <div class="banking__savings-info">
+                    <h3 class="banking__savings-name">{{ tp('banking_savings.products.livret_a', [], 'banking_savings') }}</h3>
+                    <p class="banking__savings-account">****2143</p>
+                </div>
+                <div class="banking__savings-rate">3,00%</div>
+            </div>
+            <div class="banking__savings-balance">8 420,30 €</div>
+            <div class="banking__savings-details">
+                <div class="banking__savings-detail">
+                    <span class="banking__savings-label">{{ tp('banking_savings.labels.ceiling', [], 'banking_savings') }}</span>
+                    <span class="banking__savings-value">22 950 €</span>
+                </div>
+                <div class="banking__savings-detail">
+                    <span class="banking__savings-label">{{ tp('banking_savings.labels.available', [], 'banking_savings') }}</span>
+                    <span class="banking__savings-value">14 529,70 €</span>
+                </div>
+                <div class="banking__savings-detail">
+                    <span class="banking__savings-label">{{ tp('banking_savings.labels.interests_2025', [], 'banking_savings') }}</span>
+                    <span class="banking__savings-value banking__amount--credit">+189,45 €</span>
+                </div>
+            </div>
+            <div class="banking__savings-actions">
+                <button class="banking__savings-btn banking__savings-btn--primary">{{ tp('banking_savings.actions.fund', [], 'banking_savings') }}</button>
+                <button class="banking__savings-btn banking__savings-btn--secondary">{{ tp('banking_savings.actions.withdraw', [], 'banking_savings') }}</button>
+            </div>
+        </div>
+
+        <!-- PEA -->
+        <div class="banking__savings-card">
+            <div class="banking__savings-header">
+                <div class="banking__savings-icon banking__savings-icon--pea">
+                    {{ ux_icon('heroicons:chart-bar-square', {'class': 'banking__savings-icon-svg'}) }}
+                </div>
+                <div class="banking__savings-info">
+                    <h3 class="banking__savings-name">{{ tp('banking_savings.products.pea', [], 'banking_savings') }}</h3>
+                    <p class="banking__savings-account">****7692</p>
+                </div>
+                <div class="banking__savings-rate banking__savings-rate--performance">+8,2%</div>
+            </div>
+            <div class="banking__savings-balance">15 679,70 €</div>
+            <div class="banking__savings-details">
+                <div class="banking__savings-detail">
+                    <span class="banking__savings-label">{{ tp('banking_savings.labels.ceiling', [], 'banking_savings') }}</span>
+                    <span class="banking__savings-value">150 000 €</span>
+                </div>
+                <div class="banking__savings-detail">
+                    <span class="banking__savings-label">{{ tp('banking_savings.labels.plus_minus_value', [], 'banking_savings') }}</span>
+                    <span class="banking__savings-value banking__amount--credit">+1 237,89 €</span>
+                </div>
+                <div class="banking__savings-detail">
+                    <span class="banking__savings-label">{{ tp('banking_savings.labels.performance_ytd', [], 'banking_savings') }}</span>
+                    <span class="banking__savings-value banking__amount--credit">+8,2%</span>
+                </div>
+            </div>
+            <div class="banking__savings-actions">
+                <button class="banking__savings-btn banking__savings-btn--primary">{{ tp('banking_savings.actions.invest', [], 'banking_savings') }}</button>
+                <button class="banking__savings-btn banking__savings-btn--secondary">{{ tp('banking_savings.actions.arbitrate', [], 'banking_savings') }}</button>
+            </div>
+        </div>
+
+        <!-- Placement à terme -->
+        <div class="banking__savings-card banking__savings-card--limited">
+            <div class="banking__savings-header">
+                <div class="banking__savings-icon banking__savings-icon--term">
+                    {{ ux_icon('heroicons:clock', {'class': 'banking__savings-icon-svg'}) }}
+                </div>
+                <div class="banking__savings-info">
+                    <h3 class="banking__savings-name">{{ tp('banking_savings.products.term_deposit', [], 'banking_savings') }}</h3>
+                    <p class="banking__savings-account">****9834</p>
+                </div>
+                <div class="banking__savings-rate">4,50%</div>
+            </div>
+            <div class="banking__savings-balance">5 000,00 €</div>
+            <div class="banking__savings-details">
+                <div class="banking__savings-detail">
+                    <span class="banking__savings-label">{{ tp('banking_savings.labels.maturity', [], 'banking_savings') }}</span>
+                    <span class="banking__savings-value">15/02/2026</span>
+                </div>
+                <div class="banking__savings-detail">
+                    <span class="banking__savings-label">{{ tp('banking_savings.labels.remaining_duration', [], 'banking_savings') }}</span>
+                    <span class="banking__savings-value">194 {{ tp('banking_savings.labels.days', [], 'banking_savings') }}</span>
+                </div>
+                <div class="banking__savings-detail">
+                    <span class="banking__savings-label">{{ tp('banking_savings.labels.expected_interests', [], 'banking_savings') }}</span>
+                    <span class="banking__savings-value banking__amount--credit">+225,00 €</span>
+                </div>
+            </div>
+            <div class="banking__savings-actions">
+                <button class="banking__savings-btn banking__savings-btn--disabled" disabled>{{ tp('banking_savings.actions.blocked', [], 'banking_savings') }}</button>
+                <button class="banking__savings-btn banking__savings-btn--secondary">{{ tp('banking_savings.actions.details', [], 'banking_savings') }}</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Savings Opportunities -->
+    <div class="banking__section-header">
+        <h2 class="banking__section-title">{{ tp('banking_savings.opportunities.section_title', [], 'banking_savings') }}</h2>
+        <p class="banking__section-subtitle">{{ tp('banking_savings.opportunities.section_subtitle', [], 'banking_savings') }}</p>
+    </div>
+
+    <div class="banking__opportunities-grid">
+        <div class="banking__opportunity-card">
+            <div class="banking__opportunity-icon">
+                {{ ux_icon('heroicons:home', {'class': 'banking__opportunity-icon-svg'}) }}
+            </div>
+            <h3 class="banking__opportunity-title">{{ tp('banking_savings.opportunities.pel_title', [], 'banking_savings') }}</h3>
+            <p class="banking__opportunity-description">{{ tp('banking_savings.opportunities.pel_description', [], 'banking_savings') }}</p>
+            <div class="banking__opportunity-rate">{{ tp('banking_savings.opportunities.pel_rate', [], 'banking_savings') }}</div>
+            <button class="banking__opportunity-btn">{{ tp('banking_savings.opportunities.discover_button', [], 'banking_savings') }}</button>
+        </div>
+
+        <div class="banking__opportunity-card">
+            <div class="banking__opportunity-icon">
+                {{ ux_icon('heroicons:academic-cap', {'class': 'banking__opportunity-icon-svg'}) }}
+            </div>
+            <h3 class="banking__opportunity-title">{{ tp('banking_savings.opportunities.youth_savings_title', [], 'banking_savings') }}</h3>
+            <p class="banking__opportunity-description">{{ tp('banking_savings.opportunities.youth_savings_description', [], 'banking_savings') }}</p>
+            <div class="banking__opportunity-rate">{{ tp('banking_savings.opportunities.youth_savings_rate', [], 'banking_savings') }}</div>
+            <button class="banking__opportunity-btn">{{ tp('banking_savings.opportunities.discover_button', [], 'banking_savings') }}</button>
+        </div>
+
+        <div class="banking__opportunity-card">
+            <div class="banking__opportunity-icon">
+                {{ ux_icon('heroicons:building-library', {'class': 'banking__opportunity-icon-svg'}) }}
+            </div>
+            <h3 class="banking__opportunity-title">{{ tp('banking_savings.opportunities.life_insurance_title', [], 'banking_savings') }}</h3>
+            <p class="banking__opportunity-description">{{ tp('banking_savings.opportunities.life_insurance_description', [], 'banking_savings') }}</p>
+            <div class="banking__opportunity-rate">{{ tp('banking_savings.opportunities.life_insurance_rate', [], 'banking_savings') }}</div>
+            <button class="banking__opportunity-btn">{{ tp('banking_savings.opportunities.discover_button', [], 'banking_savings') }}</button>
+        </div>
+    </div>
+
+    <!-- Recent Movements -->
+    <div class="banking__section-header">
+        <h2 class="banking__section-title">{{ tp('banking_savings.movements.section_title', [], 'banking_savings') }}</h2>
+    </div>
+
+    <div class="banking__operations">
+        <table class="banking__table">
+            <thead class="banking__table-head">
+                <tr>
+                    <th class="banking__table-th">{{ tp('banking_savings.movements.table_headers.date', [], 'banking_savings') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_savings.movements.table_headers.product', [], 'banking_savings') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_savings.movements.table_headers.operation', [], 'banking_savings') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_savings.movements.table_headers.amount', [], 'banking_savings') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_savings.movements.table_headers.new_balance', [], 'banking_savings') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_savings.movements.table_headers.actions', [], 'banking_savings') }}</th>
+                </tr>
+            </thead>
+            <tbody class="banking__table-body">
+                <tr class="banking__table-row">
+                    <td class="banking__table-td">02/08/2025</td>
+                    <td class="banking__table-td">
+                        <div class="banking__product-detail">
+                            <div class="banking__product-name">{{ tp('banking_savings.products.livret_a', [], 'banking_savings') }}</div>
+                            <div class="banking__product-account">****2143</div>
+                        </div>
+                    </td>
+                    <td class="banking__table-td">{{ tp('banking_savings.movements.operations.transfer_from_checking', [], 'banking_savings') }}</td>
+                    <td class="banking__table-td banking__amount--credit">+500,00 €</td>
+                    <td class="banking__table-td">8 420,30 €</td>
+                    <td class="banking__table-td">
+                        <button class="banking__action-btn">{{ ux_icon('heroicons:eye', {'class': 'banking__action-icon'}) }}</button>
+                    </td>
+                </tr>
+
+                <tr class="banking__table-row">
+                    <td class="banking__table-td">01/08/2025</td>
+                    <td class="banking__table-td">
+                        <div class="banking__product-detail">
+                            <div class="banking__product-name">{{ tp('banking_savings.movements.operations.livret_a_interests', [], 'banking_savings') }}</div>
+                            <div class="banking__product-account">****2143</div>
+                        </div>
+                    </td>
+                    <td class="banking__table-td">{{ tp('banking_savings.movements.operations.interest_capitalization', [], 'banking_savings') }}</td>
+                    <td class="banking__table-td banking__amount--credit">+15,73 €</td>
+                    <td class="banking__table-td">7 920,30 €</td>
+                    <td class="banking__table-td">
+                        <button class="banking__action-btn">{{ ux_icon('heroicons:eye', {'class': 'banking__action-icon'}) }}</button>
+                    </td>
+                </tr>
+
+                <tr class="banking__table-row">
+                    <td class="banking__table-td">28/07/2025</td>
+                    <td class="banking__table-td">
+                        <div class="banking__product-detail">
+                            <div class="banking__product-name">{{ tp('banking_savings.products.pea', [], 'banking_savings') }}</div>
+                            <div class="banking__product-account">****7692</div>
+                        </div>
+                    </td>
+                    <td class="banking__table-td">{{ tp('banking_savings.movements.operations.stock_purchase', [], 'banking_savings') }}</td>
+                    <td class="banking__table-td banking__amount--debit">-1 200,00 €</td>
+                    <td class="banking__table-td">15 679,70 €</td>
+                    <td class="banking__table-td">
+                        <button class="banking__action-btn">{{ ux_icon('heroicons:eye', {'class': 'banking__action-icon'}) }}</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="banking__pagination">
+        <button class="banking__page-btn banking__page-btn--disabled">{{ tp('banking_savings.pagination.previous', [], 'banking_savings') }}</button>
+        <span class="banking__page-info">{{ tp('banking_savings.pagination.page_info', {'%current%': '1', '%total%': '6', '%count%': '56'}, 'banking_savings') }}</span>
+        <button class="banking__page-btn">{{ tp('banking_savings.pagination.next', [], 'banking_savings') }}</button>
+    </div>
+
+</section>

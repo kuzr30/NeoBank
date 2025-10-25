@@ -1,0 +1,62 @@
+# ENGLISH TRANSLATION - Translated from French
+# Cookie policy translation file
+# Domain: cookies
+# Language: English (en)
+
+cookies:
+  page_title: "Cookie Policy"
+  page_description: "Information about the use of cookies on our website"
+
+  what_are_cookies:
+    title: "What is a cookie?"
+    content: |
+      A cookie is a small text file stored on your computer, tablet or smartphone
+      when you visit our website. Cookies allow us to improve your browsing experience
+      and offer you personalized services.
+
+  types_of_cookies:
+    title: "Types of cookies used"
+    essential:
+      title: "Essential cookies"
+      content: |
+        These cookies are necessary for the website to function and cannot be disabled.
+        They allow us to remember your login preferences and ensure the security of your transactions.
+    
+    performance:
+      title: "Performance cookies"
+      content: |
+        These cookies help us understand how visitors use our site
+        by collecting anonymous information about pages visited and errors encountered.
+    
+    functionality:
+      title: "Functionality cookies"
+      content: |
+        These cookies allow the site to remember your choices (language, region, username)
+        and offer you enhanced and personalized features.
+
+  manage_cookies:
+    title: "Managing cookies"
+    content: |
+      You can control and manage cookies in several ways:
+      <ul>
+        <li><strong>Browser settings:</strong> configure your browser to accept, refuse or delete cookies</li>
+        <li><strong>Online tools:</strong> use browser extensions to block cookies</li>
+        <li><strong>Site preferences:</strong> modify your cookie preferences from your account</li>
+      </ul>
+      <em>Warning:</em> Disabling certain cookies may affect the functioning of the site.
+
+  third_party:
+    title: "Third-party cookies"
+    content: |
+      We also use third-party cookies for:
+      <ul>
+        <li><strong>Google Analytics:</strong> traffic analysis and user behavior</li>
+        <li><strong>Social networks:</strong> integration of sharing buttons</li>
+        <li><strong>Advertising:</strong> targeted advertising (with your consent)</li>
+      </ul>
+
+  contact:
+    title: "Contact"
+    content: |
+      For any questions regarding our use of cookies,
+      contact us at %email%.

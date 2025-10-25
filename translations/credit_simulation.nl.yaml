@@ -1,0 +1,85 @@
+credit_simulation:
+  credit_types:
+    immobilier:
+      label: "Hypotheeklening"
+      description: "Financiering voor de aankoop van uw hoofdverblijf of tweede woning"
+    auto:
+      label: "Autokrediet"
+      description: "Financiering voor de aankoop van een nieuw of tweedehands voertuig"
+    consommation:
+      label: "Consumptiekrediet"
+      description: "Krediet om uw persoonlijke projecten te financieren"
+    travaux:
+      label: "Verbouwingskrediet"
+      description: "Financiering voor uw renovatie- en verbeteringswerken"
+    professionnel:
+      label: "Zakelijk Krediet"
+      description: "Financiering voor uw zakelijke projecten"
+    personal:
+      label: "Persoonlijk Krediet"
+      description: "Persoonlijke lening zonder bewijs van gebruik"
+    home_improvement:
+      label: "Verbouwingskrediet"
+      description: "Gespecialiseerd krediet voor uw woningverbeteringen"
+    debt_consolidation:
+      label: "Kredietconsolidatie"
+      description: "Samenvoeging van uw lopende kredieten"
+    mortgage:
+      label: "Hypotheeklening"
+      description: "Hypothecaire lening voor de aankoop van uw eigendom"
+    renouvelable:
+      label: "Hernieuwbaar Krediet"
+      description: "Geldreserve permanent beschikbaar"
+    etudiant:
+      label: "Studielening"
+      description: "Financiering voor uw hoger onderwijs"
+    relais:
+      label: "Overbruggingskrediet"
+      description: "Tijdelijke financieringsoplossing bij aankoop-verkoop"
+    microcredit:
+      label: "Microkrediet"
+      description: "Kleine bedragen om uw projecten te financieren"
+    leasing:
+      label: "Leasing"
+      description: "Huur met aankoopoptie"
+    voyage:
+      label: "Reiskrediet"
+      description: "Financiering voor uw reizen en vakanties"
+
+  # Duration options
+  durations:
+    twelve_months: "12 maanden"
+    twenty_four_months: "24 maanden"
+    thirty_six_months: "36 maanden"
+    forty_eight_months: "48 maanden"
+    sixty_months: "60 maanden"
+    seventy_two_months: "72 maanden"
+    eighty_four_months: "84 maanden"
+    ninety_six_months: "96 maanden"
+    one_hundred_twenty_months: "120 maanden"
+    one_hundred_eighty_months: "180 maanden"
+    two_hundred_forty_months: "240 maanden"
+    three_hundred_months: "300 maanden"
+
+  # Duration units
+  duration_units:
+    months: "maanden"
+    years: "jaar"
+    professionnel:
+      label: "Zakelijk Krediet"
+      description: "Krediet voor uw zakelijke projecten"
+    personal:
+      label: "Persoonlijke Lening"
+      description: "Lening zonder bestedingsverantwoording"
+    debt_consolidation:
+      label: "Kredietherstructurering"
+      description: "Samenvoeging van uw bestaande kredieten"
+    mortgage:
+      label: "Hypotheeklening"
+      description: "Financiering voor de aankoop van onroerend goed"
+    renouvelable:
+      label: "Hernieuwbaar Krediet"
+      description: "Geldreserve die naar believen herbruikbaar is"
+    microcredit:
+      label: "Persoonlijk Microkrediet"
+      description: "Kleine bedragen voor personen uitgesloten van traditioneel bankieren"

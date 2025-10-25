@@ -1,0 +1,387 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}{% extends '@EasyAdmin/page/content.html.twig' %}{% extends 'base.html.twig' %}
+
+
+
+{% block content_title %}
+
+    <h1 class="title">Envoyer un email personnalisé</h1>
+
+{% endblock %}{% block content_title %}{% block title %}Envoyer un email personnalisé - Administration{% endblock %}
+
+
+
+{% block main %}    <h1 class="title">Envoyer un email personnalisé</h1>
+
+    <form action="{{ path('admin_submit_custom_email') }}" method="post" enctype="multipart/form-data" id="customEmailForm">
+        <div class="row">{% endblock %}{% block body %}
+            <div class="col-md-6">
+                <div class="form-group"><div class="wrapper">
+                    <label for="recipientSearch" class="form-label required">Destinataire</label>
+                    <input type="text" id="recipientSearch" class="form-control" placeholder="Recherchez par nom ou email..." list="usersList" autocomplete="off" required>{% block main %}    <div class="content-wrapper p-4">
+                    <datalist id="usersList">
+
+                        {% for user in users %}    <form action="{{ path('admin_submit_custom_email') }}" method="post" enctype="multipart/form-data" id="customEmailForm">        <h1 class="mb-4"><i class="fa fa-envelope-open-text"></i> Envoyer un email personnalisé</h1>
+
+                            <option value="{{ user.firstname ?? '' }} {{ user.lastname ?? '' }} ({{ user.email }})" data-id="{{ user.id }}">
+
+                        {% endfor %}        <div class="row">        
+
+                    </datalist>
+
+                    <input type="hidden" name="recipient" id="recipient" required>            <div class="col-md-6">        {% for label, messages in app.flashes %}
+
+                    <small class="form-text text-muted">Tapez pour rechercher un utilisateur</small>
+
+                </div>                <div class="form-group">            {% for message in messages %}
+
+            </div>
+
+                    <label for="recipientSearch" class="form-label required">Destinataire</label>                <div class="alert alert-{{ label == 'error' ? 'danger' : 'success' }} alert-dismissible fade show" role="alert">
+
+            <div class="col-md-6">
+
+                <div class="form-group">                    <input type="text" id="recipientSearch" class="form-control" placeholder="Recherchez par nom ou email..." list="usersList" autocomplete="off" required>                    {{ message }}
+
+                    <label for="subject" class="form-label required">Sujet de l'email</label>
+
+                    <input type="text" name="subject" id="subject" class="form-control" maxlength="255" required>                    <datalist id="usersList">                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+
+                </div>
+
+            </div>                        {% for user in users %}                </div>
+
+        </div>
+
+                            <option value="{{ user.firstname ?? '' }} {{ user.lastname ?? '' }} ({{ user.email }})" data-id="{{ user.id }}">            {% endfor %}
+
+        <div class="form-group">
+
+            <label for="message" class="form-label required">Message</label>                        {% endfor %}        {% endfor %}
+
+            <textarea name="message" id="message" class="form-control" rows="10" required></textarea>
+
+            <small class="form-text text-muted">Contenu de l'email (HTML accepté)</small>                    </datalist>    <form action="{{ path('admin_submit_custom_email') }}" method="post" enctype="multipart/form-data" id="customEmailForm">
+
+        </div>
+
+                    <input type="hidden" name="recipient" id="recipient" required>        <div class="form-group">
+
+        <div class="form-group">
+
+            <label for="attachments" class="form-label">Pièces jointes</label>                    <small class="form-text text-muted">Tapez pour rechercher un utilisateur</small>            <label for="recipientSearch" class="form-label required">Destinataire</label>
+
+            <input type="file" name="attachments[]" id="attachments" class="form-control" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png,.gif,.zip">
+
+            <small class="form-text text-muted">Formats acceptés : PDF, DOC, DOCX, XLS, XLSX, images, ZIP (max 10 Mo par fichier)</small>                </div>            <input type="text" id="recipientSearch" class="form-control" placeholder="Recherchez par nom ou email..." list="usersList" autocomplete="off" required>
+
+            <div id="fileList" class="mt-2"></div>
+
+        </div>            </div>            <datalist id="usersList">
+
+
+
+        <div class="form-group">                {% for user in users %}
+
+            <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Envoyer l'email</button>
+
+            <a href="{{ ea_url().setController('App\\Controller\\Admin\\CustomEmailCrudController').setAction('index') }}" class="btn btn-secondary"><i class="fa fa-times"></i> Annuler</a>            <div class="col-md-6">                    <option value="{{ user.firstname ?? '' }} {{ user.lastname ?? '' }} ({{ user.email }})" data-id="{{ user.id }}">
+
+        </div>
+
+    </form>                <div class="form-group">                {% endfor %}
+
+
+
+    <script>                    <label for="subject" class="form-label required">Sujet de l'email</label>            </datalist>
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+        const userMap = new Map();                    <input type="text" name="subject" id="subject" class="form-control" maxlength="255" required>            <input type="hidden" name="recipient" id="recipient" required>
+
+        {% for user in users %}
+
+        userMap.set('{{ user.firstname ?? '' }} {{ user.lastname ?? '' }} ({{ user.email }})', '{{ user.id }}');                </div>            <small class="form-text text-muted">Tapez pour rechercher un utilisateur</small>
+
+        {% endfor %}
+
+            </div>        </div>
+
+        const recipientSearch = document.getElementById('recipientSearch');
+
+        const recipientHidden = document.getElementById('recipient');        </div>
+
+
+
+        recipientSearch.addEventListener('input', function() {        <div class="form-group mt-3">
+
+            const selectedValue = this.value;
+
+            const userId = userMap.get(selectedValue);        <div class="form-group">            <label for="subject" class="form-label required">Sujet</label>
+
+            if (userId) {
+
+                recipientHidden.value = userId;            <label for="message" class="form-label required">Message</label>            <input type="text" name="subject" id="subject" class="form-control" maxlength="255" required>
+
+            } else {
+
+                recipientHidden.value = '';            <textarea name="message" id="message" class="form-control" rows="10" required></textarea>        </div>
+
+            }
+
+        });            <small class="form-text text-muted">Contenu de l'email (HTML accepté)</small>
+
+
+
+        const attachmentsInput = document.getElementById('attachments');        </div>        <div class="form-group mt-3">
+
+        const fileList = document.getElementById('fileList');
+
+                    <label for="message" class="form-label required">Message</label>
+
+        attachmentsInput.addEventListener('change', function() {
+
+            fileList.innerHTML = '';        <div class="form-group">            <textarea name="message" id="message" class="form-control" rows="10"></textarea>
+
+            
+
+            if (this.files.length > 0) {            <label for="attachments" class="form-label">Pièces jointes</label>        </div>
+
+                const ul = document.createElement('ul');
+
+                ul.className = 'list-group mt-2';            <input type="file" name="attachments[]" id="attachments" class="form-control" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png,.gif,.zip">
+
+                
+
+                Array.from(this.files).forEach(file => {            <small class="form-text text-muted">Formats acceptés : PDF, DOC, DOCX, XLS, XLSX, images, ZIP (max 10 Mo par fichier)</small>        <div class="form-group mt-3">
+
+                    const li = document.createElement('li');
+
+                    li.className = 'list-group-item d-flex justify-content-between align-items-center';            <div id="fileList" class="mt-2"></div>            <label for="attachments" class="form-label">Pièces jointes</label>
+
+                    
+
+                    const sizeInMB = (file.size / (1024 * 1024)).toFixed(2);        </div>            <input type="file" name="attachments[]" id="attachments" class="form-control" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png,.gif,.zip">
+
+                    li.textContent = file.name + ' (' + sizeInMB + ' Mo)';
+
+                                <small class="form-text text-muted">Formats acceptés : PDF, DOC, DOCX, XLS, XLSX, images, ZIP (max 10 Mo par fichier)</small>
+
+                    if (file.size > 10 * 1024 * 1024) {
+
+                        const badge = document.createElement('span');        <div class="form-group">            <div id="fileList" class="mt-2"></div>
+
+                        badge.className = 'badge bg-danger';
+
+                        badge.textContent = 'Trop volumineux';            <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Envoyer l'email</button>        </div>
+
+                        li.appendChild(badge);
+
+                    } else {            <a href="{{ ea_url().setController('App\\Controller\\Admin\\CustomEmailCrudController').setAction('index') }}" class="btn btn-secondary"><i class="fa fa-times"></i> Annuler</a>
+
+                        const badge = document.createElement('span');
+
+                        badge.className = 'badge bg-success';        </div>        <div class="form-group mt-4">
+
+                        badge.textContent = 'OK';
+
+                        li.appendChild(badge);    </form>            <button type="submit" class="btn btn-primary">
+
+                    }
+
+                                    <i class="fa fa-paper-plane"></i> Envoyer l'email
+
+                    ul.appendChild(li);
+
+                });    <script>            </button>
+
+                
+
+                fileList.appendChild(ul);    document.addEventListener('DOMContentLoaded', function() {            <a href="{{ path('app_admin_dashboard') }}" class="btn btn-secondary">
+
+            }
+
+        });        // Gestion de la sélection du destinataire                <i class="fa fa-times"></i> Annuler
+
+    });
+
+    </script>        const userMap = new Map();            </a>
+
+{% endblock %}
+
+        {% for user in users %}        </div>
+
+        userMap.set('{{ user.firstname ?? '' }} {{ user.lastname ?? '' }} ({{ user.email }})', '{{ user.id }}');    </form>
+
+        {% endfor %}    
+
+    </div>
+
+        const recipientSearch = document.getElementById('recipientSearch');</div>
+
+        const recipientHidden = document.getElementById('recipient');{% endblock %}
+
+
+
+        recipientSearch.addEventListener('input', function() {{% block body_javascript %}
+
+            const selectedValue = this.value;    {{ parent() }}
+
+            const userId = userMap.get(selectedValue);    
+
+            if (userId) {    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+
+                recipientHidden.value = userId;    
+
+            } else {    <script>
+
+                recipientHidden.value = '';        let editorInstance;
+
+            }        
+
+        });        document.addEventListener('DOMContentLoaded', function() {
+
+            ClassicEditor
+
+        // Gestion de l'affichage des fichiers                .create(document.querySelector('#message'), {
+
+        const attachmentsInput = document.getElementById('attachments');                    toolbar: {
+
+        const fileList = document.getElementById('fileList');                        items: [
+
+                                    'heading', '|',
+
+        attachmentsInput.addEventListener('change', function() {                            'bold', 'italic', 'underline', 'strikethrough', '|',
+
+            fileList.innerHTML = '';                            'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', '|',
+
+                                        'link', 'bulletedList', 'numberedList', '|',
+
+            if (this.files.length > 0) {                            'alignment', '|',
+
+                const ul = document.createElement('ul');                            'indent', 'outdent', '|',
+
+                ul.className = 'list-group mt-2';                            'imageUpload', 'blockQuote', 'insertTable', 'mediaEmbed', '|',
+
+                                            'undo', 'redo', '|',
+
+                Array.from(this.files).forEach(file => {                            'code', 'codeBlock', 'horizontalLine', 'specialCharacters'
+
+                    const li = document.createElement('li');                        ],
+
+                    li.className = 'list-group-item d-flex justify-content-between align-items-center';                        shouldNotGroupWhenFull: true
+
+                                        },
+
+                    const sizeInMB = (file.size / (1024 * 1024)).toFixed(2);                    language: 'fr'
+
+                    li.textContent = file.name + ' (' + sizeInMB + ' Mo)';                })
+
+                                    .then(editor => {
+
+                    if (file.size > 10 * 1024 * 1024) {                    editorInstance = editor;
+
+                        const badge = document.createElement('span');                })
+
+                        badge.className = 'badge bg-danger';                .catch(error => {
+
+                        badge.textContent = 'Trop volumineux';                    console.error('Erreur CKEditor:', error);
+
+                        li.appendChild(badge);                });
+
+                    } else {            
+
+                        const badge = document.createElement('span');            const recipientSearch = document.getElementById('recipientSearch');
+
+                        badge.className = 'badge bg-success';            const recipientHidden = document.getElementById('recipient');
+
+                        badge.textContent = 'OK';            
+
+                        li.appendChild(badge);            recipientSearch.addEventListener('input', function() {
+
+                    }                const options = document.querySelectorAll('#usersList option');
+
+                                    let found = false;
+
+                    ul.appendChild(li);                
+
+                });                options.forEach(option => {
+
+                                    if (option.value === this.value) {
+
+                fileList.appendChild(ul);                        recipientHidden.value = option.getAttribute('data-id');
+
+            }                        found = true;
+
+        });                    }
+
+    });                });
+
+    </script>                
+
+{% endblock %}                if (!found){
+
+                    recipientHidden.value = '';
+                }
+            });
+            
+            const attachmentsInput = document.getElementById('attachments');
+            const fileList = document.getElementById('fileList');
+            
+            attachmentsInput.addEventListener('change', function() {
+                fileList.innerHTML = '';
+                
+                if (this.files.length > 0) {
+                    const ul = document.createElement('ul');
+                    ul.className = 'list-group';
+                    
+                    Array.from(this.files).forEach(file => {
+                        const li = document.createElement('li');
+                        li.className = 'list-group-item d-flex justify-content-between align-items-center';
+                        
+                        const sizeInMB = (file.size / (1024 * 1024)).toFixed(2);
+                        li.textContent = file.name + ' (' + sizeInMB + ' Mo)';
+                        
+                        if (file.size > 10 * 1024 * 1024) {
+                            const badge = document.createElement('span');
+                            badge.className = 'badge bg-danger';
+                            badge.textContent = 'Trop volumineux';
+                            li.appendChild(badge);
+                        }
+                        
+                        ul.appendChild(li);
+                    });
+                    
+                    fileList.appendChild(ul);
+                }
+            });
+            
+            const form = document.getElementById('customEmailForm');
+            form.addEventListener('submit', function(e) {
+                if (editorInstance) {
+                    document.getElementById('message').value = editorInstance.getData();
+                }
+                
+                if (!recipientHidden.value){
+                    e.preventDefault();
+                    alert('Veuillez sélectionner un destinataire valide');
+                    return false;
+                }
+                
+                if (!document.getElementById('subject').value.trim()){
+                    e.preventDefault();
+                    alert('Veuillez saisir un sujet');
+                    return false;
+                }
+                
+                const messageContent = editorInstance ? editorInstance.getData() : document.getElementById('message').value;
+                if (!messageContent.trim()){
+                    e.preventDefault();
+                    alert('Veuillez saisir un message');
+                    return false;
+                }
+                
+                return true;
+            });
+        });
+    </script>
+{% endblock %}

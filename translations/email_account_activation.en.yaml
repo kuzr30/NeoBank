@@ -1,0 +1,30 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_account_activation.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+email_account_activation:
+  title: "Activate your %company_name% account"
+  content:
+    greeting: "Activate your account, {firstName}!"
+    intro: "Thank you for signing up with <strong>%company_name%</strong>. To finalize your registration and secure your account, we need to verify your email address."
+    activation_required:
+      title: "Activation required"
+      description: "Click the button below to activate your account and access all our banking services."
+    button_text: "Activate my account"
+    warning:
+      title: "⏰ Temporary link"
+      description: "This activation link is valid for <strong>24 hours</strong> only. After this time, you will need to make a new registration request."
+    manual_link: "If the button doesn't work, you can copy and paste this link into your browser:"
+    success:
+      title: "After activation"
+      description: "Once your account is activated, you will receive a welcome email and can immediately log in to your personal %company_name% area."
+    security_notice: "If you are not the originator of this registration, ignore this email. No account will be created without activation."
+    signature: "Best regards,<br><strong>The %company_name% team</strong>"
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Sending account activation email"
+    success: "Activation email sent successfully"
+    error: "Error sending activation email"
+    send_failed: "Failed to send activation email"

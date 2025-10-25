@@ -1,0 +1,94 @@
+banking_accounts:
+  # Header section
+  header:
+    main_account: "Cuenta Principal"
+    account_number: "Cuenta N°"
+    iban: "IBAN"
+    currency: "Divisa"
+    available_balance: "Saldo disponible"
+    no_account: "Ninguna cuenta"
+    no_account_message: "Contacte con su asesor para abrir una cuenta"
+    no_balance: "Ningún saldo disponible"
+
+  # Filters and tools
+  filters:
+    all_operations: "Todas las operaciones"
+    transfers: "Transferencias"
+    direct_debits: "Adeudos directos"
+    card_payments: "Tarjetas bancarias"
+    checks: "Cheques"
+    filter_button: "Filtrar"
+    download: "Descargar"
+    print: "Imprimir"
+
+  # Operations table
+  table:
+    date: "Fecha"
+    operation: "Operación"
+    debit: "Débito"
+    credit: "Crédito"
+    reference: "Ref"
+
+  # Transaction statuses
+  status:
+    pending: "Pendiente"
+    executing: "En curso"
+    cancelled: "Cancelado"
+    blocked: "Bloqueado"
+    completed: "Terminado"
+
+  # Empty state
+  empty_state:
+    no_transactions: "Ninguna transacción encontrada"
+    no_transactions_message: "Sus transacciones aparecerán aquí una vez realizadas"
+
+  # Pagination
+  pagination:
+    previous: "Anterior"
+    next: "Siguiente"
+    page_info: "Página %d de %d (%d operación%s)"
+    no_operations: "Ninguna operación"
+
+  # Transaction descriptions
+  descriptions:
+    credit_to_main_debit: "Transferencia del crédito hacia cuenta principal"
+    credit_to_main_credit: "Transferencia recibida del crédito"
+    credit_release: "Desembolso de crédito"
+    operation_singular: ""
+    operation_plural: "es"
+    
+  # Account info
+  account:
+    balance: "Saldo"
+    available: "Disponible"
+    number: "Número de cuenta"
+    type: "Tipo de cuenta"
+    status: "Estado"
+    opened_date: "Fecha de apertura"
+    last_transaction: "Última transacción"
+    
+  # Account types
+  types:
+    checking: "Cuenta corriente"
+    savings: "Cuenta ahorro" 
+    credit: "Cuenta crédito"
+    
+  # Account Status
+  account_status:
+    active: "Activo"
+    inactive: "Inactivo"
+    blocked: "Bloqueado"
+    
+  # Actions
+  actions:
+    view_transactions: "Ver las transacciones"
+    view_details: "Ver los detalles"
+    download_statement: "Descargar el extracto"
+    
+  # Messages
+  messages:
+    no_accounts: "Ninguna cuenta disponible"
+    access_denied: "Acceso denegado a esta cuenta"
+    
+  # Currency
+  currency: "€"

@@ -1,0 +1,106 @@
+microcredit:
+  page:
+    title: "Microkrediet"
+    description: "Toegankelijke financieringsoplossing met ons microkrediet. Bedragen aangepast aan kleine persoonlijke of professionele projecten."
+  
+  hero:
+    class: "credit-detail-hero--microcredit"
+    taux: "{rate}%"
+    montant: "5 000€"
+    duree: "5 jaar"
+    title: "Microkrediet"
+    subtitle: "Toegankelijke financiering voor uw kleine projecten"
+  
+  section_1:
+    title: "Wat is een microkrediet?"
+    content:
+      paragraph_1: "Het microkrediet is een financieringsoplossing bestemd voor personen die geen toegang hebben tot klassiek bankCrediet. Het financiert kleine persoonlijke of professionele projecten."
+      paragraph_2: "Begeleid door een advies- en opvolgingssysteem, bevordert het microkrediet financiële inclusie en maakt het mogelijk om essentiële projecten te realiseren zoals de aankoop van een voertuig voor werk of het opzetten van een micro-onderneming."
+  
+  features:
+    title: "Microkredietkenmerken"
+    montant:
+      value: "Van 300€ tot 5 000€"
+      detail: "Bedragen aangepast aan behoeften"
+    duree:
+      value: "Van 6 maanden tot 5 jaar"
+      detail: "Flexibele duur"
+    taux:
+      value: "Vanaf {rate}% JTKS*"
+      detail: "Voordelig sociaal tarief"
+    garantie:
+      value: "Garantiefonds"
+      detail: "Of solidaire borgstelling"
+  
+  section_3:
+    title: "Voordelen van het microkrediet"
+    advantages:
+      accessibilite:
+        title: "Toegankelijkheid"
+        description: "Open voor publiek uitgesloten van traditioneel krediet"
+      accompagnement:
+        title: "Begeleiding"
+        description: "Gepersonaliseerd advies en opvolging van het project"
+      taux_modere:
+        title: "Gematigd tarief"
+        description: "Preferentiële voorwaarden met sociale doelstelling"
+      projets_varies:
+        title: "Gevarieerde projecten"
+        description: "Persoonlijk, professioneel of integratie"
+      pas_frais:
+        title: "Geen kosten"
+        description: "Geen dossierkosten of boetes"
+  
+  section_4:
+    title: "Voorwaarden en subsidiabele projecten"
+    conditions:
+      title: "Geschiktheidsvoorwaarden"
+      items:
+        exclusion: "Uitsluiting van klassiek bankCrediet"
+        projet: "Levensvatbaar en coherent project"
+        situation: "Precaire sociale situatie"
+        accompagnement: "Begeleiding aanvaard"
+    projets:
+      title: "Types projecten"
+      items:
+        vehicule: "Aankoop voertuig voor werk"
+        entreprise: "Oprichting van micro-onderneming"
+        formation: "Beroepsopleiding"
+        equipement: "Essentiële huishoudelijke uitrusting"
+  
+  section_5:
+    title: "Benodigde documenten"
+    personnelle:
+      title: "Persoonlijke situatie"
+      items:
+        identite: "Identiteitsbewijs"
+        domicile: "Woonplaatsbewijs"
+        ressources: "Bewijzen van middelen"
+        attestations: "Situatieverklaringen"
+    projet:
+      title: "Te financieren project"
+      items:
+        descriptif: "Gedetailleerde beschrijving van het project"
+        devis: "Offertes of pro forma facturen"
+        financement: "Financieringsplan"
+        echeancier: "Voorlopig betalingsschema"
+    accompagnement:
+      title: "Begeleiding"
+      items:
+        avis: "Advies van sociale begeleider"
+        dossier: "Presentatiedossier"
+        engagement: "Opvolgingsverbintenis"
+        references: "Projectreferenties"
+  
+  legal:
+    details:
+      title: "Belangrijke juridische informatie"
+      taeg: "<strong>*JTKS :</strong> Representatief voorbeeld: voor een microkrediet van €2.000 over 36 maanden tegen een JTKS van 7,5%, betaalt u 36 maandelijkse aflossingen van €63, hetzij een totaalbedrag van €2.268 (kredietkosten: €268)."
+      eligibilite: "<strong>Geschiktheid :</strong> Voorbehouden aan personen in een situatie van precariteit of bankuitsluiting."
+      accompagnement: "<strong>Begeleiding :</strong> Verplichte opvolging door een maatschappelijk werker of vereniging."
+      garantie: "<strong>Garantie :</strong> Solidair garantiefonds, geen persoonlijke borgstelling vereist."
+      finalite: "<strong>Doel :</strong> Gebruik strikt conform het aangegeven project."
+  
+  cta:
+    title: "Realiseer uw project"
+    subtitle: "Profiteer van toegankelijke financiering met ons microkrediet"

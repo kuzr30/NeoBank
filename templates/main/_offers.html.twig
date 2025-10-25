@@ -1,0 +1,573 @@
+<!-- Offers Section -->
+<section class="home__offers">
+  <div class="home__offers-container">
+    <div class="home__offers-content">
+      <!-- Header -->
+      <div class="home__offers-header">
+        <div class="home__offers-badge">
+          {{ ux_icon('heroicons:star', {'class': 'home__offers-badge-icon'}) }}
+          <span>{{ tp('offers.badge') }}</span>
+        </div>
+        
+        <h2 class="home__offers-title">
+          {{ tp('offers.title') }} <span class="home__offers-title--accent">{{ tp('offers.title_accent') }}</span>
+        </h2>
+        
+        <p class="home__offers-description">
+          {{ tp('offers.description') }}
+        </p>
+      </div>
+
+      <!-- Offers Grid -->
+      <div class="home__offers-grid">
+        <!-- Essentiel -->
+        <div class="home__offers-card home__offers-card--essential">
+          <div class="home__offers-card-header">
+            <div class="home__offers-card-icon">
+              {{ ux_icon('heroicons:building-library', {'class': 'home__offers-card-icon-svg'}) }}
+            </div>
+            <div class="home__offers-card-title">
+              <h3>{{ tp('offers.essential.title') }}</h3>
+              <p class="home__offers-card-subtitle">{{ tp('offers.essential.subtitle') }}</p>
+            </div>
+            <div class="home__offers-card-price">
+              <span class="home__offers-price-amount">{{ tp('offers.essential.price') }}</span>
+              <span class="home__offers-price-period">{{ tp('offers.essential.period') }}</span>
+            </div>
+          </div>
+          
+          <div class="home__offers-card-features">
+            <div class="home__offers-feature">
+              <span class="home__offers-feature-icon">✓</span>
+              <span>{{ tp('offers.essential.features.feature1') }}</span>
+            </div>
+            <div class="home__offers-feature">
+              <span class="home__offers-feature-icon">✓</span>
+              <span>{{ tp('offers.essential.features.feature2') }}</span>
+            </div>
+            <div class="home__offers-feature">
+              <span class="home__offers-feature-icon">✓</span>
+              <span>{{ tp('offers.essential.features.feature3') }}</span>
+            </div>
+            <div class="home__offers-feature">
+              <span class="home__offers-feature-icon">✓</span>
+              <span>{{ tp('offers.essential.features.feature4') }}</span>
+            </div>
+            <div class="home__offers-feature">
+              <span class="home__offers-feature-icon">✓</span>
+              <span>{{ tp('offers.essential.features.feature5') }}</span>
+            </div>
+          </div>
+          
+          <a href="{{ path('app_register') }}" class="home__offers-btn home__offers-btn--essential">
+            {{ tp('offers.essential.cta') }}
+          </a>
+        </div>
+
+        <!-- Premium -->
+        <div class="home__offers-card home__offers-card--premium">
+          <div class="home__offers-card-badge">{{ tp('offers.premium.badge') }}</div>
+          <div class="home__offers-card-header">
+            <div class="home__offers-card-icon">
+              {{ ux_icon('heroicons:sparkles', {'class': 'home__offers-card-icon-svg'}) }}
+            </div>
+            <div class="home__offers-card-title">
+              <h3>{{ tp('offers.premium.title') }}</h3>
+              <p class="home__offers-card-subtitle">{{ tp('offers.premium.subtitle') }}</p>
+            </div>
+            <div class="home__offers-card-price">
+              <span class="home__offers-price-amount">{{ tp('offers.premium.price') }}</span>
+              <span class="home__offers-price-period">{{ tp('offers.premium.period') }}</span>
+            </div>
+          </div>
+          
+          <div class="home__offers-card-features">
+            <div class="home__offers-feature">
+              <span class="home__offers-feature-icon">✓</span>
+              <span>{{ tp('offers.premium.features.feature1') }}</span>
+            </div>
+            <div class="home__offers-feature">
+              <span class="home__offers-feature-icon">✓</span>
+              <span>{{ tp('offers.premium.features.feature2') }}</span>
+            </div>
+            <div class="home__offers-feature">
+              <span class="home__offers-feature-icon">✓</span>
+              <span>{{ tp('offers.premium.features.feature3') }}</span>
+            </div>
+            <div class="home__offers-feature">
+              <span class="home__offers-feature-icon">✓</span>
+              <span>{{ tp('offers.premium.features.feature4') }}</span>
+            </div>
+            <div class="home__offers-feature">
+              <span class="home__offers-feature-icon">✓</span>
+              <span>{{ tp('offers.premium.features.feature5') }}</span>
+            </div>
+          </div>
+          
+          <a href="{{ path('app_register') }}" class="home__offers-btn home__offers-btn--premium">
+            {{ tp('offers.premium.cta') }}
+          </a>
+        </div>
+
+        <!-- Private -->
+        <div class="home__offers-card home__offers-card--private">
+          <div class="home__offers-card-header">
+            <div class="home__offers-card-icon">
+              {{ ux_icon('heroicons:shield-check', {'class': 'home__offers-card-icon-svg'}) }}
+            </div>
+            <div class="home__offers-card-title">
+              <h3>{{ tp('offers.private.title') }}</h3>
+              <p class="home__offers-card-subtitle">{{ tp('offers.private.subtitle') }}</p>
+            </div>
+            <div class="home__offers-card-price">
+              <span class="home__offers-price-amount">{{ tp('offers.private.price') }}</span>
+              <span class="home__offers-price-period">{{ tp('offers.private.period') }}</span>
+            </div>
+          </div>
+          
+          <div class="home__offers-card-features">
+            <div class="home__offers-feature">
+              <span class="home__offers-feature-icon">✓</span>
+              <span>{{ tp('offers.private.features.feature1') }}</span>
+            </div>
+            <div class="home__offers-feature">
+              <span class="home__offers-feature-icon">✓</span>
+              <span>{{ tp('offers.private.features.feature2') }}</span>
+            </div>
+            <div class="home__offers-feature">
+              <span class="home__offers-feature-icon">✓</span>
+              <span>{{ tp('offers.private.features.feature3') }}</span>
+            </div>
+            <div class="home__offers-feature">
+              <span class="home__offers-feature-icon">✓</span>
+              <span>{{ tp('offers.private.features.feature4') }}</span>
+            </div>
+            <div class="home__offers-feature">
+              <span class="home__offers-feature-icon">✓</span>
+              <span>{{ tp('offers.private.features.feature5') }}</span>
+            </div>
+          </div>
+          
+          <a href="{{ path('app_register') }}" class="home__offers-btn home__offers-btn--private">
+            {{ tp('offers.private.cta') }}
+          </a>
+        </div>
+      </div>
+
+      <!-- Comparison Table -->
+      <div class="home__offers-comparison">
+        <h3>{{ tp('offers.comparison.title') }}</h3>
+        <div class="home__offers-table-container">
+          <table class="home__offers-table">
+            <thead>
+              <tr>
+                <th>{{ tp('offers.comparison.table.headers.services') }}</th>
+                <th>{{ tp('offers.comparison.table.headers.essential') }}</th>
+                <th>{{ tp('offers.comparison.table.headers.premium') }}</th>
+                <th>{{ tp('offers.comparison.table.headers.private') }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ tp('offers.comparison.table.rows.account_fees.label') }}</td>
+                <td>{{ tp('offers.comparison.table.rows.account_fees.essential') }}</td>
+                <td>{{ tp('offers.comparison.table.rows.account_fees.premium') }}</td>
+                <td>{{ tp('offers.comparison.table.rows.account_fees.private') }}</td>
+              </tr>
+              <tr>
+                <td>{{ tp('offers.comparison.table.rows.bank_card.label') }}</td>
+                <td>{{ tp('offers.comparison.table.rows.bank_card.essential') }}</td>
+                <td>{{ tp('offers.comparison.table.rows.bank_card.premium') }}</td>
+                <td>{{ tp('offers.comparison.table.rows.bank_card.private') }}</td>
+              </tr>
+              <tr>
+                <td>{{ tp('offers.comparison.table.rows.overdraft.label') }}</td>
+                <td>{{ tp('offers.comparison.table.rows.overdraft.essential') }}</td>
+                <td>{{ tp('offers.comparison.table.rows.overdraft.premium') }}</td>
+                <td>{{ tp('offers.comparison.table.rows.overdraft.private') }}</td>
+              </tr>
+              <tr>
+                <td>{{ tp('offers.comparison.table.rows.savings_rate.label') }}</td>
+                <td>{{ tp('offers.comparison.table.rows.savings_rate.essential') }}</td>
+                <td>{{ tp('offers.comparison.table.rows.savings_rate.premium') }}</td>
+                <td>{{ tp('offers.comparison.table.rows.savings_rate.private') }}</td>
+              </tr>
+              <tr>
+                <td>{{ tp('offers.comparison.table.rows.support.label') }}</td>
+                <td>{{ tp('offers.comparison.table.rows.support.essential') }}</td>
+                <td>{{ tp('offers.comparison.table.rows.support.premium') }}</td>
+                <td>{{ tp('offers.comparison.table.rows.support.private') }}</td>
+              </tr>
+              <tr>
+                <td>{{ tp('offers.comparison.table.rows.insurance.label') }}</td>
+                <td>{{ tp('offers.comparison.table.rows.insurance.essential') }}</td>
+                <td>{{ tp('offers.comparison.table.rows.insurance.premium') }}</td>
+                <td>{{ tp('offers.comparison.table.rows.insurance.private') }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Offers Section */
+.home__offers {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+}
+
+.home__offers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.home__offers-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.home__offers-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.home__offers-badge-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.home__offers-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1e293b;
+  margin-bottom: 24px;
+}
+
+.home__offers-title--accent {
+  color: #3b82f6;
+}
+
+.home__offers-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.home__offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.home__offers-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.home__offers-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.15);
+}
+
+.home__offers-card--essential {
+  border-color: #e2e8f0;
+}
+
+.home__offers-card--premium {
+  border-color: #3b82f6;
+  transform: scale(1.05);
+}
+
+.home__offers-card--private {
+  border-color: #1e293b;
+}
+
+.home__offers-card-badge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.home__offers-card-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.home__offers-card-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__offers-card--essential .home__offers-card-icon {
+  background: linear-gradient(135deg, #64748b, #475569);
+}
+
+.home__offers-card--premium .home__offers-card-icon {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.home__offers-card--private .home__offers-card-icon {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+}
+
+.home__offers-card-icon-svg {
+  width: 28px;
+  height: 28px;
+  color: white;
+}
+
+.home__offers-card-title h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.home__offers-card-subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+
+.home__offers-card-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+}
+
+.home__offers-price-amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.home__offers-price-period {
+  font-size: 16px;
+  color: #64748b;
+}
+
+.home__offers-card-features {
+  margin-bottom: 30px;
+}
+
+.home__offers-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.home__offers-feature-icon {
+  width: 20px;
+  height: 20px;
+  background: #10b981;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.home__offers-btn {
+  width: 100%;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.home__offers-btn--essential {
+  background: #64748b;
+  color: white;
+}
+
+.home__offers-btn--essential:hover {
+  background: #475569;
+  transform: translateY(-1px);
+}
+
+.home__offers-btn--premium {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+}
+
+.home__offers-btn--premium:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+.home__offers-btn--private {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: white;
+}
+
+.home__offers-btn--private:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(30, 41, 59, 0.3);
+}
+
+.home__offers-comparison {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.home__offers-comparison h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.home__offers-table-container {
+  overflow-x: auto;
+}
+
+.home__offers-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.home__offers-table thead th {
+  background: #f8fafc;
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.home__offers-table tbody td {
+  padding: 16px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #64748b;
+}
+
+.home__offers-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.home__offers-table tbody td:first-child {
+  font-weight: 500;
+  color: #374151;
+}
+
+@media (max-width: 768px) {
+  .home__offers-title {
+    font-size: 36px;
+  }
+  
+  .home__offers-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .home__offers-card--premium {
+    transform: none;
+  }
+  
+  .home__offers-table {
+    font-size: 12px;
+  }
+  
+  .home__offers-table thead th,
+  .home__offers-table tbody td {
+    padding: 12px 8px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Animation des cartes au scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = 'slideUpOffer 0.6s ease forwards';
+      }
+    });
+  }, observerOptions);
+
+  const cards = document.querySelectorAll('.home__offers-card');
+  cards.forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.animationDelay = `${index * 0.2}s`;
+    observer.observe(card);
+  });
+
+  // Highlight premium card
+  const premiumCard = document.querySelector('.home__offers-card--premium');
+  if (premiumCard) {
+    premiumCard.addEventListener('mouseenter', function() {
+      this.style.transform = 'scale(1.05) translateY(-5px)';
+    });
+    
+    premiumCard.addEventListener('mouseleave', function() {
+      this.style.transform = 'scale(1.05)';
+    });
+  }
+});
+
+// CSS pour l'animation
+const offersStyle = document.createElement('style');
+offersStyle.textContent = `
+@keyframes slideUpOffer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+`;
+document.head.appendChild(offersStyle);
+</script>

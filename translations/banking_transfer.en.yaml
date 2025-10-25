@@ -1,0 +1,47 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_transfer.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_transfer:
+  # Meta tags
+  meta:
+    title: "New transfer - %company_name%"
+    description: "Make a secure bank transfer with %company_name%"
+
+  # Navigation
+  nav:
+    dashboard: "Dashboard"
+    transfers: "Transfers"
+    logout: "Logout"
+
+  # Process Steps
+  steps:
+    details: "Details"
+    validation: "Validation"
+    confirmation: "Confirmation"
+
+  # Form Header
+  form:
+    title: "New transfer"
+    subtitle: "Transfer money to a beneficiary account"
+
+  # Account Info
+  account:
+    available_balance: "Available balance:"
+
+  # Form Fields
+  fields:
+    destination_account: "Beneficiary account"
+    amount: "Amount"
+    amount_placeholder: "0.00"
+    description: "Description (optional)"
+    description_placeholder: "Transfer reason..."
+
+  # Actions
+  actions:
+    cancel: "Cancel"
+    continue: "Continue"
+
+  # Currency
+  currency: "€"

@@ -1,0 +1,105 @@
+credit_professionnel:
+  page:
+    title: "Unternehmenskredit"
+    description: "Entwickeln Sie Ihr Geschäft mit unserem Unternehmenskredit. Maßgeschneiderte Lösungen für Unternehmen und Selbständige."
+
+  hero:
+    title: "Unternehmenskredit"
+    subtitle: "Entwickeln Sie Ihr Geschäft"
+    values:
+      taux: "{rate}%"
+      montant: "500.000€"
+      duree: "15 Jahre"
+
+  section_1:
+    title: "Was ist ein Unternehmenskredit?"
+    content:
+      paragraph_1: "Der Unternehmenskredit begleitet Sie bei der Entwicklung Ihres Geschäfts: Finanzierung von Ausrüstung, Nutzfahrzeugen, Räumlichkeiten, Betriebsmittelbedarf oder Erwerb von Geschäftsanteilen."
+      paragraph_2: "Flexible Lösung für Selbständige, Handwerker, Händler und KMU, mit Vorzugsbedingungen zur Unterstützung Ihres Wachstums."
+
+  features:
+    montant: "Bis zu 500.000€"
+    montant_detail: "Je nach Geschäftsprojekt"
+    duree: "Von 2 bis 15 Jahre"
+    duree_detail: "An die Investition angepasste Laufzeit"
+    taux: "Ab {rate}% effektiver Jahreszins*"
+    taux_detail: "Vorzugszinssatz für Unternehmen"
+    garantie: "Hypothek oder Pfandrecht"
+    garantie_detail: "Je nach Betrag"
+
+  advantages:
+    taux_preferentiel:
+      title: "Vorzugszinssatz:"
+      text: "Vorteilhafte Bedingungen für Unternehmen"
+    accompagnement:
+      title: "Begleitung:"
+      text: "Dedizierter Berater für Unternehmen"
+    souplesse:
+      title: "Flexibilität:"
+      text: "Anpassung der Raten je nach Geschäftstätigkeit"
+    deblocage_rapide:
+      title: "Schnelle Freigabe:"
+      text: "Mittel innerhalb von 15 Tagen verfügbar"
+    deductibilite:
+      title: "Steuerliche Absetzbarkeit:"
+      text: "Zinsen steuerlich absetzbar"
+
+  requirements:
+    conditions_activite:
+      title: "Geschäftsbedingungen"
+      items:
+        creation: "Unternehmen seit mehr als 2 Jahren gegründet"
+        declaration: "Tätigkeit angemeldet und ordnungsgemäß"
+        chiffre_affaires: "Regelmäßiger Umsatz"
+        difficultes: "Keine finanziellen Schwierigkeiten"
+    criteres_financiers:
+      title: "Finanzielle Kriterien"
+      items:
+        capacite: "Nachgewiesene Rückzahlungsfähigkeit"
+        fonds_propres: "Ausreichendes Eigenkapital"
+        apport: "Eigenanteil mindestens 20%"
+        garanties: "Vorzuschlagende Sicherheiten"
+
+  documents:
+    title: "Erforderliche Dokumente"
+    entreprise:
+      title: "Unternehmensdokumente"
+      kbis: "Handelsregisterauszug unter 3 Monaten"
+      statuts: "Gesellschaftssatzung"
+      bilans: "Die letzten 3 Bilanzen"
+      liasse_fiscale: "Vollständige Steuererklärung"
+      situation_banque: "Kontoauszüge der letzten 6 Monate"
+    dirigeant:
+      title: "Dokumente des Geschäftsführers"
+      identite: "Personalausweis des Geschäftsführers"
+      revenus: "Einkommensnachweise"
+      patrimoine: "Vermögenserklärung"
+      releves: "Persönliche Kontoauszüge"
+    projet:
+      title: "Investitionsprojekt"
+      plan_financement: "Detaillierter Finanzierungsplan"
+      devis: "Lieferantenvoranschläge"
+      business_plan: "3-Jahres-Businessplan"
+      garanties: "Vorgeschlagene Sicherheiten"
+
+  legal:
+    title: "Wichtige rechtliche Informationen"
+    taeg:
+      title: "*Effektiver Jahreszins:"
+      text: "Repräsentatives Beispiel: Für einen Unternehmenskredit von 100.000€ über 10 Jahre mit einem effektiven Jahreszins von 3,8% zahlen Sie 120 Monatsraten von 1.017€, also einen Gesamtbetrag von 122.040€ (Kreditkosten: 22.040€)."
+    garanties:
+      title: "Sicherheiten:"
+      text: "Hypothek, Pfandrecht oder Bürgschaft je nach Betrag und Laufzeit."
+    assurance:
+      title: "Versicherung:"
+      text: "Keyman-Versicherung empfohlen zur Kreditsicherung."
+    fiscalite:
+      title: "Steuern:"
+      text: "Darlehenszinsen vom steuerpflichtigen Ergebnis absetzbar."
+    remboursement:
+      title: "Rückzahlung:"
+      text: "Möglichkeit der Anpassung je nach Saisonalität der Geschäftstätigkeit."
+
+  cta:
+    title: "Dynamisieren Sie Ihr Unternehmen"
+    subtitle: "Finanzieren Sie Ihre Geschäftsprojekte mit unserem dedizierten Kredit"

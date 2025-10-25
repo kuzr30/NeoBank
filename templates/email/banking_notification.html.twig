@@ -1,0 +1,173 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}
+    {% if notificationType == 'transaction' %}
+        {{ tp('email_banking_notification.title.transaction', {}, 'email_banking_notification') }}
+    {% elseif notificationType == 'security' %}
+        {{ tp('email_banking_notification.title.security', {}, 'email_banking_notification') }}
+    {% elseif notificationType == 'statement' %}
+        {{ tp('email_banking_notification.title.statement', {}, 'email_banking_notification') }}
+    {% elseif notificationType == 'credit_approval' %}
+        {{ tp('email_banking_notification.title.credit_approval', {}, 'email_banking_notification') }}
+    {% elseif notificationType == 'credit_rejection' %}
+        {{ tp('email_banking_notification.title.credit_rejection', {}, 'email_banking_notification') }}
+    {% else %}
+        {{ tp('email_banking_notification.title.default', {}, 'email_banking_notification') }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">
+        {% if notificationType == 'transaction' %}
+            {{ tp('email_banking_notification.title.transaction', {}, 'email_banking_notification') }}
+        {% elseif notificationType == 'security' %}
+            {{ tp('email_banking_notification.title.security', {}, 'email_banking_notification') }}
+        {% elseif notificationType == 'statement' %}
+            {{ tp('email_banking_notification.title.statement', {}, 'email_banking_notification') }}
+        {% elseif notificationType == 'credit_approval' %}
+            {{ tp('email_banking_notification.title.credit_approval', {}, 'email_banking_notification') }}
+        {% elseif notificationType == 'credit_rejection' %}
+            {{ tp('email_banking_notification.title.credit_rejection', {}, 'email_banking_notification') }}
+        {% else %}
+            {{ tp('email_banking_notification.title.default', {}, 'email_banking_notification') }}
+        {% endif %}
+    </h2>
+    
+    <p class="content-text">
+        {{ tp('email_banking_notification.content.greeting', {firstName: firstName}, 'email_banking_notification') }}
+    </p>
+
+    {% if notificationType == 'transaction' %}
+        <p class="content-text">
+            {{ tp('email_banking_notification.content.transaction.message', {}, 'email_banking_notification') }}
+        </p>
+
+        <div class="info-box">
+            <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_banking_notification.content.transaction.details_title', {}, 'email_banking_notification') }}</h3>
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <td style="padding: 8px 0; font-weight: 600; color: #555;">{{ tp('email_banking_notification.content.transaction.amount', {}, 'email_banking_notification') }}</td>
+                    <td style="padding: 8px 0; color: #333;">{{ amount ?? 'N/A' }}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 0; font-weight: 600; color: #555;">{{ tp('email_banking_notification.content.transaction.date', {}, 'email_banking_notification') }}</td>
+                    <td style="padding: 8px 0; color: #333;">{{ date ?? 'N/A' }}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 0; font-weight: 600; color: #555;">{{ tp('email_banking_notification.content.transaction.description', {}, 'email_banking_notification') }}</td>
+                    <td style="padding: 8px 0; color: #333;">{{ description ?? 'N/A' }}</td>
+                </tr>
+                {% if merchant is defined %}
+                <tr>
+                    <td style="padding: 8px 0; font-weight: 600; color: #555;">{{ tp('email_banking_notification.content.transaction.merchant', {}, 'email_banking_notification') }}</td>
+                    <td style="padding: 8px 0; color: #333;">{{ merchant }}</td>
+                </tr>
+                {% endif %}
+            </table>
+        </div>
+
+    {% elseif notificationType == 'security' %}
+        <div class="warning-box">
+            <h3 style="margin-top: 0; color: #f57c00;">{{ tp('email_banking_notification.content.security.title', {}, 'email_banking_notification') }}</h3>
+            <p>{{ securityMessage ?? tp('email_banking_notification.content.security.default_message', {}, 'email_banking_notification') }}</p>
+        </div>
+
+        <p class="content-text">
+            {% if securityDetails is defined %}
+                {{ securityDetails }}
+            {% else %}
+                {{ tp('email_banking_notification.content.security.default_details', {}, 'email_banking_notification') }}
+            {% endif %}
+        </p>
+
+    {% elseif notificationType == 'statement' %}
+        <p class="content-text">
+            {{ tp('email_banking_notification.content.statement.message', {period: period ?? 'du mois dernier'}, 'email_banking_notification') }}
+        </p>
+
+        <div class="success-box">
+            <h3 style="margin-top: 0; color: #2e7d32;">{{ tp('email_banking_notification.content.statement.summary_title', {}, 'email_banking_notification') }}</h3>
+            {% if summary is defined %}
+                <ul style="margin-bottom: 0; padding-left: 20px;">
+                    {% if summary.transactions is defined %}
+                        <li>{{ tp('email_banking_notification.content.statement.transactions_count', {count: summary.transactions}, 'email_banking_notification') }}</li>
+                    {% endif %}
+                    {% if summary.totalSpent is defined %}
+                        <li>{{ tp('email_banking_notification.content.statement.total_spent', {amount: summary.totalSpent}, 'email_banking_notification') }}</li>
+                    {% endif %}
+                    {% if summary.totalReceived is defined %}
+                        <li>{{ tp('email_banking_notification.content.statement.total_received', {amount: summary.totalReceived}, 'email_banking_notification') }}</li>
+                    {% endif %}
+                </ul>
+            {% endif %}
+        </div>
+
+    {% elseif notificationType == 'credit_approval' %}
+        <div class="success-box">
+            <h3 style="margin-top: 0; color: #2e7d32;">{{ tp('email_banking_notification.content.credit_approval.title', {}, 'email_banking_notification') }}</h3>
+            <p style="margin-bottom: 0;">
+                {{ tp('email_banking_notification.content.credit_approval.message', {}, 'email_banking_notification') }}
+            </p>
+        </div>
+
+        {% if creditDetails is defined %}
+            <div class="info-box">
+                <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_banking_notification.content.credit_approval.details_title', {}, 'email_banking_notification') }}</h3>
+                <table style="width: 100%; border-collapse: collapse;">
+                    {% if creditDetails.amount is defined %}
+                    <tr>
+                        <td style="padding: 8px 0; font-weight: 600; color: #555;">{{ tp('email_banking_notification.content.credit_approval.amount_granted', {}, 'email_banking_notification') }}</td>
+                        <td style="padding: 8px 0; color: #333;">{{ creditDetails.amount }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if creditDetails.rate is defined %}
+                    <tr>
+                        <td style="padding: 8px 0; font-weight: 600; color: #555;">{{ tp('email_banking_notification.content.credit_approval.interest_rate', {}, 'email_banking_notification') }}</td>
+                        <td style="padding: 8px 0; color: #333;">{{ creditDetails.rate }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if creditDetails.duration is defined %}
+                    <tr>
+                        <td style="padding: 8px 0; font-weight: 600; color: #555;">{{ tp('email_banking_notification.content.credit_approval.duration', {}, 'email_banking_notification') }}</td>
+                        <td style="padding: 8px 0; color: #333;">{{ creditDetails.duration }}</td>
+                    </tr>
+                    {% endif %}
+                </table>
+            </div>
+        {% endif %}
+
+    {% elseif notificationType == 'credit_rejection' %}
+        <div class="warning-box">
+            <h3 style="margin-top: 0; color: #f57c00;">{{ tp('email_banking_notification.content.credit_rejection.title', {}, 'email_banking_notification') }}</h3>
+            <p style="margin-bottom: 0;">
+                {{ tp('email_banking_notification.content.credit_rejection.message', {}, 'email_banking_notification') }}
+            </p>
+        </div>
+
+        <p class="content-text">
+            {{ rejectionReason ?? tp('email_banking_notification.content.credit_rejection.default_reason', {}, 'email_banking_notification') }}
+        </p>
+
+        <div class="info-box">
+            <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_banking_notification.content.credit_rejection.advice_title', {}, 'email_banking_notification') }}</h3>
+            <ul style="margin-bottom: 0; padding-left: 20px;">
+                {% for advice in tp('email_banking_notification.content.credit_rejection.advice', {}, 'email_banking_notification') %}
+                    <li>{{ advice }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    {% else %}
+        <p class="content-text">
+            {{ message ?? tp('email_banking_notification.content.default.message', {}, 'email_banking_notification') }}
+        </p>
+    {% endif %}
+
+    <div class="btn-container">
+        <a href="{{ dashboardUrl }}" class="btn">{{ tp('email_banking_notification.content.dashboard_button', {}, 'email_banking_notification') }}</a>
+    </div>
+
+    <p class="content-text" style="margin-bottom: 0;">
+        {{ tp('email_banking_notification.content.signature', {}, 'email_banking_notification')|raw }}
+    </p>
+{% endblock %}

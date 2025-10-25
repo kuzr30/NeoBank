@@ -1,0 +1,558 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tp('profile_kyc_status.page.title', {}, 'profile_kyc_status') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .kyc__status-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .kyc__status-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .kyc__status-header {
+            padding: 24px;
+            border-bottom: 1px solid #e5e7eb;
+            background: #f9fafb;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .kyc__status-title {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #111827;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .kyc__status-title svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .kyc__status-body {
+            padding: 24px;
+        }
+
+        .kyc__status-info {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 16px;
+        }
+
+        .kyc__status-info-title {
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .kyc__status-info-title svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .kyc__status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .kyc__status-badge svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .kyc__status-badge--pending {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .kyc__status-badge--approved {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .kyc__status-badge--rejected {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .kyc__status-timeline {
+            position: relative;
+            padding: 24px 0;
+            margin: 24px 0;
+        }
+
+        .kyc__status-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            height: 2px;
+            background: #e5e7eb;
+            transform: translateY(-50%);
+        }
+
+        .kyc__status-timeline-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            z-index: 1;
+        }
+
+        .kyc__status-timeline-item {
+            position: relative;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .kyc__status-timeline-marker {
+            position: relative;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 500;
+            margin-bottom: 16px;
+            background: white;
+            box-shadow: 0 0 0 4px white;
+            z-index: 2;
+        }
+
+        .kyc__status-timeline-marker svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .kyc__status-timeline-item--completed .kyc__status-timeline-marker {
+            background: #10b981;
+        }
+
+        .kyc__status-timeline-item--pending .kyc__status-timeline-marker {
+            background: #f59e0b;
+        }
+
+        .kyc__status-timeline-item--rejected .kyc__status-timeline-marker {
+            background: #ef4444;
+        }
+
+        .kyc__status-timeline-content {
+            margin: 0;
+        }
+
+        .kyc__status-timeline-title {
+            margin: 0 0 8px 0;
+            font-size: 14px;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .kyc__status-timeline-meta {
+            color: #6b7280;
+            font-size: 12px;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .kyc__status-documents {
+            margin-top: 32px;
+        }
+
+        .kyc__status-documents-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 16px;
+        }
+
+        .kyc__status-documents-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .kyc__status-document-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 16px;
+            background: #ffffff;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .kyc__status-document-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .kyc__status-document-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .kyc__status-document-icon {
+            color: #3b82f6;
+            margin-bottom: 4px;
+        }
+
+        .kyc__status-document-icon svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .kyc__status-document-info {
+            width: 100%;
+        }
+
+        .kyc__status-document-name {
+            margin: 0 0 4px 0;
+            font-size: 14px;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .kyc__status-document-meta {
+            color: #6b7280;
+            font-size: 12px;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .kyc__status-document-status {
+            display: flex;
+            justify-content: center;
+            margin-top: 8px;
+        }
+
+        .kyc__status-document-badge {
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        .kyc__status-document-badge svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .kyc__status-actions {
+            margin-top: 32px;
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .kyc__status-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .kyc__status-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .kyc__status-btn--secondary {
+            background: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+
+        .kyc__status-btn--secondary:hover {
+            background: #e5e7eb;
+            text-decoration: none;
+        }
+
+        .kyc__status-btn--primary {
+            background: #3b82f6;
+            color: white;
+            border: 1px solid #3b82f6;
+        }
+
+        .kyc__status-btn--primary:hover {
+            background: #2563eb;
+            text-decoration: none;
+            color: white;
+        }
+
+        .kyc__status-btn--success {
+            background: #10b981;
+            color: white;
+            border: 1px solid #10b981;
+        }
+
+        .kyc__status-btn--success:hover {
+            background: #059669;
+            text-decoration: none;
+            color: white;
+        }
+
+        .kyc__status-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .kyc__status-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .kyc__status-actions {
+                flex-direction: column;
+            }
+
+            .kyc__status-timeline-container {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .kyc__status-timeline::before {
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                height: auto;
+                width: 2px;
+                transform: translateX(-50%);
+            }
+
+            .kyc__status-timeline-item {
+                max-width: none;
+                align-items: flex-start;
+                text-align: left;
+                flex-direction: row;
+                gap: 16px;
+            }
+
+            .kyc__status-timeline-marker {
+                margin-bottom: 0;
+                flex-shrink: 0;
+            }
+
+            .kyc__status-documents-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .kyc__status-container {
+                padding: 16px;
+            }
+
+            .kyc__status-card {
+                margin-bottom: 16px;
+            }
+
+            .kyc__status-header,
+            .kyc__status-body {
+                padding: 16px;
+            }
+
+            .kyc__status-title {
+                font-size: 1.25rem;
+            }
+
+            .kyc__status-documents-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .kyc__status-timeline-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 8px;
+            }
+
+            .kyc__status-timeline::before {
+                display: none;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="kyc__status-container">
+    <div class="kyc__status-card">
+        <div class="kyc__status-header">
+            <h1 class="kyc__status-title">
+                {{ ux_icon('heroicons:document-text') }}
+                {{ tp('profile_kyc_status.header.title', {}, 'profile_kyc_status') }}
+            </h1>
+        </div>
+        
+        <div class="kyc__status-body">
+            <!-- Statut global -->
+            <div class="kyc__status-grid">
+                <div class="kyc__status-info">
+                    <h6 class="kyc__status-info-title">{{ tp('profile_kyc_status.info.request_status', {}, 'profile_kyc_status') }}</h6>
+                    {% if submission.isPending %}
+                        <span class="kyc__status-badge kyc__status-badge--pending">
+                            {{ ux_icon('heroicons:clock') }}
+                            {{ tp('profile_kyc_status.status_badges.pending', {}, 'profile_kyc_status') }}
+                        </span>
+                    {% elseif submission.isApproved %}
+                        <span class="kyc__status-badge kyc__status-badge--approved">
+                            {{ ux_icon('heroicons:check-circle') }}
+                            {{ tp('profile_kyc_status.status_badges.approved', {}, 'profile_kyc_status') }}
+                        </span>
+                    {% elseif submission.isRejected %}
+                        <span class="kyc__status-badge kyc__status-badge--rejected">
+                            {{ ux_icon('heroicons:x-circle') }}
+                            {{ tp('profile_kyc_status.status_badges.rejected', {}, 'profile_kyc_status') }}
+                        </span>
+                    {% endif %}
+                </div>
+                
+                <div class="kyc__status-info">
+                    <h6 class="kyc__status-info-title">{{ tp('profile_kyc_status.info.submitted_on', {}, 'profile_kyc_status') }}</h6>
+                    <p>{{ submission.submittedAt|date('d/m/Y à H:i') }}</p>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="kyc__status-timeline">
+                <h2 class="kyc__status-documents-title">{{ tp('profile_kyc_status.timeline.title', {}, 'profile_kyc_status') }}</h2>
+                
+                <div class="kyc__status-timeline-container">
+                    <div class="kyc__status-timeline-item kyc__status-timeline-item--completed">
+                        <div class="kyc__status-timeline-marker">
+                            {{ ux_icon('heroicons:arrow-up-tray') }}
+                        </div>
+                        <div class="kyc__status-timeline-content">
+                            <h6 class="kyc__status-timeline-title">{{ tp('profile_kyc_status.timeline.documents_submitted', {}, 'profile_kyc_status') }}</h6>
+                            <p class="kyc__status-timeline-meta">{{ submission.submittedAt|date('d/m/Y à H:i') }}</p>
+                        </div>
+                    </div>
+                    
+                    {% if submission.processedAt %}
+                        <div class="kyc__status-timeline-item kyc__status-timeline-item--{{ submission.isApproved ? 'completed' : 'rejected' }}">
+                            <div class="kyc__status-timeline-marker">
+                                {{ ux_icon(submission.isApproved ? 'heroicons:check' : 'heroicons:x-mark') }}
+                            </div>
+                            <div class="kyc__status-timeline-content">
+                                <h6 class="kyc__status-timeline-title">{{ submission.isApproved ? tp('profile_kyc_status.timeline.approved', {}, 'profile_kyc_status') : tp('profile_kyc_status.timeline.rejected', {}, 'profile_kyc_status') }}</h6>
+                                <p class="kyc__status-timeline-meta">{{ submission.processedAt|date('d/m/Y à H:i') }}</p>
+                                {% if submission.processedBy %}
+                                    <p class="kyc__status-timeline-meta">{{ tp('profile_kyc_status.timeline.processed_by', {}, 'profile_kyc_status') }} {{ submission.processedBy.firstName }} {{ submission.processedBy.lastName }}</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="kyc__status-timeline-item kyc__status-timeline-item--pending">
+                            <div class="kyc__status-timeline-marker">
+                                {{ ux_icon('heroicons:clock') }}
+                            </div>
+                            <div class="kyc__status-timeline-content">
+                                <h6 class="kyc__status-timeline-title">{{ tp('profile_kyc_status.timeline.under_review', {}, 'profile_kyc_status') }}</h6>
+                                <p class="kyc__status-timeline-meta">{{ tp('profile_kyc_status.timeline.under_review_message', {}, 'profile_kyc_status') }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Documents soumis -->
+            <div class="kyc__status-documents">
+                <h2 class="kyc__status-documents-title">{{ tp('profile_kyc_status.documents.title', {}, 'profile_kyc_status') }}</h2>
+                <div class="kyc__status-documents-grid">
+                    {% for document in submission.documents %}
+                        <div class="kyc__status-document-card">
+                            <div class="kyc__status-document-header">
+                                <div class="kyc__status-document-icon">
+                                    {% if document.isImage %}
+                                        {{ ux_icon('heroicons:photo') }}
+                                    {% else %}
+                                        {{ ux_icon('heroicons:document') }}
+                                    {% endif %}
+                                </div>
+                                <div class="kyc__status-document-info">
+                                    <h6 class="kyc__status-document-name">{{ document|kyc_document_type_label }}</h6>
+                                    <p class="kyc__status-document-meta">{{ tp('profile_kyc_status.documents.sent_on', {}, 'profile_kyc_status') }} {{ document.uploadedAt|date('d/m/Y') }}</p>
+                                </div>
+                                <div class="kyc__status-document-status">
+                                    <span class="kyc__status-document-badge kyc__status-badge--approved">
+                                        {{ ux_icon('heroicons:check') }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Notes administratives -->
+            {% if submission.adminNotes %}
+                <div class="kyc__status-info">
+                    <h6 class="kyc__status-info-title">
+                        {{ ux_icon('heroicons:chat-bubble-left-right') }}
+                        {{ tp('profile_kyc_status.admin_notes.title', {}, 'profile_kyc_status') }}
+                    </h6>
+                    <p>{{ submission.adminNotes|translate_kyc_reason|nl2br }}</p>
+                </div>
+            {% endif %}
+
+            <!-- Actions -->
+            <div class="kyc__status-actions">
+                <a href="{{ path('kyc_index') }}" class="kyc__status-btn kyc__status-btn--secondary">
+                    {{ ux_icon('heroicons:arrow-left') }}
+                    {{ tp('profile_kyc_status.actions.back', {}, 'profile_kyc_status') }}
+                </a>
+                
+                {% if submission.isRejected %}
+                    <a href="{{ path('kyc_submit') }}" class="kyc__status-btn kyc__status-btn--primary">
+                        {{ ux_icon('heroicons:arrow-path') }}
+                        {{ tp('profile_kyc_status.actions.resubmit_documents', {}, 'profile_kyc_status') }}
+                    </a>
+                {% elseif submission.isApproved %}
+                    <a href="{{ path('banking_dashboard') }}" class="kyc__status-btn kyc__status-btn--success">
+                        {{ ux_icon('heroicons:credit-card') }}
+                        {{ tp('profile_kyc_status.actions.access_banking', {}, 'profile_kyc_status') }}
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

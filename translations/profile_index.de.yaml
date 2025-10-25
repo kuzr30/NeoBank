@@ -1,0 +1,91 @@
+profile_index:
+  page:
+    title: "Mein Profil - %company_name%"
+  
+  header:
+    default_user: "Benutzer"
+    default_surname: "Unbekannt" 
+    default_first_letter: "B"
+    default_surname_letter: "U"
+    account_verified: "Konto verifiziert"
+    edit_profile: "Profil bearbeiten"
+    security: "Sicherheit"
+    alt_profile_picture: "Profilbild"
+  
+  kyc:
+    alerts:
+      not_submitted:
+        title: "Identitätsverifizierung erforderlich"
+        text: "Um Zugang zu allen unseren Bankdienstleistungen zu erhalten, müssen Sie Ihre Identitätsverifizierung (KYC) abschließen."
+        action: "Verifizierung starten"
+      pending:
+        title: "Verifizierung läuft"
+        text: "Ihr Antrag zur Identitätsverifizierung wird geprüft. Sie werden per E-Mail benachrichtigt, sobald er bearbeitet wurde."
+        action: "Status ansehen"
+      rejected:
+        title: "Verifizierung abgelehnt"
+        text: "Ihr Antrag zur Identitätsverifizierung wurde abgelehnt. Bitte sehen Sie sich die Anmerkungen an und reichen Sie neue Dokumente ein."
+        action: "Verifizierung starten"
+  
+  sections:
+    personal_info:
+      title: Persönliche Informationen
+      edit: Bearbeiten
+      fields:
+        first_name: Vorname
+        last_name: Nachname
+        email: E-Mail
+        phone: Telefon
+        birth_date: Geburtsdatum
+        not_provided: Nicht angegeben
+        not_provided_feminine: Nicht angegeben
+    
+    security:
+      title: Sicherheit
+      manage: Verwalten
+      fields:
+        password: Passwort
+        configured: Konfiguriert
+        two_factor: 2-Faktor-Authentifizierung
+        disabled: Deaktiviert
+        last_password_change: Letzte Passwort-Änderung
+        not_provided: Nicht angegeben
+    
+    preferences:
+      title: Einstellungen
+      edit: Bearbeiten
+      fields:
+        language: Sprache
+        currency: Währung
+        timezone: Zeitzone
+        timezone_default: Europe/Berlin (CET)
+        notifications: Benachrichtigungen
+        notifications_default: E-Mail + SMS
+      languages:
+        french: Deutsch
+        english: English
+        german: Deutsch
+        spanish: Español
+        dutch: Nederlands
+      currencies:
+        eur: Euro (EUR)
+        usd: US-Dollar (USD)
+        gbp: Pfund Sterling (GBP)
+        chf: Schweizer Franken (CHF)
+        cad: Kanadischer Dollar (CAD)
+      
+      values:
+        languages:
+          fr: "Deutsch"
+          en: "English"
+          de: "Deutsch"
+          es: "Español"
+          nl: "Nederlands"
+        currencies:
+          EUR: "Euro (EUR)"
+          USD: "US-Dollar (USD)"
+          GBP: "Pfund Sterling (GBP)"
+          CHF: "Schweizer Franken (CHF)"
+          CAD: "Kanadischer Dollar (CAD)"
+        default_timezone: "Europe/Berlin (CET)"
+        notifications_value: "E-Mail + SMS"

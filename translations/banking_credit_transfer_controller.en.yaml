@@ -1,0 +1,12 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_credit_transfer_controller.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+# Translations for Banking/CreditTransferController
+flash:
+  invalid_security_token: "Invalid security token."
+  sub_account_not_found: "Sub-account not found or access denied."
+  verification_code_sent: "Verification code sent to your email address."
+  transfer_success: "Transfer completed successfully!"
+  transfer_error: "Transfer error: "

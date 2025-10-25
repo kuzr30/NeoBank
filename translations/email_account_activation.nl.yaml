@@ -1,0 +1,25 @@
+email_account_activation:
+  title: "Activeer uw %company_name% account"
+  content:
+    greeting: "Activeer uw account, {firstName}!"
+    intro: "Bedankt voor uw inschrijving bij <strong>%company_name%</strong>. Om uw registratie te voltooien en uw account te beveiligen, moeten we uw e-mailadres verifiëren."
+    activation_required:
+      title: "Activering vereist"
+      description: "Klik op de onderstaande knop om uw account te activeren en toegang te krijgen tot al onze bankdiensten."
+    button_text: "Mijn account activeren"
+    warning:
+      title: "⏰ Tijdelijke link"
+      description: "Deze activatielink is slechts <strong>24 uur</strong> geldig. Na deze periode moet u een nieuwe registratieaanvraag indienen."
+    manual_link: "Als de knop niet werkt, kunt u deze link kopiëren en plakken in uw browser:"
+    success:
+      title: "Na activering"
+      description: "Zodra uw account is geactiveerd, ontvangt u een welkom-e-mail en kunt u zich onmiddellijk aanmelden bij uw persoonlijke %company_name%-ruimte."
+    security_notice: "Als u zich niet heeft geregistreerd, negeer dan deze e-mail. Er wordt geen account aangemaakt zonder activering."
+    signature: "Met vriendelijke groet,<br><strong>Het %company_name% team</strong>"
+  
+  # Log berichten voor de MessageHandler
+  logs:
+    sending: "Versturen van account activatie e-mail"
+    success: "Account activatie e-mail succesvol verzonden"
+    error: "Fout bij het versturen van account activatie e-mail"
+    send_failed: "Fout bij het verzenden van account activatie e-mail"

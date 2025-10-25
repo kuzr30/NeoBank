@@ -1,0 +1,109 @@
+# ENGLISH TRANSLATION - Translated from French
+# Consumer credit translation file
+# Domain: credit_consommation
+# Language: English (en)
+
+credit_consommation:
+  page:
+    title: "Consumer Credit"
+    description: "Finance your personal projects with our consumer credit. Advantageous rates and flexible repayment."
+
+  hero:
+    title: "Consumer Credit"
+    subtitle: "Make all your personal projects come true"
+    values:
+      taux: "{rate}% APR*"
+      montant: "75,000€"
+      duree: "10 years"
+
+  section_1:
+    title: "What is consumer credit?"
+    content:
+      paragraph_1: "Consumer credit allows you to finance all your personal projects: buying a car, home equipment, travel, wedding or any other major expense."
+      paragraph_2: "A flexible and fast solution, this unallocated credit gives you the freedom to use the funds as you wish, without having to justify their use."
+
+  features:
+    montant: "From 2,000€ to 75,000€"
+    montant_detail: "According to your needs"
+    duree: "From 12 months to 10 years"
+    duree_detail: "Adapted repayment"
+    taux: "From {rate}% APR*"
+    taux_detail: "Guaranteed competitive rate"
+    garantie: "No guarantee"
+    garantie_detail: "On signature only"
+
+  advantages:
+    liberte_usage:
+      title: "Freedom of use:"
+      text: "No justification required for fund usage"
+    reponse_rapide:
+      title: "Quick response:"
+      text: "Decision within 48h and immediate disbursement"
+    sans_garantie:
+      title: "No guarantee:"
+      text: "Financing on signature only"
+    remboursement_anticipe:
+      title: "Early repayment:"
+      text: "Possible at any time without penalties"
+    mensualites_fixes:
+      title: "Fixed monthly payments:"
+      text: "Controlled budget throughout the duration"
+
+  requirements:
+    conditions_octroi:
+      title: "Grant conditions"
+      items:
+        majeur: "Be of legal age and reside in France"
+        revenus: "Justify regular income"
+        endettement: "Debt ratio below 35%"
+        incidents: "No payment incidents"
+    criteres_eligibilite:
+      title: "Eligibility criteria"
+      items:
+        contrat: "Permanent contract, fixed-term contract or self-employed"
+        anciennete: "Minimum 6 months professional experience"
+        capacite: "Verified repayment capacity"
+        age: "Maximum age 75 years at end of loan"
+
+  documents:
+    pieces_identite:
+      title: "Identity documents"
+      items:
+        carte: "Identity card or passport"
+        domicile: "Recent proof of residence"
+        livret: "Family record book if married"
+    justificatifs_revenus:
+      title: "Income proof"
+      items:
+        bulletins: "Last 3 pay slips"
+        avis: "Last tax notice"
+        contrat: "Employment contract"
+        attestation: "Employer certificate"
+    informations_bancaires:
+      title: "Banking information"
+      items:
+        releves: "Last 3 bank statements"
+        rib: "Bank details of domiciliation account"
+        tableau: "Amortization schedule of current credits"
+
+  legal:
+    title: "Important legal information"
+    taeg:
+      title: "*APR:"
+      text: "Representative example: for a consumer credit of 15,000€ over 60 months at APR of 4.5%, you repay 60 monthly payments of 279€, for a total amount of 16,740€ (credit cost: 1,740€)."
+    retractation:
+      title: "Withdrawal period:"
+      text: "You have 14 days to withdraw from your credit."
+    remboursement:
+      title: "Early repayment:"
+      text: "Possible at any time, fees limited by law."
+    assurance:
+      title: "Insurance:"
+      text: "Optional but recommended to secure your repayments."
+    fichage:
+      title: "Registration:"
+      text: "In case of non-payment, you risk being registered with the Bank of France files."
+
+  cta:
+    title: "Realize your projects"
+    subtitle: "Get your consumer credit quickly and simply"

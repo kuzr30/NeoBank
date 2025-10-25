@@ -1,0 +1,3 @@
+banking_card_controller:
+  flash:
+    kyc_required: "Sie müssen Ihre Identitätsprüfung abschließen, um auf die Bankkarten-Services zugreifen zu können."

@@ -1,0 +1,139 @@
+{% extends 'credit_offers/credit_page_structure.html.twig' %}
+
+{% set page_title = tp('credit_etudiant.page.title', [], 'credit_etudiant') %}
+{% set page_description = tp('credit_etudiant.page.description', [], 'credit_etudiant') %}
+{% set hero_class = 'credit-detail-hero--etudiant' %}
+
+{% block taux_value %}{{ credit_rate('etudiant') }}%{% endblock %}
+{% block montant_value %}{{ tp('credit_etudiant.hero.values.montant', [], 'credit_etudiant') }}{% endblock %}
+{% block duree_value %}{{ tp('credit_etudiant.hero.values.duree', [], 'credit_etudiant') }}{% endblock %}
+
+{% block hero_title %}{{ tp('credit_etudiant.hero.title', [], 'credit_etudiant') }}{% endblock %}
+{% block hero_subtitle %}{{ tp('credit_etudiant.hero.subtitle', [], 'credit_etudiant') }}{% endblock %}
+
+{% block section_1_title %}{{ tp('credit_etudiant.section_1.title', [], 'credit_etudiant') }}{% endblock %}
+
+{% block section_1_content %}
+<p>{{ tp('credit_etudiant.section_1.content.paragraph_1', [], 'credit_etudiant') }}</p>
+<p>{{ tp('credit_etudiant.section_1.content.paragraph_2', [], 'credit_etudiant') }}</p>
+{% endblock %}
+
+{% block feature_montant %}{{ tp('credit_etudiant.features.montant', [], 'credit_etudiant') }}{% endblock %}
+{% block feature_montant_detail %}{{ tp('credit_etudiant.features.montant_detail', [], 'credit_etudiant') }}{% endblock %}
+{% block feature_duree %}{{ tp('credit_etudiant.features.duree', [], 'credit_etudiant') }}{% endblock %}
+{% block feature_duree_detail %}{{ tp('credit_etudiant.features.duree_detail', [], 'credit_etudiant') }}{% endblock %}
+{% block feature_taux %}{{ tp('credit_etudiant.features.taux', [], 'credit_etudiant')|replace({'{rate}': credit_rate('etudiant')})|raw }}{% endblock %}
+{% block feature_taux_detail %}{{ tp('credit_etudiant.features.taux_detail', [], 'credit_etudiant') }}{% endblock %}
+{% block feature_garantie %}{{ tp('credit_etudiant.features.garantie', [], 'credit_etudiant') }}{% endblock %}
+{% block feature_garantie_detail %}{{ tp('credit_etudiant.features.garantie_detail', [], 'credit_etudiant') }}{% endblock %}
+
+{% block section_3_content %}
+<ul class="credit-detail-advantages">
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_etudiant.advantages.taux_preferentiel.title', [], 'credit_etudiant') }}</strong> {{ tp('credit_etudiant.advantages.taux_preferentiel.text', [], 'credit_etudiant') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_etudiant.advantages.differe_remboursement.title', [], 'credit_etudiant') }}</strong> {{ tp('credit_etudiant.advantages.differe_remboursement.text', [], 'credit_etudiant') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_etudiant.advantages.deblocage_progressif.title', [], 'credit_etudiant') }}</strong> {{ tp('credit_etudiant.advantages.deblocage_progressif.text', [], 'credit_etudiant') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_etudiant.advantages.garantie_etat.title', [], 'credit_etudiant') }}</strong> {{ tp('credit_etudiant.advantages.garantie_etat.text', [], 'credit_etudiant') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_etudiant.advantages.pas_frais.title', [], 'credit_etudiant') }}</strong> {{ tp('credit_etudiant.advantages.pas_frais.text', [], 'credit_etudiant') }}</span>
+    </li>
+</ul>
+{% endblock %}
+
+{% block section_4_content %}
+<div class="credit-detail-requirements">
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('credit_etudiant.requirements.conditions_etudiant.title', [], 'credit_etudiant') }}</h3>
+        <ul>
+            <li>{{ tp('credit_etudiant.requirements.conditions_etudiant.items.inscription', [], 'credit_etudiant') }}</li>
+            <li>{{ tp('credit_etudiant.requirements.conditions_etudiant.items.age', [], 'credit_etudiant') }}</li>
+            <li>{{ tp('credit_etudiant.requirements.conditions_etudiant.items.nationalite', [], 'credit_etudiant') }}</li>
+            <li>{{ tp('credit_etudiant.requirements.conditions_etudiant.items.residence', [], 'credit_etudiant') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('credit_etudiant.requirements.garanties_requises.title', [], 'credit_etudiant') }}</h3>
+        <ul>
+            <li>{{ tp('credit_etudiant.requirements.garanties_requises.items.caution', [], 'credit_etudiant') }}</li>
+            <li>{{ tp('credit_etudiant.requirements.garanties_requises.items.garantie_etat', [], 'credit_etudiant') }}</li>
+            <li>{{ tp('credit_etudiant.requirements.garanties_requises.items.justificatifs', [], 'credit_etudiant') }}</li>
+            <li>{{ tp('credit_etudiant.requirements.garanties_requises.items.engagement', [], 'credit_etudiant') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block section_5_content %}
+<div class="credit-detail-documents">
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('credit_etudiant.documents.dossier_etudiant.title', [], 'credit_etudiant') }}</h3>
+        <ul>
+            <li>{{ tp('credit_etudiant.documents.dossier_etudiant.items.certificat', [], 'credit_etudiant') }}</li>
+            <li>{{ tp('credit_etudiant.documents.dossier_etudiant.items.carte', [], 'credit_etudiant') }}</li>
+            <li>{{ tp('credit_etudiant.documents.dossier_etudiant.items.domicile', [], 'credit_etudiant') }}</li>
+            <li>{{ tp('credit_etudiant.documents.dossier_etudiant.items.devis', [], 'credit_etudiant') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('credit_etudiant.documents.dossier_garants.title', [], 'credit_etudiant') }}</h3>
+        <ul>
+            <li>{{ tp('credit_etudiant.documents.dossier_garants.items.identites', [], 'credit_etudiant') }}</li>
+            <li>{{ tp('credit_etudiant.documents.dossier_garants.items.bulletins', [], 'credit_etudiant') }}</li>
+            <li>{{ tp('credit_etudiant.documents.dossier_garants.items.avis', [], 'credit_etudiant') }}</li>
+            <li>{{ tp('credit_etudiant.documents.dossier_garants.items.patrimoine', [], 'credit_etudiant') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('credit_etudiant.documents.informations_bancaires.title', [], 'credit_etudiant') }}</h3>
+        <ul>
+            <li>{{ tp('credit_etudiant.documents.informations_bancaires.items.rib', [], 'credit_etudiant') }}</li>
+            <li>{{ tp('credit_etudiant.documents.informations_bancaires.items.releves', [], 'credit_etudiant') }}</li>
+            <li>{{ tp('credit_etudiant.documents.informations_bancaires.items.attestation', [], 'credit_etudiant') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block legal_details %}
+<div class="credit-legal-notice__details">
+    <h4>{{ tp('credit_etudiant.legal.title', [], 'credit_etudiant') }}</h4>
+    <ul>
+        <li><strong>{{ tp('credit_etudiant.legal.taeg.title', [], 'credit_etudiant') }}</strong> {{ tp('credit_etudiant.legal.taeg.text', [], 'credit_etudiant') }}</li>
+        <li><strong>{{ tp('credit_etudiant.legal.differe.title', [], 'credit_etudiant') }}</strong> {{ tp('credit_etudiant.legal.differe.text', [], 'credit_etudiant') }}</li>
+        <li><strong>{{ tp('credit_etudiant.legal.garantie_etat.title', [], 'credit_etudiant') }}</strong> {{ tp('credit_etudiant.legal.garantie_etat.text', [], 'credit_etudiant') }}</li>
+        <li><strong>{{ tp('credit_etudiant.legal.modulation.title', [], 'credit_etudiant') }}</strong> {{ tp('credit_etudiant.legal.modulation.text', [], 'credit_etudiant') }}</li>
+        <li><strong>{{ tp('credit_etudiant.legal.assurance.title', [], 'credit_etudiant') }}</strong> {{ tp('credit_etudiant.legal.assurance.text', [], 'credit_etudiant') }}</li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block cta_title %}{{ tp('credit_etudiant.cta.title', [], 'credit_etudiant') }}{% endblock %}
+{% block cta_subtitle %}{{ tp('credit_etudiant.cta.subtitle', [], 'credit_etudiant') }}{% endblock %}
+
+{% block custom_styles %}
+{{ parent() }}
+<style>
+/* Couleur spécifique pour le crédit étudiant */
+.credit-detail-hero--etudiant {
+            background: 
+        linear-gradient(135deg, rgba(147, 51, 234, 0.4) 0%, rgba(126, 34, 206, 0.6) 100%),
+        url('/images/stu.jpg') center/cover no-repeat fixed;
+}
+
+.credit-detail-hero--etudiant .credit-highlight__value {
+    color: #c4b5fd;
+}
+</style>
+{% endblock %}

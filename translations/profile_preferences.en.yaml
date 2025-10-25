@@ -1,0 +1,41 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: profile_preferences.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+profile_preferences:
+  page:
+    title: "Preferences - %company_name%"
+  
+  header:
+    title: "Preferences"
+  
+  actions:
+    cancel: Cancel
+    save: Save preferences
+  
+  settings:
+    history:
+      title: Browsing history
+      description: Save your activity history
+  
+  sections:
+    language:
+      title: "Language and region"
+      language: "Interface language"
+      currency: "Default currency"
+      timezone: "Timezone"
+      date_format: "Date format"
+    
+    notifications:
+      title: "Notifications"
+      email: "Email notifications"
+      sms: "SMS notifications"
+      push: "Push notifications"
+      marketing: "Commercial offers"
+    
+    privacy:
+      title: "Privacy"
+      profile_visibility: "Profile visibility"
+      data_sharing: "Data sharing"
+      activity_tracking: "Activity tracking"

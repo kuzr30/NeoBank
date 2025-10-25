@@ -1,0 +1,119 @@
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Footer Principal -->
+    <div class="footer-main">
+      <!-- Section Logo et Description -->
+      <div class="footer-section footer-brand">
+        <div class="footer-logo">
+          <div class="logo-container">
+            <div class="logo-icon">
+              <img src="{{ asset('images/logo.png') }}" alt="{{ company_name() }} Logo" class="logo-image">
+            </div>
+            <span class="logo-text">{{ company_name() }}</span>
+          </div>
+        </div>
+        <p class="footer-description">
+          {{ 'footer.description'|trans }}
+        </p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="{{ 'footer.social.facebook'|trans }}">
+            {{ ux_icon('heroicons:globe-alt', {'class': 'social-icon'}) }}
+          </a>
+          <a href="#" class="social-link" aria-label="{{ 'footer.social.twitter'|trans }}">
+            {{ ux_icon('heroicons:chat-bubble-left-right', {'class': 'social-icon'}) }}
+          </a>
+          <a href="#" class="social-link" aria-label="{{ 'footer.social.linkedin'|trans }}">
+            {{ ux_icon('heroicons:briefcase', {'class': 'social-icon'}) }}
+          </a>
+          <a href="#" class="social-link" aria-label="{{ 'footer.social.instagram'|trans }}">
+            {{ ux_icon('heroicons:camera', {'class': 'social-icon'}) }}
+          </a>
+        </div>
+      </div>
+
+      <!-- Section Services -->
+      <div class="footer-section">
+        <h3 class="footer-title">{{ 'footer.sections.services_title'|trans }}</h3>
+        <ul class="footer-links">
+          <li><a href="{{ path('services_accounts_cards') }}" class="footer-link">{{ 'footer.services.accounts_cards'|trans }}</a></li>
+          <li><a href="{{ path('services_savings_investments') }}" class="footer-link">{{ 'footer.services.savings_investments'|trans }}</a></li>
+          <li><a href="{{ path('credit_offers_index') }}" class="footer-link">{{ 'footer.services.credits_loans'|trans }}</a></li>
+          <li><a href="{{ path('services_insurances') }}" class="footer-link">{{ 'footer.services.insurance'|trans }}</a></li>
+          <li><a href="{{ path('services_savings_investments') }}" class="footer-link">{{ 'footer.services.private_banking'|trans }}</a></li>
+          <li><a href="{{ path('banking_mobile_app') }}" class="footer-link">{{ 'footer.services.business_banking'|trans }}</a></li>
+        </ul>
+      </div>
+
+      <!-- Section Support -->
+      <div class="footer-section">
+        <h3 class="footer-title">{{ 'footer.sections.support_title'|trans }}</h3>
+        <ul class="footer-links">
+          <li><a href="{{ path('support_help_center') }}" class="footer-link">{{ 'footer.support.help_center'|trans }}</a></li>
+          <li><a href="{{ path('support_contact') }}" class="footer-link">{{ 'footer.support.contact'|trans }}</a></li>
+          <li><a href="{{ path('support_faq') }}" class="footer-link">{{ 'footer.support.faq'|trans }}</a></li>
+          <li><a href="{{ path('support_security') }}" class="footer-link">{{ 'footer.support.security'|trans }}</a></li>
+          <li><a href="{{ path('support_complaints') }}" class="footer-link">{{ 'footer.support.complaints'|trans }}</a></li>
+        </ul>
+      </div>
+
+      <!-- Section Légal -->
+      <div class="footer-section">
+        <h3 class="footer-title">{{ 'footer.sections.legal_title'|trans }}</h3>
+        <ul class="footer-links">
+          <li><a href="{{ path('legal_notices.' ~ app.request.locale) }}" class="footer-link">{{ 'footer.legal_links.legal_notices'|trans }}</a></li>
+          <li><a href="{{ path('legal_terms.' ~ app.request.locale) }}" class="footer-link">{{ 'footer.legal_links.terms_conditions'|trans }}</a></li>
+          <li><a href="{{ path('legal_privacy.' ~ app.request.locale) }}" class="footer-link">{{ 'footer.legal_links.privacy_policy'|trans }}</a></li>
+          <li><a href="{{ path('legal_cookies.' ~ app.request.locale) }}" class="footer-link">{{ 'footer.legal_links.cookies'|trans }}</a></li>
+        </ul>
+      </div>
+
+      <!-- Section Contact -->
+      <div class="footer-section">
+        <h3 class="footer-title">{{ 'footer.sections.contact_title'|trans }}</h3>
+        <div class="footer-contact">
+          <div class="contact-item">
+            {{ ux_icon('heroicons:phone', {'class': 'contact-icon'}) }}
+            <div>
+              <div class="contact-label">{{ 'footer.contact_info.customer_service'|trans }}</div>
+              <div class="contact-value">{{ company_phone() }}</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            {{ ux_icon('heroicons:envelope', {'class': 'contact-icon'}) }}
+            <div>
+              <div class="contact-label">{{ 'footer.contact_info.email'|trans }}</div>
+              <div class="contact-value">{{ company_email() }}</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            {{ ux_icon('heroicons:map-pin', {'class': 'contact-icon'}) }}
+            <div>
+              <div class="contact-label">{{ 'footer.contact_info.headquarters'|trans }}</div>
+              <div class="contact-value">{{ company_address() }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <p class="footer-copyright">
+          © {{ "now"|date("Y") }} SEDEF BANK. {{ 'footer.bottom.rights_reserved'|trans }}. • {{ 'footer.bottom.licensed_bank'|trans }} • 
+          <span class="footer-reg">{{ 'footer.bottom.orias_number'|trans }}</span>
+        </p>
+        <div class="footer-certifications">
+          <span class="certification">
+            {{ ux_icon('heroicons:shield-check', {'class': 'cert-icon'}) }}
+            <span>{{ 'footer.bottom.ssl_secured'|trans }}</span>
+          </span>
+          <span class="certification">
+            {{ ux_icon('heroicons:check-badge', {'class': 'cert-icon'}) }}
+            <span>{{ 'footer.bottom.acpr_approved'|trans }}</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

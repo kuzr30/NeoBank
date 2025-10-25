@@ -1,0 +1,27 @@
+account_activation:
+  flash:
+    invalid_token: "Token de activación inválido."
+    expired_token: "El token de activación ha caducado. Por favor regístrese de nuevo."
+    account_activated: "¡Su cuenta ha sido activada con éxito! Ya puede iniciar sesión."
+    activation_email_sent: "Se ha enviado un nuevo email de activación."
+    activation_email_sent_if_exists: "Si su cuenta existe y no está activada, se ha enviado un email."
+    email_send_error: "Error al enviar el email. Inténtelo más tarde."
+
+email_account_activation:
+  title: "Activación de su cuenta %company_name%"
+  content:
+    greeting: "Hola {firstName},"
+    intro: "¡Bienvenido a %company_name%! Nos complace tenerle entre nuestros clientes."
+    activation_required:
+      title: "🔐 Activación requerida"
+      description: "Para asegurar su cuenta y acceder a todos nuestros servicios bancarios, por favor active su cuenta haciendo clic en el botón de abajo."
+    button_text: "Activar mi cuenta"
+    warning:
+      title: "⚠️ Importante"
+      description: "Este enlace de activación expira en {expirationTime}. Si el enlace ha caducado, podrá solicitar un nuevo enlace desde la página de inicio de sesión."
+    manual_link: "Si el botón no funciona, copie y pegue este enlace en su navegador:"
+    success:
+      title: "✅ Próximos pasos"
+      description: "Una vez que su cuenta esté activada, podrá acceder a su área de cliente segura y disfrutar de todos nuestros servicios bancarios."
+    security_notice: "🛡️ Por medida de seguridad, si no ha creado una cuenta en %company_name%, ignore este email."
+    signature: "El equipo %company_name%<br><strong>Su socio bancario de confianza</strong>"

@@ -1,0 +1,418 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tp('help_center_complaints.title', {}, 'help_center_complaints') }} - {{ companySettings.companyName }}{% endblock %}
+
+{% block body %}
+<!-- Hero Section -->
+<section class="complaints-hero">
+    <div class="complaints-hero__container">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="breadcrumb">
+            <ol class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                    <a href="{{ path('home_index') }}">{{ tp('help_center_complaints.breadcrumb.home', {}, 'help_center_complaints') }}</a>
+                </li>
+                <li class="breadcrumb__item">
+                    <a href="{{ path('home_index') }}#support">{{ tp('help_center_complaints.breadcrumb.support', {}, 'help_center_complaints') }}</a>
+                </li>
+                <li class="breadcrumb__item breadcrumb__item--active">{{ tp('help_center_complaints.breadcrumb.complaints', {}, 'help_center_complaints') }}</li>
+            </ol>
+        </nav>
+        
+        <div class="complaints-hero__content">
+            <div class="complaints-hero__text">
+                <h1 class="complaints-hero__title">{{ tp('help_center_complaints.title', {}, 'help_center_complaints') }}</h1>
+                <p class="complaints-hero__subtitle">{{ tp('help_center_complaints.subtitle', {}, 'help_center_complaints') }}</p>
+            </div>
+            <div class="complaints-hero__icon">
+                {{ ux_icon('tabler:message-exclamation', {'class': 'complaints-hero__icon-svg'}) }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="complaints-process">
+    <div class="complaints-process__container">
+        <div class="complaints-process__header">
+            <h2 class="complaints-process__title">{{ tp('help_center_complaints.process.title', {}, 'help_center_complaints') }}</h2>
+            <p class="complaints-process__subtitle">{{ tp('help_center_complaints.process.subtitle', {}, 'help_center_complaints') }}</p>
+        </div>
+        
+        <div class="complaints-process__grid">
+            <div class="process-step">
+                <div class="process-step__number">1</div>
+                <div class="process-step__icon">
+                    {{ ux_icon('tabler:file-text', {'class': 'process-step__icon-svg'}) }}
+                </div>
+                <h3 class="process-step__title">{{ tp('help_center_complaints.process.step1.title', {}, 'help_center_complaints') }}</h3>
+                <p class="process-step__description">{{ tp('help_center_complaints.process.step1.description', {}, 'help_center_complaints') }}</p>
+            </div>
+            
+            <div class="process-step">
+                <div class="process-step__number">2</div>
+                <div class="process-step__icon">
+                    {{ ux_icon('tabler:clock', {'class': 'process-step__icon-svg'}) }}
+                </div>
+                <h3 class="process-step__title">{{ tp('help_center_complaints.process.step2.title', {}, 'help_center_complaints') }}</h3>
+                <p class="process-step__description">{{ tp('help_center_complaints.process.step2.description', {}, 'help_center_complaints') }}</p>
+            </div>
+            
+            <div class="process-step">
+                <div class="process-step__number">3</div>
+                <div class="process-step__icon">
+                    {{ ux_icon('tabler:search', {'class': 'process-step__icon-svg'}) }}
+                </div>
+                <h3 class="process-step__title">{{ tp('help_center_complaints.process.step3.title', {}, 'help_center_complaints') }}</h3>
+                <p class="process-step__description">{{ tp('help_center_complaints.process.step3.description', {}, 'help_center_complaints') }}</p>
+            </div>
+            
+            <div class="process-step">
+                <div class="process-step__number">4</div>
+                <div class="process-step__icon">
+                    {{ ux_icon('mdi-light:check-circle', {'class': 'process-step__icon-svg'}) }}
+                </div>
+                <h3 class="process-step__title">{{ tp('help_center_complaints.process.step4.title', {}, 'help_center_complaints') }}</h3>
+                <p class="process-step__description">{{ tp('help_center_complaints.process.step4.description', {}, 'help_center_complaints') }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact and Tracking Section -->
+<section class="complaints-contact">
+    <div class="complaints-contact__container">
+        <div class="complaints-contact__header">
+            <h2 class="complaints-contact__title">{{ tp('help_center_complaints.contact.title', {}, 'help_center_complaints') }}</h2>
+            <p class="complaints-contact__subtitle">{{ tp('help_center_complaints.contact.subtitle', {}, 'help_center_complaints') }}</p>
+        </div>
+        
+        <div class="complaints-contact__grid">
+            <!-- Contact Methods -->
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="contact-method__icon">
+                        {{ ux_icon('tabler:phone', {'class': 'contact-method__icon-svg'}) }}
+                    </div>
+                    <h3 class="contact-method__title">{{ tp('help_center_complaints.contact.phone.title', {}, 'help_center_complaints') }}</h3>
+                    <p class="contact-method__number">{{ companySettings.phone }}</p>
+                    <p class="contact-method__hours">{{ tp('help_center_complaints.contact.phone.hours', {}, 'help_center_complaints') }}</p>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-method__icon">
+                        {{ ux_icon('tabler:mail', {'class': 'contact-method__icon-svg'}) }}
+                    </div>
+                    <h3 class="contact-method__title">{{ tp('help_center_complaints.contact.email.title', {}, 'help_center_complaints') }}</h3>
+                    <p class="contact-method__email">{{ companySettings.email }}</p>
+                    <p class="contact-method__response">{{ tp('help_center_complaints.contact.email.response_time', {}, 'help_center_complaints') }}</p>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-method__icon">
+                        {{ ux_icon('tabler:map-pin', {'class': 'contact-method__icon-svg'}) }}
+                    </div>
+                    <h3 class="contact-method__title">{{ tp('help_center_complaints.contact.branch.title', {}, 'help_center_complaints') }}</h3>
+                    <p class="contact-method__address">{{ companySettings.address }}</p>
+                    <p class="contact-method__hours">{{ tp('help_center_complaints.contact.branch.hours', {}, 'help_center_complaints') }}</p>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</section>
+
+<style>
+/* Complaints Hero */
+.complaints-hero {
+    background: linear-gradient(135deg, #ffc107 0%, #ff8800 100%);
+    padding: 3rem 0;
+    color: #333;
+}
+
+.complaints-hero__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    margin-bottom: 2rem;
+}
+
+.breadcrumb__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.875rem;
+    opacity: 0.8;
+}
+
+.breadcrumb__item:not(:last-child)::after {
+    content: ' > ';
+    margin: 0 0.5rem;
+}
+
+.breadcrumb__item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.breadcrumb__item a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb__item--active {
+    opacity: 1;
+    font-weight: 600;
+}
+
+/* Hero Content */
+.complaints-hero__content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+}
+
+.complaints-hero__title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.complaints-hero__subtitle {
+    font-size: 1.25rem;
+    opacity: 0.8;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.complaints-hero__icon-svg {
+    width: 5rem;
+    height: 5rem;
+    opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .complaints-hero__content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .complaints-hero__title {
+        font-size: 2rem;
+    }
+    
+    .breadcrumb__list {
+        flex-wrap: wrap;
+    }
+}
+
+/* Complaints Process */
+.complaints-process {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.complaints-process__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.complaints-process__header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.complaints-process__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.complaints-process__subtitle {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin: 0;
+}
+
+/* Process Grid */
+.complaints-process__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+/* Process Step */
+.process-step {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.process-step__number {
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2rem;
+    height: 2rem;
+    background: #ffc107;
+    color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.process-step__icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 1rem auto 1.5rem;
+    background: rgba(255, 193, 7, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.process-step__icon-svg {
+    width: 2rem;
+    height: 2rem;
+    color: #ffc107;
+}
+
+.process-step__title {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.process-step__description {
+    color: #6c757d;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Complaints Contact */
+.complaints-contact {
+    padding: 4rem 0;
+    background: white;
+}
+
+.complaints-contact__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.complaints-contact__header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.complaints-contact__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.complaints-contact__subtitle {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin: 0;
+}
+
+/* Contact Grid */
+.complaints-contact__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Contact Methods */
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.contact-method {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-method:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.contact-method__icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto 1.5rem;
+    background: rgba(255, 193, 7, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-method__icon-svg {
+    width: 2rem;
+    height: 2rem;
+    color: #ffc107;
+}
+
+.contact-method__title {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.contact-method__number,
+.contact-method__email {
+    font-weight: bold;
+    color: #ffc107;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-method__hours,
+.contact-method__response,
+.contact-method__address {
+    color: #6c757d;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-methods {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+{% endblock %}

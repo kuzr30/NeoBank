@@ -1,0 +1,28 @@
+transfer_notification_service:
+  email_subjects:
+    transfer_created: "Überweisung erstellt - Warten auf Bestätigung"
+    code_added: "Neuer Bestätigungscode verfügbar"
+    code_validated: "Bestätigungscode bestätigt"
+    ready_for_execution: "Überweisung bereit zur Ausführung"
+    transfer_executed: "Überweisung erfolgreich ausgeführt"
+    transfer_rejected: "Überweisung abgelehnt"
+    transfer_expired: "Überweisung abgelaufen"
+    transfer_cancelled: "Überweisung storniert"
+    user_blocked: "Konto vorübergehend gesperrt"
+    code_expired: "Bestätigungscode abgelaufen"
+    
+  from_name: "%company_name% - Überweisungsservice"
+    
+  log_messages:
+    transfer_creation_sent: "Benachrichtigung über Überweisungserstellung gesendet"
+    transfer_creation_failed: "Fehler beim Senden der Benachrichtigung über Überweisungserstellung"
+    code_added_sent: "Benachrichtigung über Code-Hinzufügung gesendet"
+    code_added_failed: "Fehler beim Senden der Benachrichtigung über Code-Hinzufügung"
+    transfer_executed_sent: "Benachrichtigung über Überweisungsausführung gesendet"
+    transfer_executed_failed: "Fehler beim Senden der Benachrichtigung über Überweisungsausführung"
+    transfer_rejected_sent: "Benachrichtigung über Überweisungsablehnung gesendet"
+    transfer_rejected_failed: "Fehler beim Senden der Benachrichtigung über Überweisungsablehnung"
+    transfer_expired_sent: "Benachrichtigung über Überweisungsablauf gesendet"
+    transfer_expired_failed: "Fehler beim Senden der Benachrichtigung über Überweisungsablauf"
+    transfer_cancelled_sent: "Benachrichtigung über Überweisungsstornierung gesendet"
+    transfer_cancelled_failed: "Fehler beim Senden der Benachrichtigung über Überweisungsstornierung"

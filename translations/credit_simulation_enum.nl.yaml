@@ -1,0 +1,31 @@
+credit_types:
+  immobilier:
+    label: "Woningkrediet"
+  auto:
+    label: "Autokrediet"
+  consommation:
+    label: "Consumptiekrediet"
+  travaux:
+    label: "Werkkrediet"
+  professionnel:
+    label: "Zakelijk Krediet"
+  personal:
+    label: "Persoonlijk Krediet"
+  home_improvement:
+    label: "Woningverbetering"
+  debt_consolidation:
+    label: "Krediethergroepering"
+  mortgage:
+    label: "Hypotheek"
+  renouvelable:
+    label: "Hernieuwbaar krediet"
+  etudiant:
+    label: "Studentenlening"
+  relais:
+    label: "Overbruggingskredit"
+  microcredit:
+    label: "Microkrediet"
+  leasing:
+    label: "Leasing"
+  voyage:
+    label: "Reiskrediet"

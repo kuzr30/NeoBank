@@ -1,0 +1,73 @@
+profile_kyc_submit:
+  page:
+    title: "KYC-documenten indienen - %company_name%"
+  
+  header:
+    title: "Mijn KYC-documenten indienen"
+    title_resubmission: "Nieuwe KYC-documenten indienen"
+    subtitle: "Voltooi uw dossier door de vereiste documenten te uploaden"
+    subtitle_resubmission: "Uw vorige indiening is geweigerd. Gelieve te corrigeren en opnieuw in te dienen"
+  
+  rejection:
+    title: "Reden voor weigering van uw vorige aanvraag"
+  
+  info:
+    title: "Belangrijke informatie"
+    title_resubmission: "Aandachtspunten voor uw nieuwe indiening"
+    requirements:
+      resubmit_attention: "Controleer dat uw documenten voldoen aan de genoemde vereisten"
+      resubmit_readable: "Zorg ervoor dat alle documenten goed leesbaar zijn"
+      readable_color: "Alle documenten moeten leesbaar en in kleur zijn"
+      formats: "Geaccepteerde formaten: PDF, JPG, PNG"
+      max_size: "Maximale grootte: 4 MB per bestand"
+      date_limit: "De documenten mogen niet ouder zijn dan 3 maanden"
+  
+  actions:
+    back: Terug
+    submit: "Documenten indienen"
+    submit_resubmission: "Documenten opnieuw indienen"
+    save_draft: "Concept opslaan"
+    cancel: "Annuleren"
+  
+  form:
+    labels:
+      identity_document: "Identiteitsbewijs (ID, Paspoort, enz.)"
+      income_document: "Inkomensbewijs (Loonstrook, Belastingaangifte, enz.)"
+      address_document: "Adresbewijs (Rekening, Huurkwitantie, enz.)"
+      selfie_document: "Selfie met uw identiteitsbewijs (optioneel)"
+    
+    help:
+      pdf_jpg_png: "Formaat PDF, JPG of PNG, max 4MB"
+      jpg_png_only: "Alleen JPG of PNG formaat, max 4MB"
+    
+    declaration:
+      title: "Verklaring"
+      text: "Door deze documenten in te dienen, verklaar ik dat de verstrekte informatie juist en up-to-date is. Ik begrijp dat onjuiste informatie kan leiden tot het sluiten van mijn account."
+      text_resubmission: "Door deze documenten opnieuw in te dienen, verklaar ik dat de verstrekte informatie juist, up-to-date en gecorrigeerd is volgens de aanbevelingen. Ik begrijp dat onjuiste informatie kan leiden tot het sluiten van mijn account."
+    
+    personal_info:
+      title: "Persoonlijke informatie"
+      first_name: "Voornaam"
+      last_name: "Achternaam"
+      birth_date: "Geboortedatum"
+      nationality: "Nationaliteit"
+      
+    documents:
+      title: "Identiteitsdocumenten"
+      identity_document: "Identiteitsbewijs"
+      identity_document_help: "Upload een duidelijke foto van uw paspoort, ID-kaart of rijbewijs"
+      proof_of_address: "Adresbewijs"
+      proof_of_address_help: "Elektriciteits-, gas- of bankrekening van minder dan 3 maanden oud"
+      selfie: "Selfie foto"
+      selfie_help: "Neem een foto van uzelf met uw identiteitsbewijs"
+      
+    file_requirements:
+      title: "Bestandsvereisten"
+      formats: "Geaccepteerde formaten: JPG, PNG, PDF"
+      max_size: "Maximale grootte: 5MB per bestand"
+      quality: "Zorg ervoor dat de documenten leesbaar en van goede kwaliteit zijn"
+    
+  validation:
+    required_field: "Dit veld is verplicht"
+    invalid_file: "Ongeldig bestandsformaat"
+    file_too_large: "Het bestand is te groot"

@@ -1,0 +1,4 @@
+# Vertalingen voor RegistrationController
+flash:
+  account_created_success: "Uw account is aangemaakt! Controleer uw email om deze te activeren."
+  account_created_email_failed: "Uw account is aangemaakt maar de activatiemail kon niet worden verzonden. Neem contact op met de support."

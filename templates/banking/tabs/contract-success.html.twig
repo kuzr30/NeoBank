@@ -1,0 +1,443 @@
+{# Template pour la confirmation de signature de contrat dans le dashboard #}
+
+<div class="contract-success-tab">
+    <!-- En-tête de succès -->
+    <div class="success-header">
+        <div class="success-icon">
+            {{ ux_icon('heroicons:check-circle', {'class': 'success-icon-svg'}) }}
+        </div>
+        <h2 class="success-title">{{ tp('contract_success.title', [], 'banking_contract') }}</h2>
+        <p class="success-subtitle">
+            {{ tp('contract_success.subtitle', [], 'banking_contract') }} {{ contract.cardSubscription.cardType|title }} {{ contract.cardSubscription.cardBrand|title }}
+        </p>
+    </div>
+
+    <!-- Récapitulatif du contrat -->
+    <div class="contract-recap">
+        <h3 class="section-title">
+            {{ ux_icon('heroicons:document-text', {'class': 'section-icon'}) }}
+            {{ tp('contract_success.recap_title', [], 'banking_contract') }}
+        </h3>
+        
+        <div class="recap-grid">
+            <div class="recap-item">
+                <span class="recap-label">{{ tp('contract_success.reference_label', [], 'banking_contract') }}</span>
+                <span class="recap-value">{{ contract.reference }}</span>
+            </div>
+            <div class="recap-item">
+                <span class="recap-label">{{ tp('contract_success.card_type_label', [], 'banking_contract') }}</span>
+                <span class="recap-value">{{ contract.cardSubscription.cardType|title }}</span>
+            </div>
+            <div class="recap-item">
+                <span class="recap-label">{{ tp('contract_success.brand_label', [], 'banking_contract') }}</span>
+                <span class="recap-value">{{ contract.cardSubscription.cardBrand|title }}</span>
+            </div>
+   
+        </div>
+    </div>
+
+
+    <!-- Prochaines étapes -->
+    <div class="next-steps">
+        <h3 class="section-title">
+            {{ ux_icon('heroicons:list-bullet', {'class': 'section-icon'}) }}
+            {{ tp('contract_success.next_steps_title', [], 'banking_contract') }}
+        </h3>
+        
+        <div class="steps-list">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <strong>{{ tp('contract_success.step1_title', [], 'banking_contract') }}</strong>
+                    <p>{{ tp('contract_success.step1_description', [], 'banking_contract') }}</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <strong>{{ tp('contract_success.step2_title', [], 'banking_contract') }}</strong>
+                    <p>{{ tp('contract_success.step2_description', [], 'banking_contract') }}</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <strong>{{ tp('contract_success.step3_title', [], 'banking_contract') }}</strong>
+                    <p>{{ tp('contract_success.step3_description', [], 'banking_contract') }}</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <strong>{{ tp('contract_success.step4_title', [], 'banking_contract') }}</strong>
+                    <p>{{ tp('contract_success.step4_description', [], 'banking_contract') }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="success-actions">
+        <a href="{{ path('banking_dashboard', {activeTab: 'cartes'}) }}" class="btn btn-primary">
+            {{ ux_icon('heroicons:credit-card', {'class': 'btn-icon'}) }}
+            {{ tp('contract_success.view_cards', [], 'banking_contract') }}
+        </a>
+    </div>
+
+    <!-- Notification email -->
+    <div class="email-notification">
+        {{ ux_icon('heroicons:envelope', {'class': 'notification-icon'}) }}
+        <div class="notification-text">
+            <strong>{{ tp('contract_success.email_confirmation', [], 'banking_contract') }}</strong> {{ app.user.email }}
+        </div>
+    </div>
+</div>
+
+<style>
+/* Styles pour l'onglet de succès de signature */
+.contract-success-tab {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* En-tête de succès */
+.success-header {
+    text-align: center;
+    background: linear-gradient(135deg, #4f46e5 0%, #3c35c3ff 100%);
+    border-radius: 16px;
+    padding: 1rem 1.5rem;
+    margin-bottom: .1rem;
+    
+}
+
+.success-icon {
+    margin-bottom: 1rem;
+}
+
+.success-icon-svg {
+    width: 4rem;
+    height: 4rem;
+    color: white;
+}
+
+.success-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 0.75rem 0;
+}
+
+.success-subtitle {
+    color: white;
+    font-size: 1.125rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Sections */
+.contract-recap, .process-timeline, .next-steps {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #4f46e5;
+}
+
+/* Récapitulatif */
+.recap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.recap-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.recap-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+}
+
+.recap-value {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.fee-amount {
+    color: #059669;
+}
+
+/* Timeline */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;
+}
+
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 2.5rem;
+    bottom: -1.5rem;
+    width: 2px;
+    background: #e2e8f0;
+}
+
+.timeline-marker {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.timeline-item.completed .timeline-marker {
+    background: #16a34a;
+    color: white;
+}
+
+.timeline-item.current .timeline-marker {
+    background: #f59e0b;
+    color: white;
+}
+
+.timeline-item.pending .timeline-marker {
+    background: #e2e8f0;
+    color: #64748b;
+}
+
+.timeline-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.timeline-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 0.25rem 0;
+}
+
+.timeline-content p {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin: 0;
+}
+
+/* Étapes */
+.steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.step-number {
+    width: 2rem;
+    height: 2rem;
+    background: #4f46e5;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.step-content strong {
+    display: block;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+.step-content p {
+    color: #64748b;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Actions */
+.success-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+    min-width: 160px;
+}
+
+.btn-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: white;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background: #ffffff;
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    color: #475569;
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+/* Notification email */
+.email-notification {
+    background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%);
+    border: 1px solid #3b82f6;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.notification-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #3b82f6;
+    flex-shrink: 0;
+}
+
+.notification-text {
+    color: #1e40af;
+    font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contract-success-tab {
+        padding: 0 1rem;
+    }
+    
+    .success-header {
+        padding: 2rem 1.5rem;
+    }
+    
+    .success-title {
+        font-size: 1.5rem;
+    }
+    
+    .recap-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .success-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .timeline-item {
+        align-items: flex-start;
+    }
+    
+    .email-notification {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .contract-recap, .process-timeline, .next-steps {
+        padding: 1.5rem;
+    }
+    
+    .step-item {
+        align-items: flex-start;
+    }
+    
+    .step-content {
+        flex: 1;
+    }
+}
+</style>

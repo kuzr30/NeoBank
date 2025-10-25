@@ -1,0 +1,56 @@
+privacy_policy:
+  page_title: "Politique de Confidentialité"
+  page_description: "Comment nous collectons, utilisons et protégeons vos données personnelles"
+
+  data_collection:
+    title: "Collecte des données"
+    content: |
+      Nous collectons différents types de données personnelles lors de votre utilisation de nos services :
+      <ul>
+        <li><strong>Données d'identification :</strong> nom, prénom, date de naissance, adresse</li>
+        <li><strong>Données de contact :</strong> email, téléphone, adresse postale</li>
+        <li><strong>Données financières :</strong> revenus, situation professionnelle, historique bancaire</li>
+        <li><strong>Données de navigation :</strong> cookies, logs de connexion, adresse IP</li>
+      </ul>
+
+  data_usage:
+    title: "Utilisation des données"
+    content: |
+      Vos données personnelles sont utilisées pour :
+      <ul>
+        <li>La fourniture de services bancaires personnalisés</li>
+        <li>La gestion de votre relation client</li>
+        <li>Le respect des obligations légales et réglementaires</li>
+        <li>La prévention de la fraude et du blanchiment</li>
+        <li>L'amélioration de nos services</li>
+      </ul>
+
+  data_sharing:
+    title: "Partage des données"
+    content: |
+      Nous ne partageons vos données qu'avec :
+      <ul>
+        <li>Nos partenaires bancaires autorisés</li>
+        <li>Les autorités de régulation financière</li>
+        <li>Nos prestataires de services techniques</li>
+        <li>Les organismes de lutte contre la fraude</li>
+      </ul>
+      Toujours dans le respect du secret bancaire et de la réglementation RGPD.
+
+  user_rights:
+    title: "Vos droits"
+    content: |
+      Conformément au RGPD, vous disposez des droits suivants :
+      <ul>
+        <li><strong>Droit d'accès :</strong> consulter vos données personnelles</li>
+        <li><strong>Droit de rectification :</strong> corriger vos informations</li>
+        <li><strong>Droit à l'effacement :</strong> supprimer vos données</li>
+        <li><strong>Droit d'opposition :</strong> refuser certains traitements</li>
+        <li><strong>Droit à la portabilité :</strong> récupérer vos données</li>
+      </ul>
+
+  contact:
+    title: "Contact"
+    content: |
+      Pour exercer vos droits ou pour toute question sur cette politique de confidentialité,
+      contactez notre délégué à la protection des données à l'adresse %email%.

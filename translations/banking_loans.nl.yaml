@@ -1,0 +1,100 @@
+banking_loans:
+  # Meta tags
+  meta:
+    title: "Mijn leningen - %company_name%"
+    description: "Beheer uw leningen met %company_name%"
+
+  # Navigation
+  nav:
+    dashboard: "Dashboard"
+    loans: "Leningen"
+    loan_detail: "Lening details"
+    back: "Terug"
+
+  # Page headers
+  page:
+    title: "Mijn leningen"
+    subtitle: "Bekijk en beheer al uw lopende leningen"
+    loan_detail_title: "Lening details"
+    
+  # Loan info
+  loan:
+    amount: "Geleend bedrag"
+    remaining_balance: "Restant hoofdsom"
+    monthly_payment: "Maandelijkse betaling"
+    interest_rate: "Rente percentage"
+    duration: "Totale looptijd"
+    remaining_duration: "Resterende looptijd"
+    start_date: "Startdatum"
+    end_date: "Verwachte einddatum"
+    next_payment_date: "Volgende betaling"
+    payment_day: "Afschrijvingsdag"
+    loan_type: "Type lening"
+    status: "Status"
+    account: "Gekoppelde rekening"
+    
+  # Loan types
+  types:
+    personal: "Persoonlijke lening"
+    mortgage: "Hypotheek"
+    auto: "Autolening"
+    student: "Studenten lening"
+    business: "Zakelijke lening"
+    consumer: "Consumptie krediet"
+    bridge: "Overbruggingskrediet"
+    renovation: "Verbouwingslening"
+    
+  # Status
+  status:
+    active: "Actief"
+    completed: "Afbetaald"
+    suspended: "Opgeschort"
+    in_default: "Wanbetaling"
+    early_repayment: "Vervroegde aflossing"
+    
+  # Payment info
+  payment:
+    payment_number: "Termijn nr."
+    payment_date: "Betalingsdatum"
+    amount: "Bedrag"
+    principal: "Hoofdsom"
+    interest: "Rente"
+    remaining_balance: "Restant hoofdsom"
+    status: "Status"
+    
+  # Payment status
+  payment_status:
+    paid: "Betaald"
+    pending: "In behandeling"
+    overdue: "Achterstallig"
+    failed: "Mislukt"
+    
+  # Actions
+  actions:
+    view_details: "Details bekijken"
+    view_payments: "Termijnen bekijken"
+    view_amortization: "Amortisatietabel bekijken"
+    make_payment: "Betaling doen"
+    early_repayment: "Vervroegde aflossing"
+    download_statement: "Uitreksel downloaden"
+    contact_advisor: "Contact met adviseur"
+    
+  # Amortization table
+  amortization:
+    title: "Amortisatietabel"
+    payment_number: "Nr."
+    date: "Datum"
+    payment: "Termijn"
+    principal: "Hoofdsom"
+    interest: "Rente"
+    remaining: "Restant hoofdsom"
+    
+  # Messages
+  messages:
+    no_loans: "Geen lopende leningen"
+    access_denied: "Toegang geweigerd tot deze lening"
+    payment_success: "Betaling succesvol uitgevoerd"
+    payment_failed: "Betaling mislukt"
+    
+  # Currency
+  currency: "€"

@@ -1,0 +1,29 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_transfer_controller.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+# Translations for Banking/TransferController
+flash:
+  # Error messages
+  account_blocked_transfers: "Your account is blocked for transfers. Contact administration."
+  account_blocked: "Your account is blocked. Contact administration."
+  no_source_account: "No source account available to make a transfer."
+  invalid_security_token: "Invalid security token."
+  transfer_cannot_be_cancelled: "This transfer can no longer be cancelled."
+  validation_error: "Validation error: %error%."
+  cancellation_error: "Cancellation error: %error%."
+  invalid_validation_code: "The entered validation code is incorrect."
+  
+  # Warning messages
+  register_beneficiary_first: "You must first register a beneficiary account (RIB) to make a transfer."
+  kyc_required_transfers: "You must complete your identity verification (KYC) to access transfers."
+  
+  # Information messages
+  transfer_no_longer_pending: "This transfer is no longer pending validation."
+  transfer_in_progress: "Your transfer is being executed."
+  
+  # Success messages
+  transfer_cancelled_success: "Transfer cancelled successfully."
+  transfer_created_success: "Transfer created successfully and awaiting validation."
+  transfer_validation_success: "Code validated successfully."

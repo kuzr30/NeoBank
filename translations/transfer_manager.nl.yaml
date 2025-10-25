@@ -1,0 +1,52 @@
+transfer_manager:
+  exceptions:
+    account_blocked: "Uw rekening is geblokkeerd. Neem contact op met de administratie."
+    transfer_expired: "Deze overschrijving is verlopen."
+    transfer_not_cancellable: "Deze overschrijving kan niet worden geannuleerd."
+    transfer_not_validatable: "Deze overschrijving kan niet worden gevalideerd."
+    transfer_not_blockable: "Deze overschrijving kan niet worden geblokkeerd."
+    transfer_not_blocked: "Deze overschrijving is niet geblokkeerd."
+    
+  user_messages:
+    account_blocked: "Uw rekening is geblokkeerd. Neem contact op met de administratie."
+    transfer_expired: "Deze overschrijving is verlopen."
+    code_expired: "Deze code kan niet meer worden gevalideerd (te veel mislukte pogingen)."
+    code_validated_success: "Code succesvol gevalideerd. Overschrijving wordt uitgevoerd."
+    account_blocked_attempts: "Rekening geblokkeerd na te veel mislukte pogingen. Neem contact op met de administratie."
+    no_pending_code: "Geen code in afwachting. Genereer eerst een code."
+    transfer_completed: "Overschrijving succesvol voltooid!"
+    next_code_needed: "Code gevalideerd. Genereer de volgende code om door te gaan."
+    
+  admin_notes:
+    blocked_after_attempts: "Rekening geblokkeerd na 9 onjuiste validatiepogingen"
+    
+  log_messages:
+    transfer_initiated: "Nieuwe overschrijving geïnitieerd met onmiddellijke debitering"
+    code_added: "Code toegevoegd aan overschrijving"
+    code_validated_success: "Code succesvol gevalideerd"
+    code_attempt_failed: "Code poging mislukt"
+    transfer_executed: "Overschrijving succesvol uitgevoerd"
+    transfer_execution_failed: "Uitvoering van overschrijving mislukt"
+    user_unblocked: "Gebruiker gedeblokkeerd"
+    code_expired_next_requested: "Code verlopen - volgende code aangevraagd"
+    cancellation_started: "Start annulering overschrijving"
+    amount_recredited: "Bedrag herbelast na annulering"
+    transfer_cancelled: "Overschrijving succesvol geannuleerd"
+    transfer_blocked: "Overschrijving geblokkeerd door transfer service"
+    transfer_unblocked: "Overschrijving gedeblokkeerd door admin"
+    admin_validation_simulated: "Validatie gesimuleerd door administratie"
+    
+  transaction_notes:
+    money_debited_on_init: "Geld al gedebiteerd bij initiatie"
+    money_always_debited_comment: "ALTIJD het bedrag herbelasting want het geld wordt ALTIJD gedebiteerd bij initiatie"
+
+  validation:
+    amount_must_be_positive: "Het bedrag moet een positief getal zijn."
+    insufficient_credit_amount: "Onvoldoende bedrag op de kredietrekening."
+  
+  errors:
+    sub_account_not_found: "Krediet sub-account niet gevonden"
+    no_pending_transfer: "Geen overboekingen in behandeling."
+    verification_code_expired: "Verificatiecode verlopen."
+    verification_code_invalid: "Verificatiecode ongeldig."
+    insufficient_amount: "Onvoldoende bedrag"

@@ -1,0 +1,112 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: help_center_security.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+help_center_security:
+  page:
+    title: "Security and Protection - %company_name% Help Center"
+    
+  hero:
+    title: "Security and Protection"
+    subtitle: "Protect your accounts and transactions with our advanced security measures"
+    
+  sections:
+    main_title: "Your Security is Our Priority"
+    
+    authentication:
+      title: "Authentication and Access"
+      description: "Secure access to your accounts with our robust authentication systems"
+      items:
+        two_factor:
+          title: "Two-Factor Authentication (2FA)"
+          description: "Strengthen your account security with dual verification"
+          details: "Enable 2FA in your security settings. Use an authentication app (Google Authenticator, Authy) or receive codes by SMS."
+        strong_passwords:
+          title: "Secure Passwords"
+          description: "Create strong passwords to protect your accounts"
+          details: "Use at least 12 characters with uppercase, lowercase, numbers and symbols. Avoid easily guessable personal information."
+        biometric:
+          title: "Biometric Authentication"
+          description: "Use your fingerprint or facial recognition"
+          details: "Enable Touch ID or Face ID on the mobile app for quick and secure access to your accounts."
+        session_management:
+          title: "Session Management"
+          description: "Control your active connections and access history"
+          details: "Monitor your active sessions, disconnect from unrecognized devices and view your connection history."
+          
+    fraud_prevention:
+      title: "Fraud Prevention"
+      description: "Our advanced systems protect your transactions against fraud"
+      items:
+        real_time_monitoring:
+          title: "Real-Time Monitoring"
+          description: "Automatic detection of suspicious activities"
+          details: "Our AI algorithms analyze each transaction in real-time to detect abnormal behavior and block fraud attempts."
+        transaction_alerts:
+          title: "Transaction Alerts"
+          description: "Instant notifications for all your operations"
+          details: "Receive SMS or email notifications for each transaction. Set custom thresholds to be alerted of large amounts."
+        card_controls:
+          title: "Card Controls"
+          description: "Manage your cards and limit their use"
+          details: "Temporarily block your cards, set geographical and amount limits, enable/disable online payments."
+        merchant_verification:
+          title: "Merchant Verification"
+          description: "Validation of online merchant identity"
+          details: "We verify merchant identity and reputation to reduce fraud risks during your online purchases."
+          
+    data_protection:
+      title: "Data Protection"
+      description: "Your personal information is protected according to the highest standards"
+      items:
+        encryption:
+          title: "End-to-End Encryption"
+          description: "All your data is encrypted with the latest standards"
+          details: "We use AES-256 encryption to protect your data in transit and at rest. Your information is unreadable without the appropriate keys."
+        gdpr_compliance:
+          title: "GDPR Compliance"
+          description: "Full compliance with the General Data Protection Regulation"
+          details: "We respect your rights: access, rectification, erasure and portability of your data. Contact our DPO for any request."
+        data_minimization:
+          title: "Data Minimization"
+          description: "We only collect strictly necessary data"
+          details: "Minimization principle: we limit collection to data essential to our services and keep them only as long as necessary."
+        secure_storage:
+          title: "Secure Storage"
+          description: "Certified and highly secure data centers"
+          details: "Our servers are hosted in ISO 27001 certified data centers, with 24/7 physical security and geographical redundancy."
+          
+    incident_response:
+      title: "Incident Response"
+      description: "Rapid procedures in case of security issue"
+      items:
+        immediate_action:
+          title: "Immediate Action"
+          description: "What to do if you detect suspicious activity"
+          details: "Immediately contact our 24/7 security line at Phone. Change your passwords and check your recent transactions."
+        account_recovery:
+          title: "Account Recovery"
+          description: "Recovery procedure in case of compromise"
+          details: "Enhanced identity verification process, secure access reset and complete audit of your account."
+        investigation:
+          title: "Investigation and Follow-up"
+          description: "Thorough investigation of security incidents"
+          details: "Our cybersecurity team analyzes each incident, identifies causes and implements additional preventive measures."
+        compensation:
+          title: "Protection and Reimbursement"
+          description: "Reimbursement guarantee in case of proven fraud"
+          details: "Full protection against fraud: quick reimbursement of diverted amounts and personalized assistance for regularization."
+          
+    tips:
+      title: "Security Tips"
+      description: "Best practices to protect your accounts daily"
+      items:
+        - "Never share your login credentials"
+        - "Always check the URL before entering your data"
+        - "Use secure WiFi networks for your banking operations"
+        - "Regularly update your applications and browsers"
+        - "Always log out after using a shared device"
+        - "Regularly monitor your account statements"
+        - "Immediately report any suspicious activity"
+        - "Enable notifications for all your transactions"

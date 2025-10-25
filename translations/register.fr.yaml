@@ -1,0 +1,50 @@
+register:
+  title: "Créer votre compte"
+  subtitle: "Rejoignez %company_name% et accédez à nos services bancaires innovants avec une procédure simplifiée et sécurisée"
+  
+  sections:
+    personal_info: "Informations personnelles"
+    connection_info: "Informations de connexion"
+    terms: "Conditions d'utilisation"
+  fields:
+    first_name_label: "Prénom"
+    first_name_placeholder: "Votre prénom"
+    last_name_label: "Nom de famille"
+    last_name_placeholder: "Votre nom"
+    email_label: "Adresse email"
+    email_placeholder: "votre.email@exemple.com"
+    password_label: "Mot de passe"
+    password_placeholder: "••••••••"
+    password_confirm_label: "Confirmer le mot de passe"
+    password_confirm_placeholder: "••••••••"
+    agree_terms: 'J''accepte les <a href="#" class="form-link">conditions d''utilisation</a> et la <a href="#" class="form-link">politique de confidentialité</a>'
+    newsletter: "Je souhaite recevoir les actualités et offres de %company_name% par email"
+  buttons:
+    create_account: "Créer mon compte"
+    login: "Se connecter"
+    
+  links:
+    terms_of_use: "conditions d'utilisation"
+    privacy_policy: "politique de confidentialité"
+    already_account: "Vous avez déjà un compte ?"
+    back_home: "Retour à l'accueil"
+  security:
+    ssl_secure: "SSL Sécurisé"
+    data_protected: "Données protégées"
+    support_24_7: "Support 24/7"
+  messages:
+    account_created: "Votre compte doit être activé par notre équipe avant votre première connexion. Cette validation prend généralement moins de 24h."
+errors:
+  first_name_required: "Le prénom est obligatoire"
+  first_name_min: "Le prénom doit faire au moins {{ limit }} caractères"
+  first_name_max: "Le prénom ne peut pas dépasser {{ limit }} caractères"
+  last_name_required: "Le nom est obligatoire"
+  last_name_min: "Le nom doit faire au moins {{ limit }} caractères"
+  last_name_max: "Le nom ne peut pas dépasser {{ limit }} caractères"
+  email_required: "L'email est obligatoire"
+  email_invalid: "L'email n'est pas valide"
+  email_exists: "Il existe déjà un compte avec cet email"
+  password_required: "Le mot de passe est obligatoire"
+  password_min: "Votre mot de passe doit contenir au moins {{ limit }} caractères"
+  password_mismatch: "Les mots de passe ne correspondent pas"
+  terms_required: "Vous devez accepter nos conditions"

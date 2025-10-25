@@ -1,0 +1,14 @@
+banking_card_opposition_controller:
+  flash:
+    access_denied_card: "Accès refusé à cette carte."
+    only_active_cards: "Seules les cartes actives peuvent faire l'objet d'une opposition."
+    active_opposition_exists: "Une opposition est déjà en cours de traitement pour cette carte."
+    opposition_success: "Votre opposition a été enregistrée avec succès. Votre carte a été immédiatement bloquée pour votre sécurité."
+    opposition_error: "Une erreur est survenue lors de l'enregistrement de votre opposition. Veuillez réessayer ou contacter notre service client."
+    access_denied_opposition: "Accès refusé à cette opposition."
+    card_not_found: "Carte non trouvée ou accès refusé."
+    select_card: "Veuillez sélectionner une carte."
+    emergency_opposition_success: "OPPOSITION ENREGISTRÉE - Votre carte a été immédiatement bloquée. Référence: {reference}"
+    emergency_opposition_error: "Erreur lors du blocage. Contactez immédiatement le service client au 02/XXX.XX.XX"
+  emergency:
+    opposition_reason: "Opposition d'urgence via interface rapide"

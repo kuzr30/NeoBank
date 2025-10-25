@@ -1,0 +1,19 @@
+email_devis_approval:
+  subject: "Ihr Versicherungsantrag wurde genehmigt!"
+  content:
+    page_title: "Versicherungsantrag genehmigt"
+    department: "Versicherungsservice"
+    greeting: "Liebe/Lieber %prenom% %nom%,"
+    approval_message: "Wir freuen uns, Ihnen mitteilen zu können, dass Ihr Antrag für die %typeAssurance% Versicherung von unserem Team genehmigt wurde."
+    reference:
+      title: "Referenznummer"
+    next_steps:
+      title: "Nächste Schritte"
+      step1: "Unser Berater wird Sie innerhalb von 48 Stunden kontaktieren, um Ihren Vertrag abzuschließen"
+      step2: "Bereiten Sie Ihre Ausweisdokumente und Nachweise vor"
+      step3: "Unterschreiben Sie Ihren Vertrag und genießen Sie Ihre Deckung"
+    contact:
+      title: "Brauchen Sie Hilfe?"
+      phone_service: "Telefonservice"
+      email_support: "Email-Support"
+    closing_message: "Vielen Dank für Ihr Vertrauen. Unser Team freut sich darauf, Sie bei diesem neuen Schritt zu begleiten."

@@ -1,0 +1,154 @@
+savings_investments:
+  # Meta tags
+  meta:
+    title: "Ahorro e Inversiones Inteligentes - %company_name%"
+    description: "Descubra nuestras soluciones de ahorro e inversión para hacer fructificar su dinero inteligentemente con %company_name%."
+
+  # Hero Section
+  hero:
+    title: "Ahorro e Inversiones Inteligentes"
+    subtitle: "Haga fructificar su dinero con nuestras soluciones de ahorro e inversión a medida, adaptadas a todos sus objetivos financieros."
+    stats:
+      average_rate:
+        value: "4.2%"
+        label: "Tasa promedio"
+      savers:
+        value: "500K+"
+        label: "Ahorradores"
+      total_savings:
+        value: "2.8M€"
+        label: "Ahorro total"
+      products:
+        value: "15+"
+        label: "Productos"
+    cta: "Descubrir nuestras soluciones"
+    
+  # Phone mockup content
+  phone:
+    header:
+      time: "14:32"
+    balance:
+      label: "Ahorro total"
+      amount: "45 680€"
+      change: "+2.8% este mes"
+    investments:
+      livret:
+        name: "Libreta %company_name%"
+        return: "+3.2%"
+      pea:
+        name: "PEA Acciones"
+        return: "+8.7%"
+      life_insurance:
+        name: "Seguro de Vida"
+        return: "+5.4%"
+
+  # Solutions Section
+  solutions:
+    header:
+      title: "Soluciones Personalizadas"
+      subtitle: "Productos de ahorro e inversión adaptados a cada perfil de inversor, del más prudente al más dinámico"
+    secure_savings:
+      title: "Ahorro Seguro"
+      description: "Constituya su ahorro de precaución con nuestras libretas reglamentadas y nuestras cuentas a plazo garantizadas. Soluciones sin riesgo para proteger y hacer fructificar sus economías."
+      features:
+        - "Libreta A y LDDS a tasas reglamentadas"
+        - "Libreta %company_name% hasta 4.5% bruto"
+        - "Cuentas a plazo de 6 meses a 5 años"
+        - "Capital 100% garantizado"
+        - "Disponibilidad inmediata"
+      cta: "Saber más"
+    dashboard:
+      title: "Ahorro Seguro"
+      date: "Agosto 2025"
+      metrics:
+        total:
+          value: "25 890€"
+          label: "Total ahorro"
+        rate:
+          value: "3.8%"
+          label: "Tasa promedio"
+        gains:
+          value: "+156€"
+          label: "Ganancias/mes"
+
+  # Products Section
+  products:
+    header:
+      title: "Nuestros Productos Estrella"
+      subtitle: "Una gama completa de herramientas de ahorro e inversión para todos sus proyectos"
+    mobile_app:
+      title: "Mis Inversiones"
+      menu_icon: "☰"
+      summary:
+        label: "Ahorro total"
+        amount: "67 240€"
+        growth: "+12.4% este año"
+      products:
+        pea:
+          name: "PEA Acciones"
+          rate: "+15.2%"
+          amount: "28 450€"
+        life_insurance:
+          name: "Seguro de Vida"
+          rate: "+6.8%"
+          amount: "22 890€"
+        livret:
+          name: "Libreta %company_name%"
+          rate: "+4.5%"
+          amount: "15 900€"
+    info:
+      title: "Aplicación Móvil Intuitiva"
+      description: "Gestione todas sus inversiones desde su smartphone con nuestra aplicación móvil de nueva generación. Siga sus rendimientos en tiempo real y tome las mejores decisiones de inversión."
+      benefits:
+        interface:
+          title: "Interfaz Intuitiva"
+          description: "Diseño moderno y ergonómico"
+        realtime:
+          title: "Datos Tiempo Real"
+          description: "Cotizaciones y rendimientos actualizados"
+        alerts:
+          title: "Alertas Personalizadas"
+          description: "Notificaciones a medida"
+        goals:
+          title: "Objetivos Inteligentes"
+          description: "Planificación automatizada"
+      cta: "Descargar la app"
+
+  # Tools Section
+  tools:
+    header:
+      title: "Herramientas de Simulación"
+      subtitle: "Planifique su futuro financiero con nuestras calculadoras inteligentes y nuestras herramientas de simulación avanzadas"
+    calculator:
+      title: "Simulador de Ahorro"
+      subtitle: "Calcule su ahorro futuro"
+      form:
+        monthly_payment:
+          label: "Pago mensual"
+          value: "300"
+        duration:
+          label: "Duración (años)"
+        interest_rate:
+          label: "Tasa de interés anual"
+      result:
+        label: "Ahorro constituido"
+        amount: "89 420€"
+    content:
+      title: "Planificación Inteligente"
+      description: "Use nuestras herramientas de simulación para definir su estrategia de ahorro e inversión. Visualice el impacto de sus decisiones financieras a largo plazo."
+      features:
+        - "Simulador de ahorro mensual"
+        - "Calculadora de jubilación"
+        - "Optimizador fiscal"
+        - "Análisis de cartera"
+        - "Proyecciones personalizadas"
+        - "Comparador de productos"
+      cta: "Probar los simuladores"
+
+  # CTA Section
+  cta:
+    title: "Comience a Ahorrar Hoy Mismo"
+    subtitle: "Únase a más de 500 000 ahorradores que confían en nosotros para hacer fructificar su patrimonio. Abra su cuenta en pocos minutos."
+    buttons:
+      primary: "Abrir una cuenta"
+      secondary: "Hablar con un consejero"

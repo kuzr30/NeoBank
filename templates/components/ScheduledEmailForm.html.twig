@@ -1,0 +1,76 @@
+<div {{ attributes }}>
+    {{ form_start(form) }}
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form_label(form.templateType) }}
+                {{ form_widget(form.templateType, {
+                    attr: {
+                        'data-model': 'live#templateType'
+                    }
+                }) }}
+                {{ form_errors(form.templateType) }}
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form_label(form.locale) }}
+                {{ form_widget(form.locale) }}
+                {{ form_errors(form.locale) }}
+            </div>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        {{ form_label(form.recipient) }}
+        {{ form_widget(form.recipient) }}
+        {{ form_errors(form.recipient) }}
+    </div>
+    
+    {% if requiresReasons() %}
+        <div class="form-group">
+            <label class="form-label required">Raisons</label>
+            <div class="help-text">Sélectionnez les raisons pertinentes pour ce type d'email</div>
+            
+            {% for reason in getAvailableReasons() %}
+                <div class="form-check">
+                    <input 
+                        class="form-check-input" 
+                        type="checkbox" 
+                        name="scheduled_email[reasons][]" 
+                        value="{{ reason.value }}" 
+                        id="reason_{{ reason.value }}"
+                    >
+                    <label class="form-check-label" for="reason_{{ reason.value }}">
+                        <strong>{{ reason.label }}</strong>
+                        {% if reason.description %}
+                            <br><small class="text-muted">{{ reason.description }}</small>
+                        {% endif %}
+                    </label>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    
+    <div class="form-group">
+        {{ form_label(form.customMessage) }}
+        {{ form_widget(form.customMessage) }}
+        {{ form_errors(form.customMessage) }}
+        <div class="help-text">Message additionnel qui sera affiché dans l'email</div>
+    </div>
+    
+    {{ form_rest(form) }}
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">
+            <i class="fa fa-paper-plane"></i> Envoyer l'email
+        </button>
+        <a href="{{ ea_url().setAction('index') }}" class="btn btn-secondary">
+            <i class="fa fa-times"></i> Annuler
+        </a>
+    </div>
+    
+    {{ form_end(form) }}
+</div>

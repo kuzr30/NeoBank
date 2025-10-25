@@ -1,0 +1,133 @@
+credit_simulation:
+  # Credit types section
+  credit_types:
+    immobilier:
+      label: "Crédito Inmobiliario"
+      description: "Financiación para la compra de su residencia principal o secundaria"
+    auto:
+      label: "Crédito Automotriz" 
+      description: "Financiación para la compra de un vehículo nuevo o usado"
+    consommation:
+      label: "Crédito al Consumo"
+      description: "Crédito para financiar sus proyectos personales"
+    travaux:
+      label: "Crédito Obras"
+      description: "Financiación para sus trabajos de renovación y mejora"
+    professionnel:
+      label: "Crédito Profesional"
+      description: "Financiación para sus proyectos profesionales"
+    personal:
+      label: "Crédito Personal" 
+      description: "Crédito personal sin justificante de uso"
+    home_improvement:
+      label: "Crédito Obras/Renovación"
+      description: "Crédito especializado para sus trabajos de mejora de vivienda"
+    debt_consolidation:
+      label: "Reunificación de Créditos"
+      description: "Agrupación de sus créditos en curso"
+    mortgage:
+      label: "Crédito Inmobiliario"
+      description: "Préstamo inmobiliario para la adquisición de su bien"
+    renouvelable:
+      label: "Crédito Renovable"
+      description: "Reserva de dinero disponible permanentemente"
+    etudiant:
+      label: "Préstamo Estudiantil"
+      description: "Financiación para sus estudios superiores"
+    relais:
+      label: "Préstamo Puente"
+      description: "Solución de financiación temporal durante una compra-venta"
+    microcredit:
+      label: "Microcrédito"
+      description: "Pequeños montos para financiar sus proyectos"
+    leasing:
+      label: "Leasing"
+      description: "Alquiler con opción de compra"
+    voyage:
+      label: "Crédito Viaje"
+      description: "Financiación para sus viajes y vacaciones"
+
+  # Duration options
+  durations:
+    twelve_months: "12 meses"
+    twenty_four_months: "24 meses"
+    thirty_six_months: "36 meses"
+    forty_eight_months: "48 meses"
+    sixty_months: "60 meses"
+    seventy_two_months: "72 meses"
+    eighty_four_months: "84 meses"
+    ninety_six_months: "96 meses"
+    one_hundred_twenty_months: "120 meses"
+    one_hundred_eighty_months: "180 meses"
+    two_hundred_forty_months: "240 meses"
+    three_hundred_months: "300 meses"
+
+  # Duration units
+  duration_units:
+    months: "meses"
+    years: "años"
+    immobilier:
+      label: "Crédito Inmobiliario"
+      description: "Financiación para la compra de un bien inmobiliario"
+    auto:
+      label: "Crédito Automotriz"
+      description: "Financiación para la compra de un vehículo"
+    consommation:
+      label: "Crédito al Consumo"
+      description: "Crédito para sus proyectos personales"
+    travaux:
+      label: "Crédito Obras"
+      description: "Financiación para sus trabajos de renovación"
+    professionnel:
+      label: "Crédito Profesional"
+      description: "Crédito para sus proyectos profesionales"
+    personal:
+      label: "Préstamo Personal"
+      description: "Préstamo sin justificante de uso"
+    debt_consolidation:
+      label: "Reunificación de Créditos"
+      description: "Agrupación de sus créditos existentes"
+    mortgage:
+      label: "Crédito Inmobiliario"
+      description: "Financiación para la compra de un bien inmobiliario"
+    renouvelable:
+      label: "Crédito Renovable"
+      description: "Reserva de dinero reutilizable a voluntad"
+    microcredit:
+      label: "Microcrédito Personal"
+      description: "Pequeños montos para personas excluidas del crédito bancario clásico"
+
+  # Simulation flow section
+  simulation_flow:
+    welcome:
+      title: "Simule su crédito en línea"
+      subtitle: "Obtenga su simulación en pocos clics"
+      description: "Descubra rápidamente la cantidad que puede solicitar y las mensualidades correspondientes."
+      start_button: "Comenzar mi simulación"
+      advantages:
+        - "Simulación gratuita y sin compromiso"
+        - "Respuesta inmediata" 
+        - "Cálculo personalizado"
+        - "Acompañamiento por nuestros expertos"
+    
+    credit_type_selection:
+      title: "¿Qué tipo de crédito desea?"
+      subtitle: "Elija el crédito que corresponde a su proyecto"
+      help_text: "Seleccione el tipo de crédito que mejor se adapte a su necesidad."
+      next_button: "Continuar"
+      back_button: "Volver"
+    
+    personal_info:
+      title: "Información personal"
+      subtitle: "Para calcular su capacidad de préstamo"
+      help_text: "Esta información nos permite personalizar su simulación."
+      form:
+        age:
+          label: "Edad"
+          placeholder: "Su edad"
+        income:
+          label: "Ingresos mensuales netos"
+          placeholder: "Sus ingresos netos por mes"
+        charges:
+          label: "Gastos mensuales"
+          placeholder: "Sus gastos fijos mensuales"

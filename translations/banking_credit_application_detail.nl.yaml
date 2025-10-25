@@ -1,0 +1,44 @@
+banking_credit_application_detail:
+  header:
+    title: "Details van de kredietaanvraag"
+    reference: "Aanvraag nr. %reference%"
+    amount_label: "Gevraagd bedrag"
+  
+  navigation:
+    back_to_credits: "Terug naar kredieten"
+  
+  credit_info:
+    title: "Kredietinformatie"
+    type: "Type krediet"
+    loan_amount: "Gevraagd bedrag"
+    duration: "Looptijd"
+    monthly_payment: "Berekende maandelijkse betaling"
+    total_cost: "Totale kosten van het krediet"
+    months: "maanden"
+    years: "jaren"
+  
+  personal_info:
+    title: "Persoonlijke gegevens"
+    full_name: "Volledige naam"
+    email: "E-mail"
+    phone: "Telefoon"
+    birth_date: "Geboortedatum"
+  
+  financial_situation:
+    title: "Financiële situatie"
+    monthly_income: "Maandelijks inkomen"
+    monthly_expenses: "Maandelijkse uitgaven"
+    employer: "Werkgever"
+    job_title: "Functie"
+  
+  application_tracking:
+    title: "Opvolging van de aanvraag"
+    current_status: "Huidige status"
+    application_date: "Aanvraagdatum"
+    last_update: "Laatste update"
+    notes: "Opmerkingen"
+  
+  actions:
+    view_amortization: "Aflossingsschema bekijken"
+    view_contract: "Contract bekijken"
+    download_contract: "Contract downloaden"

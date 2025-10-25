@@ -1,0 +1,122 @@
+{% extends 'banking/dashboard.html.twig' %}
+
+{% block content %}
+<div class="banking__rib-header">
+    <h2 class="banking__rib-title">
+        {{ ux_icon('heroicons:document-text', {'class': 'banking__rib-title-icon'}) }}
+        {{ tp('banking_bank_account.show.title', [], 'banking_bank_account') }}
+    </h2>
+    <div class="banking__rib-header-actions">
+        <a href="{{ path('banking_ribs') }}" class="btn btn-secondary">
+            {{ ux_icon('heroicons:arrow-left', {'class': 'btn__icon'}) }}
+            {{ tp('banking_bank_account.show.back_to_list', [], 'banking_bank_account') }}
+        </a>
+    </div>
+</div>
+
+<div class="banking__rib-content">
+    <div class="banking__rib-details-card">
+        <div class="banking__rib-detail-section">
+            <h3 class="banking__rib-detail-title">{{ tp('banking_bank_account.show.sections.account_info', [], 'banking_bank_account') }}</h3>
+            
+            <div class="banking__rib-detail-item">
+                <div class="banking__rib-detail-label">
+                    {{ ux_icon('heroicons:document-text', {'class': 'banking__rib-detail-icon'}) }}
+                    {{ tp('banking_bank_account.show.details.account_title', [], 'banking_bank_account') }}
+                </div>
+                <div class="banking__rib-detail-value">{{ bank_account.accountName }}</div>
+            </div>
+
+            <div class="banking__rib-detail-item">
+                <div class="banking__rib-detail-label">
+                    {{ ux_icon('heroicons:building-library', {'class': 'banking__rib-detail-icon'}) }}
+                    {{ tp('banking_bank_account.show.details.bank', [], 'banking_bank_account') }}
+                </div>
+                <div class="banking__rib-detail-value">{{ bank_account.bankName }}</div>
+            </div>
+
+            <div class="banking__rib-detail-item">
+                <div class="banking__rib-detail-label">
+                    {{ ux_icon('heroicons:credit-card', {'class': 'banking__rib-detail-icon'}) }}
+                    {{ tp('banking_bank_account.show.details.iban', [], 'banking_bank_account') }}
+                </div>
+                <div class="banking__rib-detail-value banking__iban-full">
+                    <code class="banking__iban-code">{{ bank_account.formattedIban }}</code>
+                    <button class="banking__copy-btn" onclick="copyToClipboard('{{ bank_account.iban }}')">
+                        {{ ux_icon('heroicons:clipboard', {'class': 'banking__copy-icon'}) }}
+                        {{ tp('banking_bank_account.show.details.copy', [], 'banking_bank_account') }}
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="banking__rib-detail-section">
+            <h3 class="banking__rib-detail-title">{{ tp('banking_bank_account.show.sections.technical_info', [], 'banking_bank_account') }}</h3>
+            
+            <div class="banking__rib-detail-item">
+                <div class="banking__rib-detail-label">
+                    {{ ux_icon('heroicons:globe-europe-africa', {'class': 'banking__rib-detail-icon'}) }}
+                    {{ tp('banking_bank_account.show.details.country', [], 'banking_bank_account') }}
+                </div>
+                <div class="banking__rib-detail-value">
+                    {% set country_code = bank_account.iban[:2] %}
+                    {{ tp('banking_bank_account.show.countries.' ~ country_code, [], 'banking_bank_account') ?: country_code }}
+                    <span class="banking__country-badge">{{ tp('banking_bank_account.show.details.european', [], 'banking_bank_account') }}</span>
+                </div>
+            </div>
+
+            <div class="banking__rib-detail-item">
+                <div class="banking__rib-detail-label">
+                    {{ ux_icon('heroicons:calendar', {'class': 'banking__rib-detail-icon'}) }}
+                    {{ tp('banking_bank_account.show.details.added_date', [], 'banking_bank_account') }}
+                </div>
+                <div class="banking__rib-detail-value">{{ bank_account.createdAt|date('d/m/Y à H:i') }}</div>
+            </div>
+
+            {% if bank_account.updatedAt %}
+                <div class="banking__rib-detail-item">
+                    <div class="banking__rib-detail-label">
+                        {{ ux_icon('heroicons:pencil', {'class': 'banking__rib-detail-icon'}) }}
+                        {{ tp('banking_bank_account.show.details.last_modified', [], 'banking_bank_account') }}
+                    </div>
+                    <div class="banking__rib-detail-value">{{ bank_account.updatedAt|date('d/m/Y à H:i') }}</div>
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="banking__rib-actions">
+            <form method="post" action="{{ path('app_bank_account_delete', {'id': bank_account.id}) }}" 
+                  onsubmit="return confirm('{{ tp('banking_bank_account.common.confirm_delete', [], 'banking_bank_account') }}');">
+                <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ bank_account.id) }}">
+                <button type="submit" class="banking__rib-delete-btn">
+                    {{ ux_icon('heroicons:trash', {'class': 'banking__rib-delete-icon'}) }}
+                    {{ tp('banking_bank_account.show.details.delete_rib', [], 'banking_bank_account') }}
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="banking__rib-navigation">
+    <a href="{{ path('banking_ribs') }}" class="banking__back-btn">
+        {{ ux_icon('heroicons:arrow-left', {'class': 'banking__back-icon'}) }}
+        {{ tp('banking_bank_account.show.back_to_list', [], 'banking_bank_account') }}
+    </a>
+</div>
+
+<script>
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(function() {
+        const button = event.target.closest('button');
+        const originalHTML = button.innerHTML;
+        button.innerHTML = '{{ ux_icon('heroicons:check', {'class': 'banking__copy-icon'})|e('js') }} {{ tp('banking_bank_account.show.details.copied', [], 'banking_bank_account')|e('js') }}';
+        button.classList.add('banking__copy-btn--success');
+        
+        setTimeout(function() {
+            button.innerHTML = originalHTML;
+            button.classList.remove('banking__copy-btn--success');
+        }, 2000);
+    });
+}
+</script>
+{% endblock %}

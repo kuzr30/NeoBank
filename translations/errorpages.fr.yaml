@@ -1,0 +1,30 @@
+general:
+  title: "Une erreur s'est produite"
+  subtitle: "Nous nous excusons pour la gêne occasionnée"
+  back_to_homepage: "Retour à l'accueil"
+  back_button: "Retour"
+
+error_404:
+  title: "Page non trouvée"
+  subtitle: "La page que vous recherchez n'existe pas ou a été déplacée"
+  message: "Il se peut que l'adresse ait été mal saisie ou que la page ait été supprimée."
+
+error_403:
+  title: "Accès interdit"
+  subtitle: "Vous n'avez pas l'autorisation d'accéder à cette page"
+  message: "Cette ressource nécessite des permissions particulières que vous ne possédez pas."
+
+error_500:
+  title: "Erreur interne du serveur"
+  subtitle: "Une erreur technique s'est produite"
+  message: "Nos équipes techniques ont été alertées et travaillent à résoudre ce problème."
+
+suggestions:
+  title: "Que pouvez-vous faire ?"
+  check_url: "Vérifiez l'adresse URL"
+  go_home: "Retournez à la page d'accueil"
+  contact_support: "Contactez notre support"
+  try_later: "Réessayez plus tard"
+  check_permissions: "Vérifiez vos permissions d'accès"
+  login_authorized: "Connectez-vous avec un compte autorisé"
+  refresh_page: "Actualiser la page"

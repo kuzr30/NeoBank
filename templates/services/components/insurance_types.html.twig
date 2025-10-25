@@ -1,0 +1,435 @@
+<style>
+.insurance-types {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--color-background) 0%, #e2e8f0 100%);
+    padding: 2rem;
+}
+
+.insurance-types__header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.insurance-types__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.insurance-types__subtitle {
+    font-size:                 <h3 class="insurance-card__title">{{ tp('insurance.types.decennial.title', [], 'insurance') }}</h3>
+                <p class="insurance-card__description">
+                    {{ tp('insurance.types.decennial.description', [], 'insurance') }}
+                </p>
+                <ul class="insurance-card__features">
+                    <li>{{ tp('insurance.types.decennial.features.0', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.decennial.features.1', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.decennial.features.2', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.decennial.features.3', [], 'insurance') }}</li>
+                </ul>
+                <a href="{{ path('services_devis_form', {'type': 'decennale'}) }}" class="insurance-card__cta">
+                    {{ tp('insurance.types.decennial.cta', [], 'insurance') }}  color: var(--color-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.insurance-types__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.insurance-card {
+    background: var(--color-surface);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.insurance-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.insurance-card--featured {
+    border: 2px solid var(--color-primary);
+}
+
+.insurance-card--featured::before {
+    content: "⭐⭐⭐⭐⭐";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--color-primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.insurance-card__icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.insurance-card__icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.insurance-card__icon--auto {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: white;
+}
+
+.insurance-card__icon--home {
+    background: linear-gradient(135deg, var(--color-secondary), #059669);
+    color: white;
+}
+
+.insurance-card__icon--health {
+    background: linear-gradient(135deg, var(--color-accent), #d97706);
+    color: white;
+}
+
+.insurance-card__icon--life {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    color: white;
+}
+
+.insurance-card__icon--travel {
+    background: linear-gradient(135deg, #06b6d4, #0891b2);
+    color: white;
+}
+
+.insurance-card__icon--pro {
+    background: linear-gradient(135deg, var(--color-error), #dc2626);
+    color: white;
+}
+
+.insurance-card__icon--credit {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+}
+
+.insurance-card__title {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+}
+
+.insurance-card__description {
+    color: var(--color-muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.insurance-card__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.insurance-card__features li {
+    padding: 0.5rem 0;
+    color: var(--color-text-light);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.insurance-card__features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+.insurance-card__pricing {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--color-background);
+    border-radius: 8px;
+}
+
+.insurance-card__price {
+    color: var(--color-muted);
+    font-size: 0.875rem;
+}
+
+.insurance-card__price strong {
+    color: var(--color-primary);
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.insurance-card__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    justify-content: center;
+}
+
+.insurance-card__cta:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+.insurance-card__cta svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .insurance-types {
+        padding: 2rem 0;
+    }
+    
+    .insurance-types__title {
+        font-size: 2rem;
+    }
+    
+    .insurance-types__grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .insurance-card {
+        padding: 1.5rem;
+    }
+}
+</style>
+
+<section class="insurance-types">
+    <div class="container">
+            <div class="section-header">
+        <h2 class="section-title">{{ tp('insurance.types.header.title', [], 'insurance') }}</h2>
+        <p class="section-subtitle">{{ tp('insurance.types.header.subtitle', [], 'insurance') }}</p>
+    </div>
+
+        <div class="insurance-types__grid">
+            <!-- Assurance Auto -->
+            <div class="insurance-card insurance-card--featured">
+                <div class="insurance-card__icon insurance-card__icon--auto">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3 class="insurance-card__title">{{ tp('insurance.types.auto.title', [], 'insurance') }}</h3>
+                <p class="insurance-card__description">
+                    {{ tp('insurance.types.auto.description', [], 'insurance') }}
+                </p>
+                <ul class="insurance-card__features">
+                    <li>{{ tp('insurance.types.auto.features.0', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.auto.features.1', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.auto.features.2', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.auto.features.3', [], 'insurance') }}</li>
+                </ul>
+                <a href="{{ path('services_devis_form', {'type': 'auto'}) }}" class="insurance-card__cta">
+                    {{ tp('insurance.types.auto.cta', [], 'insurance') }}
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Assurance Crédit/Emprunteur -->
+            <div class="insurance-card">
+                <div class="insurance-card__icon insurance-card__icon--credit">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.25 21h19.5m-18-18v18m2.25-18v18m13.5-18v18m2.25-18v18M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.75m-.75 3h.75m-.75 3h.75m-3.75-16.5h.75m-.75 3h.75m-.75 3h.75m-3.75-6.75h.75"/>
+                    </svg>
+                </div>
+                <h3 class="insurance-card__title">{{ tp('insurance.types.credit.title', [], 'insurance') }}</h3>
+                <p class="insurance-card__description">
+                    {{ tp('insurance.types.credit.description', [], 'insurance') }}
+                </p>
+                <ul class="insurance-card__features">
+                    <li>{{ tp('insurance.types.credit.features.0', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.credit.features.1', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.credit.features.2', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.credit.features.3', [], 'insurance') }}</li>
+                </ul>
+                <a href="{{ path('services_devis_form', {'type': 'pret'}) }}" class="insurance-card__cta">
+                    {{ tp('insurance.types.credit.cta', [], 'insurance') }}
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Assurance Habitation -->
+            <div class="insurance-card">
+                <div class="insurance-card__icon insurance-card__icon--home">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                    </svg>
+                </div>
+                <h3 class="insurance-card__title">{{ tp('insurance.types.home.title', [], 'insurance') }}</h3>
+                <p class="insurance-card__description">
+                    {{ tp('insurance.types.home.description', [], 'insurance') }}
+                </p>
+                <ul class="insurance-card__features">
+                    <li>{{ tp('insurance.types.home.features.0', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.home.features.1', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.home.features.2', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.home.features.3', [], 'insurance') }}</li>
+                </ul>
+                <a href="{{ path('services_devis_form', {'type': 'habitation'}) }}" class="insurance-card__cta">
+                    {{ tp('insurance.types.home.cta', [], 'insurance') }}
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Assurance Santé -->
+            <div class="insurance-card">
+                <div class="insurance-card__icon insurance-card__icon--health">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                    </svg>
+                </div>
+                <h3 class="insurance-card__title">{{ tp('insurance.types.health.title', [], 'insurance') }}</h3>
+                <p class="insurance-card__description">
+                    {{ tp('insurance.types.health.description', [], 'insurance') }}
+                </p>
+                <ul class="insurance-card__features">
+                    <li>{{ tp('insurance.types.health.features.0', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.health.features.1', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.health.features.2', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.health.features.3', [], 'insurance') }}</li>
+                </ul>
+                <a href="{{ path('services_devis_form', {'type': 'sante'}) }}" class="insurance-card__cta">
+                    {{ tp('insurance.types.health.cta', [], 'insurance') }}
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Assurance Vie -->
+            <div class="insurance-card">
+                <div class="insurance-card__icon insurance-card__icon--life">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+                    </svg>
+                </div>
+                <h3 class="insurance-card__title">{{ tp('insurance.types.life.title', [], 'insurance') }}</h3>
+                <p class="insurance-card__description">
+                    {{ tp('insurance.types.life.description', [], 'insurance') }}
+                </p>
+                <ul class="insurance-card__features">
+                    <li>{{ tp('insurance.types.life.features.0', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.life.features.1', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.life.features.2', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.life.features.3', [], 'insurance') }}</li>
+                </ul>
+                <a href="{{ path('services_devis_form', {'type': 'vie'}) }}" class="insurance-card__cta">
+                    {{ tp('insurance.types.life.cta', [], 'insurance') }}
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Assurance Voyage -->
+            <div class="insurance-card">
+                <div class="insurance-card__icon insurance-card__icon--travel">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+                    </svg>
+                </div>
+                <h3 class="insurance-card__title">{{ tp('insurance.types.travel.title', [], 'insurance') }}</h3>
+                <p class="insurance-card__description">
+                    {{ tp('insurance.types.travel.description', [], 'insurance') }}
+                </p>
+                <ul class="insurance-card__features">
+                    <li>{{ tp('insurance.types.travel.features.0', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.travel.features.1', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.travel.features.2', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.travel.features.3', [], 'insurance') }}</li>
+                </ul>
+                <a href="{{ path('services_devis_form', {'type': 'voyage'}) }}" class="insurance-card__cta">
+                    {{ tp('insurance.types.travel.cta', [], 'insurance') }}
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Assurance Professionnelle -->
+            <div class="insurance-card">
+                <div class="insurance-card__icon insurance-card__icon--pro">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                    </svg>
+                </div>
+                <h3 class="insurance-card__title">{{ tp('insurance.types.professional.title', [], 'insurance') }}</h3>
+                <p class="insurance-card__description">
+                    {{ tp('insurance.types.professional.description', [], 'insurance') }}
+                </p>
+                <ul class="insurance-card__features">
+                    <li>{{ tp('insurance.types.professional.features.0', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.professional.features.1', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.professional.features.2', [], 'insurance') }}</li>
+                    <li>{{ tp('insurance.types.professional.features.3', [], 'insurance') }}</li>
+                </ul>
+                <a href="{{ path('services_devis_form', {'type': 'pro'}) }}" class="insurance-card__cta">
+                    {{ tp('insurance.types.professional.cta', [], 'insurance') }}
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Responsabilité Décennale -->
+            <div class="insurance-card">
+                <div class="insurance-card__icon" style="background: linear-gradient(135deg, #6366f1, #a21caf); color: white;">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536M9 13h6m2 7a2 2 0 002-2v-7.586a1 1 0 00-.293-.707l-7-7a1 1 0 00-1.414 0l-7 7A1 1 0 003 10.414V18a2 2 0 002 2h14z"/>
+                    </svg>
+                </div>
+                <h3 class="insurance-card__title">Responsabilité Décennale</h3>
+                <p class="insurance-card__description">
+                    Obligatoire pour les professionnels du bâtiment, elle couvre les dommages pouvant affecter la solidité de l’ouvrage.
+                </p>
+                <ul class="insurance-card__features">
+                    <li>Couvre 10 ans après réception</li>
+                    <li>Protection contre vices cachés</li>
+                    <li>Indispensable pour chantiers</li>
+                    <li>Conformité légale</li>
+                </ul>
+                <a href="{{ path('services_devis_form', {'type': 'decennale'}) }}" class="insurance-card__cta">
+                    Demander un devis
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

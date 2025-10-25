@@ -1,0 +1,47 @@
+card_subscription:
+  # Page de souscription
+  subscribe:
+    title: "Suscribirse a una tarjeta bancaria"
+    subtitle: "Complete el formulario para recibir su nueva tarjeta bancaria"
+    
+    # Étapes
+    steps:
+      account: "Paso 1: Seleccione su cuenta"
+      brand: "Paso 2: Elija la marca"
+      service_level: "Paso 3: Elija el nivel de servicios"
+    
+    # Marques
+    brands:
+      visa:
+        title: "VISA"
+        description: "Aceptada en todo el mundo"
+      mastercard:
+        title: "MASTERCARD"
+        description: "Red internacional premium"
+    
+    # Types de cartes
+    card_types:
+      classic:
+        title: "CLASSIC"
+        features:
+          - "Pagos sin contacto"
+          - "Retiradas gratuitas"
+          - "Seguro de compra básico"
+        price: "Gratuita"
+      gold:
+        title: "GOLD"
+        features:
+          - "Todas las ventajas Classic"
+          - "Seguro de viaje"
+          - "Cashback 1%"
+          - "Asistencia 24h/24"
+        price: "5€/mes"
+      platinum:
+        title: "PLATINUM"
+        features:
+          - "Todas las ventajas Gold"
+          - "Conciergerie privada"
+          - "Cashback 2%"
+          - "Seguro premium"
+          - "Salas de aeropuerto"
+        price: "15€/mes"

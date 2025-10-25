@@ -1,0 +1,91 @@
+profile_index:
+  page:
+    title: "Mijn Profiel - %company_name%"
+  
+  header:
+    default_user: "Gebruiker"
+    default_surname: "Onbekend" 
+    default_first_letter: "G"
+    default_surname_letter: "O"
+    account_verified: "Account geverifieerd"
+    edit_profile: "Profiel bewerken"
+    security: "Beveiliging"
+    alt_profile_picture: "Profielfoto"
+  
+  kyc:
+    alerts:
+      not_submitted:
+        title: "Identiteitsverificatie vereist"
+        text: "Om toegang te krijgen tot al onze bankdiensten, moet u uw identiteitsverificatie (KYC) voltooien."
+        action: "Verificatie starten"
+      pending:
+        title: "Verificatie in behandeling"
+        text: "Uw identiteitsverificatieverzoek wordt momenteel beoordeeld. U wordt per e-mail op de hoogte gesteld zodra het is verwerkt."
+        action: "Status bekijken"
+      rejected:
+        title: "Verificatie afgewezen"
+        text: "Uw identiteitsverificatieverzoek is afgewezen. Bekijk de opmerkingen en dien nieuwe documenten in."
+        action: "Verificatie starten"
+  
+  sections:
+    personal_info:
+      title: Persoonlijke informatie
+      edit: Bewerken
+      fields:
+        first_name: Voornaam
+        last_name: Achternaam
+        email: Email
+        phone: Telefoon
+        birth_date: Geboortedatum
+        not_provided: Niet verstrekt
+        not_provided_feminine: Niet verstrekt
+    
+    security:
+      title: Beveiliging
+      manage: Beheren
+      fields:
+        password: Wachtwoord
+        configured: Geconfigureerd
+        two_factor: Tweefactorauthenticatie
+        disabled: Uitgeschakeld
+        last_password_change: Laatste wachtwoordwijziging
+        not_provided: Niet verstrekt
+    
+    preferences:
+      title: Voorkeuren
+      edit: Bewerken
+      fields:
+        language: Taal
+        currency: Valuta
+        timezone: Tijdzone
+        timezone_default: Europe/Paris (CET)
+        notifications: Meldingen
+        notifications_default: Email + SMS
+      languages:
+        french: Français
+        english: English
+        german: Deutsch
+        spanish: Español
+        dutch: Nederlands
+      currencies:
+        eur: Euro (EUR)
+        usd: Amerikaanse dollar (USD)
+        gbp: Britse pond (GBP)
+        chf: Zwitserse frank (CHF)
+        cad: Canadese dollar (CAD)
+      
+      values:
+        languages:
+          fr: "Français"
+          en: "English"
+          de: "Deutsch"
+          es: "Español"
+          nl: "Nederlands"
+        currencies:
+          EUR: "Euro (EUR)"
+          USD: "Amerikaanse dollar (USD)"
+          GBP: "Britse pond (GBP)"
+          CHF: "Zwitserse frank (CHF)"
+          CAD: "Canadese dollar (CAD)"
+        default_timezone: "Europa/Parijs (CET)"
+        notifications_value: "E-mail + SMS"

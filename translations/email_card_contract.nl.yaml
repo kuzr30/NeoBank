@@ -1,0 +1,49 @@
+email_card_contract:
+  title: "Kaartabonnement contract te ondertekenen"
+  
+  content:
+    page_title: "Uw kaartcontract is klaar voor ondertekening"
+    greeting: "Beste %firstName% %lastName%,"
+    
+    approval:
+      title: "Aanvraag goedgekeurd!"
+      description: "Uitstekend nieuws! Uw kaartaanvraag is goedgekeurd door ons administratief team."
+    
+    card_details:
+      title: "Details van uw kaart"
+      type: "Kaarttype"
+      reference: "Referentie"
+      request_date: "Aanvraagdatum"
+    
+    fees:
+      title: "Kosten en limieten"
+      activation: "Activeringskosten"
+      monthly: "Maandelijkse kosten"
+      daily_limit: "Dagelijkse limiet"
+      monthly_limit: "Maandelijkse limiet"
+      day: "dag"
+      month: "maand"
+    
+    signature_required:
+      title: "Elektronische handtekening vereist"
+      description: "U moet dit contract elektronisch ondertekenen om uw acceptatie van de kosten en voorwaarden te bevestigen. Uw kaart wordt alleen na ondertekening aangemaakt."
+    
+    next_steps:
+      title: "Volgende stappen"
+      step1: "Klik op de knop hieronder om toegang te krijgen tot het contract"
+      step2: "Lees de algemene voorwaarden zorgvuldig"
+      step3: "Onderteken elektronisch als u de kosten accepteert"
+      step4: "Uw kaart wordt aangemaakt en verzonden binnen 3-5 werkdagen"
+    
+    action:
+      title: "Vereiste actie"
+      sign_button: "Contract nu ondertekenen"
+    
+    contract_info:
+      title: "Contractinformatie"
+      reference: "Contractreferentie"
+      expires: "Verloopt op"
+    
+    assistance: "Voor vragen betreffende dit contract blijft onze klantenservice ter beschikking."
+    
+    footer: "Deze e-mail werd automatisch verzonden door uw bank. <br><strong>Bewaar deze contractreferentie voor uw dossiers.</strong>"

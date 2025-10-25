@@ -1,0 +1,54 @@
+# Deutsche Übersetzungen für das Banking-Versicherungsmodul
+banking_insurance:
+  header:
+    title: "Meine Versicherungen"
+    subtitle: "Verwaltung Ihrer Versicherungsverträge"
+    last_update: "Letzte Aktualisierung"
+    new_quote: "Angebot anfordern"
+
+  statistics:
+    active_contracts: "Aktive Verträge"
+    monthly_premium: "Gesamte monatliche Prämie"
+    insurance_types: "Versicherungsarten"
+    expiring_contracts: "Auslaufende Verträge"
+
+  contracts:
+    title: "Meine Versicherungsverträge"
+    contract_number: "Vertrag Nr."
+    active_status: "Aktiv"
+    suspended_status: "Ausgesetzt"
+    expired_status: "Abgelaufen"
+    cancelled_status: "Gekündigt"
+
+  coverage:
+    monthly_premium: "Monatliche Prämie"
+    coverage_amount: "Deckungssumme"
+
+  details:
+    activation_date: "Aktivierungsdatum"
+    expiration_date: "Ablaufdatum"
+    duration: "Laufzeit"
+    months: "Monate"
+    next_premium: "Nächste Fälligkeit"
+
+  actions:
+    manage: "Verwalten"
+    certificate: "Bescheinigung"
+    reactivate: "Reaktivieren"
+    details: "Details"
+
+  empty_state:
+    no_contracts_title: "Keine Versicherungsverträge"
+    no_contracts_description: "Sie haben derzeit keine aktiven Versicherungsverträge. Entdecken Sie unsere personalisierten Angebote zum Schutz dessen, was Ihnen am wichtigsten ist."
+    request_quote: "Angebot anfordern"
+    learn_more: "Mehr erfahren"
+
+  pending_quotes:
+    title: "Ausstehende Angebote"
+    subtitle: "Ihre Angebotsanfragen in Bearbeitung"
+    quote_number: "Angebots-Nr."
+    type: "Typ"
+    date: "Datum"
+    status: "Status"
+    actions: "Aktionen"
+    view: "Anzeigen"

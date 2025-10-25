@@ -1,0 +1,57 @@
+cookies:
+  page_title: "Politique des Cookies"
+  page_description: "Informations sur l'utilisation des cookies sur notre site"
+
+  what_are_cookies:
+    title: "Qu'est-ce qu'un cookie ?"
+    content: |
+      Un cookie est un petit fichier texte stocké sur votre ordinateur, tablette ou smartphone
+      lorsque vous visitez notre site web. Les cookies nous permettent d'améliorer votre expérience
+      de navigation et de vous proposer des services personnalisés.
+
+  types_of_cookies:
+    title: "Types de cookies utilisés"
+    essential:
+      title: "Cookies essentiels"
+      content: |
+        Ces cookies sont nécessaires au fonctionnement du site et ne peuvent pas être désactivés.
+        Ils permettent de mémoriser vos préférences de connexion et d'assurer la sécurité de vos transactions.
+    
+    performance:
+      title: "Cookies de performance"
+      content: |
+        Ces cookies nous aident à comprendre comment les visiteurs utilisent notre site
+        en collectant des informations anonymes sur les pages visitées et les erreurs rencontrées.
+    
+    functionality:
+      title: "Cookies de fonctionnalité"
+      content: |
+        Ces cookies permettent au site de retenir vos choix (langue, région, nom d'utilisateur)
+        et de vous proposer des fonctionnalités améliorées et personnalisées.
+
+  manage_cookies:
+    title: "Gestion des cookies"
+    content: |
+      Vous pouvez contrôler et gérer les cookies de plusieurs façons :
+      <ul>
+        <li><strong>Paramètres du navigateur :</strong> configurez votre navigateur pour accepter, refuser ou supprimer les cookies</li>
+        <li><strong>Outils en ligne :</strong> utilisez des extensions de navigateur pour bloquer les cookies</li>
+        <li><strong>Préférences du site :</strong> modifiez vos préférences de cookies depuis votre compte</li>
+      </ul>
+      <em>Attention :</em> La désactivation de certains cookies peut affecter le fonctionnement du site.
+
+  third_party:
+    title: "Cookies tiers"
+    content: |
+      Nous utilisons également des cookies de partenaires tiers pour :
+      <ul>
+        <li><strong>Google Analytics :</strong> analyse du trafic et du comportement des utilisateurs</li>
+        <li><strong>Réseaux sociaux :</strong> intégration des boutons de partage</li>
+        <li><strong>Publicité :</strong> diffusion de publicités ciblées (avec votre consentement)</li>
+      </ul>
+
+  contact:
+    title: "Contact"
+    content: |
+      Pour toute question concernant notre utilisation des cookies,
+      contactez-nous à l'adresse %email%.

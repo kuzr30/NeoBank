@@ -1,0 +1,22 @@
+login:
+  title: "Inloggen op uw account"
+  subtitle: "Veilig toegang tot uw bankdiensten"
+  email_label: "E-mailadres"
+  email_placeholder: "uw.email@voorbeeld.com"
+  password_label: "Wachtwoord"
+  password_placeholder: "••••••••"
+  remember_me: "Onthoud mij"
+  login_button: "Inloggen"
+  forgot_password: "Wachtwoord vergeten?"
+  create_account: "Account aanmaken"
+  no_account: "Heeft u nog geen account?"
+  security_ssl: "SSL Beveiligd"
+  security_data: "Gegevens beschermd"
+  security_support: "Ondersteuning 24/7"
+  back_home: "Terug naar home"
+  invalid_credentials: "E-mail of wachtwoord onjuist"
+
+errors:
+  email_required: "E-mail is verplicht"
+  email_invalid: "E-mail is niet geldig"
+  password_required: "Wachtwoord is verplicht"

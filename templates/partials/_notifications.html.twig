@@ -1,0 +1,332 @@
+{# Container fixe pour les notifications en haut à droite #}
+<div id="notifications-container" class="notifications-container" data-controller="notification"></div>
+
+{# Notifications d'erreur globales (seulement si form existe) #}
+{% if form is defined and form.vars.errors|length > 0 %}
+  <div class="notification-data" 
+       data-type="error" 
+       data-title="Erreur dans le formulaire"
+       data-timeout="0"
+       style="display: none;">
+    <ul>
+      {% for error in form.vars.errors %}
+        <li>{{ error.message }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+
+{# Notifications flash (success, info, warning, error) #}
+{% for label, messages in app.flashes %}
+  {% for message in messages %}
+    <div class="notification-data" 
+         data-type="{{ label }}" 
+         data-message="{{ message }}"
+         {% if label == 'error' %}data-timeout="0"{% else %}data-timeout="5000"{% endif %}
+         style="display: none;">
+    </div>
+  {% endfor %}
+{% endfor %}
+
+<style>
+/* Container des notifications fixe en haut à droite */
+.notifications-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  pointer-events: none;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Notification individuelle */
+.notification {
+  display: flex;
+  align-items: flex-start;
+  background: var(--color-surface);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 12px;
+  padding: 16px 20px;
+  pointer-events: auto;
+  position: relative;
+  overflow: hidden;
+  min-height: 64px;
+  border-left: 4px solid;
+  font-family: var(--font-family-base);
+  font-size: 14px;
+  line-height: 1.4;
+  transform: translateX(400px);
+  opacity: 0;
+  animation: slideInRight 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Barre de progression */
+.notification::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: currentColor;
+  opacity: 0.3;
+  border-radius: 0 0 12px 0;
+  animation-fill-mode: forwards;
+}
+
+.notification--with-progress::before {
+  animation: progressBar var(--progress-duration, 5000ms) linear forwards;
+}
+
+/* Types de notifications avec couleurs modernes */
+.notification--success {
+  border-left-color: var(--color-success);
+  color: var(--color-success-dark);
+}
+
+.notification--success .notification__icon {
+  color: var(--color-success);
+}
+
+.notification--success::before {
+  background: var(--color-success);
+}
+
+.notification--error {
+  border-left-color: var(--color-error);
+  color: var(--color-error-dark);
+}
+
+.notification--error .notification__icon {
+  color: var(--color-error);
+}
+
+.notification--error::before {
+  background: var(--color-error);
+}
+
+.notification--warning {
+  border-left-color: var(--color-warning);
+  color: var(--color-warning-dark);
+}
+
+.notification--warning .notification__icon {
+  color: var(--color-warning);
+}
+
+.notification--warning::before {
+  background: var(--color-warning);
+}
+
+.notification--info {
+  border-left-color: var(--color-primary);
+  color: var(--color-primary-dark);
+}
+
+.notification--info .notification__icon {
+  color: var(--color-primary);
+}
+
+.notification--info::before {
+  background: var(--color-primary);
+}
+
+/* Éléments de la notification */
+.notification__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  margin-top: 2px;
+}
+
+.notification__content {
+  flex: 1;
+  color: var(--color-text);
+}
+
+.notification__title {
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  color: inherit;
+}
+
+.notification__message {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.notification__content-extra {
+  margin-top: 8px;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.notification__content-extra ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.notification__content-extra li {
+  margin-bottom: 4px;
+  position: relative;
+  padding-left: 16px;
+}
+
+.notification__content-extra li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: currentColor;
+  font-weight: bold;
+}
+
+.notification__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.notification__list li {
+  margin-bottom: 4px;
+  position: relative;
+  padding-left: 16px;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.notification__list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: currentColor;
+  font-weight: bold;
+}
+
+.notification__list li:last-child {
+  margin-bottom: 0;
+}
+
+.notification__close {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  padding: 4px;
+  margin-left: 12px;
+  margin-top: -2px;
+  cursor: pointer;
+  border-radius: 6px;
+  color: var(--color-text-muted);
+  opacity: 0.7;
+  transition: all 0.2s ease;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification__close:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.notification__close svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Animations */
+@keyframes slideInRight {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  to {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+}
+
+@keyframes progressBar {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.notification--removing {
+  animation: slideOutRight 0.3s ease-in forwards;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .notifications-container {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+  
+  .notification {
+    padding: 14px 16px;
+    font-size: 13px;
+    transform: translateY(-100px);
+    animation: slideInDown 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+  
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .notification--removing {
+    animation: slideOutUp 0.3s ease-in forwards;
+  }
+  
+  @keyframes slideOutUp {
+    to {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+  }
+}
+
+/* Effet hover sur la notification */
+.notification:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+/* État de chargement */
+.notification--loading .notification__icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+</style>
+
+

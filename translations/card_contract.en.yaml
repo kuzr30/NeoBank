@@ -1,0 +1,156 @@
+# ENGLISH TRANSLATION - Translated from French
+# Bank card contract translation file
+# Domain: card_contract
+# Language: English (en)
+
+card_contract:
+  # Document title
+  title: "Bank Card Contract No. %reference%"
+  
+  # Header and meta
+  header:
+    document_lang: "en"
+    watermark: "%company_name%"
+    
+  # Main title
+  main:
+    title: "BANK CARD SUBSCRIPTION CONTRACT"
+    card_subtitle: "CARD %card_type% %card_brand%"
+    
+  # Company info
+  company:
+    payment_institution: "Payment Institution"
+    share_capital: "Share capital: %amount% €"
+    head_office: "Head Office: %address%"
+    siren: "SIREN: %number%"
+    ape_code: "APE Code: %code%"
+    represented_by: "Represented by its Chief Executive Officer"
+    
+  # Contract info
+  contract:
+    number: "CONTRACT No. %reference%"
+    establishment_date: "Establishment date: %date%"
+    signature_date: "Signature date: %date%"
+    
+  # Chapter I - Contracting Parties
+  chapter_one:
+    title: "Chapter I - Contracting Parties"
+    issuing_institution: "The Issuing Institution"
+    cardholder: "The Cardholder"
+    hereinafter_institution: "Hereinafter referred to as 'The Institution'"
+    hereinafter_cardholder: "Hereinafter referred to as 'The Cardholder'"
+    residing_at: "Residing at:"
+    address_not_provided: "[Address not provided]"
+    postal_code_city: "[Postal Code] [City]"
+    born_on: "Born on: %birth_date%"
+    phone: "Phone: %phone%"
+    phone_not_provided: "[Not provided]"
+    email: "Email: %email%"
+    parties_agreed: "The parties hereto have agreed and determined as follows"
+    
+  # Chapter II - Object and Characteristics
+  chapter_two:
+    title: "Chapter II - Object and Characteristics of the Card"
+    article_1_title: "Article 1 - Object of the Contract"
+    article_1_content: "The Institution grants to the Cardholder, who accepts, the provision of a bank card of type %card_type% %card_brand% allowing payment and withdrawal operations according to the conditions defined below."
+    
+    article_2_title: "Article 2 - Technical Characteristics"
+    table_card_type: "Card type"
+    table_brand: "Brand"
+    table_technology: "Technology"
+    table_technology_value: "Chip and contactless"
+    table_validity: "Validity"
+    table_validity_value: "3 years renewable"
+    table_usage_zone: "Usage zone"
+    table_usage_zone_value: "Worldwide"
+    
+  # Chapter III - Financial Conditions
+  chapter_three:
+    title: "Chapter III - Financial Conditions"
+    article_3_title: "Article 3 - Fees and Contributions"
+    table_designation: "Description"
+    table_amount: "Amount"
+    table_frequency: "Frequency"
+    
+    activation_fees: "Activation fees"
+    annual_fees: "Annual contribution"
+    opposition_fees: "Opposition fees"
+    card_renewal: "Card renewal"
+    replacement_fees: "Replacement fees"
+    
+    frequency_unique: "One-time at opening"
+    frequency_annual: "Annual"
+    frequency_per_incident: "Per incident"
+    frequency_at_expiry: "At expiry"
+    frequency_per_replacement: "Per replacement"
+    
+    free: "Free"
+    
+    article_4_title: "Article 4 - Usage Limits"
+    daily_withdrawal_limit: "Daily withdrawal limit"
+    monthly_payment_limit: "Monthly payment limit"
+    contactless_payment: "Contactless payment"
+    contactless_amount: "€50 per transaction"
+    limits_modification_note: "These limits can be modified at the Cardholder's request, subject to acceptance by the Institution."
+    
+  # Chapter IV - Usage Conditions
+  chapter_four:
+    title: "Chapter IV - Usage Conditions"
+    security_code_title: "Security and Confidential Code"
+    security_code_content: "The Cardholder undertakes to keep their confidential code secret and never to write it down or communicate it to anyone. The code must never be kept with the card."
+    
+    authorized_use_title: "Authorized Use"
+    authorized_use_content: "The card is strictly personal and can only be used by the Cardholder. Any use by an unauthorized third party engages the Cardholder's responsibility."
+    
+    card_conservation_title: "Card Conservation"
+    card_conservation_content: "The Cardholder must keep their card with care and protect it against any fraudulent use, theft, loss or deterioration."
+    
+    opposition_title: "Opposition"
+    opposition_content: "In case of loss, theft or fraudulent use, the Cardholder must make an opposition immediately by contacting customer service 24/7 at the number indicated on the back of the card."
+    
+  # Chapter V - Responsibilities
+  chapter_five:
+    title: "Chapter V - Responsibilities and Guarantees"
+    article_5_title: "Article 5 - Cardholder's Responsibility"
+    cardholder_responsibility_1: "The Cardholder is responsible for all operations performed with their card until the date and time of opposition."
+    cardholder_responsibility_2: "In case of fraudulent use before opposition, the Cardholder's responsibility is limited to €50 except in case of gross negligence."
+    cardholder_responsibility_3: "The Cardholder guarantees the accuracy of information provided during subscription."
+    
+    article_6_title: "Article 6 - Institution's Responsibility"
+    institution_responsibility_1: "The Institution undertakes to provide a functional and secure card."
+    institution_responsibility_2: "The Institution guarantees the processing of oppositions 24/7."
+    institution_responsibility_3: "The Institution ensures the availability of its network under the best technical conditions."
+    
+  # Chapter VI - Duration and Termination
+  chapter_six:
+    title: "Chapter VI - Duration and Termination"
+    article_7_title: "Article 7 - Contract Duration"
+    contract_duration: "This contract is concluded for a period of 3 years from the signature date. It is tacitly renewed for periods of one year unless terminated by either party."
+    
+    article_8_title: "Article 8 - Termination"
+    termination_1: "Each party may terminate the contract at any time with 2 months' notice."
+    termination_2: "Termination must be notified by registered letter with acknowledgment of receipt."
+    termination_3: "In case of termination, the card must be returned or destroyed by the Cardholder."
+    termination_4: "Fees already charged are not refundable except for termination within 14 days (right of withdrawal)."
+    
+  # Chapter VII - General Provisions
+  chapter_seven:
+    title: "Chapter VII - General Provisions"
+    article_9_title: "Article 9 - Applicable Law and Jurisdiction"
+    applicable_law: "This contract is subject to French law. In case of dispute, French courts shall have sole jurisdiction."
+    
+    article_10_title: "Article 10 - Contract Modification"
+    contract_modification: "Any modification of this contract must be the subject of an amendment signed by both parties or a notification 2 months before its entry into force."
+    
+    article_11_title: "Article 11 - Data Protection"
+    data_protection: "The Institution undertakes to process the Cardholder's personal data in accordance with the General Data Protection Regulation (GDPR) and the Data Protection and Freedoms Act."
+    
+  # Signatures
+  signatures:
+    cardholder_signature: "The Cardholder"
+    institution_signature: "The Institution"
+    general_director: "Represented by the Chief Executive Officer"
+    date_signature: "Date and signature"
+    date_label: "Date:"
+    signed_electronically: "Electronically signed on %date%"
+    current_date: "Date: %date%"

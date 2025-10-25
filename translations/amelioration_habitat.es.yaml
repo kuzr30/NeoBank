@@ -1,0 +1,106 @@
+amelioration_habitat:
+  page:
+    title: "Crédito Mejora del Hogar"
+    description: "Financie todas sus obras de mejora del hogar con nuestro crédito dedicado. Tipos ventajosos y desembolso progresivo."
+
+  hero:
+    title: "Crédito Mejora del Hogar"
+    subtitle: "Transforme su vivienda según sus deseos"
+    values:
+      taux: "{rate}% TAE*"
+      montant: "120.000€"
+      duree: "20 años"
+
+  section_1:
+    title: "¿Qué es un crédito de mejora del hogar?"
+    content:
+      paragraph_1: "El crédito de mejora del hogar le permite financiar todos sus proyectos de embellecimiento y modernización de su vivienda. Ya sea para renovar, ampliar o mejorar el confort de su casa."
+      paragraph_2: "Esta solución flexible se adapta a todas sus necesidades: desde la simple renovación de una habitación hasta las grandes obras de extensión o adecuación a las normas energéticas."
+
+  features:
+    montant: "De 2.000€ a 120.000€"
+    montant_detail: "Según la magnitud de sus obras"
+    duree: "De 1 año a 20 años"
+    duree_detail: "Duración adaptada a su presupuesto"
+    taux: "A partir del {rate}% TAE*"
+    taux_detail: "Tipo preferencial vivienda"
+    garantie: "Hipoteca o aval"
+    garantie_detail: "Según el importe prestado"
+
+  advantages:
+    taux_avantageux:
+      title: "Tipo ventajoso:"
+      text: "Condiciones preferenciales para la mejora del hogar"
+    usage_specialise:
+      title: "Uso especializado:"
+      text: "Financiación dedicada a obras de mejora"
+    deblocage_progressif:
+      title: "Desembolso progresivo:"
+      text: "Fondos liberados conforme avanzan las obras"
+    accompagnement:
+      title: "Acompañamiento:"
+      text: "Asesoramiento personalizado para sus proyectos"
+    plus_value:
+      title: "Plusvalía:"
+      text: "Valorización de su patrimonio inmobiliario"
+
+  requirements:
+    conditions_emprunteur:
+      title: "Condiciones del prestatario"
+      items:
+        proprietaire: "Ser propietario de la vivienda a mejorar"
+        revenus: "Justificar ingresos estables"
+        endettement: "Tasa de endeudamiento inferior al 35%"
+        incidents: "No estar inscrito en ficheros de incidencias"
+    conditions_projet:
+      title: "Condiciones del proyecto"
+      items:
+        travaux: "Obras en residencia principal o secundaria"
+        devis: "Presupuestos detallados de las empresas"
+        normes: "Respeto de las normas vigentes"
+        professionnels: "Obras realizadas por profesionales"
+
+  documents:
+    dossier_personnel:
+      title: "Expediente personal"
+      items:
+        piece: "Documento de identidad en vigor"
+        domicile: "Justificante de domicilio reciente"
+        bulletins: "3 últimas nóminas"
+        avis: "Declaración de la renta"
+    justificatifs_patrimoniaux:
+      title: "Justificantes patrimoniales"
+      items:
+        titre: "Título de propiedad del inmueble"
+        taxe: "Impuesto sobre bienes inmuebles del año en curso"
+        releves: "Extractos de cuentas bancarias"
+        tableau: "Cuadro de amortización de créditos en curso"
+    documents_travaux:
+      title: "Documentos de obras"
+      items:
+        devis: "Presupuestos detallados de las empresas"
+        permis: "Licencia de obras si es necesario"
+        plans: "Planos y descriptivos de las obras"
+        attestations: "Certificados de seguro de las empresas"
+
+  legal:
+    title: "Información legal importante"
+    taeg:
+      title: "*TAE:"
+      text: "Ejemplo representativo: para un crédito de mejora del hogar de 60.000€ a 15 años con TAE del 3,1%, usted reembolsa 180 mensualidades de 416€, es decir un importe total de 74.880€ (coste del crédito: 14.880€)."
+    deblocage:
+      title: "Desembolso:"
+      text: "Los fondos se desembolsan progresivamente según el avance de las obras previa presentación de las facturas."
+    travaux:
+      title: "Obras:"
+      text: "Obligación de realizar las obras declaradas en un plazo de 2 años."
+    garanties:
+      title: "Garantías:"
+      text: "Hipoteca o aval según el importe y la duración del préstamo."
+    retractation:
+      title: "Plazo de desistimiento:"
+      text: "Dispone de un plazo de 14 días para renunciar a su crédito tras la aceptación de la oferta."
+
+  cta:
+    title: "Transforme su hogar"
+    subtitle: "Financie sus proyectos de mejora con nuestro crédito dedicado"

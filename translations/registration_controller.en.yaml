@@ -1,0 +1,9 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: registration_controller.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+# Traductions pour RegistrationController
+flash:
+  account_created_success: "Your account has been created! Check your email to activate it."
+  account_created_email_failed: "Your account has been created but the activation email could not be sent. Contact support."

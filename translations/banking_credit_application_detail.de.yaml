@@ -1,0 +1,44 @@
+banking_credit_application_detail:
+  header:
+    title: "Details des Kreditantrags"
+    reference: "Antrag Nr. %reference%"
+    amount_label: "Beantragter Betrag"
+  
+  navigation:
+    back_to_credits: "Zurück zu den Krediten"
+  
+  credit_info:
+    title: "Kreditinformationen"
+    type: "Kreditart"
+    loan_amount: "Beantragter Betrag"
+    duration: "Laufzeit"
+    monthly_payment: "Berechnete Monatsrate"
+    total_cost: "Gesamtkosten des Kredits"
+    months: "Monate"
+    years: "Jahre"
+  
+  personal_info:
+    title: "Persönliche Daten"
+    full_name: "Vollständiger Name"
+    email: "E-Mail"
+    phone: "Telefon"
+    birth_date: "Geburtsdatum"
+  
+  financial_situation:
+    title: "Finanzielle Situation"
+    monthly_income: "Monatliches Einkommen"
+    monthly_expenses: "Monatliche Ausgaben"
+    employer: "Arbeitgeber"
+    job_title: "Position"
+  
+  application_tracking:
+    title: "Antragsverfolgung"
+    current_status: "Aktueller Status"
+    application_date: "Antragsdatum"
+    last_update: "Letzte Aktualisierung"
+    notes: "Notizen"
+  
+  actions:
+    view_amortization: "Tilgungsplan anzeigen"
+    view_contract: "Vertrag anzeigen"
+    download_contract: "Vertrag herunterladen"

@@ -1,0 +1,422 @@
+# Startseite - Deutsch
+page_title: "Banking - Ihr Finanzpartner für jeden Lebensabschnitt"
+# Hero Section
+hero:
+  title: "Ihr Finanzpartner"
+  subtitle: "für jeden Lebensabschnitt"
+  description: "Entdecken Sie eine Bank, die sich an Ihre Bedürfnisse anpasst. Von täglichen Transaktionen bis zu großen Projekten - wir begleiten Sie."
+  cards:
+    payments: "Zahlungen"
+    savings: "Sparen"
+    investments: "Anlagen"
+    savings_plus: "Sparen+"
+    premium_card: "Premium-Karte"
+    balance: "Saldo"
+  stats:
+    clients: "Zufriedene Kunden"
+    satisfaction: "Zufriedenheitsnote"
+    support: "Kundensupport"
+# Services Section
+services:
+  badge: "Unsere Banklösungen"
+  title: "Maßgeschneiderte Dienstleistungen"
+  title_accent: "für all Ihre Projekte"
+  subtitle: "Ein komplettes Angebot für alle Ihre finanziellen Bedürfnisse"
+  description: "Entdecken Sie unser vollständiges Sortiment an Bankprodukten und -dienstleistungen, entwickelt um alle Ihre finanziellen Bedürfnisse mit der Sicherheit und Expertise einer zugelassenen Bank zu erfüllen."
+  
+  account:
+    title: "Konten & Karten"
+    description: "Girokonto, Sparbuch, Premium-Bankkarte. Lösungen angepasst an Ihr Profil mit transparenten Gebühren."
+    features:
+      foreign_fees: "Karte ohne Auslandsgebühren"
+      overdraft: "Genehmigter Überziehungskredit bis 1000€"
+      mobile_app: "Intuitive mobile App"
+    cta: "Mehr erfahren"
+    regulatory: "Vorbehaltlich der Annahme Ihres Antrags. Bedingungen in der Filiale einsehen."
+  savings:
+    title: "Sparen & Anlagen"
+    description: "Lassen Sie Ihr Geld mit unseren sicheren und leistungsstarken Spar- und Anlagelösungen wachsen."
+    badge: "Am beliebtesten"
+    features:
+      savings_accounts: "Sparbuch A, LDDS, PEL"
+      life_insurance: "Lebensversicherung bis zu 3,2% netto"
+      pea: "PEA mit reduzierten Gebühren"
+    cta: "Mein Sparen simulieren"
+    regulatory: "Vergangene Leistungen sind kein Indikator für zukünftige Leistungen. Kapital nicht garantiert."
+  credit:
+    title: "Kredite & Darlehen"
+    description: "Verwirklichen Sie Ihre Projekte mit unseren vorteilhaften Finanzierungslösungen: Immobilien, Auto, Arbeiten, privat."
+    features:
+      mortgage: "Immobilienkredit ab 1,2% effektiver Jahreszins"
+      auto_loan: "Autokredit bis zu 75.000€"
+      quick_response: "Antwort binnen 48h"
+    cta: "Simulation durchführen"
+    regulatory: "Ein Kredit ist eine Verpflichtung und muss zurückgezahlt werden. Prüfen Sie Ihre Rückzahlungsfähigkeit vor einer Verpflichtung."
+  insurance:
+    title: "Versicherungen"
+    description: "Schützen Sie was Ihnen am wichtigsten ist mit unseren Wohngebäude-, Auto-, Gesundheits- und Vorsorgeversicherungen."
+    features:
+      home_insurance: "Wohngebäudeversicherung ab 8€/Monat"
+      auto_bonus: "Auto: Schadenfreiheitsklasse erhalten"
+      assistance: "24h/24 Assistance inklusive"
+    cta: "Angebot erhalten"
+    regulatory: "ORIAS Nr. 12 345 678. Siehe allgemeine Bedingungen. Richttarife."
+  professional:
+    title: "Professionelle Dienstleistungen"
+    description: "Banklösungen für Unternehmer, Freiberufler und Unternehmen. Persönliche Begleitung für Ihre Tätigkeit."
+    features:
+      business_account: "Geschäftskonto ohne Kontoführungsgebühren"
+      payment_terminal: "Zahlungsterminal kostenfrei"
+      dedicated_advisor: "Zugewiesener Unternehmensberater"
+    cta: "Pro-Angebot entdecken"
+    regulatory: "Angebot für Fachleute reserviert. Berechtigungskriterien in der Filiale."
+  private:
+    title: "Private Banking"
+    description: "Außergewöhnlicher Service für anspruchsvolle Kunden. Personalisierte Vermögensberatung und Privatverwaltung."
+    badge: "Premium"
+    features:
+      dedicated_advisor: "Zugewiesener Vermögensberater"
+      vip_access: "Zugang zu VIP-Lounges an Flughäfen"
+      concierge: "Premium-Concierge 24h/24"
+    cta: "Termin vereinbaren"
+    regulatory: "Service für Vermögen über 500.000€ reserviert. Besondere Bedingungen."
+compliance:
+  credit_institution: "Von der ACPR zugelassenes Kreditinstitut"
+  bank_control: "Unter Kontrolle der Banque de France - APE-Code 6419Z"
+  insurance_intermediary: "Versicherungsvermittler"
+  orias_registration: "Bei ORIAS unter Nr. 12 345 678 eingetragen - www.orias.fr"
+
+# Credit Section
+credit:
+  badge: "Finanzierungslösungen"
+  title: "Verwirklichen Sie Ihre Projekte mit unseren"
+  title_accent: "Kreditlösungen"
+  description: "Vom Traum des Eigenheims bis zum Autokauf, über Ihre persönlichen Projekte hinweg begleiten wir Sie mit maßgeschneiderten Finanzierungslösungen."
+  features:
+    response_48h: "Antwort binnen 48h"
+    response_48h_desc: "Prüfung Ihres Antrags und grundsätzliche Antwort binnen 48 Arbeitsstunden"
+    attractive_rates: "Attraktive Zinssätze"
+    attractive_rates_desc: "Profitieren Sie von unseren besten, nach Ihrem Profil verhandelten Zinssätzen"
+    expert_support: "Expertenbegleitung"
+    expert_support_desc: "Unsere Fachberater führen Sie durch jeden Schritt"
+  cta:
+    simulate: "Mein Kredit simulieren"
+    contact_advisor: "Mit einem Berater sprechen"
+  types:
+    mortgage:
+      title: "Immobilienkredit"
+      amount: "Von 50.000€ bis 1.500.000€"
+      rate_from: "Effektiver Jahreszins ab"
+      rate: "1,45%"
+      features:
+        - "Kauf Hauptwohnsitz/Zweitwohnsitz"
+        - "Mietinvestition"
+        - "Kreditumschuldung"
+        - "Verbesserungsarbeiten"
+    
+    auto:
+      title: "Autokredit"
+      amount: "Von 3.000€ bis 100.000€"
+      rate_from: "Effektiver Jahreszins ab"
+      rate: "2,9%"
+      features:
+        - "Neu- oder Gebrauchtfahrzeug"
+        - "Motorrad, Wohnmobil"
+        - "100% Finanzierung"
+        - "Versicherung optional"
+    personal:
+      title: "Privatkredit"
+      amount: "Von 1.000€ bis 75.000€"
+      rate_from: "Effektiver Jahreszins ab"
+      rate: "4,5%"
+      features:
+        - "Persönliche Projekte"
+        - "Renovierungsarbeiten"
+        - "Hochzeit, Reise"
+        - "Ohne Verwendungsnachweis"
+    works:
+      title: "Renovierungskredit"
+      amount: "Von 5.000€ bis 75.000€"
+      rate_from: "Effektiver Jahreszins ab"
+      rate: "3,2%"
+      features:
+        - "Energetische Sanierung"
+        - "Erweiterung, Umbau"
+        - "Pool, Garten"
+        - "Öko-Kredit verfügbar"
+  process:
+    title: "Ihr Kredit in 4 einfachen Schritten"
+    steps:
+      simulation:
+        title: "Simulation"
+        description: "Schätzen Sie Ihre Kreditwürdigkeit und Monatsraten online"
+      application:
+        title: "Antrag"
+        description: "Stellen Sie Ihren Antrag mit Hilfe unserer Berater zusammen"
+      study:
+        title: "Prüfung"
+        description: "Unser Komitee prüft Ihren Antrag binnen 48 Arbeitsstunden"
+      disbursement:
+        title: "Auszahlung"
+        description: "Unterzeichnung und schnelle Auszahlung der Mittel"
+  button: "Simulieren"
+  legal:
+    main: "Ein Kredit ist eine Verpflichtung und muss zurückgezahlt werden. Prüfen Sie Ihre Rückzahlungsfähigkeit vor einer Verpflichtung."
+    details:
+      - "Beispiele für effektiven Jahreszins als Richtwert - Gültige Tarifbedingungen zum 01.01.2025"
+      - "Vorbehaltlich der Annahme Ihres Antrags durch unsere Dienste"
+      - "Angebote unterliegen den in der Filiale verfügbaren allgemeinen Bedingungen"
+# Offers Section
+offers:
+  badge: "Unsere exklusiven Angebote"
+  title: "Wählen Sie das Angebot, das zu Ihnen"
+  title_accent: "passt"
+  description: "Banklösungen angepasst an Ihren Lebensstil, mit Vorteilen die darauf ausgelegt sind, Ihren Finanzalltag zu vereinfachen."
+  essential:
+    title: "Banking Essential"
+    subtitle: "Ihre Bank im Alltag"
+    price: "Kostenlos"
+    period: "/ Monat"
+    features:
+      feature1: "Girokonto ohne Gebühren"
+      feature2: "Klassische Bankkarte"
+      feature3: "Vollständige mobile App"
+      feature4: "Unbegrenzte SEPA-Überweisungen"
+      feature5: "Online-Kundendienst"
+    cta: "Konto eröffnen"
+  premium:
+    title: "Banking Premium"
+    subtitle: "Privilegien & Vorteile"
+    price: "9,90€"
+    period: "/ Monat"
+    badge: "BELIEBT"
+    features:
+      feature1: "Alles aus dem Essential-Angebot"
+      feature2: "Premium-Karte mit Versicherungen"
+      feature3: "Genehmigter Überziehungskredit 1500€"
+      feature4: "Zugeteilter Berater"
+      feature5: "Zugang zu VIP-Lounges an Flughäfen"
+    cta: "Auf Premium wechseln"
+  private:
+    title: "Banking Private"
+    subtitle: "Exzellenz & Maßanfertigung"
+    price: "Auf Anfrage"
+    period: ""
+    features:
+      feature1: "Vermögensverwaltung"
+      feature2: "Zugewiesener Privatberater"
+      feature3: "Exklusive Anlageprodukte"
+      feature4: "Concierge-Services 24h/7T"
+      feature5: "Vorzugstarife"
+    cta: "Kontakt aufnehmen"
+  comparison:
+    title: "Detaillierter Vergleich unserer Angebote"
+    table:
+      headers:
+        services: "Dienstleistungen"
+        essential: "Essential"
+        premium: "Premium"
+        private: "Private"
+      rows:
+        account_fees:
+          label: "Kontogebühren"
+          essential: "Kostenlos"
+          premium: "9,90€/Monat"
+          private: "29,90€/Monat"
+        bank_card:
+          label: "Bankkarte"
+          essential: "Visa Classic"
+          premium: "Visa Premier"
+          private: "World Elite"
+        overdraft:
+          label: "Genehmigter Überziehungskredit"
+          essential: "500€"
+          premium: "1.500€"
+          private: "5.000€"
+        savings_rate:
+          label: "Sparzins"
+          essential: "0,5%"
+          premium: "2,5%"
+          private: "3,5%"
+        support:
+          label: "Kundensupport"
+          essential: "Online"
+          premium: "Zugeteilter Berater"
+          private: "Privatverwalter"
+        insurance:
+          label: "Inklusive Versicherungen"
+          essential: "-"
+          premium: "Reise & Kauf"
+          private: "Premium & Familie"
+# Digital Banking Section (Trust)
+digital:
+  badge: "100% Mobile Banking"
+  title: "Verwalten Sie Ihr Geld"
+  title_accent: "wo immer Sie sind"
+  description: "Unsere mobile App stellt alle wesentlichen Bankdienstleistungen in Ihre Tasche. Überweisungen, Abfragen, Sparen: alles wird einfach und sofort."
+  features:
+    contactless_payment: "Kontaktloses Bezahlen"
+    contactless_payment_desc: "Apple Pay, Google Pay und Samsung Pay integriert für Ihre täglichen Einkäufe"
+    instant_transfers: "Sofortüberweisungen"
+    instant_transfers_desc: "Senden Sie Geld in wenigen Sekunden, 24h/24 und 7T/7"
+    smart_analysis: "Intelligente Analyse"
+    smart_analysis_desc: "Verfolgen Sie Ihre Ausgaben nach Kategorien mit detaillierten Grafiken"
+  app_stores:
+    title: "App herunterladen"
+    app_store: "App Store"
+    google_play: "Google Play"
+    available_on: "Verfügbar auf"
+    download_on: "Herunterladen auf"
+  phone:
+    balance: "Verfügbarer Saldo"
+    amount: "2.847,32€"
+    transfer: "Überweisen"
+    top_up: "Aufladen"
+    pay: "Bezahlen"
+  floating_cards:
+    virtual_card: "Virtuelle Karte"
+    real_time_alerts: "Echtzeit-Alerts"
+  transactions:
+    example_1:
+      name: "Bio Supermarkt"
+      date: "Heute"
+      amount: "-42,50€"
+    example_2:
+      name: "Café Central"
+      date: "Gestern"
+      amount: "-4,80€"
+# Engagement Section
+engagement:
+  badge: "Engagement & Verantwortung"
+  title: "Eine Bank, die sich engagiert"
+  title_accent: "für eine nachhaltige Zukunft"
+  description: "Bei %company_name% engagieren wir uns täglich für eine nachhaltigere Welt. Unsere Aktionen für die Umwelt, Solidarität und Innovation stehen im Herzen unserer Werte und unseres Versprechens an zukünftige Generationen."
+  # Environmental Card
+  environment:
+    title: "Umwelt & Ökologie"
+    description: "Wir finanzieren den ökologischen Wandel und unterstützen grüne Projekte zur Bekämpfung des Klimawandels."
+    stats:
+      green_financing: "2,8M€"
+      green_financing_label: "Grüne Finanzierungen"
+      co2_reduction: "-35%"
+      co2_reduction_label: "CO2-Emissionen"
+    actions:
+      action1: "🌱 100% grüne Energie für unsere Büros"
+      action2: "🚗 Elektrischer Fuhrpark für unsere Teams"
+      action3: "📄 Digitalisierung von Dokumenten"
+      action4: "♻️ Recycling und Abfallreduzierung"
+  # Social Card
+  social:
+    title: "Solidarität & Gesellschaft"
+    description: "Wir unterstützen die Sozial- und Solidarwirtschaft und fördern finanzielle Inklusion für alle."
+    stats:
+      ess_companies: "450"
+      ess_companies_label: "Finanzierte ESS-Unternehmen"
+      microcredit_beneficiaries: "15K"
+      microcredit_beneficiaries_label: "Mikrokredit-Begünstigte"
+    actions:
+      action1: "🤝 Unterstützung lokaler Vereine"
+      action2: "💡 Finanzbildung für Jugendliche"
+      action3: "🏠 Programme für erschwinglichen Wohnraum"
+      action4: "🌍 Unterstützung internationaler NGOs"
+  # Innovation Card
+  innovation:
+    title: "Innovation & Technologie"
+    description: "Wir investieren in neue Technologien, um Ihnen bessere Bankdienstleistungen und eine verbesserte Kundenerfahrung zu bieten."
+    stats:
+      accessibility_satisfaction: "98%"
+      accessibility_satisfaction_label: "Barrierefreiheits-Zufriedenheit"
+      digital_investment: "12M€"
+      digital_investment_label: "Digitale Investition"
+    actions:
+      action1: "📱 Innovative mobile App"
+      action2: "🔒 Verstärkte Sicherheit und Cybersicherheit"
+      action3: "🤖 Künstliche Intelligenz für Beratung"
+      action4: "♿ Barrierefreie Services für Menschen mit Behinderungen"
+  # Partnerships Section
+  partnerships:
+    title: "Unsere Partnerschaften für Impact"
+    partners:
+      wwf:
+        name: "WWF Deutschland"
+        description: "Schutz der Biodiversität"
+      unicef:
+        name: "UNICEF"
+        description: "Bildung und Kinderschutz"
+      habitat_humanisme:
+        name: "Habitat & Humanismus"
+        description: "Sozialer Wohnungsbau und Integration"
+      france_active:
+        name: "France Active"
+        description: "Solidarische Finanzierung und Unternehmertum"
+  # International Banks Section
+  international_banks:
+    title: "Unsere internationalen Partner"
+    subtitle: "Vertrauen von führenden Weltbanken"
+  # CTA Section
+  cta:
+    title: "Schließen Sie sich unserem verantwortlichen Ansatz an"
+    description: "Entdecken Sie, wie %company_name% Sie bei Ihren nachhaltigen Projekten begleitet"
+    buttons:
+      csr_report: "CSR-Bericht 2024"
+      green_products: "Grüne Produkte"
+# Simulation Section (CTA)
+simulation:
+  badge: "Online-Simulation"
+  title: "Verwirklichen Sie Ihr Projekt"
+  title_accent: "in wenigen Klicks"
+  description: "Schätzen Sie Ihre Kreditwürdigkeit, simulieren Sie Ihre Monatsraten oder berechnen Sie Ihre Anlagen. Unsere Tools führen Sie durch alle Ihre Finanzprojekte."
+  # Mortgage Card
+  mortgage:
+    title: "Immobilienkredit"
+    description: "Simulieren Sie Ihren Immobilienkredit und entdecken Sie Ihre Kreditwürdigkeit"
+    features:
+      personalized_rate: "Personalisierter Zinssatz"
+      immediate_response: "Sofortige Antwort"
+      no_commitment: "Ohne Verpflichtung"
+    button: "Mein Kredit simulieren"
+  # Consumer Credit Card
+  consumer:
+    title: "Verbraucherkredit"
+    description: "Finanzieren Sie Ihre persönlichen Projekte mit vorteilhaften Bedingungen"
+    features:
+      amount_range: "Von 1.000€ bis 75.000€"
+      flexible_repayment: "Flexible Rückzahlung"
+      quick_disbursement: "Schnelle Auszahlung"
+    button: "Meine Monatsraten berechnen"
+  # Savings Card
+  savings:
+    title: "Sparen & Anlagen"
+    description: "Optimieren Sie Ihre Anlagen entsprechend Ihrem Profil und Ihren Zielen"
+    features:
+      personalized_advice: "Personalisierte Beratung"
+      automatic_diversification: "Automatische Diversifikation"
+      optimized_taxation: "Optimierte Besteuerung"
+    button: "Mein Sparen optimieren"
+  # Bottom CTA
+  cta:
+    title: "Benötigen Sie eine persönliche Begleitung?"
+    description: "Unsere Berater sind da, um Sie bei Ihren wichtigsten Projekten zu führen"
+    buttons:
+      appointment: "Termin vereinbaren"
+      chat: "Online-Chat"
+    contact_info:
+      customer_service:
+        title: "Kundendienst"
+        phone: "09 69 39 30 00 (kostenloser Anruf)"
+      hours:
+        title: "Öffnungszeiten"
+        schedule: "Mo-Fr 8h-20h, Sa 9h-17h"
+  # Legal Disclaimer
+  legal:
+    title: "Wichtige Hinweise:"
+    disclaimer: "Die dargestellten Simulationen sind nur als Richtwerte angegeben und haben keinen Vertragswert. Sie basieren auf den zum Zeitpunkt der Simulation gültigen Tarifen. Die Kreditgenehmigung unterliegt der Prüfung Ihres Antrags durch die Bank."
+    mortgage_credit:
+      title: "Immobilienkredit:"
+      details: "Effektiver Jahreszins ab 1,45% über 20 Jahre. Kreditkosten: 1 000 000€ für einen Kredit von 250.000€. Gesamtkreditkosten: 322.500€."
+    consumer_credit:
+      title: "Verbraucherkredit:"
+      details: "Fester effektiver Jahreszins von 1,9% bis 2,9% je nach Profil. Ein Kredit ist eine Verpflichtung und muss zurückgezahlt werden. Prüfen Sie Ihre Rückzahlungsfähigkeit vor einer Verpflichtung."
+    investments:
+      title: "Anlagen:"
+      details: "Vergangene Leistungen sind kein Indikator für zukünftige Leistungen. Anlagen können ein Risiko von Kapitalverlusten darstellen."

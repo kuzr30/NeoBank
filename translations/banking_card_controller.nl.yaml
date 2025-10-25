@@ -1,0 +1,3 @@
+banking_card_controller:
+  flash:
+    kyc_required: "U moet uw identiteitsverificatie voltooien om toegang te krijgen tot bankkaartdiensten."

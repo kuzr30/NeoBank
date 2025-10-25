@@ -1,0 +1,31 @@
+email_transfer_attention:
+  title: "Ihre Überweisung erfordert Ihre Aufmerksamkeit"
+  
+  content:
+    page_title: "Aktion erforderlich für Ihre Überweisung"
+    greeting: "Liebe(r) %firstName% %lastName%,"
+    
+    attention_required:
+      title: "Aufmerksamkeit erforderlich"
+      description: "Ihr Überweisungsauftrag (Ref. %transferReference%) benötigt eine zusätzliche Sicherheitsvalidierung Ihrerseits, um bearbeitet zu werden."
+    
+    transfer_details:
+      title: "Details Ihres Überweisungsauftrags"
+      amount: "Betrag"
+      beneficiary: "Begünstigter"
+      iban: "IBAN"
+      reference: "Referenz"
+    
+    next_step:
+      title: "Nächster Schritt"
+      description: "Bitte melden Sie sich in Ihrem sicheren Banking-Bereich an, um die Authentifizierung dieser Operation abzuschließen."
+      login_button: "Zu meinem Konto"
+      instruction: "Klicken Sie auf die Schaltfläche oben, um sich sicher anzumelden"
+    
+    security_notice:
+      title: "Sicherheitshinweis"
+      description: "Dieser zusätzliche Sicherheitsschritt wird eingerichtet, um Ihre Gelder zu schützen und sicherzustellen, dass Sie der Urheber dieser Bankoperation sind."
+    
+    assistance: "Bei Fragen zu dieser Operation steht Ihnen unser Kundendienst über Ihren sicheren Kundenbereich zur Verfügung."
+    
+    footer: "Diese E-Mail wurde automatisch von Ihrer Bank gesendet. <br><strong>Teilen Sie niemals Ihre Sicherheitscodes per E-Mail oder Telefon mit.</strong>"

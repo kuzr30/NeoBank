@@ -1,0 +1,41 @@
+email_transfer_code_added:
+  title: "Nuevo código de validación"
+  
+  content:
+    page_title: "Código de validación generado"
+    greeting: "Hola {firstName},"
+    
+    new_code_section:
+      title: "Nuevo código disponible"
+      description: "Se ha añadido un nuevo código de validación para su transferencia #{transferId}. Este código forma parte del proceso de seguridad de su transacción."
+    
+    transfer_summary:
+      title: "Resumen de su transferencia"
+      amount_destination: "{amount} € hacia {destination}"
+    
+    validation_code:
+      code_name: "{codeName}"
+      code_number: "Código {codeOrder}"
+      created_date: "Creado el {createdAt}"
+    
+    validation_rules:
+      title: "Reglas de validación importantes"
+      attempts_limit: "Intentos limitados"
+      attempts_description: "Tiene máximo 3 intentos para ingresar el código correcto"
+      expiration: "Plazo de expiración"
+      expiration_description: "El código expirará 6 horas después de su primera validación"
+      security: "Seguridad reforzada"
+      security_description: "En caso de error repetido, su cuenta será temporalmente bloqueada"
+    
+    action_required:
+      title: "Acción requerida"
+      validate_button: "Validar el código ahora"
+      instruction: "Ingrese este código en su espacio bancario seguro"
+    
+    security_warning: "Si usted no es el origen de esta solicitud, contacte inmediatamente a nuestro servicio al cliente."
+    
+    footer: "<strong>%company_name% - Servicio de Seguridad</strong><br>Notificación automática de código de validación"
+  
+  log:
+    code_added: "Código de validación añadido para la transferencia {transferId}"
+    email_sent: "Correo electrónico de código de validación enviado a {userEmail}"

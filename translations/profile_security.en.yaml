@@ -1,0 +1,51 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: profile_security.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+profile_security:
+  page:
+    title: "Security - %company_name%"
+  
+  header:
+    title: "Account security"
+  
+  sections:
+    password:
+      title: "Password"
+      configured: "Configured"
+      current: "Current password"
+      never_changed: "Password never changed"
+      edit: "Edit"
+      time_units:
+        minutes: "minute(s)"
+        hours: "hour(s)"
+        days: "day(s)"
+        last_modified: "Last modified"
+        ago: "ago"
+        on: "on"
+    
+    two_factor:
+      title: "Two-factor authentication"
+      disabled: "Disabled"
+      app:
+        title: "Authenticator app"
+        desc: "Use an app like Google Authenticator"
+        configure: "Configure"
+      sms:
+        title: "SMS verification"
+        desc: "Receive codes by SMS"
+        add: "Add"
+    
+    activity:
+      title: "Recent security activity"
+      today: "Today at"
+      yesterday: "Yesterday at"
+      none_title: "No recent security activity"
+      none_desc: "Your account is secure"
+      activities:
+        login_success: "Successful login"
+        login_failed: "Failed login attempt"
+        password_changed: "Password changed"
+        profile_updated: "Profile updated"
+        account_locked: "Account locked"

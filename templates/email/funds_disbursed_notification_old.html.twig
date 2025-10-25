@@ -1,0 +1,130 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_funds_disbursed.title', {}, 'email_funds_disbursed') }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('email_funds_disbursed.content.page_title', {}, 'email_funds_disbursed') }}</h2>
+    
+    <p class="content-text">
+        {{ tp('email_funds_disbursed.content.greeting', {customerName: customerName}, 'email_funds_disbursed')|raw }}
+    </p>
+
+    <div class="success-box">
+        <h3 class="box-title">{{ tp('email_funds_disbursed.content.disbursement_section.title', {}, 'email_funds_disbursed') }}</h3>
+        <p class="box-text">
+            {{ tp('email_funds_disbursed.content.disbursement_section.message', {contractNumber: contractNumber, loanAmount: loanAmount|number_format(2, ',', ' ')}, 'email_funds_disbursed')|raw }}
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3 class="box-title">{{ tp('email_funds_disbursed.content.transaction_details.title', {}, 'email_funds_disbursed') }}</h3>
+        <p class="box-text">
+            <strong>{{ tp('email_funds_disbursed.content.transaction_details.contract', {}, 'email_funds_disbursed') }}:</strong> {{ contractNumber }}
+        </p>
+        <p class="box-text">
+            <strong>{{ tp('email_funds_disbursed.content.transaction_details.amount', {}, 'email_funds_disbursed') }}:</strong> {{ loanAmount|number_format(2, ',', ' ') }} EUR
+        </p>
+        {% if totalFees %}
+        <p class="box-text">
+            <strong>{{ tp('email_funds_disbursed.content.transaction_details.fees', {}, 'email_funds_disbursed') }}:</strong> {{ totalFees|number_format(2, ',', ' ') }} EUR
+        </p>
+        <p class="box-text">
+            <strong>{{ tp('email_funds_disbursed.content.transaction_details.net_amount', {}, 'email_funds_disbursed') }}:</strong> {{ (loanAmount - totalFees)|number_format(2, ',', ' ') }} EUR
+        </p>
+        {% endif %}
+    </div>
+
+    <div class="warning-box">
+        <h3 class="box-title">{{ tp('email_funds_disbursed.content.important_info.title', {}, 'email_funds_disbursed') }}</h3>
+        <p class="box-text">
+            {{ tp('email_funds_disbursed.content.important_info.message', {}, 'email_funds_disbursed')|raw }}
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3 class="box-title">{{ tp('email_funds_disbursed.content.repayment_info.title', {}, 'email_funds_disbursed') }}</h3>
+        <p class="box-text">
+            {{ tp('email_funds_disbursed.content.repayment_info.message', {}, 'email_funds_disbursed')|raw }}
+        </p>
+    </div>
+
+    <div class="btn-container" style="text-align:center;margin:50px 0;">
+        <a href="{{ url('home_index', {'_locale': locale}) }}" class="btn" style="display:inline-block;margin:0;padding:22px 45px;background:#2c3e50;color:#ffffff!important;font-size:20px;font-weight:700;line-height:1;text-decoration:none;text-align:center;border-radius:50px;border:none;cursor:pointer;box-shadow:0 15px 35px rgba(44,62,80,0.4);text-transform:uppercase;letter-spacing:1px;transition:all 0.3s ease;">{{ tp('email_funds_disbursed.content.access_account', {}, 'email_funds_disbursed') }}</a>
+    </div>
+
+    <p class="content-text">
+        {{ tp('email_funds_disbursed.content.thanks_message', {}, 'email_funds_disbursed') }}
+    </p>
+
+    <p class="footer-text">
+        {{ tp('email_funds_disbursed.content.footer', {}, 'email_funds_disbursed')|raw }}
+    </p>
+{% endblock %}
+            color: white !important;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎉 {{ 'email_funds_disbursed.header'|trans({}, 'email_funds_disbursed', locale) }}</h1>
+    </div>
+    
+    <div class="content">
+        <h2>{{ 'email_funds_disbursed.greeting'|trans({'%customerName%': customerName}, 'email_funds_disbursed', locale) }}</h2>
+        
+        <div class="highlight">
+            <p><strong>{{ 'email_funds_disbursed.great_news'|trans({}, 'email_funds_disbursed', locale) }}</strong></p>
+            <p>{{ 'email_funds_disbursed.disbursement_message'|trans({'%contractNumber%': contractNumber}, 'email_funds_disbursed', locale) }}</p>
+        </div>
+
+        <div class="amount-box">
+            <p>{{ 'email_funds_disbursed.amount_label'|trans({}, 'email_funds_disbursed', locale) }}</p>
+            <div class="amount">{{ loanAmount|number_format(2, ',', ' ') }} €</div>
+            {% if totalFees > 0 %}
+                <p><small>{{ 'email_funds_disbursed.fees_info'|trans({'%fees%': totalFees|number_format(2, ',', ' ')}, 'email_funds_disbursed', locale) }}</small></p>
+            {% endif %}
+        </div>
+
+        <h3>{{ 'email_funds_disbursed.important_info_title'|trans({}, 'email_funds_disbursed', locale) }}</h3>
+        <ul>
+            <li>{{ 'email_funds_disbursed.info_1'|trans({}, 'email_funds_disbursed', locale) }}</li>
+            <li>{{ 'email_funds_disbursed.info_2'|trans({}, 'email_funds_disbursed', locale) }}</li>
+            <li>{{ 'email_funds_disbursed.info_3'|trans({}, 'email_funds_disbursed', locale) }}</li>
+        </ul>
+
+        <div class="warning">
+            <p><strong>⚠️ {{ 'email_funds_disbursed.reminder_title'|trans({}, 'email_funds_disbursed', locale) }}</strong></p>
+            <p>{{ 'email_funds_disbursed.payment_reminder'|trans({}, 'email_funds_disbursed', locale) }}</p>
+        </div>
+
+        <p>{{ 'email_funds_disbursed.contact_info'|trans({}, 'email_funds_disbursed', locale) }}</p>
+
+        <p>{{ 'email_funds_disbursed.thank_you'|trans({}, 'email_funds_disbursed', locale) }}</p>
+        
+        <p><strong>{{ 'email_funds_disbursed.signature'|trans({}, 'email_funds_disbursed', locale) }}</strong></p>
+    </div>
+    
+    <div class="footer">
+        <p>{{ 'email_funds_disbursed.footer'|trans({'%contractNumber%': contractNumber}, 'email_funds_disbursed', locale) }}</p>
+        <p>{{ 'email_funds_disbursed.no_reply'|trans({}, 'email_funds_disbursed', locale) }}</p>
+    </div>
+</body>
+</html>

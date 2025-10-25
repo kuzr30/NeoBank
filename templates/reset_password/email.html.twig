@@ -1,0 +1,61 @@
+{% extends 'email/base_email.html.twig' %}
+{% block title %}{{ 'email.subject'|trans({}, 'reset_password') }}{% endblock %}
+
+{% block content %}
+    <h2 style="color: #1f2937; font-size: 24px; font-weight: 600; margin: 0 0 24px 0; text-align: center;">
+        {{ 'email.subject'|trans({}, 'reset_password') }}
+    </h2>
+
+    <p style="color: #374151; font-size: 16px; line-height: 1.6; margin: 0 0 24px 0;">
+        {{ 'email.greeting'|trans({}, 'reset_password') }}
+    </p>
+
+    <p style="color: #374151; font-size: 16px; line-height: 1.6; margin: 0 0 32px 0;">
+        {{ 'email.message'|trans({}, 'reset_password')|raw }}
+    </p>
+
+    <!-- Bouton de réinitialisation -->
+    <div style="text-align: center; margin: 40px 0;">
+        <a href="{{ url('app_reset_password', {token: resetToken.token}) }}" 
+           style="display: inline-block; background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); color: white; text-decoration: none; padding: 16px 32px; border-radius: 12px; font-weight: 600; font-size: 16px; box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);">
+            {{ 'email.button_text'|trans({}, 'reset_password') }}
+        </a>
+    </div>
+
+    <!-- Informations sur l'expiration -->
+    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 1px solid #f59e0b; border-radius: 12px; padding: 20px; margin: 32px 0;">
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="background: #f59e0b; border-radius: 8px; padding: 8px; flex-shrink: 0;">
+                <span style="color: white; font-size: 16px;">⏰</span>
+            </div>
+            <div>
+                <h4 style="color: #92400e; font-size: 16px; font-weight: 600; margin: 0 0 8px 0;">
+                    Important
+                </h4>
+                <p style="color: #92400e; font-size: 14px; line-height: 1.5; margin: 0;">
+                    {{ 'email.expiry_notice'|trans({}, 'reset_password') }}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lien de secours -->
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; margin: 24px 0;">
+        <p style="color: #64748b; font-size: 14px; margin: 0 0 8px 0;">
+            {{ 'email.alternative_text'|trans({}, 'reset_password') }}
+        </p>
+        <p style="color: #64748b; font-size: 12px; word-break: break-all; margin: 0; font-family: monospace;">
+            {{ url('app_reset_password', {token: resetToken.token}) }}
+        </p>
+    </div>
+
+    <!-- Message de non-demande -->
+    <p style="color: #6b7280; font-size: 14px; line-height: 1.5; margin: 32px 0 0 0;">
+        {{ 'email.no_action_notice'|trans({}, 'reset_password') }}
+    </p>
+    
+    <p style="color: #374151; font-size: 16px; margin: 24px 0 0 0;">
+        {{ 'email.signature'|trans({}, 'reset_password') }}<br>
+        <strong>{{ company_name() }}</strong>
+    </p>
+{% endblock %}

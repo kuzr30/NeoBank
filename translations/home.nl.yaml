@@ -1,0 +1,424 @@
+# Page d'accueil - Néerlandais (langue par défaut)
+page_title: "Banking - Uw financiële partner voor elke levensfase"
+
+# Hero Section
+hero:
+  title: "Uw financiële partner"
+  subtitle: "voor elke levensfase"
+  description: "Ontdek bankieren dat zich aanpast aan uw behoeften. Van dagelijkse transacties tot grote projecten, wij staan voor u klaar."
+  cards:
+    payments: "Betalingen"
+    savings: "Sparen"
+    investments: "Beleggen"
+    savings_plus: "Sparen+"
+    premium_card: "Premium Kaart"
+    balance: "Saldo"
+  stats:
+    clients: "Tevreden klanten"
+    satisfaction: "Tevredenheidsscore"
+    support: "Klantenondersteuning"
+# Services Section
+services:
+  badge: "Onze Bankoplossingen"
+  title: "Diensten op maat"
+  title_accent: "voor al uw projecten"
+  subtitle: "Een volledig aanbod voor al uw financiële behoeften"
+  description: "Ontdek ons complete assortiment bankproducten en -diensten, ontworpen om aan al uw financiële behoeften te voldoen met de veiligheid en expertise van een erkende bank."
+  
+  account:
+    title: "Rekeningen & Kaarten"
+    description: "Lopende rekening, spaarrekening, premium bankkaart. Oplossingen aangepast aan uw profiel met transparante kosten."
+    features:
+      foreign_fees: "Kaart zonder kosten in het buitenland"
+      overdraft: "Toegestaan rood saldo tot €1000"
+      mobile_app: "Intuïtieve mobiele app"
+    cta: "Meer informatie"
+    regulatory: "Onder voorbehoud van aanvaarding van uw dossier. Zie voorwaarden in het kantoor."
+  savings:
+    title: "Sparen & Beleggingen"
+    description: "Laat uw geld groeien met onze veilige en performante spaar- en beleggingsoplossingen."
+    badge: "Meest populair"
+    features:
+      savings_accounts: "Spaarrekening A, LDDS, PEL"
+      life_insurance: "Levensverzekering tot 3,2% netto"
+      pea: "PEA met gereduceerde kosten"
+    cta: "Mijn spaargeld simuleren"
+    regulatory: "Resultaten uit het verleden geven geen garantie voor toekomstige resultaten. Kapitaal niet gegarandeerd."
+  credit:
+    title: "Kredieten & Leningen"
+    description: "Realiseer uw projecten met onze voordelige financieringsoplossingen: onroerend goed, auto, werkzaamheden, persoonlijk."
+    features:
+      mortgage: "Hypotheeklening vanaf 1,2% TAEG"
+      auto_loan: "Autokrediet tot €75.000"
+      quick_response: "Antwoord binnen 48 uur"
+    cta: "Een simulatie maken"
+    regulatory: "Een krediet bindt u en moet worden terugbetaald. Controleer uw terugbetalingscapaciteit voordat u zich verbindt."
+  insurance:
+    title: "Verzekeringen"
+    description: "Bescherm wat het belangrijkst voor u is met onze woning-, auto-, gezondheids- en voorzienigsheidsverzekeringen."
+    features:
+      home_insurance: "Woningverzekering vanaf €8/maand"
+      auto_bonus: "Auto: bonus-malus behouden"
+      assistance: "24/7 hulpverlening inbegrepen"
+    cta: "Een offerte krijgen"
+    regulatory: "ORIAS nr. 12 345 678. Zie algemene voorwaarden. Indicatieve tarieven."
+  professional:
+    title: "Professionele Diensten"
+    description: "Bankoplossingen gewijd aan ondernemers, vrije beroepen en bedrijven. Gepersonaliseerde begeleiding voor uw activiteit."
+    features:
+      business_account: "Professionele rekening zonder beheerkosten"
+      payment_terminal: "Betaalterminal aangeboden"
+      dedicated_advisor: "Toegewijde bedrijfsadviseur"
+    cta: "Het Pro-aanbod ontdekken"
+    regulatory: "Aanbod voorbehouden aan professionals. Geschiktheidscriteria in het kantoor."
+  private:
+    title: "Private Banking"
+    description: "Uitzonderlijke service voor een veeleisend cliënteel. Gepersonaliseerd vermogensadvies en persoonlijk vermogensbeheer."
+    badge: "Premium"
+    features:
+      dedicated_advisor: "Toegewijde vermogensadviseur"
+      vip_access: "Toegang tot VIP-lounges op luchthavens"
+      concierge: "24/7 premium conciërge"
+    cta: "Afspraak maken"
+    regulatory: "Service voorbehouden aan vermogens boven €500.000. Bijzondere voorwaarden."
+compliance:
+  credit_institution: "Kredietinstelling erkend door de ACPR"
+  bank_control: "Onderworpen aan controle van de Banque de France - APE-code 6419Z"
+  insurance_intermediary: "Verzekeringstussenpersoon"
+  orias_registration: "Ingeschreven bij ORIAS onder nr. 12 345 678 - www.orias.fr"
+
+# Credit Section
+credit:
+  badge: "Financieringsoplossingen"
+  title: "Realiseer uw projecten met onze"
+  title_accent: "kredietoplossingen"
+  description: "Van de droom van een eigen huis tot de aanschaf van een auto, tot uw persoonlijke projecten, wij begeleiden u met financieringsoplossingen op maat."
+  features:
+    response_48h: "Antwoord binnen 48u"
+    response_48h_desc: "Studie van uw dossier en principe-antwoord binnen 48 werkuren"
+    attractive_rates: "Aantrekkelijke tarieven"
+    attractive_rates_desc: "Profiteer van onze beste tarieven onderhandeld volgens uw profiel"
+    expert_support: "Deskundige begeleiding"
+    expert_support_desc: "Onze gespecialiseerde adviseurs begeleiden u bij elke stap"
+  cta:
+    simulate: "Mijn krediet simuleren"
+    contact_advisor: "Spreken met een adviseur"
+  types:
+    mortgage:
+      title: "Woningkrediet"
+      amount: "Van €50.000 tot €1.500.000"
+      rate_from: "JKP vanaf"
+      rate: "1,45%"
+      features:
+        - "Aankoop hoofd-/tweede woning"
+        - "Investering verhuur"
+        - "Kredietherfinanciering"
+        - "Verbeteringswerken"
+    
+    auto:
+      title: "Autokrediet"
+      amount: "Van €3.000 tot €100.000"
+      rate_from: "JKP vanaf"
+      rate: "2,9%"
+      features:
+        - "Nieuw of gebruikt voertuig"
+        - "Motor, camper"
+        - "100% financiering"
+        - "Optionele verzekering"
+    personal:
+      title: "Persoonlijk Krediet"
+      amount: "Van €1.000 tot €75.000"
+      rate_from: "JKP vanaf"
+      rate: "4,5%"
+      features:
+        - "Persoonlijke projecten"
+        - "Renovatiewerken"
+        - "Huwelijk, reis"
+        - "Zonder bewijs"
+    works:
+      title: "Werkkrediet"
+      amount: "Van €5.000 tot €75.000"
+      rate_from: "JKP vanaf"
+      rate: "3,2%"
+      features:
+        - "Energetische renovatie"
+        - "Uitbreiding, inrichting"
+        - "Zwembad, tuin"
+        - "Eco-lening beschikbaar"
+  process:
+    title: "Uw krediet in 4 eenvoudige stappen"
+    steps:
+      simulation:
+        title: "Simulatie"
+        description: "Schat uw leencapaciteit en maandelijkse afbetalingen online in"
+      application:
+        title: "Dossier"
+        description: "Stel uw dossier samen met hulp van onze adviseurs"
+      study:
+        title: "Studie"
+        description: "Ons comité bestudeert uw aanvraag binnen 48 werkuren"
+      disbursement:
+        title: "Uitbetaling"
+        description: "Ondertekening en snelle uitbetaling van fondsen"
+  button: "Simuleren"
+  legal:
+    main: "Een krediet verplicht u en moet worden terugbetaald. Controleer uw terugbetalingscapaciteit voordat u zich verbindt."
+    details:
+      - "Voorbeelden van JKP ter informatie - Tariefvoorwaarden geldig op 01/01/2025"
+      - "Onder voorbehoud van acceptatie van uw dossier door onze diensten"
+      - "Aanbiedingen onderworpen aan algemene voorwaarden beschikbaar op kantoor"
+# Offers Section
+offers:
+  badge: "Onze exclusieve aanbiedingen"
+  title: "Kies het aanbod dat bij u"
+  title_accent: "past"
+  description: "Bankoplossingen aangepast aan uw levensstijl, met voordelen ontworpen om uw dagelijkse financiën te vereenvoudigen."
+  essential:
+    title: "Banking Essentieel"
+    subtitle: "Uw dagelijkse bank"
+    price: "Gratis"
+    period: "/ maand"
+    features:
+      feature1: "Lopende rekening zonder kosten"
+      feature2: "Klassieke bankkaart"
+      feature3: "Volledige mobiele app"
+      feature4: "Onbeperkte SEPA-overschrijvingen"
+      feature5: "Online klantenservice"
+    cta: "Rekening openen"
+  premium:
+    title: "Banking Premium"
+    subtitle: "Privileges & voordelen"
+    price: "€9,90"
+    period: "/ maand"
+    badge: "POPULAIR"
+    features:
+      feature1: "Alles van het Essentieel aanbod"
+      feature2: "Premium kaart met verzekeringen"
+      feature3: "Toegestaan rood saldo €1500"
+      feature4: "Toegewezen adviseur"
+      feature5: "Toegang tot VIP-lounges luchthavens"
+    cta: "Premium nemen"
+  private:
+    title: "Banking Private"
+    subtitle: "Uitmuntendheid & op maat"
+    price: "Op offerte"
+    period: ""
+    features:
+      feature1: "Vermogensbeheer"
+      feature2: "Toegewezen private adviseur"
+      feature3: "Exclusieve beleggingsproducten"
+      feature4: "Concierge diensten 24u/7d"
+      feature5: "Preferentiële tarieven"
+    cta: "Contact opnemen"
+  comparison:
+    title: "Gedetailleerde vergelijking van onze aanbiedingen"
+    table:
+      headers:
+        services: "Diensten"
+        essential: "Essentieel"
+        premium: "Premium"
+        private: "Private"
+      rows:
+        account_fees:
+          label: "Rekeningkosten"
+          essential: "Gratis"
+          premium: "€9,90/maand"
+          private: "€29,90/maand"
+        bank_card:
+          label: "Bankkaart"
+          essential: "Visa Classic"
+          premium: "Visa Premier"
+          private: "World Elite"
+        overdraft:
+          label: "Toegestaan rood saldo"
+          essential: "€500"
+          premium: "€1.500"
+          private: "€5.000"
+        savings_rate:
+          label: "Spaarrente"
+          essential: "0,5%"
+          premium: "2,5%"
+          private: "3,5%"
+        support:
+          label: "Klantenondersteuning"
+          essential: "Online"
+          premium: "Toegewezen adviseur"
+          private: "Private beheerder"
+        insurance:
+          label: "Inbegrepen verzekeringen"
+          essential: "-"
+          premium: "Reis & Aankoop"
+          private: "Premium & Familie"
+# Digital Banking Section (Trust)
+digital:
+  badge: "100% Mobiel Bankieren"
+  title: "Beheer uw geld"
+  title_accent: "waar u ook bent"
+  description: "Onze mobiele app biedt u alle essentiële bankdiensten in uw zak. Overschrijvingen, raadplegingen, sparen: alles wordt eenvoudig en onmiddellijk."
+  features:
+    contactless_payment: "Contactloos betalen"
+    contactless_payment_desc: "Apple Pay, Google Pay en Samsung Pay geïntegreerd voor uw dagelijkse aankopen"
+    instant_transfers: "Directe overschrijvingen"
+    instant_transfers_desc: "Verzend geld in enkele seconden, 24u/24 en 7d/7"
+    smart_analysis: "Intelligente analyse"
+    smart_analysis_desc: "Volg uw uitgaven per categorie met gedetailleerde grafieken"
+  app_stores:
+    title: "Download de applicatie"
+    app_store: "App Store"
+    google_play: "Google Play"
+    available_on: "Beschikbaar op"
+    download_on: "Downloaden op"
+  phone:
+    balance: "Beschikbaar saldo"
+    amount: "€2.847,32"
+    transfer: "Overmaken"
+    top_up: "Opladen"
+    pay: "Betalen"
+  floating_cards:
+    virtual_card: "Virtuele kaart"
+    real_time_alerts: "Realtime meldingen"
+  transactions:
+    example_1:
+      name: "Bio Supermarkt"
+      date: "Vandaag"
+      amount: "-€42,50"
+    example_2:
+      name: "Café Central"
+      date: "Gisteren"
+      amount: "-€4,80"
+# Engagement Section
+engagement:
+  badge: "Betrokkenheid & Verantwoordelijkheid"
+  title: "Een bank die zich inzet"
+  title_accent: "voor een duurzame toekomst"
+  description: "Bij %company_name% zetten wij ons dagelijks in voor een duurzamere wereld. Onze acties voor het milieu, solidariteit en innovatie vormen de kern van onze waarden en onze belofte aan toekomstige generaties."
+  # Environmental Card
+  environment:
+    title: "Milieu & Ecologie"
+    description: "Wij financieren de ecologische transitie en ondersteunen groene projecten om de klimaatverandering tegen te gaan."
+    stats:
+      green_financing: "2,8M€"
+      green_financing_label: "Groene financieringen"
+      co2_reduction: "-35%"
+      co2_reduction_label: "CO2-uitstoot"
+    actions:
+      action1: "🌱 100% groene energie voor onze kantoren"
+      action2: "🚗 Elektrische wagenpark voor onze teams"
+      action3: "📄 Dematerialisatie van documenten"
+      action4: "♻️ Afvalrecycling en -reductie"
+  # Social Card
+  social:
+    title: "Solidariteit & Maatschappij"
+    description: "Wij ondersteunen de sociale en solidaire economie en bevorderen financiële inclusie voor allen."
+    stats:
+      ess_companies: "450"
+      ess_companies_label: "SSE bedrijven gefinancierd"
+      microcredit_beneficiaries: "15K"
+      microcredit_beneficiaries_label: "Begunstigden van microkrediet"
+    actions:
+      action1: "🤝 Ondersteuning van lokale verenigingen"
+      action2: "💡 Financiële educatie voor jongeren"
+      action3: "🏠 Programma's voor toegankelijke woningen"
+      action4: "🌍 Ondersteuning van internationale NGO's"
+  # Innovation Card
+  innovation:
+    title: "Innovatie & Technologie"
+    description: "Wij investeren in nieuwe technologieën om u betere bankdiensten en een verbeterde klantervaring te bieden."
+    stats:
+      accessibility_satisfaction: "98%"
+      accessibility_satisfaction_label: "Tevredenheid toegankelijkheid"
+      digital_investment: "12M€"
+      digital_investment_label: "Investering in digitaal"
+    actions:
+      action1: "📱 Innovatieve mobiele app"
+      action2: "🔒 Versterkte veiligheid en cyberbeveiliging"
+      action3: "🤖 Kunstmatige intelligentie voor advies"
+      action4: "♿ Toegankelijke diensten voor mensen met een handicap"
+  # Partnerships Section
+  partnerships:
+    title: "Onze Partnerships voor Impact"
+    partners:
+      wwf:
+        name: "WWF Frankrijk"
+        description: "Bescherming van de biodiversiteit"
+      unicef:
+        name: "UNICEF"
+        description: "Onderwijs en kinderbescherming"
+      habitat_humanisme:
+        name: "Habitat & Humanisme"
+        description: "Sociale huisvesting en integratie"
+      france_active:
+        name: "France Active"
+        description: "Solidaire financiering en ondernemerschap"
+  # International Banks Section
+  international_banks:
+    title: "Onze Internationale Partners"
+    subtitle: "Vertrouwd door toonaangevende banken wereldwijd"
+  # CTA Section
+  cta:
+    title: "Sluit u aan bij onze verantwoorde aanpak"
+    description: "Ontdek hoe %company_name% u begeleidt bij uw duurzame projecten"
+    buttons:
+      csr_report: "CSR Rapport 2024"
+      green_products: "Groene Producten"
+# Simulation Section (CTA)
+simulation:
+  badge: "Online Simulatie"
+  title: "Realiseer uw project"
+  title_accent: "in enkele kliks"
+  description: "Schat uw leencapaciteit in, simuleer uw maandelijkse betalingen of bereken uw beleggingen. Onze tools begeleiden u bij al uw financiële projecten."
+  # Mortgage Card
+  mortgage:
+    title: "Woningkrediet"
+    description: "Simuleer uw woningkrediet en ontdek uw leencapaciteit"
+    features:
+      personalized_rate: "Gepersonaliseerd tarief"
+      immediate_response: "Onmiddellijk antwoord"
+      no_commitment: "Zonder verplichting"
+    button: "Mijn krediet simuleren"
+  # Consumer Credit Card
+  consumer:
+    title: "Consumentenkrediet"
+    description: "Financier uw persoonlijke projecten met voordelige voorwaarden"
+    features:
+      amount_range: "Van €1.000 tot €75.000"
+      flexible_repayment: "Flexibele terugbetaling"
+      quick_disbursement: "Snelle uitbetaling"
+    button: "Mijn maandelijkse betalingen berekenen"
+  # Savings Card
+  savings:
+    title: "Beleggingen"
+    description: "Optimaliseer uw beleggingen volgens uw profiel en doelstellingen"
+    features:
+      personalized_advice: "Gepersonaliseerd advies"
+      automatic_diversification: "Automatische diversificatie"
+      optimized_taxation: "Geoptimaliseerde fiscaliteit"
+    button: "Mijn sparen optimaliseren"
+  # Bottom CTA
+  guidance:
+    title: "Heeft u persoonlijke begeleiding nodig?"
+    description: "Onze adviseurs staan klaar om u te begeleiden bij uw belangrijkste projecten"
+    buttons:
+      appointment: "Afspraak maken"
+      chat: "Online chat"
+    contact_info:
+      customer_service:
+        title: "Klantenservice"
+        phone: "09 69 39 30 00 (gratis gesprek)"
+      hours:
+        title: "Openingstijden"
+        schedule: "Ma-Vr 8u-20u, Za 9u-17u"
+
+# Legal Disclaimer
+legal:
+  title: "Belangrijke vermeldingen:"
+  disclaimer: "De gepresenteerde simulaties zijn alleen ter indicatie gegeven en hebben geen contractuele waarde. Ze zijn gebaseerd op de tarieven die gelden op de datum van de simulatie. Kredietgoedkeuring is onderworpen aan de studie van uw dossier door de bank."
+  mortgage_credit:
+    title: "Woningkrediet:"
+    details: "TAEG vanaf 1,45% over 20 jaar. Rentebedrag: €1.000.000 voor een krediet van €250.000. Totale kosten van het krediet: €322.500."
+  consumer_credit:
+    title: "Consumentenkrediet:"
+    details: "Vaste TAEG van 1,9% tot 2,9% volgens profiel. Een krediet verplicht u en moet worden terugbetaald. Controleer uw terugbetalingscapaciteit voordat u zich verbindt."
+  investments:
+    title: "Beleggingen:"
+    details: "Prestaties uit het verleden voorspellen geen toekomstige prestaties. Beleggingen kunnen een risico van kapitaalverlies inhouden."

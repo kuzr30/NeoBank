@@ -1,0 +1,25 @@
+email_account_activation:
+  title: "Active su cuenta %company_name%"
+  content:
+    greeting: "¡Active su cuenta, {firstName}!"
+    intro: "Gracias por registrarse en <strong>%company_name%</strong>. Para finalizar su registro y asegurar su cuenta, debemos verificar su dirección de correo electrónico."
+    activation_required:
+      title: "Activación requerida"
+      description: "Haga clic en el botón de abajo para activar su cuenta y acceder a todos nuestros servicios bancarios."
+    button_text: "Activar mi cuenta"
+    warning:
+      title: "⏰ Enlace temporal"
+      description: "Este enlace de activación es válido durante <strong>24 horas</strong> únicamente. Después de este plazo, deberá hacer una nueva solicitud de registro."
+    manual_link: "Si el botón no funciona, puede copiar y pegar este enlace en su navegador:"
+    success:
+      title: "Después de la activación"
+      description: "Una vez que su cuenta esté activada, recibirá un correo de bienvenida y podrá conectarse inmediatamente a su espacio personal %company_name%."
+    security_notice: "Si usted no es el origen de este registro, ignore este correo. No se creará ninguna cuenta sin activación."
+    signature: "Cordialmente,<br><strong>El equipo %company_name%</strong>"
+  
+  # Mensajes de log para el MessageHandler
+  logs:
+    sending: "Enviando correo de activación de cuenta"
+    success: "Correo de activación enviado con éxito"
+    error: "Error al enviar el correo de activación"
+    send_failed: "Fallo en el envío del correo de activación"

@@ -1,0 +1,108 @@
+# ENGLISH TRANSLATION - Translated from French
+# Bridging loan translation file
+# Domain: credit_relais
+# Language: English (en)
+
+credit_relais:
+  page:
+    title: "Bridging Loan"
+    description: "Finance your new home before selling the old one with our bridging loan. Flexible temporary solution."
+    
+  hero:
+    title: "Bridging Loan"
+    subtitle: "The ideal intermediary for your real estate project"
+    taux: "{rate}%"
+    montant: "80%"
+    duree: "24 months"
+    
+  section_1:
+    title: "What is a bridging loan?"
+    content_1: "The bridging loan is a temporary financing solution that allows you to buy a new home before having sold the old one. It avoids the timing constraint between purchase and sale."
+    content_2: "Short-term credit generally repaid in one go when selling your current property, it offers the flexibility needed to seize good real estate opportunities."
+    
+  features:
+    montant:
+      value: "Up to 80%"
+      detail: "Of the value of the property sold"
+    duree:
+      value: "12 to 24 months"
+      detail: "Average duration 18 months"
+    taux:
+      value: "From {rate}% APR*"
+      detail: "Fixed short-term rate"
+    garantie:
+      value: "Mortgage"
+      detail: "On the property to be sold"
+      
+  advantages:
+    chainag:
+      title: "No chaining:"
+      text: "Buy without waiting for the sale of your property"
+    negociation:
+      title: "Reinforced negotiation:"
+      text: "Position as a free and credible buyer"
+    flexibilite:
+      title: "Flexibility:"
+      text: "Repayment upon sale, without fixed installments"
+    cumul:
+      title: "Possible combination:"
+      text: "Combinable with a conventional mortgage"
+    serenite:
+      title: "Peace of mind:"
+      text: "Organized move without timing constraints"
+      
+  requirements:
+    bien_vendre:
+      title: "Conditions of property to sell"
+      proprietaire: "Be owner for more than 2 years"
+      libre: "Property free of any occupation"
+      estimation: "Recent real estate valuation"
+      commercialisation: "Effective marketing of the property"
+    emprunteur:
+      title: "Borrower conditions"
+      revenus: "Regular and sufficient income"
+      capacite: "Ability to temporarily bear 2 charges"
+      apport: "Contribution for acquisition costs"
+      difficultes: "No financial difficulties"
+      
+  documents:
+    bien_vendre:
+      title: "Property to sell"
+      titre: "Property title"
+      estimation: "Real estate valuation"
+      mandat: "Signed sales mandate"
+      diagnostics: "Real estate diagnostics"
+    bien_acquerir:
+      title: "Property to acquire"
+      compromis: "Signed sale agreement"
+      plan: "Financing plan"
+      descriptif: "Property description"
+      conditions: "Suspensive conditions"
+    dossier:
+      title: "Financial file"
+      revenus: "Income proof"
+      comptes: "Account statements"
+      charges: "Current charges table"
+      patrimoine: "Asset situation"
+      
+  legal:
+    title: "Important legal information"
+    taeg:
+      title: "*APR:"
+      text: "Representative example: for a bridging loan of €200,000 over 18 months at APR of 4.2%, you repay €412,700 at maturity (credit cost: €12,700 including interest and fees)."
+    remboursement:
+      title: "Repayment:"
+      text: "In one go when selling the property, possibility of monthly interest payments."
+    garantie:
+      title: "Guarantee:"
+      text: "First-rank mortgage on the property to be sold."
+    assurance:
+      title: "Insurance:"
+      text: "Death-disability insurance mandatory."
+    prolongation:
+      title: "Extension:"
+      text: "Possible in case of sale delay, subject to conditions."
+      
+  cta:
+    title: "Free yourself from timing constraints"
+    subtitle: "Realize your real estate project with our bridging loan"

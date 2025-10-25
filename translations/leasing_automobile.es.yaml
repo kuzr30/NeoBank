@@ -1,0 +1,106 @@
+leasing_automobile:
+  page:
+    title: "Leasing Automóvil"
+    description: "Conduzca el vehículo de sus sueños con nuestro leasing automóvil. Alquiler con opción de compra flexible."
+  
+  hero:
+    class: "credit-detail-hero--leasing"
+    taux: "2,9%"
+    montant: "80 000€"
+    duree: "5 años"
+    title: "Leasing Automóvil"
+    subtitle: "Su vehículo en alquiler con opción de compra"
+  
+  section_1:
+    title: "¿Qué es el leasing automóvil?"
+    content:
+      paragraph_1: "El leasing automóvil, o Alquiler con Opción de Compra (LOA), le permite conducir un vehículo nuevo pagando únicamente su depreciación durante la duración del contrato."
+      paragraph_2: "Al vencimiento, puede comprar el vehículo por su valor residual, devolverlo, o reemplazarlo por un modelo más reciente."
+  
+  features:
+    title: "Características del leasing"
+    montant:
+      value: "Hasta 80 000€"
+      detail: "Todos los tipos de vehículos"
+    duree:
+      value: "De 2 a 5 años"
+      detail: "Contrato flexible"
+    taux:
+      value: "Desde {rate}% TAE*"
+      detail: "Financiación ventajosa"
+    garantie:
+      value: "Vehículo en garantía"
+      detail: "Propiedad hasta ejercicio de opción"
+  
+  section_3:
+    title: "Ventajas del leasing automóvil"
+    advantages:
+      vehicule_recent:
+        title: "Vehículo reciente"
+        description: "Siempre bajo garantía del fabricante"
+      loyers_reduits:
+        title: "Cuotas reducidas"
+        description: "Más bajas que un crédito auto clásico"
+      flexibilite:
+        title: "Flexibilidad"
+        description: "3 opciones al final del contrato"
+      entretien:
+        title: "Mantenimiento incluido"
+        description: "Paquete de mantenimiento posible"
+      deductibilite:
+        title: "Deducibilidad"
+        description: "Ventajas fiscales para profesionales"
+  
+  section_4:
+    title: "Condiciones del contrato"
+    contrat:
+      title: "Condiciones del contrato"
+      items:
+        vehicule: "Vehículo nuevo o reciente (menos de 2 años)"
+        kilometrage: "Kilometraje anual predefinido"
+        entretien: "Mantenimiento en concesionario autorizado"
+        assurance: "Seguro a todo riesgo obligatorio"
+    locataire:
+      title: "Condiciones arrendatario"
+      items:
+        permis: "Licencia de conducir válida"
+        revenus: "Ingresos estables justificados"
+        interdiction: "Sin prohibición bancaria"
+        domicile: "Domicilio en Francia metropolitana"
+  
+  section_5:
+    title: "Documentos necesarios"
+    personnels:
+      title: "Documentos personales"
+      items:
+        permis: "Licencia de conducir"
+        identite: "Documento de identidad"
+        domicile: "Justificante de domicilio"
+        rib: "IBAN de la cuenta"
+    financiers:
+      title: "Justificantes financieros"
+      items:
+        salaires: "3 últimas nóminas"
+        impots: "Declaración de la renta"
+        comptes: "Extractos de cuentas"
+        contrat: "Contrato de trabajo"
+    vehicule:
+      title: "Vehículo"
+      items:
+        commande: "Orden de pedido del concesionario"
+        fiche: "Ficha técnica del vehículo"
+        devis_assurance: "Presupuesto de seguro a todo riesgo"
+        certificat: "Certificado de conformidad"
+  
+  legal:
+    details:
+      title: "Información legal importante"
+      taeg: "<strong>*TAE:</strong> Ejemplo representativo: para un vehículo de 25 000€ en leasing a 48 meses al TAE del 2,9%, 48 cuotas de 315€ + opción de compra de 10 000€, coste total si compra: 25 120€."
+      kilometrage: "<strong>Kilometraje:</strong> Respeto del kilometraje contractual, penalizaciones en caso de exceso."
+      etat: "<strong>Estado del vehículo:</strong> Devolución en buen estado, salvo desgaste normal."
+      assurance: "<strong>Seguro:</strong> A todo riesgo obligatorio con robo e incendio."
+      resiliation: "<strong>Rescisión:</strong> Anticipada posible bajo condiciones, penalizaciones aplicables."
+  
+  cta:
+    title: "Conduzca su vehículo ideal"
+    subtitle: "Descubra las ventajas del leasing automóvil"

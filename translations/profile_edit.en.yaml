@@ -1,0 +1,41 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: profile_edit.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+profile_edit:
+  page:
+    title: "Edit profile - %company_name%"
+  
+  header:
+    title: "Edit profile"
+  
+  email_pending:
+    title: "New email address pending:"
+    text: "Click the link in the validation email to confirm the change."
+    instruction: "Click the link in the validation email to confirm the change."
+    cancel: "Cancel"
+    confirm_cancel: "Do you really want to cancel this email change?"
+    cancel_confirm: "Do you really want to cancel this email change?"
+  
+  sections:
+    avatar:
+      title: "Profile picture"
+      alt: "Profile picture"
+      info: "JPG, PNG or WEBP format. Maximum size 2MB."
+      default_first_letter: "U"
+      default_surname_letter: "S"
+    
+    personal_info:
+      title: "Personal information"
+      email_help: "This address will be used for important notifications."
+    
+    address:
+      title: "Address"
+    
+    preferences:
+      title: "Preferences"
+  
+  actions:
+    cancel: Cancel
+    save: Save changes

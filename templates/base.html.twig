@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}" prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# article: https://ogp.me/ns/article#">
+    <head>
+        <meta charset="UTF-8">
+        
+        {# Import des macros SEO #}
+        {% import 'macros/seo.html.twig' as seo %}
+        
+        {# Configuration SEO dynamique #}
+        {% set seoMeta = seo_meta(block('seo_meta') is defined ? block('seo_meta') : {}) %}
+        {% set pageType = block('page_type') is defined ? block('page_type') : 'website' %}
+        {% set jsonLdData = block('json_ld_data') is defined ? seo_page_type(pageType, block('json_ld_data')) : seo_page_type(pageType) %}
+        
+        <title>{% block title %}{{ seoMeta.title }}{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        
+        {# Meta tags SEO essentiels #}
+        {{ seo.seo_meta_tags(seoMeta) }}
+        
+        
+        <!-- Favicons optimisés -->
+        <link rel="icon" type="image/svg+xml" href="{{ asset('logo.svg') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('logo.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon.ico') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('logo.png') }}">
+        <link rel="manifest" href="{{ asset('site.webmanifest') }}">
+        <link rel="mask-icon" href="{{ asset('logo.svg') }}" color="#1e40af">
+        
+        <!-- Meta tags pour mobile optimisés -->
+        <meta name="theme-color" content="#1e40af">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="SEDEF BANK">
+        <meta name="application-name" content="SEDEF BANK">
+        <meta name="msapplication-TileColor" content="#1e40af">
+        <meta name="msapplication-config" content="{{ asset('browserconfig.xml') }}">
+        
+        {# Open Graph / Facebook #}
+        {{ seo.open_graph_tags(seoMeta) }}
+        
+        {# Twitter Cards #}
+        {{ seo.twitter_card_tags(seoMeta) }}
+        
+        <!-- Meta tags supplémentaires pour le SEO -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="address=no">
+        <meta name="format-detection" content="email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <!-- DNS Prefetch pour les performances -->
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        
+        <!-- Preconnect pour les ressources critiques -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <!-- Fonts optimisés avec display=swap pour éviter FOIT -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+{# Import des macros globales pour le routing avec locale #}
+{% import 'macros/routing.html.twig' as routing %}
+        
+        <!-- Sitemap reference -->
+        <link rel="sitemap" type="application/xml" href="{{ asset('sitemap.xml') }}">
+        
+        {# JSON-LD Schema.org #}
+        {{ seo.json_ld_script(jsonLdData) }}
+        
+        {# Breadcrumbs JSON-LD si définis #}
+        {% if block('breadcrumbs') is defined %}
+        {{ seo.breadcrumb_json_ld(block('breadcrumbs')) }}
+        {% endif %}
+        
+        {% block stylesheets %}
+        {% endblock %}
+
+        {% block javascripts %}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+        
+        <!-- Block pour JSON-LD personnalisé par page -->
+        {% block json_ld_additional %}{% endblock %}
+    </head>
+    <body>
+        <div class="page-wrapper">
+            {% include 'partials/_top_header.html.twig' %}
+            {% include 'partials/_header.html.twig' %}
+
+            <main class="main-content" role="main">
+                {% block body %}{% endblock %}
+            </main>
+
+            {% include 'partials/_notifications.html.twig' %}
+            {% include 'partials/_translate.html.twig' %}
+            {% include 'partials/_footer.html.twig' %}
+        </div>
+        
+        <!-- Google Analytics (remplacez par votre ID) -->
+        {% block analytics %}
+        <!-- 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'GA_MEASUREMENT_ID');
+        </script>
+        -->
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,83 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_credit_transfer_verification.title', {}, 'email_credit_transfer_verification') }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('email_credit_transfer_verification.content.page_title', {}, 'email_credit_transfer_verification') }}</h2>
+    
+    <p class="content-text">
+        {{ tp('email_credit_transfer_verification.content.greeting', {userName: userName}, 'email_credit_transfer_verification')|raw }}
+    </p>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_credit_transfer_verification.content.detection_section.title', {}, 'email_credit_transfer_verification') }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {{ tp('email_credit_transfer_verification.content.detection_section.message', {}, 'email_credit_transfer_verification') }}
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_credit_transfer_verification.content.verification_section.title', {}, 'email_credit_transfer_verification') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 24px 20px; background: linear-gradient(135deg, #1976d2 0%, #2196f3 100%); color: white; text-align: center; border-radius: 6px;">
+                    <div style="font-size: 14px; font-weight: 500; margin-bottom: 8px;">{{ tp('email_credit_transfer_verification.content.verification_section.code_label', {}, 'email_credit_transfer_verification') }}</div>
+                    <div style="font-size: 48px; font-weight: 700; letter-spacing: 12px; margin: 12px 0;">{{ verificationCode }}</div>
+                    <div style="font-size: 12px; opacity: 0.9;">{{ tp('email_credit_transfer_verification.content.verification_section.expiry', {}, 'email_credit_transfer_verification') }}</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ tp('email_credit_transfer_verification.content.transaction_details.title', {}, 'email_credit_transfer_verification') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 12px 16px; background: #fff8e1; font-weight: 600; color: #e65100; width: 35%; border-right: 1px solid #ffcc02;">{{ tp('email_credit_transfer_verification.content.transaction_details.source_account', {}, 'email_credit_transfer_verification') }}</td>
+                <td style="padding: 12px 16px; font-weight: 500;">{{ sourceAccount }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px 16px; background: #f5f5f5; font-weight: 600; color: #e65100; border-right: 1px solid #ffcc02;">{{ tp('email_credit_transfer_verification.content.transaction_details.destination_account', {}, 'email_credit_transfer_verification') }}</td>
+                <td style="padding: 12px 16px; font-weight: 500;">{{ tp('email_credit_transfer_verification.content.transaction_details.principal_account', {}, 'email_credit_transfer_verification') }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px 16px; background: #fff8e1; font-weight: 600; color: #e65100; border-right: 1px solid #ffcc02;">{{ tp('email_credit_transfer_verification.content.transaction_details.amount_label', {}, 'email_credit_transfer_verification') }}</td>
+                <td style="padding: 12px 16px;">
+                    <span style="font-size: 18px; font-weight: 700; color: #424242;">{{ amount|number_format(2, ',', ' ') }} €</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ tp('email_credit_transfer_verification.content.security_section.title', {}, 'email_credit_transfer_verification') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 10px 16px; background: #fff8e1; border-left: 4px solid #f57c00; border-bottom: 1px solid #ffcc02;">
+                    <strong style="color: #e65100;">{{ tp('email_credit_transfer_verification.content.verification_section.expiry', {}, 'email_credit_transfer_verification') }}</strong><br>
+                    <span style="color: #424242;">{{ tp('email_credit_transfer_verification.content.security_section.validity', {}, 'email_credit_transfer_verification') }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 16px; background: #f9f9f9; border-left: 4px solid #f57c00; border-bottom: 1px solid #ffcc02;">
+                    <strong style="color: #e65100;">{{ tp('email_credit_transfer_verification.content.security_section.confidentiality', {}, 'email_credit_transfer_verification') }}</strong><br>
+                    <span style="color: #424242;">{{ tp('email_credit_transfer_verification.content.security_section.confidentiality_description', {}, 'email_credit_transfer_verification') }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 16px; background: #fff8e1; border-left: 4px solid #f57c00;">
+                    <strong style="color: #e65100;">{{ tp('email_credit_transfer_verification.content.security_section.unauthorized_transaction', {}, 'email_credit_transfer_verification') }}</strong><br>
+                    <span style="color: #424242;">{{ tp('email_credit_transfer_verification.content.security_section.warning', {}, 'email_credit_transfer_verification') }}</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p class="content-text">
+        {{ tp('email_credit_transfer_verification.content.support_text', {}, 'email_credit_transfer_verification') }}
+    </p>
+
+    <p class="footer-text">
+        {{ tp('email_credit_transfer_verification.content.footer', {}, 'email_credit_transfer_verification')|raw }}
+    </p>
+{% endblock %}

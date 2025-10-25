@@ -1,0 +1,20 @@
+email:
+  base:
+    company_name: "{company_name}"
+    tagline: "Ihr vertrauensvoller Bankpartner"
+    default_title: "Standardinhalt"
+    default_text: "Diese Vorlage sollte mit spezifischen Inhalten erweitert werden."
+    
+  footer:
+    brand: "%company_name%"
+    address: "123 Avenue des Finances, 75001 Paris, France"
+
+    links:
+      help: "Hilfezentrum"
+      terms: "Nutzungsbedingungen"
+      privacy: "Datenschutzrichtlinie"
+    
+    disclaimer:
+      text: "Sie erhalten diese E-Mail, weil Sie ein Konto bei {company_name} haben."
+      unsubscribe_text: "Wenn Sie diese E-Mails nicht mehr erhalten möchten,"
+      unsubscribe_link: "klicken Sie hier"

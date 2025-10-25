@@ -1,0 +1,580 @@
+# Professionelle Übersetzungsdatei für Kreditantragschritte
+# Domäne: credit_step_forms
+# Kompatibel mit der bestehenden Architektur des %company_name%-Projekts
+
+# === METADATEN UND KONFIGURATION ===
+meta:
+  version: "1.0.0"
+  description: "Übersetzungen für mehrstufige Kreditantragsformulare"
+  last_updated: "2025-09-09"
+  compatibility: "Symfony 7+ mit ProfessionalTranslationService"
+
+# === JAVASCRIPT-VALIDIERUNG ===
+js:
+  validation:
+    required: "Dieses Feld ist erforderlich"
+    email: "Ungültige E-Mail"
+    phone: "Ungültige Telefonnummer"
+    postal: "Ungültige Postleitzahl"
+    min: "Mindestwert: %value%"
+    max: "Höchstwert: %value%"
+
+# === SCHRITT 1: PERSÖNLICHE INFORMATIONEN ===
+step1:
+  title: "Persönliche Informationen"
+  subtitle: "Geben Sie Ihre persönlichen Daten ein"
+  description: "Diese Informationen ermöglichen es uns, Ihren Kreditantrag zu bearbeiten"
+  section_title: "Ihre persönlichen Informationen"
+  
+  fields:
+    # Grundinformationen
+    firstname:
+      label: "Vorname"
+      placeholder: "Ihr Vorname"
+      help: "Geben Sie Ihren Vornamen ein, wie er auf Ihren offiziellen Dokumenten erscheint"
+      errors:
+        required: "Der Vorname ist erforderlich"
+        min_length: "Der Vorname muss mindestens 2 Zeichen enthalten"
+        max_length: "Der Vorname darf nicht mehr als 50 Zeichen umfassen"
+        invalid_format: "Der Vorname darf nur Buchstaben, Leerzeichen, Bindestriche und Apostrophe enthalten"
+    
+    lastname:
+      label: "Nachname"
+      placeholder: "Ihr Nachname"
+      help: "Geben Sie Ihren Nachnamen ein, wie er auf Ihren offiziellen Dokumenten erscheint"
+      errors:
+        required: "Der Nachname ist erforderlich"
+        min_length: "Der Nachname muss mindestens 2 Zeichen enthalten"
+        max_length: "Der Nachname darf nicht mehr als 50 Zeichen umfassen"
+        invalid_format: "Der Nachname darf nur Buchstaben, Leerzeichen, Bindestriche und Apostrophe enthalten"
+    
+    email:
+      label: "E-Mail-Adresse"
+      placeholder: "ihre.email@beispiel.com"
+      help: "Verwenden Sie eine gültige E-Mail-Adresse, unter der wir Sie kontaktieren können"
+      errors:
+        required: "Die E-Mail-Adresse ist erforderlich"
+        invalid: "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+    
+    phone:
+      label: "Telefonnummer"
+      placeholder: "+49 30 12 34 56 78"
+      help: "Geben Sie Ihre Mobiltelefon- oder Festnetznummer ein"
+      errors:
+        required: "Die Telefonnummer ist erforderlich"
+        invalid: "Bitte geben Sie eine gültige Telefonnummer ein"
+    
+    birth_date:
+      label: "Geburtsdatum"
+      placeholder: "TT/MM/JJJJ"
+      help: "Sie müssen volljährig sein, um einen Kreditantrag zu stellen"
+      errors:
+        required: "Das Geburtsdatum ist erforderlich"
+        invalid: "Bitte geben Sie ein gültiges Datum ein"
+        age_restriction: "Sie müssen volljährig sein, um einen Kreditantrag zu stellen"
+    
+    nationality:
+      label: "Staatsangehörigkeit"
+      placeholder: "Wählen Sie Ihre Staatsangehörigkeit"
+      help: "Ihre aktuelle Staatsangehörigkeit"
+      errors:
+        required: "Die Staatsangehörigkeit ist erforderlich"
+      choices:
+        french: "Französisch"
+        eu: "Europäisch (EU)"
+        non_eu: "Außerhalb EU"
+    
+    marital_status:
+      label: "Familienstand"
+      placeholder: "Wählen Sie Ihren Status"
+      help: "Ihr aktueller Familienstand"
+      errors:
+        required: "Der Familienstand ist erforderlich"
+        invalid: "Ungültiger Familienstand"
+      choices:
+        single: "Ledig"
+        married: "Verheiratet"
+        divorced: "Geschieden"
+        widowed: "Verwitwet"
+        cohabiting: "In wilder Ehe"
+        pacs: "Eingetragene Partnerschaft"
+    
+    dependents:
+      label: "Anzahl der Personen im Haushalt"
+      placeholder: "Wählen Sie die Anzahl"
+      help: "Kinder oder andere Personen, die Sie finanziell unterstützen"
+      errors:
+        required: "Die Anzahl der Personen im Haushalt ist erforderlich"
+        invalid_range: "Die Anzahl der Personen im Haushalt muss zwischen 0 und 20 liegen"
+      choices:
+        none: "Keine"
+        one: "1"
+        two: "2" 
+        three: "3"
+        four: "4"
+        five_plus: "5 oder mehr"
+
+  # Adresse
+  address_section:
+    title: "Ihre Wohnadresse"
+    
+    address:
+      label: "Vollständige Adresse"
+      placeholder: "Musterstraße 123"
+      help: "Ihre Hauptwohnadresse"
+      errors:
+        required: "Die Adresse ist erforderlich"
+        min_length: "Die Adresse muss mindestens 5 Zeichen enthalten"
+        max_length: "Die Adresse darf nicht mehr als 255 Zeichen umfassen"
+    
+    city:
+      label: "Stadt"
+      placeholder: "Berlin"
+      help: "Ihre Wohnstadt"
+      errors:
+        required: "Die Stadt ist erforderlich"
+        min_length: "Der Stadtname muss mindestens 2 Zeichen enthalten"
+        max_length: "Der Stadtname darf nicht mehr als 100 Zeichen umfassen"
+    
+    postal_code:
+      label: "Postleitzahl"
+      placeholder: "10115"
+      help: "Deutsche Postleitzahl (5 Ziffern)"
+      errors:
+        required: "Die Postleitzahl ist erforderlich"
+        invalid: "Die Postleitzahl muss 5 Ziffern enthalten"
+    
+    country:
+      label: "Land"
+      placeholder: "Wählen Sie Ihr Land"
+      help: "Wohnsitzland"
+      errors:
+        required: "Das Land ist erforderlich"
+    
+    housing_type:
+      label: "Wohnungstyp"
+      placeholder: "Wählen Sie Ihre Wohnsituation"
+      help: "Ihre aktuelle Wohnsituation"
+      errors:
+        required: "Der Wohnungstyp ist erforderlich"
+        invalid: "Ungültiger Wohnungstyp"
+      choices:
+        owner: "Eigentümer"
+        tenant: "Mieter"
+        family: "Bei Familie untergebracht"
+        social: "Sozialwohnung"
+        other: "Andere"
+
+# === SCHRITT 2: FINANZIELLE SITUATION ===
+step2:
+  title: "Finanzielle Situation"
+  subtitle: "Geben Sie Ihre berufliche und finanzielle Situation an"
+  description: "Diese Informationen helfen uns, Ihre Rückzahlungsfähigkeit zu bewerten"
+  section_title: "Ihre finanzielle Situation"
+  
+  # Beschäftigungsbereich
+  employment_section:
+    title: "Ihre berufliche Situation"
+    
+    monthly_income:
+      label: "Monatliches Nettoeinkommen"
+      placeholder: "Betrag in €"
+      help: "Ihr monatliches Nettoeinkommen (nach Sozialabgaben und Steuern)"
+      errors:
+        required: "Das monatliche Einkommen ist erforderlich"
+        min_value: "Das erforderliche Mindesteinkommen beträgt 1000€"
+        invalid: "Bitte geben Sie einen gültigen Betrag ein"
+    
+    employment_type:
+      label: "Beschäftigungsart"
+      placeholder: "Wählen Sie Ihren Berufsstatus"
+      help: "Ihr aktueller Berufsstatus"
+      errors:
+        required: "Die Beschäftigungsart ist erforderlich"
+        invalid: "Ungültige Beschäftigungsart"
+      choices:
+        employee: "Angestellte(r) unbefristet"
+        employee_cdd: "Angestellte(r) befristet"
+        civil_servant: "Beamte(r)"
+        freelancer: "Freiberufler"
+        entrepreneur: "Unternehmer"
+        retired: "Rentner(in)"
+        unemployed: "Arbeitslos"
+        student: "Student(in)"
+    
+    employer:
+      label: "Name des Arbeitgebers"
+      placeholder: "Name Ihres Unternehmens"
+      help: "Der Name Ihres Arbeitgebers oder Unternehmens"
+      errors:
+        max_length: "Der Name des Arbeitgebers darf nicht mehr als 255 Zeichen umfassen"
+    
+    job_title:
+      label: "Stellenbezeichnung"
+      placeholder: "Ihre Funktion"
+      help: "Ihr Titel oder Ihre Funktion im Unternehmen"
+      errors:
+        max_length: "Die Stellenbezeichnung darf nicht mehr als 255 Zeichen umfassen"
+    
+    employment_start_date:
+      label: "Beschäftigungsbeginn"
+      placeholder: "TT/MM/JJJJ"
+      help: "Beginn Ihrer aktuellen Beschäftigung"
+      errors:
+        invalid: "Bitte geben Sie ein gültiges Datum ein"
+
+  # Finanzbereich
+  financial_section:
+    title: "Ihre Ausgaben und Verpflichtungen"
+    
+    monthly_expenses:
+      label: "Monatliche Ausgaben"
+      placeholder: "Betrag in €"
+      help: "Ihre monatlichen Ausgaben (Miete, Rechnungen, Lebensmittel, etc.)"
+      errors:
+        required: "Die monatlichen Ausgaben sind erforderlich"
+        min_value: "Die Ausgaben können nicht negativ sein"
+        invalid: "Bitte geben Sie einen gültigen Betrag ein"
+    
+    existing_loans:
+      label: "Laufende Kredite"
+      placeholder: "Monatlicher Gesamtbetrag in €"
+      help: "Monatlicher Gesamtbetrag Ihrer laufenden Kredite (optional)"
+      errors:
+        min_value: "Der Betrag kann nicht negativ sein"
+        invalid: "Bitte geben Sie einen gültigen Betrag ein"
+
+  fields:
+    # Berufliche Situation (alte Struktur - für Kompatibilität beibehalten)
+    monthly_income:
+      label: "Monatliches Nettoeinkommen"
+      placeholder: "Betrag in €"
+      help: "Ihr monatliches Nettoeinkommen (nach Sozialabgaben und Steuern)"
+      errors:
+        required: "Das monatliche Einkommen ist erforderlich"
+        min_value: "Das erforderliche Mindesteinkommen beträgt 1000€"
+        invalid: "Bitte geben Sie einen gültigen Betrag ein"
+    
+    employment_type:
+      label: "Beschäftigungsart"
+      placeholder: "Wählen Sie Ihren Berufsstatus"
+      help: "Ihr aktueller Berufsstatus"
+      errors:
+        required: "Die Beschäftigungsart ist erforderlich"
+        invalid: "Ungültige Beschäftigungsart"
+      choices:
+        employee: "Angestellte(r) unbefristet"
+        employee_cdd: "Angestellte(r) befristet"
+        civil_servant: "Beamte(r)"
+        freelancer: "Freiberufler"
+        entrepreneur: "Unternehmer"
+        retired: "Rentner(in)"
+        unemployed: "Arbeitslos"
+        student: "Student(in)"
+    
+    employer:
+      label: "Name des Arbeitgebers"
+      placeholder: "Name Ihres Unternehmens"
+      help: "Der Name Ihres Arbeitgebers oder Unternehmens"
+      errors:
+        max_length: "Der Name des Arbeitgebers darf nicht mehr als 255 Zeichen umfassen"
+    
+    job_title:
+      label: "Stellenbezeichnung"
+      placeholder: "Ihre Funktion"
+      help: "Ihr Titel oder Ihre Funktion im Unternehmen"
+      errors:
+        max_length: "Die Stellenbezeichnung darf nicht mehr als 255 Zeichen umfassen"
+    
+    employment_start_date:
+      label: "Beschäftigungsbeginn"
+      placeholder: "TT/MM/JJJJ"
+      help: "Beginn Ihrer aktuellen Beschäftigung"
+      errors:
+        invalid: "Bitte geben Sie ein gültiges Datum ein"
+
+    # Ausgaben und Verpflichtungen
+    monthly_expenses:
+      label: "Monatliche Ausgaben"
+      placeholder: "Betrag in €"
+      help: "Ihre monatlichen Ausgaben (Miete, Rechnungen, Lebensmittel, etc.)"
+      errors:
+        required: "Die monatlichen Ausgaben sind erforderlich"
+        min_value: "Die Ausgaben können nicht negativ sein"
+        invalid: "Bitte geben Sie einen gültigen Betrag ein"
+    
+    existing_loans:
+      label: "Laufende Kredite"
+      placeholder: "Monatlicher Gesamtbetrag in €"
+      help: "Monatlicher Gesamtbetrag Ihrer laufenden Kredite (optional)"
+      errors:
+        min_value: "Der Betrag kann nicht negativ sein"
+        invalid: "Bitte geben Sie einen gültigen Betrag ein"
+
+# === SCHRITT 3: KREDITKONFIGURATION ===
+step3:
+  title: "Kreditkonfiguration"
+  subtitle: "Definieren Sie die Parameter Ihres Kredits"
+  description: "Konfigurieren Sie Ihren Kredit nach Ihren Bedürfnissen und visualisieren Sie die Simulation"
+  section_title: "Parameter Ihres Kredits"
+  
+  # Kreditkonfiguration
+  credit_configuration:
+    title: "Kreditparameter"
+    
+    loan_amount:
+      label: "Gewünschter Kreditbetrag"
+      placeholder: "Mindestens 3000€"
+      help: "Der Betrag, den Sie leihen möchten"
+      errors:
+        required: "Der Kreditbetrag ist erforderlich"
+        min_value: "Der Mindestbetrag beträgt 3000€"
+        max_value: "Der Höchstbetrag beträgt 30.000.000€"
+        invalid_range: "Der Kreditbetrag muss zwischen 3000€ und 30.000.000€ liegen"
+        invalid: "Bitte geben Sie einen gültigen Betrag ein"
+    
+    credit_type:
+      label: "Kreditart"
+      placeholder: "Wählen Sie die Kreditart"
+      help: "Die Kreditart, die zu Ihrem Projekt passt"
+      errors:
+        required: "Die Kreditart ist erforderlich"
+      choices:
+        immobilier: "Immobilienkredit"
+        auto: "Autokredit"
+        consommation: "Verbraucherkredit"
+        travaux: "Renovierungskredit"
+        professionnel: "Geschäftskredit"
+        personal: "Privatkredit"
+    
+    duration:
+      label: "Kreditlaufzeit in Monaten"
+      placeholder: "Minimum 2 Monate"
+      help: "Die gewünschte Rückzahlungsdauer"
+      errors:
+        required: "Die Kreditlaufzeit ist erforderlich"
+        min_value: "Die Mindestlaufzeit beträgt 2 Monate"
+        max_value: "Die Höchstlaufzeit beträgt 360 Monate (30 Jahre)"
+        invalid: "Bitte geben Sie eine gültige Laufzeit ein"
+
+  # Simulationsergebnisse
+  simulation_section:
+    title: "Ihre personalisierte Simulation"
+    subtitle: "In Echtzeit berechnet"
+    
+    monthly_payment:
+      label: "Geschätzte monatliche Rate"
+      placeholder: "0 €"
+      help: "Automatisch berechnete monatliche Rate"
+      suffix: "€/Monat"
+    
+    total_cost:
+      label: "Gesamtkosten des Kredits"
+      placeholder: "0 €"
+      help: "Gesamtkosten einschließlich Zinsen"
+      suffix: "€"
+
+  # Zusammenfassung für Simulation
+  summary:
+    loan_amount_requested: "Beantragtes Kapital"
+    taeg: "Effektiver Jahreszins"
+    total_interests: "Gesamtzinsen"
+    payoff_date: "Rückzahlungsende"
+
+  # Fußzeile Schritt 3
+  footer:
+    guarantee_text: "Kostenlose und unverbindliche Simulation."
+    legal_notice: "Ein Kredit verpflichtet Sie und muss zurückgezahlt werden. Überprüfen Sie Ihre Rückzahlungsfähigkeit, bevor Sie sich verpflichten."
+
+# === ABSCHLIESSENDE EINVERSTÄNDNISERKLÄRUNGEN ===
+consents:
+  title: "Einverständniserklärungen und Validierung"
+  section_title: "Annahme der Bedingungen"
+  
+  terms_accepted:
+    label: "Ich akzeptiere die allgemeinen Nutzungsbedingungen"
+    text: "Ich bestätige, dass ich die allgemeinen Nutzungs- und Verkaufsbedingungen gelesen und akzeptiert habe"
+    link_text: "Allgemeine Bedingungen lesen"
+    errors:
+      required: "Sie müssen die allgemeinen Bedingungen akzeptieren, um fortzufahren"
+  
+  data_processing_accepted:
+    label: "Ich akzeptiere die Verarbeitung meiner persönlichen Daten"
+    text: "Ich akzeptiere, dass meine persönlichen Daten im Rahmen meines Kreditantrags verarbeitet werden"
+    link_text: "Datenschutzrichtlinie"
+    errors:
+      required: "Sie müssen der Verarbeitung Ihrer persönlichen Daten zustimmen"
+  
+  marketing_accepted:
+    label: "Ich akzeptiere den Erhalt von kommerziellen Angeboten (optional)"
+    text: "Ich akzeptiere den Erhalt von Informationen über Produkte und Dienstleistungen der Bank"
+    help: "Sie können sich jederzeit abmelden"
+
+# === ZUSAMMENFASSUNG ===
+summary:
+  title: "Zusammenfassung Ihres Antrags"
+  subtitle: "Überprüfen Sie die Informationen, bevor Sie Ihren Antrag einreichen"
+  page_title: "Zusammenfassung - Kreditantrag"
+  
+  # Hervorgehobener Bereich
+  highlight:
+    title: "Ihr Kredit"
+    monthly_payment_text: "Monatliche Rate von"
+    duration_text: "über {duration} Monate"
+  
+  # Bereiche
+  personal_info:
+    title: "Persönliche Informationen"
+    full_name: "Vollständiger Name"
+    email: "E-Mail"
+    phone: "Telefon"
+    age: "Alter"
+    age_suffix: "Jahre"
+    address: "Adresse"
+  
+  financial_info:
+    title: "Finanzielle Situation"
+    monthly_income: "Monatliches Einkommen"
+    monthly_expenses: "Monatliche Ausgaben"
+    existing_loans: "Laufende Kredite"
+    remaining_income: "Verfügbares Einkommen"
+  
+  credit_details:
+    title: "Kreditdetails"
+    credit_type: "Kreditart"
+    interest_rate: "Zinssatz"
+    duration: "Laufzeit"
+    duration_months: "{duration} Monate"
+    total_cost: "Gesamtkosten des Kredits"
+    total_amount: "Gesamtrückzahlungsbetrag"
+  
+  # Aktionen
+  actions:
+    modify: "← Meinen Antrag ändern"
+    confirm: "✓ Meinen Antrag bestätigen"
+  
+  # Rechtlicher Hinweis
+  legal_notice: "Diese Simulation ist indikativ. Die endgültigen Bedingungen werden nach Prüfung Ihres Dossiers festgelegt. Ein Kredit verpflichtet Sie und muss zurückgezahlt werden. Überprüfen Sie Ihre Rückzahlungsfähigkeit, bevor Sie sich verpflichten."
+  important: "Wichtig:"
+
+# === NAVIGATION UND AKTIONEN ===
+navigation:
+  title: "Kreditantrag"
+  previous: "Vorheriger Schritt"
+  next: "Nächster Schritt"
+  submit: "Meinen Antrag einreichen"
+  back_to_step: "Zurück zu Schritt {step}"
+  step_progress: "Schritt {current} von {total}"
+  continue: "Fortfahren"
+  save_draft: "Entwurf speichern"
+
+# === SYSTEMMELDUNGEN ===
+messages:
+  step_completed: "Schritt erfolgreich abgeschlossen"
+  step_validation_failed: "Bitte korrigieren Sie die Fehler, bevor Sie fortfahren"
+  form_errors: "Bitte korrigieren Sie {count} Fehler im Formular"
+  loading: "Lädt..."
+  calculation_in_progress: "Berechnung Ihrer Simulation..."
+  data_saved: "Ihre Daten wurden gespeichert"
+  technical_error: "Ein technischer Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+
+# === HILFETEXTE UND INFORMATIONEN ===
+help:
+  why_personal_info: "Warum benötigen wir diese Informationen?"
+  personal_info_explanation: "Diese Informationen sind für die Prüfung Ihres Dossiers erforderlich und sind gemäß DSGVO-Verordnung geschützt."
+  
+  why_financial_info: "Warum diese finanziellen Informationen?"
+  financial_info_explanation: "Diese Daten ermöglichen es uns, Ihre Rückzahlungsfähigkeit zu bewerten und Ihnen einen angepassten Kredit anzubieten."
+  
+  simulation_accuracy: "Genauigkeit der Simulation"
+  simulation_explanation: "Diese Simulation ist indikativ. Die endgültigen Bedingungen werden nach vollständiger Prüfung Ihres Dossiers bestätigt."
+
+# === VALIDIERUNG UND FEHLER ===
+validation:
+  step_incomplete: "Dieser Schritt ist nicht vollständig"
+  required_field: "Dieses Feld ist erforderlich"
+  invalid_format: "Das eingegebene Format ist nicht gültig"
+  value_too_low: "Der eingegebene Wert ist zu niedrig"
+  value_too_high: "Der eingegebene Wert ist zu hoch"
+  
+# === HILFSPROGRAMME ===
+common:
+  optional: "(optional)"
+  required: "(erforderlich)"
+  currency_symbol: "€"
+  months_suffix: "Monate"
+  per_month: "/Monat"
+  total: "Gesamt"
+  estimated: "Geschätzt"
+
+# === ANALYSE DER KREDITFÄHIGKEIT ===
+capacity_analysis:
+  title: "Analyse Ihrer Kreditfähigkeit"
+  income_label: "Monatliches Nettoeinkommen"
+  total_expenses_label: "Gesamtausgaben"
+  remaining_income_label: "Verfügbares Einkommen"
+  debt_ratio_label: "Verschuldungsgrad"
+  max_payment_label: "Geschätzte Kreditfähigkeit"
+
+# === KREDITARTEN ===
+credit_types:
+  immobilier:
+    label: "Immobilienkredit"
+    description: "Finanzierung für den Kauf einer Immobilie (Hauptwohnsitz, Zweitwohnsitz oder Kapitalanlage)"
+  auto:
+    label: "Autokredit"
+    description: "Finanzierung für den Kauf eines neuen oder gebrauchten Fahrzeugs"
+  consommation:
+    label: "Verbraucherkredit"
+    description: "Kredit zur Finanzierung Ihrer persönlichen Projekte (Urlaub, Haushaltsgeräte, etc.)"
+  travaux:
+    label: "Renovierungskredit"
+    description: "Finanzierung für Ihre Renovierungs- und Wohnraumverbesserungsprojekte"
+  professionnel:
+    label: "Geschäftskredit"
+    description: "Finanzierung für Ihre geschäftlichen Bedürfnisse und Unternehmensinvestitionen"
+  personal:
+    label: "Privatkredit"
+    description: "Kredit ohne Verwendungsnachweis für alle Ihre persönlichen Projekte"
+  home_improvement:
+    label: "Renovierungs-/Umbaukredit"
+    description: "Spezialisierte Finanzierung für die Verbesserung und Renovierung Ihres Wohnraums"
+  debt_consolidation:
+    label: "Kreditumschuldung"
+    description: "Zusammenfassung Ihrer bestehenden Kredite in einer günstigeren monatlichen Rate"
+  mortgage:
+    label: "Immobilienkredit"
+    description: "Hypothekendarlehen für den Erwerb Ihres Haupt- oder Zweitwohnsitzes"
+  renouvelable:
+    label: "Revolving-Kredit"
+    description: "Verfügbare und erneuerbare Geldreserve nach Ihren Bedürfnissen"
+  etudiant:
+    label: "Studienkredit"
+    description: "Finanzierung für Ihr Studium mit Vorzugskonditionen"
+  relais:
+    label: "Überbrückungskredit"
+    description: "Temporäre Lösung bis zum Verkauf Ihrer aktuellen Immobilie"
+  microcredit:
+    label: "Mikrokredit"
+    description: "Kleinkredit zur Finanzierung Ihrer kleinen Projekte"
+  leasing:
+    label: "Leasing"
+    description: "Miete mit Kaufoption für Fahrzeuge und Ausrüstung"
+  voyage:
+    label: "Reisekredit"
+    description: "Finanzierung für Ihre Traumurlaube und Reisen"
+
+  # Einverständnissektion für Schritt 3
+  consent:
+    terms_accepted:
+      label: "Ich akzeptiere die allgemeinen Geschäftsbedingungen"
+      errors:
+        required: "Sie müssen die allgemeinen Geschäftsbedingungen akzeptieren, um fortzufahren"
+    
+    data_processing_accepted:
+      label: "Ich akzeptiere die Verarbeitung meiner persönlichen Daten"
+      errors:
+        required: "Sie müssen der Verarbeitung Ihrer persönlichen Daten zustimmen, um fortzufahren"
+    
+    marketing_accepted:
+      label: "Ich akzeptiere den Erhalt von Marketing-Kommunikation (optional)"

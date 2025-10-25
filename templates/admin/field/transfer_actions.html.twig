@@ -1,0 +1,34 @@
+{% set transfer = entity.instance %}
+
+<div class="btn-group btn-group-sm" role="group">
+    <!-- Bouton Voir -->
+    <a href="{{ ea_url()
+        .setController('App\\Controller\\Admin\\TransferCrudController')
+        .setAction('detail')
+        .setEntityId(transfer.id) }}" 
+       class="btn btn-outline-primary btn-sm" 
+       title="Voir les détails">
+        <i class="fa fa-eye"></i>
+    </a>
+    
+    {% if transfer.status in ['pending', 'executing'] %}
+        <!-- Statut: En cours -->
+        <span class="badge bg-info ms-2">En cours</span>
+        
+    {% elseif transfer.status == 'completed' %}
+        <!-- Statut: Terminé -->
+        <span class="badge bg-success ms-2">Terminé</span>
+        
+    {% elseif transfer.status == 'blocked' %}
+        <!-- Statut: Bloqué -->
+        <span class="badge bg-danger ms-2">Bloqué</span>
+        
+    {% elseif transfer.status == 'cancelled' %}
+        <!-- Statut: Annulé -->
+        <span class="badge bg-secondary ms-2">Annulé</span>
+        
+    {% elseif transfer.status == 'expired' %}
+        <!-- Statut: Expiré -->
+        <span class="badge bg-warning ms-2">Expiré</span>
+    {% endif %}
+</div>

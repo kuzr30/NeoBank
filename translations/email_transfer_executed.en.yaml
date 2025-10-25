@@ -1,0 +1,42 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_transfer_executed.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+email_transfer_executed:
+  title: "Transfer executed successfully"
+  
+  content:
+    page_title: "Transfer completed successfully"
+    greeting: "Congratulations {firstName}!"
+    
+    transaction_completed:
+      title: "Transaction completed"
+      description: "Your transfer has been executed successfully. All validation codes have been confirmed and the fund transfer has been carried out according to your instructions."
+    
+    execution_details:
+      title: "Execution details"
+      reference: "Transfer reference"
+      amount: "Amount transferred"
+      amount_value: "{amount} €"
+      beneficiary_account: "Beneficiary account"
+      transfer_reason: "Transfer reason"
+      execution_date: "Execution date"
+      executed_at: "{executedAt}"
+    
+    account_update:
+      title: "Update of your accounts"
+      description: "The amount has been debited from your main account. You can view your transactions and updated balance in your online banking area."
+    
+    banking_access:
+      title: "Access your accounts"
+      view_banking_button: "View my banking area"
+      check_instruction: "Check your updated transactions and balances"
+    
+    security_thanks: "Thank you for your trust. Your transaction took place under optimal security conditions."
+    
+    footer: "<strong>%company_name% - Transfer Service</strong><br>Automatic transfer execution confirmation"
+  
+  log:
+    transfer_executed: "Transfer {transferId} executed successfully for an amount of {amount}€"
+    email_sent: "Execution confirmation email sent to {userEmail}"

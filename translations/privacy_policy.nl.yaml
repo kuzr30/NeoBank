@@ -1,0 +1,56 @@
+privacy_policy:
+  page_title: "Privacybeleid"
+  page_description: "Hoe wij uw persoonlijke gegevens verzamelen, gebruiken en beschermen"
+
+  data_collection:
+    title: "Gegevensverzameling"
+    content: |
+      Wij verzamelen verschillende soorten persoonlijke gegevens bij het gebruik van onze diensten:
+      <ul>
+        <li><strong>Identificatiegegevens:</strong> naam, voornaam, geboortedatum, adres</li>
+        <li><strong>Contactgegevens:</strong> e-mail, telefoon, postadres</li>
+        <li><strong>Financiële gegevens:</strong> inkomsten, professionele situatie, bankgeschiedenis</li>
+        <li><strong>Navigatiegegevens:</strong> cookies, verbindingslogs, IP-adres</li>
+      </ul>
+
+  data_usage:
+    title: "Gebruik van gegevens"
+    content: |
+      Uw persoonlijke gegevens worden gebruikt voor:
+      <ul>
+        <li>Het verlenen van gepersonaliseerde bankdiensten</li>
+        <li>Het beheer van uw klantrelatie</li>
+        <li>De naleving van wettelijke en regelgevingsverplichtingen</li>
+        <li>De preventie van fraude en witwassen</li>
+        <li>De verbetering van onze diensten</li>
+      </ul>
+
+  data_sharing:
+    title: "Delen van gegevens"
+    content: |
+      Wij delen uw gegevens alleen met:
+      <ul>
+        <li>Onze geautoriseerde bankpartners</li>
+        <li>Financiële toezichtsautoriteiten</li>
+        <li>Onze technische dienstverleners</li>
+        <li>Organisaties voor fraudebestrijding</li>
+      </ul>
+      Altijd met respect voor het bankgeheim en de AVG-regelgeving.
+
+  user_rights:
+    title: "Uw rechten"
+    content: |
+      Conform de AVG beschikt u over de volgende rechten:
+      <ul>
+        <li><strong>Recht op toegang:</strong> uw persoonlijke gegevens raadplegen</li>
+        <li><strong>Recht op rectificatie:</strong> uw informatie corrigeren</li>
+        <li><strong>Recht op verwijdering:</strong> uw gegevens verwijderen</li>
+        <li><strong>Recht van bezwaar:</strong> bepaalde verwerkingen weigeren</li>
+        <li><strong>Recht op overdraagbaarheid:</strong> uw gegevens ophalen</li>
+      </ul>
+
+  contact:
+    title: "Contact"
+    content: |
+      Om uw rechten uit te oefenen of voor vragen over dit privacybeleid,
+      neem contact op met onze functionaris voor gegevensbescherming op het adres %email%.

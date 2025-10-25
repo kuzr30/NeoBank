@@ -1,0 +1,147 @@
+banking_credits:
+  # Header section
+  header:
+    title: "Mes crédits"
+    breadcrumb_home: "Accueil"
+    breadcrumb_banking: "Services bancaires"
+    breadcrumb_current: "Mes crédits"
+    last_update: "Dernière mise à jour"
+
+  # Credit statistics section
+  statistics:
+    total_credits: "Crédits actifs"
+    total_amount: "Montant total emprunté"
+    total_remaining: "Capital restant dû"
+    average_rate: "Taux moyen"
+    available_balance: "Solde total disponible"
+    monthly_payments: "Mensualités totales"
+
+  # Available credits section  
+  available_credits:
+    title: "Crédits disponibles"
+    subtitle: "Montants débloqués et disponibles à l'utilisation"
+    view_all: "Voir tous les crédits disponibles"
+    from: "À partir de"
+    rate: "Taux à partir de %"
+    simulate: "Simuler"
+    apply: "Demander"
+    duration: "Sur %d mois"
+    credit_account: "Compte Crédit"
+    available: "Disponible"
+    funds_released: "Fonds débloqués"
+    transfer_to_main: "Virer sur mon compte principal"
+
+  # Active credits section
+  active_credits:
+    title: "Mes crédits actifs"
+    remaining_capital: "Capital restant"
+    monthly_payment: "Mensualité"
+    next_payment: "Prochaine échéance"
+    progress: "Progression"
+    view_details: "Voir détails"
+    view_amortization: "Voir amortissement"
+    real_estate: "Bien immobilier"
+
+  # Applications section
+  applications:
+    title: "Mes demandes"
+    reference: "Demande n°"
+    date: "Date de demande"
+    amount: "Montant"
+    status: "Statut"
+    actions: "Actions"
+    view: "Voir"
+    no_applications: "Aucune demande de crédit"
+    credit_type: "Type de crédit"
+
+  # Empty state
+  empty_state:
+    title: "Aucun crédit actif"
+    message: "Vous n'avez actuellement aucun crédit en cours. Découvrez nos offres de crédit adaptées à vos besoins."
+
+  # Pagination
+  pagination:
+    previous: "Précédent"
+    next: "Suivant"
+    page_info: "Page {{ page }} sur {{ total }} ({{ count }} demandes)"
+
+  # Labels - Common labels used across sections
+  labels:
+    initial_capital: "Capital initial"
+    duration: "Durée"
+    months: "mois"
+    start_date: "Date de début"
+    status: "Statut"
+    type: "Type de crédit"
+    reference: "Référence"
+    monthly_payment_short: "Mensualité"
+    browse_offers: "Parcourir les offres"
+    property: "Bien immobilier"
+    status_fund_disbursed: "Fonds débloqué"
+    available: "Disponible"
+    transfer_to_main: "Virer sur mon compte principal"
+    percent_repaid: "%d%% remboursé"
+    
+  # Credit info
+  credit:
+    amount: "Montant"
+    remaining_amount: "Capital restant"
+    monthly_payment: "Mensualité"
+    interest_rate: "Taux d'intérêt"
+    duration: "Durée"
+    start_date: "Date de début"
+    end_date: "Date de fin"
+    next_payment: "Prochaine échéance"
+    status: "Statut"
+    type: "Type de crédit"
+    
+  # Credit types
+  types:
+    personal: "Crédit personnel"
+    mortgage: "Crédit immobilier"
+    auto: "Crédit auto"
+    consumer: "Crédit à la consommation"
+    professional: "Crédit professionnel"
+    student: "Crédit étudiant"
+    revolving: "Crédit renouvelable"
+    
+  # Status
+  status:
+    active: "Actif"
+    pending: "En attente"
+    approved: "Approuvé"
+    rejected: "Rejeté"
+    completed: "Terminé"
+    suspended: "Suspendu"
+    contract_sent: "Contrat envoyé"
+    contract_signed: "Contrat signé"
+    funds_disbursed: "Fonds débloqués"
+    
+  # Actions
+  actions:
+    view_details: "Voir les détails"
+    view_amortization: "Voir l'amortissement"
+    simulate_credit: "Simuler un crédit"
+    apply_credit: "Demander un crédit"
+    download_contract: "Télécharger le contrat"
+    make_payment: "Effectuer un paiement"
+    
+  # Simulation form
+  simulation:
+    amount_label: "Montant souhaité"
+    duration_label: "Durée en mois"
+    purpose_label: "Objet du crédit"
+    calculate: "Calculer"
+    results_title: "Résultats de la simulation"
+    monthly_payment_result: "Mensualité estimée"
+    total_cost: "Coût total du crédit"
+    
+  # Messages
+  messages:
+    no_credits: "Aucun crédit en cours"
+    no_applications: "Aucune demande en cours"
+    access_denied: "Accès refusé à ce crédit"
+    simulation_success: "Simulation calculée avec succès"
+    
+  # Currency
+  currency: "€"

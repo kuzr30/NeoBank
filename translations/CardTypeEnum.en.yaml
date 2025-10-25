@@ -1,0 +1,42 @@
+# ENGLISH TRANSLATION - Translated from French
+# Card type enumeration translation file
+# Domain: CardTypeEnum
+# Language: English (en)
+
+CardTypeEnum:
+  # Card types - Labels
+  labels:
+    debit: "Debit card"
+    credit: "Credit card" 
+    prepaid: "Prepaid card"
+  
+  # Card types - Descriptions
+  descriptions:
+    debit: "Debited directly from your account"
+    credit: "With payment facility"
+    prepaid: "Rechargeable according to your needs"
+  
+  # Additional information
+  info:
+    title: "Bank card types"
+    subtitle: "Choose the card type that suits you"
+    
+  # Form messages
+  form:
+    placeholder: "Select a card type"
+    help: "The card type determines how it works"
+    
+  # Advantages by type
+  advantages:
+    debit:
+      - "Full control of your expenses"
+      - "No risk of debt"
+      - "Immediate use"
+    credit:
+      - "Payment facility"
+      - "Revolving credit"
+      - "Flexible repayment"
+    prepaid:
+      - "Perfect budget control"
+      - "No overdraft possible"
+      - "Ideal for gifts"

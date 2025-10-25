@@ -1,0 +1,109 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('account_creation_follow_up.title', {}, 'email_templates') }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('account_creation_follow_up.greeting', {'name': name}, 'email_templates') }}</h2>
+    
+    <p class="content-text">
+        {{ tp('account_creation_follow_up.intro', {}, 'email_templates') }}
+    </p>
+
+    <!-- Statut de la demande -->
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #2c3e50;">✓ {{ tp('account_creation_follow_up.status_title', {}, 'email_templates') }}</h3>
+        <p style="margin-bottom: 0; color: #000000; font-size: 15px;">
+            {{ tp('account_creation_follow_up.status_description', {}, 'email_templates') }}
+        </p>
+    </div>
+
+    <!-- Action requise -->
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #2c3e50;">{{ tp('account_creation_follow_up.action_required_title', {}, 'email_templates') }}</h3>
+        <p style="margin-bottom: 10px; color: #000000; font-size: 15px;">
+            {{ tp('account_creation_follow_up.action_required_intro', {}, 'email_templates') }}
+        </p>
+        
+        <div style="margin: 20px 0; padding-left: 15px; border-left: 3px solid #2c3e50;">
+            <p style="margin: 8px 0; color: #000000;">
+                <strong>1.</strong> {{ tp('account_creation_follow_up.step_1', {}, 'email_templates') }}
+            </p>
+            <p style="margin: 8px 0; color: #000000;">
+                <strong>2.</strong> {{ tp('account_creation_follow_up.step_2', {}, 'email_templates') }}
+            </p>
+            <p style="margin: 8px 0; color: #000000;">
+                <strong>3.</strong> {{ tp('account_creation_follow_up.step_3', {}, 'email_templates') }}
+            </p>
+        </div>
+    </div>
+
+    <!-- Explication KYC et réglementaire -->
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #2c3e50;">📋 {{ tp('account_creation_follow_up.kyc_title', {}, 'email_templates') }}</h3>
+        <p style="margin-bottom: 10px; color: #000000; font-size: 15px;">
+            {{ tp('account_creation_follow_up.kyc_intro', {}, 'email_templates') }}
+        </p>
+        
+        <p style="margin: 10px 0; color: #000000; font-size: 14px;">
+            <strong>{{ tp('account_creation_follow_up.kyc_why', {}, 'email_templates') }}</strong>
+        </p>
+        
+        <ul style="margin: 10px 0; padding-left: 25px; color: #000000; font-size: 14px;">
+            <li style="margin: 6px 0;">{{ tp('account_creation_follow_up.kyc_reason_1', {}, 'email_templates') }}</li>
+            <li style="margin: 6px 0;">{{ tp('account_creation_follow_up.kyc_reason_2', {}, 'email_templates') }}</li>
+            <li style="margin: 6px 0;">{{ tp('account_creation_follow_up.kyc_reason_3', {}, 'email_templates') }}</li>
+            <li style="margin: 6px 0;">{{ tp('account_creation_follow_up.kyc_reason_4', {}, 'email_templates') }}</li>
+        </ul>
+    </div>
+
+    <!-- Documents requis -->
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #2c3e50;">📄 {{ tp('account_creation_follow_up.documents_title', {}, 'email_templates') }}</h3>
+        <p style="margin-bottom: 10px; color: #000000; font-size: 15px;">
+            {{ tp('account_creation_follow_up.documents_intro', {}, 'email_templates') }}
+        </p>
+        
+        <ul style="margin: 10px 0; padding-left: 25px; color: #000000; font-size: 14px;">
+            <li style="margin: 6px 0;">{{ tp('account_creation_follow_up.document_1', {}, 'email_templates') }}</li>
+            <li style="margin: 6px 0;">{{ tp('account_creation_follow_up.document_2', {}, 'email_templates') }}</li>
+            <li style="margin: 6px 0;">{{ tp('account_creation_follow_up.document_3', {}, 'email_templates') }}</li>
+        </ul>
+    </div>
+
+    {% if customMessage %}
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #2c3e50;">💬 {{ tp('account_creation_follow_up.custom_message_title', {}, 'email_templates') }}</h3>
+        <p style="margin: 0; color: #000000; font-size: 16px;">{{ customMessage }}</p>
+    </div>
+    {% endif %}
+
+    <!-- Bouton principal - Création de compte -->
+    <div style="text-align: center; margin: 50px 0; padding: 0 20px;">
+        <a href="{{ loginUrl }}" style="display: inline-block; padding: 18px 45px; background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: #ffffff; font-size: 17px; font-weight: 600; text-decoration: none; text-align: center; border-radius: 10px; box-shadow: 0 8px 20px rgba(44, 62, 80, 0.25); min-width: 260px; letter-spacing: 0.3px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+            {{ tp('account_creation_follow_up.create_account_button', {}, 'email_templates') }}
+        </a>
+    </div>
+
+    <!-- Note importante sur les délais -->
+    <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 30px 0;">
+        <p style="margin: 0; color: #000000; font-size: 14px; text-align: center;">
+            <strong>⏱️ {{ tp('account_creation_follow_up.processing_time_title', {}, 'email_templates') }}</strong><br>
+            <span style="color: #666;">{{ tp('account_creation_follow_up.processing_time_text', {}, 'email_templates') }}</span>
+        </p>
+    </div>
+
+    <p class="content-text">
+        {{ tp('account_creation_follow_up.closing', {}, 'email_templates') }}
+    </p>
+
+    <p class="content-text" style="margin-bottom: 0;">
+        {{ tp('account_creation_follow_up.signature', {}, 'email_templates')|raw }}
+    </p>
+
+    <!-- Footer réglementaire -->
+    <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0;">
+        <p style="margin: 5px 0; color: #757575; font-size: 11px; line-height: 1.4;">
+            {{ tp('account_creation_follow_up.legal_notice', {}, 'email_templates') }}
+        </p>
+    </div>
+{% endblock %}

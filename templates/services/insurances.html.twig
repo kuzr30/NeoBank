@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Assurances | SEDEF BANK{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/insurance.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="insurance">
+    <!-- Hero Section -->
+    {% include 'services/components/_insurance_hero.html.twig' %}
+
+    <!-- Section Types d'Assurance -->
+    {% include 'services/components/insurance_types.html.twig' %}
+
+    <!-- Section Avantages de nos assurance -->
+    {% include 'services/components/insurance_benefits.html.twig' %}
+
+    <!-- Section Processus -->
+    {% include 'services/components/insurance_process.html.twig' %}
+
+    <!-- Section Contact & CTA Final -->
+    {% include 'services/components/insurance_contact_cta.html.twig' %}
+</div>
+{% endblock %}

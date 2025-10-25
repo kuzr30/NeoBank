@@ -1,0 +1,102 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_contract_ready.title', {}, 'email_contract_ready') }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('email_contract_ready.content.page_title', {}, 'email_contract_ready') }}</h2>
+    
+    <p class="content-text">
+        {{ tp('email_contract_ready.content.greeting', {}, 'email_contract_ready') }}
+    </p>
+
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #2e7d32;">{{ tp('email_contract_ready.content.contract_finalized.title', {}, 'email_contract_ready') }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {{ tp('email_contract_ready.content.contract_finalized.description', {}, 'email_contract_ready') }}
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_contract_ready.content.contract_details.title', {}, 'email_contract_ready') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: linear-gradient(135deg, #1976d2 0%, #2196f3 100%); color: white; text-align: center; font-weight: 700; font-size: 18px; border-radius: 6px;">
+                    {{ tp('email_contract_ready.content.contract_details.contract_number', {contractNumber: referenceNumber}, 'email_contract_ready') }}
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 16px 20px; background: #f8f9fa; color: #424242; text-align: center; font-weight: 500; border-top: 1px solid #e9ecef;">
+                    {{ tp('email_contract_ready.content.contract_details.document_info', {}, 'email_contract_ready') }}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ tp('email_contract_ready.content.signature_process.title', {}, 'email_contract_ready') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 10px 16px; background: #fff8e1; border-left: 4px solid #f57c00; border-bottom: 1px solid #ffcc02;">
+                    <strong style="color: #e65100;">{{ tp('email_contract_ready.content.signature_process.step_1.title', {}, 'email_contract_ready') }}</strong><br>
+                    <span style="color: #424242;">{{ tp('email_contract_ready.content.signature_process.step_1.description', {}, 'email_contract_ready') }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 16px; background: #f9f9f9; border-left: 4px solid #f57c00; border-bottom: 1px solid #ffcc02;">
+                    <strong style="color: #e65100;">{{ tp('email_contract_ready.content.signature_process.step_2.title', {}, 'email_contract_ready') }}</strong><br>
+                    <span style="color: #424242;">{{ tp('email_contract_ready.content.signature_process.step_2.description', {}, 'email_contract_ready') }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 16px; background: #fff8e1; border-left: 4px solid #f57c00; border-bottom: 1px solid #ffcc02;">
+                    <strong style="color: #e65100;">{{ tp('email_contract_ready.content.signature_process.step_3.title', {}, 'email_contract_ready') }}</strong><br>
+                    <span style="color: #424242;">{{ tp('email_contract_ready.content.signature_process.step_3.description', {}, 'email_contract_ready') }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 16px; background: #f9f9f9; border-left: 4px solid #f57c00;">
+                    <strong style="color: #e65100;">{{ tp('email_contract_ready.content.signature_process.step_4.title', {}, 'email_contract_ready') }}</strong><br>
+                    <span style="color: #424242;">{{ tp('email_contract_ready.content.signature_process.step_4.description', {}, 'email_contract_ready') }}</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_contract_ready.content.return_methods.title', {}, 'email_contract_ready') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 12px 16px; background: #e3f2fd; font-weight: 600; color: #0d47a1; width: 35%; border-right: 1px solid #bbdefb;">{{ tp('email_contract_ready.content.return_methods.email_secure', {}, 'email_contract_ready') }}</td>
+                <td style="padding: 12px 16px; color: #424242;">{{ tp('email_contract_ready.content.return_methods.email_description', {}, 'email_contract_ready') }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px 16px; background: #f5f5f5; font-weight: 600; color: #0d47a1; border-right: 1px solid #bbdefb;">{{ tp('email_contract_ready.content.return_methods.postal_mail', {}, 'email_contract_ready') }}</td>
+                <td style="padding: 12px 16px; color: #424242;">{{ tp('email_contract_ready.content.return_methods.postal_description', {}, 'email_contract_ready') }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px 16px; background: #e3f2fd; font-weight: 600; color: #0d47a1; border-right: 1px solid #bbdefb;">{{ tp('email_contract_ready.content.return_methods.agency_deposit', {}, 'email_contract_ready') }}</td>
+                <td style="padding: 12px 16px; color: #424242;">{{ tp('email_contract_ready.content.return_methods.agency_description', {}, 'email_contract_ready') }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #2e7d32;">{{ tp('email_contract_ready.content.express_processing.title', {}, 'email_contract_ready') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #e8f5e8; border-left: 4px solid #2e7d32; color: #1b5e20; line-height: 1.6;">
+                    <strong>{{ tp('email_contract_ready.content.express_processing.processing_time', {}, 'email_contract_ready') }}</strong><br>
+                    {{ tp('email_contract_ready.content.express_processing.processing_description', {}, 'email_contract_ready') }}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p class="content-text">
+        {{ tp('email_contract_ready.content.support_text', {}, 'email_contract_ready') }}
+    </p>
+
+    <p class="footer-text">
+        {% if translationService is defined %}{{ translationService.tpWithCompany('email_contract_ready.content.footer', {}, 'email_contract_ready') }}{% else %}{{ tp_with_company('email_contract_ready.content.footer', {}, 'email_contract_ready') }}{% endif %}
+    </p>
+{% endblock %}

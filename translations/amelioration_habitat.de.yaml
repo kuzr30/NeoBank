@@ -1,0 +1,106 @@
+amelioration_habitat:
+  page:
+    title: "Kredit für Wohnungsverbesserung"
+    description: "Finanzieren Sie alle Ihre Wohnungsverbesserungsarbeiten mit unserem speziellen Kredit. Vorteilhafte Zinssätze und schrittweise Auszahlung."
+
+  hero:
+    title: "Kredit für Wohnungsverbesserung"
+    subtitle: "Verwandeln Sie Ihr Zuhause nach Ihren Wünschen"
+    values:
+      taux: "{rate}% effektiver Jahreszins*"
+      montant: "120.000€"
+      duree: "20 Jahre"
+
+  section_1:
+    title: "Was ist ein Kredit für Wohnungsverbesserung?"
+    content:
+      paragraph_1: "Der Kredit für Wohnungsverbesserung ermöglicht es Ihnen, alle Ihre Projekte zur Verschönerung und Modernisierung Ihrer Wohnung zu finanzieren. Ob zur Renovierung, Erweiterung oder Verbesserung des Komforts Ihres Hauses."
+      paragraph_2: "Diese flexible Lösung passt sich allen Ihren Bedürfnissen an: von der einfachen Renovierung eines Zimmers bis zu großen Erweiterungs- oder Energieeffizienzarbeiten."
+
+  features:
+    montant: "Von 2.000€ bis 120.000€"
+    montant_detail: "Je nach Umfang Ihrer Arbeiten"
+    duree: "Von 1 Jahr bis 20 Jahre"
+    duree_detail: "Laufzeit angepasst an Ihr Budget"
+    taux: "Ab {rate}% effektiver Jahreszins*"
+    taux_detail: "Vorzugszins für Wohnen"
+    garantie: "Hypothek oder Bürgschaft"
+    garantie_detail: "Je nach Kreditsumme"
+
+  advantages:
+    taux_avantageux:
+      title: "Vorteilhafte Zinssätze:"
+      text: "Vorzugskonditionen für Wohnungsverbesserung"
+    usage_specialise:
+      title: "Spezieller Verwendungszweck:"
+      text: "Finanzierung speziell für Verbesserungsarbeiten"
+    deblocage_progressif:
+      title: "Schrittweise Auszahlung:"
+      text: "Mittel werden entsprechend dem Arbeitsfortschritt freigegeben"
+    accompagnement:
+      title: "Begleitung:"
+      text: "Persönliche Beratung für Ihre Projekte"
+    plus_value:
+      title: "Wertsteigerung:"
+      text: "Aufwertung Ihres Immobilienvermögens"
+
+  requirements:
+    conditions_emprunteur:
+      title: "Kreditnehmerbedingungen"
+      items:
+        proprietaire: "Eigentümer der zu verbessernden Wohnung sein"
+        revenus: "Stabile Einkommen nachweisen"
+        endettement: "Verschuldungsgrad unter 35%"
+        incidents: "Keine Eintragung in Zwischenfallsdateien"
+    conditions_projet:
+      title: "Projektbedingungen"
+      items:
+        travaux: "Arbeiten am Haupt- oder Zweitwohnsitz"
+        devis: "Detaillierte Kostenvoranschläge der Unternehmen"
+        normes: "Einhaltung geltender Normen"
+        professionnels: "Arbeiten von Fachleuten ausgeführt"
+
+  documents:
+    dossier_personnel:
+      title: "Persönliche Unterlagen"
+      items:
+        piece: "Gültiger Personalausweis"
+        domicile: "Aktueller Wohnsitznachweis"
+        bulletins: "3 letzte Gehaltsabrechnungen"
+        avis: "Einkommensteuerbescheid"
+    justificatifs_patrimoniaux:
+      title: "Vermögensnachweise"
+      items:
+        titre: "Eigentumsnachweis der Immobilie"
+        taxe: "Grundsteuer des laufenden Jahres"
+        releves: "Kontoauszüge"
+        tableau: "Tilgungsplan laufender Kredite"
+    documents_travaux:
+      title: "Arbeitsunterlagen"
+      items:
+        devis: "Detaillierte Kostenvoranschläge der Unternehmen"
+        permis: "Baugenehmigung falls erforderlich"
+        plans: "Pläne und Arbeitsbeschreibungen"
+        attestations: "Versicherungsbestätigungen der Unternehmen"
+
+  legal:
+    title: "Wichtige rechtliche Informationen"
+    taeg:
+      title: "*Effektiver Jahreszins:"
+      text: "Repräsentatives Beispiel: für einen Wohnungsverbesserungskredit von 60.000€ über 15 Jahre zum effektiven Jahreszins von 3,1% zahlen Sie 180 monatliche Raten von 416€ zurück, das entspricht einem Gesamtbetrag von 74.880€ (Kreditkosten: 14.880€)."
+    deblocage:
+      title: "Auszahlung:"
+      text: "Die Mittel werden schrittweise entsprechend dem Arbeitsfortschritt gegen Vorlage der Rechnungen ausgezahlt."
+    travaux:
+      title: "Arbeiten:"
+      text: "Verpflichtung zur Durchführung der angemeldeten Arbeiten innerhalb von 2 Jahren."
+    garanties:
+      title: "Sicherheiten:"
+      text: "Hypothek oder Bürgschaft je nach Betrag und Laufzeit des Darlehens."
+    retractation:
+      title: "Widerrufsfrist:"
+      text: "Sie haben 14 Tage Zeit, um nach Annahme des Angebots von Ihrem Kredit zurückzutreten."
+
+  cta:
+    title: "Verwandeln Sie Ihr Zuhause"
+    subtitle: "Finanzieren Sie Ihre Verbesserungsprojekte mit unserem speziellen Kredit"

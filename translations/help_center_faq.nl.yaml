@@ -1,0 +1,108 @@
+help_center_faq:
+  page:
+    title: "Veelgestelde Vragen - Helpcentrum %company_name%"
+    
+  hero:
+    title: "Veelgestelde Vragen"
+    subtitle: "Vind snel antwoorden op de meest gestelde vragen"
+    search:
+      placeholder: "Zoeken in FAQ..."
+      
+  sections:
+    main_title: "Vraag Categorieën"
+    
+    banking:
+      title: "Banking en Rekeningen"
+      questions:
+        account_creation:
+          question: "Hoe open ik een rekening bij %company_name%?"
+          answer: "U kunt online binnen enkele minuten een rekening openen. U heeft alleen een geldig identiteitsbewijs en adresverificatie nodig."
+        account_types:
+          question: "Welke soorten rekeningen biedt u aan?"
+          answer: "Wij bieden lopende rekeningen, spaarrekeningen, zakelijke rekeningen en jongerenrekeningen met specifieke voordelen."
+        fees:
+          question: "Wat zijn uw bankkosten?"
+          answer: "Onze kosten zijn transparant en concurrerend. Raadpleeg ons gedetailleerde tarievenoverzicht op onze website of neem contact op met een adviseur."
+        mobile_app:
+          question: "Hoe download ik de mobiele app?"
+          answer: "De %company_name% app is gratis beschikbaar op de App Store en Google Play. Zoek naar '%company_name%' en download de officiële app."
+          
+    transfers:
+      title: "Overschrijvingen en Betalingen"
+      questions:
+        domestic_transfer:
+          question: "Hoe voer ik een nationale overschrijving uit?"
+          answer: "Log in op uw klantenportaal of gebruik de mobiele app. Selecteer 'Overschrijvingen' en volg de begeleide stappen."
+        international_transfer:
+          question: "Kan ik internationale overschrijvingen maken?"
+          answer: "Ja, wij bieden SEPA en internationale overschrijvingen aan met preferentiële tarieven voor onze premium klanten."
+        transfer_limits:
+          question: "Wat zijn de overschrijvingslimieten?"
+          answer: "Limieten variëren per rekeningtype. Standaard: €3000/dag voor online overschrijvingen, aanpasbaar naar uw behoeften."
+        payment_cards:
+          question: "Hoe bestel ik een nieuwe kaart?"
+          answer: "Ga naar uw klantenportaal, sectie 'Mijn kaarten', en klik op 'Kaart bestellen'. Levering duurt 5-7 werkdagen."
+          
+    security:
+      title: "Beveiliging en Authenticatie"
+      questions:
+        two_factor:
+          question: "Hoe activeer ik tweefactorauthenticatie?"
+          answer: "In uw beveiligingsinstellingen activeert u de '2FA' optie. U kunt een authenticatie-app of SMS gebruiken."
+        password_reset:
+          question: "Ik ben mijn wachtwoord vergeten, wat nu?"
+          answer: "Klik op 'Wachtwoord vergeten' op de inlogpagina. U ontvangt een email om uw wachtwoord opnieuw in te stellen."
+        account_blocked:
+          question: "Mijn account is geblokkeerd, hoe deblokkeer ik het?"
+          answer: "Neem onmiddellijk contact op met onze klantenservice op Téléphone of via de online chat om uw account snel te deblokkeren."
+        fraud_prevention:
+          question: "Hoe beschermen jullie tegen fraude?"
+          answer: "Wij gebruiken geavanceerde detectiesystemen, SSL-versleuteling en 24/7 monitoring om uw transacties te beschermen."
+          
+    credits:
+      title: "Kredieten en Financiering"
+      questions:
+        credit_application:
+          question: "Hoe dien ik een kredietaanvraag in?"
+          answer: "Gebruik onze online simulator om uw leencapaciteit in te schatten, dien vervolgens uw aanvraag in met de vereiste documenten."
+        credit_types:
+          question: "Welke soorten kredieten biedt u aan?"
+          answer: "Persoonlijk krediet, autokrediet, hypotheek, verbouwingskrediet en zakelijke financieringsoplossingen."
+        approval_time:
+          question: "Hoe lang duurt een kredietbeoordeling?"
+          answer: "Principe-antwoord binnen 48 uur voor persoonlijke kredieten, 7-15 dagen voor hypotheken afhankelijk van complexiteit."
+        early_repayment:
+          question: "Kan ik mijn krediet vervroegd afbetalen?"
+          answer: "Ja, vervroegde terugbetaling is mogelijk met preferentiële voorwaarden zoals beschreven in uw kredietcontract."
+          
+    technical:
+      title: "Technische Ondersteuning"
+      questions:
+        app_issues:
+          question: "De app werkt niet, wat moet ik doen?"
+          answer: "Controleer uw internetverbinding, herstart de app of update deze. Als het probleem aanhoudt, neem contact op met support."
+        browser_compatibility:
+          question: "Welke browsers zijn compatibel?"
+          answer: "Chrome, Firefox, Safari, Edge in hun recente versies. Vermijd Internet Explorer voor een optimale ervaring."
+        data_security:
+          question: "Zijn mijn gegevens veilig?"
+          answer: "Absoluut. Wij respecteren de GDPR, versleutelen alle gegevens en delen nooit uw persoonlijke informatie."
+        maintenance:
+          question: "Wanneer vinden onderhoudswerken plaats?"
+          answer: "Gepland onderhoud vindt meestal plaats op zondag tussen 2:00 en 6:00 's ochtends, met voorafgaande melding."
+          
+    contact:
+      title: "Contact en Kantoren"
+      questions:
+        customer_service:
+          question: "Hoe neem ik contact op met klantenservice?"
+          answer: "Telefoon: Téléphone (7d/7, 8u-20u), Online chat op de website, Email: Email"
+        branch_appointment:
+          question: "Hoe maak ik een afspraak op kantoor?"
+          answer: "Reserveer online via uw klantenportaal, telefonisch of direct op kantoor volgens uw beschikbaarheid."
+        complaint:
+          question: "Hoe dien ik een klacht in?"
+          answer: "Klachtenformulier in uw klantenportaal, per post of bij uw vaste adviseur."
+        opening_hours:
+          question: "Wat zijn de openingstijden?"
+          answer: "Ma-Vr: 9u-17u, Za: 9u-12u. Uitgebreide uren voor sommige kantoren. Controleer specifieke tijden op onze website."

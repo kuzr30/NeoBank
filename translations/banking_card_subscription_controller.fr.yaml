@@ -1,0 +1,61 @@
+banking_card_subscription_controller:
+  # Interface utilisateur
+  ui:
+    confirm_card_title: "Confirmer votre"
+    advantages_title: "Avantages inclus"
+    limits_title: "Plafonds"
+    request_card_button: "Demander cette carte"
+    cancel_button: "Annuler"
+  
+  flash:
+    kyc_required: "Vous devez compléter votre vérification d'identité pour accéder aux services de cartes bancaires."
+    existing_card_or_subscription: "Vous avez déjà une carte ou une demande en cours."
+    no_active_account: "Vous devez avoir un compte actif pour souscrire une carte."
+    subscription_success: "Votre demande de souscription a été enregistrée avec succès. Vous recevrez une notification dès qu'elle sera traitée."
+    subscription_error: "Une erreur est survenue lors de l'enregistrement de votre demande. Veuillez réessayer."
+    access_denied_subscription: "Accès refusé à cette souscription."
+    cannot_cancel_subscription: "Seules les souscriptions en attente peuvent être annulées."
+    invalid_security_token: "Token de sécurité invalide."
+    subscription_cancelled: "Votre demande de souscription a été annulée avec succès."
+    cancellation_error: "Une erreur est survenue lors de l'annulation."
+  card_info:
+    classic:
+      title: "Carte Classic"
+      description: "Idéale pour débuter, gratuite la première année"
+      price: "Gratuite la première année"
+      features:
+        - "Paiements sans contact"
+        - "Retraits gratuits dans toute l'Europe"
+        - "Assurance achats incluse"
+        - "Application mobile dédiée"
+      limits:
+        - "Plafond de retrait : 300€/jour"
+        - "Plafond de paiement : 1 000€/jour"
+    gold:
+      title: "Carte Gold"
+      description: "Le choix le plus populaire pour un usage quotidien"
+      price: "5€ par mois"
+      features:
+        - "Tous les avantages de la carte Classic"
+        - "Assurance voyage incluse"
+        - "Garantie extension de garantie"
+        - "Conciergerie 24h/24"
+        - "Remboursement cashback 1%"
+      limits:
+        - "Plafond de retrait : 500€/jour"
+        - "Plafond de paiement : 2 500€/jour"
+    platinum:
+      title: "Carte Platinum"
+      description: "Le summum de l'excellence bancaire"
+      price: "15€ par mois"
+      features:
+        - "Tous les avantages de la carte Gold"
+        - "Accès aux salons VIP aéroports"
+        - "Assurance voyage premium"
+        - "Conciergerie premium 24h/24"
+        - "Remboursement cashback 2%"
+        - "Gestionnaire de compte dédié"
+      limits:
+        - "Plafond de retrait : 1 000€/jour"
+        - "Plafond de paiement : 5 000€/jour"
+  automated_request: "Demande automatique via interface bancaire"

@@ -1,0 +1,219 @@
+# Traductions pour la simulation de crédit - Allemand
+credit_simulation:
+  title: "Kreditsimulator"
+  subtitle: "Berechnen Sie Ihren Kredit mit wenigen Klicks"
+  amortization_title: "Tilgungsplan"
+  
+  # Hero Section
+  hero:
+    title: "Kreditsimulator"
+    subtitle: "Erhalten Sie Ihre Schätzung in 2 Minuten"
+    description: "Berechnen Sie Ihre monatlichen Raten und entdecken Sie die besten Konditionen für Ihr Projekt"
+    disclaimer: "Kostenlose und unverbindliche Simulation"
+
+  # Formulaire
+  form:
+    amount:
+      label: "Kreditbetrag"
+      help: "Gewünschter Betrag zwischen 1.000 € und 500.000 €"
+      placeholder: "Z.B.: 50.000"
+      currency: "€"
+    
+    credit_type:
+      label: "Kreditart"
+      help: "Wählen Sie die für Ihr Projekt geeignete Kreditart"
+      placeholder: "Wählen Sie eine Kreditart"
+    duration:
+      label: "Kreditlaufzeit"
+      help: "Gewünschte Rückzahlungsdauer"
+      placeholder: "Wählen Sie eine Laufzeit"
+    duration_unit:
+      label: "Laufzeiteinheit"
+      help: "Monate oder Jahre"
+    rate_info: "Richtsatz:"
+    calculate_button: "Meine monatliche Rate berechnen"
+    calculating: "Berechnung läuft..."
+  # Types de crédit
+  credit_types:
+    immobilier:
+      label: "Immobilienkredit"
+      description: "Finanzierung für den Kauf einer Immobilie"
+    auto:
+      label: "Autokredit"
+      description: "Finanzierung für den Kauf eines Fahrzeugs"
+    consommation:
+      label: "Verbraucherkredit"
+      description: "Kredit für Ihre persönlichen Projekte"
+    travaux:
+      label: "Renovierungskredit"
+      description: "Finanzierung für Ihre Renovierungsarbeiten"
+    professionnel:
+      label: "Geschäftskredit"
+      description: "Kredit für Ihre geschäftlichen Projekte"
+    personal:
+      label: "Privatkredit"
+      description: "Kredit ohne Verwendungsnachweis"
+    home_improvement:
+      label: "Renovierungskredit"
+    debt_consolidation:
+      label: "Kreditumschuldung"
+      description: "Zusammenfassung Ihrer bestehenden Kredite"
+    mortgage:
+      label: "Hypothekenkredit"
+      description: "Durch Hypothek gesicherter Kredit"
+    renouvelable:
+      label: "Revolvierender Kredit"
+      description: "Nach Belieben wiederverwendbare Geldreserve"
+    etudiant:
+      label: "Studentenkredit"
+      description: "Finanzierung des Hochschulstudiums"
+    relais:
+      label: "Zwischenkredit"
+      description: "Finanzielle Überbrückung bis zum Verkauf einer Immobilie"
+    microcredit:
+      label: "Persönlicher Mikrokredit"
+      description: "Kleine Beträge für Personen, die vom klassischen Bankkredit ausgeschlossen sind"
+    leasing:
+      label: "Leasing"
+      description: "Miete mit Kaufoption (Auto, Betriebsausstattung)"
+    voyage:
+      label: "Reisekredit"
+      description: "Finanzierung für Ihre Reiseprojekte"
+  # Unités de durée
+  duration_units:
+    months: "Monate"
+    years: "Jahre"
+  # Durées
+  durations:
+    twelve_months: "12 Monate"
+    twenty_four_months: "24 Monate" 
+    thirty_six_months: "3 Jahre"
+    forty_eight_months: "4 Jahre"
+    sixty_months: "5 Jahre"
+    seventy_two_months: "6 Jahre"
+    eighty_four_months: "7 Jahre"
+    ninety_six_months: "8 Jahre"
+    one_hundred_twenty_months: "10 Jahre"
+    one_hundred_eighty_months: "15 Jahre"
+    two_hundred_forty_months: "20 Jahre"
+    three_hundred_months: "25 Jahre"
+  # Résultats
+  results:
+    title: "Ihre Simulation"
+    success_title: "Simulation erfolgreich!"
+    monthly_payment: "Monatliche Rate"
+    total_amount: "Gesamtbetrag"
+    total_interest: "Kreditkosten"
+    rate: "Angewendeter Zinssatz"
+    duration: "Laufzeit"
+    summary:
+      title: "Zusammenfassung"
+      amount_borrowed: "Kreditbetrag"
+      monthly_payment: "Monatliche Rate"
+      duration: "Laufzeit"
+      rate: "Zinssatz"
+      total_cost: "Gesamtrückzahlungsbetrag"
+      total_interest: "Zinsen"
+      insurance_rate: "Versicherungssatz"
+      insurance_monthly: "davon Versicherung"
+      interest_monthly: "davon Zinsen"
+      insurance_total: "davon Versicherung"
+      interest_total: "davon Zinsen"
+      per_month: "/Monat"
+      per_year: "/Jahr"
+    actions:
+      apply: "Antrag stellen"
+      modify: "Simulation ändern"
+      amortization_table: "Tilgungsplan anzeigen"
+      save: "Speichern"
+      share: "Teilen"
+  # Tableau d'amortissement
+  amortization:
+    title: "Tilgungsplan"
+    subtitle: "Detaillierte Rückzahlung Monat für Monat"
+    back_to_simulation: "Zurück zur Simulation"
+    summary:
+      amount_borrowed: "Geliehenes Kapital"
+      monthly_payment: "Monatliche Rate"
+      total_interest: "Gesamtzinsen"
+      total_amount: "Gesamtbetrag"
+    table:
+      month: "Monat"
+      payment: "Monatliche Rate"
+      interest: "Zinsen"
+      principal: "Kapital"
+      balance: "Restkapital"
+      print: "Drucken"
+      download: "Herunterladen"
+      back: "Zurück"
+      show_amortization: "Tilgungsplan anzeigen"
+      apply_now: "Antrag stellen"
+  # Messages d'erreur
+  errors:
+    title: "Simulationsfehler"
+    invalid_data: "Ungültige Daten. Bitte überprüfen Sie Ihre Eingabe."
+    amount_required: "Der Betrag ist erforderlich"
+    amount_too_low: "Der Mindestbetrag beträgt 1.000 €"
+    amount_too_high: "Der Höchstbetrag beträgt 500.000 €"
+    duration_required: "Die Laufzeit ist erforderlich"
+    duration_too_low: "Die Mindestlaufzeit beträgt 12 Monate"
+    duration_too_high: "Die maximale Laufzeit hängt von der Kreditart ab"
+    credit_type_required: "Die Kreditart ist erforderlich"
+    invalid_credit_type: "Ungültige Kreditart"
+    calculation_error: "Fehler bei der Berechnung"
+    actions:
+      retry: "Erneut versuchen"
+      modify: "Parameter ändern"
+    tips:
+      title: "Tipps"
+      tip1: "Überprüfen Sie, dass der Betrag zwischen 1.000 € und 500.000 € liegt"
+      tip2: "Stellen Sie sicher, dass die Laufzeit für die Kreditart geeignet ist"
+      tip3: "Kontaktieren Sie einen Berater für hohe Beträge"
+      tip4: "Lesen Sie unsere Allgemeinen Geschäftsbedingungen für weitere Informationen"
+  # Messages légaux
+  legal:
+    title: "Rechtliche Informationen"
+    text: "Diese Simulation wird nur als Richtwert bereitgestellt. Die endgültigen Zinssätze und Bedingungen werden bei Ihrer Kreditanfrage festgelegt, vorbehaltlich der Annahme Ihres Dossiers."
+    credit_warning: "Ein Kredit verpflichtet Sie und muss zurückgezahlt werden. Überprüfen Sie Ihre Rückzahlungsfähigkeit, bevor Sie sich verpflichten."
+    licensed_bank: "Zugelassenes Kreditinstitut"
+    insurance_broker: "Versicherungsmakler"
+    badges:
+      acpr: "ACPR-zugelassen"
+      guarantee_fund: "Garantiefonds"
+      security: "Sichere Transaktionen"
+  # Messages de validation
+  validation:
+    processing: "Verarbeitung läuft..."
+    success: "Simulation erfolgreich berechnet"
+    time_estimate: "Geschätzte Zeit: 2 Minuten"
+  # Messages JavaScript
+  js:
+    errors:
+      incomplete_fields: "Bitte füllen Sie alle Felder korrekt aus."
+      calculation_error: "Fehler bei der Berechnung der Simulation"
+      invalid_amount: "Der eingegebene Betrag ist ungültig"
+      invalid_duration: "Die eingegebene Laufzeit ist ungültig"
+      
+    currency:
+      symbol: "€"
+      per_month: "€/Monat"
+    formatting:
+      zero_value: "0"
+      zero_currency: "0€"
+      zero_per_month: "0€/Monat"
+    console:
+      connected: "Kreditsimulations-Controller verbunden"
+      calculation_data: "Berechnung:"
+      calculation_error: "Fehler bei der Berechnung:"
+      requesting_rate: "Anfrage für personalisierten Zinssatz läuft..."
+      contact_advisor: "Kontaktieren Sie einen Berater für einen personalisierten Zinssatz"
+  # CTA Section
+  cta:
+    view_amortization_table: "Tilgungsplan anzeigen"
+    apply_for_credit: "Meinen Antrag stellen"
+    monthly_details: "Monatliche Details Ihrer Rückzahlung"
+  
+  # Termes communs
+  common:
+    months: "Monate"
+    years: "Jahre"

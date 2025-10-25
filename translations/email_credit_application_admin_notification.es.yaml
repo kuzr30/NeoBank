@@ -1,0 +1,40 @@
+email_credit_application_admin_notification:
+  title: "Nueva solicitud de crédito - #%applicationId%"
+  
+  content:
+    page_title: "Nueva solicitud de crédito"
+    subtitle: "Una nueva solicitud de crédito acaba de ser enviada y necesita su atención."
+    
+    request_details:
+      title: "Detalles de la solicitud"
+      request_number: "Número de solicitud:"
+      submission_date: "Fecha de envío:"
+    
+    client_info:
+      title: "👤 Información del cliente"
+      full_name: "Nombre completo:"
+      email: "Correo electrónico:"
+    
+    credit_details:
+      title: "Detalles del crédito"
+      amount_requested: "Importe solicitado:"
+      credit_type: "Tipo de crédito:"
+      duration: "Duración:"
+      duration_months: "%duration% meses"
+    
+    required_actions:
+      title: "Acciones requeridas"
+      review_within_24h: "Examinar el expediente en 24h"
+      verify_solvency: "Verificar la solvencia del cliente"
+      analyze_documents: "Analizar los documentos proporcionados"
+      make_decision: "Tomar una decisión en 3-5 días hábiles"
+    
+    view_admin_button: "📂 Ver en el admin"
+    contact_client_button: "Contactar al cliente"
+    
+    footer_note: "<strong>Nota:</strong> Esta notificación ha sido generada automáticamente. Por favor trate esta solicitud en los plazos establecidos para mantener la calidad del servicio."
+
+  logs:
+    credit_admin_notification_sent: "Notificación admin de crédito enviada para la solicitud #%applicationId%"
+    credit_admin_notification_failed: "Error al enviar la notificación admin de crédito"
+    credit_application_assigned: "Solicitud de crédito #%applicationId% asignada para examen"

@@ -1,0 +1,46 @@
+email_kyc_rejected:
+  title: "Identiteitsverificatie - Te corrigeren documenten"
+  
+  content:
+    page_title: "Update van uw identiteitsverificatie"
+    greeting: "Hallo <strong>%firstName%</strong>,"
+    
+    correction_required:
+      title: "Correctie vereist voor uw documenten"
+      message: "We hebben uw identiteitsverificatieaanvraag (KYC) onderzocht, maar sommige documenten vereisen correcties om uw activering te voltooien."
+    
+    rejection_reasons:
+      title: "Redenen voor gevraagde correctie"
+    
+    correction_process:
+      title: "Correctieprocedure"
+      step1: "1. Bekijk de gedetailleerde opmerkingen hierboven"
+      step2: "2. Bereid de gecorrigeerde documenten voor volgens de instructies"
+      step3: "3. Dien een nieuwe aanvraag in via uw klantenportaal"
+    
+    required_documents:
+      title: "Vereiste documenten voor verificatie"
+      identity_document: "Identiteitsbewijs"
+      identity_desc: "Nationale kaart, Paspoort, Rijbewijs (voor- en achterkant, leesbaar)"
+      income_proof: "Inkomensbewijs"
+      income_desc: "Loonstrook, Belastingaangifte (minder dan 3 maanden)"
+      address_proof: "Adresbewijs"
+      address_desc: "Factuur, Huurkwitantie (minder dan 3 maanden)"
+      verification_photo: "Verificatiefoto"
+      photo_desc: "Selfie met uw identiteitsbewijs (optioneel)"
+    
+    action_required:
+      title: "Actie vereist"
+      submit_button: "Nieuwe documenten indienen"
+      secure_process: "Veilig en vertrouwelijk proces"
+    
+    support:
+      title: "Ondersteuning en assistentie"
+      message: "Ons ondersteuningsteam staat tot uw beschikking om u te begeleiden in deze procedure. Aarzel niet om contact met ons op te nemen voor vragen betreffende de vereiste documenten."
+    
+    footer: "<strong>%company_name% - Compliance Afdeling</strong><br>Melding van KYC-documentcorrectie"
+
+  logs:
+    kyc_rejected_sent: "KYC-afwijzings-e-mail succesvol verzonden naar %email%"
+    kyc_rejected_failed: "Fout bij het verzenden van KYC-afwijzing naar %email%"
+    kyc_status_rejected: "KYC-status bijgewerkt voor %firstName% %lastName% - Afgewezen"

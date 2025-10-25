@@ -1,0 +1,191 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Opposition de carte bancaire{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .emergency-banner {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .card-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .card-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .opposition-status {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+        .status-pending { background-color: #ffeaa7; color: #2d3436; }
+        .status-processed { background-color: #00b894; color: white; }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <!-- Bannière d'urgence -->
+    <div class="emergency-banner">
+        <h2><i class="fas fa-exclamation-triangle"></i> OPPOSITION DE CARTE</h2>
+        <p class="mb-0">Bloquez immédiatement votre carte en cas de perte, vol ou utilisation frauduleuse</p>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <h3><i class="fas fa-credit-card"></i> Sélectionnez la carte à bloquer</h3>
+            
+            {% if active_cards|length > 0 %}
+                {% for card in active_cards %}
+                    <div class="card-item" onclick="window.location.href='{{ path('app_card_opposition_create', {id: card.id}) }}'">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h5>
+                                    {% if card.category == 'visa' %}
+                                        <i class="fab fa-cc-visa"></i> VISA
+                                    {% elseif card.category == 'mastercard' %}
+                                        <i class="fab fa-cc-mastercard"></i> MASTERCARD
+                                    {% endif %}
+                                    {{ card.cardType|title }}
+                                </h5>
+                                <div style="font-family: 'Courier New', monospace; font-size: 1.2em; letter-spacing: 2px;">
+                                    •••• •••• •••• {{ card.cardNumber|slice(-4) }}
+                                </div>
+                                <small>Compte: {{ card.account.accountNumber }}</small><br>
+                                <small>Expire le {{ card.expiryDate|date('m/Y') }}</small>
+                            </div>
+                            <div class="col-md-4 text-end">
+                                <i class="fas fa-arrow-right fa-2x"></i>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="alert alert-warning">
+                    <i class="fas fa-info-circle"></i>
+                    Vous n'avez aucune carte active pouvant faire l'objet d'une opposition.
+                </div>
+            {% endif %}
+        </div>
+        
+        <div class="col-lg-4">
+            <!-- Aide d'urgence -->
+            <div class="card border-danger">
+                <div class="card-header bg-danger text-white">
+                    <h5><i class="fas fa-phone"></i> Besoin d'aide immédiate ?</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Service client 24h/24 :</strong></p>
+                    <p class="h4 text-danger">📞 02/XXX.XX.XX</p>
+                    <hr>
+                    <p><strong>Opposition rapide :</strong></p>
+                    <a href="{{ path('app_card_opposition_emergency') }}" class="btn btn-danger btn-lg w-100">
+                        <i class="fas fa-ban"></i> Opposition d'urgence
+                    </a>
+                </div>
+            </div>
+
+            <!-- Guide opposition -->
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h6><i class="fas fa-question-circle"></i> Comment ça marche ?</h6>
+                </div>
+                <div class="card-body">
+                    <ol class="mb-0">
+                        <li>Sélectionnez votre carte</li>
+                        <li>Indiquez le motif (perte, vol, etc.)</li>
+                        <li>Décrivez les circonstances</li>
+                        <li><strong>Blocage immédiat</strong> de la carte</li>
+                        <li>Demande automatique de remplacement</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Historique des oppositions -->
+    {% if opposition_history|length > 0 %}
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3><i class="fas fa-history"></i> Historique de mes oppositions</h3>
+                
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Référence</th>
+                                <th>Carte</th>
+                                <th>Motif</th>
+                                <th>Date</th>
+                                <th>Statut</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for opposition in opposition_history %}
+                                <tr>
+                                    <td><code>{{ opposition.reference }}</code></td>
+                                    <td>
+                                        {% if opposition.card.category == 'visa' %}
+                                            <i class="fab fa-cc-visa text-primary"></i>
+                                        {% elseif opposition.card.category == 'mastercard' %}
+                                            <i class="fab fa-cc-mastercard text-warning"></i>
+                                        {% endif %}
+                                        •••• {{ opposition.card.cardNumber|slice(-4) }}
+                                    </td>
+                                    <td>
+                                        {% if opposition.reason == 'lost' %}
+                                            <i class="fas fa-search text-warning"></i> Perdue
+                                        {% elseif opposition.reason == 'stolen' %}
+                                            <i class="fas fa-user-ninja text-danger"></i> Volée
+                                        {% elseif opposition.reason == 'compromised' %}
+                                            <i class="fas fa-shield-alt text-danger"></i> Compromise
+                                        {% elseif opposition.reason == 'fraudulent_activity' %}
+                                            <i class="fas fa-exclamation-triangle text-danger"></i> Fraude
+                                        {% elseif opposition.reason == 'damaged' %}
+                                            <i class="fas fa-tools text-secondary"></i> Endommagée
+                                        {% else %}
+                                            <i class="fas fa-question text-secondary"></i> Autre
+                                        {% endif %}
+                                    </td>
+                                    <td>{{ opposition.createdAt|date('d/m/Y H:i') }}</td>
+                                    <td>
+                                        <span class="opposition-status status-{{ opposition.status }}">
+                                            {% if opposition.status == 'pending' %}
+                                                <i class="fas fa-clock"></i> En traitement
+                                            {% elseif opposition.status == 'processed' %}
+                                                <i class="fas fa-check"></i> Traitée
+                                            {% endif %}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <a href="{{ path('app_card_opposition_show', {id: opposition.id}) }}" 
+                                           class="btn btn-outline-primary btn-sm">
+                                            <i class="fas fa-eye"></i> Détails
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

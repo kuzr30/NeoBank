@@ -1,0 +1,526 @@
+<style>
+/* Transfer (Virements) Specific Styles */
+.banking__transfer-actions {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 20px !important;
+    margin-bottom: 32px !important;
+}
+
+.banking__action-card {
+    background: #ffffff !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    text-align: center !important;
+    transition: all 0.2s ease !important;
+    cursor: pointer !important;
+}
+
+.banking__action-card:hover {
+    border-color: #0066cc !important;
+    box-shadow: 0 4px 16px rgba(0,102,204,0.1) !important;
+    transform: translateY(-2px) !important;
+}
+
+.banking__action-icon-wrapper {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 16px auto !important;
+}
+
+.banking__action-icon-wrapper--transfer {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+}
+
+.banking__action-icon-wrapper--recurring {
+    background: linear-gradient(135deg, #10b981, #059669) !important;
+}
+
+.banking__action-icon-wrapper--instant {
+    background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+}
+
+.banking__action-icon-wrapper--beneficiary {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed) !important;
+}
+
+.banking__action-icon-large {
+    width: 24px !important;
+    height: 24px !important;
+    color: white !important;
+}
+
+.banking__action-title {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 8px !important;
+}
+
+.banking__action-description {
+    font-size: 13px !important;
+    color: #7f8c8d !important;
+    line-height: 1.5 !important;
+    margin-bottom: 20px !important;
+}
+
+.banking__action-btn-card {
+    width: 100% !important;
+    padding: 10px 16px !important;
+    background: #0066cc !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: background 0.2s ease !important;
+}
+
+.banking__action-btn-card:hover {
+    background: #0052a3 !important;
+}
+
+.banking__transfer-type {
+    padding: 4px 8px !important;
+    border-radius: 4px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+}
+
+.banking__transfer-type--received {
+    background: rgba(39, 174, 96, 0.1) !important;
+    color: #27ae60 !important;
+}
+
+.banking__transfer-type--sent {
+    background: rgba(231, 76, 60, 0.1) !important;
+    color: #e74c3c !important;
+}
+
+.banking__transfer-type--internal {
+    background: rgba(52, 152, 219, 0.1) !important;
+    color: #3498db !important;
+}
+
+.banking__transfer-type--instant {
+    background: rgba(245, 158, 11, 0.1) !important;
+    color: #f59e0b !important;
+}
+
+.banking__beneficiary-detail {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+}
+
+.banking__beneficiary-name {
+    font-weight: 500 !important;
+    color: #2c3e50 !important;
+}
+
+.banking__beneficiary-account {
+    font-size: 12px !important;
+    color: #7f8c8d !important;
+    font-family: monospace !important;
+}
+
+.banking__transfer-reason {
+    font-size: 13px !important;
+    color: #7f8c8d !important;
+    font-style: italic !important;
+}
+
+.banking__beneficiaries-section {
+    margin-bottom: 32px !important;
+}
+
+.banking__beneficiaries-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 20px !important;
+}
+
+.banking__beneficiary-card {
+    background: #ffffff !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    transition: all 0.2s ease !important;
+    cursor: pointer !important;
+}
+
+.banking__beneficiary-card:hover {
+    border-color: #0066cc !important;
+    box-shadow: 0 4px 16px rgba(0,102,204,0.1) !important;
+}
+
+.banking__beneficiary-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin-bottom: 12px !important;
+}
+
+.banking__beneficiary-avatar {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    background: linear-gradient(135deg, #0066cc, #3b82f6) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: white !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+}
+
+.banking__beneficiary-info {
+    flex: 1 !important;
+}
+
+.banking__beneficiary-card-name {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 4px !important;
+}
+
+.banking__beneficiary-bank {
+    font-size: 12px !important;
+    color: #7f8c8d !important;
+}
+
+.banking__beneficiary-iban {
+    font-size: 12px !important;
+    color: #7f8c8d !important;
+    font-family: monospace !important;
+    margin-bottom: 12px !important;
+}
+
+.banking__beneficiary-last-transfer {
+    font-size: 12px !important;
+    color: #7f8c8d !important;
+    margin-bottom: 16px !important;
+}
+
+.banking__beneficiary-actions {
+    display: flex !important;
+    gap: 8px !important;
+}
+
+.banking__beneficiary-btn {
+    flex: 1 !important;
+    padding: 8px 12px !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 4px !important;
+    background: #ffffff !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.banking__beneficiary-btn--primary {
+    background: #0066cc !important;
+    color: white !important;
+    border-color: #0066cc !important;
+}
+
+.banking__beneficiary-btn--primary:hover {
+    background: #0052a3 !important;
+    border-color: #0052a3 !important;
+}
+
+.banking__beneficiary-btn:hover {
+    border-color: #0066cc !important;
+    background: #f8fbff !important;
+}
+
+.banking__add-beneficiary {
+    border: 2px dashed #e1e8ed !important;
+    background: #f8f9fa !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-height: 180px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.banking__add-beneficiary:hover {
+    border-color: #0066cc !important;
+    background: #f1f5f9 !important;
+}
+
+.banking__add-beneficiary-icon {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50% !important;
+    background: #0066cc !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 12px !important;
+}
+
+.banking__add-beneficiary-icon-svg {
+    width: 20px !important;
+    height: 20px !important;
+    color: white !important;
+}
+
+.banking__add-beneficiary-title {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 4px !important;
+}
+
+.banking__add-beneficiary-description {
+    font-size: 12px !important;
+    color: #7f8c8d !important;
+}
+</style>
+
+<!-- Virements -->
+<section class="banking__content">
+    
+    <!-- Transfers Header -->
+    <div class="banking__operations-header">
+        <div class="banking__account-summary">
+            <h1 class="banking__account-title">{{ tp('banking_transfers.header.title', [], 'banking_transfers') }}</h1>
+            <div class="banking__account-details">
+                <span class="banking__account-type">{{ tp('banking_transfers.header.subtitle', [], 'banking_transfers') }}</span>
+                <span class="banking__account-updated">{{ tp('banking_transfers.header.last_updated', {datetime: "now"|date('d/m/Y à H:i')}, 'banking_transfers') }}</span>
+            </div>
+        </div>
+        <div class="banking__balance-display">
+            <button class="banking__action-primary">
+                {{ ux_icon('heroicons:plus', {'class': 'banking__action-icon'}) }}
+                {{ tp('banking_transfers.header.new_transfer', [], 'banking_transfers') }}
+            </button>
+        </div>
+    </div>
+
+    <!-- Transfer Actions -->
+    <div class="banking__transfer-actions">
+        <div class="banking__action-card">
+            <div class="banking__action-icon-wrapper banking__action-icon-wrapper--transfer">
+                {{ ux_icon('heroicons:arrow-right', {'class': 'banking__action-icon-large'}) }}
+            </div>
+            <h3 class="banking__action-title">{{ tp('banking_transfers.actions.one_time.title', [], 'banking_transfers') }}</h3>
+            <p class="banking__action-description">{{ tp('banking_transfers.actions.one_time.description', [], 'banking_transfers') }}</p>
+            <button class="banking__action-btn-card">{{ tp('banking_transfers.actions.one_time.button', [], 'banking_transfers') }}</button>
+        </div>
+
+        <div class="banking__action-card">
+            <div class="banking__action-icon-wrapper banking__action-icon-wrapper--recurring">
+                {{ ux_icon('heroicons:arrow-path', {'class': 'banking__action-icon-large'}) }}
+            </div>
+            <h3 class="banking__action-title">{{ tp('banking_transfers.actions.recurring.title', [], 'banking_transfers') }}</h3>
+            <p class="banking__action-description">{{ tp('banking_transfers.actions.recurring.description', [], 'banking_transfers') }}</p>
+            <button class="banking__action-btn-card">{{ tp('banking_transfers.actions.recurring.button', [], 'banking_transfers') }}</button>
+        </div>
+
+        <div class="banking__action-card">
+            <div class="banking__action-icon-wrapper banking__action-icon-wrapper--instant">
+                {{ ux_icon('heroicons:bolt', {'class': 'banking__action-icon-large'}) }}
+            </div>
+            <h3 class="banking__action-title">{{ tp('banking_transfers.actions.instant.title', [], 'banking_transfers') }}</h3>
+            <p class="banking__action-description">{{ tp('banking_transfers.actions.instant.description', [], 'banking_transfers') }}</p>
+            <button class="banking__action-btn-card">{{ tp('banking_transfers.actions.instant.button', [], 'banking_transfers') }}</button>
+        </div>
+
+        <div class="banking__action-card">
+            <div class="banking__action-icon-wrapper banking__action-icon-wrapper--beneficiary">
+                {{ ux_icon('heroicons:user-plus', {'class': 'banking__action-icon-large'}) }}
+            </div>
+            <h3 class="banking__action-title">{{ tp('banking_transfers.actions.add_beneficiary.title', [], 'banking_transfers') }}</h3>
+            <p class="banking__action-description">{{ tp('banking_transfers.actions.add_beneficiary.description', [], 'banking_transfers') }}</p>
+            <button class="banking__action-btn-card">{{ tp('banking_transfers.actions.add_beneficiary.button', [], 'banking_transfers') }}</button>
+        </div>
+    </div>
+
+    <!-- Transfer History -->
+    <div class="banking__filters">
+        <div class="banking__filter-group">
+            <select class="banking__filter-select">
+                <option>{{ tp('banking_transfers.filters.all_transfers', [], 'banking_transfers') }}</option>
+                <option>{{ tp('banking_transfers.filters.sent_transfers', [], 'banking_transfers') }}</option>
+                <option>{{ tp('banking_transfers.filters.received_transfers', [], 'banking_transfers') }}</option>
+                <option>{{ tp('banking_transfers.filters.recurring_transfers', [], 'banking_transfers') }}</option>
+                <option>{{ tp('banking_transfers.filters.instant_transfers', [], 'banking_transfers') }}</option>
+            </select>
+            
+            <select class="banking__filter-select">
+                <option>{{ tp('banking_transfers.filters.all_accounts', [], 'banking_transfers') }}</option>
+                <option>{{ tp('banking_transfers.filters.account_checking', [], 'banking_transfers') }}</option>
+                <option>{{ tp('banking_transfers.filters.account_savings', [], 'banking_transfers') }}</option>
+            </select>
+            
+            <input type="date" class="banking__filter-date" value="{{ "now"|date('Y-m-d') }}">
+            
+            <button class="banking__filter-btn">
+                {{ ux_icon('heroicons:funnel', {'class': 'banking__filter-icon'}) }}
+                {{ tp('banking_transfers.filters.filter_button', [], 'banking_transfers') }}
+            </button>
+        </div>
+        
+        <div class="banking__tools">
+            <button class="banking__tool-btn">
+                {{ ux_icon('heroicons:arrow-down-tray', {'class': 'banking__tool-icon'}) }}
+                {{ tp('banking_transfers.filters.export_button', [], 'banking_transfers') }}
+            </button>
+        </div>
+    </div>
+
+    <!-- Transfers Table -->
+    <div class="banking__operations">
+        <table class="banking__table">
+            <thead class="banking__table-head">
+                <tr>
+                    <th class="banking__table-th">{{ tp('banking_transfers.table.headers.date', [], 'banking_transfers') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_transfers.table.headers.type', [], 'banking_transfers') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_transfers.table.headers.beneficiary_sender', [], 'banking_transfers') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_transfers.table.headers.reason', [], 'banking_transfers') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_transfers.table.headers.amount', [], 'banking_transfers') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_transfers.table.headers.status', [], 'banking_transfers') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_transfers.table.headers.actions', [], 'banking_transfers') }}</th>
+                </tr>
+            </thead>
+            <tbody class="banking__table-body">
+                <tr class="banking__table-row">
+                    <td class="banking__table-td">05/08/2025</td>
+                    <td class="banking__table-td">
+                        <span class="banking__transfer-type banking__transfer-type--received">{{ tp('banking_transfers.table.transfer_types.received', [], 'banking_transfers') }}</span>
+                    </td>
+                    <td class="banking__table-td">
+                        <div class="banking__beneficiary-detail">
+                            <div class="banking__beneficiary-name">TECHCORP SARL</div>
+                            <div class="banking__beneficiary-account">FR76 1234 5678 9012 3456 789</div>
+                        </div>
+                    </td>
+                    <td class="banking__table-td">
+                        <div class="banking__transfer-reason">Salaire Août 2025</div>
+                    </td>
+                    <td class="banking__table-td banking__amount--credit">3 200,00 €</td>
+                    <td class="banking__table-td">
+                        <span class="banking__status banking__status--completed">{{ tp('banking_transfers.table.status.executed', [], 'banking_transfers') }}</span>
+                    </td>
+                    <td class="banking__table-td">
+                        <button class="banking__action-btn">{{ ux_icon('heroicons:eye', {'class': 'banking__action-icon'}) }}</button>
+                    </td>
+                </tr>
+
+                <tr class="banking__table-row">
+                    <td class="banking__table-td">02/08/2025</td>
+                    <td class="banking__table-td">
+                        <span class="banking__transfer-type banking__transfer-type--sent">{{ tp('banking_transfers.table.transfer_types.sent', [], 'banking_transfers') }}</span>
+                    </td>
+                    <td class="banking__table-td">
+                        <div class="banking__beneficiary-detail">
+                            <div class="banking__beneficiary-name">Marie DUPONT</div>
+                            <div class="banking__beneficiary-account">FR76 9876 5432 1098 7654 321</div>
+                        </div>
+                    </td>
+                    <td class="banking__table-td">
+                        <div class="banking__transfer-reason">Remboursement restaurant</div>
+                    </td>
+                    <td class="banking__table-td banking__amount--debit">125,50 €</td>
+                    <td class="banking__table-td">
+                        <span class="banking__status banking__status--completed">{{ tp('banking_transfers.table.status.executed', [], 'banking_transfers') }}</span>
+                    </td>
+                    <td class="banking__table-td">
+                        <button class="banking__action-btn">{{ ux_icon('heroicons:eye', {'class': 'banking__action-icon'}) }}</button>
+                    </td>
+                </tr>
+
+                <tr class="banking__table-row">
+                    <td class="banking__table-td">01/08/2025</td>
+                    <td class="banking__table-td">
+                        <span class="banking__transfer-type banking__transfer-type--internal">{{ tp('banking_transfers.table.transfer_types.internal', [], 'banking_transfers') }}</span>
+                    </td>
+                    <td class="banking__table-td">
+                        <div class="banking__beneficiary-detail">
+                            <div class="banking__beneficiary-name">Livret A</div>
+                            <div class="banking__beneficiary-account">****2143</div>
+                        </div>
+                    </td>
+                    <td class="banking__table-td">
+                        <div class="banking__transfer-reason">Épargne mensuelle</div>
+                    </td>
+                    <td class="banking__table-td banking__amount--debit">500,00 €</td>
+                    <td class="banking__table-td">
+                        <span class="banking__status banking__status--completed">{{ tp('banking_transfers.table.status.executed', [], 'banking_transfers') }}</span>
+                    </td>
+                    <td class="banking__table-td">
+                        <button class="banking__action-btn">{{ ux_icon('heroicons:eye', {'class': 'banking__action-icon'}) }}</button>
+                    </td>
+                </tr>
+
+                <tr class="banking__table-row">
+                    <td class="banking__table-td">30/07/2025</td>
+                    <td class="banking__table-td">
+                        <span class="banking__transfer-type banking__transfer-type--sent">{{ tp('banking_transfers.table.transfer_types.sent', [], 'banking_transfers') }}</span>
+                    </td>
+                    <td class="banking__table-td">
+                        <div class="banking__beneficiary-detail">
+                            <div class="banking__beneficiary-name">BOUYGUES TELECOM</div>
+                            <div class="banking__beneficiary-account">FR76 1111 2222 3333 4444 555</div>
+                        </div>
+                    </td>
+                    <td class="banking__table-td">
+                        <div class="banking__transfer-reason">Facture mobile Juillet</div>
+                    </td>
+                    <td class="banking__table-td banking__amount--debit">45,99 €</td>
+                    <td class="banking__table-td">
+                        <span class="banking__status banking__status--completed">{{ tp('banking_transfers.table.status.executed', [], 'banking_transfers') }}</span>
+                    </td>
+                    <td class="banking__table-td">
+                        <button class="banking__action-btn">{{ ux_icon('heroicons:eye', {'class': 'banking__action-icon'}) }}</button>
+                    </td>
+                </tr>
+
+                <tr class="banking__table-row">
+                    <td class="banking__table-td">28/07/2025</td>
+                    <td class="banking__table-td">
+                        <span class="banking__transfer-type banking__transfer-type--instant">{{ tp('banking_transfers.table.transfer_types.instant', [], 'banking_transfers') }}</span>
+                    </td>
+                    <td class="banking__table-td">
+                        <div class="banking__beneficiary-detail">
+                            <div class="banking__beneficiary-name">Pierre MARTIN</div>
+                            <div class="banking__beneficiary-account">FR76 5555 6666 7777 8888 999</div>
+                        </div>
+                    </td>
+                    <td class="banking__table-td">
+                        <div class="banking__transfer-reason">Urgence</div>
+                    </td>
+                    <td class="banking__table-td banking__amount--debit">200,00 €</td>
+                    <td class="banking__table-td">
+                        <span class="banking__status banking__status--completed">{{ tp('banking_transfers.table.status.executed', [], 'banking_transfers') }}</span>
+                    </td>
+                    <td class="banking__table-td">
+                        <button class="banking__action-btn">{{ ux_icon('heroicons:eye', {'class': 'banking__action-icon'}) }}</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="banking__pagination">
+        <button class="banking__page-btn banking__page-btn--disabled">{{ tp('banking_transfers.pagination.previous', [], 'banking_transfers') }}</button>
+        <span class="banking__page-info">{{ tp('banking_transfers.pagination.page_info', {current: 1, total: 12, count: 118}, 'banking_transfers') }}</span>
+        <button class="banking__page-btn">{{ tp('banking_transfers.pagination.next', [], 'banking_transfers') }}</button>
+    </div>
+
+</section>

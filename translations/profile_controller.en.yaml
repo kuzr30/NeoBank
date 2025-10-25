@@ -1,0 +1,17 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: profile_controller.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+profile_controller:
+  flash:
+    password_changed: "Your password has been successfully changed."
+    profile_updated: "Your profile has been successfully updated."
+    email_change_initiated: "A confirmation email has been sent to {email}. Please click on the link to confirm your new email address."
+    
+  security_activities:
+    login_success: "Successful login"
+    login_failed: "Failed login attempt"
+    password_changed: "Password changed"
+    profile_updated: "Profile updated"
+    account_locked: "Account locked"

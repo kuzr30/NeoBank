@@ -1,0 +1,9 @@
+sub_account_service:
+  exceptions:
+    main_account_not_found: "Kein Hauptkonto für den Benutzer gefunden: {email}"
+    credit_subaccount_creation_failed: "Erstellen des Kredit-Unterkontos für den Benutzer nicht möglich: {email}"
+    
+  log_messages:
+    sub_accounts_created: "Unterkonten für das Hauptkonto erstellt"
+    credit_subaccount_retrieved: "Kredit-Unterkonto erfolgreich abgerufen"
+    balances_calculated: "Salden aller Unterkonten berechnet"

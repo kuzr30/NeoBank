@@ -1,0 +1,33 @@
+email_user_blocked:
+  title: "Account tijdelijk geblokkeerd"
+  
+  content:
+    page_title: "Account tijdelijk geblokkeerd"
+    greeting: "Hallo {firstName},"
+    
+    account_blocked:
+      title: "Uw account is tijdelijk geblokkeerd"
+      description: "Om veiligheidsredenen is uw account tijdelijk geblokkeerd na meerdere onjuiste validatiepogingen."
+    
+    transfer_details:
+      title: "Details van de betreffende overboeking"
+      reference: "Overboekingsreferentie"
+      amount: "Bedrag"
+      amount_value: "€ {amount}"
+      blocked_at: "Geblokkeerd op"
+    
+    reason:
+      title: "Reden van blokkering"
+      description: "Deze blokkering is het gevolg van 3 opeenvolgende pogingen om een onjuiste validatiecode in te voeren. Deze veiligheidsmaatregel beschermt uw account tegen ongeautoriseerde toegang."
+    
+    next_steps:
+      title: "Wat nu te doen?"
+      step1: "1. Neem contact op met onze klantenservice om uw account te deblokkeren"
+      step2: "2. Controleer of u de juiste validatiecode heeft"
+      step3: "3. Eenmaal gedeblokkeerd kunt u doorgaan met het valideren van uw overboeking"
+    
+    security_notice:
+      title: "Veiligheid van uw account"
+      description: "Als u niet de oorsprong bent van deze validatiepogingen, neem dan onmiddellijk contact op met onze beveiligingsdienst. Uw account blijft geblokkeerd totdat ons team ingrijpt."
+    
+    footer: "%company_name% - Beveiligingsdienst<br>Deze melding is automatisch gegenereerd na blokkering van uw account."

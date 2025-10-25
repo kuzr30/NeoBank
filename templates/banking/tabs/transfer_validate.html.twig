@@ -1,0 +1,715 @@
+<style>
+/* ===== VALIDATION DE VIREMENT - UTILISATION DE LA CHARTE EXISTANTE ===== */
+
+/* Conteneur principal */
+.banking__content {
+    background: var(--color-background);
+    min-height: 100vh;
+    padding: 1.5rem;
+    font-family: var(--font-family-base);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* ===== HEADER DE LA PAGE ===== */
+.banking__operations-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--color-surface);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-border);
+}
+
+.banking__section-info {
+    flex: 1;
+}
+
+.banking__section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 0.5rem 0;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.banking__section-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+.banking__section-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* ===== RÉSUMÉ DU VIREMENT ===== */
+.banking__transfer-summary {
+    background: var(--color-surface);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+}
+
+.banking__transfer-info {
+    padding: 2rem;
+    position: relative;
+}
+
+.banking__transfer-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.1) 0%, rgba(var(--color-primary-rgb), 0.1) 100%);
+    backdrop-filter: blur(10px);
+}
+
+.banking__transfer-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.banking__transfer-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.banking__detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.banking__detail-row:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(4px);
+}
+
+.banking__detail-label {
+    font-weight: 600;
+    opacity: 0.9;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+    margin-right: 1rem;
+    min-width: 120px;
+}
+
+.banking__detail-value {
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-align: right;
+    flex: 1;
+    word-break: break-word;
+}
+
+/* ===== BADGES DE STATUT ===== */
+.banking__badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.banking__badge--pending {
+    background: #fef3c7;
+    color: var(--color-warning-dark);
+    border: 1px solid var(--color-warning);
+}
+
+.banking__badge--executing {
+    background: #dbeafe;
+    color: var(--color-primary-dark);
+    border: 1px solid var(--color-primary);
+}
+
+.banking__badge--completed {
+    background: #dcfce7;
+    color: var(--color-success-dark);
+    border: 1px solid var(--color-success);
+}
+
+.banking__badge--expired,
+.banking__badge--cancelled,
+.banking__badge--blocked {
+    background: #fee2e2;
+    color: var(--color-error-dark);
+    border: 1px solid var(--color-error);
+}
+
+/* ===== ÉTATS DE VALIDATION ===== */
+.banking__validation-status {
+    background: var(--color-surface);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--color-border);
+}
+
+.banking__status-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.banking__status-title::before {
+    content: '⏳';
+    font-size: 1.5rem;
+}
+
+.banking__progress-indicator {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--color-background-light);
+    border-radius: 0.5rem;
+    border: 2px solid var(--color-border);
+}
+
+.banking__progress-indicator--pending {
+    border-color: var(--color-warning);
+    background: #fef3c7;
+}
+
+.banking__progress-indicator--validating {
+    border-color: var(--color-primary);
+    background: #eff6ff;
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.banking__progress-indicator--completed {
+    border-color: var(--color-success);
+    background: #f0fdf4;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(var(--color-primary-rgb), 0.3); }
+    50% { box-shadow: 0 0 0 8px rgba(var(--color-primary-rgb), 0); }
+}
+
+.banking__progress-icon {
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-primary);
+}
+
+.banking__progress-content {
+    flex: 1;
+}
+
+.banking__progress-title {
+    font-weight: 700;
+    color: var(--color-text);
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.banking__progress-description {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+}
+
+/* ===== FORMULAIRE DE VALIDATION ===== */
+.banking__validation-form {
+    background: var(--color-surface);
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--color-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.banking__validation-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent), var(--color-success));
+}
+
+.banking__validation-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.banking__validation-icon {
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-primary);
+    padding: 0.5rem;
+    background: #eff6ff;
+    border-radius: 0.5rem;
+}
+
+.banking__form {
+    margin: 0;
+}
+
+.banking__form-group {
+    margin-bottom: 2rem;
+}
+
+.banking__form-group label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    font-size: 1.1rem;
+}
+
+.banking__form-group input {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border: 2px solid var(--color-border);
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    text-align: center;
+    letter-spacing: 0.3em;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s ease;
+    background: var(--color-background-light);
+}
+
+.banking__form-group input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(var(--color-primary-rgb), 0.1);
+    background: var(--color-surface);
+    transform: scale(1.02);
+}
+
+.banking__form-help {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 1rem;
+    background: var(--color-hover);
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--color-primary);
+}
+
+.banking__form-errors .invalid-feedback {
+    display: block;
+    color: var(--color-error);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #fef2f2;
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--color-error);
+}
+
+.banking__attempts-info {
+    margin-bottom: 2rem;
+}
+
+.banking__form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.banking__form-actions button {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    color: white;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.banking__form-actions button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.banking__form-actions button:active {
+    transform: translateY(0);
+}
+
+/* ===== ALERTES ===== */
+.banking__alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    border-left: 4px solid;
+    position: relative;
+    overflow: hidden;
+}
+
+.banking__alert::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.05;
+    background: currentColor;
+}
+
+.banking__alert--success {
+    background: #f0fdf4;
+    color: var(--color-success-dark);
+    border-left-color: var(--color-success);
+}
+
+.banking__alert--warning {
+    background: #fffbeb;
+    color: var(--color-warning-dark);
+    border-left-color: var(--color-warning);
+}
+
+.banking__alert--danger {
+    background: #fef2f2;
+    color: var(--color-error-dark);
+    border-left-color: var(--color-error);
+}
+
+.banking__alert--info {
+    background: #eff6ff;
+    color: var(--color-primary-dark);
+    border-left-color: var(--color-primary);
+}
+
+.banking__alert-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.banking__alert-content {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== BOUTONS D'ACTION ===== */
+.banking__action-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-surface);
+    color: var(--color-text);
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--color-border);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.banking__action-secondary:hover {
+    background: var(--color-hover);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.banking__action-danger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fef2f2;
+    color: var(--color-error);
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--color-error);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.banking__action-danger:hover {
+    background: var(--color-error);
+    color: white;
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.banking__action-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .banking__content {
+        padding: 1rem;
+    }
+    
+    .banking__operations-header {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+    
+    .banking__transfer-details {
+        gap: 0.75rem;
+    }
+    
+    .banking__detail-row {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0.75rem;
+        gap: 0.5rem;
+    }
+    
+    .banking__detail-label {
+        min-width: 100px;
+        font-size: 0.9rem;
+    }
+    
+    .banking__detail-value {
+        font-size: 1rem;
+    }
+    
+    .banking__section-title {
+        font-size: 1.5rem;
+    }
+    
+    .banking__validation-form {
+        padding: 1.5rem;
+    }
+    
+    .banking__form-group input {
+        font-size: 1.125rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banking__detail-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    
+    .banking__detail-label {
+        min-width: auto;
+        margin-right: 0;
+        margin-bottom: 0.25rem;
+        font-size: 0.875rem;
+        opacity: 0.8;
+    }
+    
+    .banking__detail-value {
+        text-align: left;
+        font-size: 1rem;
+        word-break: break-all;
+    }
+    
+    .banking__validation-status {
+        padding: 1.5rem;
+    }
+    
+    .banking__progress-indicator {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+    
+    .banking__progress-icon {
+        align-self: center;
+    }
+}
+</style>
+
+<!-- Validation des codes de virement -->
+<section class="banking__content">
+    
+    <!-- Header -->
+    <div class="banking__operations-header">
+        <div class="banking__section-info">
+            <h2 class="banking__section-title">{{ tp('banking_transfer_validate.header.title', [], 'banking_transfer_validate') }}</h2>
+            <div class="banking__section-subtitle">{{ tp('banking_transfer_validate.header.subtitle', [], 'banking_transfer_validate') }}</div>
+        </div>
+        <div class="banking__section-actions">
+            <a href="{{ path('banking_transfers') }}" class="banking__action-secondary">
+                {{ ux_icon('heroicons:arrow-left', {'class': 'banking__action-icon'}) }}
+                {{ tp('banking_transfer_validate.header.back_button', [], 'banking_transfer_validate') }}
+            </a>
+        </div>
+    </div>
+
+    <!-- Détails du virement -->
+    <div class="banking__transfer-summary">
+        <div class="banking__transfer-info">
+            <h3 class="banking__transfer-title">{{ tp('banking_transfer_validate.summary.title', [], 'banking_transfer_validate') }}</h3>
+            <div class="banking__transfer-details">
+                <div class="banking__detail-row">
+                    <span class="banking__detail-label">{{ tp('banking_transfer_validate.summary.amount_label', [], 'banking_transfer_validate') }}</span>
+                    <span class="banking__detail-value">{{ transfer.amount|number_format(2, ',', ' ') }} €</span>
+                </div>
+                <div class="banking__detail-row">
+                    <span class="banking__detail-label">{{ tp('banking_transfer_validate.summary.beneficiary_label', [], 'banking_transfer_validate') }}</span>
+                    <span class="banking__detail-value">{{ transfer.destinationAccount.accountName }} - {{ transfer.destinationAccount.iban }}</span>
+                </div>
+                {% if transfer.description %}
+                <div class="banking__detail-row">
+                    <span class="banking__detail-label">{{ tp('banking_transfer_validate.summary.description_label', [], 'banking_transfer_validate') }}</span>
+                    <span class="banking__detail-value">{{ transfer.description }}</span>
+                </div>
+                {% endif %}
+                <div class="banking__detail-row">
+                    <span class="banking__detail-label">{{ tp('banking_transfer_validate.summary.status_label', [], 'banking_transfer_validate') }}</span>
+                    <span class="banking__badge banking__badge--{{ transfer.status }}">
+                        {% if transfer.status == 'pending' %}{{ tp('banking_transfer_validate.status.pending', [], 'banking_transfer_validate') }}
+                        {% elseif transfer.status == 'executing' %}{{ tp('banking_transfer_validate.status.executing', [], 'banking_transfer_validate') }}
+                        {% elseif transfer.status == 'completed' %}{{ tp('banking_transfer_validate.status.completed', [], 'banking_transfer_validate') }}
+                        {% elseif transfer.status == 'expired' %}{{ tp('banking_transfer_validate.status.expired', [], 'banking_transfer_validate') }}
+                        {% elseif transfer.status == 'cancelled' %}{{ tp('banking_transfer_validate.status.cancelled', [], 'banking_transfer_validate') }}
+                        {% elseif transfer.status == 'blocked' %}{{ tp('banking_transfer_validate.status.blocked', [], 'banking_transfer_validate') }}
+                        {% endif %}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    {% if transfer.status == 'pending' or transfer.status == 'executing' %}
+        
+
+        <!-- Formulaire de validation du code actuel -->
+        {% set currentCode = transfer.currentCode %}
+        {% if currentCode and currentCode.status != 'validated' and not currentCode.isExpired %}
+            <div class="banking__validation-form">
+                <h3 class="banking__validation-title">
+                    {{ ux_icon('heroicons:key', {'class': 'banking__validation-icon'}) }}
+                    {{ tp('banking_transfer_validate.validation.form_title', [], 'banking_transfer_validate') }}
+                </h3>
+                
+                {{ form_start(form, {
+                    'attr': {
+                        'class': 'banking__form',
+                        'data-turbo': 'false'
+                    }
+                }) }}
+                
+                <div class="banking__form-group">
+                    {{ form_label(form.code) }}
+                    {{ form_widget(form.code) }}
+                    {{ form_errors(form.code) }}
+                </div>
+            
+                
+                <div class="banking__form-actions">
+                    {{ form_widget(form.submit) }}
+                </div>
+                
+                {{ form_end(form) }}
+            </div>
+        {% elseif currentCode and currentCode.isExpired %}
+            <div class="banking__alert banking__alert--warning">
+                {{ ux_icon('heroicons:clock', {'class': 'banking__alert-icon'}) }}
+                <div class="banking__alert-content">
+                    {{ tp('banking_transfer_validate.alerts.code_expired', {'%code%': currentCode.codeName}, 'banking_transfer_validate') }}
+                    
+                </div>
+            </div>
+        {% elseif transfer.isFullyValidated %}
+            <div class="banking__alert banking__alert--success">
+                {{ ux_icon('heroicons:check-circle', {'class': 'banking__alert-icon'}) }}
+                <div class="banking__alert-content">
+                    {{ tp('banking_transfer_validate.alerts.transfer_confirmed', [], 'banking_transfer_validate') }}
+                </div>
+            </div>
+        {% endif %}
+
+    {% elseif transfer.status == 'completed' %}
+        <div class="banking__alert banking__alert--success">
+            {{ ux_icon('heroicons:check-circle', {'class': 'banking__alert-icon'}) }}
+            <div class="banking__alert-content">
+                {{ tp('banking_transfer_validate.alerts.transfer_completed', {'%date%': transfer.executedAt|date('d/m/Y à H:i')}, 'banking_transfer_validate') }}
+            </div>
+        </div>
+
+    {% elseif transfer.status == 'expired' %}
+        <div class="banking__alert banking__alert--warning">
+            {{ ux_icon('heroicons:clock', {'class': 'banking__alert-icon'}) }}
+            <div class="banking__alert-content">
+                {{ tp('banking_transfer_validate.alerts.transfer_expired', [], 'banking_transfer_validate') }}
+            </div>
+        </div>
+
+    {% elseif transfer.status == 'cancelled' %}
+        <div class="banking__alert banking__alert--info">
+            {{ ux_icon('heroicons:x-circle', {'class': 'banking__alert-icon'}) }}
+            <div class="banking__alert-content">
+                {{ tp('banking_transfer_validate.alerts.transfer_cancelled', [], 'banking_transfer_validate') }}
+            </div>
+        </div>
+
+    {% elseif transfer.status == 'blocked' %}
+        <div class="banking__alert banking__alert--danger">
+            {{ ux_icon('heroicons:shield-exclamation', {'class': 'banking__alert-icon'}) }}
+            <div class="banking__alert-content">
+                {{ tp('banking_transfer_validate.alerts.transfer_blocked', [], 'banking_transfer_validate') }}
+            </div>
+        </div>
+    {% endif %}
+
+
+</section>

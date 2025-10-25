@@ -1,0 +1,44 @@
+banking_credit_application_detail:
+  header:
+    title: "Détails de la demande de crédit"
+    reference: "Demande n°%reference%"
+    amount_label: "Montant demandé"
+  
+  navigation:
+    back_to_credits: "Retour aux crédits"
+  
+  credit_info:
+    title: "Informations du crédit"
+    type: "Type de crédit"
+    loan_amount: "Montant demandé"
+    duration: "Durée"
+    monthly_payment: "Mensualité calculée"
+    total_cost: "Coût total du crédit"
+    months: "mois"
+    years: "années"
+  
+  personal_info:
+    title: "Informations personnelles"
+    full_name: "Nom complet"
+    email: "Email"
+    phone: "Téléphone"
+    birth_date: "Date de naissance"
+  
+  financial_situation:
+    title: "Situation financière"
+    monthly_income: "Revenus mensuels"
+    monthly_expenses: "Charges mensuelles"
+    employer: "Employeur"
+    job_title: "Poste"
+  
+  application_tracking:
+    title: "Suivi de la demande"
+    current_status: "Statut actuel"
+    application_date: "Date de demande"
+    last_update: "Dernière mise à jour"
+    notes: "Notes"
+  
+  actions:
+    view_amortization: "Voir le tableau d'amortissement"
+    view_contract: "Voir le contrat"
+    download_contract: "Télécharger le contrat"

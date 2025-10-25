@@ -1,0 +1,50 @@
+register:
+  title: "Uw account aanmaken"
+  subtitle: "Word lid van %company_name% en krijg toegang tot onze innovatieve bankdiensten met een vereenvoudigde en veilige procedure"
+  
+  sections:
+    personal_info: "Persoonlijke gegevens"
+    connection_info: "Inloginformatie"
+    terms: "Gebruiksvoorwaarden"
+  fields:
+    first_name_label: "Voornaam"
+    first_name_placeholder: "Uw voornaam"
+    last_name_label: "Achternaam"
+    last_name_placeholder: "Uw achternaam"
+    email_label: "E-mailadres"
+    email_placeholder: "uw.email@voorbeeld.com"
+    password_label: "Wachtwoord"
+    password_placeholder: "••••••••"
+    password_confirm_label: "Wachtwoord bevestigen"
+    password_confirm_placeholder: "••••••••"
+    agree_terms: 'Ik accepteer de <a href="#" class="form-link">gebruiksvoorwaarden</a> en het <a href="#" class="form-link">privacybeleid</a>'
+    newsletter: "Ik wil graag nieuws en aanbiedingen van %company_name% ontvangen per e-mail"
+  buttons:
+    create_account: "Mijn account aanmaken"
+    login: "Inloggen"
+    
+  links:
+    terms_of_use: "gebruiksvoorwaarden"
+    privacy_policy: "privacybeleid"
+    already_account: "Heeft u al een account?"
+    back_home: "Terug naar home"
+  security:
+    ssl_secure: "SSL Beveiligd"
+    data_protected: "Gegevens beschermd"
+    support_24_7: "Ondersteuning 24/7"
+  messages:
+    account_created: "Uw account moet door ons team worden geactiveerd voor uw eerste login. Deze validatie duurt gewoonlijk minder dan 24 uur."
+errors:
+  first_name_required: "Voornaam is verplicht"
+  first_name_min: "Voornaam moet minstens {{ limit }} karakters hebben"
+  first_name_max: "Voornaam mag niet meer dan {{ limit }} karakters hebben"
+  last_name_required: "Achternaam is verplicht"
+  last_name_min: "Achternaam moet minstens {{ limit }} karakters hebben"
+  last_name_max: "Achternaam mag niet meer dan {{ limit }} karakters hebben"
+  email_required: "E-mail is verplicht"
+  email_invalid: "E-mail is niet geldig"
+  email_exists: "Er bestaat al een account met dit e-mailadres"
+  password_required: "Wachtwoord is verplicht"
+  password_min: "Uw wachtwoord moet minstens {{ limit }} karakters bevatten"
+  password_mismatch: "Wachtwoorden komen niet overeen"
+  terms_required: "U moet onze voorwaarden accepteren"

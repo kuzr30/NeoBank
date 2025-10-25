@@ -1,0 +1,32 @@
+email_rib_added_notification:
+  title: "Nouveau RIB ajouté"
+  content:
+    page_title: "Nouveau RIB ajouté à votre compte"
+    greeting: "Bonjour {firstName},"
+    confirmation: "Nous vous confirmons qu'un nouveau RIB a été ajouté à votre compte %company_name% avec succès."
+    details_section:
+      title: "Détails du RIB ajouté"
+      account_name: "Nom du compte :"
+      bank_name: "Banque :"
+      iban: "IBAN :"
+      added_date: "Date d'ajout :"
+    info_section:
+      title: "Information importante"
+      description: "Votre nouveau RIB est maintenant disponible dans votre espace client et peut être utilisé pour vos virements et opérations bancaires."
+    security_section:
+      title: "Sécurité"
+      warning: "Si vous n'êtes pas à l'origine de cet ajout, contactez immédiatement notre service client :"
+      phone_label: "Téléphone :"
+      email_label: "Email :"
+    buttons:
+      view_ribs: "Voir mes RIB"
+      access_account: "Accéder à mon compte"
+    footer_text: "Cette notification de sécurité vous est envoyée automatiquement pour vous informer des modifications apportées à votre compte."
+    help_text: "Si vous avez des questions, n'hésitez pas à nous contacter."
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Envoi de notification d'ajout de RIB"
+    success: "Notification d'ajout de RIB envoyée avec succès"
+    error: "Erreur lors de l'envoi de notification d'ajout de RIB"
+    send_failed: "Échec de l'envoi de notification d'ajout de RIB"

@@ -1,0 +1,124 @@
+# Vertaalbestand voor de bankkaart gebruikersinterface
+# Domein: card_account_user
+# Taal: Nederlands (nl)
+
+card_account_user:
+  # Hoofdsectie
+  title: "Mijn bankkaarten"
+  subtitle: "Beheer uw kaarten en ontdek onze aanbiedingen"
+  
+  # Sectie bestaande kaart
+  user_card:
+    title: "Mijn kaart"
+    status:
+      active: "Actief"
+      blocked: "Geblokkeerd"
+      expired: "Verlopen"
+      pending: "In behandeling"
+    
+    # Kaartinformatie
+    card_info:
+      holder_label: "HOUDER"
+      expiry_label: "VERLOOPT"
+      account_label: "Rekening"
+      daily_limit_label: "Dagelijkse limiet"
+      daily_limit_undefined: "Niet gedefinieerd"
+      
+  # Sectie lopende abonnement
+  subscription:
+    title: "Uw kaartaanvraag is in behandeling"
+    subtitle: "Uw {cardType} {cardBrand} kaart wordt verwerkt"
+    request_date: "Aanvraag gedaan op {date}"
+    
+    # Abonnementstatussen
+    status:
+      contract_pending: "Contract in voorbereiding"
+      contract_sent: "Contract verzonden - Handtekening vereist"
+      admin_validation: "Wachtend op administratieve validatie"
+      contract_expired: "Contract verlopen"
+      pending: "Wachtend op validatie"
+    
+    # Abonnementsdetails
+    details:
+      card_type_label: "Kaarttype:"
+      brand_label: "Merk:"
+      contract_label: "Contract:"
+    
+    # Acties
+    actions:
+      sign_contract: "Contract ondertekenen"
+      sign_deadline: "U moet uw contract binnen 7 dagen ondertekenen om uw aanvraag te valideren."
+    
+    # Informatieve berichten
+    messages:
+      contract_signature_required: "Onderteken uw contract zodat uw aanvraag door onze teams kan worden behandeld."
+      contract_signed_processing: "Uw contract is ondertekend. Onze teams onderzoeken uw aanvraag en nemen binnen 48 werkuren contact met u op."
+      contract_expired_message: "Uw contract is verlopen. Een nieuwe abonnementsaanvraag zal nodig zijn."
+      default_processing: "Uw aanvraag wordt verwerkt door onze teams. U ontvangt een e-mail zodra uw kaart is gevalideerd en klaar is voor gebruik."
+  
+  # Sectie kaartkeuze (nieuwe abonnementen)
+  card_selection:
+    title: "Kies uw kaart"
+    subtitle: "Ontdek onze verschillende kaarten en hun voordelen"
+    
+    # Merken
+    brands:
+      visa_title: "Visa Kaarten"
+      mastercard_title: "Mastercard Kaarten"
+    
+    # Kaarttypes
+    card_types:
+      classic:
+        name: "Classic Kaart"
+        badge: "Ideaal om te beginnen"
+        visa_price: "Gratis"
+        visa_period: "het eerste jaar"
+        mastercard_price: "€2"
+        mastercard_period: "per maand"
+        
+      gold:
+        name: "Gold Kaart"
+        badge: "Meest populair"
+        badge_alt: "Populair"
+        visa_price: "€5"
+        mastercard_price: "€8"
+        period: "per maand"
+        
+      platinum:
+        name: "Platinum Kaart"
+        badge: "Premium"
+        visa_price: "€15"
+        mastercard_price: "€20"
+        period: "per maand"
+    
+    # Abonnementsactie
+    subscribe_action: "Abonneren"
+  
+  # Algemene berichten
+  common:
+    loading: "Laden..."
+    error: "Er is een fout opgetreden"
+    retry: "Opnieuw proberen"
+    
+  # Navigatie en acties
+  navigation:
+    back: "Terug"
+    continue: "Doorgaan"
+    close: "Sluiten"
+    
+  # Formulieren
+  forms:
+    required: "Verplicht"
+    optional: "Optioneel"
+    select_placeholder: "Selecteren..."
+    
+  # Beveiliging en validaties
+  security:
+    card_blocked_warning: "Deze kaart is geblokkeerd om veiligheidsredenen"
+    card_expired_warning: "Deze kaart is verlopen en moet worden vernieuwd"
+    
+  # Hulp
+  help:
+    need_help: "Hulp nodig?"
+    contact_support: "Contact opnemen met support"
+    faq: "Veelgestelde vragen"

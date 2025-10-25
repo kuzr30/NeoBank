@@ -1,0 +1,491 @@
+<!-- Digital Banking Section -->
+<section class="home__digital">
+  <div class="home__digital-container">
+    <div class="home__digital-content">
+      <!-- Right Visual -->
+      <div class="home__digital-visual">
+        <div class="home__digital-phone">
+          <!-- Phone Screen -->
+          <div class="home__digital-screen">
+            <div class="home__digital-screen-header">
+              <div class="home__digital-screen-time">14:32</div>
+              <div class="home__digital-screen-battery">100%</div>
+            </div>
+            
+            <div class="home__digital-screen-content">
+              <div class="home__digital-balance">
+                <h3>{{ tp('digital.phone.balance') }}</h3>
+                <div class="home__digital-amount">{{ tp('digital.phone.amount') }}</div>
+              </div>
+              
+              <div class="home__digital-actions">
+                <div class="home__digital-action">
+                  <div class="home__digital-action-icon">{{ ux_icon('heroicons:paper-airplane', {'class': 'home__digital-action-icon-svg'}) }}</div>
+                  <span>{{ tp('digital.phone.transfer') }}</span>
+                </div>
+                <div class="home__digital-action">
+                  <div class="home__digital-action-icon">{{ ux_icon('heroicons:qr-code', {'class': 'home__digital-action-icon-svg'}) }}</div>
+                  <span>{{ tp('digital.phone.pay') }}</span>
+                </div>
+                <div class="home__digital-action">
+                  <div class="home__digital-action-icon">{{ ux_icon('heroicons:plus', {'class': 'home__digital-action-icon-svg'}) }}</div>
+                  <span>{{ tp('digital.phone.top_up') }}</span>
+                </div>
+              </div>
+              
+              <div class="home__digital-transactions">
+                <div class="home__digital-transaction">
+                  <div class="home__digital-transaction-icon">🛒</div>
+                  <div class="home__digital-transaction-details">
+                    <div class="home__digital-transaction-name">{{ tp('digital.transactions.example_1.name') }}</div>
+                    <div class="home__digital-transaction-date">{{ tp('digital.transactions.example_1.date') }}</div>
+                  </div>
+                  <div class="home__digital-transaction-amount">{{ tp('digital.transactions.example_1.amount') }}</div>
+                </div>
+                <div class="home__digital-transaction">
+                  <div class="home__digital-transaction-icon">☕</div>
+                  <div class="home__digital-transaction-details">
+                    <div class="home__digital-transaction-name">{{ tp('digital.transactions.example_2.name') }}</div>
+                    <div class="home__digital-transaction-date">{{ tp('digital.transactions.example_2.date') }}</div>
+                  </div>
+                  <div class="home__digital-transaction-amount">{{ tp('digital.transactions.example_2.amount') }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Floating Elements -->
+          <div class="home__digital-floating">
+            <div class="home__digital-floating-card home__digital-floating-card--1">
+              <div class="home__digital-floating-icon">💳</div>
+              <span>{{ tp('digital.floating_cards.virtual_card') }}</span>
+            </div>
+            <div class="home__digital-floating-card home__digital-floating-card--2">
+              <div class="home__digital-floating-icon">🔔</div>
+              <span>{{ tp('digital.floating_cards.real_time_alerts') }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Left Content -->
+      <div class="home__digital-text">
+        <div class="home__digital-badge">
+          {{ ux_icon('heroicons:device-phone-mobile', {'class': 'home__digital-badge-icon'}) }}
+          <span>{{ tp('digital.badge') }}</span>
+        </div>
+        
+        <h2 class="home__digital-title">
+          {{ tp('digital.title') }} <span class="home__digital-title--accent">{{ tp('digital.title_accent') }}</span>
+        </h2>
+        
+        <p class="home__digital-description">
+          {{ tp('digital.description') }}
+        </p>
+
+        <!-- Digital Features -->
+        <div class="home__digital-features">
+          <div class="home__digital-feature">
+            <div class="home__digital-feature-icon">
+              {{ ux_icon('heroicons:credit-card', {'class': 'home__digital-feature-icon-svg'}) }}
+            </div>
+            <div class="home__digital-feature-content">
+              <h4>{{ tp('digital.features.contactless_payment') }}</h4>
+              <p>{{ tp('digital.features.contactless_payment_desc') }}</p>
+            </div>
+          </div>
+
+          <div class="home__digital-feature">
+            <div class="home__digital-feature-icon">
+              {{ ux_icon('heroicons:banknotes', {'class': 'home__digital-feature-icon-svg'}) }}
+            </div>
+            <div class="home__digital-feature-content">
+              <h4>{{ tp('digital.features.instant_transfers') }}</h4>
+              <p>{{ tp('digital.features.instant_transfers_desc') }}</p>
+            </div>
+          </div>
+
+          <div class="home__digital-feature">
+            <div class="home__digital-feature-icon">
+              {{ ux_icon('heroicons:chart-pie', {'class': 'home__digital-feature-icon-svg'}) }}
+            </div>
+            <div class="home__digital-feature-content">
+              <h4>{{ tp('digital.features.smart_analysis') }}</h4>
+              <p>{{ tp('digital.features.smart_analysis_desc') }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- App Stores -->
+        <div class="home__digital-stores">
+          <h4>{{ tp('digital.app_stores.title') }}</h4>
+          <div class="home__digital-stores-grid">
+            <a href="{{ path('banking_mobile_app') }}" class="home__digital-store">
+              <div class="home__digital-store-icon">
+                {{ ux_icon('heroicons:device-phone-mobile', {'class': 'home__digital-store-icon-svg'}) }}
+              </div>
+              <div class="home__digital-store-text">
+                <span class="home__digital-store-small">{{ tp('digital.app_stores.available_on') }}</span>
+                <span class="home__digital-store-name">{{ tp('digital.app_stores.app_store') }}</span>
+              </div>
+            </a>
+            <a href="{{ path('banking_mobile_app') }}" class="home__digital-store">
+              <div class="home__digital-store-icon">
+                {{ ux_icon('heroicons:device-phone-mobile', {'class': 'home__digital-store-icon-svg'}) }}
+              </div>
+              <div class="home__digital-store-text">
+                <span class="home__digital-store-small">{{ tp('digital.app_stores.download_on') }}</span>
+                <span class="home__digital-store-name">{{ tp('digital.app_stores.google_play') }}</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<style>
+/* Digital Banking Section */
+.home__digital {
+  padding: 80px 0;
+  background: url('/images/c022abe815.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.home__digital-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.home__digital-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.home__digital-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fed60d;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.home__digital-badge-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.home__digital-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+    color: white;
+  margin-bottom: 24px;
+}
+
+.home__digital-title--accent {
+    color: white;
+}
+
+.home__digital-description {
+  font-size: 18px;
+  line-height: 1.6;
+   color: white;
+  margin-bottom: 40px;
+}
+
+.home__digital-features {
+  margin-bottom: 40px;
+}
+
+.home__digital-feature {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.home__digital-feature-icon {
+  width: 48px;
+  height: 48px;
+  background: #eff6ff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.home__digital-feature-icon-svg {
+  width: 24px;
+  height: 24px;
+    color: white;
+}
+
+.home__digital-feature-content h4 {
+  font-size: 18px;
+  font-weight: 600;
+    color: white;
+  margin-bottom: 4px;
+}
+
+.home__digital-feature-content p {
+  font-size: 16px;
+    color: white;
+  line-height: 1.5;
+}
+
+.home__digital-stores h4 {
+  font-size: 16px;
+  font-weight: 600;
+    color: white;
+  margin-bottom: 16px;
+}
+
+.home__digital-stores-grid {
+  display: flex;
+  gap: 16px;
+}
+
+.home__digital-store {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+   color: white;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.home__digital-store:hover {
+  transform: translateY(-2px);
+}
+
+.home__digital-store-icon-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.home__digital-store-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.home__digital-store-small {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.home__digital-store-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.home__digital-visual {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.home__digital-phone {
+  width: 300px;
+  height: 600px;
+  background: white;
+  border-radius: 30px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.home__digital-screen {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.home__digital-screen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.home__digital-balance {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.home__digital-balance h3 {
+  font-size: 16px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.home__digital-amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.home__digital-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.home__digital-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.home__digital-action-icon {
+  width: 48px;
+  height: 48px;
+  background: #3b82f6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__digital-action-icon-svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.home__digital-action span {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.home__digital-transactions {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 20px;
+}
+
+.home__digital-transaction {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.home__digital-transaction-icon {
+  width: 40px;
+  height: 40px;
+  background: #f1f5f9;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.home__digital-transaction-details {
+  flex: 1;
+}
+
+.home__digital-transaction-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.home__digital-transaction-date {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.home__digital-transaction-amount {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ef4444;
+}
+
+.home__digital-floating {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.home__digital-floating-card {
+  position: absolute;
+  background: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  animation: float 3s ease-in-out infinite;
+}
+
+.home__digital-floating-card--1 {
+  top: 20%;
+  right: -50px;
+  animation-delay: 0s;
+}
+
+.home__digital-floating-card--2 {
+  bottom: 30%;
+  left: -50px;
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+  .home__digital-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .home__digital-title {
+    font-size: 36px;
+  }
+  
+  .home__digital-phone {
+    width: 250px;
+    height: 500px;
+  }
+  
+  .home__digital-floating-card {
+    display: none;
+  }
+}
+</style>

@@ -1,0 +1,594 @@
+{# Template pour la signature de contrat dans le dashboard #}
+
+<div class="contract-signature" data-controller="contract-signature">
+    <!-- En-tête -->
+    <div class="contract-header">
+        <h2 class="contract-title">
+            {{ ux_icon('heroicons:document-text', {'class': 'contract-icon'}) }}
+            {{ tp('contract_signature.title', [], 'banking_contract') }}
+        </h2>
+        <p class="contract-subtitle">
+            Carte {{ contract.cardSubscription.cardType|title }} {{ contract.cardSubscription.cardBrand|title }}
+        </p>
+    </div>
+
+    <div class="contract-container">
+        <!-- Notification d'expiration -->
+        {% if contract.expiresAt %}
+        <div class="expiry-alert">
+            {{ ux_icon('heroicons:clock', {'class': 'alert-icon'}) }}
+            <span>{{ tp('contract_signature.expiry_alert', [], 'banking_contract') }} {{ contract.expiresAt|date('d/m/Y à H:i') }}</span>
+        </div>
+        {% endif %}
+
+        <!-- Informations principales -->
+        <div class="contract-summary">
+            <h3 class="summary-title">
+                {{ ux_icon('heroicons:information-circle', {'class': 'section-icon'}) }}
+                {{ tp('contract_signature.info_title', [], 'banking_contract') }}
+            </h3>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <span class="info-label">{{ tp('contract_signature.reference_label', [], 'banking_contract') }}</span>
+                    <span class="info-value">{{ contract.reference }}</span>
+                </div>
+                <div class="info-card">
+                    <span class="info-label">{{ tp('contract_signature.card_type_label', [], 'banking_contract') }}</span>
+                    <span class="info-value">{{ contract.cardSubscription.cardType|title }}</span>
+                </div>
+                <div class="info-card">
+                    <span class="info-label">{{ tp('contract_signature.brand_label', [], 'banking_contract') }}</span>
+                    <span class="info-value">{{ contract.cardSubscription.cardBrand|title }}</span>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Section signature -->
+        <div class="signature-area">
+            <h3 class="signature-title">
+                {{ ux_icon('heroicons:pencil', {'class': 'section-icon'}) }}
+                {{ tp('contract_signature.electronic_signature_title', [], 'banking_contract') }}
+            </h3>
+            <p class="signature-instruction">{{ tp('contract_signature.electronic_signature_instruction', [], 'banking_contract') }}</p>
+            
+            <div class="signature-container">
+                <canvas data-contract-signature-target="canvas" class="signature-canvas"></canvas>
+                <div class="signature-actions">
+                    <button type="button" data-contract-signature-target="clearButton" data-action="click->contract-signature#clear" class="btn btn-outline">
+                        {{ ux_icon('heroicons:trash', {'class': 'btn-icon'}) }}
+                        {{ tp('contract_signature.clear_button', [], 'banking_contract') }}
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulaire de signature -->
+        <form method="POST" action="{{ path('contract_sign_process', {reference: contract.reference}) }}" data-contract-signature-target="form" data-action="submit->contract-signature#submitForm" class="signature-form">
+            <input type="hidden" name="_token" value="{{ csrf_token('sign_contract_' ~ contract.reference) }}" />
+            <input type="hidden" data-contract-signature-target="signatureData" name="signature" />
+            
+            <div class="acceptance-area">
+                <label class="checkbox-label">
+                    <input type="checkbox" data-contract-signature-target="acceptCheckbox" data-action="change->contract-signature#acceptTermsChanged" name="accept_terms" required class="checkbox-input">
+                    <span class="checkbox-custom"></span>
+                    <span class="checkbox-text">
+                        {{ tp('contract_signature.accept_terms_full', [], 'banking_contract') }}
+                    </span>
+                </label>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary" data-contract-signature-target="signButton" disabled>
+                    {{ ux_icon('heroicons:check', {'class': 'btn-icon'}) }}
+                    {{ tp('contract_signature.sign_button', [], 'banking_contract') }}
+                </button>
+                <a href="{{ path('banking_dashboard', {activeTab: 'cartes'}) }}" class="btn btn-secondary">
+                    {{ ux_icon('heroicons:arrow-left', {'class': 'btn-icon'}) }}
+                    {{ tp('contract_signature.back_to_cards', [], 'banking_contract') }}
+                </a>
+            </div>
+
+<style>
+/* Design épuré pour la signature de contrat */
+.contract-signature {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* En-tête */
+.contract-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.contract-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.contract-icon {
+    width: 2rem;
+    height: 2rem;
+    color: #4f46e5;
+}
+
+.contract-subtitle {
+    color: #64748b;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Container principal */
+.contract-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Alerte d'expiration */
+.expiry-alert {
+    background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%);
+    border: 1px solid #3b82f6;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #1e40af;
+    font-weight: 500;
+}
+
+.alert-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #3b82f6;
+}
+
+/* Résumé du contrat */
+.contract-summary {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.summary-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #4f46e5;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.info-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.info-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+}
+
+.info-value {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.fees-summary {
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1.5rem;
+}
+
+.fees-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 1rem 0;
+}
+
+.fees-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.fee-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.fee-label {
+    font-weight: 500;
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+.fee-amount {
+    font-weight: 700;
+    color: #059669;
+    font-size: 0.875rem;
+}
+
+/* Conditions contractuelles */
+.contract-terms {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.terms-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.terms-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.terms-section h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #4f46e5;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.term-block, .particular-block {
+    margin-bottom: 1.5rem;
+}
+
+.term-block h5, .particular-block h5 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 0.5rem 0;
+}
+
+.term-block p, .particular-block p {
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0 0 0.5rem 0;
+}
+
+.term-block ul, .particular-block ul {
+    margin: 0.5rem 0 0 1.5rem;
+    color: #64748b;
+}
+
+.term-block li, .particular-block li {
+    margin-bottom: 0.25rem;
+    line-height: 1.5;
+}
+
+.particulars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Avertissement */
+.warning-notice {
+    background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+    border: 1px solid #f59e0b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.warning-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #d97706;
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+}
+
+.warning-text {
+    color: #92400e;
+    line-height: 1.6;
+}
+
+/* Section signature */
+.signature-area {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.signature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.signature-instruction {
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.signature-container {
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 1.5rem;
+    background: #f8fafc;
+}
+
+.signature-canvas {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #ffffff;
+    cursor: crosshair;
+    display: block;
+}
+
+.signature-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+/* Formulaire */
+.signature-form {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.acceptance-area {
+    margin-bottom: 2rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    cursor: pointer;
+    line-height: 1.6;
+}
+
+.checkbox-input {
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-custom {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid #cbd5e1;
+    border-radius: 4px;
+    background: #ffffff;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+    transition: all 0.2s ease;
+}
+
+.checkbox-input:checked + .checkbox-custom {
+    background: #4f46e5;
+    border-color: #4f46e5;
+}
+
+.checkbox-input:checked + .checkbox-custom::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.checkbox-text {
+    color: #475569;
+    font-size: 0.875rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Boutons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+    min-width: 140px;
+}
+
+.btn-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: white;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+}
+
+.btn-primary:disabled {
+    background: #e2e8f0;
+    color: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-secondary {
+    background: #ffffff;
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    color: #475569;
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #4f46e5;
+    border: 2px solid #4f46e5;
+}
+
+.btn-outline:hover {
+    background: #4f46e5;
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contract-signature {
+        padding: 0 1rem;
+    }
+    
+    .contract-title {
+        font-size: 1.5rem;
+    }
+    
+    .info-grid, .fees-grid, .particulars-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .signature-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .warning-notice {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .checkbox-label {
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contract-summary, .contract-terms, .signature-area, .signature-form {
+        padding: 1.5rem;
+    }
+    
+    .signature-container {
+        padding: 1rem;
+    }
+    
+    .contract-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .particulars {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .signature-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+
+</div>

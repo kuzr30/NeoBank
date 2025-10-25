@@ -1,0 +1,31 @@
+email_card_subscription_rejected:
+  title: "Uw kaartaanvraag"
+  
+  content:
+    page_title: "Betreffende uw kaartaanvraag"
+    greeting: "Beste %firstName% %lastName%,"
+    
+    rejection:
+      title: "Beslissing betreffende uw aanvraag"
+      description: "Na onderzoek van uw dossier kunnen we niet positief ingaan op uw aanvraag voor een %cardType%."
+    
+    details:
+      title: "Aanvraagdetails"
+      reference: "Aanvraagreferentie"
+      reason: "Reden van de beslissing"
+      reason_not_specified: "Niet gespecificeerd - Contacteer onze klantenservice"
+    
+    next_steps:
+      title: "Uw opties"
+      option1: "Contacteer onze klantenservice voor meer informatie"
+      option2: "Dien een nieuwe aanvraag in na verbetering van uw situatie"
+      option3: "Vraag een afspraak aan met een bankadviseur"
+    
+    support:
+      title: "Hulp nodig?"
+      contact_button: "Klantenservice contacteren"
+      instruction: "Ons team is beschikbaar om u deze beslissing uit te leggen"
+    
+    apologize: "We betreuren dat we niet positief kunnen ingaan op uw aanvraag en blijven ter uw beschikking."
+    
+    footer: "Deze e-mail werd automatisch verzonden door uw bank. <br><strong>Onze klantenservice blijft naar u luisteren.</strong>"

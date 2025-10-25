@@ -1,0 +1,3 @@
+contract_controller:
+  errors:
+    contract_not_found: "Het contract bestaat niet of is nog niet gegenereerd."

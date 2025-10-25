@@ -1,0 +1,10 @@
+# Traductions pour l'admin - Emails programmés
+email_template:
+  subject:
+    kyc_rejected: "Vérification KYC - Action requise"
+    incomplete_account: "Complétez votre profil - Action requise"
+    fees_inquiry: "Information sur les frais bancaires"
+    account_activation_reminder: "Rappel - Activez votre compte"
+    credit_application_incomplete: "Votre demande de crédit - Information manquante"
+    account_creation_follow_up: "Suivi de votre demande - Création de compte requise"
+    payment_details: "Paiement de %amount%€ - Coordonnées bancaires pour virement INSTANTANÉ"

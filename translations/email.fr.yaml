@@ -1,0 +1,20 @@
+email:
+  base:
+    company_name: "{company_name}"
+    tagline: "Votre partenaire bancaire de confiance"
+    default_title: "Contenu par défaut"
+    default_text: "Ce template doit être étendu avec du contenu spécifique."
+    
+  footer:
+    brand: "{company_name}"
+    address: "{company_address}"
+    
+    links:
+      help: "Centre d'aide"
+      terms: "Conditions d'utilisation"
+      privacy: "Politique de confidentialité"
+    
+    disclaimer:
+      text: "Vous recevez cet email car vous avez un compte chez {company_name}."
+      unsubscribe_text: "Si vous ne souhaitez plus recevoir ces emails,"
+      unsubscribe_link: "cliquez ici"

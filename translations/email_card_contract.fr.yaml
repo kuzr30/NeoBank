@@ -1,0 +1,49 @@
+email_card_contract:
+  title: "Contrat de souscription carte bancaire à signer"
+  
+  content:
+    page_title: "Votre contrat de carte est prêt à signer"
+    greeting: "Cher(e) %firstName% %lastName%,"
+    
+    approval:
+      title: "Demande approuvée !"
+      description: "Excellente nouvelle ! Votre demande de carte bancaire a été approuvée par notre équipe administrative."
+    
+    card_details:
+      title: "Détails de votre carte"
+      type: "Type de carte"
+      reference: "Référence"
+      request_date: "Date de demande"
+    
+    fees:
+      title: "Frais et limites"
+      activation: "Frais d'activation"
+      monthly: "Frais mensuels"
+      daily_limit: "Limite journalière"
+      monthly_limit: "Limite mensuelle"
+      day: "jour"
+      month: "mois"
+    
+    signature_required:
+      title: "Signature électronique requise"
+      description: "Vous devez signer électroniquement ce contrat pour confirmer votre acceptation des frais et conditions. Votre carte sera créée uniquement après signature."
+    
+    next_steps:
+      title: "Prochaines étapes"
+      step1: "Cliquez sur le bouton ci-dessous pour accéder au contrat"
+      step2: "Lisez attentivement les conditions générales"
+      step3: "Signez électroniquement si vous acceptez les frais"
+      step4: "Votre carte sera créée et expédiée sous 3-5 jours ouvrés"
+    
+    action:
+      title: "Action requise"
+      sign_button: "Signer le contrat maintenant"
+    
+    contract_info:
+      title: "Informations du contrat"
+      reference: "Référence du contrat"
+      expires: "Expire le"
+    
+    assistance: "Pour toute question concernant ce contrat, notre service clientèle reste à votre disposition."
+    
+    footer: "Cet email a été envoyé automatiquement par votre banque. <br><strong>Conservez cette référence de contrat pour vos dossiers.</strong>"

@@ -1,0 +1,26 @@
+email_funds_disbursed:
+  title: "Mittel ausgezahlt"
+  content:
+    page_title: "Ihre Mittel sind freigegeben!"
+    greeting: "Hallo <strong>%customerName%</strong>,"
+    disbursement_section:
+      title: "Freigabe bestätigt"
+      message: "Ausgezeichnete Nachrichten! Die Mittel Ihres Kredits <strong>%contractNumber%</strong> in Höhe von <strong>%loanAmount% €</strong> wurden freigegeben und sind nun auf Ihrem Konto verfügbar."
+    transaction_details:
+      title: "Transaktionsdetails"
+      contract: "Vertragsnummer"
+      amount: "Darlehensbetrag"
+      fees: "Abgezogene Gebühren"
+      net_amount: "Gutgeschriebener Nettobetrag"
+    important_info:
+      title: "Wichtige Informationen"
+      message: "Die Mittel sind sofort auf Ihrem Kreditkonto verfügbar. Sie können ab sofort Überweisungen über Ihren Kundenbereich durchführen."
+    repayment_info:
+      title: "Rückzahlungs-Erinnerung"
+      message: "Vergessen Sie nicht, dass Ihr Kredit gemäß dem vereinbarten Tilgungsplan zurückgezahlt werden muss. Ihre erste monatliche Rate wird nächsten Monat abgebucht. Besuchen Sie Ihren Kundenbereich für weitere Details."
+    access_account: "Zu meinem Konto"
+    thanks_message: "Herzlichen Glückwunsch und vielen Dank für Ihr Vertrauen!"
+    footer: "Das %company_name%-Team<br><em>Dies ist eine automatische E-Mail, bitte antworten Sie nicht darauf.</em>"
+  logs:
+    success: "Mittelfreigabe-E-Mail erfolgreich an %email% für Vertrag %contractNumber% gesendet (Betrag: %amount% €, Sprache: %locale%)"
+    error: "Fehler beim Senden der Mittelfreigabe-E-Mail für Vertrag %contractNumber%: %error%"

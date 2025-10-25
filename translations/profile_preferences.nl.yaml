@@ -1,0 +1,36 @@
+profile_preferences:
+  page:
+    title: "Voorkeuren - %company_name%"
+  
+  header:
+    title: "Voorkeuren"
+  
+  actions:
+    cancel: Annuleren
+    save: Voorkeuren opslaan
+  
+  settings:
+    history:
+      title: Navigatiegeschiedenis
+      description: Geschiedenis van uw acties opslaan
+  
+  sections:
+    language:
+      title: "Taal en regio"
+      language: "Interface taal"
+      currency: "Standaardvaluta"
+      timezone: "Tijdzone"
+      date_format: "Datumformaat"
+    
+    notifications:
+      title: "Notificaties"
+      email: "E-mailnotificaties"
+      sms: "SMS-notificaties"
+      push: "Push-notificaties"
+      marketing: "Commerciële aanbiedingen"
+    
+    privacy:
+      title: "Privacy"
+      profile_visibility: "Profielzichtbaarheid"
+      data_sharing: "Gegevens delen"
+      activity_tracking: "Activiteit bijhouden"

@@ -1,0 +1,259 @@
+{% extends 'bundles/TwigBundle/Exception/base_error.html.twig' %}
+
+{% block error_title %}{{ 'general.title'|trans({}, 'errorpages') }} {{ status_code }} - SEDEF BANK{% endblock %}
+
+{% block error_description %}{{ 'general.subtitle'|trans({}, 'errorpages') }}{% endblock %}
+
+{% block error_stylesheets %}
+<style>
+    .error-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .error-page::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+        opacity: 0.3;
+    }
+
+    .error-container {
+        max-width: 600px;
+        width: 100%;
+        padding: 3rem;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(10px);
+        position: relative;
+        z-index: 1;
+        margin: 0 1rem;
+        animation: fadeInUp 0.8s ease-out;
+    }
+
+    .error-code {
+        font-size: 6rem;
+        font-weight: 900;
+        color: #e74c3c;
+        margin-bottom: 1rem;
+        line-height: 1;
+        text-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+    }
+
+    .error-icon {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 2rem;
+        background: linear-gradient(135deg, #e74c3c, #c0392b);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+        animation: pulse 2s infinite;
+    }
+
+    .error-icon svg {
+        width: 50px;
+        height: 50px;
+        color: white;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .error-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #2d3748;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+
+    .error-subtitle {
+        font-size: 1.25rem;
+        color: #4a5568;
+        margin-bottom: 1rem;
+        line-height: 1.4;
+    }
+
+    .error-message {
+        font-size: 1.1rem;
+        color: #718096;
+        margin-bottom: 2.5rem;
+        line-height: 1.6;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .error-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+
+    .btn {
+        padding: 0.875rem 2rem;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #e74c3c, #c0392b);
+        color: white;
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+        text-decoration: none;
+        color: white;
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: #e74c3c;
+        border: 2px solid #e74c3c;
+    }
+
+    .btn-secondary:hover {
+        background: #e74c3c;
+        color: white;
+        transform: translateY(-2px);
+        text-decoration: none;
+    }
+
+    .icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .error-container {
+            padding: 2rem 1.5rem;
+            margin: 0 0.5rem;
+        }
+
+        .error-code {
+            font-size: 4rem;
+        }
+
+        .error-title {
+            font-size: 2rem;
+        }
+
+        .error-subtitle {
+            font-size: 1.1rem;
+        }
+
+        .error-message {
+            font-size: 1rem;
+        }
+
+        .error-actions {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .btn {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .error-container {
+            padding: 1.5rem 1rem;
+        }
+
+        .error-code {
+            font-size: 3rem;
+        }
+
+        .error-icon {
+            width: 80px;
+            height: 80px;
+        }
+
+        .error-title {
+            font-size: 1.75rem;
+        }
+
+        .error-subtitle {
+            font-size: 1rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block error_body %}
+<div class="error-page">
+    <div class="error-container">
+        <div class="error-content">
+            <div class="error-code">{{ status_code }}</div>
+            
+            <div class="error-icon">
+                <svg class="icon" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+            </div>
+            
+            <h1 class="error-title">{{ 'general.title'|trans({}, 'errorpages') }} {{ status_code }}</h1>
+            <p class="error-subtitle">{{ status_text|default('general.subtitle'|trans({}, 'errorpages')) }}</p>
+            <p class="error-message">{{ 'general.subtitle'|trans({}, 'errorpages') }}</p>
+            
+            <div class="error-actions">
+                <a href="/" class="btn btn-primary">
+                    <svg class="icon" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+                    </svg>
+                    {{ 'general.back_to_homepage'|trans({}, 'errorpages') }}
+                </a>
+                <a href="javascript:history.back()" class="btn btn-secondary">
+                    <svg class="icon" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                    </svg>
+                    {{ 'general.back_button'|trans({}, 'errorpages') }}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

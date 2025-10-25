@@ -1,0 +1,44 @@
+email_transfer_created:
+  title: "Überweisung erfolgreich erstellt"
+  
+  content:
+    page_title: "Banküberweisung eingeleitet"
+    greeting: "Hallo {firstName} {lastName},"
+    
+    transfer_created:
+      title: "Überweisungsanfrage erstellt"
+      description: "Ihre Überweisungsanfrage wurde erfolgreich erstellt und wird nun sicher verarbeitet. Der mehrstufige Validierungsprozess wird beginnen."
+    
+    transaction_details:
+      title: "Transaktionsdetails"
+      reference: "Überweisungsreferenz"
+      amount: "Zu überweisender Betrag"
+      amount_value: "{amount} €"
+      beneficiary_account: "Empfängerkonto"
+      transfer_reason: "Überweisungsgrund"
+      creation_date: "Erstellungsdatum"
+      created_at: "{createdAt}"
+    
+    validation_process:
+      title: "Sicherer Validierungsprozess"
+      step1: "1. Die Administration generiert aufeinanderfolgende Validierungscodes"
+      step2: "2. E-Mail-Benachrichtigung für jeden neuen verfügbaren Code"
+      step3: "3. Validierung erforderlich innerhalb maximal 6 Stunden"
+      step4: "4. Automatische Ausführung nach vollständiger Validierung"
+    
+    tracking:
+      title: "Verfolgung Ihrer Überweisung"
+      view_details_button: "📊 Überweisungsdetails einsehen"
+      access_instruction: "Greifen Sie auf Ihren Bankbereich zu, um den Fortschritt in Echtzeit zu verfolgen"
+    
+    security_info:
+      title: "Sicherheit und Nachverfolgbarkeit"
+      description: "Alle Validierungsschritte werden aufgezeichnet und gesichert. Sie erhalten eine finale Bestätigung per E-Mail, sobald die Überweisung erfolgreich ausgeführt wurde."
+    
+    supervision_note: "Unser Banksicherheitsteam überwacht den Prozess, um die Konformität Ihrer Transaktion zu gewährleisten."
+    
+    footer: "<strong>%company_name% - Überweisungsservice</strong><br>Automatische Benachrichtigung über Überweisungserstellung"
+  
+  log:
+    transfer_created: "Überweisung {transferId} für einen Betrag von {amount}€ erstellt"
+    email_sent: "Überweisungserstellungs-E-Mail an {userEmail} gesendet"

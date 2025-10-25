@@ -1,0 +1,22 @@
+email_card_ready:
+  title: "Ihre Bankkarte ist bereit!"
+  subtitle: "Ihre neue Karte ist jetzt verfügbar"
+  greeting: "Hallo %firstname%,"
+  main_message: "Ausgezeichnete Nachrichten! Ihre Bankkarte wurde erstellt und ist jetzt in Ihrem Kundenbereich verfügbar."
+
+  card_details_title: "Details Ihrer Karte"
+  card_type_label: "Typ"
+  card_brand_label: "Marke"
+  card_number_label: "Nummer"
+  card_status_label: "Status"
+  card_status_active: "Aktiv"
+
+  what_you_can_do_title: "Sie können jetzt:"
+  action_1: "Die Details Ihrer Karte in Ihrem Kundenbereich einsehen"
+  action_2: "Online-Zahlungen durchführen"
+  action_3: "Ihre Limits und Einstellungen verwalten"
+
+  physical_card_title: "Physische Karte unterwegs"
+  physical_card_message: "Ihre physische Karte wird Ihnen innerhalb von 3-5 Werktagen an Ihre Adresse gesendet."
+
+  cta_button: "Zu meinem Kundenbereich"

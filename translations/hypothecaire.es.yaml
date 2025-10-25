@@ -1,0 +1,90 @@
+hypothecaire:
+  page_title: "Crédito Hipotecario"
+  page_description: "Financie sus grandes proyectos con nuestro crédito hipotecario. Importes elevados garantizados por su bien inmobiliario."
+  
+  hero:
+    title: "Crédito Hipotecario"
+    subtitle: "Financie sus grandes proyectos con nuestro crédito hipotecario. Importes elevados garantizados por su bien inmobiliario."
+    rate_value: "3,1%"
+    amount_value: "500 000€"
+    duration_value: "25 años"
+  
+  section_1:
+    title: "¿Qué es un crédito hipotecario?"
+    paragraph_1: "El crédito hipotecario es un préstamo garantizado por una hipoteca sobre un bien inmobiliario. Permite financiar importes elevados para sus grandes proyectos: obras, inversión, reagrupación de créditos o necesidades de tesorería."
+    paragraph_2: "Gracias a esta garantía inmobiliaria, se beneficia de condiciones preferenciales y de duraciones de reembolso extendidas, adaptadas a los importes elevados."
+  
+  features:
+    amount: "Hasta 500 000€"
+    amount_detail: "Según el valor del bien"
+    duration: "De 5 a 25 años"
+    duration_detail: "Duraciones extendidas"
+    rate: "A partir del {rate}% TAE*"
+    rate_detail: "Tipo preferencial garantizado"
+    guarantee: "Hipoteca"
+    guarantee_detail: "Sobre bien inmobiliario"
+  
+  advantages:
+    advantage_1: "<strong>Importes elevados:</strong> Hasta el 70% del valor del bien en garantía"
+    advantage_2: "<strong>Tipos ventajosos:</strong> Condiciones preferenciales gracias a la hipoteca"
+    advantage_3: "<strong>Duraciones largas:</strong> Hasta 25 años para mensualidades reducidas"
+    advantage_4: "<strong>Utilización libre:</strong> Ninguna justificación de empleo de los fondos"
+    advantage_5: "<strong>Deducción fiscal:</strong> Intereses deducibles según su situación"
+  
+  requirements:
+    borrower:
+      title: "Condiciones prestatario"
+      item_1: "Ser propietario del bien hipotecado"
+      item_2: "Ingresos regulares y suficientes"
+      item_3: "Capacidad de endeudamiento disponible"
+      item_4: "Edad máxima 70 años al final del préstamo"
+    property:
+      title: "Condiciones del bien"
+      item_1: "Bien inmobiliario libre de hipoteca"
+      item_2: "Valor mínimo 150 000€"
+      item_3: "Peritaje inmobiliario obligatorio"
+      item_4: "Seguro de hogar exigido"
+  
+  documents:
+    personal:
+      title: "Documentos personales"
+      item_1: "Documentos de identidad de los co-prestatarios"
+      item_2: "Justificantes de domicilio"
+      item_3: "3 últimas nóminas"
+      item_4: "2 últimas declaraciones de impuestos"
+    property:
+      title: "Documentos inmobiliarios"
+      item_1: "Título de propiedad o escritura notarial"
+      item_2: "Certificado de urbanismo"
+      item_3: "Estado hipotecario reciente"
+      item_4: "Impuesto territorial último año"
+    financial:
+      title: "Documentos financieros"
+      item_1: "3 últimos extractos de cuenta"
+      item_2: "Tabla de amortización créditos en curso"
+      item_3: "Certificados de patrimonio"
+      item_4: "Justificantes ingresos de alquiler"
+  
+  legal:
+    title: "Informaciones legales importantes"
+    taeg: "<strong>*TAE:</strong> Ejemplo representativo: para un crédito hipotecario de 100 000€ a 15 años al TAE del 3,1%, usted reembolsa 180 mensualidades de 694€, es decir un importe total de 124 920€ (coste del crédito: 24 920€)."
+    mortgage: "<strong>Hipoteca:</strong> Inscripción de una hipoteca convencional sobre el bien inmobiliario."
+    fees: "<strong>Gastos:</strong> Gastos de notario e inscripción hipotecaria a su cargo."
+    expertise: "<strong>Peritaje:</strong> Evaluación inmobiliaria obligatoria por perito homologado."
+    discharge: "<strong>Cancelación:</strong> Radiación automática de la hipoteca después del reembolso."
+  
+  cta:
+    title: "Valorice su patrimonio"
+    subtitle: "Obtenga los fondos que necesita gracias a su bien inmobiliario"
+  
+  sidebar:
+    evaluation_title: "Evaluación inmobiliaria"
+    step_1:
+      title: "Peritaje"
+      time: "5 días"
+    step_2:
+      title: "Estudio expediente"
+      time: "15 días"
+    step_3:
+      title: "Firma notario"
+      time: "10 días"

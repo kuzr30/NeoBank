@@ -1,0 +1,61 @@
+banking_card_subscription_controller:
+  # Interface utilisateur
+  ui:
+    confirm_card_title: "Bestätigen Sie Ihre"
+    advantages_title: "Enthaltene Vorteile"
+    limits_title: "Limits"
+    request_card_button: "Diese Karte beantragen"
+    cancel_button: "Abbrechen"
+  
+  flash:
+    kyc_required: "Sie müssen Ihre Identitätsprüfung abschließen, um auf die Bankkarten-Services zugreifen zu können."
+    existing_card_or_subscription: "Sie haben bereits eine Karte oder einen laufenden Antrag."
+    no_active_account: "Sie müssen ein aktives Konto haben, um eine Karte zu beantragen."
+    subscription_success: "Ihr Antrag wurde erfolgreich registriert. Sie erhalten eine Benachrichtigung, sobald er bearbeitet wurde."
+    subscription_error: "Bei der Registrierung Ihres Antrags ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+    access_denied_subscription: "Zugriff auf diesen Antrag verweigert."
+    cannot_cancel_subscription: "Nur ausstehende Anträge können storniert werden."
+    invalid_security_token: "Ungültiger Sicherheitstoken."
+    subscription_cancelled: "Ihr Antrag wurde erfolgreich storniert."
+    cancellation_error: "Bei der Stornierung ist ein Fehler aufgetreten."
+  card_info:
+    classic:
+      title: "Classic-Karte"
+      description: "Ideal für den Einstieg, kostenlos im ersten Jahr"
+      price: "Kostenlos im ersten Jahr"
+      features:
+        - "Kontaktlose Zahlungen"
+        - "Kostenlose Abhebungen in ganz Europa"
+        - "Einkaufsversicherung inklusive"
+        - "Dedizierte Mobile App"
+      limits:
+        - "Abhebungslimit: 300€/Tag"
+        - "Zahlungslimit: 1.000€/Tag"
+    gold:
+      title: "Gold-Karte"
+      description: "Die beliebteste Wahl für den täglichen Gebrauch"
+      price: "5€ pro Monat"
+      features:
+        - "Alle Vorteile der Classic-Karte"
+        - "Reiseversicherung inklusive"
+        - "Garantieverlängerung"
+        - "24/7 Concierge-Service"
+        - "1% Cashback"
+      limits:
+        - "Abhebungslimit: 500€/Tag"
+        - "Zahlungslimit: 2.500€/Tag"
+    platinum:
+      title: "Platinum-Karte"
+      description: "Das Höchste an Banking-Exzellenz"
+      price: "15€ pro Monat"
+      features:
+        - "Alle Vorteile der Gold-Karte"
+        - "Zugang zu VIP-Lounges am Flughafen"
+        - "Premium-Reiseversicherung"
+        - "24/7 Premium-Concierge"
+        - "2% Cashback"
+        - "Dedizierter Kundenberater"
+      limits:
+        - "Abhebungslimit: 1.000€/Tag"
+        - "Zahlungslimit: 5.000€/Tag"
+  automated_request: "Automatischer Antrag über Banking-Interface"

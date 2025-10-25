@@ -1,0 +1,4 @@
+# Traductions pour KycController
+flash:
+  existing_submission: "Sie haben bereits einen KYC-Antrag mit dem Status: %status%."
+  submission_success: "Ihr KYC-Antrag wurde erfolgreich eingereicht."

@@ -1,0 +1,40 @@
+email_credit_rejected:
+  title: "Antwort auf Ihren Kreditantrag"
+  content:
+    page_title: "Antwort auf Ihren Finanzierungsantrag"
+    greeting: "Hallo <strong>{customerName}</strong>,"
+    decision_section:
+      title: "Entscheidung bezüglich Ihres Antrags"
+      message: "Nach einer gründlichen Prüfung Ihres Kreditdossiers bedauern wir, Ihnen mitteilen zu müssen, dass wir Ihren Finanzierungsantrag über <strong style=\"color: #d32f2f;\">{loanAmount} €</strong> derzeit nicht annehmen können."
+    context_section:
+      title: "Kontext dieser Entscheidung"
+      explanation: "Diese Entscheidung stellt die Qualität Ihres Kundenprofils nicht in Frage und kann mit verschiedenen internen Bewertungskriterien, der wirtschaftlichen Lage oder den aktuellen Risikopolitiken unseres Instituts zusammenhängen."
+    alternatives_section:
+      title: "Verfügbare alternative Lösungen"
+      revised_request:
+        title: "💼 Überarbeiteter Antrag"
+        description: "Stellen Sie einen neuen Antrag mit einem anderen Betrag oder anderen Bedingungen"
+      personalized_advice:
+        title: "🎯 Persönliche Beratung"
+        description: "Kontaktieren Sie unsere Berater, um andere geeignete Finanzierungsoptionen zu prüfen"
+      profile_improvement:
+        title: "📈 Profilverbesserung"
+        description: "Unser Team kann Sie bei der Optimierung Ihres Finanzdossiers begleiten"
+    contact_section:
+      title: "Kontakt und Begleitung"
+      description: "Unser Kundenservice steht Ihnen vollständig zur Verfügung, um Ihre Fragen zu beantworten und Sie bei Ihren zukünftigen Projekten zu begleiten."
+      button_text: "Berater kontaktieren"
+      phone: "Telefon: %company_phone%"
+      email: "E-Mail: hello@sedef.fr"
+      hours: "Verfügbar Montag bis Freitag von 9 bis 18 Uhr"
+    future_section:
+      title: "Neue Gelegenheiten"
+      message: "Diese Entscheidung ist nicht endgültig. Ihre persönliche und finanzielle Situation entwickelt sich, und wir würden gerne einen neuen Antrag in der Zukunft prüfen."
+    thanks_message: "Wir danken Ihnen für das Vertrauen, das Sie uns entgegengebracht haben, und hoffen, Sie bald bei Ihren Projekten begleiten zu können."
+    footer: "%company_name% - Kreditservice<br>Automatische Antwort auf Ihren Finanzierungsantrag"
+  
+  logs:
+    sending: "Versendung der Kreditablehnungs-Benachrichtigung"
+    success: "Kreditablehnungs-Benachrichtigung erfolgreich versendet"
+    error: "Fehler beim Versenden der Kreditablehnungs-Benachrichtigung"
+    send_failed: "Versenden der Kreditablehnungs-Benachrichtigung fehlgeschlagen"

@@ -1,0 +1,147 @@
+banking_credits:
+  # Header section
+  header:
+    title: "Mijn kredieten"
+    breadcrumb_home: "Home"
+    breadcrumb_banking: "Bankdiensten"
+    breadcrumb_current: "Mijn kredieten"
+    last_update: "Laatste update"
+
+  # Credit statistics section
+  statistics:
+    total_credits: "Actieve kredieten"
+    total_amount: "Totaal geleend bedrag"
+    total_remaining: "Restant kapitaal"
+    average_rate: "Gemiddeld tarief"
+    available_balance: "Totaal beschikbaar saldo"
+    monthly_payments: "Totale maandelijkse betalingen"
+
+  # Available credits section  
+  available_credits:
+    title: "Beschikbare kredieten"
+    subtitle: "Vrijgegeven bedragen beschikbaar voor gebruik"
+    view_all: "Bekijk alle beschikbare kredieten"
+    from: "Vanaf"
+    rate: "Tarief vanaf %"
+    simulate: "Simuleren"
+    apply: "Aanvragen"
+    duration: "Over %d maanden"
+    credit_account: "Kredietrekening"
+    available: "Beschikbaar"
+    funds_released: "Fondsen vrijgegeven"
+    transfer_to_main: "Overmaken naar hoofdrekening"
+
+  # Active credits section
+  active_credits:
+    title: "Mijn actieve kredieten"
+    remaining_capital: "Restant kapitaal"
+    monthly_payment: "Maandelijkse betaling"
+    next_payment: "Volgende betaling"
+    progress: "Voortgang"
+    view_details: "Bekijk details"
+    view_amortization: "Bekijk afschrijving"
+    real_estate: "Onroerend goed"
+
+  # Applications section
+  applications:
+    title: "Mijn aanvragen"
+    reference: "Aanvraag nr."
+    date: "Aanvraagdatum"
+    amount: "Bedrag"
+    status: "Status"
+    actions: "Acties"
+    view: "Bekijk"
+    no_applications: "Geen kredietaanvragen"
+    credit_type: "Type krediet"
+
+  # Empty state
+  empty_state:
+    title: "Geen actieve kredieten"
+    message: "U heeft momenteel geen lopende kredieten. Ontdek onze kredietaanbiedingen die passen bij uw behoeften."
+
+  # Pagination
+  pagination:
+    previous: "Vorige"
+    next: "Volgende"
+    page_info: "Pagina {{ page }} van {{ total }} ({{ count }} aanvragen)"
+
+  # Labels - Common labels used across sections
+  labels:
+    initial_capital: "Aanvankelijk kapitaal"
+    duration: "Looptijd"
+    months: "maanden"
+    start_date: "Startdatum"
+    status: "Status"
+    type: "Krediet type"
+    reference: "Referentie"
+    monthly_payment_short: "Maandelijkse betaling"
+    browse_offers: "Bekijk aanbiedingen"
+    property: "Onroerend goed"
+    status_fund_disbursed: "Fonds uitgekeerd"
+    available: "Beschikbaar"
+    transfer_to_main: "Overmaken naar hoofdrekening"
+    percent_repaid: "%d%% afbetaald"
+    
+  # Credit info
+  credit:
+    amount: "Bedrag"
+    remaining_amount: "Restant kapitaal"
+    monthly_payment: "Maandelijkse betaling"
+    interest_rate: "Rente percentage"
+    duration: "Looptijd"
+    start_date: "Startdatum"
+    end_date: "Einddatum"
+    next_payment: "Volgende betaling"
+    status: "Status"
+    type: "Krediet type"
+    
+  # Credit types
+  types:
+    personal: "Persoonlijk krediet"
+    mortgage: "Hypotheek"
+    auto: "Autolening"
+    consumer: "Consumptie krediet"
+    professional: "Zakelijk krediet"
+    student: "Studenten lening"
+    revolving: "Hernieuwbaar krediet"
+    
+  # Status
+  status:
+    active: "Actief"
+    pending: "In behandeling"
+    approved: "Goedgekeurd"
+    rejected: "Afgewezen"
+    completed: "Afgerond"
+    suspended: "Opgeschort"
+    contract_sent: "Contract verzonden"
+    contract_signed: "Contract getekend"
+    funds_disbursed: "Geld uitgekeerd"
+    
+  # Actions
+  actions:
+    view_details: "Details bekijken"
+    view_amortization: "Amortisatie bekijken"
+    simulate_credit: "Krediet simuleren"
+    apply_credit: "Krediet aanvragen"
+    download_contract: "Contract downloaden"
+    make_payment: "Betaling doen"
+    
+  # Simulation form
+  simulation:
+    amount_label: "Gewenst bedrag"
+    duration_label: "Looptijd in maanden"
+    purpose_label: "Doel van het krediet"
+    calculate: "Berekenen"
+    results_title: "Simulatie resultaten"
+    monthly_payment_result: "Geschatte maandelijkse betaling"
+    total_cost: "Totale kosten van het krediet"
+    
+  # Messages
+  messages:
+    no_credits: "Geen actieve kredieten"
+    no_applications: "Geen lopende aanvragen"
+    access_denied: "Toegang geweigerd tot dit krediet"
+    simulation_success: "Simulatie succesvol berekend"
+    
+  # Currency
+  currency: "€"

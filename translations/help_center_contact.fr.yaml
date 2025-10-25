@@ -1,0 +1,137 @@
+help_center_contact:
+  page:
+    title: "Nous Contacter"
+    breadcrumb: "Accueil > Centre d'Aide > Nous Contacter"
+  
+  hero:
+    title: "Contactez-nous"
+    subtitle: "Nous sommes là pour vous aider. Trouvez la meilleure façon de nous contacter selon vos besoins."
+    
+  contact_methods:
+    title: "Moyens de Contact"
+    
+    phone:
+      title: "Téléphone"
+      subtitle: "Parlez directement avec nos conseillers"
+      number: "Téléphone"
+      hours: "Lun-Ven : 8h00-18h00, Sam : 9h00-13h00"
+      description: "Pour vos questions urgentes et conseils personnalisés"
+      
+    chat:
+      title: "Chat en Direct"
+      subtitle: "Discussion instantanée avec un agent"
+      status_online: "En ligne"
+      status_offline: "Hors ligne"
+      hours: "Lun-Ven : 8h00-20h00"
+      description: "Réponse rapide pour vos questions courantes"
+      button_start: "Démarrer le chat"
+      
+    email:
+      title: "Email"
+      subtitle: "Envoyez-nous un message détaillé"
+      address: "Email"
+      response_time: "Réponse sous 24h"
+      description: "Pour vos demandes complexes nécessitant des documents"
+      
+    branch:
+      title: "Agences"
+      subtitle: "Rendez-vous en personne"
+      button_find: "Trouver une agence"
+      description: "Conseils personnalisés et services complets"
+      
+  contact_form:
+    title: "Formulaire de Contact"
+    subtitle: "Laissez-nous un message et nous vous répondrons rapidement"
+    
+    fields:
+      subject: "Sujet"
+      name: "Nom complet"
+      email: "Email"
+      phone: "Téléphone (optionnel)"
+      category: "Catégorie"
+      message: "Message"
+      attachment: "Pièce jointe (optionnel)"
+      
+    categories:
+      general: "Question générale"
+      account: "Gestion de compte"
+      card: "Cartes bancaires"
+      transfer: "Virements"
+      credit: "Crédits"
+      insurance: "Assurances"
+      technical: "Problème technique"
+      
+    placeholders:
+      subject: "Résumé de votre demande"
+      name: "Votre nom et prénom"
+      email: "votre.email@exemple.com"
+      phone: "+32 xxx xx xx xx"
+      message: "Décrivez votre demande en détail..."
+      
+    buttons:
+      send: "Envoyer le message"
+      clear: "Effacer"
+      
+    validation:
+      required: "Ce champ est obligatoire"
+      email_invalid: "Format d'email invalide"
+      message_min: "Le message doit contenir au moins 10 caractères"
+      
+    success:
+      title: "Message envoyé !"
+      message: "Nous avons bien reçu votre message. Nous vous répondrons dans les plus brefs délais."
+      reference: "Référence"
+      
+  emergency:
+    title: "Urgences"
+    subtitle: "En cas de problème urgent avec votre compte"
+    
+    card_lost:
+      title: "Carte perdue/volée"
+      number: "+32 2 987 65 43"
+      description: "Disponible 24h/24, 7j/7"
+      
+    fraud:
+      title: "Fraude suspectée"
+      number: "+32 2 987 65 44"
+      description: "Ligne directe sécurisée"
+      
+    account_blocked:
+      title: "Compte bloqué"
+      number: "+32 2 987 65 45"
+      description: "Assistance immédiate"
+      
+  faq:
+    title: "Questions Fréquentes"
+    subtitle: "Peut-être que votre réponse se trouve ici"
+    button_view: "Voir toutes les FAQ"
+    
+  social:
+    title: "Réseaux Sociaux"
+    subtitle: "Suivez-nous pour les dernières actualités"
+    facebook: "Facebook"
+    twitter: "Twitter"
+    linkedin: "LinkedIn"
+    instagram: "Instagram"
+    
+  office_hours:
+    title: "Horaires d'Ouverture"
+    
+    customer_service:
+      title: "Service Client"
+      hours:
+        monday_friday: "Lundi - Vendredi : 8h00 - 18h00"
+        saturday: "Samedi : 9h00 - 13h00"
+        sunday: "Dimanche : Fermé"
+        
+    technical_support:
+      title: "Support Technique"
+      hours:
+        monday_friday: "Lundi - Vendredi : 8h00 - 20h00"
+        saturday: "Samedi : 9h00 - 17h00"
+        sunday: "Dimanche : 10h00 - 16h00"
+        
+    emergency:
+      title: "Urgences"
+      hours:
+        always: "Disponible 24h/24, 7j/7"

@@ -1,0 +1,10 @@
+log_messages:
+  success: "E-Mail erfolgreich versendet"
+  error: "Fehler beim Versenden der E-Mail"
+  exception: "Ausnahme beim Versenden der E-Mail"
+  verification_sent: "Verifizierungs-E-Mail erfolgreich versendet"
+  verification_failed: "Fehler beim Versenden der Verifizierungs-E-Mail"
+  code_sent: "Verifizierungscode versendet"
+  code_failed: "Fehler beim Versenden des Verifizierungscodes"
+  template_processed: "E-Mail-Vorlage erfolgreich verarbeitet"
+  template_error: "Fehler bei der Verarbeitung der E-Mail-Vorlage"

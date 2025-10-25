@@ -1,0 +1,104 @@
+personal_loan:
+  page:
+    title: "Préstamo Personal"
+    description: "Financie todos sus proyectos personales con nuestro préstamo personal. Solución flexible sin justificación de uso."
+  
+  hero:
+    class: "credit-detail-hero--personal"
+    taux: "5,2%"
+    montant: "50 000€"
+    duree: "10 años"
+    title: "Préstamo Personal"
+    subtitle: "Financie todos sus proyectos sin justificación"
+  
+  section_1:
+    title: "¿Qué es un préstamo personal?"
+    content:
+      paragraph_1: "El préstamo personal es un crédito no afectado que le permite financiar todos sus proyectos sin tener que justificar el uso de los fondos: vehículo, equipamiento, boda, viaje o cualquier otro gasto."
+      paragraph_2: "Solución de financiación flexible y rápida, le ofrece una total libertad de uso beneficiándose de condiciones ventajosas y un reembolso adaptado a su presupuesto."
+  
+  features:
+    title: "Características del préstamo"
+    montant:
+      value: "Hasta 50 000€"
+      detail: "Según sus ingresos"
+    duree:
+      value: "De 12 meses a 10 años"
+      detail: "Duración modulable"
+    taux:
+      value: "Desde {rate}% TAE*"
+      detail: "Tasa fija ventajosa"
+    garantie:
+      value: "Sin garantía"
+      detail: "Solo con firma"
+  
+  section_3:
+    title: "Ventajas del préstamo personal"
+    advantages:
+      liberte:
+        title: "Libertad total"
+        description: "Ninguna justificación de utilización de los fondos"
+      rapidite:
+        title: "Respuesta rápida"
+        description: "Decisión en máximo 48h"
+      deblocage:
+        title: "Desbloqueo inmediato"
+        description: "Fondos disponibles desde la aceptación"
+      taux_fixe:
+        title: "Tasa fija"
+        description: "Cuotas constantes durante toda la duración"
+      remboursement:
+        title: "Reembolso anticipado"
+        description: "Posible sin penalización"
+  
+  section_4:
+    title: "Condiciones de elegibilidad"
+    profil:
+      title: "Perfil prestatario"
+      items:
+        majeur: "Ser mayor de edad y residir en Francia"
+        revenus: "Ingresos regulares justificados"
+        situation: "Situación profesional estable"
+        endettement: "Tasa de endeudamiento inferior al 35%"
+    conditions:
+      title: "Condiciones generales"
+      items:
+        age: "Edad máxima: 75 años al final del préstamo"
+        domicile: "Residencia en Francia metropolitana"
+        revenus_min: "Ingresos mínimos: 1 500€ netos/mes"
+        frais: "Comisiones de expediente aplicables"
+  
+  section_5:
+    title: "Documentos necesarios"
+    identite:
+      title: "Documentos de identidad"
+      items:
+        carte: "Cédula de identidad nacional o pasaporte"
+        domicile: "Justificante de domicilio"
+        famille: "Libro de familia (si casado o con pareja de hecho)"
+    revenus:
+      title: "Justificantes de ingresos"
+      items:
+        salaires: "3 últimas nóminas"
+        impots: "Declaración de la renta"
+        contrat: "Contrato de trabajo"
+        rib: "IBAN de la cuenta de domiciliación"
+    bancaires:
+      title: "Documentos bancarios"
+      items:
+        releves: "3 últimos extractos de cuenta"
+        credits: "Tablas de amortización de créditos en curso"
+        charges: "Justificantes de gastos corrientes"
+  
+  legal:
+    details:
+      title: "Información legal importante"
+      taeg: "<strong>*TAE:</strong> Ejemplo representativo: para un préstamo personal de 15 000€ a 4 años al TAE del 5,2%, reembolsa 48 cuotas de 347€, o sea un monto total de 16 656€ (costo del crédito: 1 656€)."
+      simplicite: "<strong>Simplicidad:</strong> Expediente simple y respuesta rápida en 48h laborables."
+      flexibilite: "<strong>Flexibilidad:</strong> Reembolso anticipado posible sin comisiones ni penalización."
+      retractation: "<strong>Plazo de retractación:</strong> Dispone de un plazo de 14 días para renunciar a su crédito después de la aceptación de la oferta."
+      utilisation: "<strong>Uso libre:</strong> No se requiere ninguna justificación de empleo de los fondos."
+  
+  cta:
+    title: "¿Necesita una financiación rápida?"
+    subtitle: "Obtenga su préstamo personal con toda simplicidad"

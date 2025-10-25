@@ -1,0 +1,21 @@
+email_contract_validated:
+  title: "Contrat validé"
+  content:
+    page_title: "Votre contrat a été validé !"
+    greeting: "Bonjour <strong>%customerName%</strong>,"
+    validation_section:
+      title: "Validation confirmée"
+      message: "Excellente nouvelle ! Votre contrat de crédit <strong>%contractNumber%</strong> a été validé par notre équipe."
+    contract_details:
+      title: "Détails du contrat"
+      number: "Numéro de contrat"
+      amount: "Montant du prêt"
+    next_steps:
+      title: "Prochaines étapes"
+      message: "Votre dossier est maintenant en cours de finalisation. Nos équipes préparent le déblocage des fonds. Vous recevrez une notification dès que les fonds seront disponibles sur votre compte."
+    access_account: "Accéder à mon compte"
+    thanks_message: "Merci de votre confiance !"
+    footer: "L'équipe %company_name%<br><em>Ceci est un email automatique, merci de ne pas y répondre.</em>"
+  logs:
+    success: "Email de validation de contrat envoyé avec succès à %email% pour le contrat %contractNumber% (locale: %locale%)"
+    error: "Erreur lors de l'envoi de l'email de validation de contrat pour le contrat %contractNumber% : %error%"

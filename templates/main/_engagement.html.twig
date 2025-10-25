@@ -1,0 +1,729 @@
+<!-- Engagement Section -->
+<section class="home__engagement">
+  <div class="home__engagement-container">
+    <div class="home__engagement-content">
+      <!-- Header -->
+      <div class="home__engagement-header">
+        <div class="home__engagement-badge">
+          {{ ux_icon('heroicons:heart', {'class': 'home__engagement-badge-icon'}) }}
+          <span>{{ tp('engagement.badge') }}</span>
+        </div>
+        
+        <h2 class="home__engagement-title">
+          {{ tp('engagement.title') }} <span class="home__engagement-title--accent">{{ tp('engagement.title_accent') }}</span>
+        </h2>
+        
+        <p class="home__engagement-description">
+          {{ tp('engagement.description') }}
+        </p>
+      </div>
+
+      <!-- Engagement Cards -->
+      <div class="home__engagement-grid">
+        <!-- Environment Card -->
+        <div class="home__engagement-card home__engagement-card--environment">
+          <div class="home__engagement-card-icon">
+            {{ ux_icon('mdi:leaf', {'class': 'home__engagement-card-icon-svg'}) }}
+          </div>
+          <div class="home__engagement-card-content">
+            <h3>{{ tp('engagement.environment.title') }}</h3>
+            <p>{{ tp('engagement.environment.description') }}</p>
+            
+            <div class="home__engagement-stats">
+              <div class="home__engagement-stat">
+                <span class="home__engagement-stat-number">{{ tp('engagement.environment.stats.green_financing') }}</span>
+                <span class="home__engagement-stat-label">{{ tp('engagement.environment.stats.green_financing_label') }}</span>
+              </div>
+              <div class="home__engagement-stat">
+                <span class="home__engagement-stat-number">{{ tp('engagement.environment.stats.co2_reduction') }}</span>
+                <span class="home__engagement-stat-label">{{ tp('engagement.environment.stats.co2_reduction_label') }}</span>
+              </div>
+            </div>
+            
+            <div class="home__engagement-actions">
+              <div class="home__engagement-action">
+                {{ tp('engagement.environment.actions.action1')|raw }}
+              </div>
+              <div class="home__engagement-action">
+                {{ tp('engagement.environment.actions.action2')|raw }}
+              </div>
+              <div class="home__engagement-action">
+                {{ tp('engagement.environment.actions.action3')|raw }}
+              </div>
+              <div class="home__engagement-action">
+                {{ tp('engagement.environment.actions.action4')|raw }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Card -->
+        <div class="home__engagement-card home__engagement-card--social">
+          <div class="home__engagement-card-icon">
+            {{ ux_icon('heroicons:users', {'class': 'home__engagement-card-icon-svg'}) }}
+          </div>
+          <div class="home__engagement-card-content">
+            <h3>{{ tp('engagement.social.title') }}</h3>
+            <p>{{ tp('engagement.social.description') }}</p>
+            
+            <div class="home__engagement-stats">
+              <div class="home__engagement-stat">
+                <span class="home__engagement-stat-number">{{ tp('engagement.social.stats.ess_companies') }}</span>
+                <span class="home__engagement-stat-label">{{ tp('engagement.social.stats.ess_companies_label') }}</span>
+              </div>
+              <div class="home__engagement-stat">
+                <span class="home__engagement-stat-number">{{ tp('engagement.social.stats.microcredit_beneficiaries') }}</span>
+                <span class="home__engagement-stat-label">{{ tp('engagement.social.stats.microcredit_beneficiaries_label') }}</span>
+              </div>
+            </div>
+            
+            <div class="home__engagement-actions">
+              <div class="home__engagement-action">
+                {{ tp('engagement.social.actions.action1')|raw }}
+              </div>
+              <div class="home__engagement-action">
+                {{ tp('engagement.social.actions.action2')|raw }}
+              </div>
+              <div class="home__engagement-action">
+                {{ tp('engagement.social.actions.action3')|raw }}
+              </div>
+              <div class="home__engagement-action">
+                {{ tp('engagement.social.actions.action4')|raw }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Innovation Card -->
+        <div class="home__engagement-card home__engagement-card--innovation">
+          <div class="home__engagement-card-icon">
+            {{ ux_icon('heroicons:light-bulb', {'class': 'home__engagement-card-icon-svg'}) }}
+          </div>
+          <div class="home__engagement-card-content">
+            <h3>{{ tp('engagement.innovation.title') }}</h3>
+            <p>{{ tp('engagement.innovation.description') }}</p>
+            
+            <div class="home__engagement-stats">
+              <div class="home__engagement-stat">
+                <span class="home__engagement-stat-number">{{ tp('engagement.innovation.stats.accessibility_satisfaction') }}</span>
+                <span class="home__engagement-stat-label">{{ tp('engagement.innovation.stats.accessibility_satisfaction_label') }}</span>
+              </div>
+              <div class="home__engagement-stat">
+                <span class="home__engagement-stat-number">{{ tp('engagement.innovation.stats.digital_investment') }}</span>
+                <span class="home__engagement-stat-label">{{ tp('engagement.innovation.stats.digital_investment_label') }}</span>
+              </div>
+            </div>
+            
+            <div class="home__engagement-actions">
+              <div class="home__engagement-action">
+                {{ tp('engagement.innovation.actions.action1')|raw }}
+              </div>
+              <div class="home__engagement-action">
+                {{ tp('engagement.innovation.actions.action2')|raw }}
+              </div>
+              <div class="home__engagement-action">
+                {{ tp('engagement.innovation.actions.action3')|raw }}
+              </div>
+              <div class="home__engagement-action">
+                {{ tp('engagement.innovation.actions.action4')|raw }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- International Banks Carousel -->
+      <div class="home__engagement-banks">
+        <h3>{{ tp('engagement.international_banks.title') }}</h3>
+        <p class="home__engagement-banks-subtitle">{{ tp('engagement.international_banks.subtitle') }}</p>
+        
+        <div class="home__engagement-banks-carousel">
+          <div class="home__engagement-banks-track">
+            <!-- SEBA Bank - Suisse -->
+            <div class="home__engagement-bank-slide">
+              <img src="{{ asset('images/seba-bank.png') }}" alt="SEBA Bank" class="home__engagement-bank-logo">
+            </div>
+            
+            <!-- Luminor Bank - Lituanie -->
+            <div class="home__engagement-bank-slide">
+              <img src="{{ asset('images/Luminor_logo.svg.png') }}" alt="Luminor Bank" class="home__engagement-bank-logo">
+            </div>
+            
+            <!-- JPMorgan Chase - États-Unis -->
+            <div class="home__engagement-bank-slide">
+              <img src="{{ asset('images/J_P_Morgan_Chase_Logo_2008_1.svg.png') }}" alt="JPMorgan Chase" class="home__engagement-bank-logo">
+            </div>
+            
+            <!-- Intesa Sanpaolo - Italie -->
+            <div class="home__engagement-bank-slide">
+              <img src="{{ asset('images/Intesa_Sanpaolo_logo.svg.png') }}" alt="Intesa Sanpaolo" class="home__engagement-bank-logo">
+            </div>
+            
+            <!-- Banco Itaú - Brésil -->
+            <div class="home__engagement-bank-slide">
+              <img src="{{ asset('images/Banco_Itaú_logo.svg.png') }}" alt="Banco Itaú" class="home__engagement-bank-logo">
+            </div>
+            
+            <!-- Barclays - Royaume-Uni -->
+            <div class="home__engagement-bank-slide">
+              <img src="{{ asset('images/barclays-ar21.svg') }}" alt="Barclays" class="home__engagement-bank-logo">
+            </div>
+            
+            <!-- Duplicate slides for infinite loop -->
+            <div class="home__engagement-bank-slide">
+              <img src="{{ asset('images/seba-bank.png') }}" alt="SEBA Bank" class="home__engagement-bank-logo">
+            </div>
+            
+            <div class="home__engagement-bank-slide">
+              <img src="{{ asset('images/Luminor_logo.svg.png') }}" alt="Luminor Bank" class="home__engagement-bank-logo">
+            </div>
+            
+            <div class="home__engagement-bank-slide">
+              <img src="{{ asset('images/J_P_Morgan_Chase_Logo_2008_1.svg.png') }}" alt="JPMorgan Chase" class="home__engagement-bank-logo">
+            </div>
+            
+            <div class="home__engagement-bank-slide">
+              <img src="{{ asset('images/Intesa_Sanpaolo_logo.svg.png') }}" alt="Intesa Sanpaolo" class="home__engagement-bank-logo">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="home__engagement-cta">
+        <div class="home__engagement-cta-content">
+          <h3>{{ tp('engagement.cta.title') }}</h3>
+          <p>{{ tp('engagement.cta.description') }}</p>
+          <div class="home__engagement-cta-buttons">
+            <button class="home__engagement-btn home__engagement-btn--primary">
+              {{ ux_icon('heroicons:document-text', {'class': 'home__engagement-btn-icon'}) }}
+              {{ tp('engagement.cta.buttons.csr_report') }}
+            </button>
+            <button class="home__engagement-btn home__engagement-btn--secondary">
+              {{ ux_icon('mdi:leaf', {'class': 'home__engagement-btn-icon'}) }}
+              {{ tp('engagement.cta.buttons.green_products') }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Engagement Section */
+.home__engagement {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  position: relative;
+}
+
+.home__engagement-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.home__engagement-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.home__engagement-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.home__engagement-badge-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.home__engagement-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1e293b;
+  margin-bottom: 24px;
+}
+
+.home__engagement-title--accent {
+  color: #16a34a;
+}
+
+.home__engagement-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #64748b;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.home__engagement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.home__engagement-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.home__engagement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.15);
+}
+
+.home__engagement-card--environment {
+  border-color: #16a34a;
+}
+
+.home__engagement-card--environment:hover {
+  border-color: #15803d;
+}
+
+.home__engagement-card--social {
+  border-color: #3b82f6;
+}
+
+.home__engagement-card--social:hover {
+  border-color: #1d4ed8;
+}
+
+.home__engagement-card--innovation {
+  border-color: #f59e0b;
+}
+
+.home__engagement-card--innovation:hover {
+  border-color: #d97706;
+}
+
+.home__engagement-card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.home__engagement-card--environment .home__engagement-card-icon {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+.home__engagement-card--social .home__engagement-card-icon {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.home__engagement-card--innovation .home__engagement-card-icon {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.home__engagement-card-icon-svg {
+  width: 28px;
+  height: 28px;
+  color: white;
+}
+
+.home__engagement-card-content h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.home__engagement-card-content > p {
+  font-size: 16px;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.home__engagement-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.home__engagement-stat {
+  text-align: center;
+}
+
+.home__engagement-stat-number {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.home__engagement-stat-label {
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.3;
+}
+
+.home__engagement-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.home__engagement-action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.home__engagement-action-icon {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+}
+
+.home__engagement-partnerships {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 60px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.home__engagement-partnerships h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home__engagement-partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.home__engagement-partner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.home__engagement-partner:hover {
+  background: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+.home__engagement-partner-logo {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home__engagement-partner-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.home__engagement-partner-info p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* International Banks Carousel */
+.home__engagement-banks {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 60px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.home__engagement-banks h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.home__engagement-banks-subtitle {
+  font-size: 16px;
+  color: #64748b;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home__engagement-banks-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.home__engagement-banks-track {
+  display: flex;
+  gap: 40px;
+  animation: slideInfinite 30s linear infinite;
+  width: fit-content;
+}
+
+.home__engagement-bank-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  padding: 10px;
+  background: transparent;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.home__engagement-bank-slide:hover {
+  background: transparent;
+  transform: translateY(-3px);
+  border: none;
+  box-shadow: none;
+}
+
+.home__engagement-bank-logo {
+  width: 100px;
+  height: 60px;
+  object-fit: contain;
+  filter: grayscale(80%) opacity(0.7);
+  transition: all 0.3s ease;
+}
+
+.home__engagement-bank-slide:hover .home__engagement-bank-logo {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.1);
+}
+
+.home__engagement-bank-country {
+  display: none;
+}
+
+@keyframes slideInfinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.home__engagement-banks-carousel:hover .home__engagement-banks-track {
+  animation-play-state: paused;
+}
+
+.home__engagement-cta {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+.home__engagement-cta-content h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.home__engagement-cta-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.home__engagement-cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home__engagement-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.home__engagement-btn--primary {
+  background: white;
+  color: #16a34a;
+}
+
+.home__engagement-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.home__engagement-btn--secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.home__engagement-btn--secondary:hover {
+  background: white;
+  color: #16a34a;
+}
+
+.home__engagement-btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 768px) {
+  .home__engagement-title {
+    font-size: 36px;
+  }
+  
+  .home__engagement-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .home__engagement-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .home__engagement-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Animation des cartes d'engagement au scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = 'slideUpEngagement 0.6s ease forwards';
+      }
+    });
+  }, observerOptions);
+
+  // Animation des cartes principales
+  const cards = document.querySelectorAll('.home__engagement-card');
+  cards.forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.animationDelay = `${index * 0.2}s`;
+    observer.observe(card);
+  });
+
+  // Animation des métriques
+  const metrics = document.querySelectorAll('.home__engagement-metric');
+  metrics.forEach((metric, index) => {
+    metric.style.opacity = '0';
+    metric.style.transform = 'translateY(20px)';
+    metric.style.animationDelay = `${0.8 + index * 0.1}s`;
+    observer.observe(metric);
+  });
+
+  // Effet hover sur les statistiques
+  const stats = document.querySelectorAll('.home__engagement-stat-number');
+  stats.forEach(stat => {
+    stat.addEventListener('mouseenter', function() {
+      this.style.transform = 'scale(1.1)';
+      this.style.transition = 'transform 0.2s ease';
+    });
+    
+    stat.addEventListener('mouseleave', function() {
+      this.style.transform = 'scale(1)';
+    });
+  });
+
+  // Banks carousel functionality
+  const banksCarousel = document.querySelector('.home__engagement-banks-carousel');
+  const banksTrack = document.querySelector('.home__engagement-banks-track');
+  
+  if (banksCarousel && banksTrack) {
+    // Pause animation on hover over individual bank slides
+    const bankSlides = document.querySelectorAll('.home__engagement-bank-slide');
+    bankSlides.forEach(slide => {
+      slide.addEventListener('mouseenter', function() {
+        banksTrack.style.animationPlayState = 'paused';
+      });
+      
+      slide.addEventListener('mouseleave', function() {
+        banksTrack.style.animationPlayState = 'running';
+      });
+    });
+
+    // Add click event for bank slides
+    bankSlides.forEach(slide => {
+      slide.addEventListener('click', function() {
+        const bankName = slide.querySelector('.home__engagement-bank-logo').alt;
+        console.log(`Clicked on ${bankName}`);
+        // You can add more functionality here like showing details modal
+      });
+    });
+  }
+});
+
+// CSS pour l'animation
+const engagementStyle = document.createElement('style');
+engagementStyle.textContent = `
+@keyframes slideUpEngagement {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+`;
+document.head.appendChild(engagementStyle);
+</script>

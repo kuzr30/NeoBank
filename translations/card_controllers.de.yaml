@@ -1,0 +1,47 @@
+card_controllers:
+  # Gemeinsame Flash-Nachrichten
+  flash:
+    kyc_required: "Sie müssen Ihre Identitätsprüfung abschließen, um auf die Bankkarten-Services zuzugreifen."
+    
+  # CardController
+  card_controller:
+    access_denied:
+      card: "Zugriff auf diese Karte verweigert."
+      subscription: "Zugriff auf diese Beantragung verweigert."
+      opposition: "Zugriff auf diese Sperrung verweigert."
+  
+  # SubscriptionController
+  subscription:
+    flash:
+      already_has_card: "Sie haben bereits eine Karte oder einen laufenden Antrag."
+      no_active_account: "Sie müssen ein aktives Konto haben, um eine Karte zu beantragen."
+      success_created: "Ihr Beantragungsantrag wurde erfolgreich registriert. Sie erhalten eine Benachrichtigung, sobald er bearbeitet wird."
+      error_processing: "Bei der Registrierung Ihres Antrags ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+      only_pending_can_cancel: "Nur ausstehende Beantragungen können storniert werden."
+      invalid_csrf_token: "Ungültiges Sicherheits-Token."
+      success_cancelled: "Ihr Beantragungsantrag wurde erfolgreich storniert."
+      error_cancelling: "Bei der Stornierung ist ein Fehler aufgetreten."
+    
+    default_description: "Automatischer Antrag über die Banking-Schnittstelle"
+  
+  # OppositionController
+  opposition:
+    flash:
+      only_active_cards: "Nur aktive Karten können gesperrt werden."
+      already_in_progress: "Eine Sperrung für diese Karte ist bereits in Bearbeitung."
+      success_created: "Ihre Sperrung wurde erfolgreich registriert. Ihre Karte wurde sofort zu Ihrer Sicherheit gesperrt."
+      error_processing: "Bei der Registrierung Ihrer Sperrung ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie unseren Kundendienst."
+      select_card: "Bitte wählen Sie eine Karte aus."
+      select_card_required: "Bitte wählen Sie eine Karte aus."
+      card_not_found: "Karte nicht gefunden oder Zugriff verweigert."
+      emergency_success: "SPERRUNG REGISTRIERT - Ihre Karte wurde sofort gesperrt. Referenz: {reference}"
+      emergency_error: "Fehler beim Sperren. Kontaktieren Sie sofort den Kundendienst unter 02/XXX.XX.XX"
+    
+    emergency_description: "Notfallsperrung über Schnellschnittstelle"
+    
+    # Sperrungsgründe
+    reasons:
+      lost: "Karte verloren"
+      stolen: "Karte gestohlen"
+      compromised: "Karte kompromittiert"
+      fraudulent_activity: "Betrügerische Aktivität"

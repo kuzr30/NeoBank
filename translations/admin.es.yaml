@@ -1,0 +1,10 @@
+# Traducciones para admin - Correos programados
+email_template:
+  subject:
+    kyc_rejected: "Verificación KYC - Acción requerida"
+    incomplete_account: "Complete su perfil - Acción requerida"
+    fees_inquiry: "Información sobre tarifas bancarias"
+    account_activation_reminder: "Recordatorio - Active su cuenta"
+    credit_application_incomplete: "Su solicitud de crédito - Información faltante"
+    account_creation_follow_up: "Seguimiento de su solicitud - Creación de cuenta requerida"
+    payment_details: "Pago de %amount%€ - Datos bancarios para transferencia INSTANTÁNEA"

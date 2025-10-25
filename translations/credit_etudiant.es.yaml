@@ -1,0 +1,105 @@
+credit_etudiant:
+  page:
+    title: "Crédito Estudiantil"
+    description: "Financie sus estudios superiores con nuestro crédito estudiantil. Condiciones preferenciales y reembolso diferido."
+
+  hero:
+    title: "Crédito Estudiantil"
+    subtitle: "Invierta en su futuro"
+    values:
+      taux: "{rate}% TAE*"
+      montant: "50 000€"
+      duree: "15 años"
+
+  section_1:
+    title: "¿Qué es un crédito estudiantil?"
+    content:
+      paragraph_1: "El crédito estudiantil está diseñado para financiar sus estudios superiores: gastos de matrícula, alojamiento estudiantil, material pedagógico, estancias en el extranjero y gastos de vida corriente."
+      paragraph_2: "Con condiciones preferenciales y la posibilidad de diferir el reembolso, este crédito le acompaña durante todo su recorrido académico."
+
+  features:
+    montant: "Hasta 50 000€"
+    montant_detail: "Para toda la duración de los estudios"
+    duree: "Hasta 15 años"
+    duree_detail: "Con diferimiento posible"
+    taux: "Desde {rate}% TAE*"
+    taux_detail: "Tasa preferencial estudiante"
+    garantie: "Aval parental"
+    garantie_detail: "O garantía del Estado"
+
+  advantages:
+    taux_preferentiel:
+      title: "Tasa preferencial:"
+      text: "Condiciones ventajosas reservadas a estudiantes"
+    differe_remboursement:
+      title: "Diferimiento de reembolso:"
+      text: "Hasta el fin de estudios + 2 años"
+    deblocage_progressif:
+      title: "Desembolso progresivo:"
+      text: "Fondos disponibles según las necesidades"
+    garantie_etat:
+      title: "Garantía del Estado:"
+      text: "Posible con el dispositivo público"
+    pas_frais:
+      title: "Sin gastos de expediente:"
+      text: "Ningún costo adicional"
+
+  requirements:
+    conditions_etudiant:
+      title: "Condiciones estudiante"
+      items:
+        inscription: "Estar inscrito en un centro de enseñanza superior"
+        age: "Tener entre 18 y 28 años"
+        nationalite: "Nacionalidad francesa o UE"
+        residence: "Residir en Francia"
+    garanties_requises:
+      title: "Garantías requeridas"
+      items:
+        caution: "Aval parental solidario"
+        garantie_etat: "O garantía del Estado (si elegible)"
+        justificatifs: "Justificantes de ingresos de los avalistas"
+        engagement: "Compromiso de reembolso firmado"
+
+  documents:
+    dossier_etudiant:
+      title: "Expediente estudiante"
+      items:
+        certificat: "Certificado de escolaridad"
+        carte: "Cédula de identidad o pasaporte"
+        domicile: "Justificante de domicilio"
+        devis: "Presupuestos o facturas de gastos a financiar"
+    dossier_garants:
+      title: "Expediente avalistas"
+      items:
+        identites: "Documentos de identidad de los avalistas"
+        bulletins: "3 últimas nóminas"
+        avis: "Declaración de impuestos"
+        patrimoine: "Justificantes de patrimonio"
+    informations_bancaires:
+      title: "Información bancaria"
+      items:
+        rib: "RIB de la cuenta estudiantil"
+        releves: "Extractos de cuentas"
+        attestation: "Certificado bancario"
+
+  legal:
+    title: "Información legal importante"
+    taeg:
+      title: "*TAE:"
+      text: "Ejemplo representativo: para un crédito estudiantil de 20 000€ en 10 años al TAE del 1,9%, usted reembolsa 120 cuotas de 184€, es decir un monto total de 22 080€ (costo del crédito: 2 080€)."
+    differe:
+      title: "Diferimiento:"
+      text: "Posibilidad de diferir el reembolso del capital durante los estudios."
+    garantie_etat:
+      title: "Garantía del Estado:"
+      text: "Bajo condiciones de elegibilidad, sin aval parental."
+    modulation:
+      title: "Modulación:"
+      text: "Adaptación de las cuotas según la evolución de la situación."
+    assurance:
+      title: "Seguro:"
+      text: "Muerte-invalidez incluido, desempleo opcional."
+
+  cta:
+    title: "Dé vida a sus ambiciones"
+    subtitle: "Financie sus estudios con nuestro crédito estudiantil ventajoso"

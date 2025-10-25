@@ -1,0 +1,318 @@
+title: "Versicherungsvertrag Nr. %contract_number%"
+contract_title: "VERSICHERUNGSVERTRAG"
+
+# Header
+header:
+  logo_alt: "Logo %company_name%"
+  contract_number: "VERTRAG NR. %contract_number%"
+
+# Hauptsektion
+main:
+  logo_alt: "Logo %company_name%"
+
+# Unternehmensinformationen
+company_info:
+  title: "Unternehmensinformationen und Vertragsreferenz"
+  establishment: "Finanzinstitut - Versicherungen"
+  contract_number: "VERTRAG NR. %number%"
+  establishment_date: "Erstellungsdatum: %date%"
+  signature_date: "Unterzeichnungsdatum: %date%"
+  activation_date: "Aktivierungsdatum: %date%"
+  expiration_date: "Ablaufdatum: %date%"
+
+# Kapitel I - Die Vertragsparteien
+chapter_1:
+  title: "Kapitel I - Die Vertragsparteien"
+  insurer:
+    title: "Der Versicherer"
+    establishment: "Finanzinstitut"
+    capital: "Stammkapital: %capital% €"
+    headquarters: "Sitz: %address%"
+    siren: "SIREN: %siren%"
+    ape: "APE-Code: %ape%"
+    represented: "Vertreten durch seinen Generaldirektor"
+    designation: "Nachfolgend \"Der Versicherer\" genannt"
+  insured:
+    title: "Der Versicherte"
+    residing: "Wohnhaft:"
+    address_placeholder: "[Adresse zu vervollständigen]"
+    born: "Geboren am: %date%"
+    phone: "Telefon: %phone%"
+    email: "E-Mail: %email%"
+    quote_number: "Angebot Nr.: %number%"
+    designation: "Nachfolgend \"Der Versicherte\" genannt"
+  agreement: "Die Parteien haben folgendes vereinbart und festgelegt"
+
+# Kapitel II - Gegenstand und Garantien
+chapter_2:
+  title: "Kapitel II - Gegenstand und Garantien"
+  article_1:
+    title: "Artikel 1 - Gegenstand des Vertrags"
+    paragraph_1: "Dieser Versicherungsvertrag hat zum Gegenstand, dem Versicherten gegen Zahlung der vereinbarten Prämien und Beiträge die Übernahme der finanziellen Folgen zu gewähren, die sich aus der Verwirklichung der in diesen allgemeinen und besonderen Bedingungen definierten Risiken ergeben."
+    paragraph_2: "Der Versicherer verpflichtet sich, im Rahmen der abgeschlossenen Garantien und der vereinbarten Höchstgrenzen, den Versicherten oder seine Rechtsnachfolger für die erlittenen Schäden infolge des Eintritts eines Schadensfalls zu entschädigen, der in den Anwendungsbereich dieser Versicherungspolice %insurance_type% fällt."
+    paragraph_3: "Die Garantien werden nach den in diesen Bestimmungen definierten Modalitäten, Bedingungen, Grenzen, Ausschlüssen und Selbstbehalten gewährt, vorbehaltlich der wirksamen Zahlung der Prämien zu den vereinbarten Fälligkeitsterminen und der Einhaltung der vertraglichen Verpflichtungen durch den Versicherten."
+  article_2:
+    title: "Artikel 2 - Dauer und Inkrafttreten"
+    duration_label: "Vertragsdauer:"
+    duration_text: "Dieser Versicherungsvertrag wird für eine Dauer von %duration% Monaten abgeschlossen und tritt am %start_date% um null Uhr in Kraft und läuft am %end_date% um vierundzwanzig Uhr ab, außer bei vorzeitiger Kündigung unter den in diesen Bestimmungen vorgesehenen Bedingungen."
+    renewal_label: "Verlängerung:"
+    renewal_text: "Außer bei Kündigung durch eine der Parteien mit einer Frist von zwei Monaten vor Ablauf verlängert sich der Vertrag stillschweigend für aufeinanderfolgende Zeiträume von einem Jahr zu den zum Verlängerungsdatum gültigen Bedingungen."
+    effective_label: "Inkrafttreten der Garantien:"
+    effective_text: "Die Garantien treten zu dem oben angegebenen Datum in Kraft, vorbehaltlich der wirksamen Zahlung der ersten Prämie oder des Prämienanteils und eventueller Bearbeitungsgebühren. Bei Zahlungsausfall werden die Garantien von Rechts wegen ausgesetzt."
+    territory_label: "Garantiegebiet:"
+    territory_text: "Die Garantien gelten innerhalb der geografischen Grenzen der Europäischen Union, außer bei ausdrücklich in den besonderen Bedingungen vorgesehenen abweichenden Bestimmungen."
+  article_3:
+    title: "Artikel 3 - Gewährte Garantien"
+    definition_label: "Definition der Garantien:"
+    definition_text: "Der Versicherer gewährt dem Versicherten die nachfolgend definierten Garantien innerhalb der in diesen allgemeinen und besonderen Bedingungen festgelegten Höchstgrenzen, Selbstbehalte und Bedingungen."
+    coverage_label: "Umfang der Deckungen:"
+    coverage_text: "Die Garantien gelten für Schäden, die während der Gültigkeitsdauer des Vertrags eingetreten sind, in den vorgeschriebenen Fristen gemeldet wurden und aus Ereignissen resultieren, die nicht von diesen Bedingungen ausgeschlossen sind."
+  guarantees:
+    auto:
+      civil_liability: "Obligatorische Haftpflichtversicherung"
+      defense_recourse: "Rechtsschutz und Regress"
+      all_accidents: "Vollkaskoschäden"
+      theft_fire: "Diebstahl und Brand"
+      glass_breakage: "Glasbruch"
+      assistance: "24h/24 Pannenhilfe"
+    home:
+      fire_explosion: "Brand und Explosionen"
+      water_damage: "Wasserschäden"
+      theft_vandalism: "Diebstahl und Vandalismus"
+      civil_liability: "Privathaftpflicht"
+      glass_breakage: "Glasbruch"
+      natural_disasters: "Naturkatastrophen"
+    health:
+      medical_pharma: "Arzt- und Arzneimittelkosten"
+      hospitalization: "Krankenhausaufenthalt"
+      dental_care: "Zahnbehandlung"
+      optical: "Optik"
+      alternative_medicine: "Alternative Medizin"
+      repatriation_assistance: "Rückführungshilfe"
+    life:
+      death_all_causes: "Tod aus allen Ursachen"
+      permanent_disability: "Vollständige Dauerivalidität"
+      temporary_incapacity: "Vorübergehende Arbeitsunfähigkeit"
+      education_pension: "Ausbildungsrente"
+      funeral_capital: "Bestattungskapital"
+      legal_assistance: "Rechtshilfe"
+    default:
+      main_coverage: "Hauptdeckung entsprechend den definierten Risiken"
+      civil_liability: "Haftpflichtversicherung"
+      assistance_advice: "Hilfe und Beratung"
+      defense_recourse: "Rechtsschutz und Regress"
+  table:
+    guarantee: "Garantie"
+    coverage_amount: "Deckungssumme"
+    deductible: "Selbstbehalt"
+    variable_deductible: "Je nach Garantie variabel"
+
+# Kapitel III - Finanzielle Bedingungen
+chapter_3:
+  title: "Kapitel III - Finanzielle Bedingungen"
+  article_4:
+    title: "Artikel 4 - Prämie und Gebühren"
+    calculation_label: "Prämienberechnung:"
+    calculation_text: "Die Versicherungsprämie wurde basierend auf den vom Versicherten erklärten Risikoelementen und den abgeschlossenen Garantien berechnet. Jede Änderung dieser Elemente kann zu einer Prämienrevision führen."
+    payment_schedule_label: "Zahlungstermine:"
+    payment_schedule_text: "Die Prämie ist monatlich nachträglich zahlbar, spätestens am letzten Tag jedes Monats. Die erste Zahlung ist bei Vertragsabschluss fällig."
+    amounts_detail_label: "Aufschlüsselung der Beträge:"
+    amounts_detail_text: "Die untenstehende Tabelle zeigt die Zusammensetzung der monatlichen Prämie sowie die mit dem Vertrag verbundenen Gebühren auf, einschließlich Versicherungsgebühren und gegebenenfalls Bearbeitungsgebühren."
+  article_5:
+    title: "Artikel 5 - Zahlungsmodalitäten und Verpflichtungen"
+    payment_method_label: "Zahlungsart:"
+    payment_method_text: "Die Prämie ist monatlich per Lastschrift vom vom Versicherten bezeichneten Bankkonto zu zahlen. Die erste Abbuchung erfolgt zum Aktivierungsdatum des Vertrags."
+    payment_default_label: "Zahlungsausfall:"
+    payment_default_text: "Bei Zahlungsausfall einer Prämie zu ihrem Fälligkeitstermin sendet der Versicherer dem Versicherten eine Mahnung per Einschreiben. Bleibt diese Mahnung zehn Tage lang ohne Wirkung, werden die Garantien von Rechts wegen ausgesetzt."
+    processing_fees_label: "Bearbeitungsgebühren:"
+    processing_fees_text: "Die Bearbeitungs- und Versicherungsgebühren werden bei Vertragsabschluss abgebucht und sind nicht erstattungsfähig, außer bei Widerruf innerhalb von 14 Tagen nach Unterzeichnung."
+    indexation_label: "Indexierung:"
+    indexation_text: "Die Prämie kann jährlich entsprechend der Entwicklung des vom INSEE veröffentlichten Verbraucherpreisindex angepasst werden."
+  table:
+    element: "Element"
+    amount: "Betrag"
+    frequency: "Periodizität"
+    description: "Beschreibung"
+    monthly_premium: "Monatliche Prämie"
+    monthly: "Monatlich"
+    main_premium: "Hauptversicherungsprämie"
+    insurance_fees: "Versicherungsgebühren"
+    one_time_payment: "Einmalige Zahlung"
+    additional_fees: "Zusätzliche versicherungsbezogene Gebühren"
+    processing_fees: "Bearbeitungsgebühren"
+    administrative_fees: "Verwaltungsgebühren für die Dossierbearbeitung"
+    monthly_total: "Monatliche Gesamtsumme"
+    monthly_deduction: "Monatlich abzubuchender Betrag"
+  payment_obligation:
+    title: "ZAHLUNGSVERPFLICHTUNG:"
+    text: "Die Zahlung der monatlichen Prämie, der Versicherungsgebühren und der Bearbeitungsgebühren ist obligatorisch, um die Gültigkeit des Vertrags aufrechtzuerhalten. Jeder Zahlungsausfall führt zur sofortigen Aussetzung der Garantien nach einer 10 Tage lang wirkungslos gebliebenen Mahnung."
+
+# Kapitel IV - Verpflichtungen und Ausschlüsse
+chapter_4:
+  title: "Kapitel IV - Verpflichtungen und Ausschlüsse"
+  article_6:
+    title: "Artikel 6 - Verpflichtungen des Versicherten"
+    risk_declaration_label: "Risikoerklärung:"
+    risk_declaration_text: "Der Versicherte verpflichtet sich, bei Vertragsabschluss und während der Vertragslaufzeit alle ihm bekannten Umstände aufrichtig und vollständig zu erklären, die geeignet sind, dem Versicherer die Einschätzung der von ihm übernommenen Risiken zu ermöglichen."
+    claim_declaration_label: "Schadensmeldung:"
+    claim_declaration_text: "Bei einem Schaden muss der Versicherte diesen dem Versicherer schriftlich innerhalb von fünf Werktagen nach dem Tag melden, an dem er davon Kenntnis erhalten hat, außer bei höherer Gewalt oder Zufall."
+    safeguard_measures_label: "Schutzmaßnahmen:"
+    safeguard_measures_text: "Der Versicherte muss alle angemessenen Maßnahmen ergreifen, um das Ausmaß des Schadens zu begrenzen und Regressansprüche gegen verantwortliche Dritte zu bewahren."
+    investigation_assistance_label: "Ermittlungsunterstützung:"
+    investigation_assistance_text: "Der Versicherte verpflichtet sich, dem Versicherer alle Dokumente, Informationen und Nachweise zur Verfügung zu stellen, die für die Bearbeitung des Schadensdossiers erforderlich sind."
+  article_7:
+    title: "Artikel 7 - Allgemeine Ausschlüsse"
+    never_covered: "Niemals versichert sind:"
+    exclusion_1: "Schäden, die vom Versicherten vorsätzlich oder mit seiner Mittäterschaft verursacht wurden"
+    exclusion_2: "Folgen von Bürger- oder ausländischem Krieg, Aufständen, Volksbewegungen"
+    exclusion_3: "Direkte oder indirekte Auswirkungen von Explosion, Wärmeentwicklung oder nuklearer Strahlung"
+    exclusion_4: "Schäden infolge vorsätzlicher oder arglistiger Fehler des Versicherten"
+    exclusion_5: "Schäden, die vor Inkrafttreten des Vertrags oder nach seinem Ablauf eingetreten sind"
+    exclusion_6: "Geldstrafen, Bußgelder und Geldsanktionen jeder Art"
+
+# Kapitel V - Schäden und Entschädigung
+chapter_5:
+  title: "Kapitel V - Schäden und Entschädigung"
+  article_8:
+    title: "Artikel 8 - Meldeverfahren"
+    declaration_deadline_label: "Meldefrist:"
+    declaration_deadline_text: "Jeder Schaden muss innerhalb von fünf Werktagen nach seinem Eintritt oder der Kenntnis, die der Versicherte davon haben kann, gemeldet werden. Bei Diebstahlschäden wird diese Frist auf zwei Werktage reduziert."
+    declaration_methods_label: "Meldearten:"
+    declaration_methods_text: "Die Meldung muss per Einschreiben mit Rückschein oder durch jedes Mittel, das den Empfang bescheinigen kann, an die Adresse des Unternehmenssitzes des Versicherers gesandt werden."
+    declaration_content_label: "Inhalt der Meldung:"
+    declaration_content_text: "Die Meldung muss die Umstände, das Datum, den Ort des Schadens, seine wahrscheinlichen Ursachen, die Art und die ungefähre Schätzung der Schäden präzisieren."
+  article_9:
+    title: "Artikel 9 - Expertise und Regulierung"
+    expertise_label: "Expertise:"
+    expertise_text: "Der Versicherer behält sich das Recht vor, eine Expertise der Schäden durch einen Experten seiner Wahl durchführen zu lassen. Der Versicherte kann bei Meinungsverschiedenheiten seinen eigenen Experten bestimmen."
+    settlement_label: "Entschädigungsregulierung:"
+    settlement_text: "Die Entschädigung wird innerhalb des Monats nach der Einigung der Parteien oder dem endgültigen Gerichtsurteil gezahlt, abzüglich eventueller Selbstbehalte."
+    subrogation_label: "Subrogation:"
+    subrogation_text: "Der Versicherer tritt in die Rechte und Klagen des Versicherten gegen verantwortliche Dritte ein, im Umfang der gezahlten Entschädigung."
+
+# Kapitel VI - Kündigung und Änderung
+chapter_6:
+  title: "Kapitel VI - Kündigung und Änderung"
+  article_10:
+    title: "Artikel 10 - Vertragskündigung"
+    termination_maturity_label: "Kündigung zum Ablauftermin:"
+    termination_maturity_text: "Jede Partei kann den Vertrag zu seinem jährlichen Ablauftermin mit einer Frist von zwei Monaten per Einschreiben kündigen."
+    termination_during_label: "Kündigung während der Vertragslaufzeit:"
+    termination_during_text: "Der Vertrag kann während der Laufzeit bei Risikoänderung, Schaden, Zahlungsausfall oder in anderen vom Versicherungsgesetzbuch vorgesehenen Fällen gekündigt werden."
+    termination_nonpayment_label: "Kündigung wegen Nichtzahlung:"
+    termination_nonpayment_text: "Bei Nichtzahlung einer Prämie kann der Versicherer den Vertrag zehn Tage nach einer wirkungslos gebliebenen Mahnung kündigen."
+  article_11:
+    title: "Artikel 11 - Vertragsänderung"
+    risk_aggravation_label: "Risikoverschärfung:"
+    risk_aggravation_text: "Der Versicherte muss dem Versicherer jede Änderung melden, die geeignet ist, die Risiken zu verschärfen oder neue zu schaffen. Diese Erklärung kann zu einer Prämienrevision führen."
+    risk_reduction_label: "Risikoverminderung:"
+    risk_reduction_text: "Wenn das Risiko merklich abnimmt, kann der Versicherte eine entsprechende Prämienreduzierung verlangen."
+
+# Kapitel VII - Zusammenfassung der obligatorischen Gebühren
+chapter_7:
+  title: "Kapitel VII - Zusammenfassung der obligatorischen Gebühren"
+  article_12:
+    title: "Artikel 12 - Aufschlüsselung der zu zahlenden Beträge"
+  mandatory_amounts_title: "OBLIGATORISCH ZU ZAHLENDE BETRÄGE"
+  insurance_fees_label: "Versicherungsgebühren (einmalige Zahlung):"
+  processing_fees_label: "Bearbeitungsgebühren (einmalige Zahlung):"
+  mandatory_payment: "OBLIGATORISCHE ZAHLUNG"
+  deducted_subscription: "Bei Vertragsabschluss abgebucht"
+  administrative_fees_non_refundable: "Nicht erstattungsfähige Verwaltungsgebühren"
+  attention_mandatory: "ACHTUNG: Die Zahlung dieser Gebühren ist OBLIGATORISCH und stellt eine unabdingbare Voraussetzung für die Gültigkeit und das Inkrafttreten dieses Versicherungsvertrags dar."
+  automatic_deduction_note: "Diese Beträge werden automatisch bei Vertragsabschluss abgebucht und können nicht erstattet werden, außer bei Ausübung des Widerrufsrechts innerhalb von 14 Tagen."
+
+# Kapitel VIII - Schlussbestimmungen
+chapter_8:
+  title: "Kapitel VIII - Schlussbestimmungen"
+  article_13:
+    title: "Artikel 13 - Anwendbares Recht und Gerichtsstand"
+    applicable_law_label: "Anwendbares Recht:"
+    applicable_law_text: "Dieser Vertrag unterliegt dem französischen Recht und insbesondere den Bestimmungen des Versicherungsgesetzbuchs."
+    jurisdiction_label: "Zuständige Gerichtsbarkeit:"
+    jurisdiction_text: "Bei Streitigkeiten sind ausschließlich die französischen Gerichte zuständig. Der Versicherte kann jedoch das Gericht seines Wohnsitzes anrufen."
+    mediation_label: "Mediation:"
+    mediation_text: "Bei Meinungsverschiedenheiten kann der Versicherte den Versicherungsmediator anrufen, dessen Kontaktdaten auf der Website des Französischen Versicherungsverbands verfügbar sind."
+  article_14:
+    title: "Artikel 14 - Datenschutz"
+    data_processing_label: "Datenverarbeitung:"
+    data_processing_text: "Die gesammelten personenbezogenen Daten sind für die Vertragsverwaltung und die gesetzlichen Verpflichtungen des Versicherers erforderlich. Sie werden in einer DSGVO-konformen Datenverarbeitung verwendet."
+    insured_rights_label: "Rechte des Versicherten:"
+    insured_rights_text: "Der Versicherte verfügt über ein Recht auf Zugang, Berichtigung, Löschung und Übertragbarkeit seiner personenbezogenen Daten sowie das Recht, ihrer Verarbeitung zu widersprechen."
+  article_15:
+    title: "Artikel 15 - Verschiedene Bestimmungen"
+    partial_nullity_label: "Teilnichtigkeit:"
+    partial_nullity_text: "Sollte eine Klausel dieses Vertrags für nichtig erklärt werden, würde diese Nichtigkeit die Gültigkeit der anderen Klauseln nicht beeinträchtigen."
+    contract_language_label: "Vertragssprache:"
+    contract_language_text: "Bei einer Übersetzung dieses Vertrags ist nur die französische Version maßgebend."
+    prescription_label: "Verjährung:"
+    prescription_text: "Alle aus diesem Vertrag abgeleiteten Klagen verjähren nach zwei Jahren ab dem Ereignis, das ihnen zugrunde liegt."
+
+# Kapitel IX-XII
+chapter_9:
+  title: "Kapitel IX - Verpflichtungen und Ausschlüsse"
+  insured_obligations: "Verpflichtungen des Versicherten"
+  insured_obligations_text: "Der Versicherte verpflichtet sich, alle Elemente wahrheitsgemäß zu erklären, die eine Risikoeinschätzung ermöglichen, und jede Änderung während der Vertragslaufzeit zu melden."
+  claim_declaration: "Schadensmeldung"
+  claim_declaration_text: "Der Versicherte muss jeden Schaden innerhalb von 5 Werktagen ab dem Zeitpunkt melden, zu dem er davon Kenntnis erhalten hat, außer bei Zufall oder höherer Gewalt."
+  general_exclusions: "Allgemeine Ausschlüsse"
+  general_exclusions_text: "Von der Garantie ausgeschlossen sind: Kriegshandlungen, nukleare Katastrophen, vorsätzliche Handlungen des Versicherten und Schäden im Zustand der Trunkenheit."
+  prevention: "Prävention"
+  prevention_text: "Der Versicherte verpflichtet sich, alle angemessenen Präventionsmaßnahmen zu ergreifen, um das Eintreten eines Schadens zu vermeiden."
+
+chapter_10:
+  title: "Kapitel X - Schäden und Entschädigung"
+  article_5:
+    title: "Artikel 5 - Meldeverfahren"
+    item_1: "Den Schaden in den gesetzlichen Fristen melden."
+    item_2: "Alle angeforderten Nachweise beibringen."
+    item_3: "Die Expertise falls nötig erleichtern."
+    item_4: "Die Verantwortung nicht ohne Zustimmung des Versicherers anerkennen."
+  article_6:
+    title: "Artikel 6 - Schadensregulierung"
+    item_1: "Der Versicherer hat 30 Tage Zeit für sein Entschädigungsangebot."
+    item_2: "Die Regulierung erfolgt innerhalb von 15 Tagen nach der Einigung."
+    item_3: "Bei Meinungsverschiedenheiten Rückgriff auf widersprüchliche Expertise."
+    item_4: "Verjährung der Klagen nach 2 Jahren ab dem auslösenden Ereignis."
+
+chapter_11:
+  title: "Kapitel XI - Dauer und Kündigung"
+  article_7:
+    title: "Artikel 7 - Vertragsdauer"
+    duration_with_expiration: "Dieser Vertrag tritt am %start_date% um 0:00 Uhr in Kraft und läuft am %end_date% ab, dem Datum der letzten Abbuchung des zugehörigen Kredits. Der Vertrag ist nicht automatisch verlängerbar."
+    duration_renewable: "Dieser Vertrag tritt am %start_date% um 0:00 Uhr für eine Dauer von einem Jahr in Kraft. Er verlängert sich durch stillschweigende Verlängerung, außer bei Kündigung durch eine der Parteien."
+  article_8:
+    title: "Artikel 8 - Kündigung"
+    item_1: "Jährliche Kündigung: Frist von 2 Monaten vor Ablauf."
+    item_2: "Kündigung wegen Nichtzahlung nach Mahnung."
+    item_3: "Kündigung wegen Risikoverschärfung."
+    item_4: "Widerrufsrecht von 14 Tagen für neue Verträge."
+
+chapter_12:
+  title: "Kapitel XII - Allgemeine Bestimmungen"
+  article_9:
+    title: "Artikel 9 - Anwendbares Recht und Gerichtsstand"
+    text: "Dieser Vertrag unterliegt dem französischen Recht und dem Versicherungsgesetzbuch. Bei Streitigkeiten ausschließliche Zuständigkeit der französischen Gerichte."
+  article_10:
+    title: "Artikel 10 - Beschwerden"
+    text: "Jede Beschwerde muss an den Kundendienst von %company_name% gerichtet werden. Bei anhaltendem Meinungsstreit Anrufung des Versicherungsmediators."
+  article_11:
+    title: "Artikel 11 - Datenschutz"
+    text: "Der Versicherer verpflichtet sich, personenbezogene Daten gemäß DSGVO und dem Gesetz über Informatik und Freiheiten zu verarbeiten. Aufbewahrungsdauer: 5 Jahre nach Kündigung."
+
+# Besondere Bedingungen
+special_conditions:
+  title: "Besondere Bedingungen"
+
+# Unterschriften
+signatures:
+  title: "Unterschriften"
+  insured: "Der Versicherte"
+  insurer: "Der Versicherer"
+  assureur: "Der Versicherer"
+  date_and_signature: "Datum und Unterschrift"
+  read_and_approved: "Gelesen und genehmigt"
+  represented_by_ceo: "Vertreten durch den Generaldirektor"
+  directeur_general: "Generaldirektor"
+  habilite: "Berechtigt, das Unternehmen zu verpflichten"
+  company_stamp: "Firmenstempel"

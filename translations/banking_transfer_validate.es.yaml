@@ -1,0 +1,32 @@
+banking_transfer_validate:
+  header:
+    title: "Validación de la transferencia"
+    subtitle: "Ingrese los códigos de seguridad para validar su transferencia"
+    back_button: "Volver"
+  
+  summary:
+    title: "Transferencia en curso de validación"
+    amount_label: "Monto:"
+    beneficiary_label: "Beneficiario:"
+    description_label: "Descripción:"
+    status_label: "Estado:"
+  
+  status:
+    pending: "Pendiente"
+    executing: "En ejecución"
+    completed: "Completado"
+    expired: "Expirado"
+    cancelled: "Cancelado"
+    blocked: "Bloqueado"
+  
+  validation:
+    form_title: "Validación de la transferencia"
+    submit_button: "Validar"
+  
+  alerts:
+    code_expired: "El código \"%code%\" ha expirado."
+    transfer_confirmed: "La transferencia está confirmada."
+    transfer_completed: "La transferencia se ejecutó con éxito el %date%."
+    transfer_expired: "Esta transferencia ha expirado y ya no puede ser validada. Debe crear una nueva transferencia."
+    transfer_cancelled: "Esta transferencia ha sido cancelada."
+    transfer_blocked: "Esta transferencia ha sido bloqueada debido a intentos de validación incorrectos. Contacte con el servicio al cliente para desbloquear su cuenta."

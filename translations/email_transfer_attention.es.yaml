@@ -1,0 +1,31 @@
+email_transfer_attention:
+  title: "Su transferencia requiere su atención"
+  
+  content:
+    page_title: "Acción requerida para su transferencia"
+    greeting: "Estimado(a) %firstName% %lastName%,"
+    
+    attention_required:
+      title: "Atención requerida"
+      description: "Su orden de transferencia (ref. %transferReference%) requiere una validación de seguridad adicional de su parte para ser procesada."
+    
+    transfer_details:
+      title: "Detalles de su orden de transferencia"
+      amount: "Monto"
+      beneficiary: "Beneficiario"
+      iban: "IBAN"
+      reference: "Referencia"
+    
+    next_step:
+      title: "Próximo paso"
+      description: "Por favor conéctese a su espacio bancario seguro para finalizar la autenticación de esta operación."
+      login_button: "Acceder a mi cuenta"
+      instruction: "Haga clic en el botón de arriba para conectarse de forma segura"
+    
+    security_notice:
+      title: "Aviso de seguridad"
+      description: "Este paso de seguridad adicional está implementado para proteger sus fondos y garantizar que usted es el origen de esta operación bancaria."
+    
+    assistance: "Para cualquier pregunta relacionada con esta operación, nuestro servicio al cliente permanece a su disposición a través de su espacio cliente seguro."
+    
+    footer: "Este correo fue enviado automáticamente por su banco. <br><strong>Nunca comunique sus códigos de seguridad por correo electrónico o teléfono.</strong>"

@@ -1,0 +1,62 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_funds_disbursed.title', {}, 'email_funds_disbursed') }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('email_funds_disbursed.content.page_title', {}, 'email_funds_disbursed') }}</h2>
+    
+    <p class="content-text">
+        {{ tp('email_funds_disbursed.content.greeting', {customerName: customerName}, 'email_funds_disbursed')|raw }}
+    </p>
+
+    <div class="success-box">
+        <h3 class="box-title">{{ tp('email_funds_disbursed.content.disbursement_section.title', {}, 'email_funds_disbursed') }}</h3>
+        <p class="box-text">
+            {{ tp('email_funds_disbursed.content.disbursement_section.message', {contractNumber: referenceNumber, loanAmount: loanAmount|number_format(2, ',', ' ')}, 'email_funds_disbursed')|raw }}
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3 class="box-title">{{ tp('email_funds_disbursed.content.transaction_details.title', {}, 'email_funds_disbursed') }}</h3>
+        <p class="box-text">
+            <strong>{{ tp('email_funds_disbursed.content.transaction_details.contract', {}, 'email_funds_disbursed') }}:</strong> {{ referenceNumber }}
+        </p>
+        <p class="box-text">
+            <strong>{{ tp('email_funds_disbursed.content.transaction_details.amount', {}, 'email_funds_disbursed') }}:</strong> {{ loanAmount|number_format(2, ',', ' ') }} EUR
+        </p>
+        {% if totalFees %}
+        <p class="box-text">
+            <strong>{{ tp('email_funds_disbursed.content.transaction_details.fees', {}, 'email_funds_disbursed') }}:</strong> {{ totalFees|number_format(2, ',', ' ') }} EUR
+        </p>
+        <p class="box-text">
+            <strong>{{ tp('email_funds_disbursed.content.transaction_details.net_amount', {}, 'email_funds_disbursed') }}:</strong> {{ (loanAmount - totalFees)|number_format(2, ',', ' ') }} EUR
+        </p>
+        {% endif %}
+    </div>
+
+    <div class="warning-box">
+        <h3 class="box-title">{{ tp('email_funds_disbursed.content.important_info.title', {}, 'email_funds_disbursed') }}</h3>
+        <p class="box-text">
+            {{ tp('email_funds_disbursed.content.important_info.message', {}, 'email_funds_disbursed')|raw }}
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3 class="box-title">{{ tp('email_funds_disbursed.content.repayment_info.title', {}, 'email_funds_disbursed') }}</h3>
+        <p class="box-text">
+            {{ tp('email_funds_disbursed.content.repayment_info.message', {}, 'email_funds_disbursed')|raw }}
+        </p>
+    </div>
+
+    <div class="btn-container" style="text-align:center;margin:50px 0;">
+        <a href="{{ url('home_index', {'_locale': locale}) }}" class="btn" style="display:inline-block;margin:0;padding:22px 45px;background:#2c3e50;color:#ffffff!important;font-size:20px;font-weight:700;line-height:1;text-decoration:none;text-align:center;border-radius:50px;border:none;cursor:pointer;box-shadow:0 15px 35px rgba(44,62,80,0.4);text-transform:uppercase;letter-spacing:1px;transition:all 0.3s ease;">{{ tp('email_funds_disbursed.content.access_account', {}, 'email_funds_disbursed') }}</a>
+    </div>
+
+    <p class="content-text">
+        {{ tp('email_funds_disbursed.content.thanks_message', {}, 'email_funds_disbursed') }}
+    </p>
+
+    <p class="footer-text">
+        {% if translationService is defined %}{{ translationService.tpWithCompany('email_funds_disbursed.content.footer', {}, 'email_funds_disbursed') }}{% else %}{{ tp_with_company('email_funds_disbursed.content.footer', {}, 'email_funds_disbursed') }}{% endif %}
+    </p>
+{% endblock %}

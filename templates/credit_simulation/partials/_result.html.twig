@@ -1,0 +1,437 @@
+<<!-- Credit Simulation Results -->
+<div class="simulator__results" data-turbo-temporary>
+  <!-- Success Header -->
+  <div class="simulator__results-success">
+    {{ ux_icon('heroicons:check-circle', {'class': 'simulator__success-icon'}) }}
+    <h3 class="simulator__success-title">{{ tp('credit_simulation.results.success_title', {}, 'simulation') }}</h3>
+  </div>
+
+  <!-- Main Results Grid -->
+  <div class="simulator__results-grid">
+    <!-- Monthly Payment -->
+    <div class="simulator__result-card simulator__result-card--primary">
+      <div class="simulator__result-header">
+        {{ ux_icon('heroicons:banknotes', {'class': 'simulator__result-icon'}) }}
+        <h4 class="simulator__result-title">{{ tp('credit_simulation.results.monthly_payment', {}, 'simulation') }}</h4>
+      </div>
+      <div class="simulator__result-value">{{ monthlyPayment|number_format(2, ',', ' ') }} €</div>
+      <div class="simulator__result-description">{{ tp('credit_simulation.results.monthly_payment_desc', {}, 'simulation') }}</div>
+    </div>
+
+    <!-- Total Cost -->
+    <div class="simulator__result-card">
+      <div class="simulator__result-header">
+        {{ ux_icon('heroicons:calculator', {'class': 'simulator__result-icon'}) }}
+        <h4 class="simulator__result-title">{{ tp('credit_simulation.results.total_cost', {}, 'simulation') }}</h4>
+      </div>
+      <div class="simulator__result-value">{{ totalCost|number_format(2, ',', ' ') }} €</div>
+      <div class="simulator__result-description">{{ tp('credit_simulation.results.total_cost_desc', {}, 'simulation') }}</div>
+    </div>
+
+    <!-- Total Interest -->
+    <div class="simulator__result-card">
+      <div class="simulator__result-header">
+        {{ ux_icon('heroicons:percent-badge', {'class': 'simulator__result-icon'}) }}
+        <h4 class="simulator__result-title">{{ tp('credit_simulation.results.total_interest', {}, 'simulation') }}</h4>
+      </div>
+      <div class="simulator__result-value">{{ totalInterest|number_format(2, ',', ' ') }} €</div>
+      <div class="simulator__result-description">{{ tp('credit_simulation.results.total_interest_desc', {}, 'simulation') }}</div>
+    </div>
+
+    <!-- APR -->
+    <div class="simulator__result-card">
+      <div class="simulator__result-header">
+        {{ ux_icon('heroicons:chart-bar', {'class': 'simulator__result-icon'}) }}
+        <h4 class="simulator__result-title">{{ tp('credit_simulation.results.apr', {}, 'simulation') }}</h4>
+      </div>
+      <div class="simulator__result-value">{{ apr|number_format(2, ',', ' ') }}%</div>
+      <div class="simulator__result-description">{{ tp('credit_simulation.results.apr_desc', {}, 'simulation') }}</div>
+    </div>
+  </div>
+
+  <!-- Summary Section -->
+  <div class="simulator__summary">
+    <div class="simulator__summary-header">
+      {{ ux_icon('heroicons:document-text', {'class': 'simulator__summary-icon'}) }}
+      <h4 class="simulator__summary-title">{{ tp('credit_simulation.results.summary', {}, 'simulation') }}</h4>
+    </div>
+    
+    <div class="simulator__summary-content">
+      <div class="simulator__summary-row">
+        <span class="simulator__summary-label">{{ tp('credit_simulation.results.credit_type', {}, 'simulation') }}</span>
+        <span class="simulator__summary-value">{{ creditType.label }}</span>
+      </div>
+      <div class="simulator__summary-row">
+        <span class="simulator__summary-label">{{ tp('credit_simulation.results.amount', {}, 'simulation') }}</span>
+        <span class="simulator__summary-value">{{ amount|number_format(0, ',', ' ') }} €</span>
+      </div>
+      <div class="simulator__summary-row">
+        <span class="simulator__summary-label">{{ tp('credit_simulation.results.duration', {}, 'simulation') }}</span>
+        <span class="simulator__summary-value">{{ duration }} {{ durationUnit.label|lower }}</span>
+      </div>
+      <div class="simulator__summary-row">
+        <span class="simulator__summary-label">{{ tp('credit_simulation.results.rate', {}, 'simulation') }}</span>
+        <span class="simulator__summary-value">{{ rate }}%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="simulator__actions">
+    <button class="simulator__action-btn simulator__action-btn--primary" 
+            data-action="click->credit-simulation#newSimulation">
+      {{ ux_icon('heroicons:arrow-path', {'class': 'simulator__action-icon'}) }}
+      {{ tp('credit_simulation.results.new_simulation', {}, 'simulation') }}
+    </button>
+    
+    <a href="#" class="simulator__action-btn simulator__action-btn--secondary">
+      {{ ux_icon('heroicons:document-arrow-down', {'class': 'simulator__action-icon'}) }}
+      {{ tp('credit_simulation.results.download_pdf', {}, 'simulation') }}
+    </a>
+    
+    <a href="#" class="simulator__action-btn simulator__action-btn--success">
+      {{ ux_icon('heroicons:paper-airplane', {'class': 'simulator__action-icon'}) }}
+      {{ tp('credit_simulation.results.apply_now', {}, 'simulation') }}
+    </a>
+  </div>
+</div>
+
+<style>
+/* ===== SIMULATOR RESULTS STYLES ===== */
+.simulator__results {
+  animation: slideInUp 0.5s ease-out;
+}
+
+.simulator__results-success {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(16, 163, 127, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+  border: 2px solid rgba(16, 163, 127, 0.2);
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.simulator__success-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-secondary);
+}
+
+.simulator__success-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+/* Results Grid */
+.simulator__results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.simulator__result-card {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.simulator__result-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(135deg, var(--color-muted) 0%, var(--color-border) 100%);
+}
+
+.simulator__result-card--primary::before {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #3b82f6 100%);
+}
+
+.simulator__result-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-primary);
+}
+
+.simulator__result-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.simulator__result-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-primary);
+}
+
+.simulator__result-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.simulator__result-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.simulator__result-card--primary .simulator__result-value {
+  color: var(--color-primary);
+  font-size: 1.75rem;
+}
+
+.simulator__result-description {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  line-height: 1.4;
+}
+
+/* Summary Section */
+.simulator__summary {
+  background: var(--color-background);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.simulator__summary-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.simulator__summary-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-primary);
+}
+
+.simulator__summary-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.simulator__summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.simulator__summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.simulator__summary-label {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.simulator__summary-value {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* Action Buttons */
+.simulator__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.simulator__action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  justify-content: center;
+  min-width: 0;
+}
+
+.simulator__action-btn--primary {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.simulator__action-btn--primary:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.simulator__action-btn--secondary {
+  background: var(--color-surface);
+  color: var(--color-text-light);
+  border: 2px solid var(--color-border);
+}
+
+.simulator__action-btn--secondary:hover {
+  background: var(--color-background);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.simulator__action-btn--success {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, #10b981 100%);
+  color: white;
+  border: 2px solid transparent;
+}
+
+.simulator__action-btn--success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(16, 163, 127, 0.3);
+}
+
+.simulator__action-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .simulator__results-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .simulator__actions {
+    flex-direction: column;
+  }
+  
+  .simulator__action-btn {
+    flex: none;
+  }
+  
+  .simulator__result-value {
+    font-size: 1.25rem;
+  }
+  
+  .simulator__result-card--primary .simulator__result-value {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .simulator__result-card {
+    padding: 1rem;
+  }
+  
+  .simulator__summary {
+    padding: 1rem;
+  }
+  
+  .simulator__summary-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .simulator__actions {
+    gap: 0.5rem;
+  }
+  
+  .simulator__action-btn {
+    padding: 0.625rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+</style>
+
+        <!-- Tableau d'amortissement (première année) -->
+        <div class="bg-white border border-gray-200 rounded-lg">
+            <div class="px-6 py-4 border-b border-gray-200">
+                <h4 class="text-lg font-semibold text-gray-800">
+                    <i class="fas fa-table mr-2"></i>
+                    Tableau d'amortissement (12 premiers mois)
+                </h4>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Mois</th>
+                            <th class="px-4 py-3 text-right text-xs font-medium text-gray-500 uppercase">Mensualité</th>
+                            <th class="px-4 py-3 text-right text-xs font-medium text-gray-500 uppercase">Capital</th>
+                            <th class="px-4 py-3 text-right text-xs font-medium text-gray-500 uppercase">Intérêts</th>
+                            <th class="px-4 py-3 text-right text-xs font-medium text-gray-500 uppercase">Capital restant</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        {% for row in amortizationTable %}
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 text-sm font-medium text-gray-900">{{ row.month }}</td>
+                                <td class="px-4 py-3 text-sm text-right text-gray-900">{{ row.monthlyPayment|number_format(2, ',', ' ') }} €</td>
+                                <td class="px-4 py-3 text-sm text-right text-blue-600 font-medium">{{ row.capitalPayment|number_format(2, ',', ' ') }} €</td>
+                                <td class="px-4 py-3 text-sm text-right text-orange-600">{{ row.interestPayment|number_format(2, ',', ' ') }} €</td>
+                                <td class="px-4 py-3 text-sm text-right text-gray-900">{{ row.remainingCapital|number_format(2, ',', ' ') }} €</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex space-x-4">
+            <button type="button" 
+                    class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200">
+                <i class="fas fa-file-pdf mr-2"></i>
+                Télécharger le PDF
+            </button>
+            <button type="button" 
+                    class="flex-1 bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition duration-200">
+                <i class="fas fa-envelope mr-2"></i>
+                Demander un devis
+            </button>
+        </div>
+    </div>
+</turbo-frame>

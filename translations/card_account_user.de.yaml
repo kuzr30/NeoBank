@@ -1,0 +1,124 @@
+# Übersetzungsdatei für die Benutzeroberfläche der Bankkarten
+# Domäne: card_account_user  
+# Sprache: Deutsch (de)
+
+card_account_user:
+  # Hauptsektion
+  title: "Meine Bankkarten"
+  subtitle: "Verwalten Sie Ihre Karten und entdecken Sie unsere Angebote"
+  
+  # Sektion bestehende Karte
+  user_card:
+    title: "Meine Karte"
+    status:
+      active: "Aktiv"
+      blocked: "Gesperrt" 
+      expired: "Abgelaufen"
+      pending: "Ausstehend"
+    
+    # Karteninformationen
+    card_info:
+      holder_label: "KARTENINHABER"
+      expiry_label: "GÜLTIG BIS"
+      account_label: "Konto"
+      daily_limit_label: "Tageslimit"
+      daily_limit_undefined: "Nicht definiert"
+      
+  # Sektion laufende Beantragung
+  subscription:
+    title: "Ihr Kartenantrag ist in Bearbeitung"
+    subtitle: "Ihre {cardType} {cardBrand} Karte wird bearbeitet"
+    request_date: "Antrag gestellt am {date}"
+    
+    # Beantragungsstatus
+    status:
+      contract_pending: "Vertrag in Vorbereitung"
+      contract_sent: "Vertrag versendet - Unterschrift erforderlich"
+      admin_validation: "Warten auf administrative Validierung"
+      contract_expired: "Vertrag abgelaufen"
+      pending: "Warten auf Validierung"
+    
+    # Details der Beantragung
+    details:
+      card_type_label: "Kartentyp:"
+      brand_label: "Marke:"
+      contract_label: "Vertrag:"
+    
+    # Aktionen
+    actions:
+      sign_contract: "Vertrag unterschreiben"
+      sign_deadline: "Sie müssen Ihren Vertrag innerhalb von 7 Tagen unterschreiben, um Ihren Antrag zu validieren."
+    
+    # Informative Nachrichten
+    messages:
+      contract_signature_required: "Bitte unterschreiben Sie Ihren Vertrag, damit Ihr Antrag von unseren Teams bearbeitet werden kann."
+      contract_signed_processing: "Ihr Vertrag ist unterschrieben. Unsere Teams prüfen Ihren Antrag und kontaktieren Sie innerhalb von 48 Werktagen."
+      contract_expired_message: "Ihr Vertrag ist abgelaufen. Ein neuer Beantragungsantrag wird erforderlich sein."
+      default_processing: "Ihr Antrag wird von unseren Teams bearbeitet. Sie erhalten eine E-Mail, sobald Ihre Karte validiert und einsatzbereit ist."
+  
+  # Sektion Kartenauswahl (neue Beantragungen)
+  card_selection:
+    title: "Wählen Sie Ihre Karte"
+    subtitle: "Entdecken Sie unsere verschiedenen Karten und deren Vorteile"
+    
+    # Marken
+    brands:
+      visa_title: "Visa-Karten"
+      mastercard_title: "Mastercard-Karten"
+    
+    # Kartentypen
+    card_types:
+      classic:
+        name: "Classic Karte"
+        badge: "Ideal für Einsteiger"
+        visa_price: "Kostenlos"
+        visa_period: "im ersten Jahr"
+        mastercard_price: "2€"
+        mastercard_period: "pro Monat"
+        
+      gold:
+        name: "Gold Karte"
+        badge: "Am beliebtesten"
+        badge_alt: "Beliebt"
+        visa_price: "5€"
+        mastercard_price: "8€"
+        period: "pro Monat"
+        
+      platinum:
+        name: "Platinum Karte"
+        badge: "Premium"
+        visa_price: "15€"
+        mastercard_price: "20€"
+        period: "pro Monat"
+    
+    # Beantragungsaktion
+    subscribe_action: "Beantragen"
+  
+  # Allgemeine Nachrichten
+  common:
+    loading: "Wird geladen..."
+    error: "Ein Fehler ist aufgetreten"
+    retry: "Wiederholen"
+    
+  # Navigation und Aktionen
+  navigation:
+    back: "Zurück"
+    continue: "Weiter"
+    close: "Schließen"
+    
+  # Formulare
+  forms:
+    required: "Pflichtfeld"
+    optional: "Optional"
+    select_placeholder: "Auswählen..."
+    
+  # Sicherheit und Validierungen
+  security:
+    card_blocked_warning: "Diese Karte wurde aus Sicherheitsgründen gesperrt"
+    card_expired_warning: "Diese Karte ist abgelaufen und muss erneuert werden"
+    
+  # Hilfe
+  help:
+    need_help: "Benötigen Sie Hilfe?"
+    contact_support: "Support kontaktieren"
+    faq: "Häufig gestellte Fragen"

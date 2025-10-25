@@ -1,0 +1,140 @@
+enums:
+  # Credit Application Status
+  credit_application_status:
+    pending: "Wartend"
+    approved: "Genehmigt"
+    rejected: "Abgelehnt"
+    in_progress: "In Bearbeitung"
+    in_review: "In Prüfung"
+    contract_sent: "Vertrag versendet"
+    contract_signed: "Vertrag unterzeichnet"
+    contract_validated: "Vertrag validiert"
+    funds_disbursed: "Mittel ausgezahlt"
+    requires_documents: "Dokumente erforderlich"
+    cancelled: "Storniert"
+
+  # Account Status
+  account_status:
+    active: "Aktiv"
+    suspended: "Gesperrt"
+    closed: "Geschlossen"
+    pending: "Wartend"
+
+  # Account Type
+  account_type:
+    checking: "Girokonto"
+    savings: "Sparkonto"
+    credit: "Kreditkonto"
+    business: "Geschäftskonto"
+    loan: "Darlehenskonto"
+
+  # Transaction Status
+  transaction_status:
+    pending: "En attente"
+    completed: "Terminé"
+    failed: "Échoué"
+    cancelled: "Annulé"
+
+  # Transaction Type
+  transaction_type:
+    debit: "Débit"
+    credit: "Crédit"
+    deposit: "Dépôt"
+    withdrawal: "Retrait"
+    transfer: "Virement"
+    payment: "Paiement"
+    fee: "Frais"
+    interest: "Intérêts"
+
+  # Transaction Category
+  transaction_category:
+    transfer: "Virement"
+    deposit: "Dépôt"
+    withdrawal: "Retrait"
+    payment: "Paiement"
+    fee: "Frais"
+    interest: "Intérêts"
+    loan_payment: "Remboursement de prêt"
+    card_payment: "Paiement par carte"
+    direct_debit: "Prélèvement automatique"
+    check: "Chèque"
+    cash: "Espèces"
+    online_payment: "Paiement en ligne"
+    refund: "Remboursement"
+    salary: "Salaire"
+    rent: "Loyer"
+    groceries: "Alimentation"
+    transport: "Transport"
+    entertainment: "Loisirs"
+    healthcare: "Santé"
+    education: "Éducation"
+    utilities: "Factures"
+    shopping: "Achats"
+    other: "Autres"
+
+  # Duration Unit
+  duration_unit:
+    days: "jours"
+    weeks: "semaines"
+    months: "mois"
+    years: "années"
+
+  # Duration
+  duration:
+    short: "Court terme"
+    medium: "Moyen terme"
+    long: "Long terme"
+
+  # Assurance Type
+  assurance_type:
+    auto:
+      label: "Autoversicherung"
+      description: "Vollständiger Schutz für Ihr Fahrzeug mit 24h-Hilfe"
+    habitation:
+      label: "Hausversicherung"
+      description: "Hausratversicherung für Eigentümer und Mieter"
+    sante:
+      label: "Zusatzkrankenversicherung"
+      description: "Zusatzkrankenversicherung mit optimierten Erstattungen"
+    vie:
+      label: "Lebensversicherung"
+      description: "Steuerlich optimierte Sparen und Übertragung"
+    pret:
+      label: "Kreditversicherung"
+      description: "Sichern Sie Ihren Immobilienkredit ab"
+    voyage:
+      label: "Reiseversicherung"
+      description: "Reisen Sie beruhigt mit weltweiter Abdeckung"
+    pro:
+      label: "Berufshaftpflicht"
+      description: "Vollständiger Schutz für Ihre berufliche Tätigkeit"
+    cyber:
+      label: "Cyber-Versicherung"
+      description: "Schutz vor Cyberangriffen und Datenschutzverletzungen"
+    decennale:
+      label: "Zehnjährige Haftung"
+      description: "Verpflichtend für Bauprofessionelle"
+    rc:
+      label: "Haftpflichtversicherung"
+      description: "Schutz vor Schäden an Dritten"
+    flotte:
+      label: "Flottenversicherung"
+      description: "Versicherung für Unternehmensfuhrpark"
+    garage:
+      label: "Garagenversicherung"
+      description: "Schutz für Automobilprofessionelle"
+
+  # Contrat Assurance Status
+  contrat_assurance_status:
+    actif:
+      label: "Aktiv"
+      description: "Vertrag laufend und betriebsbereit"
+    suspendu:
+      label: "Ausgesetzt"
+      description: "Vertrag vorübergehend ausgesetzt"
+    resilie:
+      label: "Gekündigt"
+      description: "Vertrag endgültig gekündigt"
+    expire:
+      label: "Abgelaufen"
+      description: "Vertrag abgelaufen"

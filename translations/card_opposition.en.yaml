@@ -1,0 +1,26 @@
+# ENGLISH TRANSLATION - Translated from French
+# Bank card opposition translation file
+# Domain: card_opposition
+# Language: English (en)
+
+card_opposition:
+  # Emergency page
+  emergency:
+    title: "Emergency opposition"
+    subtitle: "Block your card immediately"
+    select_card: "Select your card:"
+    reason_label: "Reason:"
+    submit_button: "BLOCK CARD IMMEDIATELY"
+    
+  # Opposition creation
+  create:
+    title: "Opposition declaration"
+    form_subtitle: "Bank card opposition declaration form"
+    
+  # Index
+  index:
+    title: "Opposition management"
+    active_cards: "Active cards"
+    opposition_history: "Opposition history"
+    no_active_cards: "No active cards"
+    no_opposition_history: "No opposition history"

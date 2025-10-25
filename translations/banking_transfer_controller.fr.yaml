@@ -1,0 +1,24 @@
+# Traductions pour Banking/TransferController
+flash:
+  # Messages d'erreur
+  account_blocked_transfers: "Votre compte est bloqué pour les virements. Contactez l'administration."
+  account_blocked: "Votre compte est bloqué. Contactez l'administration."
+  no_source_account: "Aucun compte source disponible pour effectuer un virement."
+  invalid_security_token: "Token de sécurité invalide."
+  transfer_cannot_be_cancelled: "Ce virement ne peut plus être annulé."
+  validation_error: "Erreur lors de la validation : %error%."
+  cancellation_error: "Erreur lors de l'annulation : %error%."
+  invalid_validation_code: "Le code de validation saisi est incorrect."
+  
+  # Messages d'avertissement
+  register_beneficiary_first: "Vous devez d'abord enregistrer un compte bénéficiaire (RIB) pour effectuer un virement."
+  kyc_required_transfers: "Vous devez compléter votre vérification d'identité (KYC) pour accéder aux virements."
+  
+  # Messages d'information
+  transfer_no_longer_pending: "Ce virement n'est plus en attente de validation."
+  transfer_in_progress: "Votre virement est en cours d'exécution."
+  
+  # Messages de succès
+  transfer_cancelled_success: "Virement annulé avec succès."
+  transfer_created_success: "Virement créé avec succès et en attente de validation."
+  transfer_validation_success: "Code validé avec succès."

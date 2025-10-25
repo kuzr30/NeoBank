@@ -1,0 +1,24 @@
+# Traducciones para Banking/TransferController
+flash:
+  # Mensajes de error
+  account_blocked_transfers: "Su cuenta está bloqueada para transferencias. Contacte con la administración."
+  account_blocked: "Su cuenta está bloqueada. Contacte con la administración."
+  no_source_account: "Ninguna cuenta de origen disponible para realizar una transferencia."
+  invalid_security_token: "Token de seguridad inválido."
+  transfer_cannot_be_cancelled: "Esta transferencia ya no puede ser cancelada."
+  validation_error: "Error durante la validación: %error%."
+  cancellation_error: "Error durante la cancelación: %error%."
+  invalid_validation_code: "El código de validación ingresado es incorrecto."
+  
+  # Mensajes de advertencia
+  register_beneficiary_first: "Debe registrar primero una cuenta beneficiaria (RIB) para realizar una transferencia."
+  kyc_required_transfers: "Debe completar su verificación de identidad (KYC) para acceder a las transferencias."
+  
+  # Mensajes de información
+  transfer_no_longer_pending: "Esta transferencia ya no está pendiente de validación."
+  transfer_in_progress: "Su transferencia está en proceso de ejecución."
+  
+  # Mensajes de éxito
+  transfer_cancelled_success: "Transferencia cancelada con éxito."
+  transfer_created_success: "Transferencia creada con éxito y pendiente de validación."
+  transfer_validation_success: "Código validado con éxito."

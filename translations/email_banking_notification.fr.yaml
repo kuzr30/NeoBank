@@ -1,0 +1,87 @@
+email_banking_notification:
+  titles:
+    transaction: "Nouvelle transaction"
+    security: "Alerte de sécurité"
+    statement: "Relevé mensuel disponible"
+    credit_approval: "Crédit approuvé"
+    credit_rejection: "Réponse à votre demande de crédit"
+    default: "Notification %company_name%"
+  
+  headers:
+    transaction: "Nouvelle transaction"
+    security: "Alerte de sécurité"
+    statement: "Relevé mensuel"
+    credit_approval: "Crédit approuvé"
+    credit_rejection: "Réponse à votre demande"
+    default: "Notification"
+  
+  common:
+    greeting: "Bonjour {firstName},"
+  
+  transaction:
+    intro: "Nous vous informons qu'une nouvelle transaction a été effectuée sur votre compte."
+    details_title: "Détails de la transaction"
+    amount: "Montant : <strong>{amount}</strong>"
+    type: "Type : {transactionType}"
+    date: "Date : {date}"
+    account: "Compte : {accountNumber}"
+    description: "Description : {description}"
+    balance: "Nouveau solde : <strong>{newBalance}</strong>"
+    
+  security:
+    intro: "Une activité inhabituelle a été détectée sur votre compte."
+    alert_title: "Détails de l'alerte"
+    action: "Action : {action}"
+    ip_address: "Adresse IP : {ipAddress}"
+    device: "Appareil : {device}"
+    location: "Localisation : {location}"
+    date: "Date : {date}"
+    security_measures: "Si vous n'êtes pas à l'origine de cette action, contactez immédiatement notre service client et changez votre mot de passe."
+    
+  statement:
+    intro: "Votre relevé mensuel pour le mois de {month} {year} est maintenant disponible."
+    download_info: "Vous pouvez le consulter et le télécharger depuis votre espace client."
+    summary_title: "Résumé du mois"
+    total_transactions: "Transactions totales : {totalTransactions}"
+    total_credits: "Total crédits : <strong>{totalCredits}</strong>"
+    total_debits: "Total débits : <strong>{totalDebits}</strong>"
+    end_balance: "Solde en fin de mois : <strong>{endBalance}</strong>"
+    download_button: "Télécharger le relevé"
+    
+  credit_approval:
+    intro: "Excellente nouvelle ! Votre demande de crédit a été approuvée."
+    details_title: "Détails de votre crédit"
+    approved_amount: "Montant approuvé : <strong>{approvedAmount}</strong>"
+    interest_rate: "Taux d'intérêt : {interestRate}%"
+    duration: "Durée : {duration} mois"
+    monthly_payment: "Mensualité : <strong>{monthlyPayment}</strong>"
+    start_date: "Date de début : {startDate}"
+    contract_info: "Vous recevrez prochainement votre contrat de crédit par email."
+    next_steps_title: "Prochaines étapes"
+    step_1: "Signature électronique du contrat"
+    step_2: "Virement des fonds sous 48h ouvrées"
+    step_3: "Mise en place des prélèvements automatiques"
+    
+  credit_rejection:
+    intro: "Nous avons étudié votre demande de crédit avec attention."
+    result: "Malheureusement, nous ne pouvons pas donner suite à votre demande à ce jour."
+    reasons_title: "Raisons principales"
+    reason_income: "Revenus insuffisants par rapport au montant demandé"
+    reason_history: "Historique de crédit incomplet"
+    reason_ratio: "Taux d'endettement trop élevé"
+    alternative_title: "Solutions alternatives"
+    alternative_1: "Renouveler votre demande dans 6 mois"
+    alternative_2: "Demander un montant plus faible"
+    alternative_3: "Améliorer votre situation financière"
+    contact_info: "Notre équipe reste disponible pour vous conseiller."
+  
+  common_footer:
+    automatic_message: "Cet email a été envoyé automatiquement par %company_name%."
+    support: "Pour toute question, contactez notre service client 24h/24 et 7j/7."
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Envoi de notification bancaire"
+    success: "Notification bancaire envoyée avec succès"
+    error: "Erreur lors de l'envoi de notification bancaire"
+    send_failed: "Échec de l'envoi de notification bancaire"

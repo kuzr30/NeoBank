@@ -1,0 +1,36 @@
+email_insurance_contract:
+    title: "Votre contrat d'assurance insuranceType"
+    
+    content:
+        page_title: "Votre contrat d'assurance insuranceType"
+        greeting: "Bonjour customerName,"
+
+        contract_ready:
+            title: "Votre contrat est prêt !"
+            description: "Veuillez trouver en pièce jointe votre contrat d'assurance insuranceType. Ce document officiel confirme votre couverture."
+        
+        contract_details:
+            title: "Détails de votre contrat"
+            contract_number: "Contrat n° contractNumber"
+            insurance_type: "Type d'assurance"
+            monthly_premium: "Prime mensuelle"
+            activation_date: "Date d'activation"
+            status: "Statut"
+        
+        important_info:
+            title: "Informations importantes"
+            point_1: "Ce contrat prend effet à partir de la date d'activation mentionnée"
+            point_2: "Votre prime mensuelle sera prélevée automatiquement chaque mois"
+            point_3: "Vous disposez d'un délai de rétractation de 14 jours calendaires"
+            point_4: "Conservez précieusement ce document, il vous sera demandé en cas de sinistre"
+        
+        questions:
+            title: "Des questions ?"
+            description: "Notre équipe est à votre disposition pour toute question concernant votre contrat d'assurance."
+            footer:
+            company_info: "company_name"
+            contact_email: "E-mail : company_email"
+            privacy_notice: "Ce courriel et les documents qui y sont joints peuvent contenir des informations confidentielles. Si vous n'êtes pas le destinataire prévu, veuillez nous en informer immédiatement et détruire ce courriel."
+        
+        closing: "Nous vous remercions de votre confiance et restons à votre disposition."
+        signature: "Cordialement,<br><strong>L'équipe %company_name%</strong>"

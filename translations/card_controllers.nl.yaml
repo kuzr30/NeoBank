@@ -1,0 +1,47 @@
+card_controllers:
+  # Flash berichten algemeen
+  flash:
+    kyc_required: "U moet uw identiteitsverificatie voltooien om toegang te krijgen tot bankkaartservices."
+    
+  # CardController
+  card_controller:
+    access_denied:
+      card: "Toegang geweigerd tot deze kaart."
+      subscription: "Toegang geweigerd tot dit abonnement."
+      opposition: "Toegang geweigerd tot deze betwisting."
+  
+  # SubscriptionController
+  subscription:
+    flash:
+      already_has_card: "U heeft al een kaart of een lopende aanvraag."
+      no_active_account: "U moet een actieve rekening hebben om een kaart aan te vragen."
+      success_created: "Uw abonnementsaanvraag is succesvol geregistreerd. U ontvangt een melding zodra deze wordt verwerkt."
+      error_processing: "Er is een fout opgetreden bij het registreren van uw aanvraag. Probeer het opnieuw."
+      only_pending_can_cancel: "Alleen abonnementen in behandeling kunnen worden geannuleerd."
+      invalid_csrf_token: "Ongeldig beveiligingstoken."
+      success_cancelled: "Uw abonnementsaanvraag is succesvol geannuleerd."
+      error_cancelling: "Er is een fout opgetreden bij het annuleren."
+    
+    default_description: "Automatische aanvraag via bankinterface"
+  
+  # OppositionController
+  opposition:
+    flash:
+      only_active_cards: "Alleen actieve kaarten kunnen worden betwist."
+      already_in_progress: "Er is al een betwisting in behandeling voor deze kaart."
+      success_created: "Uw betwisting is succesvol geregistreerd. Uw kaart is onmiddellijk geblokkeerd voor uw veiligheid."
+      error_processing: "Er is een fout opgetreden bij het registreren van uw betwisting. Probeer het opnieuw of neem contact op met onze klantenservice."
+      select_card: "Selecteer een kaart."
+      select_card_required: "Selecteer een kaart."
+      card_not_found: "Kaart niet gevonden of toegang geweigerd."
+      emergency_success: "BETWISTING GEREGISTREERD - Uw kaart is onmiddellijk geblokkeerd. Referentie: {reference}"
+      emergency_error: "Fout bij blokkering. Neem onmiddellijk contact op met de klantenservice op 02/XXX.XX.XX"
+    
+    emergency_description: "Spoedeisende betwisting via snelle interface"
+    
+    # Redenen voor betwisting
+    reasons:
+      lost: "Kaart verloren"
+      stolen: "Kaart gestolen"
+      compromised: "Kaart gecompromitteerd"
+      fraudulent_activity: "Frauduleuze activiteit"

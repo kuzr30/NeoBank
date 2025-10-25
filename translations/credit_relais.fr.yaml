@@ -1,0 +1,103 @@
+credit_relais:
+  page:
+    title: "Crédit Relais"
+    description: "Financez votre nouveau logement avant la vente de l'ancien avec notre crédit relais. Solution temporaire flexible."
+    
+  hero:
+    title: "Crédit Relais"
+    subtitle: "L'intermédiaire idéal pour votre projet immobilier"
+    taux: "{rate}%"
+    montant: "80%"
+    duree: "24 mois"
+    
+  section_1:
+    title: "Qu'est-ce qu'un crédit relais ?"
+    content_1: "Le crédit relais est une solution de financement temporaire qui vous permet d'acheter un nouveau logement avant d'avoir vendu l'ancien. Il évite la contrainte de timing entre achat et vente."
+    content_2: "Crédit à court terme généralement remboursé en une seule fois lors de la vente de votre bien actuel, il offre la flexibilité nécessaire pour saisir les bonnes opportunités immobilières."
+    
+  features:
+    montant:
+      value: "Jusqu'à 80%"
+      detail: "De la valeur du bien vendu"
+    duree:
+      value: "12 à 24 mois"
+      detail: "Durée moyenne 18 mois"
+    taux:
+      value: "À partir de {rate}% TAEG*"
+      detail: "Taux fixe court terme"
+    garantie:
+      value: "Hypothèque"
+      detail: "Sur le bien à vendre"
+      
+  advantages:
+    chainag:
+      title: "Pas de chaînage :"
+      text: "Achetez sans attendre la vente de votre bien"
+    negociation:
+      title: "Négociation renforcée :"
+      text: "Position d'acheteur libre et crédible"
+    flexibilite:
+      title: "Flexibilité :"
+      text: "Remboursement à la vente, sans échéances fixes"
+    cumul:
+      title: "Cumul possible :"
+      text: "Combinable avec un crédit immobilier classique"
+    serenite:
+      title: "Sérénité :"
+      text: "Déménagement organisé sans contrainte de timing"
+      
+  requirements:
+    bien_vendre:
+      title: "Conditions du bien à vendre"
+      proprietaire: "Être propriétaire depuis plus de 2 ans"
+      libre: "Bien libre de toute occupation"
+      estimation: "Estimation immobilière récente"
+      commercialisation: "Commercialisation effective du bien"
+    emprunteur:
+      title: "Conditions emprunteur"
+      revenus: "Revenus réguliers et suffisants"
+      capacite: "Capacité à supporter temporairement 2 charges"
+      apport: "Apport pour les frais d'acquisition"
+      difficultes: "Pas de difficultés financières"
+      
+  documents:
+    bien_vendre:
+      title: "Bien à vendre"
+      titre: "Titre de propriété"
+      estimation: "Estimation immobilière"
+      mandat: "Mandat de vente signé"
+      diagnostics: "Diagnostics immobiliers"
+    bien_acquerir:
+      title: "Bien à acquérir"
+      compromis: "Compromis de vente signé"
+      plan: "Plan de financement"
+      descriptif: "Descriptif du bien"
+      conditions: "Conditions suspensives"
+    dossier:
+      title: "Dossier financier"
+      revenus: "Justificatifs de revenus"
+      comptes: "Relevés de comptes"
+      charges: "Tableau des charges actuelles"
+      patrimoine: "Situation patrimoniale"
+      
+  legal:
+    title: "Informations légales importantes"
+    taeg:
+      title: "*TAEG :"
+      text: "Exemple représentatif : pour un crédit relais de 200 000€ sur 18 mois au TAEG de 4,2%, vous remboursez 412 700€ à l'échéance (coût du crédit : 12 700€ incluant intérêts et frais)."
+    remboursement:
+      title: "Remboursement :"
+      text: "En une seule fois lors de la vente du bien, possibilité d'échéances d'intérêts mensuelles."
+    garantie:
+      title: "Garantie :"
+      text: "Hypothèque de 1er rang sur le bien à vendre."
+    assurance:
+      title: "Assurance :"
+      text: "Assurance décès-invalidité obligatoire."
+    prolongation:
+      title: "Prolongation :"
+      text: "Possible en cas de retard de vente, sous conditions."
+      
+  cta:
+    title: "Libérez-vous des contraintes de timing"
+    subtitle: "Réalisez votre projet immobilier avec notre crédit relais"

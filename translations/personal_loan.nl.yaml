@@ -1,0 +1,105 @@
+personal_loan:
+  page:
+    title: "Persoonlijke Lening"
+    description: "Financier al uw persoonlijke projecten met onze persoonlijke lening. Flexibele oplossing zonder gebruiksrechtvaardiging."
+  
+  hero:
+    class: "credit-detail-hero--personal"
+    taux: "5,2%"
+    montant: "50 000€"
+    duree: "10 jaar"
+    title: "Persoonlijke Lening"
+    subtitle: "Financier al uw projecten zonder rechtvaardiging"
+  
+  section_1:
+    title: "Wat is een persoonlijke lening?"
+    content:
+      paragraph_1: "De persoonlijke lening is een niet-gebonden krediet waarmee u al uw projecten kunt financieren zonder het gebruik van de fondsen te hoeven rechtvaardigen: voertuig, uitrusting, huwelijk, reis of elke andere uitgave."
+      paragraph_2: "Flexibele en snelle financieringsoplossing, biedt u totale gebruiksvrijheid terwijl u profiteert van voordelige voorwaarden en een terugbetaling aangepast aan uw budget."
+  
+  features:
+    title: "Kredietkenmerken"
+    montant:
+      value: "Tot 50 000€"
+      detail: "Volgens uw inkomsten"
+    duree:
+      value: "Van 12 maanden tot 10 jaar"
+      detail: "Moduleerbare duur"
+    taux:
+      value: "Vanaf {rate}% JTKS*"
+      detail: "Voordelig vast tarief"
+    garantie:
+      value: "Zonder garantie"
+      detail: "Alleen op handtekening"
+  
+  section_3:
+    title: "Voordelen van de persoonlijke lening"
+    advantages:
+      liberte:
+        title: "Totale vrijheid"
+        description: "Geen rechtvaardiging van het gebruik van fondsen"
+      rapidite:
+        title: "Snel antwoord"
+        description: "Beslissing binnen maximum 48u"
+      deblocage:
+        title: "Onmiddellijke vrijgave"
+        description: "Fondsen beschikbaar vanaf acceptatie"
+      taux_fixe:
+        title: "Vast tarief"
+        description: "Constante maandlasten gedurende de hele looptijd"
+      remboursement:
+        title: "Vervroegde terugbetaling"
+        description: "Mogelijk zonder boete"
+  
+  section_4:
+    title: "Geschiktheidscriteria"
+    profil:
+      title: "Leningnemer profiel"
+      items:
+        majeur: "Meerderjarig zijn en wonen in Frankrijk"
+        revenus: "Regelmatige inkomsten aantonen"
+        ficp: "Niet ingeschreven zijn bij FICP"
+        endettement: "Schuldenlast lager dan 35%"
+    conditions:
+      title: "Algemene voorwaarden"
+      items:
+        age: "Maximumleeftijd: 75 jaar aan het einde van de lening"
+        domiciliation: "Bankdomiciliëring gewenst"
+        assurance: "Kredietverzekering mogelijk"
+        frais: "Dossierkosten van toepassing"
+  
+  section_5:
+    title: "Benodigde documenten"
+    identite:
+      title: "Identiteitspapieren"
+      items:
+        carte: "Nationale identiteitskaart of paspoort"
+        domicile: "Woonplaatsbewijs van minder dan 3 maanden"
+        famille: "Familieboekje (indien gehuwd of geregistreerd partnerschap)"
+    revenus:
+      title: "Inkomensbewijzen"
+      items:
+        salaires: "3 laatste loonstroken"
+        impots: "2 laatste belastingaanslagen"
+        contrat: "Arbeidscontract of werkgeversverklaring"
+        rib: "Rekeningnummer van domiciliatierekening"
+    bancaires:
+      title: "Bankdocumenten"
+      items:
+        releves: "3 laatste rekeninguittreksels"
+        credits: "Bewijsstukken van andere lopende kredieten"
+        amortissement: "Aflossingstabel van bestaande leningen"
+        charges: "Bewijsstukken van lopende lasten"
+  
+  legal:
+    details:
+      title: "Belangrijke juridische informatie"
+      taeg: "<strong>*JTKS :</strong> Representatief voorbeeld: voor een persoonlijke lening van €15.000 over 4 jaar tegen een JTKS van 5,2%, betaalt u 48 maandelijkse aflossingen van €347, hetzij een totaalbedrag van €16.656 (kredietkosten: €1.656)."
+      simplicite: "<strong>Eenvoud :</strong> Eenvoudig dossier en snel antwoord binnen 48 werkuren."
+      flexibilite: "<strong>Flexibiliteit :</strong> Vervroegde terugbetaling mogelijk zonder kosten of boete."
+      retractation: "<strong>Herroepingstermijn :</strong> U heeft 14 dagen de tijd om uw krediet te herroepen na acceptatie van het aanbod."
+      utilisation: "<strong>Vrij gebruik :</strong> Geen rechtvaardiging van het gebruik van fondsen vereist."
+  
+  cta:
+    title: "Snelle financiering nodig?"
+    subtitle: "Verkrijg uw persoonlijke lening in alle eenvoud"

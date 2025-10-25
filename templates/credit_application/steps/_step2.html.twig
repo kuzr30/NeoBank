@@ -1,0 +1,91 @@
+<div class="credit-form__section">
+    <h2 class="credit-form__section-title">{{ tp('step1.section_title', {}, 'credit_step_forms') }}</h2>
+    
+    <div class="credit-form__group credit-form__group--half">
+        <div>
+            {{ form_label(form.firstName, tp('step1.fields.firstname.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.firstName, {'attr': {'placeholder': tp('step1.fields.firstname.placeholder', {}, 'credit_step_forms')}}) }}
+            <span class="credit-form__error">{{ form_errors(form.firstName) }}</span>
+        </div>
+        <div>
+            {{ form_label(form.lastName, tp('step1.fields.lastname.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.lastName, {'attr': {'placeholder': tp('step1.fields.lastname.placeholder', {}, 'credit_step_forms')}}) }}
+            <span class="credit-form__error">{{ form_errors(form.lastName) }}</span>
+        </div>
+    </div>
+
+    <div class="credit-form__group credit-form__group--half">
+        <div>
+            {{ form_label(form.email, tp('step1.fields.email.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.email, {'attr': {'placeholder': tp('step1.fields.email.placeholder', {}, 'credit_step_forms')}}) }}
+            <span class="credit-form__error">{{ form_errors(form.email) }}</span>
+        </div>
+        <div>
+            {{ form_label(form.phone, tp('step1.fields.phone.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.phone, {'attr': {'placeholder': tp('step1.fields.phone.placeholder', {}, 'credit_step_forms')}}) }}
+            <span class="credit-form__error">{{ form_errors(form.phone) }}</span>
+        </div>
+    </div>
+
+    <div class="credit-form__group credit-form__group--half">
+        <div>
+            {{ form_label(form.birthDate, tp('step1.fields.birth_date.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.birthDate, {'attr': {'placeholder': tp('step1.fields.birth_date.placeholder', {}, 'credit_step_forms')}}) }}
+            <span class="credit-form__error">{{ form_errors(form.birthDate) }}</span>
+        </div>
+        <div>
+            {{ form_label(form.nationality, tp('step1.fields.nationality.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.nationality, {'attr': {'placeholder': tp('step1.fields.nationality.placeholder', {}, 'credit_step_forms')}}) }}
+            <span class="credit-form__error">{{ form_errors(form.nationality) }}</span>
+        </div>
+    </div>
+
+    <div class="credit-form__group credit-form__group--half">
+        <div>
+            {{ form_label(form.maritalStatus, tp('step1.fields.marital_status.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.maritalStatus, {'attr': {'placeholder': tp('step1.fields.marital_status.placeholder', {}, 'credit_step_forms')}}) }}
+            <span class="credit-form__error">{{ form_errors(form.maritalStatus) }}</span>
+        </div>
+        <div>
+            {{ form_label(form.dependents, tp('step1.fields.dependents.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.dependents, {'attr': {'placeholder': tp('step1.fields.dependents.placeholder', {}, 'credit_step_forms')}}) }}
+            <span class="credit-form__error">{{ form_errors(form.dependents) }}</span>
+        </div>
+    </div>
+</div>
+
+<div class="credit-form__section">
+    <h2 class="credit-form__section-title">{{ tp('step1.address_section.title', {}, 'credit_step_forms') }}</h2>
+    
+    <div class="credit-form__group">
+        {{ form_label(form.address, tp('step1.address_section.address.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+        {{ form_widget(form.address, {'attr': {'placeholder': tp('step1.address_section.address.placeholder', {}, 'credit_step_forms')}}) }}
+        <span class="credit-form__error">{{ form_errors(form.address) }}</span>
+    </div>
+
+    <div class="credit-form__group credit-form__group--half">
+        <div>
+            {{ form_label(form.city, tp('step1.address_section.city.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.city, {'attr': {'placeholder': tp('step1.address_section.city.placeholder', {}, 'credit_step_forms')}}) }}
+            <span class="credit-form__error">{{ form_errors(form.city) }}</span>
+        </div>
+        <div>
+            {{ form_label(form.postalCode, tp('step1.address_section.postal_code.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.postalCode, {'attr': {'placeholder': tp('step1.address_section.postal_code.placeholder', {}, 'credit_step_forms')}}) }}
+            <span class="credit-form__error">{{ form_errors(form.postalCode) }}</span>
+        </div>
+    </div>
+
+    <div class="credit-form__group credit-form__group--half">
+        <div>
+            {{ form_label(form.country, tp('step1.address_section.country.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.country, {'attr': {'placeholder': tp('step1.address_section.country.placeholder', {}, 'credit_step_forms')}}) }}
+            <span class="credit-form__error">{{ form_errors(form.country) }}</span>
+        </div>
+        <div>
+            {{ form_label(form.housingType, tp('step1.address_section.housing_type.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.housingType, {'attr': {'placeholder': tp('step1.address_section.housing_type.placeholder', {}, 'credit_step_forms')}}) }}
+            <span class="credit-form__error">{{ form_errors(form.housingType) }}</span>
+        </div>
+    </div>
+</div>

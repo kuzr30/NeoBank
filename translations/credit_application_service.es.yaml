@@ -1,0 +1,12 @@
+credit_application_service:
+  validation_errors:
+    age_minor: "El prestatario debe ser mayor de edad"
+    age_maximum: "La edad máxima para un crédito es de 75 años"
+    debt_ratio_exceeded: "La tasa de endeudamiento no debe exceder el 33% ({debtRatio}% calculado)"
+    minimum_income: "El ingreso mensual mínimo requerido es de 1000€"
+    employment_required: "Se requiere un empleo estable para obtener un crédito"
+    
+  eligibility:
+    eligible: "Elegible para el crédito"
+    not_eligible: "No elegible para el crédito"
+    debt_ratio_calculated: "Tasa de endeudamiento calculada: {ratio}%"

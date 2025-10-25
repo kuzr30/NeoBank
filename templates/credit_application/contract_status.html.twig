@@ -1,0 +1,160 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tp('contract_status.title', {}, 'credit_confirmation') }}{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0">📊 {{ tp('contract_status.title', {}, 'credit_confirmation') }}</h4>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <h5>{{ tp('contract_status.contract_number', {'number': contractNumber}, 'credit_confirmation') }}</h5>
+                        <p>{{ tp('contract_status.amount_info', {'amount': creditApplication.loanAmount|number_format(2, ',', ' ')}, 'credit_confirmation') }}</p>
+                        <p>{{ tp('contract_status.duration_info', {'duration': creditApplication.duration, 'unit': creditApplication.durationUnit ? creditApplication.durationUnit.value : 'mois'}, 'credit_confirmation') }}</p>
+                        <p>{{ tp('contract_status.current_status', {}, 'credit_confirmation') }} 
+                            <span class="badge bg-{{ creditApplication.status == constant('App\\Enum\\CreditApplicationStatusEnum::FUNDS_DISBURSED') ? 'success' : (creditApplication.status == constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SIGNED') ? 'warning' : 'info') }}">
+                                {{ creditApplication.status }}
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item {{ creditApplication.status in [constant('App\\Enum\\CreditApplicationStatusEnum::APPROVED'), constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SENT'), constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SIGNED'), constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_VALIDATED'), constant('App\\Enum\\CreditApplicationStatusEnum::FUNDS_DISBURSED')] ? 'completed' : '' }}">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h6>{{ tp('contract_status.timeline.approved', {}, 'credit_confirmation') }}</h6>
+                                <p>{{ tp('contract_status.timeline.approved_desc', {}, 'credit_confirmation') }}</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item {{ creditApplication.status in [constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SENT'), constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SIGNED'), constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_VALIDATED'), constant('App\\Enum\\CreditApplicationStatusEnum::FUNDS_DISBURSED')] ? 'completed' : '' }}">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h6>{{ tp('contract_status.timeline.contract_sent', {}, 'credit_confirmation') }}</h6>
+                                <p>{{ tp('contract_status.timeline.contract_sent_desc', {}, 'credit_confirmation') }}</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item {{ creditApplication.status in [constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SIGNED'), constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_VALIDATED'), constant('App\\Enum\\CreditApplicationStatusEnum::FUNDS_DISBURSED')] ? 'completed' : (creditApplication.status == constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SENT') ? 'current' : '') }}">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h6>{{ tp('contract_status.timeline.contract_signed', {}, 'credit_confirmation') }}</h6>
+                                {% if creditApplication.status == constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SENT') %}
+                                    <p class="text-warning">{{ tp('contract_status.timeline.contract_signed_pending', {}, 'credit_confirmation') }}</p>
+                                    <a href="{{ path('credit_contract_upload', {contractNumber: contractNumber}) }}" class="btn btn-sm btn-primary">{{ tp('contract_status.actions.download_contract', {}, 'credit_confirmation') }}</a>
+                                {% else %}
+                                    <p>{{ tp('contract_status.timeline.contract_signed_completed', {}, 'credit_confirmation') }}</p>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="timeline-item {{ creditApplication.status in [constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_VALIDATED'), constant('App\\Enum\\CreditApplicationStatusEnum::FUNDS_DISBURSED')] ? 'completed' : (creditApplication.status == constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SIGNED') ? 'current' : '') }}">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h6>{{ tp('contract_status.timeline.contract_validated', {}, 'credit_confirmation') }}</h6>
+                                {% if creditApplication.status == constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SIGNED') %}
+                                    <p class="text-info">{{ tp('contract_status.timeline.contract_validated_pending', {}, 'credit_confirmation') }}</p>
+                                {% elseif creditApplication.status in [constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_VALIDATED'), constant('App\\Enum\\CreditApplicationStatusEnum::FUNDS_DISBURSED')] %}
+                                    <p>{{ tp('contract_status.timeline.contract_validated_completed', {}, 'credit_confirmation') }}</p>
+                                {% else %}
+                                    <p>{{ tp('contract_status.timeline.contract_validated_waiting', {}, 'credit_confirmation') }}</p>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="timeline-item {{ creditApplication.status == constant('App\\Enum\\CreditApplicationStatusEnum::FUNDS_DISBURSED') ? 'completed' : (creditApplication.status == constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_VALIDATED') ? 'current' : '') }}">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h6>{{ tp('contract_status.timeline.funds_disbursed', {}, 'credit_confirmation') }}</h6>
+                                {% if creditApplication.status == constant('App\\Enum\\CreditApplicationStatusEnum::FUNDS_DISBURSED') %}
+                                    <p class="text-success">{{ tp('contract_status.timeline.funds_disbursed_completed', {}, 'credit_confirmation') }}</p>
+                                {% elseif creditApplication.status == constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_VALIDATED') %}
+                                    <p class="text-info">{{ tp('contract_status.timeline.funds_disbursed_pending', {}, 'credit_confirmation') }}</p>
+                                {% else %}
+                                    <p>{{ tp('contract_status.timeline.funds_disbursed_waiting', {}, 'credit_confirmation') }}</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 d-grid">
+                        <a href="{{ path('banking_dashboard') }}" class="btn btn-primary">{{ tp('contract_status.actions.back_to_dashboard', {}, 'credit_confirmation') }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #dee2e6;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -22px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #dee2e6;
+    border: 2px solid #fff;
+}
+
+.timeline-item.completed .timeline-marker {
+    background: #28a745;
+}
+
+.timeline-item.current .timeline-marker {
+    background: #ffc107;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 193, 7, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+    }
+}
+
+.timeline-content {
+    padding-left: 20px;
+}
+
+.timeline-content h6 {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.timeline-content p {
+    margin-bottom: 10px;
+    color: #6c757d;
+}
+</style>
+{% endblock %}

@@ -1,0 +1,159 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: savings_investments.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+savings_investments:
+  # Meta tags
+  meta:
+    title: "Smart Savings & Investments - %company_name%"
+    description: "Discover our savings and investment solutions to grow your money intelligently with %company_name%."
+
+  # Hero Section
+  hero:
+    title: "Smart Savings & Investments"
+    subtitle: "Grow your money with our customized savings and investment solutions, adapted to all your financial goals."
+    stats:
+      average_rate:
+        value: "4.2%"
+        label: "Average rate"
+      savers:
+        value: "500K+"
+        label: "Savers"
+      total_savings:
+        value: "2.8M€"
+        label: "Total savings"
+      products:
+        value: "15+"
+        label: "Products"
+    cta: "Discover our solutions"
+    
+  # Phone mockup content
+  phone:
+    header:
+      time: "14:32"
+    balance:
+      label: "Total savings"
+      amount: "45 680€"
+      change: "+2.8% this month"
+    investments:
+      livret:
+        name: "%company_name% Savings Account"
+        return: "+3.2%"
+      pea:
+        name: "Equity Savings Plan"
+        return: "+8.7%"
+      life_insurance:
+        name: "Life Insurance"
+        return: "+5.4%"
+
+  # Solutions Section
+  solutions:
+    header:
+      title: "Customized Solutions"
+      subtitle: "Savings and investment products adapted to each investor profile, from the most cautious to the most dynamic"
+    secure_savings:
+      title: "Secure Savings"
+      description: "Build your emergency savings with our regulated savings accounts and our guaranteed term deposits. Risk-free solutions to protect and grow your savings."
+      features:
+        - "Regulated Savings Account at regulated rates"
+        - "%company_name% Savings Account up to 4.5% gross"
+        - "Term deposits from 6 months to 5 years"
+        - "100% guaranteed capital"
+        - "Immediate availability"
+      cta: "Learn more"
+    dashboard:
+      title: "Secure Savings"
+      date: "August 2025"
+      metrics:
+        total:
+          value: "25 890€"
+          label: "Total savings"
+        rate:
+          value: "3.8%"
+          label: "Average rate"
+        gains:
+          value: "+156€"
+          label: "Earnings/month"
+
+  # Products Section
+  products:
+    header:
+      title: "Our Flagship Products"
+      subtitle: "A complete range of savings and investment tools for all your projects"
+    mobile_app:
+      title: "My Investments"
+      menu_icon: "☰"
+      summary:
+        label: "Total savings"
+        amount: "67 240€"
+        growth: "+12.4% this year"
+      products:
+        pea:
+          name: "Equity Savings Plan"
+          rate: "+15.2%"
+          amount: "28 450€"
+        life_insurance:
+          name: "Life Insurance"
+          rate: "+6.8%"
+          amount: "22 890€"
+        livret:
+          name: "%company_name% Savings Account"
+          rate: "+4.5%"
+          amount: "15 900€"
+    info:
+      title: "Intuitive Mobile App"
+      description: "Manage all your investments from your smartphone with our new generation mobile app. Track your performance in real time and make the best investment decisions."
+      benefits:
+        interface:
+          title: "Intuitive Interface"
+          description: "Modern and ergonomic design"
+        realtime:
+          title: "Real-Time Data"
+          description: "Updated quotes and performance"
+        alerts:
+          title: "Personalized Alerts"
+          description: "Custom notifications"
+        goals:
+          title: "Smart Goals"
+          description: "Automated planning"
+      cta: "Download the app"
+
+  # Tools Section
+  tools:
+    header:
+      title: "Simulation Tools"
+      subtitle: "Plan your financial future with our smart calculators and advanced simulation tools"
+    calculator:
+      title: "Savings Simulator"
+      subtitle: "Calculate your future savings"
+      form:
+        monthly_payment:
+          label: "Monthly payment"
+          value: "300"
+        duration:
+          label: "Duration (years)"
+        interest_rate:
+          label: "Annual interest rate"
+      result:
+        label: "Accumulated savings"
+        amount: "89 420€"
+    content:
+      title: "Smart Planning"
+      description: "Use our simulation tools to define your savings and investment strategy. Visualize the impact of your financial decisions in the long term."
+      features:
+        - "Monthly savings simulator"
+        - "Retirement calculator"
+        - "Tax optimizer"
+        - "Portfolio analysis"
+        - "Personalized projections"
+        - "Product comparator"
+      cta: "Try the simulators"
+
+  # CTA Section
+  cta:
+    title: "Start Saving Today"
+    subtitle: "Join over 500,000 savers who trust us to grow their wealth. Open your account in just a few minutes."
+    buttons:
+      primary: "Open an account"
+      secondary: "Talk to an advisor"

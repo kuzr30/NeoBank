@@ -1,0 +1,91 @@
+banking_bank_account:
+  # Index page
+  index:
+    title: "Mes RIB/IBAN"
+    subtitle: "Gestion de vos relevés d'identité bancaire"
+    
+    # Empty state
+    empty:
+      title: "Aucun RIB enregistré"
+      text: "Ajoutez vos RIB pour faciliter vos virements et recevoir des fonds plus facilement."
+      add_first: "Ajouter mon premier RIB"
+    
+    # Card actions
+    actions:
+      view_details: "Voir les détails"
+      edit: "Modifier"
+      delete: "Supprimer"
+      confirm_delete: "Êtes-vous sûr de vouloir supprimer ce RIB ?"
+    
+    # Card details
+    details:
+      added_on: "Ajouté le"
+
+  # New RIB page
+  new:
+    title: "Ajouter un nouveau RIB"
+    subtitle: "Enregistrez vos coordonnées bancaires pour faciliter vos virements et recevoir des fonds."
+    
+    # Form labels and placeholders
+    form:
+      account_name:
+        label: "Nom du compte"
+        placeholder: "Ex: Compte principal, Compte épargne..."
+        help: "Donnez un nom descriptif à ce compte pour le reconnaître facilement."
+      
+      bank_name:
+        label: "Nom de la banque"
+        placeholder: "Ex: BNP Paribas, Crédit Agricole..."
+      
+      iban:
+        label: "IBAN"
+        placeholder: "FR76 1234 5678 9012 3456 7890 123"
+        help: "Saisissez votre IBAN européen. Les espaces seront automatiquement supprimés."
+    
+    # Actions
+    actions:
+      cancel: "Annuler"
+      save: "Enregistrer le RIB"
+
+  # Show RIB page
+  show:
+    title: "Détails du RIB"
+    back_to_list: "Retour à la liste"
+    
+    # Sections
+    sections:
+      account_info: "Informations du compte"
+      technical_info: "Informations techniques"
+    
+    # Details
+    details:
+      account_title: "Intitulé du compte"
+      bank: "Banque"
+      iban: "IBAN"
+      country: "Pays"
+      added_date: "Date d'ajout"
+      last_modified: "Dernière modification"
+      copy: "Copier"
+      copied: "Copié !"
+      european: "Européen"
+      delete_rib: "Supprimer ce RIB"
+    
+    # Countries
+    countries:
+      FR: "France"
+      DE: "Allemagne"
+      IT: "Italie"
+      ES: "Espagne"
+      BE: "Belgique"
+      NL: "Pays-Bas"
+      AT: "Autriche"
+      CH: "Suisse"
+      LU: "Luxembourg"
+      PT: "Portugal"
+      IE: "Irlande"
+      GB: "Royaume-Uni"
+
+  # Common elements
+  common:
+    page_title_new: "Ajouter un RIB"
+    confirm_delete: "Êtes-vous sûr de vouloir supprimer ce RIB ?"

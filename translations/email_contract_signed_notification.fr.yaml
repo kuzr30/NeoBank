@@ -1,0 +1,38 @@
+email_contract_signed_notification:
+  title: "URGENT - Contrat signé reçu - Validation administrative requise"
+  content:
+    priority_notification:
+      title: "NOTIFICATION ADMINISTRATIVE PRIORITAIRE"
+      description: "Un nouveau contrat de crédit signé vient d'être reçu et nécessite une validation immédiate."
+    file_reference:
+      title: "Référence du dossier"
+      contract_number: "Numéro de contrat"
+      request_id: "ID de la demande"
+      status_label: "Statut"
+      status_value: "EN ATTENTE DE VALIDATION"
+    customer_profile:
+      title: "Profil client"
+      full_name: "Nom complet"
+      email: "Email"
+    credit_details:
+      title: "Détails du crédit"
+      requested_amount: "Montant demandé"
+      duration: "Durée"
+      monthly_payment: "Mensualité"
+    actions_required:
+      title: "Actions requises"
+      validation: "Validation juridique - Vérifier la conformité du contrat"
+      financial_approval: "Approbation financière - Confirmer les conditions"
+      fund_transfer: "Virement des fonds - Préparer le déblocage"
+      archiving: "Archivage sécurisé - Document stocké dans le système"
+    footer:
+      auto_notification: "Notification générée automatiquement"
+      system: "Système de gestion des crédits %company_name%"
+      service: "Service Validation Administrative"
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Envoi de notification de contrat signé"
+    success: "Notification de contrat signé envoyée avec succès"
+    error: "Erreur lors de l'envoi de notification de contrat signé"
+    send_failed: "Échec de l'envoi de notification de contrat signé"

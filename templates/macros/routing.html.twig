@@ -1,0 +1,16 @@
+{# Macro globale pour générer des liens avec la locale automatique #}
+{% macro lpath(route, parameters) %}
+    {%- set localeParameters = parameters|default({}) -%}
+    {%- if localeParameters._locale is not defined -%}
+        {%- set localeParameters = localeParameters|merge({_locale: app.request.locale}) -%}
+    {%- endif -%}
+    {{- path(route, localeParameters) -}}
+{% endmacro %}
+
+{% macro lurl(route, parameters) %}
+    {%- set localeParameters = parameters|default({}) -%}
+    {%- if localeParameters._locale is not defined -%}
+        {%- set localeParameters = localeParameters|merge({_locale: app.request.locale}) -%}
+    {%- endif -%}
+    {{- url(route, localeParameters) -}}
+{% endmacro %}

@@ -1,0 +1,106 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp_with_company('email_insurance_contract.title', {insuranceType: insuranceType}, 'email_insurance_contract') }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp_with_company('email_insurance_contract.content.page_title', {insuranceType: insuranceType}, 'email_insurance_contract') }}</h2>
+    
+    <p class="content-text">
+        {{ tp_with_company('email_insurance_contract.content.greeting', {customerName: customerName}, 'email_insurance_contract') }}
+    </p>
+
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #2e7d32;">{{ tp_with_company('email_insurance_contract.content.contract_ready.title', {}, 'email_insurance_contract') }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {{ tp_with_company('email_insurance_contract.content.contract_ready.description', {insuranceType: insuranceType}, 'email_insurance_contract') }}
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp_with_company('email_insurance_contract.content.contract_details.title', {}, 'email_insurance_contract') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: linear-gradient(135deg, #1976d2 0%, #2196f3 100%); color: white; text-align: center; font-weight: 700; font-size: 18px; border-radius: 6px 6px 0 0;">
+                    {{ tp_with_company('email_insurance_contract.content.contract_details.contract_number', {contractNumber: contractNumber}, 'email_insurance_contract') }}
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 16px 20px; background: #f8f9fa; color: #424242; border-top: 1px solid #e9ecef;">
+                    <table style="width: 100%; border-spacing: 0;">
+                        <tr>
+                            <td style="padding: 8px 0; border-bottom: 1px solid #e9ecef; font-weight: 600; color: #1976d2;">
+                                {{ tp_with_company('email_insurance_contract.content.contract_details.insurance_type', {}, 'email_insurance_contract') }}
+                            </td>
+                            <td style="padding: 8px 0; border-bottom: 1px solid #e9ecef; text-align: right;">
+                                {{ insuranceType }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px 0; border-bottom: 1px solid #e9ecef; font-weight: 600; color: #1976d2;">
+                                {{ tp_with_company('email_insurance_contract.content.contract_details.monthly_premium', {}, 'email_insurance_contract') }}
+                            </td>
+                            <td style="padding: 8px 0; border-bottom: 1px solid #e9ecef; text-align: right; font-weight: 700; color: #2e7d32;">
+                                {{ monthlyPremium|number_format(2, ',', ' ') }} €
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px 0; border-bottom: 1px solid #e9ecef; font-weight: 600; color: #1976d2;">
+                                {{ tp_with_company('email_insurance_contract.content.contract_details.activation_date', {}, 'email_insurance_contract') }}
+                            </td>
+                            <td style="padding: 8px 0; border-bottom: 1px solid #e9ecef; text-align: right;">
+                                {{ activationDate }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px 0; font-weight: 600; color: #1976d2;">
+                                {{ tp_with_company('email_insurance_contract.content.contract_details.status', {}, 'email_insurance_contract') }}
+                            </td>
+                            <td style="padding: 8px 0; text-align: right;">
+                                <span style="background: #4caf50; color: white; padding: 4px 12px; border-radius: 20px; font-size: 14px; font-weight: 600;">
+                                    {{ status }}
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ tp_with_company('email_insurance_contract.content.important_info.title', {}, 'email_insurance_contract') }}</h3>
+        <div style="background: #fff8e1; padding: 16px; border-left: 4px solid #f57c00; border-radius: 4px;">
+            <ul style="margin: 0; padding-left: 20px; color: #424242;">
+                <li style="margin-bottom: 8px;">{{ tp_with_company('email_insurance_contract.content.important_info.point_1', {}, 'email_insurance_contract') }}</li>
+                <li style="margin-bottom: 8px;">{{ tp_with_company('email_insurance_contract.content.important_info.point_2', {}, 'email_insurance_contract') }}</li>
+                <li style="margin-bottom: 8px;">{{ tp_with_company('email_insurance_contract.content.important_info.point_3', {}, 'email_insurance_contract') }}</li>
+                <li style="margin-bottom: 0;">{{ tp_with_company('email_insurance_contract.content.important_info.point_4', {}, 'email_insurance_contract') }}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #d32f2f;">{{ tp_with_company('email_insurance_contract.content.questions.title', {}, 'email_insurance_contract') }}</h3>
+        <p style="margin-bottom: 16px; color: #424242;">
+            {{ tp_with_company('email_insurance_contract.content.questions.description', {}, 'email_insurance_contract') }}
+        </p>
+        
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%); color: white; text-align: center; font-weight: 700; font-size: 16px; border-radius: 6px;">
+                    <a href="mailto:{{ company_email() }}" style="color: white; text-decoration: none;">
+                        {{ tp_with_company('email_insurance_contract.content.questions.contact_email', {}, 'email_insurance_contract') }}
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p class="content-text" style="margin-top: 32px;">
+        {{ tp_with_company('email_insurance_contract.content.closing', {}, 'email_insurance_contract') }}
+    </p>
+
+    <p class="content-text">
+        {{ tp_with_company('email_insurance_contract.content.signature', {}, 'email_insurance_contract')|raw }}
+    </p>
+{% endblock %}

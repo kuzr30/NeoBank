@@ -1,0 +1,66 @@
+help_center_complaints:
+  # Breadcrumb
+  breadcrumb:
+    home: "Startseite"
+    support: "Support"
+    complaints: "Beschwerden"
+  
+  # Hero section
+  title: "Beschwerden"
+  subtitle: "Ihre Zufriedenheit ist unsere Priorität. Wir behandeln jede Beschwerde ernst und transparent."
+  
+  # Process section
+  process:
+    title: "Beschwerdeverfahren"
+    subtitle: "Wie wir Ihre Beschwerden bearbeiten"
+    
+    step1:
+      title: "Beschwerde einreichen"
+      description: "Reichen Sie Ihre Beschwerde über das Online-Formular oder direkt in der Filiale ein"
+      
+    step2:
+      title: "Empfangsbestätigung"
+      description: "Bestätigung innerhalb von 2 Werktagen mit Zuteilung einer Verfolgungsnummer"
+      
+    step3:
+      title: "Analyse und Bearbeitung"
+      description: "Gründliche Prüfung Ihres Falls durch unsere qualifizierten Spezialisten"
+      
+    step4:
+      title: "Lösung und Antwort"
+      description: "Detaillierte Antwort und Lösungsvorschlag innerhalb von maximal 15 Werktagen"
+  
+  # Contact section
+  contact:
+    title: "Kontakt"
+    subtitle: "Mehrere Wege, uns Ihre Anliegen mitzuteilen"
+    
+    phone:
+      title: "Per Telefon"
+      hours: "Montag bis Freitag von 8:00 bis 18:00 Uhr"
+      
+    email:
+      title: "Per E-Mail"
+      response_time: "Antwort innerhalb von 48 Stunden"
+      
+    branch:
+      title: "In der Filiale"
+      address: "Adresse"
+      hours: "Montag bis Freitag von 9:00 bis 17:00 Uhr"
+  
+  # Tracking section
+  tracking:
+    title: "Verfolgung Ihrer Beschwerde"
+    subtitle: "Geben Sie Ihre Referenznummer ein, um den Bearbeitungsstatus zu erfahren"
+    placeholder: "Z.B.: REF-2024-123456"
+    search: "Suchen"
+    searching: "Suche läuft..."
+    
+    status:
+      received: "Beschwerde erhalten"
+      in_progress: "In Bearbeitung"
+      resolved: "Gelöst"
+      
+    error:
+      empty: "Bitte geben Sie eine Verfolgungsnummer ein"
+      invalid: "Die Verfolgungsnummer muss mindestens 5 Zeichen enthalten"

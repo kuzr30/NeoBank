@@ -1,0 +1,37 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_transfer_validate.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_transfer_validate:
+  header:
+    title: "Transfer validation"
+    subtitle: "Enter security codes to validate your transfer"
+    back_button: "Back"
+  
+  summary:
+    title: "Transfer being validated"
+    amount_label: "Amount:"
+    beneficiary_label: "Beneficiary:"
+    description_label: "Description:"
+    status_label: "Status:"
+  
+  status:
+    pending: "Pending"
+    executing: "Executing"
+    completed: "Completed"
+    expired: "Expired"
+    cancelled: "Cancelled"
+    blocked: "Blocked"
+  
+  validation:
+    form_title: "Transfer validation"
+    submit_button: "Validate"
+  
+  alerts:
+    code_expired: "The code \"%code%\" has expired."
+    transfer_confirmed: "The transfer is confirmed."
+    transfer_completed: "The transfer was executed successfully on %date%."
+    transfer_expired: "This transfer has expired and can no longer be validated. You must create a new transfer."
+    transfer_cancelled: "This transfer has been cancelled."
+    transfer_blocked: "This transfer has been blocked following incorrect validation attempts. Contact customer service to unblock your account."

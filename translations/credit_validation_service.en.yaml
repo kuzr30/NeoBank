@@ -1,0 +1,28 @@
+# ENGLISH TRANSLATION - Translated from French
+# Credit validation service translation file
+# Domain: credit_validation_service
+# Language: English (en)
+
+credit_validation_service:
+  validation_errors:
+    amount_min: "The minimum amount is %s €"
+    amount_max: "The maximum amount is %s €"
+    duration_min: "The minimum duration is %d months"
+    duration_max: "The maximum duration is %d months (%d years)"
+    
+  credit_type_errors:
+    immobilier:
+      amount_min: "The minimum amount for a mortgage is 10,000 €"
+      duration_max: "The maximum duration for a mortgage is 25 years"
+    auto:
+      amount_max: "The maximum amount for an auto loan is 80,000 €"
+      duration_max: "The maximum duration for an auto loan is 7 years"
+    consommation:
+      amount_max: "The maximum amount for a consumer loan is 75,000 €"
+      duration_max: "The maximum duration for a consumer loan is 7 years"
+    travaux:
+      amount_max: "The maximum amount for a home improvement loan is 150,000 €"
+      duration_max: "The maximum duration for a home improvement loan is 10 years"
+    professionnel:
+      amount_min: "The minimum amount for a business loan is 5,000 €"
+      duration_max: "The maximum duration for a business loan is 15 years"

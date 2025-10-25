@@ -1,0 +1,59 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: terms_conditions.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+terms_conditions:
+  page_title: "Terms and Conditions of Use"
+  page_description: "Terms of use for %company_name% banking services"
+
+  scope:
+    title: "Purpose"
+    content: |
+      These Terms and Conditions of Use (T&C) define the terms and conditions of use
+      of the banking services offered by <strong>%company_name%</strong> on this website.
+
+  acceptance:
+    title: "Acceptance of terms"
+    content: |
+      Use of our services implies full acceptance of these T&C.
+      If you do not accept these terms, please do not use our services.
+
+  services:
+    title: "Description of services"
+    content: |
+      %company_name% offers a complete range of banking services including:
+      <ul>
+        <li>Personal and business bank accounts</li>
+        <li>Credit and financing services</li>
+        <li>Savings and investment products</li>
+        <li>Payment and exchange services</li>
+      </ul>
+
+  obligations:
+    title: "Customer obligations"
+    content: |
+      The customer agrees to:
+      <ul>
+        <li>Provide accurate and up-to-date information</li>
+        <li>Comply with the terms of use of services</li>
+        <li>Protect their login credentials</li>
+        <li>Report any security incident</li>
+      </ul>
+
+  liability:
+    title: "Liability"
+    content: |
+      %company_name% is committed to providing its services with diligence and professionalism.
+      Our liability is limited in accordance with current banking regulations.
+
+  modification:
+    title: "Modification of terms"
+    content: |
+      %company_name% reserves the right to modify these T&C at any time.
+      Modifications take effect upon publication on the website.
+
+  contact:
+    title: "Contact"
+    content: |
+      For any questions regarding these T&C, contact us at %email%.

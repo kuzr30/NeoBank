@@ -1,0 +1,54 @@
+email_devis_notification:
+  title: "Neue Angebot-Anfrage - %typeAssurance%"
+  
+  content:
+    page_title: "Neue Angebot-Anfrage erhalten"
+    
+    priority:
+      title: "Aktion erforderlich - Prioritäre Bearbeitung"
+      message: "Neue Angebot-Anfrage innerhalb von 24h zu bearbeiten"
+    
+    reference:
+      title: "Referenz der Anfrage"
+      number: "Angebot-Nummer"
+      insurance_type: "Versicherungsart"
+    
+    client_info:
+      title: "Kundeninformationen"
+      full_name: "Vollständiger Name"
+      contact_email: "Kontakt-E-Mail"
+      phone: "Telefon"
+      contact_preference: "Kontaktpräferenz"
+      request_date: "Anfragedatum"
+    
+    comments:
+      title: "Kundenkommentare"
+    
+    action_plan:
+      title: "Empfohlener Aktionsplan"
+      telephone_priority: "1. Prioritärer Telefonkontakt"
+      telephone_desc: "Kunde unter %telephone% anrufen (erklärte Präferenz)"
+      email_priority: "1. Prioritärer E-Mail-Kontakt"
+      email_desc: "E-Mail an %email% senden (erklärte Präferenz)"
+      appointment_priority: "1. Termin vorschlagen"
+      appointment_desc: "Termin in der Filiale organisieren (erklärte Präferenz)"
+      analysis: "2. Personalisierte Analyse"
+      analysis_desc: "Profil und spezifische Kundenbedürfnisse analysieren"
+      offer_prep: "3. Angebotsvorbereitung"
+      offer_prep_desc: "Personalisiertes Geschäftsangebot erstellen"
+      crm_update: "4. CRM-Update"
+      crm_update_desc: "Status und Interaktionen im System aktualisieren"
+    
+    specialized_advice:
+      title: "Fachberatung"
+      auto_advice: "Kfz-Versicherung: Nach Fahrzeugmodell, Erstzulassungsjahr, geplanter Nutzung und Schadenhistorie fragen, um das Angebot zu personalisieren."
+      habitation_advice: "Wohngebäudeversicherung: Sich über Wohnungsart, Fläche, Wert der zu versichernden Güter und Standort informieren, um die Deckung anzupassen."
+      sante_advice: "Gesundheits-Zusatzversicherung: Familiensituation, spezifische medizinische Bedürfnisse und verfügbares Budget bewerten, um die optimale Formel vorzuschlagen."
+      general_advice: "Personalisierter Ansatz: Ihre Geschäftsmethodik je nach angefragter Versicherungsart und Kundenprofilbesonderheiten anpassen."
+    
+    footer: "<strong>%company_name% - Angebotsverwaltungssystem</strong><br>Automatische Benachrichtigung über neue Anfrage"
+
+  logs:
+    devis_notification_sent: "Benachrichtigung über neue Angebot-Anfrage an das Verkaufsteam gesendet"
+    devis_notification_failed: "Fehler beim Senden der Angebot-Benachrichtigung"
+    quote_request_assigned: "Angebot-Anfrage %numeroDevis% dem Verkaufsteam zugewiesen"

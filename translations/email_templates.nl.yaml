@@ -1,0 +1,120 @@
+# KYC afgewezen e-mail
+kyc_rejected:
+  title: "Identiteitsverificatie - Actie vereist"
+  greeting: "Hallo %name%,"
+  intro: "We hebben de documenten beoordeeld die u heeft ingediend voor uw identiteitsverificatie (KYC). Helaas kunnen we uw account niet valideren om de volgende redenen:"
+  reasons_title: "Redenen voor afwijzing:"
+  action_title: "Actie vereist"
+  action_required: "Om de opening van uw account te voltooien, log alstublieft in en dien de vereiste documenten opnieuw in, rekening houdend met bovenstaande opmerkingen."
+  custom_message_title: "BELANGRIJK"
+  login_button: "Inloggen op mijn account"
+  closing: "We blijven tot uw beschikking voor eventuele vragen."
+  signature: "Met vriendelijke groet,<br>Het team"
+
+incomplete_account:
+  title: "Voltooi uw profiel"
+  greeting: "Hallo %name%,"
+  intro: "We hebben gemerkt dat uw profiel nog niet compleet is. Om optimaal te genieten van al onze bankdiensten, nodigen we u uit om de ontbrekende informatie aan te vullen."
+  reasons_title: "Te corrigeren items:"
+  warning_title: "Let op"
+  warning: "Een compleet profiel geeft u toegang tot al onze diensten en garandeert de veiligheid van uw account."
+  action_title: "Actie vereist"
+  action_required: "Log in om uw profiel te voltooien."
+  custom_message_title: "BELANGRIJK:"
+  login_button: "Mijn profiel voltooien"
+  closing: "Dank u voor uw vertrouwen."
+  signature: "Met vriendelijke groet,<br>Het team"
+
+fees_inquiry:
+  title: "Informatie over bankkosten"
+  greeting: "Hallo %name%,"
+  intro: "We nemen contact met u op met betrekking tot kosten gerelateerd aan uw bankrekening."
+  info_title: "Belangrijke informatie"
+  info: "Voor meer details over deze kosten, log in op uw klantenruimte."
+  custom_message_title: "Aanvullende informatie:"
+  login_button: "Toegang tot mijn account"
+  closing: "Onze klantenservice blijft tot uw beschikking voor eventuele vragen."
+  signature: "Met vriendelijke groet,<br>Het team"
+
+account_activation_reminder:
+  title: "Herinnering - Activeer uw account"
+  greeting: "Hallo %name%,"
+  intro: "We merken dat u uw bankrekening nog niet heeft geactiveerd."
+  warning_title: "Belangrijke herinnering"
+  warning: "Het activeren van uw account is noodzakelijk om toegang te krijgen tot al onze diensten."
+  action_title: "Actie vereist"
+  action_required: "Log in om de activering van uw account te voltooien."
+  custom_message_title: "BELANGRIJK:"
+  login_button: "Mijn account activeren"
+  closing: "We kijken ernaar uit u onder onze actieve klanten te mogen rekenen."
+  signature: "Met vriendelijke groet,<br>Het team"
+
+credit_application_incomplete:
+  title: "Uw kredietaanvraag - Ontbrekende informatie"
+  greeting: "Hallo %name%,"
+  intro: "We hebben uw kredietaanvraag ontvangen. Er ontbreekt echter nog informatie om de behandeling van uw dossier voort te zetten."
+  reasons_title: "Ontbrekende items:"
+  warning_title: "Let op"
+  warning: "Om uw aanvraag snel te verwerken, hebben we nodig dat u de ontbrekende informatie aanvult."
+  action_title: "Actie vereist"
+  action_required: "Log in om uw kredietaanvraag te voltooien."
+  custom_message_title: "Vereiste informatie:"
+  login_button: "Mijn aanvraag voltooien"
+  closing: "We zullen uw dossier bestuderen zodra we de volledige informatie hebben ontvangen."
+  signature: "Met vriendelijke groet,<br>Het team"
+
+# Opvolging account aanmaken en KYC-validatie e-mail
+account_creation_follow_up:
+  title: "Opvolging van uw aanvraag - Actie vereist"
+  greeting: "Hallo %name%,"
+  intro: "We bevestigen de ontvangst van uw aanvraag. Deze wordt momenteel verwerkt door onze teams."
+  
+  status_title: "Status van uw aanvraag"
+  status_description: "Uw aanvraag is ontvangen en er is een antwoord verzonden. Om dit antwoord te raadplegen en de voortgang van uw dossier te volgen, nodigen wij u uit uw beveiligde klantaccount aan te maken."
+  
+  action_required_title: "Vereiste actie om uw antwoord te bekijken"
+  action_required_intro: "Om toegang te krijgen tot uw klantengebied en het antwoord op uw aanvraag te bekijken, volgt u deze stappen:"
+  step_1: "Maak uw online account aan op ons beveiligd platform"
+  step_2: "Vul uw profiel aan met uw persoonlijke gegevens"
+  step_3: "Valideer uw identiteit via het KYC-verificatieproces"
+  
+  kyc_title: "Waarom is identiteitsverificatie (KYC) verplicht?"
+  kyc_intro: "KYC (Know Your Customer) verificatie is een verplichte regelgevende procedure in de bank- en financiële sector. Dit proces is wettelijk verplicht en heeft tot doel al onze klanten te beschermen."
+  kyc_why: "Regelgevende en beveiligingsredenen:"
+  kyc_reason_1: "Naleving van Europese richtlijnen tegen witwassen van geld (AML-CFT)"
+  kyc_reason_2: "Preventie van fraude en identiteitsdiefstal"
+  kyc_reason_3: "Bescherming van uw persoonlijke gegevens en vermogen"
+  kyc_reason_4: "Naleving van wettelijke verplichtingen opgelegd aan financiële instellingen"
+  
+  documents_title: "Benodigde documenten voor verificatie"
+  documents_intro: "Om uw identiteitsverificatie te voltooien, moet u het volgende verstrekken:"
+  document_1: "Een geldig identiteitsdocument (identiteitskaart, paspoort of verblijfsvergunning)"
+  document_2: "Recent adresbewijs (minder dan 3 maanden oud)"
+  document_3: "Een selfie met uw identiteitsdocument voor biometrische authenticatie"
+  
+  custom_message_title: "Belangrijk bericht van ons team"
+  
+  create_account_button: "Account aanmaken en identiteit verifiëren"
+  
+  processing_time_title: "Verwerkingstijd"
+  processing_time_text: "Zodra uw identiteit is gevalideerd, kunt u onmiddellijk het antwoord op uw aanvraag bekijken. KYC-verificatie wordt doorgaans binnen 24 tot 48 werkuren verwerkt."
+  
+  closing: "Wij blijven volledig tot uw beschikking voor aanvullende informatie of hulp bij dit proces."
+  signature: "Met vriendelijke groet,<br>Klantenservice<br>%company_name%"
+  
+  legal_notice: "Dit bericht en bijlagen zijn vertrouwelijk en uitsluitend bestemd voor de geadresseerden. Ongeautoriseerd gebruik of verspreiding is verboden. Identiteitsverificatie is verplicht in overeenstemming met Richtlijn (EU) 2015/849 betreffende de voorkoming van het gebruik van het financiële stelsel voor witwassen van geld en terrorismefinanciering."
+
+# E-mail bankgegevens voor betaling
+payment_details:
+  greeting: "Geachte %name%,"
+  title: "Bankgegevens voor uw betaling"
+  intro: "Wij verstrekken u hierbij de bankgegevens die nodig zijn om de betaling van het hierboven aangegeven bedrag uit te voeren. Hieronder vindt u de rekeninggegevens:"
+  bank_details_title: "Bankrekeninggegevens"
+  account_holder: "Rekeninghouder"
+  iban: "IBAN"
+  bic: "BIC"
+  instant_transfer_title: "REAL-TIME OVERSCHRIJVING VERPLICHT"
+  instant_transfer_message: "Het is VERPLICHT dat deze betaling wordt uitgevoerd via een REAL-TIME overschrijving (of directe overschrijving). Wij benadrukken de absolute noodzaak van het gebruik van deze directe overschrijvingsoptie om onmiddellijke ontvangst van de fondsen te garanderen."
+  proof_title: "Bevestiging van de overschrijving"
+  proof_message: "Na uitvoering van de overschrijving verzoeken wij u ons een kopie van het overschrijvingsbewijs ter bevestiging te sturen."
+  support_message: "Wij danken u voor uw voortvarendheid en snelheid."

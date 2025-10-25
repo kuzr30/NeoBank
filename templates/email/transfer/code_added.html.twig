@@ -1,0 +1,85 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_transfer_attention.title', {}, 'email_transfer_attention') }} - {{ parent() }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('email_transfer_attention.content.page_title', {}, 'email_transfer_attention') }}</h2>
+    
+    <p class="content-text">
+        {{ tp('email_transfer_attention.content.greeting', {firstName: user.firstName, lastName: user.lastName}, 'email_transfer_attention') }}
+    </p>
+
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ tp('email_transfer_attention.content.attention_required.title', {}, 'email_transfer_attention') }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {{ tp('email_transfer_attention.content.attention_required.description', {transferReference: transfer.reference}, 'email_transfer_attention') }}
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_transfer_attention.content.transfer_details.title', {}, 'email_transfer_attention') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #f8f9fa; border-radius: 6px;">
+                    <div style="margin-bottom: 12px;">
+                        <strong style="color: #1976d2;">{{ tp('email_transfer_attention.content.transfer_details.amount', {}, 'email_transfer_attention') }}</strong><br>
+                        <span style="color: #e65100; font-size: 18px; font-weight: 600;">{{ transfer.amount|number_format(2, ',', ' ') }} €</span>
+                    </div>
+                    <div style="margin-bottom: 12px;">
+                        <strong style="color: #1976d2;">{{ tp('email_transfer_attention.content.transfer_details.beneficiary', {}, 'email_transfer_attention') }}</strong><br>
+                        <span style="color: #424242;">{{ transfer.destinationAccount.accountName }}</span>
+                    </div>
+                    <div style="margin-bottom: 12px;">
+                        <strong style="color: #1976d2;">{{ tp('email_transfer_attention.content.transfer_details.iban', {}, 'email_transfer_attention') }}</strong><br>
+                        <span style="color: #424242; font-family: monospace;">{{ transfer.destinationAccount.iban }}</span>
+                    </div>
+                    <div>
+                        <strong style="color: #1976d2;">{{ tp('email_transfer_attention.content.transfer_details.reference', {}, 'email_transfer_attention') }}</strong><br>
+                        <span style="color: #666; font-family: monospace; font-size: 14px;">{{ transfer.reference }}</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #2e7d32;">{{ tp('email_transfer_attention.content.next_step.title', {}, 'email_transfer_attention') }}</h3>
+        <p style="margin-bottom: 16px; color: #000000;">
+            {{ tp('email_transfer_attention.content.next_step.description', {}, 'email_transfer_attention') }}
+        </p>
+        <table style="width: 100%; border-spacing: 12px 0;">
+            <tr>
+                <td style="padding: 0; text-align: center;">
+                    <a href="{{ url('banking_transfer_validate', {'id': transfer.id, '_locale': user.language ?? 'fr'}) }}" 
+                       style="display: block; background: linear-gradient(135deg, #1976d2 0%, #2196f3 100%); color: white; text-decoration: none; padding: 18px 32px; border-radius: 8px; font-weight: 600; text-align: center; box-shadow: 0 4px 8px rgba(25, 118, 210, 0.3); font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px;">
+                        {{ tp('email_transfer_attention.content.next_step.login_button', {}, 'email_transfer_attention') }}
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <p style="margin: 15px 0 0; font-size: 14px; color: #666; text-align: center;">
+            {{ tp('email_transfer_attention.content.next_step.instruction', {}, 'email_transfer_attention') }}
+        </p>
+    </div>
+            
+    <div class="error-box">
+        <h3 style="margin-top: 0; color: #d32f2f;">{{ tp('email_transfer_attention.content.security_notice.title', {}, 'email_transfer_attention') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #ffebee; border-left: 4px solid #d32f2f; border-radius: 6px;">
+                    <p style="margin: 0; color: #000000;">
+                        {{ tp('email_transfer_attention.content.security_notice.description', {}, 'email_transfer_attention') }}
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p class="content-text">
+        {{ tp('email_transfer_attention.content.assistance', {}, 'email_transfer_attention') }}
+    </p>
+
+    <p class="footer-text">
+        {{ tp('email_transfer_attention.content.footer', {}, 'email_transfer_attention')|raw }}
+    </p>
+{% endblock %}

@@ -1,0 +1,597 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tp('profile_kyc_index.page.title', {}, 'profile_kyc_index') }}{% endblock %}
+
+{% block body %}
+<div class="kyc">
+    <div class="kyc__container">
+        {# En-tête de la page #}
+        <header class="kyc__header">
+            <h1 class="kyc__title">
+                {{ ux_icon('heroicons:shield-check') }}
+                {{ tp('profile_kyc_index.header.title', {}, 'profile_kyc_index') }}
+            </h1>
+        </header>
+
+        {# Alerte de statut KYC #}
+        {% if kyc_submission %}
+            {% if kyc_submission.status == 'rejected' %}
+                <div class="kyc__alert kyc__alert--danger">
+                    <div class="kyc__alert-icon">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+                    <div class="kyc__alert-content">
+                        <h5 class="kyc__alert-title">{{ tp('profile_kyc_index.alerts.rejected.title', {}, 'profile_kyc_index') }}</h5>
+                        <p class="kyc__alert-text">{{ tp('profile_kyc_index.alerts.rejected.text', {}, 'profile_kyc_index') }}</p>
+                        {% if kyc_submission.adminNotes %}
+                            <p class="kyc__alert-text"><strong>{{ tp('profile_kyc_index.alerts.rejected.reason', {}, 'profile_kyc_index') }}</strong> {{ kyc_submission.adminNotes|translate_kyc_reason }}</p>
+                        {% endif %}
+                        <p class="kyc__alert-text">{{ tp('profile_kyc_index.alerts.rejected.action_text', {}, 'profile_kyc_index') }}</p>
+                    </div>
+                </div>
+            {% elseif kyc_submission.status == 'pending' %}
+                <div class="kyc__alert kyc__alert--warning">
+                    <div class="kyc__alert-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="kyc__alert-content">
+                        <h5 class="kyc__alert-title">{{ tp('profile_kyc_index.alerts.pending.title', {}, 'profile_kyc_index') }}</h5>
+                        <p class="kyc__alert-text">{{ tp('profile_kyc_index.alerts.pending.text', {}, 'profile_kyc_index') }}</p>
+                    </div>
+                </div>
+            {% elseif kyc_submission.status == 'approved' %}
+                <div class="kyc__alert kyc__alert--success">
+                    <div class="kyc__alert-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="kyc__alert-content">
+                        <h5 class="kyc__alert-title">{{ tp('profile_kyc_index.alerts.approved.title', {}, 'profile_kyc_index') }}</h5>
+                        <p class="kyc__alert-text">{{ tp('profile_kyc_index.alerts.approved.text', {}, 'profile_kyc_index') }}</p>
+                    </div>
+                </div>
+            {% endif %}
+        {% else %}
+            <div class="kyc__alert kyc__alert--info">
+                <div class="kyc__alert-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="kyc__alert-content">
+                    <h5 class="kyc__alert-title">{{ tp('profile_kyc_index.alerts.required.title', {}, 'profile_kyc_index') }}</h5>
+                    <p class="kyc__alert-text">{{ tp('profile_kyc_index.alerts.required.text', {}, 'profile_kyc_index') }}</p>
+                </div>
+            </div>
+        {% endif %}
+
+        {# Liste des documents requis #}
+        <div class="kyc__docs">
+            <h2 class="kyc__docs-title">{{ tp('profile_kyc_index.documents.title', {}, 'profile_kyc_index') }}</h2>
+            <p>{{ tp('profile_kyc_index.documents.subtitle', {}, 'profile_kyc_index') }}</p>
+            <div class="kyc__docs-grid">
+                {# Pièce d'identité #}
+                <div class="kyc-doc">
+                    <div class="kyc-doc__header">
+                        <div class="kyc-doc__icon kyc-doc__icon--id">
+                            {{ ux_icon('heroicons:identification') }}
+                        </div>
+                        <h3 class="kyc-doc__title">{{ tp('profile_kyc_index.documents.identity_document.title', {}, 'profile_kyc_index') }}</h3>
+                    </div>
+                    <div class="kyc-doc__content">
+                        <p class="kyc-doc__description">{{ tp('profile_kyc_index.documents.identity_document.description', {}, 'profile_kyc_index') }}</p>
+                        <ul class="kyc-doc__list">
+                            <li class="kyc-doc__item">
+                                {{ ux_icon('mdi:check-circle-outline') }}
+                                <span>{{ tp('profile_kyc_index.documents.identity_document.items.0', {}, 'profile_kyc_index') }}</span>
+                            </li>
+                            <li class="kyc-doc__item">
+                                {{ ux_icon('mdi:check-circle-outline') }}
+                                <span>{{ tp('profile_kyc_index.documents.identity_document.items.1', {}, 'profile_kyc_index') }}</span>
+                            </li>
+                            <li class="kyc-doc__item">
+                                {{ ux_icon('mdi:check-circle-outline') }}
+                                <span>{{ tp('profile_kyc_index.documents.identity_document.items.2', {}, 'profile_kyc_index') }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                {# Justificatif de revenus #}
+                <div class="kyc-doc">
+                    <div class="kyc-doc__header">
+                        <div class="kyc-doc__icon kyc-doc__icon--income">
+                            {{ ux_icon('heroicons:document-text') }}
+                        </div>
+                        <h3 class="kyc-doc__title">{{ tp('profile_kyc_index.documents.income_document.title', {}, 'profile_kyc_index') }}</h3>
+                    </div>
+                    <div class="kyc-doc__content">
+                        <p class="kyc-doc__description">{{ tp('profile_kyc_index.documents.income_document.description', {}, 'profile_kyc_index') }}</p>
+                        <ul class="kyc-doc__list">
+                            <li class="kyc-doc__item">
+                                {{ ux_icon('mdi:check-circle-outline') }}
+                                <span>{{ tp('profile_kyc_index.documents.income_document.items.0', {}, 'profile_kyc_index') }}</span>
+                            </li>
+                            <li class="kyc-doc__item">
+                                {{ ux_icon('mdi:check-circle-outline') }}
+                                <span>{{ tp('profile_kyc_index.documents.income_document.items.1', {}, 'profile_kyc_index') }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                {# Justificatif de domicile #}
+                <div class="kyc-doc">
+                    <div class="kyc-doc__header">
+                        <div class="kyc-doc__icon kyc-doc__icon--address">
+                            {{ ux_icon('heroicons:home') }}
+                        </div>
+                        <h3 class="kyc-doc__title">{{ tp('profile_kyc_index.documents.address_document.title', {}, 'profile_kyc_index') }}</h3>
+                    </div>
+                    <div class="kyc-doc__content">
+                        <p class="kyc-doc__description">{{ tp('profile_kyc_index.documents.address_document.description', {}, 'profile_kyc_index') }}</p>
+                        <ul class="kyc-doc__list">
+                            <li class="kyc-doc__item">
+                                {{ ux_icon('mdi:check-circle-outline') }}
+                                <span>{{ tp('profile_kyc_index.documents.address_document.items.0', {}, 'profile_kyc_index') }}</span>
+                            </li>
+                            <li class="kyc-doc__item">
+                                {{ ux_icon('mdi:check-circle-outline') }}
+                                <span>{{ tp('profile_kyc_index.documents.address_document.items.1', {}, 'profile_kyc_index') }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                {# Selfie #}
+                <div class="kyc-doc kyc-doc--optional">
+                    <div class="kyc-doc__header">
+                        <div class="kyc-doc__icon kyc-doc__icon--selfie">
+                            {{ ux_icon('heroicons:camera') }}
+                        </div>
+                        <h3 class="kyc-doc__title">
+                            {{ tp('profile_kyc_index.documents.selfie.title', {}, 'profile_kyc_index') }}
+                            <span class="kyc-doc__badge">{{ tp('profile_kyc_index.documents.selfie.badge', {}, 'profile_kyc_index') }}</span>
+                        </h3>
+                    </div>
+                    <div class="kyc-doc__content">
+                        <p class="kyc-doc__description">{{ tp('profile_kyc_index.documents.selfie.description', {}, 'profile_kyc_index') }}</p>
+                        <ul class="kyc-doc__list">
+                            <li class="kyc-doc__item">
+                                {{ ux_icon('streamline-color:information-circle-flat') }}
+                                <span>{{ tp('profile_kyc_index.documents.selfie.items.0', {}, 'profile_kyc_index') }}</span>
+                            </li>
+                            <li class="kyc-doc__item">
+                                {{ ux_icon('streamline-color:information-circle-flat') }}
+                                <span>{{ tp('profile_kyc_index.documents.selfie.items.1', {}, 'profile_kyc_index') }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            {# Actions #}
+            <div class="kyc__actions">
+                {% if kyc_submission and kyc_submission.status == 'approved' %}
+                    <a href="{{ path('banking_dashboard') }}" class="kyc__button kyc__button--success">
+                        {{ ux_icon('heroicons:credit-card') }}
+                        {{ tp('profile_kyc_index.actions.access_banking', {}, 'profile_kyc_index') }}
+                    </a>
+                {% elseif kyc_submission and kyc_submission.status == 'pending' %}
+                    <a href="{{ path('kyc_status') }}" class="kyc__button kyc__button--outline">
+                        {{ ux_icon('heroicons:eye') }}
+                        {{ tp('profile_kyc_index.actions.view_status', {}, 'profile_kyc_index') }}
+                    </a>
+                {% else %}
+                    {# Pas de soumission ou soumission rejetée : permettre la soumission #}
+                    <a href="{{ path('kyc_submit') }}" class="kyc__button kyc__button--primary">
+                        {{ ux_icon('heroicons:arrow-up-tray') }}
+                        {% if kyc_submission and kyc_submission.status == 'rejected' %}
+                            {{ tp('profile_kyc_index.actions.submit_new_documents', {}, 'profile_kyc_index') }}
+                        {% else %}
+                            {{ tp('profile_kyc_index.actions.submit_documents', {}, 'profile_kyc_index') }}
+                        {% endif %}
+                    </a>
+                    <a href="#" class="kyc__button kyc__button--secondary">
+                        {{ ux_icon('heroicons:question-mark-circle') }}
+                        {{ tp('profile_kyc_index.actions.submission_guide', {}, 'profile_kyc_index') }}
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.kyc {
+    min-height: 100vh;
+    background: #f8fafc;
+    padding: 2rem 0;
+}
+
+.kyc__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Header */
+.kyc__header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.kyc__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.kyc__title svg {
+    width: 2rem;
+    height: 2rem;
+    color: #3b82f6;
+}
+
+.kyc__subtitle {
+    font-size: 1.125rem;
+    color: #64748b;
+    margin: 0;
+}
+
+/* Alert Component - BEM */
+.kyc__alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border-left: 4px solid;
+}
+
+.kyc__alert-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.kyc__alert-icon i {
+    font-size: 20px;
+}
+
+.kyc__alert-content {
+    flex: 1;
+}
+
+.kyc__alert-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+}
+
+.kyc__alert-text {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    margin: 0 0 0.5rem 0;
+}
+
+.kyc__alert-text:last-child {
+    margin-bottom: 0;
+}
+
+/* Alert Variants */
+.kyc__alert--danger {
+    background: #fef2f2;
+    border-left-color: #ef4444;
+}
+
+.kyc__alert--danger .kyc__alert-icon {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.kyc__alert--danger .kyc__alert-title {
+    color: #991b1b;
+}
+
+.kyc__alert--danger .kyc__alert-text {
+    color: #7f1d1d;
+}
+
+.kyc__alert--warning {
+    background: #fffbeb;
+    border-left-color: #f59e0b;
+}
+
+.kyc__alert--warning .kyc__alert-icon {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.kyc__alert--warning .kyc__alert-title {
+    color: #92400e;
+}
+
+.kyc__alert--warning .kyc__alert-text {
+    color: #78350f;
+}
+
+.kyc__alert--success {
+    background: #f0fdf4;
+    border-left-color: #22c55e;
+}
+
+.kyc__alert--success .kyc__alert-icon {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.kyc__alert--success .kyc__alert-title {
+    color: #15803d;
+}
+
+.kyc__alert--success .kyc__alert-text {
+    color: #14532d;
+}
+
+.kyc__alert--info {
+    background: #eff6ff;
+    border-left-color: #3b82f6;
+}
+
+.kyc__alert--info .kyc__alert-icon {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.kyc__alert--info .kyc__alert-title {
+    color: #1d4ed8;
+}
+
+.kyc__alert--info .kyc__alert-text {
+    color: #1e3a8a;
+}
+
+/* Documents Grid */
+.kyc__docs {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.kyc__docs-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 2rem;
+}
+
+.kyc__docs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Document Card */
+.kyc-doc {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.kyc-doc:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.kyc-doc--optional {
+    border: 2px dashed #e2e8f0;
+    background: white;
+}
+
+.kyc-doc__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.kyc-doc__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kyc-doc__icon svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+.kyc-doc__icon--id {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.kyc-doc__icon--income {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.kyc-doc__icon--address {
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+}
+
+.kyc-doc__icon--selfie {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.kyc-doc__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.kyc-doc__badge {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #f59e0b;
+    background: #fff7ed;
+    padding: 0.25rem 0.5rem;
+    border-radius: 999px;
+}
+
+.kyc-doc__description {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin: 0 0 1rem;
+}
+
+.kyc-doc__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.kyc-doc__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #475569;
+}
+
+.kyc-doc__item svg {
+    width: 16px;
+    height: 16px;
+    color: #3b82f6;
+}
+
+/* Actions */
+.kyc__actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.kyc__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.kyc__button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.kyc__button--primary {
+    background: #3b82f6;
+    color: white;
+}
+
+.kyc__button--primary:hover {
+    background: #2563eb;
+    color: white;
+}
+
+.kyc__button--secondary {
+    background: white;
+    color: #3b82f6;
+    border: 2px solid #e2e8f0;
+}
+
+.kyc__button--secondary:hover {
+    border-color: #3b82f6;
+    color: #2563eb;
+}
+
+.kyc__button--success {
+    background: #10b981;
+    color: white;
+}
+
+.kyc__button--success:hover {
+    background: #059669;
+    color: white;
+}
+
+.kyc__button--outline {
+    background: transparent;
+    color: #3b82f6;
+    border: 2px solid #3b82f6;
+}
+
+.kyc__button--outline:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .kyc {
+        padding: 1rem 0;
+    }
+
+    .kyc__container {
+        padding: 0 1rem;
+    }
+
+    .kyc__title {
+        font-size: 1.75rem;
+    }
+
+    .kyc__docs {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .kyc__title {
+        font-size: 1.5rem;
+    }
+
+    .kyc__subtitle {
+        font-size: 1rem;
+    }
+
+    .kyc-doc {
+        padding: 1.25rem;
+    }
+
+    .kyc__actions {
+        flex-direction: column;
+    }
+
+    .kyc__button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+</style>
+{% endblock %}

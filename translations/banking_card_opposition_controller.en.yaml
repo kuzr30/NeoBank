@@ -1,0 +1,19 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_card_opposition_controller.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_card_opposition_controller:
+  flash:
+    access_denied_card: "Access denied to this card."
+    only_active_cards: "Only active cards can be opposed."
+    active_opposition_exists: "An opposition is already being processed for this card."
+    opposition_success: "Your opposition has been registered successfully. Your card has been immediately blocked for your security."
+    opposition_error: "An error occurred while registering your opposition. Please try again or contact our customer service."
+    access_denied_opposition: "Access denied to this opposition."
+    card_not_found: "Card not found or access denied."
+    select_card: "Please select a card."
+    emergency_opposition_success: "OPPOSITION REGISTERED - Your card has been immediately blocked. Reference: {reference}"
+    emergency_opposition_error: "Error during blocking. Contact customer service immediately at 02/XXX.XX.XX"
+  emergency:
+    opposition_reason: "Emergency opposition via quick interface"

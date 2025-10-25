@@ -1,0 +1,106 @@
+<div class="credit-form__section">
+    <h2 class="credit-form__section-title">Situation professionnelle</h2>
+    
+    <div class="credit-form__group credit-form__group--half">
+        <div>
+            {{ form_label(form.monthlyIncome, null, {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.monthlyIncome) }}
+            {{ form_help(form.monthlyIncome) }}
+            {{ form_errors(form.monthlyIncome) }}
+        </div>
+        <div>
+            {{ form_label(form.employmentType, null, {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.employmentType) }}
+            {{ form_errors(form.employmentType) }}
+        </div>
+    </div>
+
+    <div class="credit-form__group credit-form__group--half" 
+         data-target="employment-details" 
+         style="display: none;">
+        <div>
+            {{ form_label(form.employer, null, {'label_attr': {'class': 'credit-form__label'}}) }}
+            {{ form_widget(form.employer) }}
+            {{ form_errors(form.employer) }}
+        </div>
+        <div>
+            {{ form_label(form.jobTitle, null, {'label_attr': {'class': 'credit-form__label'}}) }}
+            {{ form_widget(form.jobTitle) }}
+            {{ form_errors(form.jobTitle) }}
+        </div>
+    </div>
+
+    <div class="credit-form__group" 
+         data-target="employment-details" 
+         style="display: none;">
+        {{ form_label(form.employmentStartDate, null, {'label_attr': {'class': 'credit-form__label'}}) }}
+        {{ form_widget(form.employmentStartDate) }}
+        {{ form_help(form.employmentStartDate) }}
+        {{ form_errors(form.employmentStartDate) }}
+    </div>
+</div>
+
+<div class="credit-form__section">
+    <h2 class="credit-form__section-title">Situation financière</h2>
+    
+    <div class="credit-form__group credit-form__group--half">
+        <div>
+            {{ form_label(form.monthlyExpenses, null, {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.monthlyExpenses) }}
+            {{ form_help(form.monthlyExpenses) }}
+            {{ form_errors(form.monthlyExpenses) }}
+        </div>
+        <div>
+            {{ form_label(form.existingLoans, null, {'label_attr': {'class': 'credit-form__label'}}) }}
+            {{ form_widget(form.existingLoans) }}
+            {{ form_help(form.existingLoans) }}
+            {{ form_errors(form.existingLoans) }}
+        </div>
+    </div>
+
+    <!-- Capacity calculation display -->
+    <div class="credit-form__group">
+        <div class="credit-form__capacity-display" data-target="capacity-info" style="display: none;">
+            <div class="credit-form__capacity-item">
+                <span class="credit-form__capacity-label">Capacité d'endettement :</span>
+                <span class="credit-form__capacity-value" data-capacity="debt-ratio">-</span>
+            </div>
+            <div class="credit-form__capacity-item">
+                <span class="credit-form__capacity-label">Reste à vivre :</span>
+                <span class="credit-form__capacity-value" data-capacity="remaining">-</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .credit-form__capacity-display {
+        background: #f0f9ff;
+        border: 1px solid #bae6fd;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    .credit-form__capacity-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .credit-form__capacity-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .credit-form__capacity-label {
+        font-weight: 500;
+        color: #0c4a6e;
+    }
+
+    .credit-form__capacity-value {
+        font-weight: 600;
+        color: #0369a1;
+        font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+    }
+</style>

@@ -1,0 +1,28 @@
+# KYC (Know Your Customer) translations
+kyc:
+  title: "Identitätsverifizierung (KYC)"
+  required_for_banking: "Identitätsverifizierung erforderlich für Zugang zu Bankdienstleistungen"
+  already_submitted: "Sie haben bereits einen Antrag zur Identitätsverifizierung eingereicht."
+  submission_success: "Ihr Antrag zur Identitätsverifizierung wurde erfolgreich eingereicht. Unser Team wird ihn so schnell wie möglich prüfen."
+  submission_error: "Ein Fehler ist bei der Einreichung Ihres Antrags aufgetreten. Bitte versuchen Sie es erneut."
+  
+  status:
+    not_submitted: "Nicht eingereicht"
+    pending: "Wartend auf Validierung"
+    approved: "Genehmigt"
+    rejected: "Abgelehnt - Dokumente zu korrigieren"
+    incomplete: "Unvollständig"
+    
+  documents:
+    identity: "Ausweisdokument"
+    income_proof: "Einkommensnachweis"
+    address_proof: "Wohnsitznachweis"
+    selfie: "Selfie mit Ausweisdokument"
+  navigation:
+    index: "KYC-Status"
+    submit: "Meine Dokumente einreichen"
+    status: "Details meines Antrags"
+  messages:
+    access_denied: "Sie müssen Ihre Identitätsverifizierung (KYC) abschließen, um auf die Bankdienstleistungen zugreifen zu können."
+    approved_notification: "Herzlichen Glückwunsch! Ihre Identitätsverifizierung wurde genehmigt. Sie haben jetzt Zugang zu allen unseren Bankdienstleistungen."
+    rejected_notification: "Ihr Verifizierungsantrag benötigt Korrekturen. Bitte sehen Sie sich die Anmerkungen an und reichen Sie neue Dokumente ein."

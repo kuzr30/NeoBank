@@ -1,0 +1,82 @@
+banking_transfers:
+  header:
+    title: "Überweisungen"
+    subtitle: "Führen Sie Überweisungen an Ihre registrierten Konten durch"
+    last_updated: "Letzte Aktualisierung: %datetime%"
+    new_transfer: "Neue Überweisung"
+  
+  active_transfers:
+    title: "Laufende Überweisungen"
+    transfer_to: "Überweisung an %account%"
+    status:
+      pending: "Ausstehend"
+      executing: "Wird ausgeführt"
+    validation_code_required: "Wartet auf Validierungscode"
+    actions:
+      enter_code: "Code eingeben"
+      view_details: "Details anzeigen"
+  
+  beneficiaries:
+    title: "Meine Empfänger"
+    iban_label: "IBAN:"
+    empty_state:
+      title: "Kein Empfängerkonto registriert"
+      description: "Fügen Sie IBAN-Konten hinzu, um Überweisungen durchführen zu können"
+      add_rib_button: "IBAN hinzufügen"
+  
+  actions:
+    one_time:
+      title: "Einmalige Überweisung"
+      description: "Führen Sie eine einmalige Überweisung an einen Empfänger durch"
+      button: "Durchführen"
+    
+    recurring:
+      title: "Dauerauftrag"
+      description: "Programmieren Sie eine automatische wiederkehrende Überweisung"
+      button: "Programmieren"
+    
+    instant:
+      title: "Sofortüberweisung"
+      description: "Überweisung wird in wenigen Sekunden ausgeführt"
+      button: "Senden"
+    
+    add_beneficiary:
+      title: "Neuer Empfänger"
+      description: "Neuen Überweisungsempfänger hinzufügen"
+      button: "Hinzufügen"
+  
+  filters:
+    all_transfers: "Alle Überweisungen"
+    sent_transfers: "Gesendete Überweisungen"
+    received_transfers: "Empfangene Überweisungen"
+    recurring_transfers: "Daueraufträge"
+    instant_transfers: "Sofortüberweisungen"
+    all_accounts: "Alle Konten"
+    account_checking: "Girokonto ****8547"
+    account_savings: "Sparbuch A ****2143"
+    filter_button: "Filtern"
+    export_button: "Exportieren"
+  
+  table:
+    headers:
+      date: "Datum"
+      type: "Typ"
+      beneficiary_sender: "Empfänger / Absender"
+      reason: "Verwendungszweck"
+      amount: "Betrag"
+      status: "Status"
+      actions: "Aktionen"
+    
+    transfer_types:
+      received: "Empfangen"
+      sent: "Gesendet"
+      internal: "Intern"
+      instant: "Sofort"
+    
+    status:
+      executed: "Ausgeführt"
+  
+  pagination:
+    previous: "Vorherige"
+    next: "Weiter"
+    page_info: "Seite %current% von %total% (%count% Überweisungen)"

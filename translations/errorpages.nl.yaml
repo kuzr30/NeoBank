@@ -1,0 +1,30 @@
+general:
+  title: "Er is een fout opgetreden"
+  subtitle: "Onze excuses voor het ongemak"
+  back_to_homepage: "Terug naar startpagina"
+  back_button: "Terug"
+
+error_404:
+  title: "Pagina niet gevonden"
+  subtitle: "De pagina die u zoekt bestaat niet of is verplaatst"
+  message: "Het adres is mogelijk verkeerd ingevoerd of de pagina is verwijderd."
+
+error_403:
+  title: "Toegang geweigerd"
+  subtitle: "U heeft geen toestemming om deze pagina te bezoeken"
+  message: "Deze bron vereist speciale machtigingen die u niet heeft."
+
+error_500:
+  title: "Interne serverfout"
+  subtitle: "Er is een technische fout opgetreden"
+  message: "Onze technische teams zijn gewaarschuwd en werken aan een oplossing."
+
+suggestions:
+  title: "Wat kunt u doen?"
+  check_url: "Controleer het URL-adres"
+  go_home: "Ga terug naar de startpagina"
+  contact_support: "Neem contact op met onze support"
+  try_later: "Probeer het later opnieuw"
+  check_permissions: "Controleer uw toegangsmachtigingen"
+  login_authorized: "Log in met een geautoriseerd account"
+  refresh_page: "Pagina vernieuwen"

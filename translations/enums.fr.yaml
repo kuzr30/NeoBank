@@ -1,0 +1,140 @@
+enums:
+  # Credit Application Status
+  credit_application_status:
+    pending: "En attente"
+    approved: "Approuvé"
+    rejected: "Refusé"
+    in_progress: "En cours de traitement"
+    in_review: "En cours d'étude"
+    contract_sent: "Contrat envoyé"
+    contract_signed: "Contrat signé"
+    contract_validated: "Contrat validé"
+    funds_disbursed: "Fonds débloqués"
+    requires_documents: "Documents requis"
+    cancelled: "Annulé"
+
+  # Account Status
+  account_status:
+    active: "Actif"
+    suspended: "Suspendu"
+    closed: "Fermé"
+    pending: "En attente"
+
+  # Account Type
+  account_type:
+    checking: "Compte Courant"
+    savings: "Compte Épargne"
+    credit: "Compte Crédit"
+    business: "Compte Professionnel"
+    loan: "Compte de Prêt"
+
+  # Transaction Status
+  transaction_status:
+    pending: "En attente"
+    completed: "Terminé"
+    failed: "Échoué"
+    cancelled: "Annulé"
+
+  # Transaction Type
+  transaction_type:
+    debit: "Débit"
+    credit: "Crédit"
+    deposit: "Dépôt"
+    withdrawal: "Retrait"
+    transfer: "Virement"
+    payment: "Paiement"
+    fee: "Frais"
+    interest: "Intérêts"
+
+  # Transaction Category
+  transaction_category:
+    transfer: "Virement"
+    deposit: "Dépôt"
+    withdrawal: "Retrait"
+    payment: "Paiement"
+    fee: "Frais"
+    interest: "Intérêts"
+    loan_payment: "Remboursement de prêt"
+    card_payment: "Paiement par carte"
+    direct_debit: "Prélèvement automatique"
+    check: "Chèque"
+    cash: "Espèces"
+    online_payment: "Paiement en ligne"
+    refund: "Remboursement"
+    salary: "Salaire"
+    rent: "Loyer"
+    groceries: "Alimentation"
+    transport: "Transport"
+    entertainment: "Loisirs"
+    healthcare: "Santé"
+    education: "Éducation"
+    utilities: "Factures"
+    shopping: "Achats"
+    other: "Autres"
+
+  # Duration Unit
+  duration_unit:
+    days: "jours"
+    weeks: "semaines"
+    months: "mois"
+    years: "années"
+
+  # Duration
+  duration:
+    short: "Court terme"
+    medium: "Moyen terme"
+    long: "Long terme"
+
+  # Assurance Type
+  assurance_type:
+    auto:
+      label: "Assurance Auto"
+      description: "Protection complète pour votre véhicule avec assistance 24h/24"
+    habitation:
+      label: "Assurance Habitation"
+      description: "Multirisques habitation pour propriétaires et locataires"
+    sante:
+      label: "Complémentaire Santé"
+      description: "Complémentaire santé avec remboursements optimisés"
+    vie:
+      label: "Assurance Vie"
+      description: "Épargne et transmission optimisées fiscalement"
+    pret:
+      label: "Assurance Emprunteur"
+      description: "Sécurisez votre crédit immobilier"
+    voyage:
+      label: "Assurance Voyage"
+      description: "Voyagez l'esprit tranquille avec une couverture mondiale"
+    pro:
+      label: "Assurance Professionnelle"
+      description: "Protection complète pour votre activité professionnelle"
+    cyber:
+      label: "Cyber-assurance"
+      description: "Protection contre les cyberattaques et violations de données"
+    decennale:
+      label: "Responsabilité Décennale"
+      description: "Obligatoire pour les professionnels du bâtiment"
+    rc:
+      label: "Responsabilité Civile"
+      description: "Protection contre les dommages causés à autrui"
+    flotte:
+      label: "Assurance Flotte"
+      description: "Assurance pour parc de véhicules d'entreprise"
+    garage:
+      label: "Assurance Garage"
+      description: "Protection pour les professionnels de l'automobile"
+
+  # Contrat Assurance Status
+  contrat_assurance_status:
+    actif:
+      label: "Actif"
+      description: "Contrat en cours et opérationnel"
+    suspendu:
+      label: "Suspendu"
+      description: "Contrat temporairement suspendu"
+    resilie:
+      label: "Résilié"
+      description: "Contrat définitivement résilié"
+    expire:
+      label: "Expiré"
+      description: "Contrat arrivé à échéance"

@@ -1,0 +1,88 @@
+register:
+  errors:
+    first_name_required: "Voornaam is verplicht"
+    first_name_min: "Voornaam moet minstens {{ limit }} karakters hebben"
+    first_name_max: "Voornaam mag niet meer dan {{ limit }} karakters hebben"
+    last_name_required: "Achternaam is verplicht"
+    last_name_min: "Achternaam moet minstens {{ limit }} karakters hebben"
+    last_name_max: "Achternaam mag niet meer dan {{ limit }} karakters hebben"
+    email_required: "E-mail is verplicht"
+    email_invalid: "E-mail is niet geldig"
+    email_exists: "Er bestaat al een account met dit e-mailadres"
+    password_required: "Wachtwoord is verplicht"
+    password_min: "Uw wachtwoord moet minstens {{ limit }} karakters bevatten"
+    password_mismatch: "Wachtwoorden komen niet overeen"
+    terms_required: "U moet onze voorwaarden accepteren"
+
+validators:
+  european_iban:
+    message: "IBAN \"{{ value }}\" is niet geldig."
+    invalid_format: "IBAN moet het Europese formaat respecteren."
+  sufficient_balance:
+    message: "Bedrag kan uw beschikbare saldo van {{ balance }} € niet overschrijden"
+  devis_form:
+    lastname_required: "Achternaam is verplicht"
+    lastname_max: "Achternaam mag niet meer dan {{ limit }} karakters bevatten"
+    firstname_required: "Voornaam is verplicht"
+    firstname_max: "Voornaam mag niet meer dan {{ limit }} karakters bevatten"
+    email_required: "E-mail is verplicht"
+    email_invalid: "Voer een geldig e-mailadres in"
+    phone_required: "Telefoonnummer is verplicht"
+    phone_invalid: "Voer een geldig telefoonnummer in"
+    insurance_type_required: "Selecteer een verzekeringstype"
+    contact_preference_invalid: "Kies een geldige contactvoorkeur"
+    comments_max: "Opmerkingen mogen niet meer dan {{ limit }} karakters bevatten"
+
+# Validatieberichten voor het credit_step_forms domein
+# Stap 1 - Persoonlijke velden
+step1.fields.firstname.errors.required: "Voornaam is verplicht"
+step1.fields.lastname.errors.required: "Achternaam is verplicht"
+step1.fields.email.errors.required: "E-mailadres is verplicht"
+step1.fields.email.errors.invalid: "Voer een geldig e-mailadres in"
+step1.fields.phone.errors.required: "Telefoonnummer is verplicht"
+step1.fields.phone.errors.invalid: "Voer een geldig telefoonnummer in"
+step1.fields.birth_date.errors.required: "Geboortedatum is verplicht"
+step1.fields.birth_date.errors.age_restriction: "U moet meerderjarig zijn om een kredietaanvraag te doen"
+step1.fields.nationality.errors.required: "Nationaliteit is verplicht"
+step1.fields.marital_status.errors.required: "Burgerlijke staat is verplicht"
+step1.fields.marital_status.errors.invalid: "Ongeldige burgerlijke staat"
+step1.fields.dependents.errors.required: "Aantal afhankelijke personen is verplicht"
+step1.fields.dependents.errors.invalid_range: "Het aantal afhankelijke personen moet tussen 0 en 20 zijn"
+
+# Stap 1 - Adressectie
+step1.address_section.address.errors.required: "Adres is verplicht"
+step1.address_section.city.errors.required: "Stad is verplicht"
+step1.address_section.postal_code.errors.required: "Postcode is verplicht"
+step1.address_section.postal_code.errors.invalid: "Postcode moet 4 cijfers bevatten"
+step1.address_section.country.errors.required: "Land is verplicht"
+step1.address_section.housing_type.errors.required: "Woningtype is verplicht"
+step1.address_section.housing_type.errors.invalid: "Ongeldig woningtype"
+
+# Stap 2 - Financiële situatie
+step2.fields.monthly_income.errors.required: "Maandelijks inkomen is verplicht"
+step2.fields.monthly_income.errors.min_value: "Het minimaal vereiste maandinkomen is €1000"
+step2.fields.employment_type.errors.required: "Type werk is verplicht"
+step2.fields.employment_type.errors.invalid: "Ongeldig type werk"
+step2.fields.monthly_expenses.errors.required: "Maandelijkse uitgaven zijn verplicht"
+step2.fields.monthly_expenses.errors.min_value: "Uitgaven kunnen niet negatief zijn"
+step2.fields.existing_loans.errors.min_value: "Het bedrag kan niet negatief zijn"
+
+# Stap 3 - Kredietconfiguratie
+step3.credit_configuration.loan_amount.errors.required: "Kredietbedrag is verplicht"
+step3.credit_configuration.loan_amount.errors.invalid_range: "Het kredietbedrag moet tussen €3000 en €30.000.000 liggen"
+step3.credit_configuration.duration.errors.required: "Kredietduur is verplicht"
+step3.credit_configuration.duration.errors.min_value: "De duur moet minimaal 2 maanden zijn"
+
+# Stap 3 - Toestemmingen
+step3.consent.terms_accepted.errors.required: "U moet de algemene voorwaarden accepteren"
+step3.consent.data_processing_accepted.errors.required: "U moet de verwerking van uw persoonlijke gegevens accepteren"
+
+# Aanvullende IBAN validators
+european_iban:
+  invalid_checksum: "IBAN \"{{ value }}\" heeft een ongeldige controlesom."
+  non_european: "IBAN \"{{ value }}\" behoort niet tot een geaccepteerd Europees land."
+    
+iban_validator:
+  message: "IBAN \"{{ value }}\" is niet geldig."
+  invalid_format: "IBAN moet in Frans formaat zijn (FR gevolgd door 25 karakters)."
+  invalid_checksum: "IBAN \"{{ value }}\" heeft een ongeldige controlesom."

@@ -1,0 +1,173 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Ajouter un code - Virement #{{ transfer.id }}{% endblock %}
+
+{% block body %}
+<div class="admin-container">
+    
+    <!-- Header -->
+    <div class="admin-header">
+        <div class="admin-header-content">
+            <h1 class="admin-title">
+                {{ ux_icon('heroicons:plus-circle', {'class': 'admin-title-icon'}) }}
+                Ajouter un code de validation
+            </h1>
+            <div class="admin-subtitle">
+                Virement #{{ transfer.id }} - {{ transfer.amount|number_format(2, ',', ' ') }} € vers {{ transfer.destinationAccount.accountNumber }}
+            </div>
+        </div>
+        <div class="admin-header-actions">
+            <a href="{{ path('admin_transfer_details', {'id': transfer.id}) }}" class="admin-btn admin-btn--secondary">
+                {{ ux_icon('heroicons:arrow-left', {'class': 'admin-btn-icon'}) }}
+                Retour aux détails
+            </a>
+        </div>
+    </div>
+
+    <!-- Informations du virement -->
+    <div class="admin-card admin-card--compact">
+        <div class="admin-card-content">
+            <div class="admin-transfer-summary">
+                <div class="admin-summary-item">
+                    <span class="admin-summary-label">Utilisateur :</span>
+                    <span class="admin-summary-value">{{ transfer.user.firstName }} {{ transfer.user.lastName }} ({{ transfer.user.email }})</span>
+                </div>
+                <div class="admin-summary-item">
+                    <span class="admin-summary-label">Statut :</span>
+                    <span class="admin-badge admin-badge--{{ transfer.status }}">
+                        {% if transfer.status == 'pending' %}En attente
+                        {% elseif transfer.status == 'executing' %}En cours d'exécution
+                        {% endif %}
+                    </span>
+                </div>
+                <div class="admin-summary-item">
+                    <span class="admin-summary-label">Codes existants :</span>
+                    <span class="admin-summary-value">{{ transfer.transferCodes|length }} code(s)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Codes existants -->
+    {% if transfer.transferCodes is not empty %}
+        <div class="admin-card">
+            <div class="admin-card-header">
+                <h2 class="admin-card-title">
+                    {{ ux_icon('heroicons:key', {'class': 'admin-card-icon'}) }}
+                    Codes existants
+                </h2>
+            </div>
+            <div class="admin-card-content">
+                <div class="admin-codes-list admin-codes-list--compact">
+                    {% for code in transfer.transferCodes %}
+                        <div class="admin-code-item admin-code-item--{{ code.isValidated ? 'validated' : (code.isExpired ? 'expired' : 'pending') }}">
+                            <div class="admin-code-info">
+                                <span class="admin-code-name">{{ code.name }}</span>
+                                <span class="admin-code-order">Code {{ code.codeOrder }}</span>
+                            </div>
+                            <div class="admin-code-status">
+                                {% if code.isValidated %}
+                                    {{ ux_icon('heroicons:check-circle', {'class': 'admin-code-icon admin-code-icon--success'}) }}
+                                    Validé
+                                {% elseif code.isExpired %}
+                                    {{ ux_icon('heroicons:clock', {'class': 'admin-code-icon admin-code-icon--warning'}) }}
+                                    Expiré
+                                {% else %}
+                                    {{ ux_icon('heroicons:ellipsis-horizontal-circle', {'class': 'admin-code-icon admin-code-icon--pending'}) }}
+                                    En attente
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    <!-- Formulaire d'ajout de code -->
+    <div class="admin-card">
+        <div class="admin-card-header">
+            <h2 class="admin-card-title">
+                {{ ux_icon('heroicons:plus', {'class': 'admin-card-icon'}) }}
+                Nouveau code de validation
+            </h2>
+        </div>
+        <div class="admin-card-content">
+            {{ form_start(form, {
+                'attr': {
+                    'class': 'admin-form',
+                    'data-turbo': 'false'
+                }
+            }) }}
+
+            <div class="admin-form-group">
+                {{ form_label(form.name, null, {'label_attr': {'class': 'admin-form-label'}}) }}
+                {{ form_widget(form.name, {'attr': {'class': 'admin-form-input'}}) }}
+                <div class="admin-form-help">
+                    Donnez un nom descriptif à ce code (ex: "Code SMS", "Code Email", "Code Confirmé")
+                </div>
+                {{ form_errors(form.name) }}
+            </div>
+
+            <div class="admin-form-group">
+                {{ form_label(form.code, null, {'label_attr': {'class': 'admin-form-label'}}) }}
+                <div class="admin-form-input-group">
+                    {{ form_widget(form.code, {'attr': {'class': 'admin-form-input admin-form-input--code'}}) }}
+                    <button type="button" id="generateCodeBtn" class="admin-btn admin-btn--secondary admin-btn--small">
+                        {{ ux_icon('heroicons:sparkles', {'class': 'admin-btn-icon'}) }}
+                        Générer
+                    </button>
+                </div>
+                <div class="admin-form-help">
+                    Code de 9 caractères alphanumériques (A-Z, 0-9). Cliquez sur "Générer" pour un code aléatoire.
+                </div>
+                {{ form_errors(form.code) }}
+            </div>
+
+            <!-- Informations importantes -->
+            <div class="admin-alert admin-alert--info">
+                {{ ux_icon('heroicons:information-circle', {'class': 'admin-alert-icon'}) }}
+                <div class="admin-alert-content">
+                    <strong>Informations importantes :</strong>
+                    <ul>
+                        <li>Ce code sera assigné automatiquement comme code suivant dans la séquence</li>
+                        <li>L'utilisateur devra valider ce code pour continuer le processus</li>
+                        <li>Le code expirera 6 heures après sa première validation</li>
+                        <li>3 tentatives incorrectes bloqueront l'utilisateur</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="admin-form-actions">
+                <a href="{{ path('admin_transfer_details', {'id': transfer.id}) }}" 
+                   class="admin-btn admin-btn--secondary">
+                    Annuler
+                </a>
+                {{ form_widget(form.submit, {'attr': {'class': 'admin-btn admin-btn--primary'}}) }}
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const generateBtn = document.getElementById('generateCodeBtn');
+    const codeInput = document.querySelector('input[name="transfer_code[code]"]');
+    
+    if (generateBtn && codeInput) {
+        generateBtn.addEventListener('click', function() {
+            // Générer un code aléatoire de 9 caractères
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let code = '';
+            for (let i = 0; i < 9; i++) {
+                code += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            codeInput.value = code;
+        });
+    }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,81 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: auto_loan.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+auto_loan:
+  page_title: "Auto Loan"
+  page_description: "Finance the purchase of your new or used vehicle with our auto loan at advantageous conditions."
+  
+  hero:
+    rate_value: "2,9%"
+    amount_value: "75 000€"
+    duration_value: "7 years"
+  
+  section_1:
+    title: "What is an auto loan?"
+    paragraph_1: "An auto loan is a dedicated loan specially designed to finance the purchase of a new or used vehicle. It can also cover additional costs such as insurance, registration or equipment."
+    paragraph_2: "With preferential rates and a duration adapted to your budget, our auto loan allows you to drive quickly while preserving your cash flow."
+  
+  features:
+    amount: "Up to 75,000€"
+    amount_detail: "According to vehicle value"
+    duration: "From 12 months to 7 years"
+    duration_detail: "Optimized duration"
+    rate: "From {rate}% APR*"
+    rate_detail: "Preferential auto rate"
+    guarantee: "Vehicle as guarantee"
+    guarantee_detail: "Lien on the vehicle"
+  
+  advantages:
+    advantage_1: "<strong>Competitive rates:</strong> Preferential conditions for automobiles"
+    advantage_2: "<strong>Complete financing:</strong> Up to 100% of vehicle value"
+    advantage_3: "<strong>New and used:</strong> Vehicles under 8 years accepted"
+    advantage_4: "<strong>Quick disbursement:</strong> Funds available within 48h after approval"
+    advantage_5: "<strong>Protection:</strong> Unemployment insurance available"
+  
+  requirements:
+    borrower:
+      title: "Borrower conditions"
+      item_1: "Be of age and reside in France"
+      item_2: "Prove stable income"
+      item_3: "Sufficient repayment capacity"
+      item_4: "Not be banned from banking"
+    vehicle:
+      title: "Vehicle conditions"
+      item_1: "Vehicle under 8 years old"
+      item_2: "Registration in France mandatory"
+      item_3: "Comprehensive insurance required"
+      item_4: "Appraisal if used vehicle"
+  
+  documents:
+    personal:
+      title: "Personal documents"
+      item_1: "Valid identity document"
+      item_2: "Recent proof of address"
+      item_3: "Last 3 pay slips"
+      item_4: "Income tax notice N-1"
+    vehicle:
+      title: "Vehicle documents"
+      item_1: "Order form or pro forma invoice"
+      item_2: "Registration certificate (if used)"
+      item_3: "Transfer certificate (if used)"
+      item_4: "Comprehensive insurance quote"
+    banking:
+      title: "Banking documents"
+      item_1: "RIB of main account"
+      item_2: "Last 3 bank statements"
+      item_3: "Certificate of other current loans"
+      item_4: "Personal contribution justifications"
+  
+  legal:
+    title: "Important legal information"
+    taeg: "<strong>*APR:</strong> Representative example: for a €25,000 auto loan over 5 years at 2.9% APR, you repay 60 monthly payments of €449, for a total amount of €26,940 (cost of credit: €1,940)."
+    guarantee: "<strong>Guarantee:</strong> The financed vehicle serves as guarantee until full repayment."
+    insurance: "<strong>Insurance:</strong> Comprehensive insurance mandatory throughout the loan duration."
+    resale: "<strong>Resale:</strong> Early repayment mandatory in case of vehicle resale."
+    fees: "<strong>Fees:</strong> Processing fees of 1% of borrowed amount (minimum €150)."
+  
+  cta:
+    title: "Your new vehicle awaits you"
+    subtitle: "Finance your car at the best conditions"

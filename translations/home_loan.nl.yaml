@@ -1,0 +1,106 @@
+home_loan:
+  page:
+    title: "Woningkrediet"
+    description: "Word eigenaar met ons woningkrediet. Financier uw hoofdverblijf onder de beste voorwaarden."
+  
+  hero:
+    class: "credit-detail-hero--home-loan"
+    taux: "3,5%"
+    montant: "400 000€"
+    duree: "25 jaar"
+    title: "Woningkrediet"
+    subtitle: "Word eigenaar van uw hoofdverblijf"
+  
+  section_1:
+    title: "Wat is een woningkrediet?"
+    content:
+      paragraph_1: "Het woningkrediet stelt u in staat eigenaar te worden van uw hoofdverblijf. Het financiert de aankoop van een nieuwe of oude woning, met of zonder renovatiewerken."
+      paragraph_2: "Langetermijn hypotheekCrediet met voordelige voorwaarden, het gaat gepaard met solide garanties en kan worden aangevuld met ondersteunde leningen volgens uw situatie."
+  
+  features:
+    title: "Kredietkenmerken"
+    montant:
+      value: "Tot 400 000€"
+      detail: "Volgens de waarde van het goed"
+    duree:
+      value: "Tot 25 jaar"
+      detail: "Langetermijn terugbetaling"
+    taux:
+      value: "Vanaf {rate}% JTKS*"
+      detail: "Voordelig vast tarief"
+    garantie:
+      value: "Hypotheek"
+      detail: "Op het gefinancierde goed"
+  
+  section_3:
+    title: "Voordelen van het woningkrediet"
+    advantages:
+      taux_fixe:
+        title: "Vast tarief"
+        description: "Zekerheid met een onveranderlijk tarief gedurende de hele looptijd"
+      duree_longue:
+        title: "Lange looptijd"
+        description: "Verminderde maandlasten met een spreiding tot 25 jaar"
+      prets_aides:
+        title: "Ondersteunde leningen"
+        description: "Combinatie mogelijk met PTZ, Action Logement lening..."
+      modulation:
+        title: "Modulatie"
+        description: "Aanpassing van aflossingen volgens de evolutie van uw inkomsten"
+      transfert:
+        title: "Overdracht mogelijk"
+        description: "Bij verkoop en terugkoop binnen 2 jaar"
+  
+  section_4:
+    title: "Geschiktheidscriteria"
+    emprunteur:
+      title: "Leningnemer voorwaarden"
+      items:
+        premiere_acquisition: "Eerste aankoop of geen eigenaar sinds 2 jaar"
+        revenus: "Stabiele en voldoende inkomsten"
+        apport: "Minimale eigen inbreng 10%"
+        endettement: "Schuldenlast lager dan 35%"
+    bien:
+      title: "Voorwaarden van het goed"
+      items:
+        residence_principale: "Hoofdverblijf verplicht"
+        normes: "Naleving van bouwvoorschriften"
+        diagnostic: "Gunstige energiediagnose"
+        assurance_habitation: "Woonverzekering afgesloten"
+  
+  section_5:
+    title: "Benodigde documenten"
+    dossier_personnel:
+      title: "Persoonlijk dossier"
+      items:
+        identite: "Identiteitspapieren"
+        revenus: "Inkomensbewijzen (3 maanden)"
+        impots: "Belastingaanslag"
+        comptes: "Rekeninguittreksels"
+    projet_immobilier:
+      title: "Vastgoedproject"
+      items:
+        compromis: "Ondertekend voorlopig koopcontract"
+        financement: "Financieringsplan"
+        diagnostics: "Vastgoeddiagnoses"
+        assurance_emprunteur: "Kredietverzekering"
+    apport_garanties:
+      title: "Inbreng en garanties"
+      items:
+        justificatifs_apport: "Bewijsstukken van eigen inbreng"
+        evaluation: "Waardering van het goed"
+        acte_notarie: "Voorlopige notariële akte"
+        conditions_suspensives: "Opschortende voorwaarden"
+  
+  legal:
+    details:
+      title: "Belangrijke juridische informatie"
+      taeg: "<strong>*JTKS :</strong> Representatief voorbeeld: voor een woningkrediet van €250.000 over 20 jaar tegen een JTKS van 3,5%, betaalt u 240 maandelijkse aflossingen van €1.448, hetzij een totaalbedrag van €347.520 (kredietkosten: €97.520)."
+      garantie: "<strong>Garantie :</strong> Hypotheek van 1e rang op het gefinancierde goed, inschrijving bij hypotheken."
+      assurance: "<strong>Verzekering :</strong> Overlijdens- en invaliditeitsverzekering verplicht, werkloosheidsverzekering optioneel."
+      condition_suspensive: "<strong>Opschortende voorwaarde :</strong> Clausule voor het verkrijgen van de lening in het voorlopig koopcontract verplicht."
+      delai_reflexion: "<strong>Bedenktijd :</strong> Minimum 10 dagen voor definitieve aanvaarding van het leningsaanbod."
+  
+  cta:
+    title: "Realiseer uw vastgoedproject"
+    subtitle: "Word eigenaar met ons voordelige woningkrediet"

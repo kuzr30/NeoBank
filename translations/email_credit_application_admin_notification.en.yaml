@@ -1,0 +1,45 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_credit_application_admin_notification.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+email_credit_application_admin_notification:
+  title: "Nouvelle demande de crédit - #%applicationId%"
+  
+  content:
+    page_title: "Nouvelle demande de crédit"
+    subtitle: "Une nouvelle demande de crédit vient d'être soumise et nécessite votre attention."
+    
+    request_details:
+      title: "Détails de la demande"
+      request_number: "Numéro de demande :"
+      submission_date: "Date de soumission :"
+    
+    client_info:
+      title: "👤 Informations client"
+      full_name: "Nom complet :"
+      email: "Email :"
+    
+    credit_details:
+      title: "Détails du crédit"
+      amount_requested: "Montant demandé :"
+      credit_type: "Type de crédit :"
+      duration: "Durée :"
+      duration_months: "%duration% mois"
+    
+    required_actions:
+      title: "Actions requises"
+      review_within_24h: "Examiner le dossier dans les 24h"
+      verify_solvency: "Vérifier la solvabilité du client"
+      analyze_documents: "Analyser les documents fournis"
+      make_decision: "Prendre une décision dans les 3-5 jours ouvrés"
+    
+    view_admin_button: "📂 Voir dans l'admin"
+    contact_client_button: "Contacter le client"
+    
+    footer_note: "<strong>Note :</strong> Cette notification a été générée automatiquement. Merci de traiter cette demande dans les délais impartis pour maintenir la qualité de service."
+
+  logs:
+    credit_admin_notification_sent: "Notification admin de crédit envoyée pour la demande #%applicationId%"
+    credit_admin_notification_failed: "Erreur lors de l'envoi de la notification admin de crédit"
+    credit_application_assigned: "Demande de crédit #%applicationId% assignée pour examen"

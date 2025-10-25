@@ -1,0 +1,36 @@
+profile_edit:
+  page:
+    title: "Profiel bewerken - %company_name%"
+  
+  header:
+    title: "Profiel bewerken"
+  
+  email_pending:
+    title: "Nieuw e-mailadres in behandeling:"
+    text: "Klik op de link in de validatie-e-mail om de wijziging te bevestigen."
+    instruction: "Klik op de link in de validatie-e-mail om de wijziging te bevestigen."
+    cancel: "Annuleren"
+    confirm_cancel: "Weet u zeker dat u deze e-mailwijziging wilt annuleren?"
+    cancel_confirm: "Weet je zeker dat je deze e-mailwijziging wilt annuleren?"
+  
+  sections:
+    avatar:
+      title: "Profielfoto"
+      alt: "Profielfoto"
+      info: "Formaat JPG, PNG of WEBP. Maximale grootte 2MB."
+      default_first_letter: "G"
+      default_surname_letter: "O"
+    
+    personal_info:
+      title: "Persoonlijke informatie"
+      email_help: "Dit adres wordt gebruikt voor belangrijke notificaties."
+    
+    address:
+      title: "Adres"
+    
+    preferences:
+      title: "Voorkeuren"
+  
+  actions:
+    cancel: Annuleren
+    save: Wijzigingen opslaan

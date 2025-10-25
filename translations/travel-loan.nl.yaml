@@ -1,0 +1,111 @@
+# Nederlandse vertalingen voor reiskrediet
+travel_loan:
+  page_title: "Reisgeld"
+  page_description: "Financier uw reisdromen in alle sereniteit."
+  
+  # Meta gegevens van de pagina
+  meta:
+    title: "Reiskrediet"
+    description: "Financier uw vakanties en droomreizen met ons reiskrediet. Vertrek zorgeloos met aangepaste voorwaarden."
+
+  # Sectie Hero
+  hero:
+    title: "Reiskrediet"
+    subtitle: "Realiseer uw reisdromen"
+    
+  # Hoofdwaarden
+  values:
+    taux: "5,2%"
+    montant: "25 000€"
+    duree: "7 jaar"
+    
+  # Sectie 1 - Beschrijving
+  section_1:
+    title: "Wat is een reiskrediet?"
+    content:
+      - "Het reiskrediet stelt u in staat om uw vakanties, huwelijksreizen, wereldreizen of uitzonderlijke uitstapjes te financieren zonder uw noodsparing aan te spreken."
+      - "Een financieringsoplossing gewijd aan vrije tijd en welzijn, het biedt u de mogelijkheid om unieke ervaringen te beleven terwijl u uw financiële evenwicht behoudt."
+  
+  # Functies
+  features:
+    montant: "Tot 25 000€"
+    montant_detail: "Voor al uw reisprojecten"
+    duree: "Van 12 maanden tot 7 jaar"
+    duree_detail: "Comfortabele terugbetaling"
+    taux: "Vanaf {rate}% TAEG*"
+    taux_detail: "Concurrentieel reistarief"
+    garantie: "Zonder waarborg"
+    garantie_detail: "Financiering op handtekening"
+  
+  # Sectie 3 - Voordelen
+  advantages:
+    - 
+      title: "Spaargeld behouden:"
+      description: "Houd uw spaargeld voor onvoorziene uitgaven"
+    -
+      title: "Onmiddellijke beschikbaarheid:"
+      description: "Fondsen snel beschikbaar voor reserveringen"
+    -
+      title: "Alle reizen:"
+      description: "Vakanties, huwelijksreis, persoonlijke zakenreizen"
+    -
+      title: "Gebruiksvrijheid:"
+      description: "Transport, accommodatie, activiteiten, uitrusting"
+    -
+      title: "Reisverzekering:"
+      description: "Mogelijkheid van annulering/onderbreking dekking"
+  
+  # Sectie 4 - Voorwaarden
+  conditions:
+    octroi:
+      title: "Toekenningsvoorwaarden"
+      items:
+        - "Meerderjarig zijn en wonen in Frankrijk"
+        - "Regelmatige inkomsten aantonen"
+        - "Gezonde financiële situatie"
+        - "Gedefinieerd reisproject"
+    utilisation:
+      title: "Aanbevolen gebruik"
+      items:
+        - "Uitzonderlijke of belangrijke reis"
+        - "Behoud van noodsparing"
+        - "Goed gedefinieerd reisbudget"
+        - "Gewaarborgde terugbetalingscapaciteit"
+  
+  # Sectie 5 - Documenten
+  documents:
+    identite:
+      title: "Identiteit en woonadres"
+      items:
+        - "Identiteitskaart of paspoort"
+        - "Recent adresbewijs"
+        - "Familieboekje indien van toepassing"
+    financiere:
+      title: "Financiële situatie"
+      items:
+        - "3 laatste loonstroken"
+        - "Laatste belastingaanslag"
+        - "Rekeninguittreksels"
+        - "Bewijzen van andere inkomsten"
+    projet:
+      title: "Reisproject"
+      items:
+        - "Offerte reisbureau"
+        - "Voorlopige reserveringen"
+        - "Beschrijving van de reis"
+        - "Gedetailleerd budget"
+  
+  # Juridische vermeldingen
+  legal:
+    title: "Belangrijke juridische informatie"
+    details:
+      - "TAEG: Representatief voorbeeld: voor een reiskrediet van 8 000€ over 48 maanden tegen TAEG van 5,2%, betaalt u 48 maandelijkse termijnen van 185€, dus een totaalbedrag van 8 880€ (kosten van het krediet: 880€)."
+      - "Gebruik: Fondsen uitsluitend bestemd voor financiering van de aangegeven reis."
+      - "Reisverzekering: Aanbevolen om annuleringsrisico's te dekken."
+      - "Vervroegde terugbetaling: Mogelijk zonder boete boven 10 000€."
+      - "Bedenktijd: 14 dagen om het krediet op te zeggen zonder rechtvaardiging."
+  
+  # Call to Action
+  cta:
+    title: "Ga de wereld ontdekken"
+    subtitle: "Financier uw reisdromen met ons toegewijde krediet"

@@ -1,0 +1,38 @@
+email_contract_signed_notification:
+  title: "DRINGEND - Unterzeichneter Vertrag erhalten - Administrative Validierung erforderlich"
+  content:
+    priority_notification:
+      title: "PRIORITÄRE ADMINISTRATIVE BENACHRICHTIGUNG"
+      description: "Ein neuer unterzeichneter Kreditvertrag wurde erhalten und erfordert eine sofortige Validierung."
+    file_reference:
+      title: "Aktenreferenz"
+      contract_number: "Vertragsnummer"
+      request_id: "Antrags-ID"
+      status_label: "Status"
+      status_value: "WARTET AUF VALIDIERUNG"
+    customer_profile:
+      title: "Kundenprofil"
+      full_name: "Vollständiger Name"
+      email: "E-Mail"
+    credit_details:
+      title: "Kreditdetails"
+      requested_amount: "Beantragter Betrag"
+      duration: "Laufzeit"
+      monthly_payment: "Monatliche Rate"
+    actions_required:
+      title: "Erforderliche Maßnahmen"
+      validation: "Rechtliche Validierung - Vertragskonformität prüfen"
+      financial_approval: "Finanzielle Genehmigung - Bedingungen bestätigen"
+      fund_transfer: "Geldtransfer - Auszahlung vorbereiten"
+      archiving: "Sichere Archivierung - Dokument im System gespeichert"
+    footer:
+      auto_notification: "Automatisch generierte Benachrichtigung"
+      system: "%company_name% Kreditverwaltungssystem"
+      service: "Service Administrative Validierung"
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Versendung der Vertragssignierung-Benachrichtigung"
+    success: "Vertragssignierung-Benachrichtigung erfolgreich versendet"
+    error: "Fehler beim Versenden der Vertragssignierung-Benachrichtigung"
+    send_failed: "Versenden der Vertragssignierung-Benachrichtigung fehlgeschlagen"

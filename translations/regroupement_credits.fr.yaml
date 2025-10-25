@@ -1,0 +1,106 @@
+regroupement_credits:
+  page:
+    title: "Regroupement de Crédits"
+    description: "Simplifiez vos finances avec notre regroupement de crédits. Une seule mensualité pour tous vos prêts."
+  
+  hero:
+    class: "credit-detail-hero--regroupement"
+    taux: "{rate}%"
+    montant: "200 000€"
+    duree: "25 ans"
+    title: "Regroupement de Crédits"
+    subtitle: "Simplifiez la gestion de vos crédits"
+  
+  section_1:
+    title: "Qu'est-ce qu'un regroupement de crédits ?"
+    content:
+      paragraph_1: "Le regroupement de crédits consiste à réunir plusieurs prêts en cours (immobilier, consommation, cartes de crédit) en un seul crédit avec une mensualité unique, généralement plus faible."
+      paragraph_2: "Cette opération de restructuration financière permet de simplifier la gestion de votre budget, réduire vos mensualités et retrouver de la sérénité dans vos finances personnelles."
+  
+  features:
+    title: "Caractéristiques du regroupement"
+    montant:
+      value: "Jusqu'à 200 000€"
+      detail: "Montant des crédits regroupés"
+    duree:
+      value: "Jusqu'à 25 ans"
+      detail: "Allongement possible"
+    taux:
+      value: "À partir de {rate}% TAEG*"
+      detail: "Taux unique optimisé"
+    garantie:
+      value: "Hypothèque"
+      detail: "Si montant important"
+  
+  section_3:
+    title: "Avantages du regroupement"
+    advantages:
+      mensualite_unique:
+        title: "Mensualité unique"
+        description: "Plus qu'un seul prélèvement à gérer"
+      baisse_echeances:
+        title: "Baisse des échéances"
+        description: "Réduction jusqu'à 50% des mensualités totales"
+      tresorerie_liberee:
+        title: "Trésorerie libérée"
+        description: "Pouvoir d'achat restauré"
+      gestion_simplifiee:
+        title: "Gestion simplifiée"
+        description: "Un seul interlocuteur pour tous vos crédits"
+      tresorerie_supplementaire:
+        title: "Trésorerie supplémentaire"
+        description: "Possibilité d'obtenir des fonds complémentaires"
+  
+  section_4:
+    title: "Conditions d'éligibilité"
+    conditions:
+      title: "Conditions générales"
+      items:
+        revenus: "Revenus réguliers et suffisants"
+        credits_existants: "Au moins 2 crédits en cours"
+        montant_minimum: "Montant total minimum de 20 000€"
+        capacite_remboursement: "Taux d'endettement acceptable"
+    dossier:
+      title: "Constitution du dossier"
+      items:
+        tableaux: "Tableaux d'amortissement des crédits existants"
+        assurances: "Contrats d'assurance en cours"
+        justificatifs: "Justificatifs de revenus récents"
+        situation: "Situation patrimoniale complète"
+  
+  section_5:
+    title: "Documents nécessaires"
+    personnels:
+      title: "Documents personnels"
+      items:
+        identite: "Pièce d'identité"
+        domicile: "Justificatif de domicile"
+        familiale: "Situation familiale"
+        rib: "RIB du compte principal"
+    financiers:
+      title: "Justificatifs financiers"
+      items:
+        revenus: "3 derniers bulletins de salaire"
+        impots: "Dernier avis d'imposition"
+        comptes: "Relevés de comptes sur 3 mois"
+        patrimoine: "Déclaration de patrimoine"
+    credits:
+      title: "Crédits existants"
+      items:
+        contrats: "Contrats de prêts en cours"
+        echeanciers: "Échéanciers des crédits"
+        assurances_contrats: "Contrats d'assurance emprunteur"
+        releves: "Derniers relevés des comptes crédités"
+  
+  legal:
+    details:
+      title: "Informations légales importantes"
+      taeg: "<strong>*TAEG :</strong> Exemple représentatif : regroupement de 3 crédits totalisant 80 000€, nouveau crédit de 90 000€ sur 180 mois au TAEG de 4,8%, 180 mensualités de 500€, coût total : 90 000€."
+      duree: "<strong>Durée :</strong> L'allongement de la durée augmente le coût total du crédit."
+      garantie: "<strong>Garantie :</strong> Hypothèque possible selon montant et situation."
+      assurance: "<strong>Assurance :</strong> Décès invalidité obligatoire, perte d'emploi recommandée."
+      reflexion: "<strong>Délai de réflexion :</strong> 14 jours de délai de rétractation légal."
+  
+  cta:
+    title: "Simplifiez vos finances"
+    subtitle: "Retrouvez de la sérénité avec un regroupement de crédits"

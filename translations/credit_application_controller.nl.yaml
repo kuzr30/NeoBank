@@ -1,0 +1,58 @@
+# Vertalingen voor CreditApplicationController
+flash:
+    # Foutmeldingen
+  complete_previous_steps: "Voltooi eerst de vorige stappen voordat u doorgaat."
+  missing_data: "Ontbrekende gegevens in de sessie. Start de aanvraag opnieuw."
+  application_not_found: "De kredietaanvraag werd niet gevonden."
+  session_expired: "Uw sessie is verlopen. Start uw aanvraag opnieuw."
+  invalid_request: "Ongeldige aanvraag. Voltooi alle stappen."
+  complete_all_steps: "Voltooi alle stappen voordat u naar het overzicht gaat."
+  invalid_security_token: "Ongeldig beveiligingstoken. Probeer opnieuw."
+  submission_error: "Er is een fout opgetreden bij het indienen van uw aanvraag. Probeer opnieuw."
+  
+  # Succesboodschappen  
+  step_completed: "Stap %d succesvol voltooid."
+  application_submitted: "Uw kredietaanvraag is succesvol ingediend. U ontvangt binnenkort een bevestiging per e-mail."
+  data_saved: "Uw gegevens zijn opgeslagen."
+  
+  # Informatieboodschappen
+  step_progress: "U bent bij stap %d van %d."
+  review_information: "Gelieve uw gegevens te controleren voordat u uw aanvraag indient."
+  fields_updated: "De velden zijn automatisch bijgewerkt."
+  
+    # Waarschuwingsberichten
+  unsaved_changes: "U heeft niet-opgeslagen wijzigingen. Weet u zeker dat u wilt vertrekken?"
+  
+# Uitzonderingen
+exceptions:
+  step_not_found: "Stap niet gevonden."
+  invalid_step: "Ongeldige stap."
+  credit_application_not_found: "Kredietaanvraag niet gevonden."
+
+# API-berichten
+api:
+  invalid_data: "Ongeldige gegevens verstrekt."
+  calculation_error: "Fout bij het berekenen van het krediet."
+  validation_errors: "Gelieve de fouten in het formulier te corrigeren voordat u verdergaat."
+  complete_all_steps: "Gelieve alle stappen van uw aanvraag te voltooien."
+  invalid_request: "Ongeldige aanvraag."
+  invalid_security_token: "Ongeldig beveiligingstoken."
+  submission_error: "Er is een fout opgetreden bij het indienen van uw aanvraag."
+
+# Andere vertalingen van de controller
+step_titles:
+  1: "Kredietdetails"
+  2: "Persoonlijke informatie"
+  3: "Financiële situatie"
+  unknown: "Onbekende stap"
+
+step_descriptions:
+  1: "Configureer uw krediet en krijg een simulatie"
+  2: "Vul uw persoonlijke informatie en adres in"
+  3: "Beschrijf uw professionele en financiële situatie"
+
+buttons:
+  continue: "Doorgaan"
+  previous: "Vorige"
+  submit: "Aanvraag indienen"
+  save_draft: "Concept opslaan"

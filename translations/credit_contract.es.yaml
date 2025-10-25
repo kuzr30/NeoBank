@@ -1,0 +1,351 @@
+credit_contract:
+  # Título del documento
+  title: "Contrato de Préstamo Nº %reference_number%"
+  
+  # Encabezado
+  header:
+    repeated_header: "Encabezado repetido en cada página"
+    logo_alt: "Logo de %company_name%"
+    contract_number: "Contrato Nº%reference_number%"
+    
+  # Pie de página
+  footer:
+    company_description: "Sociedad de Financiamiento autorizada por la ACPR (Autoridad de Control Prudencial y Resolución)"
+    headquarters: "Domicilio Social"
+    country: "Francia"
+    phone: "Tel"
+    email: "Email"
+    credit_warning: "UN CRÉDITO LE COMPROMETE Y DEBE SER REEMBOLSADO. VERIFIQUE SUS CAPACIDADES DE REEMBOLSO ANTES DE COMPROMETERSE."
+    confidential_notice: "Documento confidencial - Toda reproducción está estrictamente prohibida sin autorización escrita"
+    
+  # Main content
+  main:
+    detailed_info_first_page: "Información detallada primera página"
+    logo_alt: "Logo de %company_name%"
+    document_title_comment: "Título del documento"
+    
+  # Títulos de contrato por tipo
+  contract_titles:
+    immobilier: "CONTRATO DE CRÉDITO INMOBILIARIO"
+    auto: "CONTRATO DE CRÉDITO AUTOMOTRIZ"
+    consommation: "CONTRATO DE CRÉDITO DE CONSUMO"
+    travaux: "CONTRATO DE CRÉDITO OBRAS"
+    professionnel: "CONTRATO DE CRÉDITO PROFESIONAL"
+    personal: "CONTRATO DE PRÉSTAMO PERSONAL"
+    home_improvement: "CONTRATO DE CRÉDITO MEJORA VIVIENDA"
+    debt_consolidation: "CONTRATO DE REUNIFICACIÓN DE CRÉDITOS"
+    mortgage: "CONTRATO DE CRÉDITO HIPOTECARIO"
+    renouvelable: "CONTRATO DE CRÉDITO RENOVABLE"
+    etudiant: "CONTRATO DE PRÉSTAMO ESTUDIANTIL"
+    relais: "CONTRATO DE CRÉDITO PUENTE"
+    microcredit: "CONTRATO DE MICROCRÉDITO"
+    leasing: "CONTRATO DE ARRENDAMIENTO FINANCIERO"
+    voyage: "CONTRATO DE CRÉDITO VIAJE"
+    default: "CONTRATO DE PRÉSTAMO PERSONAL"
+    
+  # Capítulo I - Partes Contratantes
+  chapter_one:
+    title: "Capítulo I - Las Partes Contratantes"
+    lender_header: "El Prestamista"
+    borrower_header: "El Prestatario"
+    company_type: "Sociedad de Financiamiento"
+    share_capital: "Capital social: %amount% €"
+    head_office: "Domicilio Social:"
+    represented_by: "Representada por su Director General"
+    hereinafter_lender: "En adelante denominada \"El Prestamista\""
+    hereinafter_borrower: "En adelante denominado/a \"El Prestatario\""
+    residing_at: "Domiciliado en:"
+    address_not_provided: "[Dirección no proporcionada]"
+    postal_code_city: "[Código Postal] [Ciudad]"
+    profession: "Profesión: %job_title%"
+    born_on: "Nacido/a el: %birth_date%"
+    phone: "Teléfono: %phone%"
+    email: "Email: %email%"
+    parties_agreed: "Las partes han convenido y acordado lo siguiente"
+    
+  # Chapter II - Object and Nature of Contract
+  chapter_two:
+    title: "Capítulo II - Objeto y Naturaleza del Contrato"
+    article_1_title: "Artículo 1 - Objeto del Contrato"
+    article_1_intro: "El Prestamista concede al Prestatario, quien acepta, un"
+    credit_types:
+      immobilier: "crédito inmobiliario"
+      auto: "crédito automotriz"
+      consommation: "crédito al consumo"
+      travaux: "crédito obras"
+      professionnel: "crédito profesional"
+      personal: "préstamo personal"
+      home_improvement: "crédito para mejora del hábitat"
+      debt_consolidation: "crédito de reunificación"
+      mortgage: "crédito hipotecario"
+      renouvelable: "crédito renovable"
+      etudiant: "préstamo estudiantil"
+      relais: "crédito puente"
+      microcredit: "microcrédito"
+      leasing: "crédito-arrendamiento"
+      voyage: "crédito viaje"
+      default: "préstamo personal"
+    article_1_suffix: "con interés por un importe fijado a continuación."
+    article_1_regulation: "El presente préstamo se rige por las disposiciones del Código Civil (artículos 1905 a 1914) y del Código de Consumo."
+    article_1_purpose: "Este préstamo está destinado a equilibrar la cuenta del prestatario en el marco de un proyecto de inversión personal."
+    
+    article_2_title: "Artículo 2 - Naturaleza Jurídica"
+    article_2_nature: "Se trata de un contrato de préstamo personal de duración determinada, a tipo fijo, reembolsable mediante cuotas constantes."
+    article_2_commitment: "Este contrato constituye un compromiso firme y definitivo de ambas partes."
+    article_2_funds_purpose: "Destino de los fondos:"
+    article_2_funds_restriction: "Los fondos puestos a disposición no pueden utilizarse con fines ilegales, especulativos o contrarios al orden público."
+    
+    article_3_title: "Artículo 3 - Declaraciones y Garantías del Prestatario"
+    article_3_intro: "El Prestatario declara y garantiza que:"
+    article_3_declaration_1: "Toda la información proporcionada durante la solicitud de crédito es exacta y completa."
+    article_3_declaration_2: "Dispone de la capacidad jurídica necesaria para contraer este compromiso."
+    article_3_declaration_3: "No se encuentra en situación de sobreendeudamiento o procedimiento colectivo."
+    article_3_declaration_4: "No existe ninguna prohibición bancaria o registro en su contra."
+    article_3_declaration_5: "Su situación financiera le permite cumplir con los vencimientos del presente préstamo."
+    
+  # Chapter III - Financial Conditions
+  chapter_three:
+    title: "Capítulo III - Condiciones Financieras del Préstamo"
+    table_characteristics: "Características"
+    table_values: "Valores"
+    table_observations: "Observaciones"
+    
+    credit_type_label: "Tipo de crédito"
+    credit_type_observation: "Naturaleza de la financiación"
+    loan_amount_label: "Monto del capital prestado"
+    loan_amount_observation: "Capital puesto a disposición"
+    loan_duration_label: "Duración del préstamo"
+    loan_duration_observation: "Vencimientos mensuales"
+    interest_rate_label: "Tasa de interés nominal"
+    interest_rate_observation: "Tasa fija"
+    annual_rate: "% anual"
+    global_rate_label: "Tasa Efectiva Global (TEG)"
+    global_rate_observation: "Incluye todos los gastos obligatorios"
+    insurance_label: "Seguro facultativo"
+    insurance_available: "Disponible bajo solicitud"
+    insurance_observation: "Fallecimiento/Invalidez/Incapacidad"
+    monthly_payment_label: "Monto de las mensualidades"
+    constant_payments: "vencimientos constantes"
+    total_cost_label: "Costo total del crédito"
+    total_cost_observation: "Intereses sobre la duración total"
+    
+    table_credit_types:
+      immobilier: "Crédito Inmobiliario"
+      auto: "Crédito Automotriz"
+      consommation: "Crédito al Consumo"
+      travaux: "Crédito Obras"
+      professionnel: "Crédito Profesional"
+      personal: "Préstamo Personal"
+      home_improvement: "Crédito Mejora Hábitat"
+      debt_consolidation: "Reunificación de Créditos"
+      mortgage: "Crédito Hipotecario"
+      renouvelable: "Crédito Renovable"
+      etudiant: "Préstamo Estudiantil"
+      relais: "Crédito Puente"
+      microcredit: "Microcrédito"
+      leasing: "Crédito-Arrendamiento"
+      voyage: "Crédito Viaje"
+      default: "Préstamo Personal"
+      
+    article_3_title: "Artículo 3 - Condiciones Suspensivas"
+    article_3_intro: "El presente contrato se celebra bajo las siguientes condiciones suspensivas:"
+    condition_1: "Verificación y validación de la identidad del Prestatario y de su capacidad jurídica."
+    condition_2: "Verificación de la situación financiera declarada por el Prestatario (nóminas, declaración de impuestos, extractos bancarios)."
+    condition_3: "Ausencia de inscripción en el FICP (Archivo de Incidentes de reembolso de Créditos a Particulares)."
+    condition_4: "Ausencia de prohibición bancaria o medidas de salvaguarda, reestructuración o liquidación judicial."
+    condition_5: "Constitución de las garantías solicitadas, en su caso."
+    condition_6: "Respeto del plazo de retractación legal de 14 días."
+    conditions_important: "Importante:"
+    conditions_nullity: "El incumplimiento de una de estas condiciones conlleva la nulidad automática del contrato sin indemnización de ninguna de las partes."
+    
+    article_4_title: "Artículo 4 - Modalidades de Puesta a Disposición"
+    article_4_intro: "Sujeto a la realización de las condiciones suspensivas anteriores, la suma de %amount% € será acreditada en la cuenta bancaria del Prestatario en un plazo máximo de 3 días hábiles después de:"
+    article_4_condition_1: "Firma definitiva del presente contrato por ambas partes"
+    article_4_condition_2: "Recepción de todos los documentos justificativos requeridos"
+    article_4_condition_3: "Constitución efectiva de las garantías solicitadas"
+    article_4_usage: "El Prestatario se compromete a utilizar estos fondos conforme al objeto declarado del préstamo."
+    payment_methods: "Modalidades de débito:"
+    sepa_payment: "Débito SEPA automático el %day% de cada mes. En caso de fondos insuficientes, se facturará una comisión por incidencia de 20 €."
+    bank_account_label: "Cuenta bancaria designada para los débitos:"
+    bank_establishment: "Entidad bancaria:"
+    iban_label: "IBAN:"
+    iban_placeholder: "ES__ ____ ____ ____ ____ ____ ___ (A completar en la firma)"
+    bank_maintenance: "El Prestatario se compromete a mantener esta cuenta bancaria activa y suficientemente provista para permitir los débitos en los vencimientos acordados."
+    lender_right: "El Prestamista se reserva el derecho de rechazar la puesta a disposición de los fondos en caso de incumplimiento de las condiciones del contrato."
+    
+    insurance_title: "Artículo 4 - Seguro de Prestatario"
+    insurance_general_principle: "4.1 - Principio general"
+    insurance_coverage: "El seguro de prestatario cubre los riesgos de fallecimiento, incapacidad temporal total de trabajo (ITT), invalidez permanente total (IPT) e invalidez permanente parcial (IPP). Esta cobertura protege al Prestatario y sus beneficiarios en caso de imposibilidad de reembolso debido a estos eventos."
+    insurance_choice: "4.2 - Elección del Prestatario"
+    insurance_question: "¿Desea contratar un seguro de prestatario para garantizar el reembolso de su crédito?"
+    
+    insurance_decision_title: "SU DECISIÓN:"
+    insurance_decision_intro: "Con pleno conocimiento, después de información completa:"
+    insurance_yes: "SÍ, contrato un seguro de prestatario"
+    insurance_no: "NO, rechazo el seguro con pleno conocimiento de los riesgos"
+    insurance_legal_info: "Información legal:"
+    insurance_legal_text: "Conforme a la ley Lagarde, usted tiene el derecho de elegir libremente su asegurador. También puede cambiar de seguro cada año en la fecha de aniversario (ley Hamon)."
+    
+  # Chapter IV - Repayment Terms
+  chapter_four:
+    title: "Capítulo IV - Modalidades de Reembolso"
+    repayment_schedule: "Calendario de Reembolso"
+    repayment_item_1: "El préstamo se amortizará mediante %duration% mensualidades constantes de un importe de %amount% € cada una."
+    repayment_item_2: "El primer vencimiento será debitado el %first_date%."
+    repayment_item_3: "El último vencimiento será debitado el %last_date%."
+    repayment_item_4: "El débito se realizará automáticamente en la cuenta bancaria designada por el Prestatario vía mandato SEPA."
+    repayment_item_5: "En caso de rechazo del débito, el Prestatario será informado en 48h y deberá regularizar su situación en 10 días hábiles."
+    repayment_item_6: "Se facturará una comisión por incidencia de 20 € por cada débito rechazado por fondos insuficientes."
+    
+    early_repayment_title: "Reembolso Anticipado"
+    early_repayment_right: "El Prestatario tiene la facultad de reembolsar anticipadamente, total o parcialmente, el capital restante debido."
+    early_repayment_minimum: "Los reembolsos anticipados parciales no pueden ser inferiores a %amount% €, salvo que se trate del saldo del préstamo."
+    early_repayment_indemnity: "Podrá percibirse una indemnización por reembolso anticipado, igual a un trimestre de intereses de la suma reembolsada, sin poder exceder el %rate%% del capital restante debido."
+    
+  # Chapter V - Obligations and Guarantees
+  chapter_five:
+    title: "Capítulo V - Obligaciones y Garantías"
+    borrower_obligations_title: "Obligaciones del Prestatario"
+    obligation_1: "Respetar escrupulosamente el calendario de reembolso acordado."
+    obligation_2: "Informar inmediatamente al Prestamista de cualquier cambio en su situación personal, profesional o financiera."
+    obligation_3: "Mantener un seguro que cubra los riesgos de fallecimiento e invalidez si se ha contratado."
+    obligation_4: "No contratar otros préstamos sin acuerdo previo del Prestamista si el importe total supera el 33% de los ingresos netos."
+    obligation_5: "Conservar una cuenta bancaria activa y provista para los débitos automáticos."
+    obligation_6: "Informar por escrito certificado cualquier cambio de dirección en un plazo de 30 días."
+    
+    guarantees_title: "Garantías Solicitadas"
+    guarantees_intro: "Para garantizar el buen reembolso del presente préstamo, el Prestatario podrá estar obligado a constituir, según las condiciones definidas por el Prestamista:"
+    guarantee_1: "Un aval bancario o personal por un importe equivalente al 10% del monto prestado, es decir %amount% €."
+    guarantee_2: "Esta garantía será otorgada por una institución financiera autorizada o por un tercero solvente aceptado por el Prestamista."
+    
+  # Chapter VI - Early Demandability and Sanctions
+  chapter_six:
+    title: "Capítulo VI - Casos de Exigibilidad y Sanciones"
+    early_demandability_title: "Exigibilité Anticipée"
+    early_demandability_intro: "Todas las sumas adeudadas por el Prestatario se volverán inmediatamente exigibles, sin requerimiento previo, en los siguientes casos:"
+    demandability_1: "Impago de una cuota en su vencimiento;"
+    demandability_2: "Incumplimiento de una de las obligaciones contractuales;"
+    demandability_3: "Declaración falsa o disimulación de informaciones importantes;"
+    demandability_4: "Procedimiento colectivo (reestructuración, liquidación judicial);"
+    demandability_5: "Fallecimiento del Prestatario (salvo disposiciones contrarias);"
+    demandability_6: "Cambio significativo de situación sin información previa."
+    
+    penalties_title: "Penalizaciones e Indemnizaciones"
+    delay_penalty: "Penalización por retraso: %rate%% por mes de retraso sobre las sumas adeudadas."
+    recovery_penalty: "Indemnización forfataria de cobro: 20 € por cuota impagada."
+    early_demandability_penalty: "Indemnización por exigibilidad anticipada: %rate%% del capital restante adeudado."
+    
+  # Chapter VII - Various Provisions
+  chapter_seven:
+    title: "Capítulo VII - Disposiciones Diversas"
+    domicile_title: "Elección de Domicilio"
+    domicile_intro: "Para la ejecución de las presentes y sus consecuencias, las partes eligen domicilio:"
+    lender_domicile: "El Prestamista:"
+    borrower_domicile: "El Prestatario:"
+    address_not_provided: "[Dirección no proporcionada]"
+    
+    # Remaining sections and final acknowledgments
+    acknowledgment_title: "He tomado debida cuenta de:"
+    acknowledgment_1: "Las modalidades de reembolso anticipado"
+    acknowledgment_2: "Las consecuencias de un impago"
+    acknowledgment_3: "Los contactos en caso de dificultad financiera"
+    acknowledgment_4: "Acepto el conjunto de condiciones del presente contrato"
+    
+    # Signatures
+    borrower_signature: "El Prestatario"
+    lender_signature: "El Prestamista"
+    general_director: "El Director General"
+    duly_authorized: "Debidamente autorizado a los fines de las presentes"
+    signature_date: "Fecha: ____/____/________"
+    signature_mention: "Firma precedida de la mención"
+    signature_approval: "\"Leído y aprobado, conforme al acuerdo\""
+    
+    preteur: "El Prestamista"
+    emprunteur: "El Prestatario"
+    directeur_general: "El Director General"
+    habilite: "Debidamente autorizado a los fines de las presentes"
+    
+    # Informaciones bancarias
+    code_bic: "Código BIC:"
+    completer_signature: "(A completar en el momento de la firma)"
+    informations_sepa: "Esta información se completará en el momento de la firma del contrato o mediante mandato SEPA separado."
+    
+    # Gastos y derechos
+    frais_enregistrement: "Los gastos y derechos de registro del presente contrato ascienden a %montant% y corren a cargo del Prestatario."
+    frais_recouvrement: "Los gastos de cobro en caso de impagos también serán soportados por el Prestatario."
+    
+    # Derecho y jurisdicción
+    contrat_droit_francais: "El presente contrato se rige por el derecho francés."
+    competence_tribunaux: "En caso de litigio, y tras el agotamiento de las vías amistosas, se atribuye competencia exclusiva a los tribunales de París."
+    
+    # Mediación y RGPD
+    mediation_title: "Mediación:"
+    mediation_content: "Antes de cualquier recurso judicial, las partes se comprometen a buscar una solución amistosa. El Prestatario puede recurrir al mediador de la ACPR o al mediador bancario de la ASF."
+    rgpd_title: "Protección de Datos Personales (RGPD)"
+    rgpd_intro: "Conforme al Reglamento General de Protección de Datos (RGPD) y a la ley Informática y Libertades:"
+    rgpd_donnees_collectees: "Los datos recopilados son necesarios para la ejecución del contrato y las obligaciones legales del Prestamista."
+    rgpd_transmission: "Pueden ser transmitidos a los organismos de control (ACPR, Banco de Francia, FICP, FCC)."
+    rgpd_droits_emprunteur: "El Prestatario dispone de un derecho de acceso, rectificación, supresión y portabilidad de sus datos."
+    rgpd_conservation: "Los datos se conservan durante 10 años después de la extinción del contrato."
+    
+    # Derecho de retractación
+    retractation_title: "DERECHO DE RETRACTACIÓN (Artículos L.311-15 a L.311-18 del Código del consumo)"
+    retractation_important: "IMPORTANTE:"
+    retractation_delai: "El Prestatario dispone de un plazo de 14 días calendarios para ejercer su derecho de retractación sin motivo ni penalización."
+    retractation_debut: "Este plazo corre a partir de la fecha de firma del presente contrato."
+    retractation_notification: "La retractación debe ser notificada por carta certificada con acuse de recibo a la dirección del Prestamista."
+    retractation_restitution: "En caso de retractación, el Prestatario se compromete a restituir los fondos ya abonados en un plazo de 30 días, incrementados con los intereses devengados al tipo contractual."
+    
+    # Otras disposiciones
+    modification_echeances: "El importe de las cuotas (sujeto a la aceptación del Prestamista)"
+    cession_creance_title: "Cesión de crédito:"
+    cession_creance_content: "El Prestamista se reserva el derecho de ceder toda o parte de sus acreencias a un tercero (entidad financiera, sociedad de cobro, etc.), previa información al Prestatario por carta certificada con acuse de recibo, como mínimo 30 días antes de la cesión efectiva."
+    cession_information: "En caso de cesión, el Prestatario será informado de las coordenadas del nuevo acreedor y de las modalidades de reembolso que permanecerán inalteradas salvo acuerdo contrario."
+    frais_modification_title: "Gastos de modificación:"
+    frais_modification_content: "Cualquier adenda al presente contrato dará lugar a gastos de expediente de 50 € a cargo del Prestatario, salvo disposición legal contraria."
+    
+    # Cláusula final
+    contrat_effet: "El presente contrato surte efecto desde su firma por ambas partes. El Prestatario dispone de un plazo de retractación legal y debe tomar conocimiento de todas las condiciones antes de comprometerse definitivamente."
+    
+    # Sección reclamación y modificación
+    procedure_reclamation: "Procedimiento de Reclamación"
+    service_clientele_title: "Servicio de Relaciones con la Clientela:"
+    service_clientele_content: "En caso de dificultad, contacte con nuestro servicio de atención al cliente en el %phone% o por email: %email%"
+    mediation_persistant: "Mediación: En caso de litigio persistente, puede recurrir a la Asociación Francesa de Sociedades Financieras (ASF)"
+    modification_contrat: "Cualquier modificación del presente contrato debe ser objeto de una adenda escrita, firmada por ambas partes y fechada."
+    duree_pret_modification: "La duración del préstamo (prolongación o reducción)"
+    modalites_remboursement: "Las modalidades de reembolso"
+    garanties_apportees: "Las garantías aportadas"
+    
+    # Capítulo VIII
+    chapitre_huit_title: "Capítulo VIII - Modalidades de Firma y Entrada en Vigor"
+    conditions_validite_title: "Condiciones de validez:"
+    conditions_validite_content: "La firma electrónica o manuscrita equivale a la aceptación plena y total de los términos del contrato. No se podrá emitir ninguna reserva después de la firma."
+    fait_a_paris: "Hecho en PARÍS, el %date%, en dos (2) ejemplares originales"
+    delai_retractation_consommation: "Conforme a las disposiciones del Código del consumo, el Prestatario dispone de un plazo de retractación de 14 días calendarios cumplidos a partir de la firma del presente contrato."
+    contact_difficultes: "En caso de dificultades financieras, no permanezca aislado. Existen soluciones. Contacte con su consejero o con el Banco de Francia (www.banque-france.fr) para un acompañamiento gratuito."
+    apres_connaissance: "Después de haber tomado conocimiento de las condiciones generales"
+    remis_chaque_partie: "Del cual uno entregado a cada parte que reconoce haberlo recibido"
+    et_particulieres: "y particulares del presente contrato"
+    signature_directeur_alt: "Firma Director General"
+    information_surendettement: "INFORMACIÓN SOBREENDEUDAMIENTO:"
+    current_date: "Fecha: %date%"
+    
+    # Textos en duro línea 883
+    contact_dpo: "Contacto DPO: %email%"
+    
+    # Textos en duro línea 859
+    frais_et_droits_title: "Gastos y Derechos"
+    
+    # Textos en duro línea 911
+    modifications_portent_sur: "Las modificaciones pueden referirse especialmente a:"
+    
+    # Textos en duro línea 940
+    points_accueil_banque_france: "Puntos de acogida Banco de Francia:"
+    numero_banque_france: "0 811 901 801 (precio de una llamada local)"
+    
+    # Textos en duro línea 867
+    droit_applicable_juridiction_title: "Derecho Aplicable y Jurisdicción"
+    
+    # Textos en duro línea 909
+    modification_contrat_title: "Modificación del Contrato"

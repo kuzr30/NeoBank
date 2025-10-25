@@ -1,0 +1,59 @@
+banking_dashboard:
+  # Meta tags
+  meta:
+    title: "Online Banking - %company_name%"
+    description: "Banking dashboard - Beheer uw rekeningen, overschrijvingen en bankdiensten"
+
+  # Navigation tabs
+  nav:
+    accounts: "Rekeningen"
+    cards: "Kaarten"
+    transfers: "Overschrijvingen"
+    ribs: "RIB/IBAN"
+    savings: "Sparen"
+    credits: "Kredieten"
+    insurance: "Verzekeringen"
+
+  # User info
+  user:
+    status: "Particuliere Klant"
+    status_business: "Zakelijke Klant"
+    status_premium: "Premium Klant"
+
+  # Sidebar
+  sidebar:
+    my_accounts: "Mijn Rekeningen"
+    quick_actions: "Snelle Acties"
+    
+  # Account types
+  accounts:
+    main_account: "Hoofdrekening"
+    credit_account: "Kredietrekening"
+    card_account: "Kaartrekening"
+    savings_account: "Spaarrekening"
+    insurance_account: "Verzekeringsrekening"
+    no_account: "Geen rekeningen"
+    
+  # Account status
+  status:
+    available_credit: "Beschikbaar krediet"
+    card_balance: "Kaartsaldo"
+    savings_built: "Opgebouwd spaargeld"
+    insurance_provision: "Verzekeringsprovision"
+    contact_advisor: "Neem contact op met uw adviseur"
+    this_month: "deze maand"
+    
+  # Quick actions
+  actions:
+    transfer: "Overschrijving"
+    card_opposition: "Kaart blokkeren"
+    rib_iban: "RIB/IBAN"
+    contact_us: "Contact opnemen"
+    
+  # Messages
+  messages:
+    loading: "Bezig met laden..."
+    no_data: "Geen gegevens beschikbaar"
+    
+  # Currency
+  currency: "€"

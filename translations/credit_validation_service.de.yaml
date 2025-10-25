@@ -1,0 +1,23 @@
+credit_validation_service:
+  validation_errors:
+    amount_min: "Der Mindestbetrag beträgt %s €"
+    amount_max: "Der Höchstbetrag beträgt %s €"
+    duration_min: "Die Mindestlaufzeit beträgt %d Monate"
+    duration_max: "Die Höchstlaufzeit beträgt %d Monate (%d Jahre)"
+    
+  credit_type_errors:
+    immobilier:
+      amount_min: "Der Mindestbetrag für einen Immobilienkredit beträgt 10.000 €"
+      duration_max: "Die Höchstlaufzeit für einen Immobilienkredit beträgt 25 Jahre"
+    auto:
+      amount_max: "Der Höchstbetrag für einen Autokredit beträgt 80.000 €"
+      duration_max: "Die Höchstlaufzeit für einen Autokredit beträgt 7 Jahre"
+    consommation:
+      amount_max: "Der Höchstbetrag für einen Verbraucherkredit beträgt 75.000 €"
+      duration_max: "Die Höchstlaufzeit für einen Verbraucherkredit beträgt 7 Jahre"
+    travaux:
+      amount_max: "Der Höchstbetrag für einen Renovierungskredit beträgt 150.000 €"
+      duration_max: "Die Höchstlaufzeit für einen Renovierungskredit beträgt 10 Jahre"
+    professionnel:
+      amount_min: "Der Mindestbetrag für einen Unternehmenskredit beträgt 5.000 €"
+      duration_max: "Die Höchstlaufzeit für einen Unternehmenskredit beträgt 15 Jahre"

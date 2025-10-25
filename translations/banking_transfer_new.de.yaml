@@ -1,0 +1,27 @@
+banking_transfer_new:
+  header:
+    title: "Neue Überweisung"
+    subtitle: "Geld an ein Empfängerkonto überweisen"
+    back_button: "Zurück"
+  
+  process_steps:
+    step1: "Informationen"
+    step2: "Validierung"
+    step3: "Bestätigung"
+  
+  source_account:
+    title: "Quellkonto"
+    main_account: "Hauptkonto"
+    available_balance: "Verfügbares Guthaben:"
+    no_account_warning: "Kein Quellkonto verfügbar. Kontaktieren Sie Ihren Berater."
+  
+  destination_account:
+    title: "Empfängerkonto"
+    help_text: "Wählen Sie das Konto aus, an das Sie die Überweisung senden möchten"
+  
+  transfer_details:
+    title: "Überweisungsdetails"
+    description_help: "Beschreiben Sie den Grund für diese Überweisung (optional)"
+  
+  actions:
+    cancel: "Abbrechen"

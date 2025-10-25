@@ -1,0 +1,26 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_profile_update_notification.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+email_profile_update_notification:
+  title: "Mise à jour de votre profil"
+  content:
+    page_title: "Mise à jour de votre profil"
+    greeting: "Bonjour {firstName},"
+    notification: "Nous vous informons que votre profil %company_name% a été mis à jour le {updateDate}."
+    changes_section:
+      title: "Modifications apportées"
+      old_value: "Ancienne valeur : {oldValue}"
+      new_value: "Nouvelle valeur : {newValue}"
+    security_info:
+      title: "Information de sécurité"
+      warning: "Si vous n'êtes pas à l'origine de ces modifications, connectez-vous immédiatement à votre compte et changez votre mot de passe."
+    footer: "Cet email a été envoyé automatiquement par %company_name%."
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Envoi de la notification de mise à jour de profil"
+    success: "Notification de mise à jour de profil envoyée avec succès"
+    error: "Erreur lors de l'envoi de la notification de mise à jour de profil"
+    send_failed: "Échec de l'envoi de la notification de mise à jour de profil"

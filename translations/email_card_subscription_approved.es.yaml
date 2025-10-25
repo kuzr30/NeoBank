@@ -1,0 +1,33 @@
+email_card_subscription_approved:
+  title: "Su solicitud de tarjeta bancaria ha sido aprobada"
+  
+  content:
+    page_title: "¡Excelente noticia! Su tarjeta ha sido aprobada"
+    greeting: "Estimado(a) %firstName% %lastName%,"
+    
+    approval:
+      title: "Solicitud aprobada"
+      description: "¡Felicitaciones! Su solicitud de tarjeta %cardType% ha sido aprobada por nuestros equipos."
+    
+    card_details:
+      title: "Detalles de su tarjeta"
+      type: "Tipo de tarjeta"
+      reference: "Referencia"
+      account: "Cuenta asociada"
+    
+    contract_required:
+      title: "Firma de contrato requerida"
+      description: "Para finalizar su suscripción, deberá firmar electrónicamente un contrato especificando las comisiones y condiciones de uso de su tarjeta."
+    
+    next_step:
+      title: "Próximo paso"
+      access_button: "Acceder a mi espacio"
+      instruction: "Recibirá próximamente el contrato a firmar por email"
+    
+    delivery_info:
+      title: "Información de entrega"
+      description: "Su tarjeta física será enviada a su dirección en 5-7 días laborales después de la firma del contrato y validación de las comisiones."
+    
+    assistance: "Nuestro equipo permanece a su disposición para acompañarle en este último paso."
+    
+    footer: "Este email ha sido enviado automáticamente por su banco. <br><strong>¡Felicitaciones por la aprobación de su solicitud!</strong>"

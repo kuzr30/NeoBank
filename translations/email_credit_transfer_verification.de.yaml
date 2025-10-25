@@ -1,0 +1,40 @@
+email_credit_transfer_verification:
+  title: "Bestätigungscode - Kreditüberweisung"
+  content:
+    page_title: "Überweisungsvalidierung erforderlich"
+    greeting: "Hallo <strong>{userName}</strong>,"
+    detection_section:
+      title: "Überweisungsanfrage erkannt"
+      message: "Sie haben eine Überweisung von Ihrem Kreditkonto angefordert. Um diese Operation zu sichern, bestätigen Sie bitte mit dem unten stehenden Bestätigungscode."
+    verification_section:
+      title: "Sicherer Bestätigungscode"
+      code_label: "Validierungscode"
+      expiry: "Läuft in 10 Minuten ab"
+    transaction_details:
+      title: "Transaktionsdetails"
+      source_account: "Quellkonto"
+      destination_account: "Zielkonto"
+      principal_account: "Hauptkonto"
+      amount_label: "Zu überweisender Betrag"
+    security_section:
+      title: "Sicherheit"
+      validity: "Dieser Code ist nur 10 Minuten gültig"
+      confidentiality: "Absolute Vertraulichkeit"
+      confidentiality_description: "Teilen Sie diesen Code niemals mit anderen"
+      unauthorized_transaction: "Nicht autorisierte Transaktion"
+      warning: "Falls Sie diese Anfrage nicht veranlasst haben, kontaktieren Sie sofort unseren Kundendienst."
+      phone: "Telefon: %company_phone%"
+      urgency: "24/7 für Notfälle verfügbar"
+    support_text: "Bei Fragen zu diesem Überweisungsvorgang steht Ihnen unser Sicherheitsdienst zur Verfügung."
+    instructions_section:
+      title: "Anweisungen"
+      step_1: "Geben Sie diesen Code auf der Validierungsseite ein"
+      step_2: "Die Überweisung wird sofort nach der Validierung bearbeitet"
+      step_3: "Eine Bestätigungs-E-Mail wird Ihnen gesendet"
+    footer: "Automatische Sicherheits-E-Mail <br>Überweisungsservice - Validierung erforderlich"
+  
+  logs:
+    sending: "Senden des Überweisungs-Bestätigungscodes"
+    success: "Überweisungs-Bestätigungscode erfolgreich gesendet"
+    error: "Fehler beim Senden des Überweisungs-Bestätigungscodes"
+    send_failed: "Fehler beim Senden des Überweisungs-Bestätigungscodes"

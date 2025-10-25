@@ -1,0 +1,20 @@
+credit_workflow_service:
+  admin_notes:
+    approved: "Aanvraag goedgekeurd op {date}"
+    rejected: "Aanvraag afgekeurd op {date}"
+    contract_generated: "Contract gegenereerd en verzonden op {date}"
+    contract_signed: "Contract ondertekend door klant op {date}"
+    contract_admin_signed: "Contract gemarkeerd als ondertekend door beheerder op {date}"
+    contract_validated: "Contract gevalideerd door beheerder op {date}"
+    funds_released: "Middelen vrijgegeven op {date}"
+    
+  exceptions:
+    contract_not_validated: "Het contract moet gevalideerd worden voordat de middelen kunnen worden vrijgegeven."
+    user_not_found: "Gebruiker niet gevonden voor email: {email}"
+    main_account_not_found: "Hoofdrekening niet gevonden voor gebruiker: {email}"
+    
+  transaction_descriptions:
+    credit_release: "Krediet vrijgave - Contract {contractNumber}"
+    
+  log_messages:
+    contract_generation_error: "Fout bij genereren contract voor applicatie #{id}: {error}"

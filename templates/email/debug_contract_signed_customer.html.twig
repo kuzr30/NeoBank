@@ -1,0 +1,27 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}Debug - Confirmation de signature de contrat{% endblock %}
+
+{% block content %}
+    <div class="success-box">
+        <h2 style="color: #4caf50; margin: 0 0 15px 0; font-size: 24px; font-weight: 600;">
+            Debug translationService: {{ translationService ? 'PRESENT' : 'ABSENT' }}
+        </h2>
+        
+        {% if translationService %}
+            <p>Translation service existe !</p>
+            <p>Locale actuelle: {{ translationService.getLocale() }}</p>
+            <p>Test traduction: {{ translationService.tp('email_contract_signed_customer.content.confirmation.title', {}, 'email_contract_signed_customer') }}</p>
+        {% else %}
+            <p>Translation service n'existe pas dans le contexte !</p>
+        {% endif %}
+        
+        <h3>Données du template:</h3>
+        <ul>
+            <li>customerName: {{ customerName ?? 'N/A' }}</li>
+            <li>referenceNumber: {{ referenceNumber ?? 'N/A' }}</li>
+            <li>loanAmount: {{ loanAmount ?? 'N/A' }}</li>
+            <li>locale: {{ locale ?? 'N/A' }}</li>
+        </ul>
+    </div>
+{% endblock %}

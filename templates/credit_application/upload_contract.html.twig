@@ -1,0 +1,131 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Téléchargement du contrat signé{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0">📄 Téléchargement du contrat signé</h4>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <h5>Contrat : {{ contractNumber }}</h5>
+                        <p>Montant : <strong>{{ creditApplication.loanAmount|number_format(2, ',', ' ') }} €</strong></p>
+                        <p>Durée : <strong>{{ creditApplication.duration }} {{ creditApplication.durationUnit ? creditApplication.durationUnit.value : 'mois' }}</strong></p>
+                    </div>
+
+                    {% if creditApplication.status == constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SENT') %}
+                        <div class="alert alert-warning">
+                            <h5>📋 Instructions de signature</h5>
+                            <ol>
+                                <li>Imprimez le contrat reçu par email</li>
+                                <li>Signez et paraphez toutes les pages</li>
+                                <li>Scannez ou photographiez le contrat signé</li>
+                                <li>Téléchargez le fichier ci-dessous</li>
+                            </ol>
+                        </div>
+
+                        <form method="post" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="signed_contract" class="form-label">Contrat signé (PDF recommandé)</label>
+                                <input type="file" class="form-control" id="signed_contract" name="signed_contract" 
+                                       accept=".pdf,.jpg,.jpeg,.png" required>
+                                <div class="form-text">Formats acceptés : PDF, JPG, PNG (taille max : 10MB)</div>
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-upload"></i> Télécharger le contrat signé
+                                </button>
+                                <a href="{{ path('banking_dashboard') }}" class="btn btn-secondary">Retour au tableau de bord</a>
+                            </div>
+                        </form>
+
+                    {% elseif creditApplication.status == constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SIGNED') %}
+                        <div class="alert alert-success">
+                            <h5>✅ Contrat reçu</h5>
+                            <p>Nous avons bien reçu votre contrat signé. Il est actuellement en cours de validation par notre équipe.</p>
+                            <p><strong>Prochaine étape :</strong> Validation administrative (24-48h)</p>
+                        </div>
+
+                        <div class="d-grid">
+                            <a href="{{ path('banking_dashboard') }}" class="btn btn-primary">Retour au tableau de bord</a>
+                        </div>
+
+                    {% elseif creditApplication.status == constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_VALIDATED') %}
+                        <div class="alert alert-info">
+                            <h5>🔄 Contrat validé</h5>
+                            <p>Votre contrat a été validé. Le déblocage des fonds est en cours.</p>
+                        </div>
+
+                        <div class="d-grid">
+                            <a href="{{ path('banking_dashboard') }}" class="btn btn-primary">Retour au tableau de bord</a>
+                        </div>
+
+                    {% elseif creditApplication.status == constant('App\\Enum\\CreditApplicationStatusEnum::FUNDS_DISBURSED') %}
+                        <div class="alert alert-success">
+                            <h5>🎉 Crédit débloqué</h5>
+                            <p>Les fonds ont été versés sur votre compte. Vous pouvez vérifier votre solde dans votre tableau de bord.</p>
+                        </div>
+
+                        <div class="d-grid">
+                            <a href="{{ path('banking_dashboard') }}" class="btn btn-primary">Voir mon compte</a>
+                        </div>
+
+                    {% else %}
+                        <div class="alert alert-warning">
+                            <p>Le statut de votre demande ne permet pas le téléchargement d'un contrat pour le moment.</p>
+                            <p><strong>Statut actuel :</strong> {{ creditApplication.status }}</p>
+                        </div>
+
+                        <div class="d-grid">
+                            <a href="{{ path('banking_dashboard') }}" class="btn btn-primary">Retour au tableau de bord</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>🔄 Suivi de votre demande</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="list-group">
+                                    <div class="list-group-item {{ creditApplication.status in [constant('App\\Enum\\CreditApplicationStatusEnum::APPROVED'), constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SENT'), constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SIGNED'), constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_VALIDATED'), constant('App\\Enum\\CreditApplicationStatusEnum::FUNDS_DISBURSED')] ? 'list-group-item-success' : 'list-group-item-light' }}">
+                                        <i class="fas fa-check"></i> Demande approuvée
+                                    </div>
+                                    <div class="list-group-item {{ creditApplication.status in [constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SENT'), constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SIGNED'), constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_VALIDATED'), constant('App\\Enum\\CreditApplicationStatusEnum::FUNDS_DISBURSED')] ? 'list-group-item-success' : 'list-group-item-light' }}">
+                                        <i class="fas fa-file-pdf"></i> Contrat envoyé
+                                    </div>
+                                    <div class="list-group-item {{ creditApplication.status in [constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SIGNED'), constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_VALIDATED'), constant('App\\Enum\\CreditApplicationStatusEnum::FUNDS_DISBURSED')] ? 'list-group-item-success' : creditApplication.status == constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SENT') ? 'list-group-item-warning' : 'list-group-item-light' }}">
+                                        <i class="fas fa-signature"></i> Contrat signé
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="list-group">
+                                    <div class="list-group-item {{ creditApplication.status in [constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_VALIDATED'), constant('App\\Enum\\CreditApplicationStatusEnum::FUNDS_DISBURSED')] ? 'list-group-item-success' : creditApplication.status == constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_SIGNED') ? 'list-group-item-warning' : 'list-group-item-light' }}">
+                                        <i class="fas fa-stamp"></i> Contrat validé
+                                    </div>
+                                    <div class="list-group-item {{ creditApplication.status == constant('App\\Enum\\CreditApplicationStatusEnum::FUNDS_DISBURSED') ? 'list-group-item-success' : creditApplication.status == constant('App\\Enum\\CreditApplicationStatusEnum::CONTRACT_VALIDATED') ? 'list-group-item-warning' : 'list-group-item-light' }}">
+                                        <i class="fas fa-money-bill-wave"></i> Fonds débloqués
+                                    </div>
+                                    <div class="list-group-item list-group-item-light">
+                                        <i class="fas fa-calendar"></i> Remboursement
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

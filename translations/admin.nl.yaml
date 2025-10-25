@@ -1,0 +1,10 @@
+# Vertalingen voor admin - Geplande e-mails
+email_template:
+  subject:
+    kyc_rejected: "KYC-verificatie - Actie vereist"
+    incomplete_account: "Voltooi uw profiel - Actie vereist"
+    fees_inquiry: "Informatie over bankkosten"
+    account_activation_reminder: "Herinnering - Activeer uw account"
+    credit_application_incomplete: "Uw kredietaanvraag - Ontbrekende informatie"
+    account_creation_follow_up: "Opvolging van uw aanvraag - Account aanmaken vereist"
+    payment_details: "Betaling van €%amount% - Bankgegevens voor DIRECTE overschrijving"

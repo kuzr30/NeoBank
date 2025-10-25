@@ -1,0 +1,52 @@
+form_common:
+  labels:
+    insurance_type: "Tipo de seguro"
+    lastname: "Apellido"
+    firstname: "Nombre"
+    email_address: "Dirección de email"
+    phone_number: "Número de teléfono"
+    contact_preference: "Preferencia de contacto"
+    additional_comments: "Comentarios adicionales"
+    request_quote: "Solicitar un presupuesto"
+    
+  placeholders:
+    select_insurance_type: "Seleccione el tipo de seguro"
+    lastname: "Su apellido"
+    firstname: "Su nombre"
+    email_placeholder: "su@email.com"
+    phone_example: "+34 91 23 45 67 89"
+    how_to_contact: "¿Cómo desea ser contactado?"
+    
+  contact_preference:
+    email: "Por email"
+    phone: "Por teléfono"
+    indifferent: "Indiferente"
+    
+  additional_comments_placeholder: "Describa sus necesidades específicas o haga sus preguntas..."
+
+# Mensajes de error para los formularios
+form_errors:
+  required: "Este campo es obligatorio"
+  email_invalid: "Por favor introduzca una dirección de email válida"
+  phone_invalid: "Por favor introduzca un número de teléfono válido"
+  too_long: "Este campo no puede superar {{ limit }} caracteres"
+  too_short: "Este campo debe contener al menos {{ limit }} caracteres"
+
+# Labels comunes utilizados en varios formularios
+common_labels:
+  submit: "Validar"
+  cancel: "Cancelar"
+  save: "Guardar"
+  delete: "Eliminar"
+  edit: "Modificar"
+  back: "Volver"
+  next: "Siguiente"
+  previous: "Anterior"
+  close: "Cerrar"
+
+# Mensajes de validación de contraseña
+password_min_12_chars: "La contraseña debe contener al menos 8 caracteres"
+password_required: "La contraseña es requerida"
+new_password: "Nueva contraseña"
+repeat_password: "Repetir la contraseña"
+password_fields_must_match: "Las contraseñas deben ser idénticas"

@@ -1,0 +1,56 @@
+banking_credit_detail:
+  # Meta tags
+  meta:
+    title: "Krediet details - %company_name%"
+    description: "Bekijk de details van uw kredietaanvraag"
+
+  # Page headers
+  page:
+    title: "Krediet details"
+    detail_title: "Details van uw krediet van"
+    back_to_credits: "Terug naar kredieten"
+    
+  # Sidebar - using banking_dashboard translations
+  sidebar:
+    my_accounts: "Mijn Rekeningen"
+    quick_actions: "Snelle Acties"
+    no_account: "Geen rekeningen"
+    contact_advisor: "Neem contact op met uw adviseur"
+    this_month: "deze maand"
+    
+  # Quick actions - using banking_dashboard translations
+  actions:
+    transfer: "Overschrijving"
+    card_opposition: "Kaart blokkeren"
+    rib_iban: "RIB/IBAN"
+    contact_us: "Contact opnemen"
+    
+  # Credit details
+  credit:
+    application_number: "Aanvraag nr."
+    accorded_amount: "Toegekend bedrag"
+    duration: "Looptijd"
+    monthly_payment: "Maandelijkse betaling"
+    total_cost: "Totale kosten van het krediet"
+    beneficiary: "Begunstigde"
+    months: "maanden"
+    
+  # Credit actions
+  credit_actions:
+    view_contract: "Contract bekijken"
+    download: "Downloaden"
+    
+  # Amortization table
+  amortization:
+    title: "Amortisatietabel"
+    subtitle: "Details van de {count} maandelijkse betalingen van uw krediet"
+    table:
+      month: "Maand"
+      date: "Datum"
+      monthly_payment: "Maandelijkse betaling"
+      principal: "Hoofdsom"
+      interest: "Rente"
+      remaining_capital: "Restant hoofdsom"
+      
+  # Currency
+  currency: "€"

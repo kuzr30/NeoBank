@@ -1,0 +1,141 @@
+{% extends 'credit_offers/credit_page_structure.html.twig' %}
+
+{% set seo_title = tp('travaux.page.title', [], 'travaux') %}
+{% set page_title = tp('travaux.page.title', [], 'travaux') %}
+{% set seo_description = tp('travaux.page.description', [], 'travaux') %}
+{% set hero_class = 'credit-detail-hero--travaux' %}
+
+{% block taux_value %}{{ credit_rate('travaux') }}%{% endblock %}
+{% block montant_value %}{{ tp('travaux.hero.montant', [], 'travaux') }}{% endblock %}
+{% block duree_value %}{{ tp('travaux.hero.duree', [], 'travaux') }}{% endblock %}
+
+{% block hero_title %}{{ tp('travaux.hero.title', [], 'travaux') }}{% endblock %}
+{% block hero_subtitle %}{{ tp('travaux.hero.subtitle', [], 'travaux') }}{% endblock %}
+
+{% block section_1_title %}{{ tp('travaux.section_1.title', [], 'travaux') }}{% endblock %}
+
+{% block section_1_content %}
+<p>{{ tp('travaux.section_1.content.paragraph_1', [], 'travaux') }}</p>
+<p>{{ tp('travaux.section_1.content.paragraph_2', [], 'travaux') }}</p>
+{% endblock %}
+
+{% block feature_montant %}{{ tp('travaux.features.montant.value', [], 'travaux') }}{% endblock %}
+{% block feature_montant_detail %}{{ tp('travaux.features.montant.detail', [], 'travaux') }}{% endblock %}
+{% block feature_duree %}{{ tp('travaux.features.duree.value', [], 'travaux') }}{% endblock %}
+{% block feature_duree_detail %}{{ tp('travaux.features.duree.detail', [], 'travaux') }}{% endblock %}
+{% block feature_taux %}{{ tp('travaux.features.taux.value', [], 'travaux')|replace({'{rate}': credit_rate('travaux')})|raw }}{% endblock %}
+{% block feature_taux_detail %}{{ tp('travaux.features.taux.detail', [], 'travaux') }}{% endblock %}
+{% block feature_garantie %}{{ tp('travaux.features.garantie.value', [], 'travaux') }}{% endblock %}
+{% block feature_garantie_detail %}{{ tp('travaux.features.garantie.detail', [], 'travaux') }}{% endblock %}
+
+{% block section_3_content %}
+<ul class="credit-detail-advantages">
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('travaux.section_3.advantage_1.title', [], 'travaux') }}:</strong> {{ tp('travaux.section_3.advantage_1.content', [], 'travaux') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('travaux.section_3.advantage_2.title', [], 'travaux') }}:</strong> {{ tp('travaux.section_3.advantage_2.content', [], 'travaux') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('travaux.section_3.advantage_3.title', [], 'travaux') }}:</strong> {{ tp('travaux.section_3.advantage_3.content', [], 'travaux') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('travaux.section_3.advantage_4.title', [], 'travaux') }}:</strong> {{ tp('travaux.section_3.advantage_4.content', [], 'travaux') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('travaux.section_3.advantage_5.title', [], 'travaux') }}:</strong> {{ tp('travaux.section_3.advantage_5.content', [], 'travaux') }}</span>
+    </li>
+</ul>
+{% endblock %}
+
+{% block section_4_content %}
+<div class="credit-detail-requirements">
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('travaux.section_4.conditions.title', [], 'travaux') }}</h3>
+        <ul>
+            <li>{{ tp('travaux.section_4.conditions.condition_1', [], 'travaux') }}</li>
+            <li>{{ tp('travaux.section_4.conditions.condition_2', [], 'travaux') }}</li>
+            <li>{{ tp('travaux.section_4.conditions.condition_3', [], 'travaux') }}</li>
+            <li>{{ tp('travaux.section_4.conditions.condition_4', [], 'travaux') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('travaux.section_4.documents.title', [], 'travaux') }}</h3>
+        <ul>
+            <li>{{ tp('travaux.section_4.documents.document_1', [], 'travaux') }}</li>
+            <li>{{ tp('travaux.section_4.documents.document_2', [], 'travaux') }}</li>
+            <li>{{ tp('travaux.section_4.documents.document_3', [], 'travaux') }}</li>
+            <li>{{ tp('travaux.section_4.documents.document_4', [], 'travaux') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block section_5_content %}
+<div class="credit-detail-documents">
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('travaux.section_5.personal.title', [], 'travaux') }}</h3>
+        <ul>
+            <li>{{ tp('travaux.section_5.personal.document_1', [], 'travaux') }}</li>
+            <li>{{ tp('travaux.section_5.personal.document_2', [], 'travaux') }}</li>
+            <li>{{ tp('travaux.section_5.personal.document_3', [], 'travaux') }}</li>
+            <li>{{ tp('travaux.section_5.personal.document_4', [], 'travaux') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('travaux.section_5.property.title', [], 'travaux') }}</h3>
+        <ul>
+            <li>{{ tp('travaux.section_5.property.document_1', [], 'travaux') }}</li>
+            <li>{{ tp('travaux.section_5.property.document_2', [], 'travaux') }}</li>
+            <li>{{ tp('travaux.section_5.property.document_3', [], 'travaux') }}</li>
+            <li>{{ tp('travaux.section_5.property.document_4', [], 'travaux') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('travaux.section_5.project.title', [], 'travaux') }}</h3>
+        <ul>
+            <li>{{ tp('travaux.section_5.project.document_1', [], 'travaux') }}</li>
+            <li>{{ tp('travaux.section_5.project.document_2', [], 'travaux') }}</li>
+            <li>{{ tp('travaux.section_5.project.document_3', [], 'travaux') }}</li>
+            <li>{{ tp('travaux.section_5.project.document_4', [], 'travaux') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block legal_details %}
+<div class="credit-legal-notice__details">
+    <h4>{{ tp('travaux.legal.title', [], 'travaux') }}</h4>
+    <ul>
+        <li><strong>{{ tp('travaux.legal.taeg.title', [], 'travaux') }}:</strong> {{ tp('travaux.legal.taeg.content', [], 'travaux') }}</li>
+        <li><strong>{{ tp('travaux.legal.deblocage.title', [], 'travaux') }}:</strong> {{ tp('travaux.legal.deblocage.content', [], 'travaux') }}</li>
+        <li><strong>{{ tp('travaux.legal.travaux.title', [], 'travaux') }}:</strong> {{ tp('travaux.legal.travaux.content', [], 'travaux') }}</li>
+        <li><strong>{{ tp('travaux.legal.garanties.title', [], 'travaux') }}:</strong> {{ tp('travaux.legal.garanties.content', [], 'travaux') }}</li>
+        <li><strong>{{ tp('travaux.legal.assurance.title', [], 'travaux') }}:</strong> {{ tp('travaux.legal.assurance.content', [], 'travaux') }}</li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block cta_title %}{{ tp('travaux.cta.title', [], 'travaux') }}{% endblock %}
+{% block cta_subtitle %}{{ tp('travaux.cta.subtitle', [], 'travaux') }}{% endblock %}
+
+{% block custom_styles %}
+{{ parent() }}
+<style>
+/* Couleur spécifique pour le crédit travaux */
+.credit-detail-hero--travaux {
+    background: 
+        linear-gradient(135deg, rgba(234, 88, 12, 0.4) 0%, rgba(220, 38, 38, 0.6) 100%),
+        url('/images/fac182ec4f.jpg') center/cover no-repeat;
+}
+
+.credit-detail-hero--travaux .credit-highlight__value {
+    color: #fed7aa;
+}
+</style>
+{% endblock %}

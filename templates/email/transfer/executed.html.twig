@@ -1,0 +1,84 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_transfer_executed.title', {}, 'email_transfer_executed') }} - {{ parent() }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('email_transfer_executed.content.page_title', {}, 'email_transfer_executed') }}</h2>
+    
+    <p class="content-text">
+        {{ tp('email_transfer_executed.content.greeting', {firstName: user.firstName}, 'email_transfer_executed') }}
+    </p>
+
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #2e7d32;">{{ tp('email_transfer_executed.content.transaction_completed.title', {}, 'email_transfer_executed') }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {{ tp('email_transfer_executed.content.transaction_completed.description', {}, 'email_transfer_executed') }}
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_transfer_executed.content.execution_details.title', {}, 'email_transfer_executed') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 12px 16px; background: #e3f2fd; font-weight: 600; color: #0d47a1; width: 40%; border-right: 1px solid #bbdefb;">{{ tp('email_transfer_executed.content.execution_details.reference', {}, 'email_transfer_executed') }}</td>
+                <td style="padding: 12px 16px; font-family: monospace; font-weight: 700; color: #1976d2; font-size: 16px;">#{{ transfer.id }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px 16px; background: #f5f5f5; font-weight: 600; color: #0d47a1; border-right: 1px solid #bbdefb;">{{ tp('email_transfer_executed.content.execution_details.amount', {}, 'email_transfer_executed') }}</td>
+                <td style="padding: 12px 16px;">
+                    <span style="font-size: 20px; font-weight: 700; color: #2e7d32;">{{ tp('email_transfer_executed.content.execution_details.amount_value', {amount: transfer.amount|number_format(2, ',', ' ')}, 'email_transfer_executed') }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 12px 16px; background: #e3f2fd; font-weight: 600; color: #0d47a1; border-right: 1px solid #bbdefb;">{{ tp('email_transfer_executed.content.execution_details.beneficiary_account', {}, 'email_transfer_executed') }}</td>
+                <td style="padding: 12px 16px; font-weight: 500;">{{ transfer.destinationAccount.accountName }}</td>
+            </tr>
+            {% if transfer.description %}
+            <tr>
+                <td style="padding: 12px 16px; background: #f5f5f5; font-weight: 600; color: #0d47a1; border-right: 1px solid #bbdefb;">{{ tp('email_transfer_executed.content.execution_details.transfer_reason', {}, 'email_transfer_executed') }}</td>
+                <td style="padding: 12px 16px; font-style: italic; color: #424242;">{{ transfer.description }}</td>
+            </tr>
+            {% endif %}
+            <tr>
+                <td style="padding: 12px 16px; background: #e3f2fd; font-weight: 600; color: #0d47a1; border-right: 1px solid #bbdefb;">{{ tp('email_transfer_executed.content.execution_details.execution_date', {}, 'email_transfer_executed') }}</td>
+                <td style="padding: 12px 16px; color: #2e7d32; font-weight: 600;">{{ tp('email_transfer_executed.content.execution_details.executed_at', {executedAt: transfer.executedAt|date('d/m/Y à H:i:s')}, 'email_transfer_executed') }}</td>
+            </tr>
+        </table>
+    </div>
+            
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ tp('email_transfer_executed.content.account_update.title', {}, 'email_transfer_executed') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #fff8e1; border-left: 4px solid #f57c00; color: #e65100; line-height: 1.6;">
+                    {{ tp('email_transfer_executed.content.account_update.description', {}, 'email_transfer_executed') }}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #2e7d32;">{{ tp('email_transfer_executed.content.banking_access.title', {}, 'email_transfer_executed') }}</h3>
+        <table style="width: 100%; border-spacing: 12px 0;">
+            <tr>
+                <td style="padding: 0; text-align: center;">
+                    <a href="{{ url('banking_dashboard', {'_locale': 'fr'}) }}" 
+                       style="display: block; background: linear-gradient(135deg, #2e7d32 0%, #388e3c 100%); color: white; text-decoration: none; padding: 16px 24px; border-radius: 8px; font-weight: 600; text-align: center; box-shadow: 0 3px 6px rgba(46, 125, 50, 0.4); font-size: 16px;">
+                        {{ tp('email_transfer_executed.content.banking_access.view_banking_button', {}, 'email_transfer_executed') }}
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <p style="margin: 15px 0 0; font-size: 14px; color: #666; text-align: center;">
+            {{ tp('email_transfer_executed.content.banking_access.check_instruction', {}, 'email_transfer_executed') }}
+        </p>
+    </div>
+
+    <p class="content-text">
+        {{ tp('email_transfer_executed.content.security_thanks', {}, 'email_transfer_executed') }}
+    </p>
+
+    <p class="footer-text">
+        {{ tp('email_transfer_executed.content.footer', {}, 'email_transfer_executed')|raw }}
+    </p>
+{% endblock %}

@@ -1,0 +1,22 @@
+email_card_ready:
+  title: "Votre carte bancaire est prête !"
+  subtitle: "Votre nouvelle carte est maintenant disponible"
+  greeting: "Bonjour %firstname%,"
+  main_message: "Excellente nouvelle ! Votre carte bancaire a été créée et est maintenant disponible dans votre espace client."
+
+  card_details_title: "Détails de votre carte"
+  card_type_label: "Type"
+  card_brand_label: "Marque"
+  card_number_label: "Numéro"
+  card_status_label: "Statut"
+  card_status_active: "Active"
+
+  what_you_can_do_title: "Vous pouvez maintenant :"
+  action_1: "Consulter les détails de votre carte dans votre espace client"
+  action_2: "Effectuer des paiements en ligne"
+  action_3: "Gérer vos limites et paramètres"
+
+  physical_card_title: "Carte physique en route"
+  physical_card_message: "Votre carte physique vous sera envoyée à votre adresse sous 3-5 jours ouvrés."
+
+  cta_button: "Accéder à mon espace client"

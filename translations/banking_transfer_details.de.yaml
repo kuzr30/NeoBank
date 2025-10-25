@@ -1,0 +1,30 @@
+banking_transfer_details:
+  header:
+    title: "Überweisungsdetails"
+    subtitle: "Vollständige Informationen zu Ihrer Überweisung"
+    back_button: "Zurück zur Liste"
+  
+  transfer_card:
+    title: "Überweisung"
+  
+  status:
+    pending: "Ausstehend"
+    executing: "Wird ausgeführt"
+    completed: "Abgeschlossen"
+    expired: "Abgelaufen"
+    cancelled: "Storniert"
+    blocked: "Gesperrt"
+  
+  details:
+    amount_label: "Betrag"
+    beneficiary_account_label: "Empfängerkonto"
+    beneficiary_iban_label: "Empfänger-IBAN"
+    description_label: "Beschreibung"
+    creation_date_label: "Erstellungsdatum"
+    execution_date_label: "Ausführungsdatum"
+    ip_address_label: "IP-Adresse"
+    ip_not_available: "Nicht verfügbar"
+  
+  actions:
+    continue_validation: "Validierung fortsetzen"
+    success_message: "Diese Überweisung wurde erfolgreich ausgeführt"

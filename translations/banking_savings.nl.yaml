@@ -1,0 +1,64 @@
+banking_savings:
+  header:
+    title: "Sparen & Beleggingen"
+    subtitle: "Beheer uw spaarproducten"
+    last_update: "Laatste update:"
+    total_savings: "Totaal spaargeld"
+  
+  products:
+    livret_a: "Spaarrekening A"
+    pea: "Aandelen Spaarplan"
+    term_deposit: "Termijndeposito"
+  
+  labels:
+    ceiling: "Plafond"
+    available: "Beschikbaar"
+    interests_2025: "Rente 2025"
+    plus_minus_value: "+/- waarde"
+    performance_ytd: "Prestatie YTD"
+    maturity: "Vervaldatum"
+    remaining_duration: "Resterende looptijd"
+    expected_interests: "Verwachte rente"
+    days: "dagen"
+  
+  actions:
+    fund: "Storten"
+    withdraw: "Opnemen"
+    invest: "Investeren"
+    arbitrate: "Arbitreren"
+    blocked: "Geblokkeerd"
+    details: "Details"
+  
+  opportunities:
+    section_title: "Spaarmogelijkheden"
+    section_subtitle: "Ontdek onze producten om uw spaargeld te optimaliseren"
+    pel_title: "Woning Spaarplan"
+    pel_description: "Bereid uw vastgoedproject voor met een gegarandeerd tarief"
+    pel_rate: "2,20% + staatsbonus"
+    youth_savings_title: "Jeugdspaarrekening"
+    youth_savings_description: "Voor 12-25 jarigen, een spaarrekening met voordelige voorwaarden"
+    youth_savings_rate: "3,50% netto belastingen"
+    life_insurance_title: "Levensverzekering"
+    life_insurance_description: "Bouw uw vermogen op met ons multi-support contract"
+    life_insurance_rate: "Aantrekkelijk rendement"
+    discover_button: "Ontdekken"
+  
+  movements:
+    section_title: "Laatste bewegingen"
+    table_headers:
+      date: "Datum"
+      product: "Product"
+      operation: "Operatie"
+      amount: "Bedrag"
+      new_balance: "Nieuw saldo"
+      actions: "Acties"
+    operations:
+      transfer_from_checking: "Overschrijving van Betaalrekening"
+      interest_capitalization: "Rente kapitalisatie"
+      stock_purchase: "Aankoop aandelen LVMH"
+      livret_a_interests: "Spaarrekening A rente"
+  
+  pagination:
+    previous: "Vorige"
+    next: "Volgende"
+    page_info: "Pagina %current% van %total% (%count% bewegingen)"

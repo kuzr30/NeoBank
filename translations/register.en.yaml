@@ -1,0 +1,55 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: register.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+register:
+  title: "Create Your Account"
+  subtitle: "Join %company_name% and access our innovative banking services with a simplified and secure process"
+  
+  sections:
+    personal_info: "Personal Information"
+    connection_info: "Login Information"
+    terms: "Terms of Use"
+  fields:
+    first_name_label: "First Name"
+    first_name_placeholder: "Your first name"
+    last_name_label: "Last Name"
+    last_name_placeholder: "Your last name"
+    email_label: "Email Address"
+    email_placeholder: "your.email@example.com"
+    password_label: "Password"
+    password_placeholder: "••••••••"
+    password_confirm_label: "Confirm Password"
+    password_confirm_placeholder: "••••••••"
+    agree_terms: 'I accept the <a href="#" class="form-link">terms of use</a> and the <a href="#" class="form-link">privacy policy</a>'
+    newsletter: "I would like to receive %company_name% news and offers by email"
+  buttons:
+    create_account: "Create My Account"
+    login: "Log In"
+    
+  links:
+    terms_of_use: "terms of use"
+    privacy_policy: "privacy policy"
+    already_account: "Already have an account?"
+    back_home: "Back to Home"
+  security:
+    ssl_secure: "SSL Secure"
+    data_protected: "Protected Data"
+    support_24_7: "24/7 Support"
+  messages:
+    account_created: "Your account must be activated by our team before your first login. This validation usually takes less than 24 hours."
+errors:
+  first_name_required: "First name is required"
+  first_name_min: "First name must be at least {{ limit }} characters"
+  first_name_max: "First name cannot exceed {{ limit }} characters"
+  last_name_required: "Last name is required"
+  last_name_min: "Last name must be at least {{ limit }} characters"
+  last_name_max: "Last name cannot exceed {{ limit }} characters"
+  email_required: "Email is required"
+  email_invalid: "Email is not valid"
+  email_exists: "An account already exists with this email"
+  password_required: "Password is required"
+  password_min: "Your password must contain at least {{ limit }} characters"
+  password_mismatch: "Passwords do not match"
+  terms_required: "You must accept our terms"

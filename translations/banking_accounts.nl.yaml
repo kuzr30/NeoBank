@@ -1,0 +1,94 @@
+banking_accounts:
+  # Header section
+  header:
+    main_account: "Hoofdrekening"
+    account_number: "Rekening nr."
+    iban: "IBAN"
+    currency: "Valuta"
+    available_balance: "Beschikbaar saldo"
+    no_account: "Geen rekening"
+    no_account_message: "Neem contact op met uw adviseur om een rekening te openen"
+    no_balance: "Geen saldo beschikbaar"
+
+  # Filters and tools
+  filters:
+    all_operations: "Alle transacties"
+    transfers: "Overschrijvingen"
+    direct_debits: "Automatische incasso's"
+    card_payments: "Bankkaarten"
+    checks: "Cheques"
+    filter_button: "Filteren"
+    download: "Downloaden"
+    print: "Afdrukken"
+
+  # Operations table
+  table:
+    date: "Datum"
+    operation: "Transactie"
+    debit: "Debet"
+    credit: "Credit"
+    reference: "Ref"
+
+  # Transaction statuses
+  status:
+    pending: "In behandeling"
+    executing: "Wordt uitgevoerd"
+    cancelled: "Geannuleerd"
+    blocked: "Geblokkeerd"
+    completed: "Voltooid"
+
+  # Empty state
+  empty_state:
+    no_transactions: "Geen transacties gevonden"
+    no_transactions_message: "Uw transacties verschijnen hier zodra ze zijn uitgevoerd"
+
+  # Pagination
+  pagination:
+    previous: "Vorige"
+    next: "Volgende"
+    page_info: "Pagina %d van %d (%d transactie%s)"
+    no_operations: "Geen transacties"
+    operation_singular: ""
+    operation_plural: "s"
+    
+  # Account info
+  account:
+    balance: "Saldo"
+    available: "Beschikbaar"
+    number: "Rekeningnummer"
+    type: "Rekening type"
+    status: "Status"
+    opened_date: "Openingsdatum"
+    last_transaction: "Laatste transactie"
+    
+  # Account types
+  types:
+    checking: "Lopende rekening"
+    savings: "Spaarrekening" 
+    credit: "Kredietrekening"
+    
+  # Account Status
+  account_status:
+    active: "Actief"
+    inactive: "Inactief"
+    blocked: "Geblokkeerd"
+    
+  # Actions
+  actions:
+    view_transactions: "Transacties bekijken"
+    view_details: "Details bekijken"
+    download_statement: "Uitreksel downloaden"
+    
+  # Messages
+  messages:
+    no_accounts: "Geen rekeningen beschikbaar"
+    access_denied: "Toegang geweigerd tot deze rekening"
+    
+  # Currency
+  currency: "€"
+
+  # Transaction descriptions
+  descriptions:
+    credit_to_main_debit: "Overboeking van krediet naar hoofdrekening"
+    credit_to_main_credit: "Overboeking ontvangen van krediet"
+    credit_release: "Kredietblokkering opgeheven"

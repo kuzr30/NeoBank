@@ -1,0 +1,21 @@
+email_contract_validated:
+  title: "Vertrag validiert"
+  content:
+    page_title: "Ihr Vertrag wurde validiert!"
+    greeting: "Hallo <strong>%customerName%</strong>,"
+    validation_section:
+      title: "Validierung bestätigt"
+      message: "Ausgezeichnete Neuigkeiten! Ihr Kreditvertrag <strong>%contractNumber%</strong> wurde von unserem Team validiert."
+    contract_details:
+      title: "Vertragsdetails"
+      number: "Vertragsnummer"
+      amount: "Darlehensbetrag"
+    next_steps:
+      title: "Nächste Schritte"
+      message: "Ihr Dossier wird nun finalisiert. Unsere Teams bereiten die Freigabe der Mittel vor. Sie erhalten eine Benachrichtigung, sobald die Mittel auf Ihrem Konto verfügbar sind."
+    access_account: "Zu meinem Konto"
+    thanks_message: "Vielen Dank für Ihr Vertrauen!"
+    footer: "Das %company_name%-Team<br><em>Dies ist eine automatische E-Mail, bitte antworten Sie nicht darauf.</em>"
+  logs:
+    success: "Vertragsvalidierungs-E-Mail erfolgreich an %email% für Vertrag %contractNumber% gesendet (Locale: %locale%)"
+    error: "Fehler beim Senden der Vertragsvalidierungs-E-Mail für Vertrag %contractNumber%: %error%"

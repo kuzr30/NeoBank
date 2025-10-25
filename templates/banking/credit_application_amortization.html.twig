@@ -1,0 +1,395 @@
+{% extends 'banking/base_layout.html.twig' %}
+
+{% block page_title %}{{ tp('banking_credit_application_amortization.header.title', [], 'banking_credit_application_amortization') }}{% endblock %}
+
+{% block banking_content %}
+    <div class="banking__header">
+        <div class="banking__header-content">
+            <h1 class="banking__header-title">{{ tp('banking_credit_application_amortization.header.title', [], 'banking_credit_application_amortization') }}</h1>
+            <a href="{{ path('banking_credits') }}" class="banking__back-btn">{{ tp('banking_credit_application_amortization.back_btn', [], 'banking_credit_application_amortization') }}</a>
+        </div>
+    </div>
+        <div class="banking__header-content">
+            <h1 class="banking__header-title">{{ tp('banking_credit_application_amortization.header.title', [], 'banking_credit_application_amortization') }}</h1>
+            <a href="{{ path('banking_credits') }}" class="banking__back-btn">
+                {{ ux_icon('heroicons:arrow-left', {'class': 'banking__back-icon'}) }}
+                {{ tp('banking_credit_application_amortization.navigation.back_to_credits', [], 'banking_credit_application_amortization') }}
+            </a>
+        </div>
+    </div>
+
+    <div class="banking__content">
+        <div class="banking__amortization-container">
+            <!-- En-tête du crédit -->
+            <div class="banking__amortization-header">
+                <div class="banking__amortization-loan-info">
+                    <h2 class="banking__amortization-title">{{ tp(creditApplication.creditType.getLabel(), [], 'credit_simulation') }}</h2>
+                    <p class="banking__amortization-reference">{{ tp('banking_credit_application_amortization.header.reference', {reference: creditApplication.referenceNumber}, 'banking_credit_application_amortization') }}</p>
+                    <div class="banking__amortization-details">
+                        <div class="banking__amortization-detail">
+                            <span class="banking__amortization-detail-label">{{ tp('banking_credit_application_amortization.loan_info.initial_amount', [], 'banking_credit_application_amortization') }}</span>
+                            <span class="banking__amortization-detail-value">{{ creditApplication.loanAmount|number_format(2, ',', ' ') }} €</span>
+                        </div>
+                        <div class="banking__amortization-detail">
+                            <span class="banking__amortization-detail-label">{{ tp('banking_credit_application_amortization.loan_info.interest_rate', [], 'banking_credit_application_amortization') }}</span>
+                            <span class="banking__amortization-detail-value">1,45%</span>
+                        </div>
+                        <div class="banking__amortization-detail">
+                            <span class="banking__amortization-detail-label">{{ tp('banking_credit_application_amortization.loan_info.duration', [], 'banking_credit_application_amortization') }}</span>
+                            <span class="banking__amortization-detail-value">{{ creditApplication.duration }} {{ creditApplication.durationUnit.value == 'months' ? tp('banking_credit_application_amortization.loan_info.months', [], 'banking_credit_application_amortization') : tp('banking_credit_application_amortization.loan_info.years', [], 'banking_credit_application_amortization') }}</span>
+                        </div>
+                        <div class="banking__amortization-detail">
+                            <span class="banking__amortization-detail-label">{{ tp('banking_credit_application_amortization.loan_info.monthly_payment', [], 'banking_credit_application_amortization') }}</span>
+                            <span class="banking__amortization-detail-value">{{ creditApplication.monthlyPayment|number_format(2, ',', ' ') }} €</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="banking__amortization-summary">
+                    <div class="banking__amortization-summary-item">
+                        <span class="banking__amortization-summary-value">{{ creditApplication.loanAmount|number_format(2, ',', ' ') }} €</span>
+                        <span class="banking__amortization-summary-label">{{ tp('banking_credit_application_amortization.summary.remaining_capital', [], 'banking_credit_application_amortization') }}</span>
+                    </div>
+                    <div class="banking__amortization-summary-item">
+                        <span class="banking__amortization-summary-value">{{ amortization_table|length }}</span>
+                        <span class="banking__amortization-summary-label">{{ tp('banking_credit_application_amortization.summary.remaining_payments', [], 'banking_credit_application_amortization') }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tableau d'amortissement -->
+            <div class="banking__amortization-table-container">
+                <div class="banking__amortization-table-header">
+                    <h3 class="banking__amortization-table-title">{{ tp('banking_credit_application_amortization.table.title', [], 'banking_credit_application_amortization') }}</h3>
+                    <div class="banking__amortization-table-actions">
+                        <button class="banking__btn banking__btn--outline" onclick="window.print()">
+                            {{ ux_icon('heroicons:printer', {'class': 'banking__btn-icon'}) }}
+                            {{ tp('banking_credit_application_amortization.actions.print', [], 'banking_credit_application_amortization') }}
+                        </button>
+                        <button class="banking__btn banking__btn--outline" onclick="exportToPDF()">
+                            {{ ux_icon('heroicons:arrow-down-tray', {'class': 'banking__btn-icon'}) }}
+                            {{ tp('banking_credit_application_amortization.actions.export_pdf', [], 'banking_credit_application_amortization') }}
+                        </button>
+                    </div>
+                </div>
+
+                <div class="banking__amortization-table-wrapper">
+                    <table class="banking__amortization-table">
+                        <thead>
+                            <tr>
+                                <th>{{ tp('banking_credit_application_amortization.table.payment_number', [], 'banking_credit_application_amortization') }}</th>
+                                <th>{{ tp('banking_credit_application_amortization.table.date', [], 'banking_credit_application_amortization') }}</th>
+                                <th>{{ tp('banking_credit_application_amortization.table.monthly_payment', [], 'banking_credit_application_amortization') }}</th>
+                                <th>{{ tp('banking_credit_application_amortization.table.principal', [], 'banking_credit_application_amortization') }}</th>
+                                <th>{{ tp('banking_credit_application_amortization.table.interest', [], 'banking_credit_application_amortization') }}</th>
+                                <th>{{ tp('banking_credit_application_amortization.table.remaining_balance', [], 'banking_credit_application_amortization') }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in amortization_table %}
+                                <tr>
+                                    <td class="banking__amortization-cell--number">{{ row.month }}</td>
+                                    <td class="banking__amortization-cell--date">{{ row.date|date('d/m/Y') }}</td>
+                                    <td class="banking__amortization-cell--amount">{{ row.monthly_payment|number_format(2, ',', ' ') }} €</td>
+                                    <td class="banking__amortization-cell--principal">{{ row.principal_payment|number_format(2, ',', ' ') }} €</td>
+                                    <td class="banking__amortization-cell--interest">{{ row.interest_payment|number_format(2, ',', ' ') }} €</td>
+                                    <td class="banking__amortization-cell--remaining">{{ row.remaining_amount|number_format(2, ',', ' ') }} €</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                        <tfoot>
+                            <tr class="banking__amortization-total">
+                                <td colspan="2"><strong>{{ tp('banking_credit_application_amortization.table.total', [], 'banking_credit_application_amortization') }}</strong></td>
+                                <td class="banking__amortization-cell--amount"><strong>{{ (creditApplication.monthlyPayment * amortization_table|length)|number_format(2, ',', ' ') }} €</strong></td>
+                                <td class="banking__amortization-cell--principal"><strong>{{ creditApplication.loanAmount|number_format(2, ',', ' ') }} €</strong></td>
+                                <td class="banking__amortization-cell--interest"><strong>{{ ((creditApplication.monthlyPayment * amortization_table|length) - creditApplication.loanAmount)|number_format(2, ',', ' ') }} €</strong></td>
+                                <td class="banking__amortization-cell--remaining"><strong>0,00 €</strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.banking__amortization-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.banking__amortization-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+.banking__amortization-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 8px 0;
+}
+
+.banking__amortization-reference {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin: 0 0 20px 0;
+}
+
+.banking__amortization-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.banking__amortization-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.banking__amortization-detail-label {
+    font-size: 12px;
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+.banking__amortization-detail-value {
+    font-size: 16px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.banking__amortization-summary {
+    display: flex;
+    gap: 32px;
+}
+
+.banking__amortization-summary-item {
+    text-align: center;
+}
+
+.banking__amortization-summary-value {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #0066cc;
+    margin-bottom: 4px;
+}
+
+.banking__amortization-summary-label {
+    font-size: 12px;
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+.banking__amortization-table-container {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.banking__amortization-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    border-bottom: 1px solid #e1e8ed;
+    background: #f8f9fa;
+}
+
+.banking__amortization-table-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.banking__amortization-table-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.banking__amortization-table-wrapper {
+    overflow-x: auto;
+}
+
+.banking__amortization-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.banking__amortization-table th {
+    background: #f8f9fa;
+    padding: 16px 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #2c3e50;
+    border-bottom: 1px solid #e1e8ed;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.banking__amortization-table td {
+    padding: 12px;
+    border-bottom: 1px solid #f1f3f4;
+    vertical-align: middle;
+}
+
+.banking__amortization-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.banking__amortization-cell--number {
+    font-weight: 600;
+    color: #0066cc;
+    text-align: center;
+    width: 80px;
+}
+
+.banking__amortization-cell--date {
+    color: #7f8c8d;
+    width: 100px;
+}
+
+.banking__amortization-cell--amount,
+.banking__amortization-cell--principal,
+.banking__amortization-cell--interest,
+.banking__amortization-cell--remaining {
+    text-align: right;
+    font-weight: 500;
+    font-family: 'SF Mono', Consolas, monospace;
+}
+
+.banking__amortization-cell--principal {
+    color: #27ae60;
+}
+
+.banking__amortization-cell--interest {
+    color: #e67e22;
+}
+
+.banking__amortization-cell--remaining {
+    color: #0066cc;
+    font-weight: 600;
+}
+
+.banking__amortization-total {
+    background: #f8f9fa;
+    border-top: 2px solid #0066cc;
+}
+
+.banking__amortization-total td {
+    padding: 16px 12px;
+    color: #2c3e50;
+}
+
+.banking__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    background: white;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.banking__btn:hover {
+    background: #f8f9fa;
+    border-color: #0066cc;
+    color: #0066cc;
+}
+
+.banking__btn-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.banking__back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.banking__back-btn:hover {
+    color: #0052a3;
+}
+
+.banking__back-icon {
+    width: 16px;
+    height: 16px;
+}
+
+@media (max-width: 768px) {
+    .banking__amortization-header {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .banking__amortization-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .banking__amortization-summary {
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    .banking__amortization-table-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    
+    .banking__amortization-table {
+        font-size: 12px;
+    }
+    
+    .banking__amortization-table th,
+    .banking__amortization-table td {
+        padding: 8px 6px;
+    }
+}
+
+@media print {
+    .banking__header,
+    .banking__amortization-table-actions {
+        display: none;
+    }
+    
+    .banking__amortization-container {
+        max-width: none;
+        padding: 0;
+    }
+    
+    .banking__amortization-table {
+        font-size: 10px;
+    }
+}
+</style>
+
+<script>
+function exportToPDF() {
+    window.print();
+}
+</script>
+{% endblock %}

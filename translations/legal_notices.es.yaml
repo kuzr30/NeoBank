@@ -1,0 +1,45 @@
+legal_notices:
+  page_title: "Avisos Legales"
+  page_description: "Información legal y obligaciones reglamentarias de %company_name%"
+
+  company_info:
+    title: "Información de la empresa"
+    content: |
+      <strong>Razón social:</strong> %company_name%<br>
+      <strong>Dirección:</strong> %company_address%<br>
+      <strong>Teléfono:</strong> %company_phone%<br>
+      <strong>Email:</strong> %company_email%<br>
+      <strong>SIRET:</strong> %company_siret%<br>
+      <strong>Sitio web:</strong> %company_website%
+
+  hosting:
+    title: "Alojamiento"
+    content: |
+      Este sitio está alojado por <strong>%hosting_provider%</strong><br>
+      Dirección: %hosting_address%<br>
+      Sitio web: %hosting_website%
+
+  intellectual_property:
+    title: "Propiedad intelectual"
+    content: |
+      El conjunto de este sitio está sujeto a la legislación francesa e internacional sobre derechos de autor y propiedad intelectual.
+      Todos los derechos de reproducción están reservados, incluidos los documentos descargables y las representaciones iconográficas y fotográficas.
+
+  liability:
+    title: "Responsabilidad"
+    content: |
+      La información contenida en este sitio es lo más precisa posible y el sitio se actualiza en diferentes períodos del año.
+      Sin embargo, pueden ocurrir errores u omisiones. El usuario deberá asegurarse de la exactitud de la información con %company_name%,
+      y señalar todas las modificaciones del sitio que considere útiles.
+
+  gdpr:
+    title: "Protección de datos personales"
+    content: |
+      En aplicación de la ley n°78-17 del 6 de enero de 1978 relativa a la informática, archivos y libertades (RGPD),
+      los usuarios disponen de un derecho de acceso, rectificación, supresión y oposición de sus datos personales.
+      Este derecho se ejerce ante %company_name% en la dirección %company_email%.
+
+  contact:
+    title: "Contacto"
+    content: |
+      Para cualquier pregunta concerniente a estos avisos legales, puede contactarnos en la dirección %email%.

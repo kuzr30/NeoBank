@@ -1,0 +1,565 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Gestion des virements{% endblock %}
+
+{% block body %}
+<style>
+/* Admin Transfer System Styles */
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.admin-stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.3s ease;
+}
+
+.admin-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.admin-stat-card--pending {
+    border-left: 4px solid #fbbf24;
+}
+
+.admin-stat-card--executing {
+    border-left: 4px solid #60a5fa;
+}
+
+.admin-stat-card--completed {
+    border-left: 4px solid #34d399;
+}
+
+.admin-stat-card--blocked {
+    border-left: 4px solid #ef4444;
+}
+
+.admin-stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.admin-stat-card--pending .admin-stat-icon {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.admin-stat-card--executing .admin-stat-icon {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.admin-stat-card--completed .admin-stat-icon {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.admin-stat-card--blocked .admin-stat-icon {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.admin-stat-icon-svg {
+    width: 24px;
+    height: 24px;
+}
+
+.admin-stat-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.admin-stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1;
+}
+
+.admin-stat-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.admin-filters {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 24px;
+    border: 1px solid #e5e7eb;
+}
+
+.admin-filter-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    align-items: end;
+}
+
+.admin-filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.admin-filter-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.admin-filter-select,
+.admin-filter-input {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.admin-filter-select:focus,
+.admin-filter-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.admin-table-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 24px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th {
+    background: #f9fafb;
+    padding: 16px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #374151;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-table-cell {
+    padding: 16px 12px;
+    font-size: 0.875rem;
+    border-bottom: 1px solid #f3f4f6;
+    vertical-align: top;
+}
+
+.admin-table-row {
+    transition: background-color 0.2s ease;
+}
+
+.admin-table-row:hover {
+    background: #f9fafb;
+}
+
+.admin-table-row--pending {
+    border-left: 3px solid #fbbf24;
+}
+
+.admin-table-row--executing {
+    border-left: 3px solid #60a5fa;
+}
+
+.admin-table-row--completed {
+    border-left: 3px solid #34d399;
+}
+
+.admin-table-row--blocked {
+    border-left: 3px solid #ef4444;
+}
+
+.admin-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.admin-user-name {
+    font-weight: 600;
+    color: #111827;
+    font-size: 0.875rem;
+}
+
+.admin-user-email {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.admin-amount {
+    font-family: monospace;
+    font-weight: 600;
+    color: #111827;
+    font-size: 0.875rem;
+}
+
+.admin-account {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: #6b7280;
+    background: #f3f4f6;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.admin-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.admin-badge--pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.admin-badge--executing {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.admin-badge--completed {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.admin-badge--blocked {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.admin-codes-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.admin-codes-count {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #111827;
+}
+
+.admin-codes-progress {
+    display: flex;
+    gap: 3px;
+}
+
+.admin-code-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+}
+
+.admin-code-dot--validated {
+    background: #34d399;
+    border-color: #16a34a;
+}
+
+.admin-code-dot--expired {
+    background: #fbbf24;
+    border-color: #d97706;
+}
+
+.admin-code-dot--pending {
+    background: #d1d5db;
+    border-color: #9ca3af;
+}
+
+.admin-date {
+    display: block;
+    font-weight: 600;
+    color: #111827;
+    font-size: 0.875rem;
+}
+
+.admin-time {
+    display: block;
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.admin-filter-actions {
+    display: flex;
+    gap: 12px;
+}
+</style>
+
+<div class="admin-container">
+    
+    <!-- Header -->
+    <div class="admin-header">
+        <h1 class="admin-title">
+            {{ ux_icon('heroicons:arrow-right-start-on-rectangle', {'class': 'admin-title-icon'}) }}
+            Gestion des virements
+        </h1>
+        <div class="admin-subtitle">
+            Supervision et gestion des virements en attente de validation
+        </div>
+    </div>
+
+    <!-- Statistiques rapides -->
+    <div class="admin-stats">
+        <div class="admin-stat-card admin-stat-card--pending">
+            <div class="admin-stat-icon">
+                {{ ux_icon('heroicons:clock', {'class': 'admin-stat-icon-svg'}) }}
+            </div>
+            <div class="admin-stat-content">
+                <span class="admin-stat-number">{{ stats.pending }}</span>
+                <span class="admin-stat-label">En attente</span>
+            </div>
+        </div>
+        
+        <div class="admin-stat-card admin-stat-card--executing">
+            <div class="admin-stat-icon">
+                {{ ux_icon('heroicons:cog-6-tooth', {'class': 'admin-stat-icon-svg'}) }}
+            </div>
+            <div class="admin-stat-content">
+                <span class="admin-stat-number">{{ stats.executing }}</span>
+                <span class="admin-stat-label">En cours</span>
+            </div>
+        </div>
+        
+        <div class="admin-stat-card admin-stat-card--completed">
+            <div class="admin-stat-icon">
+                {{ ux_icon('heroicons:check-circle', {'class': 'admin-stat-icon-svg'}) }}
+            </div>
+            <div class="admin-stat-content">
+                <span class="admin-stat-number">{{ stats.completed_today }}</span>
+                <span class="admin-stat-label">Terminés aujourd'hui</span>
+            </div>
+        </div>
+        
+        <div class="admin-stat-card admin-stat-card--blocked">
+            <div class="admin-stat-icon">
+                {{ ux_icon('heroicons:shield-exclamation', {'class': 'admin-stat-icon-svg'}) }}
+            </div>
+            <div class="admin-stat-content">
+                <span class="admin-stat-number">{{ stats.blocked }}</span>
+                <span class="admin-stat-label">Bloqués</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filtres -->
+    <div class="admin-filters">
+        <form method="GET" class="admin-filter-form">
+            <div class="admin-filter-group">
+                <label for="status" class="admin-filter-label">Statut :</label>
+                <select name="status" id="status" class="admin-filter-select">
+                    <option value="">Tous les statuts</option>
+                    <option value="pending" {{ app.request.query.get('status') == 'pending' ? 'selected' : '' }}>En attente</option>
+                    <option value="executing" {{ app.request.query.get('status') == 'executing' ? 'selected' : '' }}>En cours d'exécution</option>
+                    <option value="completed" {{ app.request.query.get('status') == 'completed' ? 'selected' : '' }}>Terminé</option>
+                    <option value="expired" {{ app.request.query.get('status') == 'expired' ? 'selected' : '' }}>Expiré</option>
+                    <option value="cancelled" {{ app.request.query.get('status') == 'cancelled' ? 'selected' : '' }}>Annulé</option>
+                    <option value="blocked" {{ app.request.query.get('status') == 'blocked' ? 'selected' : '' }}>Bloqué</option>
+                </select>
+            </div>
+            
+            <div class="admin-filter-group">
+                <label for="user" class="admin-filter-label">Utilisateur :</label>
+                <input type="text" name="user" id="user" class="admin-filter-input" 
+                       placeholder="Email ou nom..." 
+                       value="{{ app.request.query.get('user') }}">
+            </div>
+            
+            <div class="admin-filter-group">
+                <label for="amount_min" class="admin-filter-label">Montant min :</label>
+                <input type="number" name="amount_min" id="amount_min" class="admin-filter-input" 
+                       step="0.01" placeholder="0.00"
+                       value="{{ app.request.query.get('amount_min') }}">
+            </div>
+            
+            <div class="admin-filter-group">
+                <label for="amount_max" class="admin-filter-label">Montant max :</label>
+                <input type="number" name="amount_max" id="amount_max" class="admin-filter-input" 
+                       step="0.01" placeholder="999999.99"
+                       value="{{ app.request.query.get('amount_max') }}">
+            </div>
+            
+            <div class="admin-filter-actions">
+                <button type="submit" class="admin-btn admin-btn--primary">
+                    {{ ux_icon('heroicons:funnel', {'class': 'admin-btn-icon'}) }}
+                    Filtrer
+                </button>
+                <a href="{{ path('admin_transfers') }}" class="admin-btn admin-btn--secondary">
+                    {{ ux_icon('heroicons:x-mark', {'class': 'admin-btn-icon'}) }}
+                    Réinitialiser
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Liste des virements -->
+    <div class="admin-table-container">
+        {% if transfers is not empty %}
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Utilisateur</th>
+                        <th>Montant</th>
+                        <th>Bénéficiaire</th>
+                        <th>Statut</th>
+                        <th>Codes</th>
+                        <th>Créé le</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for transfer in transfers %}
+                        <tr class="admin-table-row admin-table-row--{{ transfer.status }}">
+                            <td class="admin-table-cell">
+                                <strong>#{{ transfer.id }}</strong>
+                            </td>
+                            <td class="admin-table-cell">
+                                <div class="admin-user-info">
+                                    <span class="admin-user-name">{{ transfer.user.firstName }} {{ transfer.user.lastName }}</span>
+                                    <span class="admin-user-email">{{ transfer.user.email }}</span>
+                                </div>
+                            </td>
+                            <td class="admin-table-cell">
+                                <span class="admin-amount">{{ transfer.amount|number_format(2, ',', ' ') }} €</span>
+                            </td>
+                            <td class="admin-table-cell">
+                                <span class="admin-account">{{ transfer.destinationAccount.accountNumber }}</span>
+                            </td>
+                            <td class="admin-table-cell">
+                                <span class="admin-badge admin-badge--{{ transfer.status }}">
+                                    {% if transfer.status == 'pending' %}En attente
+                                    {% elseif transfer.status == 'executing' %}En cours
+                                    {% elseif transfer.status == 'completed' %}Terminé
+                                    {% elseif transfer.status == 'expired' %}Expiré
+                                    {% elseif transfer.status == 'cancelled' %}Annulé
+                                    {% elseif transfer.status == 'blocked' %}Bloqué
+                                    {% endif %}
+                                </span>
+                            </td>
+                            <td class="admin-table-cell">
+                                <div class="admin-codes-summary">
+                                    <span class="admin-codes-count">
+                                        {{ transfer.transferCodes|filter(c => c.isValidated)|length }}/{{ transfer.transferCodes|length }}
+                                    </span>
+                                    <div class="admin-codes-progress">
+                                        {% for code in transfer.transferCodes %}
+                                            <span class="admin-code-dot admin-code-dot--{{ code.isValidated ? 'validated' : (code.isExpired ? 'expired' : 'pending') }}"></span>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="admin-table-cell">
+                                <span class="admin-date">{{ transfer.createdAt|date('d/m/Y') }}</span>
+                                <span class="admin-time">{{ transfer.createdAt|date('H:i') }}</span>
+                            </td>
+                            <td class="admin-table-cell">
+                                <div class="admin-actions">
+                                    <a href="{{ path('admin_transfer_details', {'id': transfer.id}) }}" 
+                                       class="admin-btn admin-btn--small admin-btn--primary"
+                                       title="Voir les détails">
+                                        {{ ux_icon('heroicons:eye', {'class': 'admin-btn-icon'}) }}
+                                    </a>
+                                    
+                                    {% if transfer.status == 'pending' or transfer.status == 'executing' %}
+                                        <a href="{{ path('admin_transfer_add_code', {'id': transfer.id}) }}" 
+                                           class="admin-btn admin-btn--small admin-btn--success"
+                                           title="Ajouter un code">
+                                            {{ ux_icon('heroicons:plus', {'class': 'admin-btn-icon'}) }}
+                                        </a>
+                                        
+                                        {% if transfer.isFullyValidated %}
+                                            <form method="POST" action="{{ path('admin_transfer_complete', {'id': transfer.id}) }}" style="display: inline;">
+                                                <input type="hidden" name="_token" value="{{ csrf_token('complete_transfer_' ~ transfer.id) }}">
+                                                <button type="submit" 
+                                                        class="admin-btn admin-btn--small admin-btn--warning"
+                                                        title="Exécuter le virement"
+                                                        onclick="return confirm('Exécuter ce virement maintenant ?')">
+                                                    {{ ux_icon('heroicons:play', {'class': 'admin-btn-icon'}) }}
+                                                </button>
+                                            </form>
+                                        {% endif %}
+                                    {% endif %}
+                                    
+                                    {% if transfer.status == 'blocked' %}
+                                        <form method="POST" action="{{ path('admin_transfer_unblock_user', {'id': transfer.id}) }}" style="display: inline;">
+                                            <input type="hidden" name="_token" value="{{ csrf_token('unblock_user_' ~ transfer.id) }}">
+                                            <button type="submit" 
+                                                    class="admin-btn admin-btn--small admin-btn--info"
+                                                    title="Débloquer l'utilisateur"
+                                                    onclick="return confirm('Débloquer cet utilisateur ?')">
+                                                {{ ux_icon('heroicons:lock-open', {'class': 'admin-btn-icon'}) }}
+                                            </button>
+                                        </form>
+                                    {% endif %}
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <div class="admin-empty-state">
+                {{ ux_icon('heroicons:document-magnifying-glass', {'class': 'admin-empty-icon'}) }}
+                <h3 class="admin-empty-title">Aucun virement trouvé</h3>
+                <p class="admin-empty-text">Aucun virement ne correspond aux critères de recherche.</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Pagination -->
+    {% if transfers.haveToPaginate %}
+        <div class="admin-pagination">
+            {{ knp_pagination_render(transfers) }}
+        </div>
+    {% endif %}
+
+</div>
+{% endblock %}

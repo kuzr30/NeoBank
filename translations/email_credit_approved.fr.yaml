@@ -1,0 +1,40 @@
+email_credit_approved:
+  title: "Demande de crédit approuvée"
+  content:
+    page_title: "Félicitations {customerName} !"
+    intro: "Nous avons le plaisir de vous annoncer une excellente nouvelle !"
+    credit_approved:
+      title: "Votre crédit a été approuvé"
+      amount_label: "Montant approuvé"
+      financing_note: "Financement accordé par nos experts"
+    contract_info:
+      title: "Informations contractuelles"
+      contract_number: "Numéro de contrat"
+      status_label: "Statut"
+      status_value: "Approuvé - En attente de signature"
+      rate_label: "Taux d'intérêt"
+      duration_label: "Durée"
+      monthly_payment_label: "Mensualité"
+    next_steps:
+      title: "Prochaines étapes"
+      step_1:
+        title: "1. Signature du contrat"
+        description: "Vous recevrez bientôt le contrat à signer électroniquement"
+      step_2:
+        title: "2. Validation administrative"
+        description: "Notre équipe procédera aux vérifications finales"
+      step_3:
+        title: "3. Versement des fonds"
+        description: "Une fois le contrat validé, les fonds seront versés sur votre compte"
+    personalized_support:
+      title: "Accompagnement personnalisé"
+      description: "Un contrat détaillé avec toutes les conditions de votre crédit vous sera transmis sous peu. Si vous avez des questions, notre équipe spécialisée est à votre disposition pour vous accompagner."
+    thanks_message: "Nous vous remercions de votre confiance et sommes heureux de pouvoir contribuer à la réalisation de votre projet."
+    footer: "%company_name% - Département Crédits<br>Notification d'approbation de demande de crédit"
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Envoi de notification de crédit approuvé"
+    success: "Notification de crédit approuvé envoyée avec succès"
+    error: "Erreur lors de l'envoi de notification de crédit approuvé"
+    send_failed: "Échec de l'envoi de notification de crédit approuvé"

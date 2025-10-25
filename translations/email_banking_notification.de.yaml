@@ -1,0 +1,87 @@
+email_banking_notification:
+  titles:
+    transaction: "Neue Transaktion"
+    security: "Sicherheitsalarm"
+    statement: "Monatlicher Kontoauszug verfügbar"
+    credit_approval: "Kredit genehmigt"
+    credit_rejection: "Antwort auf Ihren Kreditantrag"
+    default: "%company_name%-Benachrichtigung"
+  
+  headers:
+    transaction: "Neue Transaktion"
+    security: "Sicherheitsalarm"
+    statement: "Monatlicher Kontoauszug"
+    credit_approval: "Kredit genehmigt"
+    credit_rejection: "Antwort auf Ihren Antrag"
+    default: "Benachrichtigung"
+  
+  common:
+    greeting: "Hallo {firstName},"
+  
+  transaction:
+    intro: "Wir informieren Sie, dass eine neue Transaktion auf Ihrem Konto durchgeführt wurde."
+    details_title: "Transaktionsdetails"
+    amount: "Betrag: <strong>{amount}</strong>"
+    type: "Typ: {transactionType}"
+    date: "Datum: {date}"
+    account: "Konto: {accountNumber}"
+    description: "Beschreibung: {description}"
+    balance: "Neuer Saldo: <strong>{newBalance}</strong>"
+    
+  security:
+    intro: "Eine ungewöhnliche Aktivität wurde auf Ihrem Konto erkannt."
+    alert_title: "Alarm-Details"
+    action: "Aktion: {action}"
+    ip_address: "IP-Adresse: {ipAddress}"
+    device: "Gerät: {device}"
+    location: "Standort: {location}"
+    date: "Datum: {date}"
+    security_measures: "Falls Sie diese Aktion nicht veranlasst haben, kontaktieren Sie umgehend unseren Kundenservice und ändern Sie Ihr Passwort."
+    
+  statement:
+    intro: "Ihr monatlicher Kontoauszug für {month} {year} ist jetzt verfügbar."
+    download_info: "Sie können ihn in Ihrem Kundenbereich einsehen und herunterladen."
+    summary_title: "Monatsübersicht"
+    total_transactions: "Gesamte Transaktionen: {totalTransactions}"
+    total_credits: "Gesamte Eingänge: <strong>{totalCredits}</strong>"
+    total_debits: "Gesamte Ausgänge: <strong>{totalDebits}</strong>"
+    end_balance: "Monatsschlusssaldo: <strong>{endBalance}</strong>"
+    download_button: "Kontoauszug herunterladen"
+    
+  credit_approval:
+    intro: "Ausgezeichnete Nachrichten! Ihr Kreditantrag wurde genehmigt."
+    details_title: "Details Ihres Kredits"
+    approved_amount: "Genehmigter Betrag: <strong>{approvedAmount}</strong>"
+    interest_rate: "Zinssatz: {interestRate}%"
+    duration: "Laufzeit: {duration} Monate"
+    monthly_payment: "Monatliche Rate: <strong>{monthlyPayment}</strong>"
+    start_date: "Startdatum: {startDate}"
+    contract_info: "Sie erhalten in Kürze Ihren Kreditvertrag per E-Mail."
+    next_steps_title: "Nächste Schritte"
+    step_1: "Elektronische Vertragsunterzeichnung"
+    step_2: "Auszahlung der Mittel innerhalb von 48 Arbeitsstunden"
+    step_3: "Einrichtung der automatischen Abbuchungen"
+    
+  credit_rejection:
+    intro: "Wir haben Ihren Kreditantrag sorgfältig geprüft."
+    result: "Leider können wir Ihrem Antrag derzeit nicht entsprechen."
+    reasons_title: "Hauptgründe"
+    reason_income: "Einkommen unzureichend im Verhältnis zum beantragten Betrag"
+    reason_history: "Unvollständige Kredithistorie"
+    reason_ratio: "Verschuldungsgrad zu hoch"
+    alternative_title: "Alternative Lösungen"
+    alternative_1: "Erneuern Sie Ihren Antrag in 6 Monaten"
+    alternative_2: "Beantragen Sie einen niedrigeren Betrag"
+    alternative_3: "Verbessern Sie Ihre finanzielle Situation"
+    contact_info: "Unser Team steht Ihnen weiterhin beratend zur Verfügung."
+  
+  common_footer:
+    automatic_message: "Diese E-Mail wurde automatisch von %company_name% versendet."
+    support: "Bei Fragen kontaktieren Sie unseren Kundenservice rund um die Uhr, 7 Tage die Woche."
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Versendung der Bankbenachrichtigung"
+    success: "Bankbenachrichtigung erfolgreich versendet"
+    error: "Fehler beim Versenden der Bankbenachrichtigung"
+    send_failed: "Versenden der Bankbenachrichtigung fehlgeschlagen"

@@ -1,0 +1,143 @@
+banking_ribs:
+  # Meta tags
+  meta:
+    title: "Mijn begunstigden - %company_name%"
+    description: "Beheer uw begunstigde rekeningen met %company_name%"
+
+  # Navigation
+  nav:
+    dashboard: "Dashboard"
+    beneficiaries: "Begunstigden"
+    rib_new: "Nieuwe begunstigde"
+    rib_detail: "Begunstigde details"
+    back: "Terug"
+
+  # Page headers
+  page:
+    title: "Mijn begunstigden"
+    subtitle: "Beheer de rekeningen van uw begunstigden voor uw overschrijvingen"
+    new_rib_title: "Begunstigde toevoegen"
+    rib_detail_title: "Begunstigde details"
+    
+  # Header section (for ribs.html.twig)
+  header:
+    title: "Mijn RIB/IBAN"
+    subtitle: "Beheer van uw bankidentiteitsbewijzen"
+    add_button: "RIB toevoegen"
+  
+  # Empty state
+  empty_state:
+    title: "Geen RIB geregistreerd"
+    description: "Voeg uw RIB toe om uw overschrijvingen te vergemakkelijken en gemakkelijker geld te ontvangen."
+    add_first_button: "Mijn eerste RIB toevoegen"
+    
+  # RIB detail page (rib_show.html.twig)
+  detail_page:
+    title: "RIB-details"
+    subtitle: "Gedetailleerde informatie van uw bankidentiteitsbewijs"
+    back_to_list: "Terug naar lijst"
+    
+  # Detail fields
+  detail_fields:
+    account_name: "Rekeningnaam:"
+    bank_name: "Banknaam:"
+    full_iban: "Volledig IBAN:"
+    copy_button: "Kopiëren"
+    creation_date: "Toevoegingsdatum:"
+    last_modification: "Laatste wijziging:"
+    
+  # Actions
+  detail_actions:
+    delete_this_rib: "Deze RIB verwijderen"
+    
+  # JavaScript messages
+  js_messages:
+    iban_copied: "IBAN gekopieerd naar klembord"
+    
+  # New RIB form (rib_new.html.twig)
+  new_form:
+    title: "Nieuwe RIB toevoegen"
+    subtitle: "Registreer uw bankgegevens om uw overschrijvingen te vergemakkelijken en geld te ontvangen."
+    
+  # Form fields and labels
+  form_fields:
+    account_name_label: "Rekeningnaam"
+    account_name_placeholder: "Bijv: Hoofdrekening, Spaarrekening..."
+    account_name_help: "Geef een beschrijvende naam aan deze rekening om deze gemakkelijk te herkennen."
+    bank_name_label: "Banknaam"
+    bank_name_placeholder: "Bijv: ING, ABN AMRO..."
+    iban_label: "IBAN"
+    iban_placeholder: "NL91 ABNA 0417 1643 00"
+    iban_help: "Voer uw Europese IBAN in. Spaties worden automatisch toegevoegd."
+    
+  # Form actions
+  form_actions:
+    back_button: "Terug"
+    save_button: "RIB opslaan"
+    
+  # Form fields
+  form:
+    bank_name: "Naam van de bank"
+    bank_name_placeholder: "Voer de naam van de bank in"
+    account_holder: "Rekeninghouder"
+    account_holder_placeholder: "Naam van de houder"
+    iban: "IBAN"
+    iban_placeholder: "NL91 ABNA 0417 1643 00"
+    swift: "SWIFT/BIC code"
+    swift_placeholder: "ABNANL2A"
+    nickname: "Bijnaam (optioneel)"
+    nickname_placeholder: "Bijv: Mijn spaarrekening"
+    address: "Adres van de bank"
+    address_placeholder: "Volledig adres van de bank"
+    
+  # RIB info
+  rib:
+    bank_name: "Bank"
+    account_holder: "Houder"
+    iban: "IBAN"
+    swift: "SWIFT/BIC"
+    nickname: "Bijnaam"
+    created_date: "Toegevoegd op"
+    last_used: "Laatste gebruik"
+    usage_count: "Aantal keer gebruikt"
+    
+  # Actions
+  actions:
+    add_rib: "Begunstigde toevoegen"
+    save: "Opslaan"
+    cancel: "Annuleren"
+    edit: "Bewerken"
+    delete: "Verwijderen"
+    view_details: "Details bekijken"
+    use_for_transfer: "Gebruiken voor overschrijving"
+    
+  # Validation messages
+  validation:
+    iban_required: "IBAN is verplicht"
+    iban_invalid: "Ongeldig IBAN formaat"
+    iban_exists: "Deze IBAN bestaat al in uw begunstigden"
+    account_holder_required: "Naam van de houder is verplicht"
+    bank_name_required: "Naam van de bank is verplicht"
+    swift_invalid: "Ongeldig SWIFT/BIC formaat"
+    
+  # Messages
+  messages:
+    no_ribs: "Geen begunstigden geregistreerd"
+    rib_added_success: "Begunstigde succesvol toegevoegd"
+    rib_updated_success: "Begunstigde succesvol bijgewerkt"
+    rib_deleted_success: "Begunstigde succesvol verwijderd"
+    confirm_delete: "Weet u zeker dat u deze begunstigde wilt verwijderen?"
+    access_denied: "Toegang geweigerd tot deze begunstigde"
+    
+  # Card actions  
+  card_actions:
+    view_details: "Details bekijken"
+    delete_button: "Verwijderen"
+    delete_confirm: "Weet u zeker dat u deze RIB wilt verwijderen?"
+    
+  # Status
+  status:
+    active: "Actief"
+    inactive: "Inactief"
+    verified: "Geverifieerd"
+    pending: "Wacht op verificatie"

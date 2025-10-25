@@ -1,0 +1,92 @@
+banking_cards_tab:
+  # Section principale
+  main:
+    title: "Suscribir una tarjeta bancaria"
+    subtitle: "La mejor tarjeta para sus necesidades diarias"
+
+  # Section carte utilisateur
+  user_card:
+    my_card: "Mi tarjeta"
+    daily_limit: "Límite diario"
+    undefined: "No definido"
+    
+    # Statuts de carte
+    status:
+      active: "Activa"
+      blocked: "Bloqueada"
+      expired: "Caducada"
+      pending: "Pendiente"
+    
+    # Actions de carte
+    actions:
+      block_temporarily: "Bloquear temporalmente"
+      report_lost: "Hacer oposición"
+
+  # Section souscription en attente
+  subscription_pending:
+    title: "Solicitud en curso"
+    request_date: "Solicitud realizada el"
+    
+    # Badges de statut
+    status:
+      contract_pending: "Contrato en preparación"
+      contract_sent: "Contrato enviado - Firma requerida"
+      admin_validation: "En espera de validación administrativa"
+      contract_expired: "Contrato caducado"
+      pending: "En espera de validación"
+    
+    # Détails de souscription
+    details:
+      card_type: "Tipo de tarjeta"
+      brand: "Marca"
+      contract: "Contrato"
+      signed_on: "Firmado el"
+    
+    # Actions
+    actions:
+      sign_contract: "Firmar el contrato"
+      download_contract: "Descargar el contrato PDF"
+    
+    # Messages
+    messages:
+      contract_expires: "Su contrato caduca el"
+      contract_expired_text: "Su contrato ha caducado. Será necesaria una nueva solicitud de suscripción."
+
+  # Types de cartes
+  card_types:
+    classic:
+      name: "Tarjeta Classic"
+      badge: "Ideal para empezar"
+      price: "Gratuita"
+      period: "el primer año"
+    
+    gold:
+      name: "Tarjeta Gold"
+      badge: "La más popular"
+      price: "5€"
+      period: "por mes"
+    
+    platinum:
+      name: "Tarjeta Platinum"
+      badge: "Premium"
+      price: "15€"
+      period: "por mes"
+
+  # Informations supplémentaires
+  info:
+    security:
+      title: "Seguridad garantizada"
+      text: "Todas nuestras tarjetas están equipadas con las últimas tecnologías de seguridad y están protegidas contra el fraude."
+    
+    delivery:
+      title: "Entrega rápida"
+      text: "Reciba su nueva tarjeta en 3 a 5 días hábiles directamente en su domicilio."
+    
+    support:
+      title: "Soporte 24h/24"
+      text: "Nuestro equipo está disponible 24h/24 para ayudarle en caso de problema con su tarjeta."
+
+  # Statuts supplémentaires
+  status:
+    cancelled: "Cancelada"
+    account_label: "Cuenta"

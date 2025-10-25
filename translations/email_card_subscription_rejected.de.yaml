@@ -1,0 +1,31 @@
+email_card_subscription_rejected:
+  title: "Ihr Kartenantrag"
+  
+  content:
+    page_title: "Bezüglich Ihres Kartenantrags"
+    greeting: "Liebe(r) %firstName% %lastName%,"
+    
+    rejection:
+      title: "Entscheidung zu Ihrem Antrag"
+      description: "Nach Prüfung Ihres Antrags können wir Ihrem Antrag für eine %cardType% nicht positiv entsprechen."
+    
+    details:
+      title: "Antragsdetails"
+      reference: "Antragsnummer"
+      reason: "Grund für die Entscheidung"
+      reason_not_specified: "Nicht spezifiziert - Kontaktieren Sie unseren Kundendienst"
+    
+    next_steps:
+      title: "Ihre Optionen"
+      option1: "Kontaktieren Sie unseren Kundendienst für weitere Informationen"
+      option2: "Stellen Sie einen neuen Antrag nach Verbesserung Ihrer Situation"
+      option3: "Vereinbaren Sie einen Termin mit einem Bankberater"
+    
+    support:
+      title: "Benötigen Sie Hilfe?"
+      contact_button: "Kundendienst kontaktieren"
+      instruction: "Unser Team steht zur Verfügung, um Ihnen diese Entscheidung zu erklären"
+    
+    apologize: "Wir bedauern, dass wir Ihrem Antrag nicht positiv entsprechen können und stehen Ihnen weiterhin zur Verfügung."
+    
+    footer: "Diese E-Mail wurde automatisch von Ihrer Bank gesendet. <br><strong>Unser Kundendienst hört Ihnen weiterhin zu.</strong>"

@@ -1,0 +1,94 @@
+banking_accounts:
+  # Header section
+  header:
+    main_account: "Compte Principal"
+    account_number: "Compte N°"
+    iban: "IBAN"
+    currency: "Devise"
+    available_balance: "Solde disponible"
+    no_account: "Aucun compte"
+    no_account_message: "Contactez votre conseiller pour ouvrir un compte"
+    no_balance: "Aucun solde disponible"
+
+  # Filters and tools
+  filters:
+    all_operations: "Toutes opérations"
+    transfers: "Virements"
+    direct_debits: "Prélèvements"
+    card_payments: "Cartes bancaires"
+    checks: "Chèques"
+    filter_button: "Filtrer"
+    download: "Télécharger"
+    print: "Imprimer"
+
+  # Operations table
+  table:
+    date: "Date"
+    operation: "Opération"
+    debit: "Débit"
+    credit: "Crédit"
+    reference: "Réf"
+
+  # Transaction statuses
+  status:
+    pending: "En attente"
+    executing: "En cours"
+    cancelled: "Annulé"
+    blocked: "Bloqué"
+    completed: "Terminé"
+
+  # Empty state
+  empty_state:
+    no_transactions: "Aucune transaction trouvée"
+    no_transactions_message: "Vos transactions apparaîtront ici une fois effectuées"
+
+  # Pagination
+  pagination:
+    previous: "Précédent"
+    next: "Suivant"
+    page_info: "Page %d sur %d (%d opération%s)"
+    no_operations: "Aucune opération"
+
+  # Transaction descriptions
+  descriptions:
+    credit_to_main_debit: "Virement du crédit vers compte principal"
+    credit_to_main_credit: "Virement reçu du crédit"
+    credit_release: "Déblocage de crédit"
+    operation_singular: ""
+    operation_plural: "s"
+    
+  # Account info
+  account:
+    balance: "Solde"
+    available: "Disponible"
+    number: "Numéro de compte"
+    type: "Type de compte"
+    status: "Statut"
+    opened_date: "Date d'ouverture"
+    last_transaction: "Dernière transaction"
+    
+  # Account types
+  types:
+    checking: "Compte courant"
+    savings: "Compte épargne" 
+    credit: "Compte crédit"
+    
+  # Account Status
+  account_status:
+    active: "Actif"
+    inactive: "Inactif"
+    blocked: "Bloqué"
+    
+  # Actions
+  actions:
+    view_transactions: "Voir les transactions"
+    view_details: "Voir les détails"
+    download_statement: "Télécharger le relevé"
+    
+  # Messages
+  messages:
+    no_accounts: "Aucun compte disponible"
+    access_denied: "Accès refusé à ce compte"
+    
+  # Currency
+  currency: "€"

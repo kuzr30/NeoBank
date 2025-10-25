@@ -1,0 +1,87 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_transfers.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_transfers:
+  header:
+    title: "Transfers"
+    subtitle: "Make transfers to your registered accounts"
+    last_updated: "Last updated: %datetime%"
+    new_transfer: "New transfer"
+  
+  active_transfers:
+    title: "Active transfers"
+    transfer_to: "Transfer to %account%"
+    status:
+      pending: "Pending"
+      executing: "In progress"
+    validation_code_required: "Waiting for validation code"
+    actions:
+      enter_code: "Enter code"
+      view_details: "View details"
+  
+  beneficiaries:
+    title: "My beneficiaries"
+    iban_label: "IBAN:"
+    empty_state:
+      title: "No beneficiary account registered"
+      description: "Add RIB accounts to be able to make transfers"
+      add_rib_button: "Add a RIB"
+  
+  actions:
+    one_time:
+      title: "One-time transfer"
+      description: "Make a single transfer to a beneficiary"
+      button: "Transfer"
+    
+    recurring:
+      title: "Standing order"
+      description: "Schedule an automatic recurring transfer"
+      button: "Schedule"
+    
+    instant:
+      title: "Instant transfer"
+      description: "Transfer executed in seconds"
+      button: "Send"
+    
+    add_beneficiary:
+      title: "New beneficiary"
+      description: "Add a new transfer recipient"
+      button: "Add"
+  
+  filters:
+    all_transfers: "All transfers"
+    sent_transfers: "Sent transfers"
+    received_transfers: "Received transfers"
+    recurring_transfers: "Standing orders"
+    instant_transfers: "Instant transfers"
+    all_accounts: "All accounts"
+    account_checking: "Checking Account ****8547"
+    account_savings: "Savings Account ****2143"
+    filter_button: "Filter"
+    export_button: "Export"
+  
+  table:
+    headers:
+      date: "Date"
+      type: "Type"
+      beneficiary_sender: "Beneficiary / Sender"
+      reason: "Reason"
+      amount: "Amount"
+      status: "Status"
+      actions: "Actions"
+    
+    transfer_types:
+      received: "Received"
+      sent: "Sent"
+      internal: "Internal"
+      instant: "Instant"
+    
+    status:
+      executed: "Executed"
+  
+  pagination:
+    previous: "Previous"
+    next: "Next"
+    page_info: "Page %current% of %total% (%count% transfers)"

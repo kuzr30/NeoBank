@@ -1,0 +1,82 @@
+banking_transfers:
+  header:
+    title: "Virements"
+    subtitle: "Effectuez des virements vers vos comptes enregistrés"
+    last_updated: "Dernière mise à jour : %datetime%"
+    new_transfer: "Nouveau virement"
+  
+  active_transfers:
+    title: "Virements en cours"
+    transfer_to: "Virement vers %account%"
+    status:
+      pending: "En attente"
+      executing: "En cours"
+    validation_code_required: "En attente du code de validation"
+    actions:
+      enter_code: "Saisir le code"
+      view_details: "Voir les détails"
+  
+  beneficiaries:
+    title: "Mes bénéficiaires"
+    iban_label: "IBAN :"
+    empty_state:
+      title: "Aucun compte bénéficiaire enregistré"
+      description: "Ajoutez des comptes RIB pour pouvoir effectuer des virements"
+      add_rib_button: "Ajouter un RIB"
+  
+  actions:
+    one_time:
+      title: "Virement ponctuel"
+      description: "Effectuer un virement unique vers un bénéficiaire"
+      button: "Effectuer"
+    
+    recurring:
+      title: "Virement permanent"
+      description: "Programmer un virement récurrent automatique"
+      button: "Programmer"
+    
+    instant:
+      title: "Virement instantané"
+      description: "Virement exécuté en quelques secondes"
+      button: "Envoyer"
+    
+    add_beneficiary:
+      title: "Nouveau bénéficiaire"
+      description: "Ajouter un nouveau destinataire de virement"
+      button: "Ajouter"
+  
+  filters:
+    all_transfers: "Tous les virements"
+    sent_transfers: "Virements émis"
+    received_transfers: "Virements reçus"
+    recurring_transfers: "Virements permanents"
+    instant_transfers: "Virements instantanés"
+    all_accounts: "Tous les comptes"
+    account_checking: "Compte Chèques ****8547"
+    account_savings: "Livret A ****2143"
+    filter_button: "Filtrer"
+    export_button: "Exporter"
+  
+  table:
+    headers:
+      date: "Date"
+      type: "Type"
+      beneficiary_sender: "Bénéficiaire / Émetteur"
+      reason: "Motif"
+      amount: "Montant"
+      status: "Statut"
+      actions: "Actions"
+    
+    transfer_types:
+      received: "Reçu"
+      sent: "Émis"
+      internal: "Interne"
+      instant: "Instantané"
+    
+    status:
+      executed: "Exécuté"
+  
+  pagination:
+    previous: "Précédent"
+    next: "Suivant"
+    page_info: "Page %current% sur %total% (%count% virements)"

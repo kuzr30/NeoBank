@@ -1,0 +1,125 @@
+credit_page:
+  index:
+    page_title: "Onze kredietaanbiedingen"
+    page_description: "Ontdek al onze financieringsoplossingen aangepast aan uw behoeften."
+  
+  breadcrumb:
+    credit_offers: "Onze kredietaanbiedingen"
+
+  hero:
+    highlights:
+      rate_from: "JTKS vanaf"
+      max_amount: "Maximum bedrag"
+      max_duration: "Maximum duur"
+    actions:
+      simulate: "Mijn krediet simuleren"
+      apply: "Een aanvraag indienen"
+
+  sections:
+    section_1:
+      title: "Wat is dit krediet?"
+      paragraph_1: "Deze financieringsoplossing stelt u in staat uw projecten onder de beste voorwaarden te realiseren."
+      paragraph_2: "Neem contact op met onze adviseurs voor gepersonaliseerde informatie aangepast aan uw situatie."
+
+    section_2:
+      title: "Financieringsvoorwaarden"
+      features:
+        amount:
+          title: "Bedrag"
+          description: "Van €1.000 tot €100.000"
+          detail: "Aangepast aan uw project"
+        duration:
+          title: "Duur"
+          description: "Van 6 maanden tot 15 jaar"
+          detail: "Moduleerbaar volgens uw mogelijkheden"
+        rate:
+          title: "Tarief"
+          description: "Vanaf 3,5% JTKS*"
+          detail: "Voordelige voorwaarden"
+        guarantee:
+          title: "Garantie"
+          description: "Afhankelijk van het bedrag"
+          detail: "Aangepast aan uw profiel"
+
+    section_3:
+      title: "Voordelen van dit krediet"
+      advantages:
+        advantage_1: "<strong>Voordelig tarief:</strong> Profiteer van voordelige voorwaarden"
+        advantage_2: "<strong>Flexibiliteit:</strong> Oplossing aangepast aan uw behoeften"
+        advantage_3: "<strong>Snelheid:</strong> Snelle reactie op uw aanvraag"
+
+    section_4:
+      title: "Voorwaarden voor geschiktheid"
+      requirements:
+        borrower_profile:
+          title: "Lener profiel"
+          item_1: "Meerderjarig zijn en wonen in Frankrijk"
+          item_2: "Regelmatige inkomsten aantonen"
+          item_3: "Niet geregistreerd bij FICP"
+          item_4: "Schuldquote lager dan 35%"
+        general_conditions:
+          title: "Algemene voorwaarden"
+          item_1: "Maximum leeftijd: 75 jaar aan het einde van de lening"
+          item_2: "Bankdomiciliëring gewenst"
+          item_3: "Lenersverzekering mogelijk"
+          item_4: "Dossierkosten van toepassing"
+
+    section_5:
+      title: "Benodigde documenten"
+      documents:
+        identity:
+          title: "Identiteitspapieren"
+          item_1: "Nationale identiteitskaart of paspoort"
+          item_2: "Bewijs van woonplaats van minder dan 3 maanden"
+          item_3: "Familieboekje (indien gehuwd of geregistreerd partnerschap)"
+        income:
+          title: "Inkomensbewijzen"
+          item_1: "Laatste 3 loonstroken"
+          item_2: "Laatste 2 belastingaanslagen"
+          item_3: "Arbeidscontract of werkgeversverklaring"
+          item_4: "Rekeninguittreksels van de laatste 3 maanden"
+        additional:
+          title: "Aanvullende documenten"
+          item_1: "Aflossingstabel van lopende kredieten"
+          item_2: "Bewijsstukken van lasten (huur, pensioenen...)"
+          item_3: "Offertes of facturen (afhankelijk van het type krediet)"
+          item_4: "Andere documenten afhankelijk van uw situatie"
+
+  sidebar:
+    simulation:
+      title: "Uw lening simuleren"
+      text: "Bereken in enkele klikken het bedrag van uw maandelijkse afbetalingen en krijg een gepersonaliseerde schatting."
+      button: "Een simulatie maken"
+    help:
+      title: "Hulp nodig?"
+      text: "Onze adviseurs staan tot uw beschikking om al uw vragen te beantwoorden."
+      phone: company_phone
+      email: company_email
+    processing:
+      title: "Verwerkingstermijnen"
+      step_1:
+        title: "Voorstudie"
+        time: "24u"
+      step_2:
+        title: "Instructie"
+        time: "2 dagen"
+      step_3:
+        title: "Akkoord & ondertekening"
+        time: "1 dag"
+
+  legal:
+    warning:
+      title: "Een krediet verplicht u en moet worden terugbetaald.Controleer uw terugbetalingsmogelijkheden voordat u zich vastlegt."
+    details:
+      title: "Belangrijke juridische informatie"
+      taeg: "<strong>JTKS :</strong> Jaarlijks Totaalkostpercentage onder voorbehoud van goedkeuring van uw dossier."
+      amount: "<strong>Bedrag :</strong> Aanbieding geldig voor elk krediet tussen €500 en €200.000."
+      duration: "<strong>Duur :</strong> Terugbetaling mogelijk van 6 maanden tot 25 jaar afhankelijk van het type krediet."
+      retraction: "<strong>Herroepingstermijn :</strong> U heeft 14 dagen de tijd om uw krediet te herroepen na acceptatie van het aanbod."
+    footer: "%company_name% uw financiële partner voor dagelijks gebruik. Een krediet verplicht u en moet worden terugbetaald. Controleer uw terugbetalingsmogelijkheden voordat u zich vastlegt."
+
+  cta:
+    title: "Klaar om uw project te realiseren?"
+    subtitle: "Dien uw kredietaanvraag online in of neem contact op met onze adviseurs"
+    apply_button: "Mijn aanvraag indienen"
+    simulate_button: "Mijn krediet simuleren"

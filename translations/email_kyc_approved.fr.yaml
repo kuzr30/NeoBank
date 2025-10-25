@@ -1,0 +1,31 @@
+email_kyc_approved:
+  title: "Vérification d'identité approuvée - %company_name%"
+  
+  content:
+    page_title: "Félicitations %firstName% !"
+    
+    success:
+      title: "Vérification d'identité approuvée"
+      message: "Votre vérification d'identité (KYC) a été <strong>approuvée avec succès</strong>."
+    
+    services_intro: "Vous avez maintenant accès à l'ensemble de nos services bancaires :"
+    
+    services_list:
+      - "Gestion de vos comptes"
+      - "Commande de cartes bancaires"
+      - "Virements et transferts"
+      - "Produits d'épargne"
+      - "🏠 Demandes de crédit"
+      - "Assurances"
+    
+    dashboard_button: "Accéder à mes services bancaires"
+    
+    admin_note:
+      title: "💬 Note de l'équipe"
+    
+    closing: "Merci de votre confiance et bienvenue chez %company_name% !<br><strong>L'équipe %company_name%</strong>"
+
+  logs:
+    kyc_approved_sent: "Email d'approbation KYC envoyé avec succès à %email%"
+    kyc_approved_failed: "Erreur lors de l'envoi de l'approbation KYC à %email%"
+    kyc_status_updated: "Statut KYC mis à jour pour %firstName% %lastName% - Approuvé"

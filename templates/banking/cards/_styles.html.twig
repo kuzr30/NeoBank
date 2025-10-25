@@ -1,0 +1,792 @@
+<style>
+/* Variables CSS pour les cartes */
+:root {
+    --card-visa-gradient: linear-gradient(135deg, #1a1f36 0%, #0d47a1 100%);
+    --card-mastercard-gradient: linear-gradient(135deg, #ff5722 0%, #d32f2f 100%);
+    --card-classic-gradient: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    --card-gold-gradient: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
+    --card-platinum-gradient: linear-gradient(135deg, #c0c0c0 0%, #a8a8a8 100%);
+    --color-success: #10b981;
+    --color-danger: #ef4444;
+    --color-warning: #f59e0b;
+    --color-secondary: #6b7280;
+    --color-primary: #3b82f6;
+    --shadow-card: 0 10px 25px rgba(0, 0, 0, 0.15);
+    --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Section principale des cartes */
+.card-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.card-section__header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.card-section__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card-section__icon {
+    color: var(--color-primary);
+}
+
+.card-section__subtitle {
+    font-size: 1.1rem;
+    color: #6b7280;
+    margin: 0 auto;
+}
+
+/* Section des types de cartes */
+.card-types-section {
+    margin-top: 2rem;
+}
+
+.card-types-section__title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-types-section__subtitle {
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+/* Styles pour les titres de section des marques */
+.card-brand-section__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 3rem 0 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 0.75rem;
+}
+
+.card-brand-section__title:first-of-type {
+    margin-top: 2rem;
+}
+
+.card-brand-section__title .fab.fa-cc-visa {
+    color: #1a1f71;
+    font-size: 1.8rem;
+}
+
+.card-brand-section__title .fab.fa-cc-mastercard {
+    color: #eb001b;
+    font-size: 1.8rem;
+}
+
+.card-types-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Styles pour chaque type de carte */
+.card-type {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.card-type:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-type--featured {
+    border-color: var(--color-warning);
+    transform: scale(1.02);
+}
+
+.card-type__badge {
+    position: absolute;
+    top: -8px;
+    /* left: 50%; */
+    transform: translateX(-50%);
+    background: var(--color-primary);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.card-type__badge--popular {
+    background: var(--color-warning);
+}
+
+.card-type__preview {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card-type__card {
+    width: 90%;
+    height: 130px;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.card-type__card--classic {
+    background: var(--card-classic-gradient);
+}
+
+.card-type__card--gold {
+    background: var(--card-gold-gradient);
+    color: #1f2937;
+}
+
+.card-type__card--platinum {
+    background: var(--card-platinum-gradient);
+    color: #1f2937;
+}
+
+/* Styles spécifiques pour les cartes Mastercard */
+.card-type__card--classic-mastercard {
+    background: linear-gradient(135deg, #eb5757 0%, #c73e1d 100%);
+}
+
+.card-type__card--gold-mastercard {
+    background: linear-gradient(135deg, #f2994a 0%, #eb5757 100%);
+    color: white;
+}
+
+.card-type__card--platinum-mastercard {
+    background: linear-gradient(135deg, #333333 0%, #1a1a1a 100%);
+    color: white;
+}
+
+.card-type__card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-type__card-logo svg {
+    width: 50px;
+    height: auto;
+}
+
+.card-type__card-type {
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+}
+
+.card-type__chip {
+    width: 40px;
+    height: 30px;
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.card-type__card-number {
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    margin-top: auto;
+}
+
+.card-type__content {
+    text-align: center;
+}
+
+.card-type__name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.card-type__price {
+    margin-bottom: 1.5rem;
+}
+
+.card-type__amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.card-type__period {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.card-type__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.card-type__features li {
+    padding: 0.5rem 0;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.card-type__features li:before {
+    content: "✓";
+    color: var(--color-success);
+    font-weight: bold;
+}
+
+.card-type__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.card-type__cta:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.card-type__cta--featured {
+    background: var(--color-warning);
+}
+
+.card-type__cta--featured:hover {
+    background: #d97706;
+    box-shadow: 0 5px 15px rgba(245, 158, 11, 0.4);
+}
+
+/* Carte bancaire existante */
+.user-card-section {
+    margin: 2rem 0;
+}
+
+.user-card-section__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bank-card {
+    width: 400px;
+    height: 250px;
+    border-radius: 1rem;
+    padding: 2rem;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto 2rem auto;
+    background: var(--card-visa-gradient);
+    box-shadow: var(--shadow-card);
+}
+
+.bank-card--mastercard {
+    background: var(--card-mastercard-gradient);
+}
+
+.bank-card--blocked {
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
+
+.bank-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.bank-card__brand svg {
+    width: 60px;
+    height: auto;
+}
+
+.bank-card__status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.bank-card__status--active {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+}
+
+.bank-card__status--blocked {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+.bank-card__number {
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    letter-spacing: 0.2em;
+    margin: 1rem 0;
+}
+
+.bank-card__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.bank-card__holder {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.bank-card__expiry {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+}
+
+.bank-card__footer {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    margin-top: 1rem;
+}
+
+/* Actions de carte */
+.card-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Boutons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+}
+
+.btn--primary {
+    background: var(--color-primary);
+    color: white;
+}
+
+.btn--primary:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+.btn--secondary {
+    background: var(--color-secondary);
+    color: white;
+}
+
+.btn--secondary:hover {
+    background: #4b5563;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+.btn--danger {
+    background: var(--color-danger);
+    color: white;
+}
+
+.btn--danger:hover {
+    background: #dc2626;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+/* Section de souscription en attente */
+.subscription-pending-section {
+    margin: 2rem 0;
+}
+
+.subscription-pending-section__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.subscription-status {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--shadow-card);
+}
+
+.subscription-status__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.subscription-status__badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.subscription-status__badge--pending {
+    background: rgba(245, 158, 11, 0.1);
+    color: #d97706;
+    border: 2px solid rgba(245, 158, 11, 0.2);
+}
+
+.subscription-status__badge--contract-pending {
+    background: rgba(59, 130, 246, 0.1);
+    color: #2563eb;
+    border: 2px solid rgba(59, 130, 246, 0.2);
+}
+
+.subscription-status__badge--contract-sent {
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+    border: 2px solid rgba(16, 185, 129, 0.2);
+}
+
+.subscription-status__badge--admin-validation {
+    background: rgba(139, 69, 19, 0.1);
+    color: #92400e;
+    border: 2px solid rgba(139, 69, 19, 0.2);
+}
+
+.subscription-status__badge--expired {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+    border: 2px solid rgba(239, 68, 68, 0.2);
+}
+
+.subscription-status__date {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.subscription-status__details {
+    display: grid;
+    gap: 2rem;
+}
+
+.subscription-status__info {
+    display: grid;
+    gap: 1rem;
+}
+
+.subscription-status__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+}
+
+.subscription-status__label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.subscription-status__value {
+    color: #1f2937;
+}
+
+.subscription-status__action {
+    text-align: center;
+}
+
+.subscription-status__note {
+    margin-top: 1rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.subscription-status__message {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: rgba(59, 130, 246, 0.1);
+    color: #1e40af;
+    border-left: 4px solid #3b82f6;
+}
+
+.subscription-status__message--error {
+    background: rgba(239, 68, 68, 0.1);
+    color: #991b1b;
+    border-left-color: #ef4444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card-section {
+        padding: 1rem;
+    }
+    
+    .card-section__title {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .card-types-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .card-type {
+        padding: 1.5rem;
+    }
+    
+    .card-type__card {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .bank-card {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        min-height: 200px;
+    }
+    
+    .card-actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .subscription-status__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .subscription-status__item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+/* Animation d'apparition */
+.bank-card, .card-type {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media queries pour la responsivité */
+/* Tablettes - 2 cartes par ligne */
+@media (max-width: 1024px) {
+    .card-types-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+    
+    .card-type {
+        padding: 1.25rem;
+    }
+    
+    .card-type__card {
+        width: 180px;
+        height: 115px;
+    }
+    
+    .card-type__name {
+        font-size: 1.3rem;
+    }
+    
+    .card-type__amount {
+        font-size: 1.75rem;
+    }
+    
+    .card-brand-section__title {
+        font-size: 1.3rem;
+        margin: 2.5rem 0 1.25rem 0;
+        padding-bottom: 0.5rem;
+    }
+    
+    .card-brand-section__title .fab {
+        font-size: 1.6rem;
+    }
+}
+
+/* Mobiles - 1 carte par ligne */
+@media (max-width: 768px) {
+    .card-types-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .card-type {
+        padding: 1rem;
+        margin: 0 auto;
+        max-width: 320px;
+        width: 100%;
+    }
+    
+    .card-type__card {
+        width: 160px;
+        height: 100px;
+        padding: 0.75rem;
+    }
+    
+    .card-type__name {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .card-type__amount {
+        font-size: 1.5rem;
+    }
+    
+    .card-type__cta {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .card-type--featured {
+        transform: none;
+    }
+    
+    .card-type:hover {
+        transform: translateY(-2px);
+    }
+    
+    .card-brand-section__title {
+        font-size: 1.2rem;
+        margin: 2rem 0 1rem 0;
+        padding-bottom: 0.5rem;
+        gap: 0.5rem;
+    }
+    
+    .card-brand-section__title .fab {
+        font-size: 1.4rem;
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 480px) {
+    .card-type {
+        padding: 0.875rem;
+        max-width: 300px;
+    }
+    
+    .card-type__card {
+        width: 140px;
+        height: 90px;
+        padding: 0.5rem;
+    }
+    
+    .card-type__name {
+        font-size: 1.1rem;
+    }
+    
+    .card-type__amount {
+        font-size: 1.3rem;
+    }
+    
+    .card-type__badge {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .card-brand-section__title {
+        font-size: 1.1rem;
+        margin: 1.5rem 0 0.75rem 0;
+        padding-bottom: 0.4rem;
+        gap: 0.5rem;
+    }
+    
+    .card-brand-section__title .fab {
+        font-size: 1.3rem;
+    }
+}
+</style>

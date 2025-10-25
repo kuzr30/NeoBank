@@ -1,0 +1,41 @@
+email_credit_application_confirmation:
+  title: "Bestätigung Ihres Kreditantrags"
+  
+  content:
+    page_title: "Kreditantrag bestätigt"
+    subtitle: "Ihr Antrag wurde erhalten und wird bearbeitet"
+    
+    greeting: "Hallo %customerName%,"
+    introduction: "Wir haben Ihren Kreditantrag erhalten und danken Ihnen für Ihr Vertrauen. Ihr Dossier wird nun von unseren spezialisierten Beratern geprüft."
+    
+    summary:
+      title: "Zusammenfassung Ihres Antrags"
+      request_number: "Antragsnummer:"
+      amount_requested: "Beantragter Betrag:"
+      request_date: "Antragsdatum:"
+      status: "Status:"
+      status_value: "In Bearbeitung"
+    
+    next_steps:
+      title: "Nächste Schritte"
+      step1: "Prüfung Ihres Dossiers durch unsere Berater (24-48h)"
+      step2: "Überprüfung der Informationen und Dokumente"
+      step3: "Finanzierungsentscheidung innerhalb von 3-5 Arbeitstagen"
+      step4: "Benachrichtigung per E-Mail und/oder Telefon"
+    
+    track_button: "Meinen Antrag einsehen"
+    
+    help_section:
+      title: "Benötigen Sie Hilfe?"
+      intro: "Unser Beraterteam steht Ihnen für alle Fragen zur Verfügung:"
+      phone: "<strong>Telefon:</strong> %company_phone% (Mo-Fr 9-18 Uhr)"
+      email: "<strong>E-Mail:</strong> credit@sedef.fr"
+      chat: "<strong>Online-Chat:</strong> Verfügbar auf unserer Website"
+    
+    important_note: "<strong>Wichtig:</strong> Bewahren Sie diese E-Mail als Nachweis Ihres Antrags auf. Sie können den Fortschritt Ihres Dossiers jederzeit über den obigen Link verfolgen."
+    disclaimer: "Diese E-Mail wurde automatisch versendet, bitte antworten Sie nicht direkt darauf."
+
+  logs:
+    credit_application_confirmed: "Kreditantrags-Bestätigung an %email% gesendet"
+    credit_application_failed: "Fehler beim Senden der Kreditbestätigung an %email%"
+    credit_application_submitted: "Kreditantrag #%applicationId% von %customerName% eingereicht"

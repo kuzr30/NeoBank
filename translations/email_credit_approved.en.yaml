@@ -1,0 +1,45 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_credit_approved.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+email_credit_approved:
+  title: "Credit application approved"
+  content:
+    page_title: "Congratulations {customerName}!"
+    intro: "We are pleased to share excellent news with you!"
+    credit_approved:
+      title: "Your credit has been approved"
+      amount_label: "Approved amount"
+      financing_note: "Financing granted by our experts"
+    contract_info:
+      title: "Contract information"
+      contract_number: "Contract number"
+      status_label: "Status"
+      status_value: "Approved - Awaiting signature"
+      rate_label: "Interest rate"
+      duration_label: "Duration"
+      monthly_payment_label: "Monthly payment"
+    next_steps:
+      title: "Next steps"
+      step_1:
+        title: "1. Contract signature"
+        description: "You will soon receive the contract to sign electronically"
+      step_2:
+        title: "2. Administrative validation"
+        description: "Our team will proceed with final verifications"
+      step_3:
+        title: "3. Fund disbursement"
+        description: "Once the contract is validated, funds will be transferred to your account"
+    personalized_support:
+      title: "Personalized support"
+      description: "A detailed contract with all the conditions of your credit will be sent to you shortly. If you have any questions, our specialized team is at your disposal to assist you."
+    thanks_message: "We thank you for your trust and are happy to be able to contribute to the realization of your project."
+    footer: "%company_name% - Credit Department<br>Credit application approval notification"
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Sending approved credit notification"
+    success: "Approved credit notification sent successfully"
+    error: "Error sending approved credit notification"
+    send_failed: "Failed to send approved credit notification"

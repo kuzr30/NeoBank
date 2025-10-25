@@ -1,0 +1,1149 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ page_title }} - {{ parent() }}{% endblock %}
+
+{% block meta_description %}{{ page_description }}{% endblock %}
+
+{% block body %}
+<div class="credit-detail-page">
+    <!-- Hero Section -->
+    <section class="credit-detail-hero{% if hero_class is defined %} {{ hero_class }}{% endif %}">
+        <div class="credit-detail-hero__container">
+            <div class="credit-detail-hero__content">
+                <div class="credit-detail-hero__breadcrumb">
+                    <a href="{{ path('credit_offers_index', {_locale: app.request.locale}) }}">{{ tp('credit_page.breadcrumb.credit_offers', [], 'credit_page') }}</a>
+                    <span>/</span>
+                    <span>{{ page_title }}</span>
+                </div>
+                
+                <h1 class="credit-detail-hero__title">{{ page_title }}</h1>
+                <p class="credit-detail-hero__subtitle">{{ page_description }}</p>
+                
+                {% block hero_highlights %}
+                <div class="credit-detail-hero__highlights">
+                    <div class="credit-highlight">
+                        <div class="credit-highlight__value">{% block taux_value %}3,5%{% endblock %}</div>
+                        <div class="credit-highlight__label">{{ tp('credit_page.hero.highlights.rate_from', [], 'credit_page') }}</div>
+                    </div>
+                    <div class="credit-highlight">
+                        <div class="credit-highlight__value">{% block montant_value %}100 000€{% endblock %}</div>
+                        <div class="credit-highlight__label">{{ tp('credit_page.hero.highlights.max_amount', [], 'credit_page') }}</div>
+                    </div>
+                    <div class="credit-highlight">
+                        <div class="credit-highlight__value">{% block duree_value %}15 ans{% endblock %}</div>
+                        <div class="credit-highlight__label">{{ tp('credit_page.hero.highlights.max_duration', [], 'credit_page') }}</div>
+                    </div>
+                </div>
+                {% endblock %}
+
+                <div class="credit-detail-hero__actions">
+                    <a href="{{ path('credit_simulation_index', {_locale: app.request.locale}) }}" class="credit-detail-hero__cta credit-detail-hero__cta--primary">
+                        {{ ux_icon('heroicons:calculator', {'class': 'credit-detail-hero__cta-icon'}) }}
+                        {{ tp('credit_page.hero.actions.simulate', [], 'credit_page') }}
+                    </a>
+                    <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-detail-hero__cta credit-detail-hero__cta--secondary">
+                        {{ ux_icon('heroicons:document-text', {'class': 'credit-detail-hero__cta-icon'}) }}
+                        {{ tp('credit_page.hero.actions.apply', [], 'credit_page') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="credit-detail-content">
+        <div class="credit-detail-content__container">
+            <div class="credit-detail-content__grid">
+                <!-- Left Column - Details -->
+                <div class="credit-detail-content__main">
+                    {% block main_sections %}
+                    <div class="credit-detail-section">
+                        <h2 class="credit-detail-section__title">
+                            {{ ux_icon('heroicons:information-circle', {'class': 'credit-detail-section__icon'}) }}
+                            {% block section_1_title %}{{ tp('credit_page.sections.section_1.title', [], 'credit_page') }}{% endblock %}
+                        </h2>
+                        <div class="credit-detail-section__content">
+                            {% block section_1_content %}
+                            <p>{{ tp('credit_page.sections.section_1.paragraph_1', [], 'credit_page') }}</p>
+                            <p>{{ tp('credit_page.sections.section_1.paragraph_2', [], 'credit_page') }}</p>
+                            {% endblock %}
+                        </div>
+                    </div>
+
+                    <div class="credit-detail-section">
+                        <h2 class="credit-detail-section__title">
+                            {{ ux_icon('heroicons:banknotes', {'class': 'credit-detail-section__icon'}) }}
+                            {% block section_2_title %}{{ tp('credit_page.sections.section_2.title', [], 'credit_page') }}{% endblock %}
+                        </h2>
+                        <div class="credit-detail-section__content">
+                            {% block section_2_content %}
+                            <div class="credit-detail-features">
+                                <div class="credit-detail-feature">
+                                    <div class="credit-detail-feature__icon">
+                                        {{ ux_icon('heroicons:currency-euro', {'class': 'credit-detail-feature__icon-svg'}) }}
+                                    </div>
+                                    <div class="credit-detail-feature__content">
+                                        <h3 class="credit-detail-feature__title">{{ tp('credit_page.sections.section_2.features.amount.title', [], 'credit_page') }}</h3>
+                                        <p class="credit-detail-feature__description">{% block feature_montant %}{{ tp('credit_page.sections.section_2.features.amount.description', [], 'credit_page') }}{% endblock %}</p>
+                                        <p class="credit-detail-feature__detail">{% block feature_montant_detail %}{{ tp('credit_page.sections.section_2.features.amount.detail', [], 'credit_page') }}{% endblock %}</p>
+                                    </div>
+                                </div>
+
+                                <div class="credit-detail-feature">
+                                    <div class="credit-detail-feature__icon">
+                                        {{ ux_icon('heroicons:clock', {'class': 'credit-detail-feature__icon-svg'}) }}
+                                    </div>
+                                    <div class="credit-detail-feature__content">
+                                        <h3 class="credit-detail-feature__title">{{ tp('credit_page.sections.section_2.features.duration.title', [], 'credit_page') }}</h3>
+                                        <p class="credit-detail-feature__description">{% block feature_duree %}{{ tp('credit_page.sections.section_2.features.duration.description', [], 'credit_page') }}{% endblock %}</p>
+                                        <p class="credit-detail-feature__detail">{% block feature_duree_detail %}{{ tp('credit_page.sections.section_2.features.duration.detail', [], 'credit_page') }}{% endblock %}</p>
+                                    </div>
+                                </div>
+
+                                <div class="credit-detail-feature">
+                                    <div class="credit-detail-feature__icon">
+                                        {{ ux_icon('heroicons:chart-bar', {'class': 'credit-detail-feature__icon-svg'}) }}
+                                    </div>
+                                    <div class="credit-detail-feature__content">
+                                        <h3 class="credit-detail-feature__title">{{ tp('credit_page.sections.section_2.features.rate.title', [], 'credit_page') }}</h3>
+                                        <p class="credit-detail-feature__description">{% block feature_taux %}{{ tp('credit_page.sections.section_2.features.rate.description', [], 'credit_page') }}{% endblock %}</p>
+                                        <p class="credit-detail-feature__detail">{% block feature_taux_detail %}{{ tp('credit_page.sections.section_2.features.rate.detail', [], 'credit_page') }}{% endblock %}</p>
+                                    </div>
+                                </div>
+
+                                <div class="credit-detail-feature">
+                                    <div class="credit-detail-feature__icon">
+                                        {{ ux_icon('heroicons:shield-check', {'class': 'credit-detail-feature__icon-svg'}) }}
+                                    </div>
+                                    <div class="credit-detail-feature__content">
+                                        <h3 class="credit-detail-feature__title">{{ tp('credit_page.sections.section_2.features.guarantee.title', [], 'credit_page') }}</h3>
+                                        <p class="credit-detail-feature__description">{% block feature_garantie %}{{ tp('credit_page.sections.section_2.features.guarantee.description', [], 'credit_page') }}{% endblock %}</p>
+                                        <p class="credit-detail-feature__detail">{% block feature_garantie_detail %}{{ tp('credit_page.sections.section_2.features.guarantee.detail', [], 'credit_page') }}{% endblock %}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endblock %}
+                        </div>
+                    </div>
+
+                    <div class="credit-detail-section">
+                        <h2 class="credit-detail-section__title">
+                            {{ ux_icon('heroicons:check-circle', {'class': 'credit-detail-section__icon'}) }}
+                            {% block section_3_title %}{{ tp('credit_page.sections.section_3.title', [], 'credit_page') }}{% endblock %}
+                        </h2>
+                        <div class="credit-detail-section__content">
+                            {% block section_3_content %}
+                            <ul class="credit-detail-advantages">
+                                <li class="credit-detail-advantage">
+                                    <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+                                    <span class="credit-detail-advantage__text">{{ tp('credit_page.sections.section_3.advantages.advantage_1', [], 'credit_page')|raw }}</span>
+                                </li>
+                                <li class="credit-detail-advantage">
+                                    <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+                                    <span class="credit-detail-advantage__text">{{ tp('credit_page.sections.section_3.advantages.advantage_2', [], 'credit_page')|raw }}</span>
+                                </li>
+                                <li class="credit-detail-advantage">
+                                    <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+                                    <span class="credit-detail-advantage__text">{{ tp('credit_page.sections.section_3.advantages.advantage_3', [], 'credit_page')|raw }}</span>
+                                </li>
+                            </ul>
+                            {% endblock %}
+                        </div>
+                    </div>
+
+                    <div class="credit-detail-section">
+                        <h2 class="credit-detail-section__title">
+                            {{ ux_icon('heroicons:document-check', {'class': 'credit-detail-section__icon'}) }}
+                            {% block section_4_title %}{{ tp('credit_page.sections.section_4.title', [], 'credit_page') }}{% endblock %}
+                        </h2>
+                        <div class="credit-detail-section__content">
+                            {% block section_4_content %}
+                            <div class="credit-detail-requirements">
+                                <div class="credit-detail-requirement">
+                                    <h3>{{ tp('credit_page.sections.section_4.requirements.borrower_profile.title', [], 'credit_page') }}</h3>
+                                    <ul>
+                                        <li>{{ tp('credit_page.sections.section_4.requirements.borrower_profile.item_1', [], 'credit_page') }}</li>
+                                        <li>{{ tp('credit_page.sections.section_4.requirements.borrower_profile.item_2', [], 'credit_page') }}</li>
+                                        <li>{{ tp('credit_page.sections.section_4.requirements.borrower_profile.item_3', [], 'credit_page') }}</li>
+                                        <li>{{ tp('credit_page.sections.section_4.requirements.borrower_profile.item_4', [], 'credit_page') }}</li>
+                                    </ul>
+                                </div>
+                                <div class="credit-detail-requirement">
+                                    <h3>{{ tp('credit_page.sections.section_4.requirements.general_conditions.title', [], 'credit_page') }}</h3>
+                                    <ul>
+                                        <li>{{ tp('credit_page.sections.section_4.requirements.general_conditions.item_1', [], 'credit_page') }}</li>
+                                        <li>{{ tp('credit_page.sections.section_4.requirements.general_conditions.item_2', [], 'credit_page') }}</li>
+                                        <li>{{ tp('credit_page.sections.section_4.requirements.general_conditions.item_3', [], 'credit_page') }}</li>
+                                        <li>{{ tp('credit_page.sections.section_4.requirements.general_conditions.item_4', [], 'credit_page') }}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {% endblock %}
+                        </div>
+                    </div>
+
+                    <div class="credit-detail-section">
+                        <h2 class="credit-detail-section__title">
+                            {{ ux_icon('heroicons:folder-open', {'class': 'credit-detail-section__icon'}) }}
+                            {% block section_5_title %}{{ tp('credit_page.sections.section_5.title', [], 'credit_page') }}{% endblock %}
+                        </h2>
+                        <div class="credit-detail-section__content">
+                            {% block section_5_content %}
+                            <div class="credit-detail-documents">
+                                <div class="credit-detail-document-category">
+                                    <h3>{{ tp('credit_page.sections.section_5.documents.identity.title', [], 'credit_page') }}</h3>
+                                    <ul>
+                                        <li>{{ tp('credit_page.sections.section_5.documents.identity.item_1', [], 'credit_page') }}</li>
+                                        <li>{{ tp('credit_page.sections.section_5.documents.identity.item_2', [], 'credit_page') }}</li>
+                                        <li>{{ tp('credit_page.sections.section_5.documents.identity.item_3', [], 'credit_page') }}</li>
+                                    </ul>
+                                </div>
+                                <div class="credit-detail-document-category">
+                                    <h3>{{ tp('credit_page.sections.section_5.documents.income.title', [], 'credit_page') }}</h3>
+                                    <ul>
+                                        <li>{{ tp('credit_page.sections.section_5.documents.income.item_1', [], 'credit_page') }}</li>
+                                        <li>{{ tp('credit_page.sections.section_5.documents.income.item_2', [], 'credit_page') }}</li>
+                                        <li>{{ tp('credit_page.sections.section_5.documents.income.item_3', [], 'credit_page') }}</li>
+                                        <li>{{ tp('credit_page.sections.section_5.documents.income.item_4', [], 'credit_page') }}</li>
+                                    </ul>
+                                </div>
+                                <div class="credit-detail-document-category">
+                                    <h3>{{ tp('credit_page.sections.section_5.documents.additional.title', [], 'credit_page') }}</h3>
+                                    <ul>
+                                        <li>{{ tp('credit_page.sections.section_5.documents.additional.item_1', [], 'credit_page') }}</li>
+                                        <li>{{ tp('credit_page.sections.section_5.documents.additional.item_2', [], 'credit_page') }}</li>
+                                        <li>{{ tp('credit_page.sections.section_5.documents.additional.item_3', [], 'credit_page') }}</li>
+                                        <li>{{ tp('credit_page.sections.section_5.documents.additional.item_4', [], 'credit_page') }}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {% endblock %}
+                        </div>
+                    </div>
+                    {% endblock %}
+                </div>
+
+                <!-- Right Column - Sidebar -->
+                <div class="credit-detail-content__sidebar">
+                    {% block sidebar %}
+                    <div class="credit-detail-sidebar">
+                        <div class="credit-detail-card">
+                            <div class="credit-detail-card__header">
+                                <h3 class="credit-detail-card__title">{{ tp('credit_page.sidebar.simulation.title', [], 'credit_page') }}</h3>
+                            </div>
+                            <div class="credit-detail-card__content">
+                                <p>{{ tp('credit_page.sidebar.simulation.text', [], 'credit_page') }}</p>
+                                <a href="{{ path('credit_simulation_index', {_locale: app.request.locale}) }}" class="credit-detail-card__cta">
+                                    {{ ux_icon('heroicons:calculator', {'class': 'credit-detail-card__cta-icon'}) }}
+                                    {{ tp('credit_page.sidebar.simulation.button', [], 'credit_page') }}
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="credit-detail-card">
+                            <div class="credit-detail-card__header">
+                                <h3 class="credit-detail-card__title">{{ tp('credit_page.sidebar.help.title', [], 'credit_page') }}</h3>
+                            </div>
+                            <div class="credit-detail-card__content">
+                                <p>{{ tp('credit_page.sidebar.help.text', [], 'credit_page') }}</p>
+                                <div class="credit-detail-contact">
+                                    <div class="credit-detail-contact__item">
+                                        {{ ux_icon('heroicons:phone', {'class': 'credit-detail-contact__icon'}) }}
+                                        <span>{{ tp_with_company('credit_page.sidebar.help.phone', [], 'credit_page') }}</span>
+                                    </div>
+                                    <div class="credit-detail-contact__item">
+                                        {{ ux_icon('heroicons:envelope', {'class': 'credit-detail-contact__icon'}) }}
+                                        <span>{{ tp_with_company('credit_page.sidebar.help.email', [], 'credit_page') }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {% block sidebar_additional %}
+                        <div class="credit-detail-card">
+                            <div class="credit-detail-card__header">
+                                <h3 class="credit-detail-card__title">{% block sidebar_card_title %}{{ tp('credit_page.sidebar.processing.title', [], 'credit_page') }}{% endblock %}</h3>
+                            </div>
+                            <div class="credit-detail-card__content">
+                                {% block sidebar_card_content %}
+                                <div class="credit-detail-timeline">
+                                    <div class="credit-detail-timeline__item">
+                                        <div class="credit-detail-timeline__icon">1</div>
+                                        <div class="credit-detail-timeline__content">
+                                            <div class="credit-detail-timeline__title">{{ tp('credit_page.sidebar.processing.step_1.title', [], 'credit_page') }}</div>
+                                            <div class="credit-detail-timeline__time">{{ tp('credit_page.sidebar.processing.step_1.time', [], 'credit_page') }}</div>
+                                        </div>
+                                    </div>
+                                    <div class="credit-detail-timeline__item">
+                                        <div class="credit-detail-timeline__icon">2</div>
+                                        <div class="credit-detail-timeline__content">
+                                            <div class="credit-detail-timeline__title">{{ tp('credit_page.sidebar.processing.step_2.title', [], 'credit_page') }}</div>
+                                            <div class="credit-detail-timeline__time">{{ tp('credit_page.sidebar.processing.step_2.time', [], 'credit_page') }}</div>
+                                        </div>
+                                    </div>
+                                    <div class="credit-detail-timeline__item">
+                                        <div class="credit-detail-timeline__icon">3</div>
+                                        <div class="credit-detail-timeline__content">
+                                            <div class="credit-detail-timeline__title">{{ tp('credit_page.sidebar.processing.step_3.title', [], 'credit_page') }}</div>
+                                            <div class="credit-detail-timeline__time">{{ tp('credit_page.sidebar.processing.step_3.time', [], 'credit_page') }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endblock %}
+                            </div>
+                        </div>
+                        {% endblock %}
+                    </div>
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Notice -->
+    <section class="credit-legal-notice">
+        <div class="credit-legal-notice__container">
+            <div class="credit-legal-notice__content">
+                <div class="credit-legal-notice__warning">
+                    {{ ux_icon('heroicons:exclamation-triangle', {'class': 'credit-legal-notice__warning-icon'}) }}
+                    <div class="credit-legal-notice__warning-content">
+                        <h3 class="credit-legal-notice__warning-title">{{ tp('credit_page.legal.warning.title', [], 'credit_page') }}</h3>
+                    </div>
+                </div>
+                
+                {% block legal_details %}
+                <div class="credit-legal-notice__details">
+                    <h4>{{ tp('credit_page.legal.details.title', [], 'credit_page') }}</h4>
+                    <ul>
+                        <li>{{ tp('credit_page.legal.details.taeg', [], 'credit_page')|raw }}</li>
+                        <li>{{ tp('credit_page.legal.details.amount', [], 'credit_page')|raw }}</li>
+                        <li>{{ tp('credit_page.legal.details.duration', [], 'credit_page')|raw }}</li>
+                        <li>{{ tp('credit_page.legal.details.retraction', [], 'credit_page')|raw }}</li>
+                    </ul>
+                </div>
+                {% endblock %}
+
+                <div class="credit-legal-notice__footer">
+                    <p>{{ tp('credit_page.legal.footer', [], 'credit_page') }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="credit-cta">
+        <div class="credit-cta__container">
+            <div class="credit-cta__content">
+                <h2 class="credit-cta__title">{% block cta_title %}{{ tp('credit_page.cta.title', [], 'credit_page') }}{% endblock %}</h2>
+                <p class="credit-cta__subtitle">
+                    {% block cta_subtitle %}{{ tp('credit_page.cta.subtitle', [], 'credit_page') }}{% endblock %}
+                </p>
+                
+                <div class="credit-cta__actions">
+                    <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-cta__button credit-cta__button--primary">
+                        {{ ux_icon('heroicons:document-text', {'class': 'credit-cta__button-icon'}) }}
+                        {{ tp('credit_page.cta.apply_button', [], 'credit_page') }}
+                    </a>
+                    <a href="{{ path('credit_simulation_index', {_locale: app.request.locale}) }}" class="credit-cta__button credit-cta__button--secondary">
+                        {{ ux_icon('heroicons:calculator', {'class': 'credit-cta__button-icon'}) }}
+                        {{ tp('credit_page.cta.simulate_button', [], 'credit_page') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% block custom_styles %}
+<style>
+/* =================================================================
+   CREDIT DETAIL PAGE - STRUCTURE DE BASE
+   ================================================================= */
+
+.credit-detail-page {
+    min-height: 100vh;
+    background: #fafbfc;
+}
+
+/* Credit Detail Hero */
+.credit-detail-hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #1e40af 100%);
+    padding: 6rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.credit-detail-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+    z-index: 1;
+}
+
+.credit-detail-hero__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.credit-detail-hero__breadcrumb {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.credit-detail-hero__breadcrumb a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.credit-detail-hero__breadcrumb a:hover {
+    color: white;
+}
+
+.credit-detail-hero__breadcrumb span {
+    margin: 0 0.5rem;
+}
+
+.credit-detail-hero__title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    color: white !important;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.credit-detail-hero__subtitle {
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    color: white !important;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.credit-detail-hero__highlights {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.credit-highlight {
+    text-align: center;
+}
+
+.credit-highlight__value {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #fff !important;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.credit-highlight__label {
+    font-size: 0.875rem;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.credit-detail-hero__actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.credit-detail-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    justify-content: center;
+}
+
+.credit-detail-hero__cta--primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+}
+
+.credit-detail-hero__cta--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.credit-detail-hero__cta--secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+}
+
+.credit-detail-hero__cta--secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    color: white;
+    text-decoration: none;
+}
+
+.credit-detail-hero__cta-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Credit Detail Content */
+.credit-detail-content {
+    padding: 6rem 0;
+}
+
+.credit-detail-content__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.credit-detail-content__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+}
+
+/* Credit Detail Section */
+.credit-detail-section {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.credit-detail-section__title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 2rem;
+}
+
+.credit-detail-section__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #10b981;
+}
+
+.credit-detail-section__content p {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.credit-detail-section__content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Credit Detail Features */
+.credit-detail-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.credit-detail-feature {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+}
+
+.credit-detail-feature__icon {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.credit-detail-feature__icon-svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
+}
+
+.credit-detail-feature__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.credit-detail-feature__description {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #10b981;
+    margin-bottom: 0.25rem;
+}
+
+.credit-detail-feature__detail {
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+/* Credit Detail Advantages */
+.credit-detail-advantages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.credit-detail-advantage {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.credit-detail-advantage:last-child {
+    margin-bottom: 0;
+}
+
+.credit-detail-advantage__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #10b981;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.credit-detail-advantage__icon-svg {
+    width: 1rem;
+    height: 1rem;
+    color: white;
+}
+
+.credit-detail-advantage__text {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.credit-detail-advantage__text strong {
+    color: #0f172a;
+}
+
+/* Credit Detail Requirements */
+.credit-detail-requirements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.credit-detail-requirement {
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+}
+
+.credit-detail-requirement h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.credit-detail-requirement ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.credit-detail-requirement li {
+    color: #64748b;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.credit-detail-requirement li::before {
+    content: '•';
+    color: #10b981;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Credit Detail Documents */
+.credit-detail-documents {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.credit-detail-document-category {
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+}
+
+.credit-detail-document-category h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.credit-detail-document-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.credit-detail-document-category li {
+    color: #64748b;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.credit-detail-document-category li::before {
+    content: '📄';
+    position: absolute;
+    left: 0;
+}
+
+/* Credit Detail Sidebar */
+.credit-detail-content__sidebar {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+}
+
+.credit-detail-card {
+    background: white;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.credit-detail-card:last-child {
+    margin-bottom: 0;
+}
+
+.credit-detail-card__header {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.credit-detail-card__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin: 0;
+}
+
+.credit-detail-card__content {
+    padding: 1.5rem;
+}
+
+.credit-detail-card__content p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.credit-detail-card__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    justify-content: center;
+}
+
+.credit-detail-card__cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+.credit-detail-card__cta-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Credit Detail Contact */
+.credit-detail-contact__item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    color: #64748b;
+}
+
+.credit-detail-contact__item:last-child {
+    margin-bottom: 0;
+}
+
+.credit-detail-contact__icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #10b981;
+}
+
+/* Credit Detail Timeline */
+.credit-detail-timeline__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.credit-detail-timeline__item:last-child {
+    margin-bottom: 0;
+}
+
+.credit-detail-timeline__icon {
+    width: 2rem;
+    height: 2rem;
+    background: #10b981;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+}
+
+.credit-detail-timeline__title {
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+}
+
+.credit-detail-timeline__time {
+    font-size: 0.875rem;
+    color: #10b981;
+    font-weight: 600;
+}
+
+/* Credit Legal Notice */
+.credit-legal-notice {
+    background: #f1f5f9;
+    padding: 4rem 0;
+    border-top: 1px solid #e2e8f0;
+}
+
+.credit-legal-notice__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.credit-legal-notice__warning {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    backdrop-filter: blur(20px);
+    padding: 2rem 2.5rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 3rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.8s ease-out;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.credit-legal-notice__warning::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    animation: slideDown 1s ease-out 0.5s both;
+}
+
+.credit-legal-notice__warning:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.credit-legal-notice__warning-icon {
+    width: 3rem;
+    height: 3rem;
+    color: #ffffffff;
+    flex-shrink: 0;
+    animation: pulse 2s infinite;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.credit-legal-notice__warning-content {
+    flex: 1;
+}
+
+.credit-legal-notice__warning-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffffff;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.025em;
+}
+
+.credit-legal-notice__warning-text {
+    color: #fbfbfbff;
+    font-weight: 500;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Animations pour la section warning */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+.credit-legal-notice__details h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+}
+
+.credit-legal-notice__details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.credit-legal-notice__details li {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.credit-legal-notice__details li::before {
+    content: '⚖️';
+    position: absolute;
+    left: 0;
+}
+
+.credit-legal-notice__details strong {
+    color: #0f172a;
+}
+
+.credit-legal-notice__footer {
+    padding-top: 2rem;
+    border-top: 1px solid #e2e8f0;
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Credit CTA */
+.credit-cta {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 4rem 0;
+}
+
+.credit-cta__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.credit-cta__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1rem;
+    letter-spacing: -0.025em;
+}
+
+.credit-cta__subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.credit-cta__actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.credit-cta__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    justify-content: center;
+}
+
+.credit-cta__button--primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+}
+
+.credit-cta__button--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.credit-cta__button--secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+}
+
+.credit-cta__button--secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    color: white;
+    text-decoration: none;
+}
+
+.credit-cta__button-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .credit-detail-content__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .credit-detail-section {
+        padding: 2rem;
+    }
+    
+    .credit-detail-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .credit-detail-requirements {
+        grid-template-columns: 1fr;
+    }
+    
+    .credit-detail-documents {
+        grid-template-columns: 1fr;
+    }
+    
+    .credit-detail-hero__highlights {
+        gap: 2rem;
+    }
+    
+    .credit-detail-hero__actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .credit-cta__actions {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+{% endblock %}
+{% endblock %}

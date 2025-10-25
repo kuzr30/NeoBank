@@ -1,0 +1,94 @@
+banking_accounts:
+  # Header section
+  header:
+    main_account: "Hauptkonto"
+    account_number: "Konto-Nr."
+    iban: "IBAN"
+    currency: "Währung"
+    available_balance: "Verfügbares Guthaben"
+    no_account: "Kein Konto"
+    no_account_message: "Kontaktieren Sie Ihren Berater, um ein Konto zu eröffnen"
+    no_balance: "Kein verfügbares Guthaben"
+
+  # Filters and tools
+  filters:
+    all_operations: "Alle Vorgänge"
+    transfers: "Überweisungen"
+    direct_debits: "Lastschriften"
+    card_payments: "Bankkarten"
+    checks: "Schecks"
+    filter_button: "Filtern"
+    download: "Herunterladen"
+    print: "Drucken"
+
+  # Operations table
+  table:
+    date: "Datum"
+    operation: "Vorgang"
+    debit: "Belastung"
+    credit: "Gutschrift"
+    reference: "Ref"
+
+  # Transaction statuses
+  status:
+    pending: "Ausstehend"
+    executing: "Wird ausgeführt"
+    cancelled: "Storniert"
+    blocked: "Gesperrt"
+    completed: "Abgeschlossen"
+
+  # Empty state
+  empty_state:
+    no_transactions: "Keine Transaktionen gefunden"
+    no_transactions_message: "Ihre Transaktionen werden hier angezeigt, sobald sie durchgeführt wurden"
+
+  # Pagination
+  pagination:
+    previous: "Vorherige"
+    next: "Weiter"
+    page_info: "Seite %d von %d (%d Vorgang%s)"
+    no_operations: "Kein Vorgang"
+    operation_singular: ""
+    operation_plural: "e"
+    
+  # Account info
+  account:
+    balance: "Saldo"
+    available: "Verfügbar"
+    number: "Kontonummer"
+    type: "Kontotyp"
+    status: "Status"
+    opened_date: "Eröffnungsdatum"
+    last_transaction: "Letzte Transaktion"
+    
+  # Account types
+  types:
+    checking: "Girokonto"
+    savings: "Sparkonto"
+    credit: "Kreditkonto"
+    
+  # Account Status
+  account_status:
+    active: "Aktiv"
+    inactive: "Inaktiv"
+    blocked: "Gesperrt"
+    
+  # Actions
+  actions:
+    view_transactions: "Transaktionen anzeigen"
+    view_details: "Details anzeigen"
+    download_statement: "Kontoauszug herunterladen"
+    
+  # Messages
+  messages:
+    no_accounts: "Kein Konto verfügbar"
+    access_denied: "Zugriff auf dieses Konto verweigert"
+    
+  # Currency
+  currency: "€"
+
+  # Transaction descriptions
+  descriptions:
+    credit_to_main_debit: "Überweisung vom Kredit zum Hauptkonto"
+    credit_to_main_credit: "Überweisung vom Kredit erhalten"
+    credit_release: "Kreditfreigabe"

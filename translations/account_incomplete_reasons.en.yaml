@@ -1,0 +1,18 @@
+# Account incomplete reasons
+account_incomplete_reason:
+  missing_personal_info: "Missing personal information"
+  missing_personal_info_description: "First name, last name or date of birth"
+  missing_address: "Missing address"
+  missing_address_description: "Complete address required"
+  missing_phone: "Missing phone number"
+  missing_phone_description: "Valid phone number required"
+  missing_id_document: "Missing ID document"
+  missing_id_document_description: "ID card or passport"
+  missing_proof_of_address: "Missing proof of address"
+  missing_proof_of_address_description: "Bill or statement less than 3 months old"
+  incomplete_profile: "Incomplete profile"
+  incomplete_profile_description: "Multiple information missing"
+  missing_employment_info: "Missing employment information"
+  missing_employment_info_description: "Profession and employment status"
+  missing_tax_info: "Missing tax information"
+  missing_tax_info_description: "Tax number and country of tax residence"

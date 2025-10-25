@@ -1,0 +1,82 @@
+banking_transfers:
+  header:
+    title: "Transferencias"
+    subtitle: "Realice transferencias a sus cuentas registradas"
+    last_updated: "Última actualización: %datetime%"
+    new_transfer: "Nueva transferencia"
+  
+  active_transfers:
+    title: "Transferencias en curso"
+    transfer_to: "Transferencia hacia %account%"
+    status:
+      pending: "Pendiente"
+      executing: "En proceso"
+    validation_code_required: "En espera del código de validación"
+    actions:
+      enter_code: "Ingresar código"
+      view_details: "Ver detalles"
+  
+  beneficiaries:
+    title: "Mis beneficiarios"
+    iban_label: "IBAN:"
+    empty_state:
+      title: "Ninguna cuenta beneficiaria registrada"
+      description: "Agregue cuentas RIB para poder realizar transferencias"
+      add_rib_button: "Agregar un RIB"
+  
+  actions:
+    one_time:
+      title: "Transferencia única"
+      description: "Realizar una transferencia única a un beneficiario"
+      button: "Realizar"
+    
+    recurring:
+      title: "Transferencia permanente"
+      description: "Programar una transferencia recurrente automática"
+      button: "Programar"
+    
+    instant:
+      title: "Transferencia instantánea"
+      description: "Transferencia ejecutada en pocos segundos"
+      button: "Enviar"
+    
+    add_beneficiary:
+      title: "Nuevo beneficiario"
+      description: "Agregar un nuevo destinatario de transferencia"
+      button: "Agregar"
+  
+  filters:
+    all_transfers: "Todas las transferencias"
+    sent_transfers: "Transferencias enviadas"
+    received_transfers: "Transferencias recibidas"
+    recurring_transfers: "Transferencias permanentes"
+    instant_transfers: "Transferencias instantáneas"
+    all_accounts: "Todas las cuentas"
+    account_checking: "Cuenta Corriente ****8547"
+    account_savings: "Cuenta Ahorro A ****2143"
+    filter_button: "Filtrar"
+    export_button: "Exportar"
+  
+  table:
+    headers:
+      date: "Fecha"
+      type: "Tipo"
+      beneficiary_sender: "Beneficiario / Remitente"
+      reason: "Motivo"
+      amount: "Monto"
+      status: "Estado"
+      actions: "Acciones"
+    
+    transfer_types:
+      received: "Recibida"
+      sent: "Enviada"
+      internal: "Interna"
+      instant: "Instantánea"
+    
+    status:
+      executed: "Ejecutada"
+  
+  pagination:
+    previous: "Anterior"
+    next: "Siguiente"
+    page_info: "Página %current% de %total% (%count% transferencias)"

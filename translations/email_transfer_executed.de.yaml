@@ -1,0 +1,37 @@
+email_transfer_executed:
+  title: "Überweisung erfolgreich ausgeführt"
+  
+  content:
+    page_title: "Überweisung erfolgreich durchgeführt"
+    greeting: "Herzlichen Glückwunsch {firstName}!"
+    
+    transaction_completed:
+      title: "Transaktion abgeschlossen"
+      description: "Ihre Überweisung wurde erfolgreich ausgeführt. Alle Validierungscodes wurden bestätigt und der Geldtransfer wurde gemäß Ihren Anweisungen durchgeführt."
+    
+    execution_details:
+      title: "Ausführungsdetails"
+      reference: "Überweisungsreferenz"
+      amount: "Überwiesener Betrag"
+      amount_value: "{amount} €"
+      beneficiary_account: "Empfängerkonto"
+      transfer_reason: "Überweisungsgrund"
+      execution_date: "Ausführungsdatum"
+      executed_at: "{executedAt}"
+    
+    account_update:
+      title: "Aktualisierung Ihrer Konten"
+      description: "Der Betrag wurde von Ihrem Hauptkonto abgebucht. Sie können Ihre Bewegungen und Ihren aktualisierten Saldo in Ihrem Online-Banking-Bereich einsehen."
+    
+    banking_access:
+      title: "Zugang zu Ihren Konten"
+      view_banking_button: "Mein Banking-Bereich anzeigen"
+      check_instruction: "Sehen Sie Ihre aktualisierten Bewegungen und Salden ein"
+    
+    security_thanks: "Vielen Dank für Ihr Vertrauen. Ihre Transaktion wurde unter optimalen Sicherheitsbedingungen durchgeführt."
+    
+    footer: "<strong>%company_name% - Überweisungsservice</strong><br>Automatische Bestätigung der Überweisungsausführung"
+  
+  log:
+    transfer_executed: "Überweisung {transferId} erfolgreich für einen Betrag von {amount}€ ausgeführt"
+    email_sent: "Ausführungsbestätigungs-E-Mail an {userEmail} gesendet"

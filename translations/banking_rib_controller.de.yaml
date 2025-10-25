@@ -1,0 +1,7 @@
+flash:
+  iban_already_exists: "Die eingegebene IBAN ist bereits in Ihrem Konto registriert. Bitte überprüfen Sie diese oder verwenden Sie eine andere IBAN."
+  rib_added_success: "Ihre IBAN wurde erfolgreich hinzugefügt."
+  rib_deleted_success: "Die IBAN wurde erfolgreich gelöscht."
+
+form_error:
+  iban_duplicate: "Die eingegebene IBAN ist bereits in Ihrem Konto registriert. Bitte verwenden Sie eine andere IBAN."

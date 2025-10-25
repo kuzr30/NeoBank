@@ -1,0 +1,217 @@
+# Vertalingen voor krediet simulatie - Nederlands
+credit_simulation:
+  title: "Kredietsimulator"
+  subtitle: "Bereken uw krediet in enkele klikken"
+  amortization_title: "Aflossingstabel"
+  
+  # Hero Section
+  hero:
+    title: "Krediet simulator"
+    subtitle: "Krijg uw schatting in 2 minuten"
+    description: "Bereken uw maandelijkse betalingen en ontdek de beste voorwaarden voor uw project"
+    disclaimer: "Gratis simulatie zonder verplichtingen"
+
+  # Formulier
+  form:
+    amount:
+      label: "Kredietbedrag"
+      help: "Gewenst bedrag tussen € 1.000 en € 500.000"
+      placeholder: "Bijv: 50.000"
+      currency: "€"
+    
+    credit_type:
+      label: "Type krediet"
+      help: "Selecteer het type krediet dat past bij uw project"
+      placeholder: "Kies een krediettype"
+    duration:
+      label: "Kredietduur"
+      help: "Gewenste terugbetalingsperiode"
+      placeholder: "Selecteer een duur"
+    duration_unit:
+      label: "Duureenheid"
+      help: "Maanden of jaren"
+    rate_info: "Indicatief tarief:"
+    calculate_button: "Bereken mijn maandelijkse betaling"
+    calculating: "Berekening bezig..."
+  # Krediettypen
+  credit_types:
+    immobilier:
+      label: "Hypotheeklening"
+      description: "Financiering voor de aankoop van onroerend goed"
+    auto:
+      label: "Autolening"
+      description: "Financiering voor de aankoop van een voertuig"
+    consommation:
+      label: "Consumentenkrediet"
+      description: "Krediet voor uw persoonlijke projecten"
+    travaux:
+      label: "Renovatiekrediet"
+      description: "Financiering voor uw renovatiewerken"
+    professionnel:
+      label: "Zakelijk Krediet"
+      description: "Krediet voor uw zakelijke projecten"
+    personal:
+      label: "Persoonlijke Lening"
+      description: "Lening zonder bestedingsverantwoording"
+    home_improvement:
+      label: "Verbouwingskrediet"
+    debt_consolidation:
+      label: "Kredietherstructurering"
+      description: "Samenvoeging van uw bestaande kredieten"
+    mortgage:
+      label: "Hypothecaire Lening"
+      description: "Krediet gegarandeerd door een hypotheek"
+    renouvelable:
+      label: "Hernieuwbaar Krediet"
+      description: "Geldreserve die naar believen herbruikbaar is"
+    etudiant:
+      label: "Studielening"
+      description: "Financiering van hoger onderwijs"
+    relais:
+      label: "Overbruggingskrediet"
+      description: "Voorschot in afwachting van verkoop van onroerend goed"
+    microcredit:
+      label: "Persoonlijk Microkrediet"
+      description: "Kleine bedragen voor personen uitgesloten van traditioneel bankieren"
+    leasing:
+      label: "Leasing"
+      description: "Huur met aankoopoptie (auto, professionele apparatuur)"
+    voyage:
+      label: "Reiskrediet"
+      description: "Financiering voor uw reisprojecten"
+  # Duureenheden
+  duration_units:
+    months: "Maanden"
+    years: "Jaren"
+  # Duren
+  durations:
+    twelve_months: "12 maanden"
+    twenty_four_months: "24 maanden"
+    thirty_six_months: "3 jaar"
+    forty_eight_months: "4 jaar"
+    sixty_months: "5 jaar"
+    seventy_two_months: "6 jaar"
+    eighty_four_months: "7 jaar"
+    ninety_six_months: "8 jaar"
+    one_hundred_twenty_months: "10 jaar"
+    one_hundred_eighty_months: "15 jaar"
+    two_hundred_forty_months: "20 jaar"
+    three_hundred_months: "25 jaar"
+  # Resultaten
+  results:
+    title: "Uw simulatie"
+    success_title: "Simulatie geslaagd!"
+    monthly_payment: "Maandelijkse betaling"
+    total_amount: "Totaalbedrag"
+    total_interest: "Kredietkosten"
+    rate: "Toegepast tarief"
+    duration: "Duur"
+    summary:
+      title: "Samenvatting"
+      amount_borrowed: "Geleend bedrag"
+      monthly_payment: "Maandelijkse betaling"
+      duration: "Duur"
+      rate: "Tarief"
+      total_cost: "Totale kosten"
+      total_interest: "Rente"
+      insurance_rate: "Verzekeringstarief"
+      insurance_monthly: "waarvan verzekering"
+      interest_monthly: "waarvan rente"
+      insurance_total: "waarvan verzekering"
+      interest_total: "waarvan rente"
+      per_month: "/maand"
+      per_year: "/jaar"
+    actions:
+      apply: "Aanvraag indienen"
+      modify: "Simulatie wijzigen"
+      amortization_table: "Aflossingstabel bekijken"
+      save: "Opslaan"
+      share: "Delen"
+  # Aflossingstabel
+  amortization:
+    title: "Aflossingstabel"
+    subtitle: "Maandelijks terugbetalingsdetail"
+    back_to_simulation: "Terug naar simulatie"
+    summary:
+      amount_borrowed: "Geleend kapitaal"
+      monthly_payment: "Maandelijkse betaling"
+      total_interest: "Totale rente"
+      total_amount: "Totaalbedrag"
+    table:
+      month: "Maand"
+      payment: "Maandelijkse betaling"
+      interest: "Rente"
+      principal: "Kapitaal"
+      balance: "Resterend kapitaal"
+      print: "Afdrukken"
+      download: "Downloaden"
+      back: "Terug"
+  # Foutmeldingen
+  errors:
+    title: "Simulatiefout"
+    invalid_data: "Ongeldige gegevens. Controleer uw invoer."
+    amount_required: "Het bedrag is verplicht"
+    amount_too_low: "Het minimumbedrag is € 1.000"
+    amount_too_high: "Het maximumbedrag is € 500.000"
+    duration_required: "De duur is verplicht"
+    duration_too_low: "De minimumduur is 12 maanden"
+    duration_too_high: "De maximumduur hangt af van het krediettype"
+    credit_type_required: "Het krediettype is verplicht"
+    invalid_credit_type: "Ongeldig krediettype"
+    calculation_error: "Fout bij berekening"
+    actions:
+      retry: "Opnieuw proberen"
+      modify: "Parameters wijzigen"
+    tips:
+      title: "Tips"
+      tip1: "Controleer of het bedrag tussen € 1.000 en € 500.000 ligt"
+      tip2: "Zorg ervoor dat de duur geschikt is voor het krediettype"
+      tip3: "Neem contact op met een adviseur voor grote bedragen"
+      tip4: "Raadpleeg onze algemene voorwaarden voor meer informatie"
+  # Juridische berichten
+  legal:
+    title: "Juridische informatie"
+    text: "Deze simulatie wordt ter indicatie verstrekt. De definitieve tarieven en voorwaarden worden bepaald bij uw kredietaanvraag, onder voorbehoud van acceptatie van uw dossier."
+    credit_warning: "Een lening verplicht u en moet worden terugbetaald. Controleer uw terugbetalingscapaciteit voordat u zich committeert."
+    licensed_bank: "Erkende kredietinstelling"
+    insurance_broker: "Verzekeringsmakelaar"
+    badges:
+      acpr: "ACPR erkend"
+      guarantee_fund: "Garantiefonds"
+      security: "Beveiligde transacties"
+  # Validatieberichten
+  validation:
+    processing: "Verwerking bezig..."
+    success: "Simulatie succesvol berekend"
+    time_estimate: "Geschatte tijd: 2 minuten"
+  # JavaScript berichten
+  js:
+    errors:
+      incomplete_fields: "Vul alle velden correct in."
+      calculation_error: "Fout bij het berekenen van de simulatie"
+      invalid_amount: "Het ingevoerde bedrag is ongeldig"
+      invalid_duration: "De ingevoerde duur is ongeldig"
+      
+    currency:
+      symbol: "€"
+      per_month: "€/maand"
+    formatting:
+      zero_value: "0"
+      zero_currency: "0€"
+      zero_per_month: "0€/maand"
+    console:
+      connected: "Krediet simulatie controller verbonden"
+      calculation_data: "Berekening:"
+      calculation_error: "Fout bij berekening:"
+      requesting_rate: "Aanvraag voor gepersonaliseerd tarief bezig..."
+      contact_advisor: "Neem contact op met een adviseur voor een gepersonaliseerd tarief"
+  # CTA Section
+  cta:
+    view_amortization_table: "Bekijk aflossingschema"
+    apply_for_credit: "Mijn aanvraag indienen"
+    monthly_details: "Maandelijkse details van uw terugbetaling"
+  
+  # Algemene termen
+  common:
+    months: "maanden"
+    years: "jaar"

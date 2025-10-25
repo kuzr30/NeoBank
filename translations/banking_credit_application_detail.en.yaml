@@ -1,0 +1,49 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_credit_application_detail.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_credit_application_detail:
+  header:
+    title: "Credit application details"
+    reference: "Application No. %reference%"
+    amount_label: "Requested amount"
+  
+  navigation:
+    back_to_credits: "Back to credits"
+  
+  credit_info:
+    title: "Credit information"
+    type: "Credit type"
+    loan_amount: "Requested amount"
+    duration: "Duration"
+    monthly_payment: "Calculated monthly payment"
+    total_cost: "Total credit cost"
+    months: "months"
+    years: "years"
+  
+  personal_info:
+    title: "Personal information"
+    full_name: "Full name"
+    email: "Email"
+    phone: "Phone"
+    birth_date: "Date of birth"
+  
+  financial_situation:
+    title: "Financial situation"
+    monthly_income: "Monthly income"
+    monthly_expenses: "Monthly expenses"
+    employer: "Employer"
+    job_title: "Position"
+  
+  application_tracking:
+    title: "Application tracking"
+    current_status: "Current status"
+    application_date: "Application date"
+    last_update: "Last update"
+    notes: "Notes"
+  
+  actions:
+    view_amortization: "View amortization schedule"
+    view_contract: "View contract"
+    download_contract: "Download contract"

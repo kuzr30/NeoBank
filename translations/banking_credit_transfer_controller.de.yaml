@@ -1,0 +1,7 @@
+# Traductions pour Banking/CreditTransferController
+flash:
+  invalid_security_token: "Ungültiger Sicherheitstoken."
+  sub_account_not_found: "Unterkonto nicht gefunden oder Zugriff verweigert."
+  verification_code_sent: "Bestätigungscode an Ihre E-Mail-Adresse gesendet."
+  transfer_success: "Überweisung erfolgreich durchgeführt!"
+  transfer_error: "Fehler bei der Überweisung: "

@@ -1,0 +1,18 @@
+# Razones de cuenta incompleta
+account_incomplete_reason:
+  missing_personal_info: "Información personal faltante"
+  missing_personal_info_description: "Nombre, apellido o fecha de nacimiento"
+  missing_address: "Dirección faltante"
+  missing_address_description: "Se requiere dirección completa"
+  missing_phone: "Número de teléfono faltante"
+  missing_phone_description: "Se requiere número de teléfono válido"
+  missing_id_document: "Documento de identidad faltante"
+  missing_id_document_description: "Tarjeta de identidad o pasaporte"
+  missing_proof_of_address: "Comprobante de domicilio faltante"
+  missing_proof_of_address_description: "Factura o extracto de menos de 3 meses"
+  incomplete_profile: "Perfil incompleto"
+  incomplete_profile_description: "Falta información múltiple"
+  missing_employment_info: "Información laboral faltante"
+  missing_employment_info_description: "Profesión y situación laboral"
+  missing_tax_info: "Información fiscal faltante"
+  missing_tax_info_description: "Número fiscal y país de residencia fiscal"

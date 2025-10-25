@@ -1,0 +1,243 @@
+<!-- Virement Compte Crédit vers Compte Principal -->
+<section class="banking__content">
+    <div class="banking__operations-header">
+        <div class="banking__account-summary">
+            <h1 class="banking__account-title">{{ tp('banking_credit_transfer.header.title', [], 'banking_credit_transfer') }}</h1>
+            <div class="banking__account-details">
+                <span class="banking__account-type">{{ tp('banking_credit_transfer.header.subtitle', [], 'banking_credit_transfer') }}</span>
+                <span class="banking__account-updated">{{ "now"|date('d/m/Y à H:i') }}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="banking__transfer-form-wrapper">
+        <div class="banking__transfer-card">
+            <!-- Section Source -->
+            <div class="banking__transfer-section">
+                <h3 class="banking__transfer-section-title">{{ tp('banking_credit_transfer.sections.from', [], 'banking_credit_transfer') }}</h3>
+                <div class="banking__account-selector banking__account-selector--selected">
+                    <div class="banking__account-icon">
+                        <svg class="banking__account-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                        </svg>
+                    </div>
+                    <div class="banking__account-info">
+                        <div class="banking__account-name">{{ tp('banking_credit_transfer.accounts.credit_account', [], 'banking_credit_transfer') }}</div>
+                        <div class="banking__account-number">{{ subAccountCredit.account.accountNumber }}</div>
+                        <div class="banking__account-balance">{{ subAccountCredit.amount|number_format(2, ',', ' ') }} €</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Destination -->
+            <div class="banking__transfer-section">
+                <h3 class="banking__transfer-section-title">{{ tp('banking_credit_transfer.sections.to', [], 'banking_credit_transfer') }}</h3>
+                <div class="banking__account-selector banking__account-selector--selected">
+                    <div class="banking__account-icon banking__account-icon--primary">
+                        <svg class="banking__account-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1"></path>
+                        </svg>
+                    </div>
+                    <div class="banking__account-info">
+                        <div class="banking__account-name">{{ tp('banking_credit_transfer.accounts.main_account', [], 'banking_credit_transfer') }}</div>
+                        <div class="banking__account-number">{{ tp('banking_credit_transfer.accounts.current_account', [], 'banking_credit_transfer') }}</div>
+                        <div class="banking__account-balance">{{ tp('banking_credit_transfer.accounts.destination', [], 'banking_credit_transfer') }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulaire de transfert -->
+            <form method="post" action="{{ path('banking_credit_transfer_initiate') }}" class="banking__transfer-form" data-turbo="false">
+                <input type="hidden" name="sub_account_id" value="{{ subAccountCredit.id }}">
+                <input type="hidden" name="_token" value="{{ csrf_token('credit_transfer') }}">
+
+                <div class="banking__form-section">
+                    <h3 class="banking__transfer-section-title">{{ tp('banking_credit_transfer.sections.amount', [], 'banking_credit_transfer') }}</h3>
+                    <div class="banking__amount-input-wrapper">
+                        <input type="number" 
+                               class="banking__amount-input" 
+                               id="amount" 
+                               name="amount" 
+                               step="0.01" 
+                               min="0.01" 
+                               max="{{ subAccountCredit.amount }}" 
+                               placeholder="{{ tp('banking_credit_transfer.form.amount_placeholder', [], 'banking_credit_transfer') }}"
+                               required>
+                        <span class="banking__amount-currency">{{ tp('banking_credit_transfer.form.amount_currency', [], 'banking_credit_transfer') }}</span>
+                    </div>
+                    <div class="banking__amount-help">{{ tp('banking_credit_transfer.form.amount_help_available', [], 'banking_credit_transfer') }} : {{ subAccountCredit.amount|number_format(2, ',', ' ') }} €</div>
+                </div>
+
+                <div class="banking__form-actions">
+                    <a href="{{ path('banking_credits') }}" class="banking__btn banking__btn--secondary">{{ tp('banking_credit_transfer.actions.cancel', [], 'banking_credit_transfer') }}</a>
+                    <button type="submit" class="banking__btn banking__btn--primary">{{ tp('banking_credit_transfer.actions.continue', [], 'banking_credit_transfer') }}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<style>
+.banking__transfer-form-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.banking__transfer-card {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.banking__transfer-section {
+    margin-bottom: 32px;
+}
+
+.banking__transfer-section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 16px;
+}
+
+.banking__account-selector {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    background: #f8f9fa;
+}
+
+.banking__account-selector--selected {
+    border-color: #0066cc;
+    background: #f0f8ff;
+}
+
+.banking__account-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e74c3c;
+    color: white;
+    margin-right: 16px;
+}
+
+.banking__account-icon--primary {
+    background: #0066cc;
+}
+
+.banking__account-icon-svg {
+    width: 24px;
+    height: 24px;
+}
+
+.banking__account-info {
+    flex: 1;
+}
+
+.banking__account-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 4px;
+}
+
+.banking__account-number {
+    font-size: 13px;
+    color: #7f8c8d;
+    margin-bottom: 4px;
+}
+
+.banking__account-balance {
+    font-size: 14px;
+    font-weight: 600;
+    color: #27ae60;
+}
+
+.banking__amount-input-wrapper {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.banking__amount-input {
+    width: 100%;
+    padding: 16px 50px 16px 16px;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: right;
+    background: #ffffff;
+}
+
+.banking__amount-input:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.banking__amount-currency {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    font-weight: 600;
+    color: #7f8c8d;
+}
+
+.banking__amount-help {
+    font-size: 13px;
+    color: #7f8c8d;
+}
+
+.banking__form-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.banking__btn {
+    flex: 1;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.banking__btn--primary {
+    background: #0066cc;
+    color: white;
+}
+
+.banking__btn--primary:hover {
+    background: #0052a3;
+    text-decoration: none;
+    color: white;
+}
+
+.banking__btn--secondary {
+    background: #f8f9fa;
+    color: #6c757d;
+    border: 1px solid #e1e8ed;
+}
+
+.banking__btn--secondary:hover {
+    background: #f1f5f9;
+    text-decoration: none;
+    color: #495057;
+}
+</style>
+
+

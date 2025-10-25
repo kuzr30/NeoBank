@@ -1,0 +1,269 @@
+credit_application:
+  messages:
+    step_completed: "Schritt abgeschlossen"
+    complete_previous_steps: "Bitte vervollständigen Sie die vorherigen Schritte"
+    complete_all_steps: "Alle Schritte müssen abgeschlossen werden"
+    form_errors: "Bitte korrigieren Sie {count} Fehler im Formular."
+    application_submitted: "Ihr Antrag wurde erfolgreich eingereicht"
+    confirmation_not_found: "Bestätigung nicht gefunden"
+    technical_error: "Ein technischer Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+
+  steps:
+    step1:
+      title: "Persönliche Daten"
+      subtitle: "Geben Sie Ihre persönlichen Daten ein"
+      description: "Diese Informationen ermöglichen es uns, Ihren Kreditantrag zu bearbeiten"
+      personal_info:
+        title: "Grundinformationen"
+        first_name:
+          label: "Vorname"
+          placeholder: "Ihr Vorname"
+          help: "Geben Sie Ihren Vornamen ein, wie er auf Ihren offiziellen Dokumenten erscheint"
+          errors:
+            required: "Der Vorname ist erforderlich"
+            min_length: "Der Vorname muss mindestens 2 Zeichen enthalten"
+            max_length: "Der Vorname darf nicht mehr als 50 Zeichen haben"
+            invalid_format: "Der Vorname darf nur Buchstaben, Leerzeichen, Bindestriche und Apostrophe enthalten"
+        last_name:
+          label: "Nachname"
+          placeholder: "Ihr Nachname"
+          help: "Geben Sie Ihren Nachnamen ein, wie er auf Ihren offiziellen Dokumenten erscheint"
+          errors:
+            required: "Der Nachname ist erforderlich"
+            min_length: "Der Nachname muss mindestens 2 Zeichen enthalten"
+            max_length: "Der Nachname darf nicht mehr als 50 Zeichen haben"
+            invalid_format: "Der Nachname darf nur Buchstaben, Leerzeichen, Bindestriche und Apostrophe enthalten"
+        email:
+          label: "E-Mail-Adresse"
+          placeholder: "ihre.email@beispiel.com"
+          help: "Verwenden Sie eine gültige E-Mail-Adresse, unter der wir Sie kontaktieren können"
+          errors:
+            required: "Die E-Mail-Adresse ist erforderlich"
+            invalid: "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+        phone_number:
+          label: "Telefonnummer"
+          placeholder: "+49 30 12 34 56 78"
+          help: "Geben Sie Ihre Mobil- oder Festnetznummer ein"
+          errors:
+            required: "Die Telefonnummer ist erforderlich"
+            invalid: "Bitte geben Sie eine gültige Telefonnummer ein"
+        birth_date:
+          label: "Geburtsdatum"
+          help: "Wählen Sie Ihr Geburtsdatum (Sie müssen volljährig sein)"
+          errors:
+            required: "Das Geburtsdatum ist erforderlich"
+            underage: "Sie müssen volljährig sein, um einen Kreditantrag zu stellen"
+        nationality:
+          label: "Staatsangehörigkeit"
+          placeholder: "Wählen Sie Ihre Staatsangehörigkeit"
+          help: "Geben Sie Ihre aktuelle Staatsangehörigkeit an"
+          choices:
+            french: "Französisch"
+            eu: "Europäische Union"
+            non_eu: "Außerhalb der Europäischen Union"
+          errors:
+            required: "Die Staatsangehörigkeit ist erforderlich"
+        birth_country:
+          label: "Geburtsland"
+          placeholder: "Deutschland"
+          help: "Geben Sie das Land an, in dem Sie geboren wurden"
+          errors:
+            required: "Das Geburtsland ist erforderlich"
+        birth_city:
+          label: "Geburtsort"
+          placeholder: "Berlin"
+          help: "Geben Sie die Stadt an, in der Sie geboren wurden"
+          errors:
+            required: "Der Geburtsort ist erforderlich"
+
+    step2:
+      title: "Adresse und Wohnsitz"
+      subtitle: "Informationen zu Ihrem Wohnort"
+      description: "Wir benötigen Ihre aktuelle Adresse"
+      address_info:
+        address:
+          label: "Adresse"
+          placeholder: "Musterstraße 123"
+          help: "Geben Sie Ihre vollständige Wohnadresse ein"
+          errors:
+            required: "Die Adresse ist erforderlich"
+            min_length: "Die Adresse muss mindestens 5 Zeichen enthalten"
+        postal_code:
+          label: "Postleitzahl"
+          placeholder: "10115"
+          help: "Geben Sie die Postleitzahl Ihrer Wohnstadt ein"
+          errors:
+            required: "Die Postleitzahl ist erforderlich"
+            invalid_format: "Die Postleitzahl muss im deutschen Format sein (5 Ziffern)"
+        city:
+          label: "Stadt"
+          placeholder: "Berlin"
+          help: "Geben Sie die Stadt an, in der Sie derzeit wohnen"
+          errors:
+            required: "Die Stadt ist erforderlich"
+        country:
+          label: "Land"
+          placeholder: "Deutschland"
+          errors:
+            required: "Das Land ist erforderlich"
+
+    step3:
+      title: "Berufliche Situation"
+      subtitle: "Informationen zu Ihrer Beschäftigung und Ihrem Einkommen"
+      description: "Diese Informationen helfen uns dabei, Ihre Rückzahlungsfähigkeit zu bewerten"
+      professional_info:
+        employment_status:
+          label: "Beschäftigungsstatus"
+          choices:
+            employee: "Angestellte(r)"
+            self_employed: "Selbstständig"
+            retired: "Rentner(in)"
+            unemployed: "Arbeitslos"
+            student: "Student(in)"
+          errors:
+            required: "Der Beschäftigungsstatus ist erforderlich"
+        company_name:
+          label: "Name des Arbeitgebers"
+          placeholder: "Name Ihres Unternehmens"
+          errors:
+            required: "Der Name des Arbeitgebers ist erforderlich"
+        monthly_income:
+          label: "Monatliches Nettoeinkommen"
+          placeholder: "3000"
+          help: "Geben Sie Ihr monatliches Nettoeinkommen in Euro an"
+          errors:
+            required: "Das monatliche Einkommen ist erforderlich"
+            min_value: "Der Betrag muss größer als 0 sein"
+
+    step4:
+      title: "Bankinformationen"
+      subtitle: "Ihre aktuelle Bank"
+      description: "Informationen zu Ihrem Hauptbankkonto"
+      banking_info:
+        current_bank:
+          label: "Aktuelle Bank"
+          placeholder: "Name Ihrer Bank"
+          errors:
+            required: "Der Name der Bank ist erforderlich"
+        account_duration:
+          label: "Kontodauer"
+          choices:
+            less_than_1_year: "Weniger als ein Jahr"
+            between_1_and_3_years: "Zwischen 1 und 3 Jahren"
+            more_than_3_years: "Mehr als 3 Jahre"
+          errors:
+            required: "Die Kontodauer ist erforderlich"
+
+    credit_details:
+      title: "Kreditdetails"
+      subtitle: "Informationen zu Ihrem Antrag"
+      description: "Geben Sie die Merkmale des gewünschten Kredits an"
+      credit_amount:
+        label: "Gewünschter Betrag"
+        placeholder: "50000"
+        help: "Betrag in Euro"
+        errors:
+          required: "Der Kreditbetrag ist erforderlich"
+          min_value: "Der Mindestbetrag beträgt 1.000 €"
+          max_value: "Der Höchstbetrag beträgt 200.000 €"
+      credit_duration:
+        label: "Gewünschte Laufzeit"
+        choices:
+          12_months: "12 Monate"
+          24_months: "24 Monate"
+          36_months: "36 Monate"
+          60_months: "60 Monate"
+          120_months: "120 Monate"
+        errors:
+          required: "Die Kreditlaufzeit ist erforderlich"
+
+  navigation:
+    back: "Zurück"
+    next: "Weiter"
+    previous: "Vorherige"
+    submit: "Antrag einreichen"
+    title: "Kreditantrag"
+    step_progress: "Schritt {current} von {total}"
+    continue: "Fortfahren"
+
+  summary:
+    title: "Zusammenfassung Ihres Antrags"
+    sections:
+      personal: "Persönliche Daten"
+      address: "Adresse"
+      professional: "Berufliche Situation"
+      banking: "Bankinformationen"
+      credit: "Kreditdetails"
+
+  common:
+    months: "Monate"
+
+  confirmation:
+    title: "Antrag erfolgreich eingereicht"
+    subtitle: "Wir haben Ihren Kreditantrag erhalten"
+    reference: "Referenz Ihres Antrags"
+    reference_text: "Bewahren Sie diese Referenznummer sorgfältig auf: {reference}"
+    summary:
+      title: "Zusammenfassung Ihres Antrags"
+      amount: "Beantragter Betrag: {amount} €"
+      duration: "Laufzeit: {duration} Monate"
+      monthly_payment: "Geschätzte Monatsrate: {payment} €"
+    next_steps:
+      title: "Nächste Schritte"
+      step1:
+        title: "Antrag erhalten"
+        description: "Ihr Antrag wurde registriert und wird bearbeitet"
+        time: "Jetzt"
+      step2:
+        title: "Prüfung Ihres Dossiers"
+        description: "Unsere Experten analysieren Ihren Antrag"
+        time: "Innerhalb von 24h"
+      step3:
+        title: "Kontaktaufnahme"
+        description: "Ein Berater wird Sie kontaktieren, um Ihr Dossier zu finalisieren"
+        time: "Innerhalb von 48h"
+      step4:
+        title: "Vertragsabschluss"
+        description: "Unterzeichnung und Einrichtung Ihres Kredits"
+        time: "Innerhalb von 7 Tagen"
+
+  actions:
+    new_simulation: "Neue Simulation"
+    print: "Drucken"
+
+  forms:
+    personal_info:
+      title: "Persönliche Daten"
+    address_info:
+      title: "Adresse"
+    professional_info:
+      title: "Berufliche Situation"
+    banking_info:
+      title: "Bankinformationen"
+    bank_validation:
+      title: "Bankvalidierung"
+    consents:
+      title: "Einverständniserklärungen"
+
+navigation:
+  home: "Startseite"
+  simulation: "Simulation"
+  application: "Antrag"
+  about: "Über uns"
+  contact: "Kontakt"
+  language: "Deutsch"
+
+buttons:
+  next: "Weiter"
+  previous: "Vorherige"
+  submit: "Absenden"
+  cancel: "Abbrechen"
+  back_home: "Zurück zur Startseite"
+  start_application: "Antrag beginnen"
+
+general:
+  loading: "Wird geladen..."
+  optional: "Optional"
+  required: "Erforderlich"
+  "True": "Ja"
+  "False": "Nein"

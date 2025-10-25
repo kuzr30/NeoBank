@@ -1,0 +1,483 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tp('profile_kyc_submit.page.title', {}, 'profile_kyc_submit') }}{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<style>
+/* Document Upload Page */
+.kyc {
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    background: var(--color-background);
+}
+
+/* Main Container */
+.kyc__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Page Header */
+.kyc__header {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    border-radius: var(--radius-lg);
+    color: var(--color-surface);
+    box-shadow: var(--shadow-md);
+}
+
+.kyc__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.kyc__subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Information Box */
+.kyc__info {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.kyc__info-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.kyc__info-list {
+    display: grid;
+    gap: 0.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.kyc__info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-text-light);
+}
+
+.kyc__info-item::before {
+    content: "✓";
+    color: var(--color-success);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* Form Layout */
+.kyc__form {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.kyc__form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Upload Fields */
+.kyc__field {
+    margin-bottom: 1.5rem;
+}
+
+.kyc__field-label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+}
+
+.kyc__field-input {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--color-surface);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    color: var(--color-text);
+    transition: all 0.2s ease;
+}
+
+.kyc__field-input:hover,
+.kyc__field-input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.1);
+}
+
+.kyc__field-help {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+}
+
+/* File Input Specific Styles */
+.kyc__field-input[type="file"] {
+    padding: 0.5rem 0.75rem !important;
+    height: auto !important;
+    line-height: 1.4 !important;
+    cursor: pointer;
+    font-size: 0.9rem !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 2px solid #e2e8f0 !important;
+}
+
+.kyc__field-input[type="file"]:focus {
+    border-color: #3b82f6 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Alert Component - BEM */
+.kyc__alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border-left: 4px solid;
+}
+
+.kyc__alert-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.kyc__alert-icon i {
+    font-size: 20px;
+}
+
+.kyc__alert-content {
+    flex: 1;
+}
+
+.kyc__alert-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+}
+
+.kyc__alert-text {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    margin: 0 0 0.5rem 0;
+}
+
+.kyc__alert-text:last-child {
+    margin-bottom: 0;
+}
+
+/* Alert Variants */
+.kyc__alert--danger {
+    background: #fef2f2;
+    border-left-color: #ef4444;
+}
+
+.kyc__alert--danger .kyc__alert-icon {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.kyc__alert--danger .kyc__alert-title {
+    color: #991b1b;
+}
+
+.kyc__alert--danger .kyc__alert-text {
+    color: #7f1d1d;
+}
+
+/* Declaration Section */
+.kyc__declaration {
+    padding: 2rem;
+    background: color-mix(in srgb, var(--color-warning) 10%, transparent);
+    border-top: 1px solid var(--color-border);
+}
+
+.kyc__declaration-title {
+    color: var(--color-warning-dark);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.kyc__declaration-text {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Form Actions */
+.kyc__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 2rem;
+    background: var(--color-background-light);
+    border-top: 1px solid var(--color-border);
+}
+
+/* Buttons */
+.kyc__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.kyc__button--secondary {
+    background: var(--color-surface);
+    color: var(--color-text-light);
+    border: 2px solid var(--color-border);
+}
+
+.kyc__button--secondary:hover {
+    background: var(--color-hover);
+    border-color: var(--color-muted);
+    color: var(--color-text);
+    transform: translateY(-1px);
+}
+
+.kyc__button--primary {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: var(--color-surface);
+    border: none;
+    box-shadow: var(--shadow-sm);
+}
+
+.kyc__button--primary:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+}
+
+/* Error States */
+.kyc__field--error .kyc__field-placeholder {
+    border-color: var(--color-error);
+    background: color-mix(in srgb, var(--color-error) 5%, var(--color-background-light));
+}
+
+.kyc__error-message {
+    color: var(--color-error);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .kyc {
+        padding: 1rem;
+    }
+
+    .kyc__header {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .kyc__title {
+        font-size: 1.5rem;
+    }
+
+    .kyc__form-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .kyc__field-wrapper {
+        min-height: 150px;
+    }
+
+    .kyc__actions {
+        flex-direction: column-reverse;
+        padding: 1.5rem;
+    }
+
+    .kyc__button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .kyc__header {
+        padding: 1rem;
+    }
+
+    .kyc__title {
+        font-size: 1.25rem;
+    }
+
+    .kyc__subtitle {
+        font-size: 1rem;
+    }
+
+    .kyc__form-grid,
+    .kyc__actions {
+        padding: 1rem;
+    }
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<main class="kyc">
+    <div class="kyc__container">
+        {# Header #}
+        <header class="kyc__header">
+            <h1 class="kyc__title">
+                {% if is_resubmission %}
+                    {{ tp('profile_kyc_submit.header.title_resubmission', {}, 'profile_kyc_submit') }}
+                {% else %}
+                    {{ tp('profile_kyc_submit.header.title', {}, 'profile_kyc_submit') }}
+                {% endif %}
+            </h1>
+            <p class="kyc__subtitle">
+                {% if is_resubmission %}
+                    {{ tp('profile_kyc_submit.header.subtitle_resubmission', {}, 'profile_kyc_submit') }}
+                {% else %}
+                    {{ tp('profile_kyc_submit.header.subtitle', {}, 'profile_kyc_submit') }}
+                {% endif %}
+            </p>
+        </header>
+
+        {% if is_resubmission and existing_submission.adminNotes %}
+            {# Alerte de rejet avec raison #}
+            <div class="kyc__alert kyc__alert--danger">
+                <div class="kyc__alert-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="kyc__alert-content">
+                    <h5 class="kyc__alert-title">{{ tp('profile_kyc_submit.rejection.title', {}, 'profile_kyc_submit') }}</h5>
+                    <div class="kyc__alert-text">
+                        {{ existing_submission.adminNotes|translate_kyc_reason }}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        {# Information Box #}
+        <div class="kyc__info">
+            <h2 class="kyc__info-title">
+                <i class="fas fa-info-circle"></i>
+                {% if is_resubmission %}
+                    {{ tp('profile_kyc_submit.info.title_resubmission', {}, 'profile_kyc_submit') }}
+                {% else %}
+                    {{ tp('profile_kyc_submit.info.title', {}, 'profile_kyc_submit') }}
+                {% endif %}
+            </h2>
+            <ul class="kyc__info-list">
+                {% if is_resubmission %}
+                    <li class="kyc__info-item">{{ tp('profile_kyc_submit.info.requirements.resubmit_attention', {}, 'profile_kyc_submit') }}</li>
+                    <li class="kyc__info-item">{{ tp('profile_kyc_submit.info.requirements.resubmit_readable', {}, 'profile_kyc_submit') }}</li>
+                {% endif %}
+                <li class="kyc__info-item">{{ tp('profile_kyc_submit.info.requirements.readable_color', {}, 'profile_kyc_submit') }}</li>
+                <li class="kyc__info-item">{{ tp('profile_kyc_submit.info.requirements.formats', {}, 'profile_kyc_submit') }}</li>
+                <li class="kyc__info-item">{{ tp('profile_kyc_submit.info.requirements.max_size', {}, 'profile_kyc_submit') }}</li>
+                <li class="kyc__info-item">{{ tp('profile_kyc_submit.info.requirements.date_limit', {}, 'profile_kyc_submit') }}</li>
+            </ul>
+        </div>
+
+        {# Form #}
+        {{ form_start(form, {'attr': {'class': 'kyc__form', 'data-turbo': 'false'}}) }}
+            {# Afficher les erreurs globales du formulaire #}
+            {{ form_errors(form) }}
+            
+            <div class="kyc__form-grid">
+                {# Identity Document #}
+                <div class="kyc__field {{ form_errors(form.identityDocument) ? 'kyc__field--error' }}">
+                    {{ form_label(form.identityDocument, tp('profile_kyc_submit.form.labels.identity_document', {}, 'profile_kyc_submit'), {'label_attr': {'class': 'kyc__field-label'}}) }}
+                    {{ form_widget(form.identityDocument, {'attr': {'class': 'kyc__field-input'}}) }}
+                    <small class="kyc__field-help">{{ tp('profile_kyc_submit.form.help.pdf_jpg_png', {}, 'profile_kyc_submit') }}</small>
+                    {{ form_errors(form.identityDocument, {'attr': {'class': 'kyc__error-message'}}) }}
+                </div>
+
+                {# Income Document #}
+                <div class="kyc__field {{ form_errors(form.incomeDocument) ? 'kyc__field--error' }}">
+                    {{ form_label(form.incomeDocument, tp('profile_kyc_submit.form.labels.income_document', {}, 'profile_kyc_submit'), {'label_attr': {'class': 'kyc__field-label'}}) }}
+                    {{ form_widget(form.incomeDocument, {'attr': {'class': 'kyc__field-input'}}) }}
+                    <small class="kyc__field-help">{{ tp('profile_kyc_submit.form.help.pdf_jpg_png', {}, 'profile_kyc_submit') }}</small>
+                    {{ form_errors(form.incomeDocument, {'attr': {'class': 'kyc__error-message'}}) }}
+                </div>
+
+                {# Address Document #}
+                <div class="kyc__field {{ form_errors(form.addressDocument) ? 'kyc__field--error' }}">
+                    {{ form_label(form.addressDocument, tp('profile_kyc_submit.form.labels.address_document', {}, 'profile_kyc_submit'), {'label_attr': {'class': 'kyc__field-label'}}) }}
+                    {{ form_widget(form.addressDocument, {'attr': {'class': 'kyc__field-input'}}) }}
+                    <small class="kyc__field-help">{{ tp('profile_kyc_submit.form.help.pdf_jpg_png', {}, 'profile_kyc_submit') }}</small>
+                    {{ form_errors(form.addressDocument, {'attr': {'class': 'kyc__error-message'}}) }}
+                </div>
+
+                {# Selfie Document (Optional) #}
+                <div class="kyc__field {{ form_errors(form.selfieDocument) ? 'kyc__field--error' }}">
+                    {{ form_label(form.selfieDocument, tp('profile_kyc_submit.form.labels.selfie_document', {}, 'profile_kyc_submit'), {'label_attr': {'class': 'kyc__field-label'}}) }}
+                    {{ form_widget(form.selfieDocument, {'attr': {'class': 'kyc__field-input'}}) }}
+                    <small class="kyc__field-help">{{ tp('profile_kyc_submit.form.help.jpg_png_only', {}, 'profile_kyc_submit') }}</small>
+                    {{ form_errors(form.selfieDocument, {'attr': {'class': 'kyc__error-message'}}) }}
+                </div>
+            </div>
+
+            {# Declaration #}
+            <div class="kyc__declaration">
+                <h3 class="kyc__declaration-title">{{ tp('profile_kyc_submit.form.declaration.title', {}, 'profile_kyc_submit') }}</h3>
+                <p class="kyc__declaration-text">
+                    {% if is_resubmission %}
+                        {{ tp('profile_kyc_submit.form.declaration.text_resubmission', {}, 'profile_kyc_submit') }}
+                    {% else %}
+                        {{ tp('profile_kyc_submit.form.declaration.text', {}, 'profile_kyc_submit') }}
+                    {% endif %}
+                </p>
+            </div>
+
+            {# Actions #}
+            <div class="kyc__actions">
+                <a href="{{ path('kyc_index') }}" class="kyc__button kyc__button--secondary">
+                    <i class="fas fa-arrow-left"></i>
+                    {{ tp('profile_kyc_submit.actions.back', {}, 'profile_kyc_submit') }}
+                </a>
+                <button type="submit" class="kyc__button kyc__button--primary" name="submit" value="1">
+                    <i class="fas fa-upload"></i>
+                    {% if is_resubmission %}
+                        {{ tp('profile_kyc_submit.actions.submit_resubmission', {}, 'profile_kyc_submit') }}
+                    {% else %}
+                        {{ tp('profile_kyc_submit.actions.submit', {}, 'profile_kyc_submit') }}
+                    {% endif %}
+                </button>
+            </div>
+        {{ form_end(form) }}
+    </div>
+</main>
+{% endblock %}

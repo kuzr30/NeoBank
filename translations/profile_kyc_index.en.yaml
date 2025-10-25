@@ -1,0 +1,75 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: profile_kyc_index.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+profile_kyc_index:
+  page:
+    title: "Identity verification (KYC) - %company_name%"
+  
+  header:
+    title: "Identity verification (KYC)"
+    subtitle: "Confirm your identity to access all our services"
+  
+  alerts:
+    rejected:
+      title: "Identity verification declined"
+      text: "Your identity verification request has been declined."
+      reason: "Reason:"
+      action_text: "You can submit new documents by clicking the button below."
+      common_reasons:
+        documents_non_conformes: "Non-compliant documents"
+        documents_illegibles: "Illegible documents"
+        documents_expires: "Expired documents"
+        quality_insufficient: "Insufficient quality"
+        missing_information: "Missing information"
+    pending:
+      title: "Verification in progress"
+      text: "Your identity verification request is being reviewed. You will be notified by email as soon as processing is complete."
+    approved:
+      title: "Identity verification approved"
+      text: "Congratulations! Your identity has been successfully verified. You now have access to all our banking services."
+    required:
+      title: "Identity verification required"
+      text: "To access our banking services, you must first verify your identity. This step is mandatory due to KYC regulations."
+  
+  documents:
+    title: "Required documents"
+    subtitle: "Secure your account by verifying your identity. This step is mandatory due to KYC regulations."
+    
+    identity_document:
+      title: "Identity document"
+      description: "Valid official document"
+      items:
+        - "National Identity Card"
+        - "Passport"
+        - "Driver's license"
+    
+    income_document:
+      title: "Proof of income"
+      description: "Document less than 3 months old"
+      items:
+        - "Payslip"
+        - "Tax notice"
+    
+    address_document:
+      title: "Proof of address"
+      description: "Document less than 3 months old"
+      items:
+        - "Bill (electricity, gas, internet)"
+        - "Rent receipt"
+    
+    selfie:
+      title: "Selfie"
+      badge: "Optional"
+      description: "Photo with your identity document"
+      items:
+        - "Face clearly visible"
+        - "Identity document readable"
+  
+  actions:
+    access_banking: "Access my banking services"
+    view_status: "View status of my request"
+    submit_documents: "Submit my documents"
+    submit_new_documents: "Submit new documents"
+    submission_guide: "Submission guide"

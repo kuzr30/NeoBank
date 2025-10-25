@@ -1,0 +1,54 @@
+# Traducciones españolas para el módulo de seguros bancarios
+banking_insurance:
+  header:
+    title: "Mis Seguros"
+    subtitle: "Gestión de sus contratos de seguro"
+    last_update: "Última actualización"
+    new_quote: "Solicitar presupuesto"
+
+  statistics:
+    active_contracts: "Contratos activos"
+    monthly_premium: "Prima mensual total"
+    insurance_types: "Tipos de seguro"
+    expiring_contracts: "Contratos por vencer"
+
+  contracts:
+    title: "Mis Contratos de Seguro"
+    contract_number: "Contrato nº"
+    active_status: "Activo"
+    suspended_status: "Suspendido"
+    expired_status: "Expirado"
+    cancelled_status: "Cancelado"
+
+  coverage:
+    monthly_premium: "Prima mensual"
+    coverage_amount: "Monto de cobertura"
+
+  details:
+    activation_date: "Fecha de activación"
+    expiration_date: "Fecha de expiración"
+    duration: "Duración"
+    months: "meses"
+    next_premium: "Próximo vencimiento"
+
+  actions:
+    manage: "Gestionar"
+    certificate: "Certificado"
+    reactivate: "Reactivar"
+    details: "Detalles"
+
+  empty_state:
+    no_contracts_title: "Ningún contrato de seguro"
+    no_contracts_description: "Actualmente no tiene ningún contrato de seguro activo. Descubra nuestras ofertas personalizadas para proteger lo que más le importa."
+    request_quote: "Solicitar presupuesto"
+    learn_more: "Más información"
+
+  pending_quotes:
+    title: "Presupuestos pendientes"
+    subtitle: "Sus solicitudes de presupuesto en proceso"
+    quote_number: "Nº Presupuesto"
+    type: "Tipo"
+    date: "Fecha"
+    status: "Estado"
+    actions: "Acciones"
+    view: "Consultar"

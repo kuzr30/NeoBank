@@ -1,0 +1,61 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_credit_detail.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_credit_detail:
+  # Meta tags
+  meta:
+    title: "Credit details - %company_name%"
+    description: "View details of your credit application"
+
+  # Page headers
+  page:
+    title: "Credit details"
+    detail_title: "Details of your credit from"
+    back_to_credits: "Back to credits"
+    
+  # Sidebar - using banking_dashboard translations
+  sidebar:
+    my_accounts: "My Accounts"
+    quick_actions: "Quick Actions"
+    no_account: "No account"
+    contact_advisor: "Contact your advisor"
+    this_month: "this month"
+    
+  # Quick actions - using banking_dashboard translations
+  actions:
+    transfer: "Transfer"
+    card_opposition: "Card block"
+    rib_iban: "RIB/IBAN"
+    contact_us: "Contact us"
+    
+  # Credit details
+  credit:
+    application_number: "Application No."
+    accorded_amount: "Approved amount"
+    duration: "Duration"
+    monthly_payment: "Monthly payment"
+    total_cost: "Total credit cost"
+    beneficiary: "Beneficiary"
+    months: "months"
+    
+  # Credit actions
+  credit_actions:
+    view_contract: "View contract"
+    download: "Download"
+    
+  # Amortization table
+  amortization:
+    title: "Amortization schedule"
+    subtitle: "Details of {count} monthly payments for your credit"
+    table:
+      month: "Month"
+      date: "Date"
+      monthly_payment: "Monthly payment"
+      principal: "Principal"
+      interest: "Interest"
+      remaining_capital: "Remaining capital"
+      
+  # Currency
+  currency: "€"

@@ -1,0 +1,318 @@
+title: "Contrato de Seguro N° %contract_number%"
+contract_title: "CONTRATO DE SEGURO"
+
+# Encabezado
+header:
+  logo_alt: "Logo %company_name%"
+  contract_number: "CONTRATO N° %contract_number%"
+
+# Sección principal
+main:
+  logo_alt: "Logo %company_name%"
+
+# Información empresa
+company_info:
+  title: "Información empresa y referencia contrato"
+  establishment: "Establecimiento Financiero - Seguros"
+  contract_number: "CONTRATO N° %number%"
+  establishment_date: "Fecha de establecimiento: %date%"
+  signature_date: "Fecha de firma: %date%"
+activation_date: "Fecha de activación: %date%"
+expiration_date: "Fecha de vencimiento: %date%"
+
+# Capítulo I - Las Partes Contratantes
+chapter_1:
+  title: "Capítulo I - Las Partes Contratantes"
+  insurer:
+    title: "El Asegurador"
+    establishment: "Establecimiento Financiero"
+    capital: "Capital social: %capital% €"
+    headquarters: "Sede Social: %address%"
+    siren: "SIREN: %siren%"
+    ape: "Código APE: %ape%"
+    represented: "Representada por su Director General"
+    designation: "En adelante denominada \"El Asegurador\""
+  insured:
+    title: "El Asegurado"
+    residing: "Que reside en:"
+    address_placeholder: "[Dirección a completar]"
+    born: "Nacido(a) el: %date%"
+    phone: "Teléfono: %phone%"
+    email: "Email: %email%"
+    quote_number: "Nº de presupuesto: %number%"
+    designation: "En adelante denominado(a) \"El Asegurado\""
+  agreement: "Las partes en el presente han convenido y acordado lo siguiente"
+
+# Capítulo II - Objeto y Garantías
+chapter_2:
+  title: "Capítulo II - Objeto y Garantías"
+  article_1:
+    title: "Artículo 1 - Objeto del Contrato"
+    paragraph_1: "El presente contrato de seguro tiene por objeto garantizar al Asegurado, mediante el pago de las primas y contribuciones convenidas, la cobertura de las consecuencias pecuniarias resultantes de la realización de los riesgos definidos en las presentes condiciones generales y particulares."
+    paragraph_2: "El Asegurador se compromete, dentro de los límites de las garantías suscritas y de los topes convenidos, a indemnizar al Asegurado o a sus derechohabientes por los perjuicios sufridos debido a la ocurrencia de un siniestro que entre en el ámbito de aplicación del presente contrato de seguro %insurance_type%."
+    paragraph_3: "Las garantías se otorgan según las modalidades, condiciones, límites, exclusiones y franquicias definidas en el presente, sujeto al pago efectivo de las primas en los vencimientos convenidos y al respeto por parte del Asegurado de sus obligaciones contractuales."
+  article_2:
+    title: "Artículo 2 - Duración y Entrada en Vigor"
+    duration_label: "Duración del contrato:"
+    duration_text: "El presente contrato de seguro se suscribe por una duración de %duration% meses, entrando en vigor el %start_date% a las cero horas y expirando el %end_date% a las veinticuatro horas, salvo rescisión anticipada en las condiciones previstas en el presente."
+    renewal_label: "Renovación:"
+    renewal_text: "Salvo denuncia por una de las partes mediante un preaviso de dos meses antes del vencimiento, el contrato se renueva tácitamente por períodos sucesivos de un año, en las condiciones vigentes en la fecha de renovación."
+    effective_label: "Entrada en vigor de las garantías:"
+    effective_text: "Las garantías entran en vigor en la fecha indicada anteriormente, sujeto al pago efectivo de la primera prima o fracción de prima y de los gastos de tramitación eventuales. En caso de falta de pago, las garantías se suspenden de pleno derecho."
+    territory_label: "Territorio de garantía:"
+    territory_text: "Las garantías se ejercen dentro de los límites geográficos de la Unión Europea, salvo disposiciones contrarias expresamente previstas en las condiciones particulares."
+  article_3:
+    title: "Artículo 3 - Garantías Otorgadas"
+    definition_label: "Definición de las garantías:"
+    definition_text: "El Asegurador otorga al Asegurado las garantías definidas a continuación, dentro de los límites de los topes, franquicias y condiciones estipuladas en las presentes condiciones generales y particulares."
+    coverage_label: "Alcance de las coberturas:"
+    coverage_text: "Las garantías son válidas para los siniestros ocurridos durante el período de validez del contrato, declarados en los plazos prescritos y resultantes de eventos no excluidos de las presentes condiciones."
+  guarantees:
+    auto:
+      civil_liability: "Responsabilidad Civil obligatoria"
+      defense_recourse: "Defensa y Recurso"
+      all_accidents: "Daños todos accidentes"
+      theft_fire: "Robo e incendio"
+      glass_breakage: "Rotura de cristales"
+      assistance: "Asistencia 24h/24"
+    home:
+      fire_explosion: "Incendio y explosiones"
+      water_damage: "Daños por agua"
+      theft_vandalism: "Robo y vandalismo"
+      civil_liability: "Responsabilidad Civil vida privada"
+      glass_breakage: "Rotura de cristales"
+      natural_disasters: "Catástrofes naturales"
+    health:
+      medical_pharma: "Gastos médicos y farmacéuticos"
+      hospitalization: "Hospitalización"
+      dental_care: "Atención dental"
+      optical: "Óptica"
+      alternative_medicine: "Medicinas alternativas"
+      repatriation_assistance: "Asistencia repatriación"
+    life:
+      death_all_causes: "Fallecimiento todas causas"
+      permanent_disability: "Invalidez permanente total"
+      temporary_incapacity: "Incapacidad temporal de trabajo"
+      education_pension: "Renta educación"
+      funeral_capital: "Capital exequias"
+      legal_assistance: "Asistencia jurídica"
+    default:
+      main_coverage: "Cobertura principal según los riesgos definidos"
+      civil_liability: "Responsabilidad Civil"
+      assistance_advice: "Asistencia y consejos"
+      defense_recourse: "Defensa y recurso"
+  table:
+    guarantee: "Garantía"
+    coverage_amount: "Importe de Cobertura"
+    deductible: "Franquicia"
+    variable_deductible: "Variable según garantía"
+
+# Capítulo III - Condiciones Financieras
+chapter_3:
+  title: "Capítulo III - Condiciones Financieras"
+  article_4:
+    title: "Artículo 4 - Prima y Gastos"
+    calculation_label: "Cálculo de la prima:"
+    calculation_text: "La prima de seguro ha sido calculada en función de los elementos de riesgo declarados por el Asegurado y de las garantías suscritas. Cualquier modificación de estos elementos puede conllevar una revisión de la prima."
+    payment_schedule_label: "Vencimientos de pago:"
+    payment_schedule_text: "La prima es pagadera mensualmente, a término vencido, como máximo el último día de cada mes. El primer pago es exigible en la suscripción."
+    amounts_detail_label: "Detalle de los importes:"
+    amounts_detail_text: "La tabla siguiente detalla la composición de la prima mensual así como los gastos asociados al contrato, incluyendo los gastos de seguro y los gastos de tramitación, en su caso."
+  article_5:
+    title: "Artículo 5 - Modalidades de Pago y Obligaciones"
+    payment_method_label: "Modo de pago:"
+    payment_method_text: "La prima es pagadera mensualmente por débito automático en la cuenta bancaria designada por el Asegurado. El primer débito se realiza en la fecha de activación del contrato."
+    payment_default_label: "Falta de pago:"
+    payment_default_text: "En caso de falta de pago de una prima en su vencimiento, el Asegurador envía al Asegurado un requerimiento por carta certificada. Si este requerimiento no surte efecto durante diez días, las garantías se suspenden de pleno derecho."
+    processing_fees_label: "Gastos de tramitación:"
+    processing_fees_text: "Los gastos de tramitación y de seguro se debitan en la suscripción del contrato y no son reembolsables, salvo en caso de renuncia en los 14 días siguientes a la firma."
+    indexation_label: "Indexación:"
+    indexation_text: "La prima puede ser revisada anualmente en función de la evolución del índice de precios al consumo publicado por el INSEE."
+  table:
+    element: "Elemento"
+    amount: "Importe"
+    frequency: "Periodicidad"
+    description: "Descripción"
+    monthly_premium: "Prima mensual"
+    monthly: "Mensual"
+    main_premium: "Prima de seguro principal"
+    insurance_fees: "Gastos de seguro"
+    one_time_payment: "Pago único"
+    additional_fees: "Gastos adicionales relacionados con el seguro"
+    processing_fees: "Gastos de tramitación"
+    administrative_fees: "Gastos administrativos de tramitación del expediente"
+    monthly_total: "Total mensual"
+    monthly_deduction: "Importe a debitar cada mes"
+  payment_obligation:
+    title: "OBLIGACIÓN DE PAGO:"
+    text: "El pago de la prima mensual, de los gastos de seguro y de los gastos de tramitación es obligatorio para mantener la validez del contrato. Todo impago conlleva la suspensión inmediata de las garantías tras requerimiento sin efecto durante 10 días."
+
+# Capítulo IV - Obligaciones y Exclusiones
+chapter_4:
+  title: "Capítulo IV - Obligaciones y Exclusiones"
+  article_6:
+    title: "Artículo 6 - Obligaciones del Asegurado"
+    risk_declaration_label: "Declaración del riesgo:"
+    risk_declaration_text: "El Asegurado se compromete a declarar sincera y completamente, en la suscripción y durante el contrato, todas las circunstancias conocidas por él que sean de naturaleza a hacer apreciar por el Asegurador los riesgos que asume."
+    claim_declaration_label: "Declaración de siniestro:"
+    claim_declaration_text: "En caso de siniestro, el Asegurado debe hacer la declaración por escrito al Asegurador en los cinco días laborables siguientes al día en que tuvo conocimiento, salvo caso fortuito o de fuerza mayor."
+    safeguard_measures_label: "Medidas de salvaguarda:"
+    safeguard_measures_text: "El Asegurado debe tomar todas las medidas razonables para limitar la extensión del siniestro y preservar los recursos contra los terceros responsables."
+    investigation_assistance_label: "Asistencia a la investigación:"
+    investigation_assistance_text: "El Asegurado se compromete a proporcionar al Asegurador todos los documentos, informaciones y justificantes necesarios para la instrucción del expediente de siniestro."
+  article_7:
+    title: "Artículo 7 - Exclusiones Generales"
+    never_covered: "Nunca están garantizados:"
+    exclusion_1: "Los daños causados intencionalmente por el Asegurado o con su complicidad"
+    exclusion_2: "Las consecuencias de guerra civil o extranjera, de disturbios, de movimientos populares"
+    exclusion_3: "Los efectos directos o indirectos de explosión, de desprendimiento de calor o de radiación nuclear"
+    exclusion_4: "Los daños resultantes de faltas intencionales o dolosas del Asegurado"
+    exclusion_5: "Los siniestros ocurridos antes de la entrada en vigor del contrato o después de su vencimiento"
+    exclusion_6: "Las multas, penalidades y sanciones pecuniarias de toda naturaleza"
+
+# Capítulo V - Siniestros e Indemnización
+chapter_5:
+  title: "Capítulo V - Siniestros e Indemnización"
+  article_8:
+    title: "Artículo 8 - Procedimiento de Declaración"
+    declaration_deadline_label: "Plazo de declaración:"
+    declaration_deadline_text: "Todo siniestro debe ser declarado en los cinco días laborables siguientes a su ocurrencia o al conocimiento que pueda tener el Asegurado. Para los siniestros de robo, este plazo se reduce a dos días laborables."
+    declaration_methods_label: "Modalidades de declaración:"
+    declaration_methods_text: "La declaración debe ser enviada por carta certificada con acuse de recibo o por cualquier medio que permita atestiguar su recepción a la dirección de la sede social del Asegurador."
+    declaration_content_label: "Contenido de la declaración:"
+    declaration_content_text: "La declaración debe precisar las circunstancias, la fecha, el lugar del siniestro, sus causas probables, la naturaleza y la estimación aproximada de los daños."
+  article_9:
+    title: "Artículo 9 - Peritaje y Liquidación"
+    expertise_label: "Peritaje:"
+    expertise_text: "El Asegurador se reserva el derecho de hacer proceder a un peritaje de los daños por un perito de su elección. El Asegurado puede designar su propio perito en caso de desacuerdo."
+    settlement_label: "Liquidación de las indemnizaciones:"
+    settlement_text: "La indemnización se abona en el mes que sigue al acuerdo de las partes o a la decisión judicial definitiva, deducción hecha de las franquicias eventuales."
+    subrogation_label: "Subrogación:"
+    subrogation_text: "El Asegurador se subroga en los derechos y acciones del Asegurado contra los terceros responsables, hasta el importe de la indemnización abonada."
+
+# Capítulo VI - Rescisión y Modificación
+chapter_6:
+  title: "Capítulo VI - Rescisión y Modificación"
+  article_10:
+    title: "Artículo 10 - Rescisión del Contrato"
+    termination_maturity_label: "Rescisión al vencimiento:"
+    termination_maturity_text: "Cada parte puede rescindir el contrato en su vencimiento anual mediante un preaviso de dos meses, dado por carta certificada."
+    termination_during_label: "Rescisión durante el contrato:"
+    termination_during_text: "El contrato puede ser rescindido durante el período en caso de modificación del riesgo, de siniestro, de falta de pago o en los otros casos previstos por el Código de seguros."
+    termination_nonpayment_label: "Rescisión por impago:"
+    termination_nonpayment_text: "En caso de impago de una prima, el Asegurador puede rescindir el contrato diez días después de un requerimiento sin efecto."
+  article_11:
+    title: "Artículo 11 - Modificación del Contrato"
+    risk_aggravation_label: "Agravación del riesgo:"
+    risk_aggravation_text: "El Asegurado debe declarar al Asegurador toda modificación susceptible de agravar los riesgos o de crear nuevos. Esta declaración puede conllevar una revisión de la prima."
+    risk_reduction_label: "Disminución del riesgo:"
+    risk_reduction_text: "Si el riesgo disminuye de forma notable, el Asegurado puede solicitar una reducción de prima correspondiente."
+
+# Capítulo VII - Resumen de los Gastos Obligatorios
+chapter_7:
+  title: "Capítulo VII - Resumen de los Gastos Obligatorios"
+  article_12:
+    title: "Artículo 12 - Detalle de los Importes a Abonar"
+  mandatory_amounts_title: "IMPORTES OBLIGATORIOS A ABONAR"
+  insurance_fees_label: "Gastos de seguro (pago único):"
+  processing_fees_label: "Gastos de tramitación (pago único):"
+  mandatory_payment: "PAGO OBLIGATORIO"
+  deducted_subscription: "Debitado en la suscripción"
+  administrative_fees_non_refundable: "Gastos administrativos no reembolsables"
+  attention_mandatory: "ATENCIÓN: El pago de estos gastos es OBLIGATORIO y constituye una condición sine qua non para la validez y la entrada en vigor del presente contrato de seguro."
+  automatic_deduction_note: "Estos importes se debitan automáticamente en la suscripción y no pueden ser objeto de ningún reembolso, salvo ejercicio del derecho de renuncia en los 14 días."
+
+# Capítulo VIII - Disposiciones Finales
+chapter_8:
+  title: "Capítulo VIII - Disposiciones Finales"
+  article_13:
+    title: "Artículo 13 - Derecho Aplicable y Jurisdicción"
+    applicable_law_label: "Derecho aplicable:"
+    applicable_law_text: "El presente contrato se rige por el derecho francés y especialmente por las disposiciones del Código de seguros."
+    jurisdiction_label: "Jurisdicción competente:"
+    jurisdiction_text: "En caso de litigio, los tribunales franceses son los únicos competentes. Sin embargo, el Asegurado puede dirigirse al tribunal del lugar de su domicilio."
+    mediation_label: "Mediación:"
+    mediation_text: "En caso de desacuerdo, el Asegurado puede dirigirse al mediador del seguro cuyas coordenadas están disponibles en el sitio de la Federación Francesa del Seguro."
+  article_14:
+    title: "Artículo 14 - Protección de Datos"
+    data_processing_label: "Tratamiento de datos:"
+    data_processing_text: "Los datos personales recopilados son necesarios para la gestión del contrato y las obligaciones legales del Asegurador. Son objeto de un tratamiento informatizado conforme al RGPD."
+    insured_rights_label: "Derechos del Asegurado:"
+    insured_rights_text: "El Asegurado dispone de un derecho de acceso, rectificación, supresión y portabilidad de sus datos personales, así como del derecho a oponerse a su tratamiento."
+  article_15:
+    title: "Artículo 15 - Disposiciones Diversas"
+    partial_nullity_label: "Nulidad parcial:"
+    partial_nullity_text: "Si una cláusula del presente contrato fuera declarada nula, esta nulidad no afectaría la validez de las otras cláusulas."
+    contract_language_label: "Idioma del contrato:"
+    contract_language_text: "En caso de traducción del presente contrato, solo la versión francesa hace fe."
+    prescription_label: "Prescripción:"
+    prescription_text: "Todas las acciones derivadas del presente contrato prescriben a los dos años a contar del evento que las origina."
+
+# Capítulos IX-XII
+chapter_9:
+  title: "Capítulo IX - Obligaciones y Exclusiones"
+  insured_obligations: "Obligaciones del Asegurado"
+  insured_obligations_text: "El Asegurado se compromete a declarar fielmente todos los elementos de naturaleza a permitir la apreciación del riesgo y a señalar toda modificación durante el contrato."
+  claim_declaration: "Declaración de Siniestro"
+  claim_declaration_text: "El Asegurado debe declarar todo siniestro en los 5 días laborables a contar del momento en que tuvo conocimiento, salvo caso fortuito o de fuerza mayor."
+  general_exclusions: "Exclusiones Generales"
+  general_exclusions_text: "Están excluidos de la garantía: los hechos de guerra, las catástrofes nucleares, los hechos intencionales del asegurado, y los siniestros ocurridos en estado de embriaguez."
+  prevention: "Prevención"
+  prevention_text: "El Asegurado se compromete a tomar todas las medidas de prevención razonables para evitar la ocurrencia de un siniestro."
+
+chapter_10:
+  title: "Capítulo X - Siniestros e Indemnización"
+  article_5:
+    title: "Artículo 5 - Procedimiento de Declaración"
+    item_1: "Declarar el siniestro en los plazos legales."
+    item_2: "Proporcionar todos los justificantes solicitados."
+    item_3: "Facilitar el peritaje si es necesario."
+    item_4: "No reconocer su responsabilidad sin acuerdo del Asegurador."
+  article_6:
+    title: "Artículo 6 - Liquidación de los Siniestros"
+    item_1: "El Asegurador dispone de 30 días para hacer su oferta de indemnización."
+    item_2: "La liquidación se realiza en los 15 días siguientes al acuerdo."
+    item_3: "En caso de desacuerdo, recurso al peritaje contradictorio."
+    item_4: "Prescripción de las acciones en 2 años a contar del hecho generador."
+
+chapter_11:
+  title: "Capítulo XI - Duración y Rescisión"
+  article_7:
+    title: "Artículo 7 - Duración del Contrato"
+    duration_with_expiration: "El presente contrato entra en vigor el %start_date% a las 0h00 y expira el %end_date%, fecha correspondiente al último débito del crédito asociado. El contrato no es renovable automáticamente."
+    duration_renewable: "El presente contrato entra en vigor el %start_date% a las 0h00 por una duración de un año. Se renueva por tácita reconducta salvo denuncia por una de las partes."
+  article_8:
+    title: "Artículo 8 - Rescisión"
+    item_1: "Rescisión anual: preaviso de 2 meses antes del vencimiento."
+    item_2: "Rescisión por impago tras requerimiento."
+    item_3: "Rescisión por agravación del riesgo."
+    item_4: "Derecho de retractación de 14 días para los nuevos contratos."
+
+chapter_12:
+  title: "Capítulo XII - Disposiciones Generales"
+  article_9:
+    title: "Artículo 9 - Derecho Aplicable y Jurisdicción"
+    text: "El presente contrato está sometido al derecho francés y al Código de Seguros. En caso de litigio, competencia exclusiva de los tribunales franceses."
+  article_10:
+    title: "Artículo 10 - Reclamaciones"
+    text: "Toda reclamación debe ser dirigida al Servicio de Atención al Cliente de %company_name%. En caso de desacuerdo persistente, recurso al Mediador del Seguro."
+  article_11:
+    title: "Artículo 11 - Protección de Datos"
+    text: "El Asegurador se compromete a tratar los datos personales conforme al RGPD y a la ley Informática y Libertades. Duración de conservación: 5 años después de la rescisión."
+
+# Condiciones particulares
+special_conditions:
+  title: "Condiciones Particulares"
+
+# Firmas
+signatures:
+  title: "Firmas"
+  insured: "El Asegurado"
+  insurer: "El Asegurador"
+  assureur: "El Asegurador"
+  date_and_signature: "Fecha y firma"
+  read_and_approved: "Leído y aprobado"
+  represented_by_ceo: "Representado por el Director General"
+  directeur_general: "Director General"
+  habilite: "Habilitado para comprometer a la sociedad"
+  company_stamp: "Sello de la empresa"

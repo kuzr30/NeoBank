@@ -1,0 +1,571 @@
+<div class="mobile-app-page">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title">{{ 'nav.mobile_app'|trans }}</h1>
+                <p class="hero__subtitle">
+                    {{ tp('mobile_app.hero.subtitle', [], 'mobile_app') }}
+                </p>
+                <div class="hero__features">
+                    <div class="hero__feature">
+                        <span class="hero__feature-icon">
+                            {{ ux_icon('heroicons:shield-check', {'class': 'hero__feature-svg'}) }}
+                        </span>
+                        <span>{{ tp('mobile_app.hero.features.security.title', [], 'mobile_app') }}</span>
+                    </div>
+                    <div class="hero__feature">
+                        <span class="hero__feature-icon">
+                            {{ ux_icon('heroicons:bolt', {'class': 'hero__feature-svg'}) }}
+                        </span>
+                        <span>{{ tp('mobile_app.hero.features.transfers.title', [], 'mobile_app') }}</span>
+                    </div>
+                    <div class="hero__feature">
+                        <span class="hero__feature-icon">
+                            {{ ux_icon('heroicons:chart-bar-square', {'class': 'hero__feature-svg'}) }}
+                        </span>
+                        <span>{{ tp('mobile_app.hero.features.analysis.title', [], 'mobile_app') }}</span>
+                    </div>
+                </div>
+                <div class="hero__actions">
+                    <a href="#features" class="hero__cta hero__cta--primary">
+                        {{ ux_icon('heroicons:arrow-down', {'class': 'hero__cta-icon'}) }}
+                        {{ tp('mobile_app.hero.actions.discover', [], 'mobile_app') }}
+                    </a>
+                    <a href="#download" class="hero__cta hero__cta--secondary">
+                        {{ ux_icon('heroicons:device-phone-mobile', {'class': 'hero__cta-icon'}) }}
+                        {{ tp('mobile_app.hero.actions.download', [], 'mobile_app') }}
+                    </a>
+                </div>
+            </div>
+            <div class="hero__visual">
+                <div class="hero__phone">
+                    <div class="hero__phone-screen">
+                        <div class="hero__app-preview">
+                            <div class="hero__app-header">
+                                <div class="hero__app-time">9:41</div>
+                                <div class="hero__app-status">
+                                    <span class="hero__signal"></span>
+                                    <span class="hero__wifi"></span>
+                                    <span class="hero__battery"></span>
+                                </div>
+                            </div>
+                            <div class="hero__app-content">
+                                <div class="hero__balance-card">
+                                    <div class="hero__balance-label">{{ tp('mobile_app.hero.preview.balance_card.available_balance', [], 'mobile_app') }}</div>
+                                    <div class="hero__balance-amount">{{ tp('mobile_app.hero.preview.balance_card.amount', [], 'mobile_app') }}</div>
+                                    <div class="hero__balance-change">{{ tp('mobile_app.hero.preview.balance_card.growth', [], 'mobile_app') }}</div>
+                                </div>
+                                <div class="hero__quick-actions">
+                                    <div class="hero__action-item">
+                                        {{ ux_icon('heroicons:arrow-up-right', {'class': 'hero__action-icon'}) }}
+                                        <span>{{ tp('mobile_app.hero.preview.quick_actions.transfer', [], 'mobile_app') }}</span>
+                                    </div>
+                                    <div class="hero__action-item">
+                                        {{ ux_icon('heroicons:credit-card', {'class': 'hero__action-icon'}) }}
+                                        <span>{{ tp('mobile_app.hero.preview.quick_actions.cards', [], 'mobile_app') }}</span>
+                                    </div>
+                                    <div class="hero__action-item">
+                                        {{ ux_icon('heroicons:chart-bar', {'class': 'hero__action-icon'}) }}
+                                        <span>{{ tp('mobile_app.hero.preview.quick_actions.savings', [], 'mobile_app') }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ajouter -->
+</div>
+
+<style>
+/* =================================================================
+   MOBILE APP PAGE - HERO SECTION
+   ================================================================= */
+
+/* Block: mobile-app-page */
+.mobile-app-page {
+    min-height: 100vh;
+    background: var(--color-background);
+}
+
+/* Block: hero */
+.hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    z-index: 1;
+}
+
+/* Element: hero__container */
+.hero__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Element: hero__content */
+.hero__content {
+    max-width: 650px;
+}
+
+/* Element: hero__title */
+.hero__title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 800;
+    color: white;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+/* Element: hero__subtitle */
+.hero__subtitle {
+    font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* Element: hero__features */
+.hero__features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+/* Element: hero__feature */
+.hero__feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+/* Element: hero__feature-icon */
+.hero__feature-icon {
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Element: hero__feature-svg */
+.hero__feature-svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
+}
+
+/* Element: hero__actions */
+.hero__actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: nowrap;
+}
+
+/* Element: hero__cta */
+.hero__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    flex: 1;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+/* Modifier: hero__cta--primary */
+.hero__cta--primary {
+    background: white;
+    color: var(--color-primary);
+}
+
+.hero__cta--primary:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+/* Modifier: hero__cta--secondary */
+.hero__cta--secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.hero__cta--secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    color: white;
+    text-decoration: none;
+}
+
+/* Element: hero__cta-icon */
+.hero__cta-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Element: hero__visual */
+.hero__visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Element: hero__phone */
+.hero__phone {
+    width: 340px;
+    height: 680px;
+    background: #1a1a1a;
+    border-radius: 3rem;
+    padding: 1.25rem;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.4),
+        0 0 0 8px rgba(255, 255, 255, 0.1);
+    position: relative;
+    transform: perspective(1000px) rotateY(-10deg) rotateX(5deg);
+}
+
+.hero__phone::before {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4.5rem;
+    height: 0.375rem;
+    background: #333;
+    border-radius: 0.1875rem;
+}
+
+/* Element: hero__phone-screen */
+.hero__phone-screen {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Element: hero__app-preview */
+.hero__app-preview {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Element: hero__app-header */
+.hero__app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Element: hero__app-time */
+.hero__app-time {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #1e293b;
+}
+
+/* Element: hero__app-status */
+.hero__app-status {
+    display: flex;
+    gap: 0.375rem;
+    align-items: center;
+}
+
+.hero__signal,
+.hero__wifi,
+.hero__battery {
+    width: 1rem;
+    height: 0.625rem;
+    background: #1e293b;
+    border-radius: 0.125rem;
+}
+
+/* Element: hero__app-content */
+.hero__app-content {
+    flex: 1;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Element: hero__balance-card */
+.hero__balance-card {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border-radius: 1.25rem;
+    padding: 2.5rem 2rem;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__balance-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #e55a2b 0%, transparent 70%);
+    opacity: 0.3;
+}
+
+/* Element: hero__balance-label */
+.hero__balance-label {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 0.75rem;
+}
+
+/* Element: hero__balance-amount */
+.hero__balance-amount {
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+/* Element: hero__balance-change */
+.hero__balance-change {
+    font-size: 1rem;
+    color: #fbbf24;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.hero__balance-change::before {
+    content: '📈';
+    font-size: 1.25rem;
+}
+
+/* Element: hero__quick-actions */
+.hero__quick-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+/* Element: hero__action-item */
+.hero__action-item {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    transition: transform 0.2s ease;
+}
+
+.hero__action-item:hover {
+    transform: translateY(-2px);
+}
+
+/* Element: hero__action-icon */
+.hero__action-icon {
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-primary);
+}
+
+.hero__action-item span {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #64748b;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero__container {
+        gap: 3rem;
+        padding: 0 1.5rem;
+    }
+    
+    .hero__title {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+    }
+    
+    .hero__subtitle {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero__container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .hero__visual {
+        display: none;
+    }
+    
+    .hero__content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 90vh;
+        padding: 2rem 0;
+    }
+    
+    .hero__container {
+        padding: 0 1.5rem;
+        gap: 2rem;
+    }
+    
+    .hero__title {
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero__subtitle {
+        margin-bottom: 2rem;
+    }
+    
+    .hero__features {
+        margin-bottom: 2.5rem;
+        gap: 0.75rem;
+    }
+    
+    .hero__feature {
+        font-size: 1rem;
+        gap: 0.75rem;
+    }
+    
+    .hero__feature-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .hero__feature-svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+    
+    .hero__actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .hero__cta {
+        width: 100%;
+        font-size: 0.875rem;
+        padding: 0.75rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 85vh;
+        padding: 1.5rem 0;
+    }
+    
+    .hero__container {
+        padding: 0 1rem;
+    }
+    
+    .hero__title {
+        margin-bottom: 1rem;
+    }
+    
+    .hero__subtitle {
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero__features {
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero__feature {
+        font-size: 0.875rem;
+        gap: 0.5rem;
+    }
+    
+    .hero__feature-icon {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+    
+    .hero__feature-svg {
+        width: 1rem;
+        height: 1rem;
+    }
+    
+    .hero__actions {
+        gap: 0.75rem;
+        max-width: 300px;
+    }
+    
+    .hero__cta {
+        font-size: 0.8rem;
+        padding: 0.625rem 0.875rem;
+    }
+}
+</style>

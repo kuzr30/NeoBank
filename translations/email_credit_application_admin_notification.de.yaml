@@ -1,0 +1,40 @@
+email_credit_application_admin_notification:
+  title: "Neuer Kreditantrag - #%applicationId%"
+  
+  content:
+    page_title: "Neuer Kreditantrag"
+    subtitle: "Ein neuer Kreditantrag wurde eingereicht und erfordert Ihre Aufmerksamkeit."
+    
+    request_details:
+      title: "Antragsdetails"
+      request_number: "Antragsnummer:"
+      submission_date: "Einreichungsdatum:"
+    
+    client_info:
+      title: "👤 Kundeninformationen"
+      full_name: "Vollständiger Name:"
+      email: "E-Mail:"
+    
+    credit_details:
+      title: "Kreditdetails"
+      amount_requested: "Beantragter Betrag:"
+      credit_type: "Kreditart:"
+      duration: "Laufzeit:"
+      duration_months: "%duration% Monate"
+    
+    required_actions:
+      title: "Erforderliche Maßnahmen"
+      review_within_24h: "Dossier innerhalb von 24h prüfen"
+      verify_solvency: "Zahlungsfähigkeit des Kunden überprüfen"
+      analyze_documents: "Bereitgestellte Dokumente analysieren"
+      make_decision: "Entscheidung innerhalb von 3-5 Arbeitstagen treffen"
+    
+    view_admin_button: "📂 In Admin anzeigen"
+    contact_client_button: "Kunden kontaktieren"
+    
+    footer_note: "<strong>Hinweis:</strong> Diese Benachrichtigung wurde automatisch generiert. Bitte bearbeiten Sie diesen Antrag innerhalb der vorgegebenen Fristen, um die Servicequalität aufrechtzuerhalten."
+
+  logs:
+    credit_admin_notification_sent: "Admin-Kreditbenachrichtigung für Antrag #%applicationId% gesendet"
+    credit_admin_notification_failed: "Fehler beim Senden der Admin-Kreditbenachrichtigung"
+    credit_application_assigned: "Kreditantrag #%applicationId% zur Prüfung zugewiesen"

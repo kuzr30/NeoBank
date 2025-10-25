@@ -1,0 +1,29 @@
+email_kyc_submission_confirmation:
+  title: "KYC-Einreichungsbestätigung - %company_name%"
+  
+  content:
+    page_title: "KYC-Einreichungsbestätigung"
+    greeting: "Hallo <strong>%firstName%</strong>,"
+    
+    success:
+      title: "Dossier erhalten"
+      message: "Wir bestätigen den Erhalt Ihres Identitätsprüfungsdossiers (KYC)."
+    
+    processing_info: "Unser Team wird Ihre Dokumente schnellstmöglich prüfen. Sie werden per E-Mail benachrichtigt, sobald Ihr Dossier bearbeitet wurde."
+    
+    track_button: "Meinen Antrag verfolgen"
+    
+    documents:
+      title: "Eingereichte Dokumente"
+      intro: "Zur Erinnerung, folgende Dokumente wurden eingereicht:"
+    
+    questions:
+      title: "💬 Fragen?"
+      message: "Falls Sie Fragen zu Ihrem Antrag haben, zögern Sie nicht, unseren Kundenservice zu kontaktieren."
+    
+    closing: "Mit freundlichen Grüßen,<br><strong>Das %company_name%-Team</strong>"
+
+  logs:
+    kyc_submission_confirmed: "KYC-Einreichungsbestätigung an %email% gesendet"
+    kyc_submission_failed: "Fehler beim Senden der KYC-Bestätigung an %email%"
+    kyc_documents_received: "KYC-Dokumente für %firstName% %lastName% erhalten"

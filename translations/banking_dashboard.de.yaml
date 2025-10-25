@@ -1,0 +1,59 @@
+banking_dashboard:
+  # Meta tags
+  meta:
+    title: "Online Banking - %company_name%"
+    description: "Banking Dashboard - Verwalten Sie Ihre Konten, Überweisungen und Bankdienstleistungen"
+
+  # Navigation tabs
+  nav:
+    accounts: "Konten"
+    cards: "Karten"
+    transfers: "Überweisungen"
+    ribs: "IBAN"
+    savings: "Sparen"
+    credits: "Kredite"
+    insurance: "Versicherungen"
+
+  # User info
+  user:
+    status: "Privatkunde"
+    status_business: "Geschäftskunde"
+    status_premium: "Premium-Kunde"
+
+  # Sidebar
+  sidebar:
+    my_accounts: "Meine Konten"
+    quick_actions: "Schnellaktionen"
+    
+  # Account types
+  accounts:
+    main_account: "Hauptkonto"
+    credit_account: "Kreditkonto"
+    card_account: "Kartenkonto"
+    savings_account: "Sparkonto"
+    insurance_account: "Versicherungskonto"
+    no_account: "Kein Konto"
+    
+  # Account status
+  status:
+    available_credit: "Verfügbarer Kredit"
+    card_balance: "Kartenguthaben"
+    savings_built: "Angesparte Summe"
+    insurance_provision: "Versicherungsrückstellung"
+    contact_advisor: "Kontaktieren Sie Ihren Berater"
+    this_month: "diesen Monat"
+    
+  # Quick actions
+  actions:
+    transfer: "Überweisung"
+    card_opposition: "Kartensperrung"
+    rib_iban: "IBAN"
+    contact_us: "Kontakt"
+    
+  # Messages
+  messages:
+    loading: "Wird geladen..."
+    no_data: "Keine Daten verfügbar"
+    
+  # Currency
+  currency: "€"

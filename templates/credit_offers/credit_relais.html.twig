@@ -1,0 +1,140 @@
+{% extends 'credit_offers/credit_page_structure.html.twig' %}
+
+{% set page_title = tp('credit_relais.page.title', [], 'credit_relais') %}
+{% set page_description = tp('credit_relais.page.description', [], 'credit_relais') %}
+{% set hero_class = 'credit-detail-hero--relais' %}
+
+{% block taux_value %}{{ credit_rate('relais') }}%{% endblock %}
+{% block montant_value %}{{ tp('credit_relais.hero.montant', [], 'credit_relais') }}{% endblock %}
+{% block duree_value %}{{ tp('credit_relais.hero.duree', [], 'credit_relais') }}{% endblock %}
+
+{% block hero_title %}{{ tp('credit_relais.hero.title', [], 'credit_relais') }}{% endblock %}
+{% block hero_subtitle %}{{ tp('credit_relais.hero.subtitle', [], 'credit_relais') }}{% endblock %}
+
+{% block section_1_title %}{{ tp('credit_relais.section_1.title', [], 'credit_relais') }}{% endblock %}
+
+{% block section_1_content %}
+<p>{{ tp('credit_relais.section_1.content_1', [], 'credit_relais') }}</p>
+<p>{{ tp('credit_relais.section_1.content_2', [], 'credit_relais') }}</p>
+{% endblock %}
+
+{% block feature_montant %}{{ tp('credit_relais.features.montant.value', [], 'credit_relais') }}{% endblock %}
+{% block feature_montant_detail %}{{ tp('credit_relais.features.montant.detail', [], 'credit_relais') }}{% endblock %}
+{% block feature_duree %}{{ tp('credit_relais.features.duree.value', [], 'credit_relais') }}{% endblock %}
+{% block feature_duree_detail %}{{ tp('credit_relais.features.duree.detail', [], 'credit_relais') }}{% endblock %}
+{% block feature_taux %}{{ tp('credit_relais.features.taux.value', [], 'credit_relais')|replace({'{rate}': credit_rate('relais')})|raw }}{% endblock %}
+{% block feature_taux_detail %}{{ tp('credit_relais.features.taux.detail', [], 'credit_relais') }}{% endblock %}
+{% block feature_garantie %}{{ tp('credit_relais.features.garantie.value', [], 'credit_relais') }}{% endblock %}
+{% block feature_garantie_detail %}{{ tp('credit_relais.features.garantie.detail', [], 'credit_relais') }}{% endblock %}
+
+{% block section_3_content %}
+<ul class="credit-detail-advantages">
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_relais.advantages.chainag.title', [], 'credit_relais') }}</strong> {{ tp('credit_relais.advantages.chainag.text', [], 'credit_relais') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_relais.advantages.negociation.title', [], 'credit_relais') }}</strong> {{ tp('credit_relais.advantages.negociation.text', [], 'credit_relais') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_relais.advantages.flexibilite.title', [], 'credit_relais') }}</strong> {{ tp('credit_relais.advantages.flexibilite.text', [], 'credit_relais') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_relais.advantages.cumul.title', [], 'credit_relais') }}</strong> {{ tp('credit_relais.advantages.cumul.text', [], 'credit_relais') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_relais.advantages.serenite.title', [], 'credit_relais') }}</strong> {{ tp('credit_relais.advantages.serenite.text', [], 'credit_relais') }}</span>
+    </li>
+</ul>
+{% endblock %}
+
+{% block section_4_content %}
+<div class="credit-detail-requirements">
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('credit_relais.requirements.bien_vendre.title', [], 'credit_relais') }}</h3>
+        <ul>
+            <li>{{ tp('credit_relais.requirements.bien_vendre.proprietaire', [], 'credit_relais') }}</li>
+            <li>{{ tp('credit_relais.requirements.bien_vendre.libre', [], 'credit_relais') }}</li>
+            <li>{{ tp('credit_relais.requirements.bien_vendre.estimation', [], 'credit_relais') }}</li>
+            <li>{{ tp('credit_relais.requirements.bien_vendre.commercialisation', [], 'credit_relais') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('credit_relais.requirements.emprunteur.title', [], 'credit_relais') }}</h3>
+        <ul>
+            <li>{{ tp('credit_relais.requirements.emprunteur.revenus', [], 'credit_relais') }}</li>
+            <li>{{ tp('credit_relais.requirements.emprunteur.capacite', [], 'credit_relais') }}</li>
+            <li>{{ tp('credit_relais.requirements.emprunteur.apport', [], 'credit_relais') }}</li>
+            <li>{{ tp('credit_relais.requirements.emprunteur.difficultes', [], 'credit_relais') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block section_5_content %}
+<div class="credit-detail-documents">
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('credit_relais.documents.bien_vendre.title', [], 'credit_relais') }}</h3>
+        <ul>
+            <li>{{ tp('credit_relais.documents.bien_vendre.titre', [], 'credit_relais') }}</li>
+            <li>{{ tp('credit_relais.documents.bien_vendre.estimation', [], 'credit_relais') }}</li>
+            <li>{{ tp('credit_relais.documents.bien_vendre.mandat', [], 'credit_relais') }}</li>
+            <li>{{ tp('credit_relais.documents.bien_vendre.diagnostics', [], 'credit_relais') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('credit_relais.documents.bien_acquerir.title', [], 'credit_relais') }}</h3>
+        <ul>
+            <li>{{ tp('credit_relais.documents.bien_acquerir.compromis', [], 'credit_relais') }}</li>
+            <li>{{ tp('credit_relais.documents.bien_acquerir.plan', [], 'credit_relais') }}</li>
+            <li>{{ tp('credit_relais.documents.bien_acquerir.descriptif', [], 'credit_relais') }}</li>
+            <li>{{ tp('credit_relais.documents.bien_acquerir.conditions', [], 'credit_relais') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('credit_relais.documents.dossier.title', [], 'credit_relais') }}</h3>
+        <ul>
+            <li>{{ tp('credit_relais.documents.dossier.revenus', [], 'credit_relais') }}</li>
+            <li>{{ tp('credit_relais.documents.dossier.comptes', [], 'credit_relais') }}</li>
+            <li>{{ tp('credit_relais.documents.dossier.charges', [], 'credit_relais') }}</li>
+            <li>{{ tp('credit_relais.documents.dossier.patrimoine', [], 'credit_relais') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block legal_details %}
+<div class="credit-legal-notice__details">
+    <h4>{{ tp('credit_relais.legal.title', [], 'credit_relais') }}</h4>
+    <ul>
+        <li><strong>{{ tp('credit_relais.legal.taeg.title', [], 'credit_relais') }}</strong> {{ tp('credit_relais.legal.taeg.text', [], 'credit_relais') }}</li>
+        <li><strong>{{ tp('credit_relais.legal.remboursement.title', [], 'credit_relais') }}</strong> {{ tp('credit_relais.legal.remboursement.text', [], 'credit_relais') }}</li>
+        <li><strong>{{ tp('credit_relais.legal.garantie.title', [], 'credit_relais') }}</strong> {{ tp('credit_relais.legal.garantie.text', [], 'credit_relais') }}</li>
+        <li><strong>{{ tp('credit_relais.legal.assurance.title', [], 'credit_relais') }}</strong> {{ tp('credit_relais.legal.assurance.text', [], 'credit_relais') }}</li>
+        <li><strong>{{ tp('credit_relais.legal.prolongation.title', [], 'credit_relais') }}</strong> {{ tp('credit_relais.legal.prolongation.text', [], 'credit_relais') }}</li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block cta_title %}{{ tp('credit_relais.cta.title', [], 'credit_relais') }}{% endblock %}
+{% block cta_subtitle %}{{ tp('credit_relais.cta.subtitle', [], 'credit_relais') }}{% endblock %}
+
+{% block custom_styles %}
+{{ parent() }}
+<style>
+/* Couleur spécifique pour le crédit relais */
+.credit-detail-hero--relais {
+    background: 
+        linear-gradient(135deg, rgba(245, 158, 11, 0.4) 0%, rgba(217, 119, 6, 0.6) 100%),
+        url('/images/home.jpg') center/cover no-repeat;
+}
+
+.credit-detail-hero--relais .credit-highlight__value {
+    color: #fcd34d;
+}
+</style>
+{% endblock %}

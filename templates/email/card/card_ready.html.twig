@@ -1,0 +1,129 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_card_ready.title', [], 'email_card_ready') }}{% endblock %}
+
+{% block content %}
+<!-- Header Section -->
+<div class="email-header">
+    <div style="text-align: center; margin-bottom: 32px;">
+        <div class="success-icon" style="display: inline-block; width: 64px; height: 64px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-radius: 50%; margin-bottom: 16px; position: relative;">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 28px; font-weight: bold;">✓</div>
+        </div>
+        <h1 style="color: #1f2937; font-size: 28px; font-weight: 700; margin: 0 0 8px 0;">
+            {{ tp('email_card_ready.title', [], 'email_card_ready') }}
+        </h1>
+        <p style="color: #6b7280; font-size: 16px; margin: 0;">
+            {{ tp('email_card_ready.subtitle', [], 'email_card_ready') }}
+        </p>
+    </div>
+</div>
+
+<!-- Greeting -->
+<div style="margin-bottom: 24px;">
+    <p style="color: #374151; font-size: 16px; line-height: 1.6; margin: 0;">
+        {{ tp('email_card_ready.greeting', {firstname: user.firstName}, 'email_card_ready') }}
+    </p>
+</div>
+
+<!-- Main Message -->
+<div style="margin-bottom: 32px;">
+    <p style="color: #374151; font-size: 16px; line-height: 1.6; margin: 0 0 16px 0;">
+        {{ tp('email_card_ready.main_message', [], 'email_card_ready') }}
+    </p>
+</div>
+
+<!-- Card Details -->
+<div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); border: 2px solid #e2e8f0; border-radius: 16px; padding: 24px; margin: 32px 0;">
+    <h2 style="color: #1f2937; font-size: 20px; font-weight: 600; margin: 0 0 20px 0; display: flex; align-items: center;">
+        <span style="display: inline-block; width: 24px; height: 24px; background: #4f46e5; border-radius: 6px; margin-right: 12px; position: relative;">
+            <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 14px;">💳</span>
+        </span>
+        {{ tp('email_card_ready.card_details_title', [], 'email_card_ready') }}
+    </h2>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+        <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px;">
+            <div style="color: #6b7280; font-size: 14px; font-weight: 500; margin-bottom: 4px;">
+                {{ tp('email_card_ready.card_type_label', [], 'email_card_ready') }}
+            </div>
+            <div style="color: #1f2937; font-size: 16px; font-weight: 600;">
+                {{ subscription.cardType|title }}
+            </div>
+        </div>
+        
+        <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px;">
+            <div style="color: #6b7280; font-size: 14px; font-weight: 500; margin-bottom: 4px;">
+                {{ tp('email_card_ready.card_brand_label', [], 'email_card_ready') }}
+            </div>
+            <div style="color: #1f2937; font-size: 16px; font-weight: 600;">
+                {{ subscription.cardBrand|title }}
+            </div>
+        </div>
+        
+        <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px;">
+            <div style="color: #6b7280; font-size: 14px; font-weight: 500; margin-bottom: 4px;">
+                {{ tp('email_card_ready.card_number_label', [], 'email_card_ready') }}
+            </div>
+            <div style="color: #1f2937; font-size: 16px; font-weight: 600; font-family: 'Courier New', monospace;">
+                **** **** **** {{ card.cardNumber|slice(-4) }}
+            </div>
+        </div>
+        
+        <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px;">
+            <div style="color: #6b7280; font-size: 14px; font-weight: 500; margin-bottom: 4px;">
+                {{ tp('email_card_ready.card_status_label', [], 'email_card_ready') }}
+            </div>
+            <div style="color: #059669; font-size: 16px; font-weight: 600;">
+                {{ tp('email_card_ready.card_status_active', [], 'email_card_ready') }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- What You Can Do Now -->
+<div style="margin: 32px 0;">
+    <h3 style="color: #1f2937; font-size: 18px; font-weight: 600; margin: 0 0 16px 0;">
+        {{ tp('email_card_ready.what_you_can_do_title', [], 'email_card_ready') }}
+    </h3>
+    
+    <div style="background: #fef3c7; border: 1px solid #f59e0b; border-radius: 12px; padding: 20px;">
+        <ul style="margin: 0; padding-left: 20px; color: #92400e;">
+            <li style="margin-bottom: 8px; line-height: 1.5;">
+                {{ tp('email_card_ready.action_1', [], 'email_card_ready') }}
+            </li>
+            <li style="margin-bottom: 8px; line-height: 1.5;">
+                {{ tp('email_card_ready.action_2', [], 'email_card_ready') }}
+            </li>
+            <li style="margin-bottom: 0; line-height: 1.5;">
+                {{ tp('email_card_ready.action_3', [], 'email_card_ready') }}
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Physical Card Info -->
+<div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 1px solid #3b82f6; border-radius: 12px; padding: 20px; margin: 32px 0;">
+    <div style="display: flex; align-items: flex-start; gap: 12px;">
+        <div style="background: #3b82f6; border-radius: 8px; padding: 8px; flex-shrink: 0;">
+            <span style="color: white; font-size: 16px;">📦</span>
+        </div>
+        <div>
+            <h4 style="color: #1e40af; font-size: 16px; font-weight: 600; margin: 0 0 8px 0;">
+                {{ tp('email_card_ready.physical_card_title', [], 'email_card_ready') }}
+            </h4>
+            <p style="color: #1e40af; font-size: 14px; line-height: 1.5; margin: 0;">
+                {{ tp('email_card_ready.physical_card_message', [], 'email_card_ready') }}
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- CTA Button -->
+<div style="text-align: center; margin: 40px 0;">
+    <a href="{{ app.request.schemeAndHttpHost }}{{ path('banking_dashboard', {activeTab: 'cartes'}) }}" 
+       style="display: inline-block; background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); color: white; text-decoration: none; padding: 16px 32px; border-radius: 12px; font-weight: 600; font-size: 16px; box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);">
+        {{ tp('email_card_ready.cta_button', [], 'email_card_ready') }}
+    </a>
+</div>
+
+{% endblock %}

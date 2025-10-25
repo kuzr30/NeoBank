@@ -1,0 +1,26 @@
+email_funds_disbursed:
+  title: "Fondos desembolsados"
+  content:
+    page_title: "¡Sus fondos han sido desembolsados!"
+    greeting: "Hola <strong>%customerName%</strong>,"
+    disbursement_section:
+      title: "Desembolso confirmado"
+      message: "¡Excelente noticia! Los fondos de su crédito <strong>%contractNumber%</strong> por un monto de <strong>%loanAmount% €</strong> han sido desembolsados y están ahora disponibles en su cuenta."
+    transaction_details:
+      title: "Detalles de la transacción"
+      contract: "Número de contrato"
+      amount: "Monto del préstamo"
+      fees: "Comisiones deducidas"
+      net_amount: "Monto neto acreditado"
+    important_info:
+      title: "Información importante"
+      message: "Los fondos están inmediatamente disponibles en su cuenta de crédito. Ya puede realizar transferencias desde su espacio cliente."
+    repayment_info:
+      title: "Recordatorio de reembolso"
+      message: "No olvide que su crédito debe ser reembolsado según el cronograma acordado. Su primera cuota mensual será debitada el próximo mes. Consulte su espacio cliente para más detalles."
+    access_account: "Acceder a mi cuenta"
+    thanks_message: "¡Felicitaciones y gracias por su confianza!"
+    footer: "El equipo %company_name%<br><em>Este es un email automático, por favor no responda.</em>"
+  logs:
+    success: "Email de desembolso de fondos enviado con éxito a %email% para el contrato %contractNumber% (monto: %amount% €, idioma: %locale%)"
+    error: "Error al enviar el email de desembolso de fondos para el contrato %contractNumber% : %error%"

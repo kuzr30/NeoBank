@@ -1,0 +1,18 @@
+# ENGLISH TRANSLATION - Translated from French
+# Professional credit testimonials translation file
+# Domain: credit_professionnel_testimonials
+# Language: English (en)
+
+credit_professionnel_testimonials:
+  quote1: "%company_name%'s business loan enabled me to rapidly develop my company. The personalized support and preferential rates made all the difference."
+  author1: "Marc D., 45 years old, SME manager"
+  quote2: "Fast and efficient financing for purchasing my new equipment. %company_name% understands professional challenges."
+  author2: "Sylvie L., 38 years old, baker"
+  quote3: "Excellent business credit service. Custom-negotiated conditions and regular follow-up from my dedicated advisor."
+  author3: "Philippe R., 52 years old, chartered accountant"
+  quote4: "I was able to expand my commercial premises thanks to the business loan. Simplified procedures and exemplary responsiveness."
+  author4: "Catherine M., 41 years old, pharmacist"
+  quote5: "Financing solution adapted to my seasonal activity. %company_name% offers real flexibility."
+  author5: "Antoine B., 36 years old, consultant"
+  quote6: "%company_name% understands entrepreneurs' needs. Adapted financing and valuable strategic advice for my development."
+  author6: "Nadia K., 43 years old, franchisee"

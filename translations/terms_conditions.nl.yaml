@@ -1,0 +1,54 @@
+terms_conditions:
+  page_title: "Algemene Gebruiksvoorwaarden"
+  page_description: "Gebruiksvoorwaarden van de bankdiensten van %company_name%"
+
+  scope:
+    title: "Voorwerp"
+    content: |
+      Deze Algemene Gebruiksvoorwaarden (AGV) definiëren de modaliteiten en voorwaarden voor het gebruik
+      van de bankdiensten aangeboden door <strong>%company_name%</strong> op deze website.
+
+  acceptance:
+    title: "Aanvaarding van de voorwaarden"
+    content: |
+      Het gebruik van onze diensten impliceert de volledige aanvaarding van deze AGV.
+      Als u deze voorwaarden niet accepteert, gelieve onze diensten niet te gebruiken.
+
+  services:
+    title: "Beschrijving van de diensten"
+    content: |
+      %company_name% biedt een volledig gamma van bankdiensten aan, waaronder:
+      <ul>
+        <li>Bankrekeningen voor particulieren en bedrijven</li>
+        <li>Krediet- en financieringsdiensten</li>
+        <li>Spaar- en beleggingsproducten</li>
+        <li>Betalings- en wisselkoersdiensten</li>
+      </ul>
+
+  obligations:
+    title: "Verplichtingen van de klant"
+    content: |
+      De klant verbindt zich ertoe:
+      <ul>
+        <li>Nauwkeurige en actuele informatie te verstrekken</li>
+        <li>De gebruiksvoorwaarden van de diensten te respecteren</li>
+        <li>Zijn inloggegevens te beschermen</li>
+        <li>Elk beveiligingsincident te melden</li>
+      </ul>
+
+  liability:
+    title: "Aansprakelijkheid"
+    content: |
+      %company_name% verbindt zich ertoe zijn diensten met zorgvuldigheid en professionalisme te verlenen.
+      Onze aansprakelijkheid is beperkt conform de geldende bankregelgeving.
+
+  modification:
+    title: "Wijziging van de voorwaarden"
+    content: |
+      %company_name% behoudt zich het recht voor deze AGV op elk moment te wijzigen.
+      De wijzigingen treden in werking zodra ze op de website gepubliceerd zijn.
+
+  contact:
+    title: "Contact"
+    content: |
+      Voor vragen betreffende deze AGV, neem contact met ons op via het adres %email%.

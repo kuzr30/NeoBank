@@ -1,0 +1,52 @@
+profile_kyc_status:
+  page:
+    title: "Status meiner Identitätsprüfung"
+  
+  header:
+    title: "Details meines KYC-Antrags"
+  
+  info:
+    request_status: "Status des Antrags"
+    submitted_on: "Eingereicht am"
+  
+  status_badges:
+    pending: "Wartet auf Validierung"
+    approved: "Genehmigt"
+    rejected: "Abgelehnt"
+  
+  timeline:
+    title: "Antragsverfolgung"
+    documents_submitted: "Dokumente eingereicht"
+    under_review: "In Prüfung"
+    under_review_message: "Unser Team prüft Ihre Dokumente..."
+    approved: "Antrag genehmigt"
+    rejected: "Antrag abgelehnt"
+    processed_by: "Von"
+  
+  documents:
+    title: "Eingereichte Dokumente"
+    sent_on: "Gesendet am"
+  
+  admin_notes:
+    title: "Anmerkungen unseres Teams"
+  
+  actions:
+    back: "Zurück"
+    resubmit_documents: "Neue Dokumente einreichen"
+    access_banking: "Zugang zu meinen Bankdienstleistungen"
+  
+  status:
+    pending:
+      title: "Prüfung läuft"
+      message: "Ihr Antrag wird derzeit von unserem Team geprüft. Sie werden per E-Mail benachrichtigt, sobald die Prüfung abgeschlossen ist."
+      estimated_time: "Geschätzte Wartezeit: 24-48 Stunden"
+    
+    approved:
+      title: "Prüfung genehmigt"
+      message: "Herzlichen Glückwunsch! Ihre Identität wurde erfolgreich verifiziert. Sie haben nun Zugang zu allen unseren Dienstleistungen."
+      completion_date: "Genehmigungsdatum"
+    
+    rejected:
+      title: "Prüfung abgelehnt"
+      message: "Ihr Prüfungsantrag wurde abgelehnt. Bitte lesen Sie die unten stehenden Anmerkungen und reichen Sie neue Dokumente ein."
+      reason: "Grund der Ablehnung"

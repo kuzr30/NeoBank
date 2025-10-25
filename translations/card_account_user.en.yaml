@@ -1,0 +1,125 @@
+# ENGLISH TRANSLATION - Translated from French
+# Bank card user interface translation file
+# Domain: card_account_user  
+# Language: English (en)
+
+card_account_user:
+  # Main section
+  title: "My bank cards"
+  subtitle: "Manage your cards and discover our offers"
+  
+  # Existing card section
+  user_card:
+    title: "My card"
+    status:
+      active: "Active"
+      blocked: "Blocked" 
+      expired: "Expired"
+      pending: "Pending"
+    
+    # Card information
+    card_info:
+      holder_label: "CARDHOLDER"
+      expiry_label: "EXPIRES END"
+      account_label: "Account"
+      daily_limit_label: "Daily limit"
+      daily_limit_undefined: "Not defined"
+      
+  # Ongoing subscription section
+  subscription:
+    title: "Your card request is in progress"
+    subtitle: "Your {cardType} {cardBrand} card is being processed"
+    request_date: "Request made on {date}"
+    
+    # Subscription statuses
+    status:
+      contract_pending: "Contract in preparation"
+      contract_sent: "Contract sent - Signature required"
+      admin_validation: "Awaiting administrative validation"
+      contract_expired: "Contract expired"
+      pending: "Awaiting validation"
+    
+    # Subscription details
+    details:
+      card_type_label: "Card type:"
+      brand_label: "Brand:"
+      contract_label: "Contract:"
+    
+    # Actions
+    actions:
+      sign_contract: "Sign contract"
+      sign_deadline: "You must sign your contract within 7 days to validate your request."
+    
+    # Informational messages
+    messages:
+      contract_signature_required: "Please sign your contract so that your request can be processed by our teams."
+      contract_signed_processing: "Your contract is signed. Our teams are reviewing your request and will contact you within 48 business hours."
+      contract_expired_message: "Your contract has expired. A new subscription request will be necessary."
+      default_processing: "Your request is being processed by our teams. You will receive an email as soon as your card is validated and ready to use."
+  
+  # Card selection section (new subscriptions)
+  card_selection:
+    title: "Choose your card"
+    subtitle: "Discover our different cards and their benefits"
+    
+    # Brands
+    brands:
+      visa_title: "Visa Cards"
+      mastercard_title: "Mastercard Cards"
+    
+    # Card types
+    card_types:
+      classic:
+        name: "Classic Card"
+        badge: "Ideal to start"
+        visa_price: "Free"
+        visa_period: "first year"
+        mastercard_price: "2€"
+        mastercard_period: "per month"
+        
+      gold:
+        name: "Gold Card"
+        badge: "Most popular"
+        badge_alt: "Popular"
+        visa_price: "5€"
+        mastercard_price: "8€"
+        period: "per month"
+        
+      platinum:
+        name: "Platinum Card"
+        badge: "Premium"
+        visa_price: "15€"
+        mastercard_price: "20€"
+        period: "per month"
+    
+    # Subscription action
+    subscribe_action: "Subscribe"
+  
+  # General messages
+  common:
+    loading: "Loading..."
+    error: "An error occurred"
+    retry: "Retry"
+    
+  # Navigation and actions
+  navigation:
+    back: "Back"
+    continue: "Continue"
+    close: "Close"
+    
+  # Forms
+  forms:
+    required: "Required"
+    optional: "Optional"
+    select_placeholder: "Select..."
+    
+  # Security and validations
+  security:
+    card_blocked_warning: "This card has been blocked for security reasons"
+    card_expired_warning: "This card has expired and must be renewed"
+    
+  # Support
+  help:
+    need_help: "Need help?"
+    contact_support: "Contact support"
+    faq: "Frequently asked questions"

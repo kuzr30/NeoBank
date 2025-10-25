@@ -1,0 +1,330 @@
+services:
+  # Konten & Karten
+  accounts_cards:
+    page:
+      title: "Konten & Karten"
+      description: "Entdecken Sie unsere an Ihre Bedürfnisse angepassten Bankkonten und Kreditkarten."
+    
+    hero:
+      title: "Konten & Karten"
+      subtitle: "Banklösungen für alle Ihre Bedürfnisse"
+      cta: "Mehr erfahren"
+    
+    products:
+      title: "Unsere Produkte"
+      subtitle: "Wählen Sie die Lösung, die am besten zu Ihnen passt"
+      
+      current_account:
+        title: "Girokonto"
+        description: "Das ideale Konto für die Verwaltung Ihres Alltags"
+        features:
+          - "Kostenlose Bankkarte"
+          - "Unbegrenzte Überweisungen"
+          - "Mobile App"
+        cta: "Beginnen"
+      
+      savings_account:
+        title: "Sparkonto"
+        description: "Lassen Sie Ihr Geld sicher wachsen"
+        features:
+          - "Attraktiver Zinssatz"
+          - "Sofortige Verfügbarkeit"
+          - "Keine Gebühren"
+        cta: "Beginnen"
+      
+      credit_card:
+        title: "Kreditkarte"
+        description: "Mehr Flexibilität für Ihre Einkäufe"
+        features:
+          - "Aufgeschobene Zahlung"
+          - "Versicherung inklusive"
+          - "Treueprogramme"
+        cta: "Beginnen"
+    
+    features:
+      title: "Warum uns wählen"
+      subtitle: "Exklusive Vorteile für unsere Kunden"
+      
+      security:
+        title: "Maximale Sicherheit"
+        description: "3D Secure Schutz und Echtzeitbenachrichtigungen"
+      
+      simple:
+        title: "Einfach zu verwenden"
+        description: "Intuitive Benutzeroberfläche und Eröffnung in 5 Minuten"
+      
+      fast:
+        title: "Schnelle Transaktionen"
+        description: "Sofortüberweisungen 24/7"
+      
+      support:
+        title: "Expertenunterstützung"
+        description: "Engagiertes Team per Telefon und Chat verfügbar"
+    
+    comparison:
+      title: "Warum %company_name% wählen?"
+      subtitle: "Vergleichen Sie unsere Vorteile mit der Konkurrenz und entdecken Sie, warum mehr als 500.000 Kunden uns vertrauen"
+      table_title: "Vergleich der Bankdienstleistungen"
+      table_subtitle: "Detaillierte Analyse der %company_name%-Vorteile vs. traditionelle Konkurrenten"
+      
+      features:
+        - "Funktionen"
+        - "Kostenlose Bankkarte"
+        - "Sofortüberweisungen"
+        - "Erweiterte Mobile App"
+        - "24/7 Kundensupport"
+        - "Kostenloser Dispokredit"
+        - "Sparzinssatz"
+      
+      bankit: "%company_name%"
+      competitor_a: "Bank A"
+      competitor_b: "Bank B"
+      
+      values:
+        card_free: "Kostenlos"
+        transfers_free: "Kostenlos"
+        app_advanced: "Erweitert"
+        support_24h: "24/7"
+        overdraft: "Bis zu 500€"
+        savings_rate: "3,2%"
+      
+      competitor_values:
+        a:
+          card_fee: "5€/Monat"
+          transfers_fee: "1€/Überweisung"
+          app_quality: "Grundlegend"
+          support_hours: "9-17 Uhr"
+          overdraft_limit: "200€"
+          savings_rate: "1,8%"
+        b:
+          card_fee: "8€/Monat"
+          transfers_fee: "✗"
+          app_quality: "Grundlegend"
+          support_hours: "9-18 Uhr"
+          overdraft_limit: "150€"
+          savings_rate: "2,1%"
+    
+    process:
+      title: "Vereinfachte Kontoeröffnung"
+      subtitle: "Ein 100% digitaler, sicherer und ultraschneller Prozess. Ihr Konto ist in weniger als 10 Minuten betriebsbereit."
+      time: "⚡ Eröffnung in maximal 10 Minuten"
+      
+      steps:
+        step1:
+          title: "Ihre Informationen"
+          description: "Geben Sie Ihre persönlichen und beruflichen Daten sicher auf unserer verschlüsselten Plattform ein"
+          time: "2 Minuten"
+        
+        step2:
+          title: "Identitätsprüfung"
+          description: "Sofortige Validierung Ihrer Identität über unsere Gesichtserkennungstechnologie und Dokumentenscan"
+          time: "3 Minuten"
+        
+        step3:
+          title: "Validierung & Aktivierung"
+          description: "Automatische Bestätigung und sofortige Aktivierung Ihres Kontos mit allen enthaltenen Diensten"
+          time: "2 Minuten"
+        
+        step4:
+          title: "Karte & RIB"
+          description: "Erhalt Ihrer Bankkarte innerhalb von 48h und RIB sofort verfügbar für Ihre Überweisungen"
+          time: "Sofort"
+    
+    services:
+      title: "Premium-Bankdienstleistungen"
+      subtitle: "Eine vollständige Palette moderner Bankdienstleistungen zur Vereinfachung Ihrer täglichen Finanzverwaltung"
+      
+      items:
+        payment_management:
+          title: "Zahlungsmanagement"
+          description: "Alle Ihre Zahlungsmittel zentralisiert in einer intuitiven und sicheren Benutzeroberfläche"
+          features:
+            - "Kostenlose SEPA-Sofortüberweisungen"
+            - "Automatische Lastschriften"
+            - "Mobile Zahlungen Apple Pay / Google Pay"
+            - "Temporäre virtuelle Karten"
+            - "Echtzeitbenachrichtigungen"
+        
+        financial_analysis:
+          title: "Finanzanalyse"
+          description: "Erweiterte Analysetools zur Optimierung Ihrer persönlichen Finanzverwaltung"
+          features:
+            - "Automatische Kategorisierung der Ausgaben"
+            - "Detaillierte Grafiken und Berichte"
+            - "Personalisierte Budgetalarme"
+            - "Intelligente Sparziele"
+            - "Liquiditätsprognosen"
+        
+        personalized_advice:
+          title: "Personalisierte Beratung"
+          description: "Maßgeschneiderte Begleitung für alle Ihre Finanzprojekte und Investitionen"
+          features:
+            - "24/7 verfügbarer engagierter Berater"
+            - "Echtzeit-Kreditsimulationen"
+            - "Personalisierte Anlageberatung"
+            - "Unterstützung für Ihre Immobilienprojekte"
+            - "Steueroptimierung"
+      
+      payments:
+        title: "Zahlungsmanagement"
+        description: "Alle Ihre Zahlungsmittel zentralisiert in einer intuitiven und sicheren Benutzeroberfläche"
+        features:
+          - "Kostenlose SEPA-Sofortüberweisungen"
+          - "Automatische Lastschriften"
+          - "Mobile Zahlungen Apple Pay / Google Pay"
+          - "Temporäre virtuelle Karten"
+          - "Echtzeitbenachrichtigungen"
+      
+      analysis:
+        title: "Finanzanalyse"
+        description: "Erweiterte Analysetools zur Optimierung Ihrer persönlichen Finanzverwaltung"
+        features:
+          - "Automatische Kategorisierung der Ausgaben"
+          - "Detaillierte Grafiken und Berichte"
+          - "Personalisierte Budgetalarme"
+          - "Intelligente Sparziele"
+          - "Liquiditätsprognosen"
+      
+      advice:
+        title: "Personalisierte Beratung"
+        description: "Maßgeschneiderte Begleitung für alle Ihre Finanzprojekte und Investitionen"
+        features:
+          - "24/7 verfügbarer engagierter Berater"
+          - "Echtzeit-Kreditsimulationen"
+          - "Personalisierte Anlageberatung"
+          - "Unterstützung für Ihre Immobilienprojekte"
+          - "Steueroptimierung"
+    
+    benefits:
+      title: "Exklusive %company_name%-Vorteile"
+      subtitle: "Profitieren Sie von einzigartigen Vorteilen und privilegierten Angeboten, die unseren treuen Kunden vorbehalten sind"
+      
+      items:
+        instant_transactions:
+          title: "Soforttransaktionen"
+          description: "Überweisungen und Zahlungen in weniger als 3 Sekunden bearbeitet, 24/7"
+          value: "< 3 Sekunden"
+        
+        cashback:
+          title: "Garantiertes Cashback"
+          description: "Erhalten Sie bis zu 2% Cashback auf alle Ihre täglichen Einkäufe ohne Bedingungen"
+          value: "Bis zu 2%"
+        
+        insurance:
+          title: "Versicherungen inklusive"
+          description: "Vollständiger Schutz mit Reise-, Kauf- und 24/7-Assistance-Versicherung inklusive"
+          value: "Inklusive"
+        
+        global_access:
+          title: "Weltweiter Zugang"
+          description: "Verwenden Sie Ihre Karte in über 210 Ländern ohne versteckte Gebühren oder Provisionen"
+          value: "210+ Länder"
+        
+        loyalty_program:
+          title: "Treueprogramm"
+          description: "Treuepunkte umwandelbar in Vorteile und exklusive Partnerangebote"
+          value: "VIP-Punkte"
+        
+        automatic_savings:
+          title: "Automatisches Sparen"
+          description: "Automatische Aufrundungen und programmierte Überweisungen für müheloses Sparen"
+          value: "Automatisch"
+      
+      instant:
+        title: "Soforttransaktionen"
+        description: "Überweisungen und Zahlungen in weniger als 3 Sekunden bearbeitet, 24/7"
+        value: "< 3 Sekunden"
+      
+      cashback:
+        title: "Garantiertes Cashback"
+        description: "Erhalten Sie bis zu 2% Cashback auf alle Ihre täglichen Einkäufe ohne Bedingungen"
+        value: "Bis zu 2%"
+      
+      insurance:
+        title: "Versicherungen inklusive"
+        description: "Vollständiger Schutz mit Reise-, Kauf- und 24/7-Assistance-Versicherung inklusive"
+        value: "Inklusive"
+      
+      worldwide:
+        title: "Weltweiter Zugang"
+        description: "Verwenden Sie Ihre Karte in über 210 Ländern ohne versteckte Gebühren oder Provisionen"
+        value: "210+ Länder"
+      
+      loyalty:
+        title: "Treueprogramm"
+        description: "Treuepunkte umwandelbar in Vorteile und exklusive Partnerangebote"
+        value: "VIP-Punkte"
+      
+      savings:
+        title: "Automatisches Sparen"
+        description: "Automatische Aufrundungen und programmierte Überweisungen für müheloses Sparen"
+        value: "Automatisch"
+    
+    support:
+      title: "Exzellenter Kundensupport"
+      subtitle: "Ein Expertenteam zu Ihrem Service, um alle Ihre Fragen zu beantworten, 24/7"
+      
+      channels:
+        live_chat:
+          title: "Live-Chat"
+          description: "Sofortige Unterstützung über unseren integrierten Chat mit sofort verfügbaren Expertenagenten"
+          availability: "24/7"
+          response_time: "Antwort < 30 Sekunden"
+        
+        phone_hotline:
+          title: "Telefon-Hotline"
+          description: "Premium-Telefondienst mit spezialisierten Beratern für alle Ihre komplexen Fragen"
+          availability: "24/7"
+          response_time: "Kostenlos aus Frankreich"
+        
+        email_form:
+          title: "E-Mail & Formular"
+          description: "Detaillierter Support per E-Mail mit personalisierten Antworten unserer Bankexperten"
+          availability: "Garantierte Antwort"
+          response_time: "Innerhalb von 2 Stunden"
+        
+        interactive_faq:
+          title: "Interaktive FAQ"
+          description: "Umfassende Wissensdatenbank mit intelligenter Suche und Schritt-für-Schritt-Anleitungen"
+          availability: "Freier Zugang"
+          response_time: "Sofortige Antworten"
+    
+    cta:
+      title: "Bereit anzufangen?"
+      description: "Eröffnen Sie Ihr Konto in wenigen Minuten und profitieren Sie von unseren exklusiven Vorteilen"
+      primary_button: "Beginnen"
+      secondary_button: "Kontaktieren Sie uns"
+  
+  # Sparen & Geldanlagen
+  savings_investments:
+    page:
+      title: "Sparen & Geldanlagen"
+      description: "Optimieren Sie Ihr Sparen mit unseren sicheren und rentablen Anlagelösungen."
+  
+  # Versicherungen
+  insurances:
+    page:
+      title: "Versicherungen"
+      description: "Schützen Sie Ihre Güter und Ihre Familie mit unseren umfassenden Versicherungslösungen."
+  
+  # Kostenvoranschläge
+  devis:
+    page:
+      title: "Kostenvoranschlag-Anfrage - %type%"
+      description: "Fordern Sie Ihren Kostenvoranschlag für %type% online an. %description%"
+    
+    confirmation:
+      page:
+        title: "Bestätigung - Kostenvoranschlag %numero%"
+        description: "Ihre Kostenvoranschlag-Anfrage wurde erfolgreich registriert."
+    
+    success:
+      message: "Ihre Kostenvoranschlag-Anfrage %numero% wurde registriert. Sie erhalten eine Bestätigung per E-Mail."
+    
+    error:
+      type_not_found: "Versicherungstyp nicht gefunden"
+      save_failed: "Beim Speichern Ihrer Anfrage ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+      detailed: "Detaillierter Fehler: %message%"
+      validation_failed: "Das Formular enthält Fehler. Bitte überprüfen Sie Ihre Daten."
+      validation_error: "Fehler: %message%"
+      not_found: "Kostenvoranschlag-Anfrage nicht gefunden"

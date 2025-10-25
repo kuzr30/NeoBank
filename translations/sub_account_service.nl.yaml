@@ -1,0 +1,9 @@
+sub_account_service:
+  exceptions:
+    main_account_not_found: "Geen hoofdrekening gevonden voor gebruiker: {email}"
+    credit_subaccount_creation_failed: "Kan geen krediet-subrekening aanmaken voor gebruiker: {email}"
+    
+  log_messages:
+    sub_accounts_created: "Subrekeningen aangemaakt voor hoofdrekening"
+    credit_subaccount_retrieved: "Krediet-subrekening succesvol opgehaald"
+    balances_calculated: "Saldi van alle subrekeningen berekend"

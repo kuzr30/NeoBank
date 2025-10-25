@@ -1,0 +1,167 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.check_email_title'|trans({}, 'reset_password') }} - SEDEF BANK{% endblock %}
+
+{% block body %}
+
+<style>
+/* Check Email Page Specific Styles */
+.check-email__container {
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    padding: 24px !important;
+    background: #f8f9fa !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.check-email__card {
+    background: #ffffff !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 12px !important;
+    padding: 40px !important;
+    width: 100% !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+    text-align: center !important;
+}
+
+.check-email__icon {
+    width: 80px !important;
+    height: 80px !important;
+    background: linear-gradient(135deg, #27ae60, #2ecc71) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 24px !important;
+}
+
+.check-email__icon-svg {
+    width: 40px !important;
+    height: 40px !important;
+    color: white !important;
+}
+
+.check-email__title {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 16px !important;
+}
+
+.check-email__message {
+    font-size: 16px !important;
+    color: #7f8c8d !important;
+    margin-bottom: 24px !important;
+    line-height: 1.5 !important;
+}
+
+.check-email__email {
+    font-weight: 600 !important;
+    color: #0066cc !important;
+}
+
+.check-email__info {
+    background: #e3f2fd !important;
+    border: 1px solid #bbdefb !important;
+    border-radius: 8px !important;
+    padding: 16px !important;
+    margin-bottom: 24px !important;
+    font-size: 14px !important;
+    color: #1976d2 !important;
+}
+
+.check-email__actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+}
+
+.check-email__btn {
+    padding: 12px 24px !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    text-decoration: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    border: none !important;
+}
+
+.check-email__btn--primary {
+    background: #0066cc !important;
+    color: white !important;
+}
+
+.check-email__btn--primary:hover {
+    background: #0052a3 !important;
+    color: white !important;
+}
+
+.check-email__btn--secondary {
+    background: #f8f9fa !important;
+    color: #0066cc !important;
+    border: 1px solid #e1e8ed !important;
+}
+
+.check-email__btn--secondary:hover {
+    background: #f1f5f9 !important;
+    border-color: #0066cc !important;
+    color: #0066cc !important;
+}
+
+.check-email__btn-icon {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .check-email__container {
+        padding: 16px !important;
+    }
+    
+    .check-email__card {
+        padding: 24px !important;
+    }
+}
+</style>
+
+<div class="check-email__container">
+    <div class="check-email__card">
+        <div class="check-email__icon">
+            {{ ux_icon('heroicons:check-circle', {'class': 'check-email__icon-svg'}) }}
+        </div>
+        
+        <h1 class="check-email__title">{{ 'page.check_email_heading'|trans({}, 'reset_password') }}</h1>
+        
+        <p class="check-email__message">
+            {{ 'messages.check_email_info'|trans({}, 'reset_password') }}
+        </p>
+        
+        <div class="check-email__info">
+            {{ ux_icon('heroicons:information-circle', {'class': 'check-email__btn-icon'}) }}
+            {{ 'help.security_note'|trans({}, 'reset_password') }}
+        </div>
+        
+        <div class="check-email__actions">
+            <a href="{{ path('app_login') }}" class="check-email__btn check-email__btn--primary">
+                {{ ux_icon('heroicons:arrow-left', {'class': 'check-email__btn-icon'}) }}
+                {{ 'help.back_to_login'|trans({}, 'reset_password') }}
+            </a>
+            
+            <a href="{{ path('app_forgot_password_request') }}" class="check-email__btn check-email__btn--secondary">
+                {{ ux_icon('heroicons:arrow-path', {'class': 'check-email__btn-icon'}) }}
+                {{ 'help.new_request'|trans({}, 'reset_password') }}
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

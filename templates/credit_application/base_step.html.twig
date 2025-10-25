@@ -1,0 +1,447 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tp('credit_application.navigation.title', {}, 'application') }} - {{ tp('credit_application.navigation.step_progress', {'%step%': currentStep, '%total%': totalSteps}, 'application') }}{% endblock %}
+
+{% block body %}
+<main class="credit-application">
+  
+  <!-- Header avec progression -->
+  <section class="credit-application__header">
+    <div class="credit-application__header-container">
+      <div class="credit-application__nav">
+        <a href="{{ path('credit_simulation_index') }}" class="credit-application__back-link">
+          ← {{ tp('credit_application.navigation.back', {}, 'application') }}
+        </a>
+        <h1 class="credit-application__title">{{ tp('credit_application.navigation.title', {}, 'application') }}</h1>
+      </div>
+      
+      <!-- Zone de notifications -->
+      <div class="credit-application__notifications">
+        {% include 'partials/_notifications.html.twig' %}
+      </div>
+      
+      <!-- Barre de progression -->
+      <div class="credit-application__progress">
+        <div class="credit-application__progress-bar">
+          <div class="credit-application__progress-fill" style="width: {{ (currentStep / totalSteps * 100)|round }}%"></div>
+        </div>
+        <div class="credit-application__progress-text">
+          Étape {{ currentStep }} sur {{ totalSteps }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rappel de simulation -->
+  {% if simulation is defined and simulation is not empty %}
+  <section class="credit-application__simulation-recap">
+    <div class="credit-application__simulation-recap-container">
+      <h3 class="credit-application__simulation-recap-title">{{ ux_icon('heroicons:chart-bar', {class: 'icon'}) }} {{ tp('credit_application.summary.sections.credit_request', {}, 'application') }}</h3>
+      <div class="credit-application__simulation-recap-grid">
+        <div class="credit-application__simulation-recap-item">
+          <span class="credit-application__simulation-recap-label">{{ tp('credit_application.summary.credit.amount', {}, 'application') }}</span>
+          <span class="credit-application__simulation-recap-value">{{ simulation.amount|number_format(0, ',', ' ') }} €</span>
+        </div>
+        <div class="credit-application__simulation-recap-item">
+          <span class="credit-application__simulation-recap-label">{{ tp('credit_application.summary.credit.duration', {}, 'application') }}</span>
+          <span class="credit-application__simulation-recap-value">{{ simulation.duration }} {{ tp('credit_simulation.common.months', {}, 'simulation') }}</span>
+        </div>
+        <div class="credit-application__simulation-recap-item">
+          <span class="credit-application__simulation-recap-label">{{ tp('credit_application.summary.credit.monthly_payment', {}, 'application') }}</span>
+          <span class="credit-application__simulation-recap-value">{{ simulation.monthlyPayment|number_format(2, ',', ' ') }} €</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Contenu de l'étape -->
+  <section class="credit-application__content">
+    <div class="credit-application__content-container">
+      {% block step_content %}{% endblock %}
+    </div>
+  </section>
+
+</main>
+
+<style>
+/* ===== CREDIT APPLICATION STYLES - BEM METHODOLOGY ===== */
+
+/* Base Styles */
+.credit-application {
+  background: #f8fafc;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Header Section */
+.credit-application__header {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+  padding: 2rem 0;
+}
+
+.credit-application__header-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.credit-application__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.credit-application__back-link {
+  display: inline-flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.credit-application__back-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-2px);
+}
+
+.credit-application__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Progress Bar */
+.credit-application__progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.credit-application__progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.credit-application__progress-fill {
+  height: 100%;
+  background: white;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.credit-application__progress-text {
+  text-align: center;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+/* Simulation Recap */
+.credit-application__simulation-recap {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 1.5rem 0;
+}
+
+.credit-application__simulation-recap-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.credit-application__simulation-recap-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #1e293b;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.credit-application__simulation-recap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.credit-application__simulation-recap-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.credit-application__simulation-recap-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.credit-application__simulation-recap-value {
+  font-size: 1rem;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+/* Content Section */
+.credit-application__content {
+  padding: 3rem 0;
+}
+
+.credit-application__content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Form Styles */
+.credit-application__form {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.credit-application__form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.credit-application__form-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.credit-application__form-subtitle {
+  color: #64748b;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.credit-application__form-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.credit-application__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.credit-application__form-grid--two-columns {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.credit-application__form-group label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.credit-application__form-group .form-control {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.credit-application__form-group .form-control:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.credit-application__form-help {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+/* Checkbox Styles */
+.credit-application__checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.credit-application__checkbox-group .form-check-input {
+  margin-top: 0.25rem;
+}
+
+.credit-application__checkbox-group .form-check-label {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #374151;
+}
+
+/* Actions */
+.credit-application__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.credit-application__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.credit-application__button--primary {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+}
+
+.credit-application__button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
+}
+
+.credit-application__button--secondary {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+.credit-application__button--secondary:hover {
+  background: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+/* Error Messages */
+.credit-application__error {
+  color: #dc2626;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* Symfony Form Errors */
+.credit-application__form-group .invalid-feedback,
+.credit-application__form-group .form-error-message,
+.credit-application__form-group ul {
+  color: #dc2626;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  list-style: none;
+  padding: 0;
+}
+
+.credit-application__form-group .invalid-feedback li,
+.credit-application__form-group .form-error-message li,
+.credit-application__form-group ul li {
+  margin-bottom: 0.25rem;
+}
+
+/* Input error state */
+.credit-application__form-group .form-control.is-invalid {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* Alert Messages */
+.alert {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  border-left: 4px solid;
+}
+
+.alert-error,
+.alert-danger {
+  background-color: #fef2f2;
+  border-left-color: #dc2626;
+  color: #991b1b;
+}
+
+.alert-success {
+  background-color: #f0fdf4;
+  border-left-color: #16a34a;
+  color: #166534;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .credit-application__header {
+    padding: 1.5rem 0;
+  }
+  
+  .credit-application__nav {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  
+  .credit-application__title {
+    font-size: 1.5rem;
+  }
+  
+  .credit-application__content {
+    padding: 2rem 0;
+  }
+  
+  .credit-application__form {
+    padding: 1.5rem;
+  }
+  
+  .credit-application__form-grid--two-columns {
+    grid-template-columns: 1fr;
+  }
+  
+  .credit-application__actions {
+    flex-direction: column;
+  }
+  
+  .credit-application__button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .credit-application__simulation-recap-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+</style>
+
+{% endblock %}

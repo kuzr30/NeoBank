@@ -1,0 +1,46 @@
+email_kyc_rejected:
+  title: "Verificación de identidad - Documentos a corregir"
+  
+  content:
+    page_title: "Actualización de su verificación de identidad"
+    greeting: "Hola <strong>%firstName%</strong>,"
+    
+    correction_required:
+      title: "Corrección requerida para sus documentos"
+      message: "Hemos examinado su solicitud de verificación de identidad (KYC), pero algunos documentos requieren correcciones para finalizar su activación."
+    
+    rejection_reasons:
+      title: "Motivos de corrección solicitada"
+    
+    correction_process:
+      title: "Procedimiento de corrección"
+      step1: "1. Consultar las observaciones detalladas arriba"
+      step2: "2. Preparar los documentos corregidos según las instrucciones"
+      step3: "3. Presentar una nueva solicitud a través de su espacio cliente"
+    
+    required_documents:
+      title: "Documentos requeridos para la verificación"
+      identity_document: "Documento de identidad"
+      identity_desc: "Cédula nacional, Pasaporte, Licencia (anverso-reverso, legible)"
+      income_proof: "Comprobante de ingresos"
+      income_desc: "Nómina, Declaración de impuestos (menos de 3 meses)"
+      address_proof: "Comprobante de domicilio"
+      address_desc: "Factura, Recibo de alquiler (menos de 3 meses)"
+      verification_photo: "Foto de verificación"
+      photo_desc: "Selfie sosteniendo su documento de identidad (opcional)"
+    
+    action_required:
+      title: "Acción requerida"
+      submit_button: "Presentar nuevos documentos"
+      secure_process: "Proceso seguro y confidencial"
+    
+    support:
+      title: "Soporte y asistencia"
+      message: "Nuestro equipo de soporte está a su disposición para acompañarle en este trámite. No dude en contactarnos para cualquier pregunta relacionada con los documentos requeridos."
+    
+    footer: "<strong>%company_name% - Departamento Cumplimiento</strong><br>Notificación de corrección de documentos KYC"
+
+  logs:
+    kyc_rejected_sent: "Correo de rechazo KYC enviado con éxito a %email%"
+    kyc_rejected_failed: "Error al enviar el rechazo KYC a %email%"
+    kyc_status_rejected: "Estado KYC actualizado para %firstName% %lastName% - Rechazado"

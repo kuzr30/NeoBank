@@ -1,0 +1,119 @@
+# Vertaalbestand voor CardConditionEnum
+# Domein: CardConditionEnum  
+# Taal: Nederlands (nl)
+
+CardConditionEnum:
+  # Kaarttypes - Labels
+  labels:
+    classic: "Classic Kaart"
+    gold: "Gold Kaart"
+    platinum: "Platinum Kaart"
+  
+  # Kaarttypes - Marketing beschrijvingen
+  descriptions:
+    classic: "Ideale kaart om te beginnen met essentiële diensten"
+    gold: "Premium kaart met verzekeringen en cashback inbegrepen"
+    platinum: "Prestigekaart met exclusieve diensten en conciërge"
+  
+  # Algemene informatie
+  info:
+    title: "Bankkaart gamma's"
+    subtitle: "Diensten aangepast aan elk profiel"
+    
+  # Jaarlijkse kosten
+  annual_fees:
+    classic: "Gratis"
+    gold: "€60/jaar"
+    platinum: "€180/jaar"
+    
+  # Gedetailleerde voorwaarden
+  conditions:
+    classic:
+      title: "BIJZONDERE VOORWAARDEN - CLASSIC KAART"
+      pricing:
+        title: "PRIJSSTELLING"
+        annual_fee: "Jaarlijkse bijdrage: Gratis het eerste jaar, daarna €24/jaar"
+        withdrawal_eurozone: "Opname in eurozone: Gratis (3 per maand), daarna €1"
+        foreign_payment: "Betaling in vreemde valuta: 2% commissie"
+      limits:
+        title: "LIMIETEN"
+        daily_withdrawal: "Dagelijkse opname: €500"
+        monthly_payment: "Maandelijkse betaling: €2.000"
+      services:
+        title: "INBEGREPEN DIENSTEN"
+        insurance: "Aankoopverzekering: €500"
+        support: "Telefonische assistentie 24u/7d"
+        
+    gold:
+      title: "BIJZONDERE VOORWAARDEN - GOLD KAART"
+      pricing:
+        title: "PRIJSSTELLING"
+        annual_fee: "Jaarlijkse bijdrage: €60"
+        withdrawal_worldwide: "Gratis opnames wereldwijd"
+        payment_eurozone: "Betalingen zonder commissie in eurozone"
+      limits:
+        title: "LIMIETEN"
+        daily_withdrawal: "Dagelijkse opname: €1.000"
+        monthly_payment: "Maandelijkse betaling: €5.000"
+        revolving_credit: "Doorlopend krediet: €2.000"
+      services:
+        title: "INBEGREPEN DIENSTEN"
+        travel_insurance: "Internationale reisverzekering"
+        cashback: "Cashback 1% op alle aankopen"
+        concierge: "Telefonische conciërge"
+        purchase_insurance: "Aankoopverzekering: €2.000"
+        
+    platinum:
+      title: "BIJZONDERE VOORWAARDEN - PLATINUM KAART"
+      pricing:
+        title: "PRIJSSTELLING"
+        annual_fee: "Jaarlijkse bijdrage: €180"
+        global_services: "Alle diensten gratis wereldwijd"
+        exchange_rates: "Preferentiële wisselkoersen"
+      limits:
+        title: "LIMIETEN"
+        daily_withdrawal: "Dagelijkse opname: €2.500"
+        monthly_payment: "Maandelijkse betaling: €10.000"
+        revolving_credit: "Doorlopend krediet: €5.000"
+      services:
+        title: "PREMIUM DIENSTEN"
+        premium_travel: "Premium reisverzekering + familie"
+        premium_cashback: "Cashback 2% op alle aankopen"
+        vip_access: "Toegang tot VIP lounges luchthavens"
+        premium_concierge: "Premium conciërge 24u/24"
+        premium_insurance: "Aankoopverzekering: €5.000"
+        ticket_service: "Service voor terugkoop vliegtickets"
+  
+  # Limieten per type
+  limits:
+    classic:
+      daily: "€500"
+      monthly: "€2.000"
+    gold:
+      daily: "€1.000"
+      monthly: "€5.000"
+      credit: "€2.000"
+    platinum:
+      daily: "€2.500"
+      monthly: "€10.000"
+      credit: "€5.000"
+      
+  # Berichten voor formulieren
+  form:
+    placeholder: "Kies uw kaartgamma"
+    help: "Het gamma bepaalt de diensten en limieten van uw kaart"
+    
+  # Hoofdvoordelen
+  key_benefits:
+    classic:
+      - "Kaart zonder kosten het eerste jaar"
+      - "Essentiële bankdiensten"
+      - "Assistentie 24u/7d"
+    gold:
+      - "Gratis opnames wereldwijd"
+      - "Cashback op uw aankopen"
+      - "Reisverzekering inbegrepen"
+    platinum:
+      - "Exclusieve premium diensten"
+      - "Toegewijde conciërge"
+      - "Toegang tot VIP lounges"

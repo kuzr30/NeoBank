@@ -1,0 +1,766 @@
+<!-- Support Section -->
+<section class="support" id="support">
+    <div class="support__container">
+        <div class="support__header">
+            <h2 class="support__title">{{ tp('mobile_app.support.title', [], 'mobile_app') }}</h2>
+            <p class="support__subtitle">
+                {{ tp('mobile_app.support.subtitle', [], 'mobile_app') }}
+            </p>
+        </div>
+        
+        <div class="support__content">
+            <div class="support__channels">
+                <div class="support__channel">
+                    <div class="support__channel-icon">
+                        {{ ux_icon('heroicons:chat-bubble-left-right', {'class': 'support__icon'}) }}
+                    </div>
+                    <h3 class="support__channel-title">{{ tp('mobile_app.support.channels.live_chat.title', [], 'mobile_app') }}</h3>
+                    <p class="support__channel-desc">
+                        {{ tp('mobile_app.support.channels.live_chat.description', [], 'mobile_app') }}
+                    </p>
+                    <div class="support__channel-meta">
+                        <span class="support__availability">{{ tp('mobile_app.support.channels.live_chat.availability', [], 'mobile_app') }}</span>
+                        <span class="support__response-time">{{ tp('mobile_app.support.stats.response_time.value', [], 'mobile_app') }}</span>
+                    </div>
+                </div>
+                
+                <div class="support__channel">
+                    <div class="support__channel-icon">
+                        {{ ux_icon('heroicons:phone', {'class': 'support__icon'}) }}
+                    </div>
+                    <h3 class="support__channel-title">{{ tp('mobile_app.support.channels.phone.title', [], 'mobile_app') }}</h3>
+                    <p class="support__channel-desc">
+                        {{ tp('mobile_app.support.channels.phone.description', [], 'mobile_app') }}
+                    </p>
+                    <div class="support__channel-meta">
+                        <span class="support__availability">{{ tp('mobile_app.support.channels.phone.availability', [], 'mobile_app') }}</span>
+                        <span class="support__response-time">Immédiat</span>
+                    </div>
+                </div>
+                
+                <div class="support__channel">
+                    <div class="support__channel-icon">
+                        {{ ux_icon('heroicons:envelope', {'class': 'support__icon'}) }}
+                    </div>
+                    <h3 class="support__channel-title">{{ tp('mobile_app.support.channels.priority_email.title', [], 'mobile_app') }}</h3>
+                    <p class="support__channel-desc">
+                        {{ tp('mobile_app.support.channels.priority_email.description', [], 'mobile_app') }}
+                    </p>
+                    <div class="support__channel-meta">
+                        <span class="support__availability">{{ tp('mobile_app.support.channels.priority_email.availability', [], 'mobile_app') }}</span>
+                        <span class="support__response-time">< 4h</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="support__stats">
+                <div class="support__stat-card">
+                    <div class="support__stat-header">
+                        <h4 class="support__stat-title">{{ tp('mobile_app.support.stats.satisfaction.label', [], 'mobile_app') }}</h4>
+                        <div class="support__stat-badge">Excellence</div>
+                    </div>
+                    <div class="support__stat-content">
+                        <div class="support__stat-number">{{ tp('mobile_app.support.stats.satisfaction.value', [], 'mobile_app') }}</div>
+                        <div class="support__stat-desc">{{ tp('mobile_app.support.stats.satisfaction.label', [], 'mobile_app') }}</div>
+                        <div class="support__stat-trend">
+                            {{ ux_icon('heroicons:arrow-trending-up', {'class': 'support__trend-icon'}) }}
+                            +2.3% ce mois
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="support__stat-card">
+                    <div class="support__stat-header">
+                        <h4 class="support__stat-title">{{ tp('mobile_app.support.stats.resolution_time.label', [], 'mobile_app') }}</h4>
+                        <div class="support__stat-badge support__stat-badge--success">Rapide</div>
+                    </div>
+                    <div class="support__stat-content">
+                        <div class="support__stat-number">{{ tp('mobile_app.support.stats.resolution_time.value', [], 'mobile_app') }}</div>
+                        <div class="support__stat-desc">{{ tp('mobile_app.support.stats.resolution_time.label', [], 'mobile_app') }}</div>
+                        <div class="support__stat-trend">
+                            {{ ux_icon('heroicons:arrow-trending-down', {'class': 'support__trend-icon support__trend-icon--down'}) }}
+                            -15% ce mois
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="support__faq">
+                <h3 class="support__faq-title">{{ tp('mobile_app.support.faq.title', [], 'mobile_app') }}</h3>
+                <div class="support__faq-grid">
+                    <div class="support__faq-item">
+                        <div class="support__faq-question">
+                            {{ ux_icon('heroicons:question-mark-circle', {'class': 'support__faq-icon'}) }}
+                            <span>{{ tp('mobile_app.support.faq.items.account_opening.question', [], 'mobile_app') }}</span>
+                        </div>
+                        <p class="support__faq-answer">
+                            {{ tp('mobile_app.support.faq.items.account_opening.answer', [], 'mobile_app') }}
+                        </p>
+                    </div>
+                    
+                    <div class="support__faq-item">
+                        <div class="support__faq-question">
+                            {{ ux_icon('heroicons:question-mark-circle', {'class': 'support__faq-icon'}) }}
+                            <span>{{ tp('mobile_app.support.faq.items.is_free.question', [], 'mobile_app') }}</span>
+                        </div>
+                        <p class="support__faq-answer">
+                            {{ tp('mobile_app.support.faq.items.is_free.answer', [], 'mobile_app') }}
+                        </p>
+                    </div>
+                    
+                    <div class="support__faq-item">
+                        <div class="support__faq-question">
+                            {{ ux_icon('heroicons:question-mark-circle', {'class': 'support__faq-icon'}) }}
+                            <span>{{ tp('mobile_app.support.faq.items.data_security.question', [], 'mobile_app') }}</span>
+                        </div>
+                        <p class="support__faq-answer">
+                            {{ tp('mobile_app.support.faq.items.data_security.answer', [], 'mobile_app') }}
+                        </p>
+                    </div>
+                    
+                    <div class="support__faq-item">
+                        <div class="support__faq-question">
+                            {{ ux_icon('heroicons:question-mark-circle', {'class': 'support__faq-icon'}) }}
+                            <span>{{ tp('mobile_app.support.faq.items.international.question', [], 'mobile_app') }}</span>
+                        </div>
+                        <p class="support__faq-answer">
+                            {{ tp('mobile_app.support.faq.items.international.answer', [], 'mobile_app') }}
+                        </p>
+                    </div>
+                </div>
+            </div>            <div class="support__contact">
+                <div class="support__contact-content">
+                    <h3 class="support__contact-title">{{ tp('mobile_app.support.contact.title', [], 'mobile_app') }}</h3>
+                    <p class="support__contact-desc">
+                        {{ tp('mobile_app.support.contact.description', [], 'mobile_app') }}
+                    </p>
+                    <div class="support__contact-actions">
+                        <a href="{{ path('support_contact') }}" class="support__contact-btn support__contact-btn--primary">
+                            {{ ux_icon('heroicons:chat-bubble-left-right', {'class': 'support__contact-icon'}) }}
+                            {{ tp('mobile_app.support.contact.actions.start_chat', [], 'mobile_app') }}
+                        </a>
+                        <a href="{{ path('support_contact') }}" class="support__contact-btn support__contact-btn--secondary">
+                            {{ ux_icon('heroicons:phone', {'class': 'support__contact-icon'}) }}
+                            {{ tp('mobile_app.support.contact.actions.phone_number', [], 'mobile_app') }}
+                        </a>
+                    </div>
+                </div>
+                <div class="support__contact-visual">
+                    <div class="support__agent">
+                        <div class="support__agent-avatar">
+                            <div class="support__agent-initial">S</div>
+                            <div class="support__agent-status"></div>
+                        </div>
+                        <div class="support__agent-info">
+                            <div class="support__agent-name">{{ tp('mobile_app.support.contact.agent.name', [], 'mobile_app') }}</div>
+                            <div class="support__agent-role">{{ tp('mobile_app.support.contact.agent.role', [], 'mobile_app') }}</div>
+                            <div class="support__agent-online">
+                                {{ ux_icon('heroicons:signal', {'class': 'support__online-icon'}) }}
+                                {{ tp('mobile_app.support.contact.agent.status', [], 'mobile_app') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* =================================================================
+   MOBILE APP - SUPPORT SECTION
+   ================================================================= */
+
+/* Block: support */
+.support {
+    padding: 6rem 0;
+    background: white;
+    position: relative;
+}
+
+.support::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(229, 90, 43, 0.03) 0%, rgba(251, 191, 36, 0.03) 100%);
+}
+
+/* Element: support__container */
+.support__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Element: support__header */
+.support__header {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Element: support__title */
+.support__title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+/* Element: support__subtitle */
+.support__subtitle {
+    font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* Element: support__content */
+.support__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* Element: support__channels */
+.support__channels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* Element: support__channel */
+.support__channel {
+    background: linear-gradient(135deg, #f8fafc 0%, white 100%);
+    border-radius: 1.25rem;
+    padding: 2.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.support__channel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #e55a2b 0%, #fbbf24 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.support__channel:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+}
+
+.support__channel:hover::before {
+    transform: scaleX(1);
+}
+
+/* Element: support__channel-icon */
+.support__channel-icon {
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Element: support__icon */
+.support__icon {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+}
+
+/* Element: support__channel-title */
+.support__channel-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+/* Element: support__channel-desc */
+.support__channel-desc {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Element: support__channel-meta */
+.support__channel-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Element: support__availability, support__response-time */
+.support__availability,
+.support__response-time {
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    background: rgba(229, 90, 43, 0.1);
+    color: #e55a2b;
+}
+
+.support__response-time {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+}
+
+/* Element: support__stats */
+.support__stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Element: support__stat-card */
+.support__stat-card {
+    background: white;
+    border-radius: 1.25rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.support__stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #e55a2b 0%, #fbbf24 100%);
+}
+
+/* Element: support__stat-header */
+.support__stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Element: support__stat-title */
+.support__stat-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+/* Element: support__stat-badge */
+.support__stat-badge {
+    background: rgba(229, 90, 43, 0.1);
+    color: #e55a2b;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Modifier: support__stat-badge--success */
+.support__stat-badge--success {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+}
+
+/* Element: support__stat-content */
+.support__stat-content {
+    text-align: center;
+}
+
+/* Element: support__stat-number */
+.support__stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #e55a2b 0%, #fbbf24 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+/* Element: support__stat-desc */
+.support__stat-desc {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+}
+
+/* Element: support__stat-trend */
+.support__stat-trend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #22c55e;
+}
+
+/* Element: support__trend-icon */
+.support__trend-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Modifier: support__trend-icon--down */
+.support__trend-icon--down {
+    color: #22c55e;
+}
+
+/* Element: support__faq */
+.support__faq {
+    background: #f8fafc;
+    border-radius: 1.25rem;
+    padding: 3rem;
+}
+
+/* Element: support__faq-title */
+.support__faq-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Element: support__faq-grid */
+.support__faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Element: support__faq-item */
+.support__faq-item {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Element: support__faq-question */
+.support__faq-question {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+/* Element: support__faq-icon */
+.support__faq-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+/* Element: support__faq-answer */
+.support__faq-answer {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Element: support__contact */
+.support__contact {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border-radius: 1.25rem;
+    padding: 3rem;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* Element: support__contact-content */
+.support__contact-content {
+    max-width: 500px;
+}
+
+/* Element: support__contact-title */
+.support__contact-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+/* Element: support__contact-desc */
+.support__contact-desc {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Element: support__contact-actions */
+.support__contact-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Element: support__contact-btn */
+.support__contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Modifier: support__contact-btn--primary */
+.support__contact-btn--primary {
+    background: white;
+    color: var(--color-primary);
+}
+
+.support__contact-btn--primary:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+/* Modifier: support__contact-btn--secondary */
+.support__contact-btn--secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.support__contact-btn--secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    color: white;
+    text-decoration: none;
+}
+
+/* Element: support__contact-icon */
+.support__contact-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Element: support__contact-visual */
+.support__contact-visual {
+    display: flex;
+    justify-content: center;
+}
+
+/* Element: support__agent */
+.support__agent {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Element: support__agent-avatar */
+.support__agent-avatar {
+    position: relative;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Element: support__agent-initial */
+.support__agent-initial {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* Element: support__agent-status */
+.support__agent-status {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1rem;
+    height: 1rem;
+    background: #22c55e;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+/* Element: support__agent-info */
+.support__agent-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* Element: support__agent-name */
+.support__agent-name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* Element: support__agent-role */
+.support__agent-role {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Element: support__agent-online */
+.support__agent-online {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: #22c55e;
+    font-weight: 600;
+}
+
+/* Element: support__online-icon */
+.support__online-icon {
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .support {
+        padding: 4rem 0;
+    }
+    
+    .support__channels {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .support__contact {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .support {
+        padding: 3rem 0;
+    }
+    
+    .support__container {
+        padding: 0 1.5rem;
+    }
+    
+    .support__header {
+        margin-bottom: 3rem;
+    }
+    
+    .support__content {
+        gap: 3rem;
+    }
+    
+    .support__channel {
+        padding: 2rem;
+    }
+    
+    .support__faq {
+        padding: 2rem;
+    }
+    
+    .support__faq-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .support__contact {
+        padding: 2rem;
+    }
+    
+    .support__contact-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .support__contact-btn {
+        width: 100%;
+        justify-content: center;
+        max-width: 280px;
+    }
+    
+    .support__agent {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .support__container {
+        padding: 0 1rem;
+    }
+    
+    .support__channel {
+        padding: 1.5rem;
+    }
+    
+    .support__faq {
+        padding: 1.5rem;
+    }
+    
+    .support__contact {
+        padding: 1.5rem;
+    }
+    
+    .support__channel-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .support__availability,
+    .support__response-time {
+        text-align: center;
+    }
+}
+</style>

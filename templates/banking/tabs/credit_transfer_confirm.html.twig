@@ -1,0 +1,278 @@
+<!-- Confirmation du virement crédit -->
+<section class="banking__content">
+    <div class="banking__operations-header">
+        <div class="banking__account-summary">
+            <h1 class="banking__account-title">{{ tp('banking_credit_transfer.confirmation.title', [], 'banking_credit_transfer') }}</h1>
+            <div class="banking__account-details">
+                <span class="banking__account-type">{{ tp('banking_credit_transfer.confirmation.verification_required', [], 'banking_credit_transfer') }}</span>
+                <span class="banking__account-updated">{{ "now"|date('d/m/Y à H:i') }}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="banking__transfer-form-wrapper">
+        <div class="banking__transfer-card">
+            <!-- Résumé du transfert -->
+            <div class="banking__transfer-summary">
+                <h3 class="banking__transfer-section-title">{{ tp('banking_credit_transfer.confirmation.transfer_summary', [], 'banking_credit_transfer') }}</h3>
+                
+                <div class="banking__transfer-flow">
+                    <!-- Compte source -->
+                    <div class="banking__transfer-account">
+                        <div class="banking__account-icon">
+                            <svg class="banking__account-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                            </svg>
+                        </div>
+                        <div class="banking__account-details">
+                            <div class="banking__account-name">{{ tp('banking_credit_transfer.accounts.credit_account', [], 'banking_credit_transfer') }}</div>
+                            <div class="banking__account-number">{{ subAccountCredit.account.accountNumber }}</div>
+                        </div>
+                    </div>
+
+                    <!-- Flèche -->
+                    <div class="banking__transfer-arrow">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </div>
+
+                    <!-- Compte destination -->
+                    <div class="banking__transfer-account">
+                        <div class="banking__account-icon banking__account-icon--primary">
+                            <svg class="banking__account-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1"></path>
+                            </svg>
+                        </div>
+                        <div class="banking__account-details">
+                            <div class="banking__account-name">{{ tp('banking_credit_transfer.accounts.main_account', [], 'banking_credit_transfer') }}</div>
+                            <div class="banking__account-number">{{ tp('banking_credit_transfer.accounts.current_account', [], 'banking_credit_transfer') }}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Montant -->
+                <div class="banking__transfer-amount">
+                    <span class="banking__amount-label">{{ tp('banking_credit_transfer.confirmation.amount_label', [], 'banking_credit_transfer') }}</span>
+                    <span class="banking__amount-value">{{ amount|number_format(2, ',', ' ') }} €</span>
+                </div>
+            </div>
+
+            <!-- Formulaire de confirmation -->
+            <form method="post" action="{{ path('banking_credit_transfer_confirm') }}" class="banking__transfer-form" data-turbo="false">
+                <input type="hidden" name="_token" value="{{ csrf_token('credit_transfer_confirm') }}">
+
+                <div class="banking__form-section">
+                    <h3 class="banking__transfer-section-title">{{ tp('banking_credit_transfer.confirmation.verification_code_title', [], 'banking_credit_transfer') }}</h3>
+                    <div class="banking__verification-info">
+                        <p>{{ tp('banking_credit_transfer.confirmation.verification_info', [], 'banking_credit_transfer') }}</p>
+                    </div>
+                    <div class="banking__code-input-wrapper">
+                        <input type="text" 
+                               class="banking__code-input" 
+                               id="verification_code" 
+                               name="verification_code" 
+                               placeholder="{{ tp('banking_credit_transfer.confirmation.code_placeholder', [], 'banking_credit_transfer') }}"
+                               maxlength="6"
+                               pattern="[0-9]{6}"
+                               required>
+                    </div>
+                </div>
+
+                <div class="banking__form-actions">
+                    <a href="{{ path('banking_credits') }}" class="banking__btn banking__btn--secondary">{{ tp('banking_credit_transfer.actions.cancel', [], 'banking_credit_transfer') }}</a>
+                    <button type="submit" class="banking__btn banking__btn--primary">{{ tp('banking_credit_transfer.actions.confirm_transfer', [], 'banking_credit_transfer') }}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<style>
+.banking__transfer-form-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.banking__transfer-card {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.banking__transfer-summary {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #e1e8ed;
+}
+
+.banking__transfer-section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.banking__transfer-flow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.banking__transfer-account {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.banking__account-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e74c3c;
+    color: white;
+    margin-right: 12px;
+}
+
+.banking__account-icon--primary {
+    background: #0066cc;
+}
+
+.banking__account-icon-svg {
+    width: 24px;
+    height: 24px;
+}
+
+.banking__account-details {
+    flex: 1;
+}
+
+.banking__account-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 4px;
+}
+
+.banking__account-number {
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+.banking__transfer-arrow {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0066cc;
+    margin: 0 20px;
+}
+
+.banking__transfer-arrow svg {
+    width: 24px;
+    height: 24px;
+}
+
+.banking__transfer-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e1e8ed;
+}
+
+.banking__amount-label {
+    font-size: 14px;
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+.banking__amount-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.banking__verification-info {
+    margin-bottom: 20px;
+}
+
+.banking__verification-info p {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin: 0;
+}
+
+.banking__code-input-wrapper {
+    margin-bottom: 16px;
+}
+
+.banking__code-input {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 8px;
+    background: #ffffff;
+}
+
+.banking__code-input:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.banking__form-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.banking__btn {
+    flex: 1;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.banking__btn--primary {
+    background: #0066cc;
+    color: white;
+}
+
+.banking__btn--primary:hover {
+    background: #0052a3;
+    text-decoration: none;
+    color: white;
+}
+
+.banking__btn--secondary {
+    background: #f8f9fa;
+    color: #6c757d;
+    border: 1px solid #e1e8ed;
+}
+
+.banking__btn--secondary:hover {
+    background: #f1f5f9;
+    text-decoration: none;
+    color: #495057;
+}
+</style>

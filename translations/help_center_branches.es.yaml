@@ -1,0 +1,123 @@
+help_center_branches:
+  page:
+    title: "Nuestras Agencias - Centro de Ayuda %company_name%"
+    
+  hero:
+    title: "Encuentre Su Agencia %company_name%"
+    subtitle: "Descubra nuestras agencias cerca de usted y aproveche nuestros servicios personalizados"
+    
+  sections:
+    main_title: "Nuestras Agencias a Su Servicio"
+    
+    locator:
+      title: "Localizador de Agencias"
+      description: "Encuentre la agencia más cercana a su domicilio o lugar de trabajo"
+      search_placeholder: "Introduzca su ciudad o código postal"
+      map_title: "Mapa de Agencias"
+      
+    services:
+      title: "Servicios en Agencia"
+      description: "Descubra todos los servicios disponibles en nuestras agencias"
+      items:
+        consultation:
+          title: "Asesoramiento Personalizado"
+          description: "Encuentre a nuestros asesores para sus proyectos financieros"
+          details: "Entrevistas privadas para créditos, ahorro, seguros e inversiones. Cita previa online o por teléfono."
+        account_opening:
+          title: "Apertura de Cuenta"
+          description: "Abra su cuenta directamente en agencia"
+          details: "Asistencia completa para la apertura de todo tipo de cuentas con validación inmediata de sus documentos."
+        cash_services:
+          title: "Servicios de Efectivo"
+          description: "Depósitos, retiradas y cambio de divisas"
+          details: "Cajeros automáticos 24/7, ventanillas para billetes grandes, servicio de cambio para divisas extranjeras."
+        safe_deposit:
+          title: "Cajas Fuertes"
+          description: "Alquiler de cajas fuertes seguras"
+          details: "Diferentes tamaños disponibles, acceso seguro con doble autenticación, seguro incluido."
+        business_services:
+          title: "Servicios Empresas"
+          description: "Soluciones dedicadas a los profesionales"
+          details: "Acompañamiento especializado para creadores de empresa, financiación profesional, soluciones de pago."
+        digital_assistance:
+          title: "Ayuda Digital"
+          description: "Formación en servicios online y móviles"
+          details: "Talleres gratuitos para dominar la aplicación móvil y los servicios online, asistencia personalizada."
+          
+    branches:
+      title: "Nuestras Principales Agencias"
+      description: "Encuentre la información de nuestras agencias principales"
+      
+      brussels_center:
+        name: "%company_name% Bruselas Centro"
+        address: "Place Eugène Flagey 25, 1050 Bruselas"
+        phone: "02 123 45 10"
+        hours:
+          monday_friday: "Lun-Vie: 9h00 - 17h00"
+          saturday: "Sáb: 9h00 - 12h00"
+          sunday: "Dom: Cerrado"
+        services: "Todos los servicios • Cajas fuertes • Asesoramiento inversión"
+        parking: "Aparcamiento cliente gratuito 2h"
+        
+      antwerp:
+        name: "%company_name% Amberes"
+        address: "Meir 78, 2000 Amberes"
+        phone: "03 234 56 20"
+        hours:
+          monday_friday: "Lun-Vie: 9h00 - 17h00"
+          saturday: "Sáb: 9h00 - 12h00"
+          sunday: "Dom: Cerrado"
+        services: "Todos los servicios • Servicios empresas • Formación digital"
+        parking: "Aparcamiento de pago en las proximidades"
+        
+      ghent:
+        name: "%company_name% Gante"
+        address: "Korenlei 12, 9000 Gante"
+        phone: "09 345 67 30"
+        hours:
+          monday_friday: "Lun-Vie: 9h00 - 17h00"
+          saturday: "Sáb: 9h00 - 12h00"
+          sunday: "Dom: Cerrado"
+        services: "Todos los servicios • Asesoramiento patrimonio • Cambio divisas"
+        parking: "Zona peatonal - Aparcamiento Vrijdagmarkt"
+        
+      liege:
+        name: "%company_name% Lieja"
+        address: "Place Saint-Lambert 41, 4000 Lieja"
+        phone: "04 456 78 40"
+        hours:
+          monday_friday: "Lun-Vie: 9h00 - 17h00"
+          saturday: "Sáb: 9h00 - 12h00"
+          sunday: "Dom: Cerrado"
+        services: "Todos los servicios • Créditos especializados • Seguros"
+        parking: "Aparcamiento Ópera a 2 min"
+        
+    appointment:
+      title: "Pedir Cita"
+      description: "Reserve una franja horaria con nuestros asesores"
+      online_booking: "Reserva Online"
+      phone_booking: "Por Teléfono: Teléfono"
+      reasons:
+        - "Asesoramiento en inversión"
+        - "Solicitud de crédito"
+        - "Apertura de cuenta"
+        - "Seguro y previsión"
+        - "Servicios empresa"
+        - "Formación digital"
+        
+    accessibility:
+      title: "Accesibilidad"
+      description: "Nuestras agencias son accesibles para todos"
+      features:
+        wheelchair: "Acceso para discapacitados en todas nuestras agencias"
+        hearing: "Bucles magnéticos para personas con problemas auditivos"
+        visual: "Guía táctil y señalización en braille"
+        assistance: "Personal formado en la acogida de personas en situación de discapacidad"
+        
+    contact:
+      title: "Contacto y Urgencias"
+      description: "¿Necesita ayuda? Contáctenos"
+      emergency_line: "Línea de Urgencia 24/7: Teléfono"
+      customer_service: "Servicio al Cliente: Teléfono"
+      email: "Email"
+      chat: "Chat online disponible en nuestra web"

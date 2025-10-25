@@ -1,0 +1,779 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tp('profile_index.page.title', {}, 'profile_index') }}{% endblock %}
+
+{% block body %}
+
+
+<style>
+/* KYC Alert Component - BEM Methodology */
+.kyc-alert {
+    position: relative;
+    
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.kyc-alert:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Alert Variants */
+.kyc-alert--warning {
+    border-left-color: #f50b0bff;
+    background: linear-gradient(to right, rgba(245, 158, 11, 0.1), transparent);
+}
+
+.kyc-alert--info {
+    border-left-color: #3b82f6;
+    background: linear-gradient(to right, rgba(59, 130, 246, 0.1), transparent);
+}
+
+.kyc-alert--danger {
+    border-left-color: #ef4444;
+    background: linear-gradient(to right, rgba(239, 68, 68, 0.1), transparent);
+}
+
+/* Alert Content */
+.kyc-alert__content {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+/* Alert Icon */
+.kyc-alert__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.kyc-alert--warning .kyc-alert__icon {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+}
+
+.kyc-alert--info .kyc-alert__icon {
+    background: rgba(59, 130, 246, 0.2);
+    color: #3b82f6;
+}
+
+.kyc-alert--danger .kyc-alert__icon {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+.kyc-alert__icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Alert Body */
+.kyc-alert__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Alert Title */
+.kyc-alert__title {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #ff0000ff;
+    line-height: 1.4;
+}
+
+/* Alert Text */
+.kyc-alert__text {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+/* Alert Action */
+.kyc-alert__action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    padding: 0.5rem 0;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: currentColor;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.kyc-alert--warning .kyc-alert__action {
+    color: #f50b0bff;
+}
+
+.kyc-alert--info .kyc-alert__action {
+    color: #3b82f6;
+}
+
+.kyc-alert--danger .kyc-alert__action {
+    color: #ef4444;
+}
+
+.kyc-alert__action:hover {
+    opacity: 0.8;
+    transform: translateX(4px);
+}
+
+.kyc-alert__action-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
+}
+
+.kyc-alert__action:hover .kyc-alert__action-icon {
+    transform: translateX(2px);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .kyc-alert {
+        padding: 1.25rem;
+        margin: 0 0 1.5rem;
+    }
+
+    .kyc-alert__content {
+        grid-template-columns: 36px 1fr;
+        gap: 0.75rem;
+    }
+
+    .kyc-alert__icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .kyc-alert__icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .kyc-alert__title {
+        font-size: 1rem;
+    }
+
+    .kyc-alert__text {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .kyc-alert__content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .kyc-alert__icon {
+        margin: 0 auto 0.75rem;
+    }
+
+    .kyc-alert__action {
+        justify-content: center;
+    }
+}
+</style>
+
+<style>
+/* Profile Page Specific Styles */
+.profile__container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 24px !important;
+    background: #f8f9fa !important;
+    min-height: 100vh !important;
+}
+
+.profile__header {
+    background: #ffffff !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 12px !important;
+    padding: 32px !important;
+    margin-bottom: 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 24px !important;
+}
+
+.profile__avatar {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 50% !important;
+    background: linear-gradient(135deg, #0066cc, #3b82f6) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: white !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.profile__avatar-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+.profile__avatar-edit {
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    width: 24px !important;
+    height: 24px !important;
+    background: #ffffff !important;
+    border: 2px solid #0066cc !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.profile__avatar-edit:hover {
+    background: #0066cc !important;
+    color: white !important;
+}
+
+.profile__avatar-icon {
+    width: 12px !important;
+    height: 12px !important;
+    color: #0066cc !important;
+}
+
+.profile__avatar-edit:hover .profile__avatar-icon {
+    color: white !important;
+}
+
+.profile__info {
+    flex: 1 !important;
+}
+
+.profile__name {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 4px !important;
+}
+
+.profile__email {
+    font-size: 14px !important;
+    color: #7f8c8d !important;
+    margin-bottom: 8px !important;
+}
+
+.profile__status {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: #27ae60 !important;
+}
+
+.profile__status-icon {
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.profile__actions {
+    display: flex !important;
+    gap: 12px !important;
+}
+
+.profile__btn {
+    padding: 10px 16px !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    text-decoration: none !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.profile__btn--primary {
+    background: #0066cc !important;
+    color: white !important;
+    border: none !important;
+}
+
+.profile__btn--primary:hover {
+    background: #0052a3 !important;
+    color: white !important;
+}
+
+.profile__btn--secondary {
+    background: #f8f9fa !important;
+    color: #0066cc !important;
+    border: 1px solid #e1e8ed !important;
+}
+
+.profile__btn--secondary:hover {
+    background: #f1f5f9 !important;
+    border-color: #0066cc !important;
+    color: #0066cc !important;
+}
+
+.profile__btn-icon {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.profile__content {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+}
+
+.profile__section {
+    background: #ffffff !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+}
+
+.profile__section-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 20px !important;
+}
+
+.profile__section-title {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.profile__section-icon {
+    width: 20px !important;
+    height: 20px !important;
+    color: #0066cc !important;
+}
+
+.profile__section-action {
+    font-size: 14px !important;
+    color: #0066cc !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    transition: color 0.2s ease !important;
+}
+
+.profile__section-action:hover {
+    color: #0052a3 !important;
+}
+
+.profile__field {
+    margin-bottom: 16px !important;
+}
+
+.profile__field:last-child {
+    margin-bottom: 0 !important;
+}
+
+.profile__field-label {
+    font-size: 12px !important;
+    color: #7f8c8d !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    margin-bottom: 4px !important;
+    display: block !important;
+}
+
+.profile__field-value {
+    font-size: 14px !important;
+    color: #2c3e50 !important;
+    font-weight: 500 !important;
+}
+
+.profile__field-value--empty {
+    color: #95a5a6 !important;
+    font-style: italic !important;
+}
+
+.profile__stats {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+    margin-bottom: 20px !important;
+}
+
+.profile__stat {
+    text-align: center !important;
+    padding: 16px !important;
+    background: #f8f9fa !important;
+    border-radius: 8px !important;
+}
+
+.profile__stat-value {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 4px !important;
+}
+
+.profile__stat-label {
+    font-size: 12px !important;
+    color: #7f8c8d !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+}
+
+.profile__activity {
+    margin-top: 20px !important;
+}
+
+.profile__activity-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 12px 0 !important;
+    border-bottom: 1px solid #f1f3f4 !important;
+}
+
+.profile__activity-item:last-child {
+    border-bottom: none !important;
+}
+
+.profile__activity-icon {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    background: #e3f2fd !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+}
+
+.profile__activity-icon-svg {
+    width: 16px !important;
+    height: 16px !important;
+    color: #0066cc !important;
+}
+
+.profile__activity-content {
+    flex: 1 !important;
+}
+
+.profile__activity-text {
+    font-size: 14px !important;
+    color: #2c3e50 !important;
+    margin-bottom: 2px !important;
+}
+
+.profile__activity-date {
+    font-size: 12px !important;
+    color: #7f8c8d !important;
+}
+
+.profile__security-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.profile__security-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 12px 0 !important;
+    border-bottom: 1px solid #f1f3f4 !important;
+}
+
+.profile__security-item:last-child {
+    border-bottom: none !important;
+}
+
+.profile__security-label {
+    font-size: 14px !important;
+    color: #2c3e50 !important;
+    font-weight: 500 !important;
+}
+
+.profile__security-status {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+
+.profile__security-status--active {
+    color: #27ae60 !important;
+}
+
+.profile__security-status--inactive {
+    color: #e74c3c !important;
+}
+
+.profile__security-status-icon {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+/* Full width section */
+.profile__section--full {
+    grid-column: 1 / -1 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile__header {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    
+    .profile__content {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .profile__stats {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .profile__actions {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+}
+</style>
+
+<div class="profile__container">
+    <!-- Profile Header -->
+    <div class="profile__header">
+        <div class="profile__avatar">
+            {% if user.profilePicture %}
+                <img src="{{ vich_uploader_asset(user, 'profilePictureFile') }}" alt="{{ tp('profile_index.header.alt_profile_picture', {}, 'profile_index') }}" class="profile__avatar-img">
+            {% else %}
+                {{ user.firstName|default('U')|first|upper }}{{ user.lastName|default('S')|first|upper }}
+            {% endif %}
+            <div class="profile__avatar-edit">
+                {{ ux_icon('heroicons:pencil', {'class': 'profile__avatar-icon'}) }}
+            </div>
+        </div>
+        
+        <div class="profile__info">
+            <h1 class="profile__name">{{ user.firstName|default(tp('profile_index.header.default_user', {}, 'profile_index')) }} {{ user.lastName|default(tp('profile_index.header.default_surname', {}, 'profile_index')) }}</h1>
+            <div class="profile__email">{{ user.email }}</div>
+            <div class="profile__status">
+                {{ ux_icon('heroicons:check-circle', {'class': 'profile__status-icon'}) }}
+                {{ tp('profile_index.header.account_verified', {}, 'profile_index') }}
+            </div>
+        </div>
+        
+        <div class="profile__actions">
+            <a href="{{ path('profile_edit') }}" class="profile__btn profile__btn--primary">
+                {{ ux_icon('heroicons:pencil-square', {'class': 'profile__btn-icon'}) }}
+                {{ tp('profile_index.header.edit_profile', {}, 'profile_index') }}
+            </a>
+            <a href="{{ path('profile_security') }}" class="profile__btn profile__btn--secondary">
+                {{ ux_icon('heroicons:shield-check', {'class': 'profile__btn-icon'}) }}
+                {{ tp('profile_index.header.security', {}, 'profile_index') }}
+            </a>
+        </div>
+    </div>
+
+    {# Alertes KYC avec BEM #}
+{% if kyc_status is defined %}
+    {% set alertClass = {
+        'not_submitted': 'kyc-alert--warning',
+        'pending': 'kyc-alert--info',
+        'rejected': 'kyc-alert--danger'
+    } %}
+    
+    {% set alertIcon = {
+        'not_submitted': 'heroicons:exclamation-triangle',
+        'pending': 'heroicons:clock',
+        'rejected': 'heroicons:x-circle'
+    } %}
+    
+    {% if kyc_status in ['not_submitted', 'pending', 'rejected'] %}
+        <div class="kyc-alert {{ alertClass[kyc_status] }}">
+            <div class="kyc-alert__content">
+                <div class="kyc-alert__icon">
+                    {{ ux_icon(alertIcon[kyc_status]) }}
+                </div>
+                <div class="kyc-alert__body">
+                    <h4 class="kyc-alert__title">
+                        {% if kyc_status == 'not_submitted' %}
+                            {{ tp('profile_index.kyc.alerts.not_submitted.title', {}, 'profile_index') }}
+                        {% elseif kyc_status == 'pending' %}
+                            {{ tp('profile_index.kyc.alerts.pending.title', {}, 'profile_index') }}
+                        {% else %}
+                            {{ tp('profile_index.kyc.alerts.rejected.title', {}, 'profile_index') }}
+                        {% endif %}
+                    </h4>
+                    <p class="kyc-alert__text">
+                        {% if kyc_status == 'not_submitted' %}
+                            {{ tp('profile_index.kyc.alerts.not_submitted.text', {}, 'profile_index') }}
+                        {% elseif kyc_status == 'pending' %}
+                            {{ tp('profile_index.kyc.alerts.pending.text', {}, 'profile_index') }}
+                        {% else %}
+                            {{ tp('profile_index.kyc.alerts.rejected.text', {}, 'profile_index') }}
+                        {% endif %}
+                    </p>
+                    <a href="{{ path(kyc_status == 'pending' ? 'kyc_status' : 'kyc_submit') }}" 
+                       class="kyc-alert__action">
+                        {% if kyc_status == 'pending' %}
+                            {{ tp('profile_index.kyc.alerts.pending.action', {}, 'profile_index') }}
+                        {% else %}
+                            {{ tp('profile_index.kyc.alerts.not_submitted.action', {}, 'profile_index') }}
+                        {% endif %}
+                        {{ ux_icon('heroicons:arrow-right', {'class': 'kyc-alert__action-icon'}) }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endif %}
+
+
+    <div class="profile__content">
+        <!-- Personal Information -->
+        <div class="profile__section">
+            <div class="profile__section-header">
+                <h2 class="profile__section-title">
+                    {{ ux_icon('heroicons:user', {'class': 'profile__section-icon'}) }}
+                    {{ tp('profile_index.sections.personal_info.title', {}, 'profile_index') }}
+                </h2>
+                <a href="{{ path('profile_edit') }}" class="profile__section-action">{{ tp('profile_index.sections.personal_info.edit', {}, 'profile_index') }}</a>
+            </div>
+            
+            <div class="profile__field">
+                <label class="profile__field-label">{{ tp('profile_index.sections.personal_info.fields.first_name', {}, 'profile_index') }}</label>
+                <div class="profile__field-value">{{ user.firstName|default(tp('profile_index.sections.personal_info.fields.not_provided', {}, 'profile_index')) }}</div>
+            </div>
+            
+            <div class="profile__field">
+                <label class="profile__field-label">{{ tp('profile_index.sections.personal_info.fields.last_name', {}, 'profile_index') }}</label>
+                <div class="profile__field-value">{{ user.lastName|default(tp('profile_index.sections.personal_info.fields.not_provided', {}, 'profile_index')) }}</div>
+            </div>
+            
+            <div class="profile__field">
+                <label class="profile__field-label">{{ tp('profile_index.sections.personal_info.fields.email', {}, 'profile_index') }}</label>
+                <div class="profile__field-value">{{ user.email }}</div>
+            </div>
+            
+            <div class="profile__field">
+                <label class="profile__field-label">{{ tp('profile_index.sections.personal_info.fields.phone', {}, 'profile_index') }}</label>
+                <div class="profile__field-value{{ user.phone ? '' : ' profile__field-value--empty' }}">{{ user.phone|default(tp('profile_index.sections.personal_info.fields.not_provided', {}, 'profile_index')) }}</div>
+            </div>
+            
+            <div class="profile__field">
+                <label class="profile__field-label">{{ tp('profile_index.sections.personal_info.fields.birth_date', {}, 'profile_index') }}</label>
+                <div class="profile__field-value{{ user.birthDate ? '' : ' profile__field-value--empty' }}">
+                    {% if user.birthDate %}
+                        {{ user.birthDate|date('d/m/Y') }}
+                    {% else %}
+                        {{ tp('profile_index.sections.personal_info.fields.not_provided_feminine', {}, 'profile_index') }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Security Overview -->
+        <div class="profile__section">
+            <div class="profile__section-header">
+                <h2 class="profile__section-title">
+                    {{ ux_icon('heroicons:shield-check', {'class': 'profile__section-icon'}) }}
+                    {{ tp('profile_index.sections.security.title', {}, 'profile_index') }}
+                </h2>
+                <a href="{{ path('profile_security') }}" class="profile__section-action">{{ tp('profile_index.sections.security.manage', {}, 'profile_index') }}</a>
+            </div>
+            
+            <ul class="profile__security-list">
+                <li class="profile__security-item">
+                    <span class="profile__security-label">{{ tp('profile_index.sections.security.fields.password', {}, 'profile_index') }}</span>
+                    <div class="profile__security-status profile__security-status--active">
+                        {{ ux_icon('heroicons:check-circle', {'class': 'profile__security-status-icon'}) }}
+                        {{ tp('profile_index.sections.security.fields.configured', {}, 'profile_index') }}
+                    </div>
+                </li>
+                <li class="profile__security-item">
+                    <span class="profile__security-label">{{ tp('profile_index.sections.security.fields.two_factor', {}, 'profile_index') }}</span>
+                    <div class="profile__security-status profile__security-status--inactive">
+                        {{ ux_icon('heroicons:x-circle', {'class': 'profile__security-status-icon'}) }}
+                        {{ tp('profile_index.sections.security.fields.disabled', {}, 'profile_index') }}
+                    </div>
+                </li>
+                <li class="profile__security-item">
+                    <span class="profile__security-label">{{ tp('profile_index.sections.security.fields.last_password_change', {}, 'profile_index') }}</span>
+                    <div class="profile__security-status profile__security-status--active">
+                        {{ ux_icon('heroicons:calendar', {'class': 'profile__security-status-icon'}) }}
+                        {% if user.passwordChangedAt %}
+                            {{ user.passwordChangedAt|date('d/m/Y') }}
+                        {% else %}
+                            {{ tp('profile_index.sections.security.fields.not_provided', {}, 'profile_index') }}
+                        {% endif %}
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Preferences -->
+        <div class="profile__section profile__section--full">
+            <div class="profile__section-header">
+                <h2 class="profile__section-title">
+                    {{ ux_icon('heroicons:cog-6-tooth', {'class': 'profile__section-icon'}) }}
+                    {{ tp('profile_index.sections.preferences.title', {}, 'profile_index') }}
+                </h2>
+                <a href="{{ path('profile_preferences') }}" class="profile__section-action">{{ tp('profile_index.sections.preferences.edit', {}, 'profile_index') }}</a>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div class="profile__field">
+                    <label class="profile__field-label">{{ tp('profile_index.sections.preferences.fields.language', {}, 'profile_index') }}</label>
+                    <div class="profile__field-value">
+                        {% set languages = {'fr': tp('profile_index.sections.preferences.languages.french', {}, 'profile_index'), 'en': tp('profile_index.sections.preferences.languages.english', {}, 'profile_index'), 'de': tp('profile_index.sections.preferences.languages.german', {}, 'profile_index'), 'es': tp('profile_index.sections.preferences.languages.spanish', {}, 'profile_index'), 'nl': tp('profile_index.sections.preferences.languages.dutch', {}, 'profile_index')} %}
+                        {{ languages[user.language|default('fr')] }}
+                    </div>
+                </div>
+                
+                <div class="profile__field">
+                    <label class="profile__field-label">{{ tp('profile_index.sections.preferences.fields.currency', {}, 'profile_index') }}</label>
+                    <div class="profile__field-value">
+                        {% set currencies = {'EUR': tp('profile_index.sections.preferences.currencies.eur', {}, 'profile_index'), 'USD': tp('profile_index.sections.preferences.currencies.usd', {}, 'profile_index'), 'GBP': tp('profile_index.sections.preferences.currencies.gbp', {}, 'profile_index'), 'CHF': tp('profile_index.sections.preferences.currencies.chf', {}, 'profile_index'), 'CAD': tp('profile_index.sections.preferences.currencies.cad', {}, 'profile_index')} %}
+                        {{ currencies[user.currency|default('EUR')] }}
+                    </div>
+                </div>
+                
+                <div class="profile__field">
+                    <label class="profile__field-label">{{ tp('profile_index.sections.preferences.fields.timezone', {}, 'profile_index') }}</label>
+                    <div class="profile__field-value">{{ user.timezone|default(tp('profile_index.sections.preferences.fields.timezone_default', {}, 'profile_index')) }}</div>
+                </div>
+                
+                <div class="profile__field">
+                    <label class="profile__field-label">{{ tp('profile_index.sections.preferences.fields.notifications', {}, 'profile_index') }}</label>
+                    <div class="profile__field-value">{{ tp('profile_index.sections.preferences.fields.notifications_default', {}, 'profile_index') }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

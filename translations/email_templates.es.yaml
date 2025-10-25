@@ -1,0 +1,120 @@
+# Correo de KYC rechazado
+kyc_rejected:
+  title: "Verificación de identidad - Acción requerida"
+  greeting: "Hola %name%,"
+  intro: "Hemos revisado los documentos que envió para su verificación de identidad (KYC). Desafortunadamente, no podemos validar su cuenta por las siguientes razones:"
+  reasons_title: "Razones del rechazo:"
+  action_title: "Acción requerida"
+  action_required: "Para completar la apertura de su cuenta, inicie sesión y vuelva a enviar los documentos requeridos teniendo en cuenta las observaciones anteriores."
+  custom_message_title: "Mensaje de nuestro equipo:"
+  login_button: "Iniciar sesión en mi cuenta"
+  closing: "Quedamos a su disposición para cualquier pregunta."
+  signature: "Cordialmente,<br>El equipo"
+
+incomplete_account:
+  title: "Complete su perfil"
+  greeting: "Hola %name%,"
+  intro: "Notamos que su perfil aún no está completo. Para disfrutar plenamente de todos nuestros servicios bancarios, le invitamos a completar la información faltante."
+  reasons_title: "Elementos a corregir:"
+  warning_title: "Atención"
+  warning: "Un perfil completo le permite acceder a todos nuestros servicios y garantiza la seguridad de su cuenta."
+  action_title: "Acción requerida"
+  action_required: "Inicie sesión para completar su perfil."
+  custom_message_title: "Mensaje de nuestro equipo:"
+  login_button: "Completar mi perfil"
+  closing: "Le agradecemos su confianza."
+  signature: "Cordialmente,<br>El equipo"
+
+fees_inquiry:
+  title: "Información sobre tarifas bancarias"
+  greeting: "Hola %name%,"
+  intro: "Nos comunicamos con usted con respecto a las tarifas relacionadas con su cuenta bancaria."
+  info_title: "Información importante"
+  info: "Para obtener más detalles sobre estas tarifas, inicie sesión en su área de cliente."
+  custom_message_title: "Información adicional:"
+  login_button: "Acceder a mi cuenta"
+  closing: "Nuestro servicio al cliente permanece a su disposición para cualquier pregunta."
+  signature: "Cordialmente,<br>El equipo"
+
+account_activation_reminder:
+  title: "Recordatorio - Active su cuenta"
+  greeting: "Hola %name%,"
+  intro: "Notamos que aún no ha activado su cuenta bancaria."
+  warning_title: "Recordatorio importante"
+  warning: "Activar su cuenta es necesario para acceder a todos nuestros servicios."
+  action_title: "Acción requerida"
+  action_required: "Inicie sesión para finalizar la activación de su cuenta."
+  custom_message_title: "Mensaje de nuestro equipo:"
+  login_button: "Activar mi cuenta"
+  closing: "Esperamos contarlo entre nuestros clientes activos."
+  signature: "Cordialmente,<br>El equipo"
+
+credit_application_incomplete:
+  title: "Su solicitud de crédito - Información faltante"
+  greeting: "Hola %name%,"
+  intro: "Hemos recibido su solicitud de crédito. Sin embargo, falta información para continuar procesando su expediente."
+  reasons_title: "Elementos faltantes:"
+  warning_title: "Atención"
+  warning: "Para procesar su solicitud rápidamente, necesitamos que complete la información faltante."
+  action_title: "Acción requerida"
+  action_required: "Inicie sesión para completar su solicitud de crédito."
+  custom_message_title: "Información requerida:"
+  login_button: "Completar mi solicitud"
+  closing: "Revisaremos su expediente tan pronto como recibamos la información completa."
+  signature: "Cordialmente,<br>El equipo"
+
+# Correo de seguimiento de creación de cuenta y validación KYC
+account_creation_follow_up:
+  title: "Seguimiento de su solicitud - Acción requerida"
+  greeting: "Hola %name%,"
+  intro: "Confirmamos la recepción de su solicitud. Actualmente está siendo procesada por nuestros equipos."
+  
+  status_title: "Estado de su solicitud"
+  status_description: "Su solicitud ha sido recibida y se ha enviado una respuesta. Para consultar esta respuesta y seguir el progreso de su expediente, le invitamos a crear su cuenta de cliente segura."
+  
+  action_required_title: "Acción requerida para ver su respuesta"
+  action_required_intro: "Para acceder a su área de cliente y ver la respuesta a su solicitud, siga estos pasos:"
+  step_1: "Cree su cuenta en línea en nuestra plataforma segura"
+  step_2: "Complete su perfil con su información personal"
+  step_3: "Valide su identidad a través del proceso de verificación KYC"
+  
+  kyc_title: "¿Por qué es obligatoria la verificación de identidad (KYC)?"
+  kyc_intro: "La verificación KYC (Know Your Customer) es un procedimiento regulatorio obligatorio en el sector bancario y financiero. Este proceso es requerido por ley y tiene como objetivo proteger a todos nuestros clientes."
+  kyc_why: "Razones regulatorias y de seguridad:"
+  kyc_reason_1: "Cumplimiento de las directivas europeas contra el blanqueo de capitales (AML-CFT)"
+  kyc_reason_2: "Prevención del fraude y el robo de identidad"
+  kyc_reason_3: "Protección de sus datos personales y patrimonio"
+  kyc_reason_4: "Cumplimiento de las obligaciones legales impuestas a las instituciones financieras"
+  
+  documents_title: "Documentos necesarios para la verificación"
+  documents_intro: "Para completar su verificación de identidad, deberá proporcionar:"
+  document_1: "Un documento de identidad válido (tarjeta de identidad, pasaporte o permiso de residencia)"
+  document_2: "Prueba de domicilio reciente (menos de 3 meses)"
+  document_3: "Una selfie con su documento de identidad para autenticación biométrica"
+  
+  custom_message_title: "Mensaje importante de nuestro equipo"
+  
+  create_account_button: "Crear mi cuenta y verificar identidad"
+  
+  processing_time_title: "Tiempo de procesamiento"
+  processing_time_text: "Una vez validada su identidad, podrá ver inmediatamente la respuesta a su solicitud. La verificación KYC generalmente se procesa en 24 a 48 horas hábiles."
+  
+  closing: "Quedamos a su completa disposición para cualquier información adicional o asistencia en este proceso."
+  signature: "Cordialmente,<br>Servicio de Atención al Cliente<br>%company_name%"
+  
+  legal_notice: "Este mensaje y los archivos adjuntos son confidenciales y están destinados exclusivamente a sus destinatarios. Cualquier uso o distribución no autorizada está prohibida. La verificación de identidad es obligatoria de conformidad con la Directiva (UE) 2015/849 relativa a la prevención de la utilización del sistema financiero para el blanqueo de capitales y la financiación del terrorismo."
+
+# Correo electrónico datos bancarios para pago
+payment_details:
+  greeting: "Estimado(a) %name%,"
+  title: "Datos bancarios para su pago"
+  intro: "Le transmitimos por la presente los datos bancarios necesarios para efectuar el pago del importe indicado arriba. A continuación encontrará la información de la cuenta:"
+  bank_details_title: "Información de la cuenta bancaria"
+  account_holder: "Titular de la cuenta"
+  iban: "IBAN"
+  bic: "BIC"
+  instant_transfer_title: "TRANSFERENCIA EN TIEMPO REAL IMPERATIVA"
+  instant_transfer_message: "Es IMPERATIVO que este pago se realice mediante transferencia en TIEMPO REAL (o transferencia instantánea). Insistimos en la necesidad absoluta de utilizar esta opción de transferencia instantánea para garantizar la recepción inmediata de los fondos."
+  proof_title: "Confirmación de la transferencia"
+  proof_message: "Una vez ejecutada la transferencia, le rogamos que nos envíe una copia del comprobante de transferencia para su confirmación."
+  support_message: "Le agradecemos su diligencia y rapidez."

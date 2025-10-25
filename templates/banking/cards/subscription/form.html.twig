@@ -1,0 +1,538 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Souscrire à une {{ cardInfo.title }}{% endblock %}
+
+{% block body %}
+<div class="subscription-page">
+    <div class="subscription-page__container">
+        {# En-tête de la page #}
+        <div class="subscription-page__header">
+            <a href="{{ path('app_banking_card_index') }}" class="subscription-page__back">
+                <i class="fas fa-arrow-left"></i>
+                Retour aux cartes
+            </a>
+            <h1 class="subscription-page__title">
+                {{ cardInfo.title }}
+            </h1>
+            <p class="subscription-page__subtitle">
+                {{ cardInfo.description }}
+            </p>
+        </div>
+
+        <div class="subscription-page__content">
+            {# Informations sur la carte #}
+            <div class="card-details">
+                <div class="card-details__preview">
+                    <div class="card-preview card-preview--{{ cardType }}">
+                        <div class="card-preview__header">
+                            <div class="card-preview__logo">
+                                {{ ux_icon('logos:visa') }}
+                            </div>
+                            <div class="card-preview__type">{{ cardType|upper }}</div>
+                        </div>
+                        <div class="card-preview__chip">
+                            <div class="card-chip"></div>
+                        </div>
+                        <div class="card-preview__number">•••• •••• •••• ••••</div>
+                        <div class="card-preview__holder">VOTRE NOM</div>
+                    </div>
+                </div>
+
+                <div class="card-details__info">
+                    <div class="card-price">
+                        <div class="card-price__amount">{{ cardInfo.price }}</div>
+                    </div>
+
+                    <div class="card-features">
+                        <h3 class="card-features__title">Avantages inclus</h3>
+                        <ul class="card-features__list">
+                            {% for feature in cardInfo.features %}
+                                <li class="card-features__item">
+                                    <i class="fas fa-check"></i>
+                                    {{ feature }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="card-limits">
+                        <h3 class="card-limits__title">Plafonds</h3>
+                        <ul class="card-limits__list">
+                            {% for limit in cardInfo.limits %}
+                                <li class="card-limits__item">
+                                    <i class="fas fa-info-circle"></i>
+                                    {{ limit }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            {# Formulaire de souscription #}
+            <div class="subscription-form">
+                <h2 class="subscription-form__title">
+                    <i class="fas fa-file-alt"></i>
+                    Demande de souscription
+                </h2>
+
+                {{ form_start(form, {'attr': {'class': 'subscription-form__form'}}) }}
+                    <div class="form-group">
+                        {{ form_label(form.account, 'Compte à associer', {'label_attr': {'class': 'form-group__label'}}) }}
+                        {{ form_widget(form.account, {'attr': {'class': 'form-group__select'}}) }}
+                        <div class="form-group__help">Choisissez le compte bancaire qui sera associé à votre nouvelle carte</div>
+                        {{ form_errors(form.account) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.cardBrand, 'Marque de carte', {'label_attr': {'class': 'form-group__label'}}) }}
+                        {{ form_widget(form.cardBrand, {'attr': {'class': 'form-group__select'}}) }}
+                        <div class="form-group__help">Visa et Mastercard sont acceptés partout dans le monde</div>
+                        {{ form_errors(form.cardBrand) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.cardType, 'Type de carte', {'label_attr': {'class': 'form-group__label'}}) }}
+                        {{ form_widget(form.cardType, {'attr': {'class': 'form-group__select'}}) }}
+                        <div class="form-group__help">Classic, Gold ou Platinum selon vos besoins</div>
+                        {{ form_errors(form.cardType) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.reason, 'Motif de la demande (optionnel)', {'label_attr': {'class': 'form-group__label'}}) }}
+                        {{ form_widget(form.reason, {'attr': {'class': 'form-group__textarea', 'rows': 3, 'placeholder': 'Indiquez le motif de votre demande (première carte, remplacement, etc.)'}}) }}
+                        {{ form_errors(form.reason) }}
+                    </div>
+
+                    {# Suppression du doublon: ne pas ré-afficher form.cardType ici #}
+                    {{ form_rest(form) }}
+
+                    <div class="subscription-form__actions">
+                        <a href="{{ path('app_banking_card_index') }}" class="btn btn--secondary">
+                            <i class="fas fa-times"></i> Annuler
+                        </a>
+                        <button type="submit" class="btn btn--primary">
+                            <i class="fas fa-paper-plane"></i> Envoyer ma demande
+                        </button>
+                    </div>
+                {{ form_end(form) }}
+
+                <div class="subscription-form__info">
+                    <h3 class="subscription-form__info-title">
+                        <i class="fas fa-info-circle"></i>
+                        Processus de souscription
+                    </h3>
+                    <ol class="subscription-process">
+                        <li class="subscription-process__step">
+                            <div class="subscription-process__number">1</div>
+                            <div class="subscription-process__content">
+                                <strong>Envoi de la demande</strong>
+                                <p>Votre demande est envoyée à nos équipes pour étude</p>
+                            </div>
+                        </li>
+                        <li class="subscription-process__step">
+                            <div class="subscription-process__number">2</div>
+                            <div class="subscription-process__content">
+                                <strong>Validation et contrat</strong>
+                                <p>Après validation, vous recevrez un contrat à signer électroniquement</p>
+                            </div>
+                        </li>
+                        <li class="subscription-process__step">
+                            <div class="subscription-process__number">3</div>
+                            <div class="subscription-process__content">
+                                <strong>Création de la carte</strong>
+                                <p>Une fois le contrat signé, votre carte est créée et envoyée sous 3-5 jours</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+:root {
+    --card-classic-gradient: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    --card-gold-gradient: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
+    --card-platinum-gradient: linear-gradient(135deg, #c0c0c0 0%, #a8a8a8 100%);
+    --color-primary: #3b82f6;
+    --color-secondary: #6b7280;
+    --color-success: #10b981;
+    --shadow-card: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.subscription-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 2rem 0;
+}
+
+.subscription-page__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.subscription-page__header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.subscription-page__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    transition: all 0.2s ease;
+}
+
+.subscription-page__back:hover {
+    color: #2563eb;
+    transform: translateX(-5px);
+}
+
+.subscription-page__title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.subscription-page__subtitle {
+    font-size: 1.2rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.subscription-page__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Détails de la carte */
+.card-details {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--shadow-card);
+    position: sticky;
+    top: 2rem;
+}
+
+.card-details__preview {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card-preview {
+    width: 300px;
+    height: 190px;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-preview--classic {
+    background: var(--card-classic-gradient);
+}
+
+.card-preview--gold {
+    background: var(--card-gold-gradient);
+    color: #1f2937;
+}
+
+.card-preview--platinum {
+    background: var(--card-platinum-gradient);
+    color: #1f2937;
+}
+
+.card-preview__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-preview__logo svg {
+    width: 50px;
+    height: auto;
+}
+
+.card-preview__type {
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+}
+
+.card-chip {
+    width: 35px;
+    height: 25px;
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.card-preview__number {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+}
+
+.card-preview__holder {
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.5rem;
+}
+
+.card-price {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.card-price__amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.card-features, .card-limits {
+    margin-bottom: 2rem;
+}
+
+.card-features__title, .card-limits__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.card-features__list, .card-limits__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-features__item, .card-limits__item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.card-features__item:last-child, .card-limits__item:last-child {
+    border-bottom: none;
+}
+
+.card-features__item i {
+    color: var(--color-success);
+    font-size: 0.875rem;
+}
+
+.card-limits__item i {
+    color: var(--color-primary);
+    font-size: 0.875rem;
+}
+
+/* Formulaire de souscription */
+.subscription-form {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--shadow-card);
+}
+
+.subscription-form__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.subscription-form__form {
+    margin-bottom: 3rem;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group__label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.form-group__select, .form-group__textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+    background: white;
+}
+
+.form-group__select:focus, .form-group__textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-group__help {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+}
+
+.subscription-form__actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+
+.btn--primary {
+    background: var(--color-primary);
+    color: white;
+}
+
+.btn--primary:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn--secondary {
+    background: var(--color-secondary);
+    color: white;
+}
+
+.btn--secondary:hover {
+    background: #4b5563;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+/* Processus de souscription */
+.subscription-form__info {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 2rem;
+}
+
+.subscription-form__info-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.subscription-process {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.subscription-process__step {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.subscription-process__step:last-child {
+    margin-bottom: 0;
+}
+
+.subscription-process__number {
+    width: 40px;
+    height: 40px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.subscription-process__content strong {
+    color: #1f2937;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.subscription-process__content p {
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .subscription-page__container {
+        padding: 0 1rem;
+    }
+    
+    .subscription-page__title {
+        font-size: 2rem;
+    }
+    
+    .subscription-page__content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .card-details {
+        position: static;
+    }
+    
+    .card-preview {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .subscription-form__actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+</style>
+{% endblock %}

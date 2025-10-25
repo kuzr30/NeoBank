@@ -1,0 +1,22 @@
+login:
+  title: "Conexión a su cuenta"
+  subtitle: "Acceda a sus servicios bancarios con total seguridad"
+  email_label: "Dirección de email"
+  email_placeholder: "su.email@ejemplo.com"
+  password_label: "Contraseña"
+  password_placeholder: "••••••••"
+  remember_me: "Recordarme"
+  login_button: "Iniciar sesión"
+  forgot_password: "¿Contraseña olvidada?"
+  create_account: "Crear una cuenta"
+  no_account: "¿No tiene cuenta?"
+  security_ssl: "SSL Seguro"
+  security_data: "Datos protegidos"
+  security_support: "Soporte 24/7"
+  back_home: "Volver al inicio"
+  invalid_credentials: "Email o contraseña incorrecto"
+
+errors:
+  email_required: "El email es obligatorio"
+  email_invalid: "El email no es válido"
+  password_required: "La contraseña es obligatoria"

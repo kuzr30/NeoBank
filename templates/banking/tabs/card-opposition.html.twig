@@ -1,0 +1,414 @@
+{# Template d'opposition de carte pour inclusion dans l'onglet #}
+
+<style>
+    /* Block: opposition-form */
+    .opposition-form {
+        padding: 2rem;
+        background: #ffffff;
+        border-radius: 0.75rem;
+    }
+
+    .opposition-form__header {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid #fecaca;
+    }
+
+    .opposition-form__title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #dc2626;
+        margin-bottom: 0.5rem;
+    }
+
+    .opposition-form__subtitle {
+        color: #ef4444;
+        font-size: 0.875rem;
+    }
+
+    .opposition-form__body {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    /* Block: warning-box */
+    .warning-box {
+        background: #fef2f2;
+        border: 2px solid #fecaca;
+        border-radius: 0.75rem;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        font-size: 0.875rem;
+    }
+
+    .warning-box__header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .warning-box__icon {
+        font-size: 1.25rem;
+        color: #dc2626;
+    }
+
+    .warning-box__title {
+        font-weight: 700;
+        color: #dc2626;
+    }
+
+    .warning-box__text {
+        color: #991b1b;
+        line-height: 1.6;
+        margin-bottom: 0.75rem;
+    }
+
+    .warning-box__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .warning-box__item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        color: #991b1b;
+    }
+
+    .warning-box__item-icon {
+        color: #dc2626;
+        margin-top: 0.125rem;
+        flex-shrink: 0;
+    }
+
+    /* Block: form-group */
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .form-group__label {
+        font-weight: 600;
+        color: #374151;
+        font-size: 0.875rem;
+    }
+
+    .form-group__label--required::after {
+        content: ' *';
+        color: #dc2626;
+    }
+
+    .form-group__select {
+        padding: 0.75rem;
+        border: 2px solid #d1d5db;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        background: #ffffff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .form-group__select:focus {
+        outline: none;
+        border-color: #dc2626;
+        box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+    }
+
+    .form-group__textarea {
+        padding: 0.75rem;
+        border: 2px solid #d1d5db;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        resize: vertical;
+        min-height: 80px;
+        font-family: inherit;
+        transition: all 0.3s ease;
+    }
+
+    .form-group__textarea:focus {
+        outline: none;
+        border-color: #dc2626;
+        box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+    }
+
+    .form-group__help {
+        font-size: 0.75rem;
+        color: #6b7280;
+        margin-top: 0.25rem;
+    }
+
+    /* Block: reason-selector */
+    .reason-selector {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.75rem;
+    }
+
+    .reason-selector__option {
+        position: relative;
+    }
+
+    .reason-selector__input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .reason-selector__card {
+        padding: 1rem;
+        border: 2px solid #e5e7eb;
+        border-radius: 0.75rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+        background: #ffffff;
+    }
+
+    .reason-selector__card:hover {
+        border-color: #dc2626;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(220, 38, 38, 0.1);
+    }
+
+    .reason-selector__input:checked + .reason-selector__card {
+        border-color: #dc2626;
+        background: #fef2f2;
+        box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+    }
+
+    .reason-selector__icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #dc2626;
+    }
+
+    .reason-selector__title {
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 0.25rem;
+        font-size: 0.875rem;
+    }
+
+    .reason-selector__description {
+        font-size: 0.75rem;
+        color: #6b7280;
+    }
+
+    /* Block: form-actions */
+    .form-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+
+    .form-actions__button {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        font-size: 0.875rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .form-actions__button--danger {
+        background: linear-gradient(135deg, #dc2626, #991b1b);
+        color: white;
+    }
+
+    .form-actions__button--danger:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+    }
+
+    /* Block: emergency-notice */
+    .emergency-notice {
+        background: #f0f9ff;
+        border: 2px solid #0ea5e9;
+        border-radius: 0.75rem;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        font-size: 0.875rem;
+    }
+
+    .emergency-notice__header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .emergency-notice__icon {
+        font-size: 1.25rem;
+        color: #0ea5e9;
+    }
+
+    .emergency-notice__title {
+        font-weight: 700;
+        color: #0c4a6e;
+    }
+
+    .emergency-notice__text {
+        color: #075985;
+        line-height: 1.6;
+        margin-bottom: 0.75rem;
+    }
+
+    .emergency-notice__action {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: #0ea5e9;
+        color: white;
+        border-radius: 0.375rem;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.75rem;
+        transition: all 0.3s ease;
+    }
+
+    .emergency-notice__action:hover {
+        background: #0284c7;
+        color: white;
+        text-decoration: none;
+        transform: translateY(-1px);
+    }
+</style>
+
+<div class="opposition-form">
+    <div class="opposition-form__header">
+        <h2 class="opposition-form__title">
+            <i class="fas fa-ban"></i>
+            {{ tp('card_opposition.title', [], 'banking_card_opposition') }}
+        </h2>
+        <p class="opposition-form__subtitle">
+            {{ tp('card_opposition.subtitle', [], 'banking_card_opposition') }}
+        </p>
+    </div>
+
+    <div class="emergency-notice">
+        <div class="emergency-notice__header">
+            <i class="emergency-notice__icon fas fa-phone-alt"></i>
+            <div class="emergency-notice__title">{{ tp('card_opposition.emergency_title', [], 'banking_card_opposition') }}</div>
+        </div>
+        <div class="emergency-notice__text">
+            {{ tp('card_opposition.emergency_text', [], 'banking_card_opposition') }}
+        </div>
+        <a href="{{ path('banking_cards_emergency') }}" class="emergency-notice__action">
+            <i class="fas fa-exclamation-triangle"></i>
+            {{ tp('card_opposition.emergency_action', [], 'banking_card_opposition') }}
+        </a>
+    </div>
+
+    <div class="warning-box">
+        <div class="warning-box__header">
+            <i class="warning-box__icon fas fa-exclamation-triangle"></i>
+            <div class="warning-box__title">{{ tp('card_opposition.warning_title', [], 'banking_card_opposition') }}</div>
+        </div>
+        <div class="warning-box__text">
+            {{ tp('card_opposition.warning_text', [], 'banking_card_opposition') }}
+        </div>
+        <ul class="warning-box__list">
+            <li class="warning-box__item">
+                <i class="warning-box__item-icon fas fa-check"></i>
+                {{ tp('card_opposition.warning_payment_blocked', [], 'banking_card_opposition') }}
+            </li>
+            <li class="warning-box__item">
+                <i class="warning-box__item-icon fas fa-check"></i>
+                {{ tp('card_opposition.warning_new_card_needed', [], 'banking_card_opposition') }}
+            </li>
+            <li class="warning-box__item">
+                <i class="warning-box__item-icon fas fa-check"></i>
+                {{ tp('card_opposition.warning_direct_debits', [], 'banking_card_opposition') }}
+            </li>
+        </ul>
+    </div>
+
+    <form action="{{ path('banking_cards_opposition') }}" method="post" class="opposition-form__body">
+        
+                <div class="form-group">
+            <label class="form-group__label form-group__label--required" for="card_opposition_card">{{ tp('card_opposition.card_label', [], 'banking_card_opposition') }}</label>
+            <select id="card_opposition_card" name="card_opposition[card]" class="form-group__select" required>
+                <option value="">{{ tp('card_opposition.card_placeholder', [], 'banking_card_opposition') }}</option>
+                {% if cards is defined %}
+                    {% for card in cards %}
+                        <option value="{{ card.id }}">{{ card.number }} - {{ card.category|upper }}</option>
+                    {% endfor %}
+                {% endif %}
+            </select>
+            <div class="form-group__help">
+                {{ tp('card_opposition.card_help', [], 'banking_card_opposition') }}
+            </div>
+        </div>
+
+                <div class="form-group">
+            <label class="form-group__label form-group__label--required">{{ tp('card_opposition.reason_label', [], 'banking_card_opposition') }}</label>
+            <div class="reason-selector">
+                <div class="reason-selector__option">
+                    <input type="radio" id="reason_lost" name="card_opposition[reason]" value="lost" class="reason-selector__input" required>
+                    <label for="reason_lost" class="reason-selector__card">
+                        <div class="reason-selector__icon">🔍</div>
+                        <div class="reason-selector__title">{{ tp('card_opposition.reason_lost', [], 'banking_card_opposition') }}</div>
+                        <div class="reason-selector__description">{{ tp('card_opposition.reason_lost_desc', [], 'banking_card_opposition') }}</div>
+                    </label>
+                </div>
+                
+                <div class="reason-selector__option">
+                    <input type="radio" id="reason_stolen" name="card_opposition[reason]" value="stolen" class="reason-selector__input">
+                    <label for="reason_stolen" class="reason-selector__card">
+                        <div class="reason-selector__icon">🚨</div>
+                        <div class="reason-selector__title">{{ tp('card_opposition.reason_stolen', [], 'banking_card_opposition') }}</div>
+                        <div class="reason-selector__description">{{ tp('card_opposition.reason_stolen_desc', [], 'banking_card_opposition') }}</div>
+                    </label>
+                </div>
+                
+                <div class="reason-selector__option">
+                    <input type="radio" id="reason_fraud" name="card_opposition[reason]" value="fraud" class="reason-selector__input">
+                    <label for="reason_fraud" class="reason-selector__card">
+                        <div class="reason-selector__icon">⚠️</div>
+                        <div class="reason-selector__title">{{ tp('card_opposition.reason_fraud', [], 'banking_card_opposition') }}</div>
+                        <div class="reason-selector__description">{{ tp('card_opposition.reason_fraud_desc', [], 'banking_card_opposition') }}</div>
+                    </label>
+                </div>
+                
+                <div class="reason-selector__option">
+                    <input type="radio" id="reason_other" name="card_opposition[reason]" value="other" class="reason-selector__input">
+                    <label for="reason_other" class="reason-selector__card">
+                        <div class="reason-selector__icon">❓</div>
+                        <div class="reason-selector__title">{{ tp('card_opposition.reason_other', [], 'banking_card_opposition') }}</div>
+                        <div class="reason-selector__description">{{ tp('card_opposition.reason_other_desc', [], 'banking_card_opposition') }}</div>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-group__label" for="card_opposition_description">{{ tp('card_opposition.description_label', [], 'banking_card_opposition') }}</label>
+            <textarea id="card_opposition_description" name="card_opposition[description]" class="form-group__textarea" placeholder="{{ tp('card_opposition.description_placeholder', [], 'banking_card_opposition') }}"></textarea>
+            <div class="form-group__help">
+                {{ tp('card_opposition.description_help', [], 'banking_card_opposition') }}
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="form-actions__button form-actions__button--danger" 
+                    onclick="return confirm('{{ tp('card_opposition.confirm_message', [], 'banking_card_opposition') }}')">
+                <i class="fas fa-ban"></i>
+                {{ tp('card_opposition.confirm_opposition', [], 'banking_card_opposition') }}
+            </button>
+        </div>
+
+        <input type="hidden" name="_token" value="{{ csrf_token('card_opposition') }}">
+    </form>
+</div>

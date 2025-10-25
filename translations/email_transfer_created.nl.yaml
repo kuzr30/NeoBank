@@ -1,0 +1,44 @@
+email_transfer_created:
+  title: "Overschrijving succesvol aangemaakt"
+  
+  content:
+    page_title: "Bankoverschrijving geïnitieerd"
+    greeting: "Hallo {firstName} {lastName},"
+    
+    transfer_created:
+      title: "Overschrijvingsaanvraag aangemaakt"
+      description: "Uw overschrijvingsaanvraag is succesvol aangemaakt en wordt nu veilig verwerkt. Het meerstaps validatieproces zal beginnen."
+    
+    transaction_details:
+      title: "Transactiedetails"
+      reference: "Overschrijvingsreferentie"
+      amount: "Bedrag om over te schrijven"
+      amount_value: "{amount} €"
+      beneficiary_account: "Begunstigde rekening"
+      transfer_reason: "Reden van overschrijving"
+      creation_date: "Aanmaakdatum"
+      created_at: "{createdAt}"
+    
+    validation_process:
+      title: "Beveiligd validatieproces"
+      step1: "1. De administratie genereert opeenvolgende validatiecodes"
+      step2: "2. E-mailmelding voor elke nieuwe beschikbare code"
+      step3: "3. Validatie vereist binnen maximaal 6 uur"
+      step4: "4. Automatische uitvoering na volledige validatie"
+    
+    tracking:
+      title: "Opvolging van uw overschrijving"
+      view_details_button: "📊 Overschrijvingsdetails bekijken"
+      access_instruction: "Ga naar uw bankruimte om de voortgang in real-time te volgen"
+    
+    security_info:
+      title: "Beveiliging en traceerbaarheid"
+      description: "Alle validatiestappen worden geregistreerd en beveiligd. U ontvangt een definitieve bevestiging per e-mail zodra de overschrijving succesvol is uitgevoerd."
+    
+    supervision_note: "Ons bankbeveiligingsteam houdt toezicht op het proces om de naleving van uw transactie te garanderen."
+    
+    footer: "<strong>%company_name% - Overschrijvingsdienst</strong><br>Automatische melding aanmaak overschrijving"
+  
+  log:
+    transfer_created: "Overschrijving aangemaakt {transferId} voor een bedrag van {amount}€"
+    email_sent: "E-mail aanmaak overschrijving verzonden naar {userEmail}"

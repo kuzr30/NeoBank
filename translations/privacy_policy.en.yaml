@@ -1,0 +1,61 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: privacy_policy.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+privacy_policy:
+  page_title: "Privacy Policy"
+  page_description: "How we collect, use and protect your personal data"
+
+  data_collection:
+    title: "Data collection"
+    content: |
+      We collect different types of personal data when you use our services:
+      <ul>
+        <li><strong>Identification data:</strong> last name, first name, date of birth, address</li>
+        <li><strong>Contact data:</strong> email, phone, postal address</li>
+        <li><strong>Financial data:</strong> income, employment status, banking history</li>
+        <li><strong>Navigation data:</strong> cookies, connection logs, IP address</li>
+      </ul>
+
+  data_usage:
+    title: "Data usage"
+    content: |
+      Your personal data is used for:
+      <ul>
+        <li>Providing personalized banking services</li>
+        <li>Managing your customer relationship</li>
+        <li>Compliance with legal and regulatory obligations</li>
+        <li>Fraud and money laundering prevention</li>
+        <li>Improving our services</li>
+      </ul>
+
+  data_sharing:
+    title: "Data sharing"
+    content: |
+      We only share your data with:
+      <ul>
+        <li>Our authorized banking partners</li>
+        <li>Financial regulatory authorities</li>
+        <li>Our technical service providers</li>
+        <li>Fraud prevention organizations</li>
+      </ul>
+      Always in compliance with banking secrecy and GDPR regulations.
+
+  user_rights:
+    title: "Your rights"
+    content: |
+      In accordance with GDPR, you have the following rights:
+      <ul>
+        <li><strong>Right of access:</strong> view your personal data</li>
+        <li><strong>Right to rectification:</strong> correct your information</li>
+        <li><strong>Right to erasure:</strong> delete your data</li>
+        <li><strong>Right to object:</strong> refuse certain processing</li>
+        <li><strong>Right to portability:</strong> retrieve your data</li>
+      </ul>
+
+  contact:
+    title: "Contact"
+    content: |
+      To exercise your rights or for any questions about this privacy policy,
+      contact our data protection officer at %email%.

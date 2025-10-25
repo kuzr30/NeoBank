@@ -1,0 +1,108 @@
+help_center_faq:
+  page:
+    title: "Häufig gestellte Fragen - Hilfezentrum %company_name%"
+    
+  hero:
+    title: "Häufig gestellte Fragen"
+    subtitle: "Finden Sie schnell Antworten auf die häufigsten Fragen"
+    search:
+      placeholder: "In FAQ suchen..."
+      
+  sections:
+    main_title: "Frage-Kategorien"
+    
+    banking:
+      title: "Banking und Konten"
+      questions:
+        account_creation:
+          question: "Wie eröffne ich ein Konto bei %company_name%?"
+          answer: "Sie können online in wenigen Minuten ein Konto eröffnen. Sie benötigen nur einen gültigen Ausweis und einen Adressnachweis."
+        account_types:
+          question: "Welche Kontotypen bieten Sie an?"
+          answer: "Wir bieten Girokonten, Sparkonten, Geschäftskonten und Jugendkonten mit spezifischen Vorteilen an."
+        fees:
+          question: "Welche Bankgebühren haben Sie?"
+          answer: "Unsere Gebühren sind transparent und wettbewerbsfähig. Konsultieren Sie unsere detaillierte Gebührenübersicht auf unserer Website oder kontaktieren Sie einen Berater."
+        mobile_app:
+          question: "Wie lade ich die mobile App herunter?"
+          answer: "Die %company_name% App ist kostenlos im App Store und Google Play verfügbar. Suchen Sie nach '%company_name%' und laden Sie die offizielle App herunter."
+          
+    transfers:
+      title: "Überweisungen und Zahlungen"
+      questions:
+        domestic_transfer:
+          question: "Wie führe ich eine nationale Überweisung durch?"
+          answer: "Loggen Sie sich in Ihr Kundenportal ein oder nutzen Sie die mobile App. Wählen Sie 'Überweisungen' und folgen Sie den geführten Schritten."
+        international_transfer:
+          question: "Kann ich internationale Überweisungen machen?"
+          answer: "Ja, wir bieten SEPA- und internationale Überweisungen mit Vorzugstarifen für unsere Premium-Kunden an."
+        transfer_limits:
+          question: "Was sind die Überweisungslimits?"
+          answer: "Limits variieren je nach Kontotyp. Standard: €3000/Tag für Online-Überweisungen, anpassbar nach Ihren Bedürfnissen."
+        payment_cards:
+          question: "Wie bestelle ich eine neue Karte?"
+          answer: "Gehen Sie zu Ihrem Kundenportal, Bereich 'Meine Karten', und klicken Sie auf 'Karte bestellen'. Lieferung dauert 5-7 Werktage."
+          
+    security:
+      title: "Sicherheit und Authentifizierung"
+      questions:
+        two_factor:
+          question: "Wie aktiviere ich die Zwei-Faktor-Authentifizierung?"
+          answer: "In Ihren Sicherheitseinstellungen aktivieren Sie die '2FA' Option. Sie können eine Authentifizierungs-App oder SMS verwenden."
+        password_reset:
+          question: "Ich habe mein Passwort vergessen, was soll ich tun?"
+          answer: "Klicken Sie auf 'Passwort vergessen' auf der Anmeldeseite. Sie erhalten eine E-Mail zur Passwortzurücksetzung."
+        account_blocked:
+          question: "Mein Konto ist gesperrt, wie entsperre ich es?"
+          answer: "Kontaktieren Sie sofort unseren Kundenservice unter Téléphone oder über den Online-Chat, um Ihr Konto schnell zu entsperren."
+        fraud_prevention:
+          question: "Wie schützen Sie vor Betrug?"
+          answer: "Wir verwenden fortschrittliche Erkennungssysteme, SSL-Verschlüsselung und 24/7-Überwachung zum Schutz Ihrer Transaktionen."
+          
+    credits:
+      title: "Kredite und Finanzierung"
+      questions:
+        credit_application:
+          question: "Wie stelle ich einen Kreditantrag?"
+          answer: "Nutzen Sie unseren Online-Simulator zur Einschätzung Ihrer Kreditkapazität, reichen Sie dann Ihren Antrag mit den erforderlichen Dokumenten ein."
+        credit_types:
+          question: "Welche Kreditarten bieten Sie an?"
+          answer: "Privatkredit, Autokredit, Immobilienkredit, Renovierungskredit und Geschäftsfinanzierungslösungen."
+        approval_time:
+          question: "Wie lange dauert eine Kreditbewertung?"
+          answer: "Grundsatzantwort innerhalb von 48 Stunden für Privatkredite, 7-15 Tage für Immobilienkredite je nach Komplexität."
+        early_repayment:
+          question: "Kann ich meinen Kredit vorzeitig zurückzahlen?"
+          answer: "Ja, vorzeitige Rückzahlung ist mit Vorzugskonditionen möglich, wie in Ihrem Kreditvertrag beschrieben."
+          
+    technical:
+      title: "Technischer Support"
+      questions:
+        app_issues:
+          question: "Die App funktioniert nicht, was soll ich tun?"
+          answer: "Überprüfen Sie Ihre Internetverbindung, starten Sie die App neu oder aktualisieren Sie sie. Bei anhaltenden Problemen kontaktieren Sie den Support."
+        browser_compatibility:
+          question: "Welche Browser sind kompatibel?"
+          answer: "Chrome, Firefox, Safari, Edge in ihren aktuellen Versionen. Vermeiden Sie Internet Explorer für eine optimale Erfahrung."
+        data_security:
+          question: "Sind meine Daten sicher?"
+          answer: "Absolut. Wir respektieren die DSGVO, verschlüsseln alle Daten und teilen niemals Ihre persönlichen Informationen."
+        maintenance:
+          question: "Wann finden Wartungsarbeiten statt?"
+          answer: "Geplante Wartungen finden meist sonntags zwischen 2:00 und 6:00 Uhr morgens statt, mit vorheriger Benachrichtigung."
+          
+    contact:
+      title: "Kontakt und Filialen"
+      questions:
+        customer_service:
+          question: "Wie kontaktiere ich den Kundenservice?"
+          answer: "Telefon: Téléphone (7T/7, 8h-20h), Online-Chat auf der Website, E-Mail: Email"
+        branch_appointment:
+          question: "Wie vereinbare ich einen Termin in der Filiale?"
+          answer: "Reservieren Sie online über Ihr Kundenportal, telefonisch oder direkt in der Filiale nach Ihrer Verfügbarkeit."
+        complaint:
+          question: "Wie reiche ich eine Beschwerde ein?"
+          answer: "Beschwerdeformular in Ihrem Kundenportal, per Post oder bei Ihrem gewohnten Berater."
+        opening_hours:
+          question: "Was sind die Öffnungszeiten?"
+          answer: "Mo-Fr: 9h-17h, Sa: 9h-12h. Erweiterte Zeiten für einige Filialen. Überprüfen Sie spezifische Zeiten auf unserer Website."

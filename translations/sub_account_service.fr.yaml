@@ -1,0 +1,9 @@
+sub_account_service:
+  exceptions:
+    main_account_not_found: "Aucun compte principal trouvé pour l'utilisateur: {email}"
+    credit_subaccount_creation_failed: "Impossible de créer le sous-compte crédit pour l'utilisateur: {email}"
+    
+  log_messages:
+    sub_accounts_created: "Sous-comptes créés pour le compte principal"
+    credit_subaccount_retrieved: "Sous-compte crédit récupéré avec succès"
+    balances_calculated: "Soldes de tous les sous-comptes calculés"

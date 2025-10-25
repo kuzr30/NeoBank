@@ -1,0 +1,78 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: profile_kyc_submit.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+profile_kyc_submit:
+  page:
+    title: "Submit KYC documents - %company_name%"
+  
+  header:
+    title: "Submit my KYC documents"
+    title_resubmission: "Submit new KYC documents"
+    subtitle: "Complete your file by uploading the required documents"
+    subtitle_resubmission: "Your previous submission was rejected. Please correct and re-submit your documents"
+  
+  rejection:
+    title: "Reason for rejection of your previous request"
+  
+  info:
+    title: "Important information"
+    title_resubmission: "Points of attention for your new submission"
+    requirements:
+      resubmit_attention: "Verify that your documents meet the mentioned requirements"
+      resubmit_readable: "Make sure all documents are clearly readable"
+      readable_color: "All documents must be readable and in color"
+      formats: "Accepted formats: PDF, JPG, PNG"
+      max_size: "Maximum size: 4 MB per file"
+      date_limit: "Documents must be less than 3 months old"
+  
+  actions:
+    back: Back
+    submit: "Submit documents"
+    submit_resubmission: "Re-submit documents"
+    save_draft: "Save draft"
+    cancel: "Cancel"
+  
+  form:
+    labels:
+      identity_document: "Identity document (ID card, Passport, etc.)"
+      income_document: "Proof of income (Payslip, Tax notice, etc.)"
+      address_document: "Proof of address (Bill, Rent receipt, etc.)"
+      selfie_document: "Selfie with your identity document (optional)"
+    
+    help:
+      pdf_jpg_png: "PDF, JPG or PNG format, max 4MB"
+      jpg_png_only: "JPG or PNG format only, max 4MB"
+    
+    declaration:
+      title: "Declaration"
+      text: "By submitting these documents, I certify that the information provided is accurate and up to date. I understand that false information may result in the closure of my account."
+      text_resubmission: "By re-submitting these documents, I certify that the information provided is accurate, up to date and corrected according to the recommendations. I understand that false information may result in the closure of my account."
+    
+    personal_info:
+      title: "Personal information"
+      first_name: "First name"
+      last_name: "Last name"
+      birth_date: "Date of birth"
+      nationality: "Nationality"
+      
+    documents:
+      title: "Identity documents"
+      identity_document: "Identity document"
+      identity_document_help: "Upload a clear photo of your passport, ID card or driver's license"
+      proof_of_address: "Proof of address"
+      proof_of_address_help: "Electricity bill, gas bill or bank statement less than 3 months old"
+      selfie: "Selfie photo"
+      selfie_help: "Take a photo of yourself holding your identity document"
+      
+    file_requirements:
+      title: "File requirements"
+      formats: "Accepted formats: JPG, PNG, PDF"
+      max_size: "Maximum size: 5MB per file"
+      quality: "Make sure documents are readable and of good quality"
+    
+  validation:
+    required_field: "This field is required"
+    invalid_file: "Invalid file format"
+    file_too_large: "File is too large"

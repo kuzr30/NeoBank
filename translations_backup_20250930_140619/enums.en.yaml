@@ -1,0 +1,54 @@
+enums:
+  # Assurance Type
+  assurance_type:
+    auto:
+      label: "Auto Insurance"
+      description: "Complete protection for your vehicle with 24/7 assistance"
+    habitation:
+      label: "Home Insurance"
+      description: "Comprehensive home insurance for owners and tenants"
+    sante:
+      label: "Health Insurance"
+      description: "Health supplement with optimized reimbursements"
+    vie:
+      label: "Life Insurance"
+      description: "Tax-optimized savings and transmission"
+    pret:
+      label: "Loan Insurance"
+      description: "Secure your mortgage"
+    voyage:
+      label: "Travel Insurance"
+      description: "Travel with peace of mind with worldwide coverage"
+    pro:
+      label: "Professional Insurance"
+      description: "Complete protection for your professional activity"
+    cyber:
+      label: "Cyber Insurance"
+      description: "Protection against cyberattacks and data breaches"
+    decennale:
+      label: "10-Year Liability"
+      description: "Mandatory for construction professionals"
+    rc:
+      label: "Civil Liability"
+      description: "Protection against damages caused to others"
+    flotte:
+      label: "Fleet Insurance"
+      description: "Protection for your vehicle fleet"
+    garage:
+      label: "Garage Insurance"
+      description: "Specific coverage for garage professionals"
+
+  # Contrat Assurance Status
+  contrat_assurance_status:
+    actif:
+      label: "Active"
+      description: "Contract ongoing and operational"
+    suspendu:
+      label: "Suspended"
+      description: "Contract temporarily suspended"
+    resilie:
+      label: "Terminated"
+      description: "Contract permanently terminated"
+    expire:
+      label: "Expired"
+      description: "Contract expired"

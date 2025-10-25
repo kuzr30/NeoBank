@@ -1,0 +1,21 @@
+banking_base_layout:
+  navigation:
+    tabs:
+      accounts: "Rekeningen"
+      cards: "Kaarten"
+      transfers: "Overschrijvingen"
+      rib_iban: "RIB/IBAN"
+      savings: "Spaarrekeningen"
+      credits: "Kredieten"
+      insurance: "Verzekeringen"
+  
+  user:
+    status: "Particuliere klant"
+    notifications: "Meldingen"
+    profile_menu: "Mijn profiel"
+  
+  profile_menu:
+    my_profile: "Mijn profiel"
+    preferences: "Voorkeuren"
+    security: "Beveiliging"
+    logout: "Uitloggen"

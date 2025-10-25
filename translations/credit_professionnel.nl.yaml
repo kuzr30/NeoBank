@@ -1,0 +1,105 @@
+credit_professionnel:
+  page:
+    title: "Professioneel Krediet"
+    description: "Ontwikkel uw activiteit met ons professioneel krediet. Oplossingen aangepast aan de behoeften van bedrijven en professionals."
+
+  hero:
+    title: "Professioneel Krediet"
+    subtitle: "Ontwikkel uw activiteit"
+    values:
+      taux: "{rate}%"
+      montant: "500 000€"
+      duree: "15 jaar"
+
+  section_1:
+    title: "Wat is een professioneel krediet?"
+    content:
+      paragraph_1: "Het professioneel krediet begeleidt u bij de ontwikkeling van uw activiteit: financiering van uitrusting, bedrijfsvoertuigen, lokalenwerken, behoefte aan werkkapitaal of aankoop van sociale aandelen."
+      paragraph_2: "Flexibele oplossing aangepast aan professionals, ambachtslieden, handelaars en KMO's, met preferentiële voorwaarden om uw groei te ondersteunen."
+
+  features:
+    montant: "Tot 500 000€"
+    montant_detail: "Volgens het professioneel project"
+    duree: "Van 2 tot 15 jaar"
+    duree_detail: "Looptijd aangepast aan de investering"
+    taux: "Vanaf {rate}% JKP*"
+    taux_detail: "Preferentieel professioneel tarief"
+    garantie: "Hypotheek of pandrecht"
+    garantie_detail: "Volgens het bedrag"
+
+  advantages:
+    taux_preferentiel:
+      title: "Preferentieel tarief:"
+      text: "Voordelige voorwaarden voor professionals"
+    accompagnement:
+      title: "Begeleiding:"
+      text: "Toegewijde adviseur voor professionals"
+    souplesse:
+      title: "Flexibiliteit:"
+      text: "Modulatie van termijnen volgens activiteit"
+    deblocage_rapide:
+      title: "Snelle vrijgave:"
+      text: "Fondsen beschikbaar binnen 15 dagen"
+    deductibilite:
+      title: "Aftrekbaarheid:"
+      text: "Fiscaal aftrekbare rente"
+
+  requirements:
+    conditions_activite:
+      title: "Activiteitsvoorwaarden"
+      items:
+        creation: "Bedrijf opgericht sinds meer dan 2 jaar"
+        declaration: "Aangegeven en in orde activiteit"
+        chiffre_affaires: "Regelmatige omzet"
+        difficultes: "Geen financiële moeilijkheden"
+    criteres_financiers:
+      title: "Financiële criteria"
+      items:
+        capacite: "Aangetoonde terugbetalingscapaciteit"
+        fonds_propres: "Voldoende eigen vermogen"
+        apport: "Minimum persoonlijke inbreng 20%"
+        garanties: "Voor te stellen garanties"
+
+  documents:
+    title: "Benodigde documenten"
+    entreprise:
+      title: "Bedrijfsdocumenten"
+      kbis: "Kbis van minder dan 3 maanden"
+      statuts: "Statuten van de vennootschap"
+      bilans: "3 laatste boekhoudkundige balansen"
+      liasse_fiscale: "Volledige fiscale bundel"
+      situation_banque: "Bankafschriften van de laatste 6 maanden"
+    dirigeant:
+      title: "Documenten van de bestuurder"
+      identite: "Identiteitsbewijs van de bestuurder"
+      revenus: "Inkomstenbewijzen"
+      patrimoine: "Vermogensverklaring"
+      releves: "Persoonlijke rekeningafschriften"
+    projet:
+      title: "Investeringsproject"
+      plan_financement: "Gedetailleerd financieringsplan"
+      devis: "Offertes van leveranciers"
+      business_plan: "Businessplan over 3 jaar"
+      garanties: "Voorgestelde garanties"
+
+  legal:
+    title: "Belangrijke juridische informatie"
+    taeg:
+      title: "JKP:"
+      text: "Representatief voorbeeld: voor een professioneel krediet van 100 000€ over 10 jaar tegen een JKP van 3,8%, betaalt u 120 maandlasten van 1 017€ terug, ofwel een totaalbedrag van 122 040€ (kosten van het krediet: 22 040€)."
+    garanties:
+      title: "Garanties:"
+      text: "Hypotheek, pandrecht of waarborg volgens het bedrag en de looptijd."
+    assurance:
+      title: "Verzekering:"
+      text: "Man-sleutel verzekering aanbevolen om de lening te beveiligen."
+    fiscalite:
+      title: "Fiscaliteit:"
+      text: "Leningrente aftrekbaar van het belastbaar resultaat."
+    remboursement:
+      title: "Terugbetaling:"
+      text: "Mogelijkheid van modulatie volgens de seizoensgebondenheid van de activiteit."
+
+  cta:
+    title: "Dynamiseer uw bedrijf"
+    subtitle: "Financier uw professionele projecten met ons toegewijde krediet"

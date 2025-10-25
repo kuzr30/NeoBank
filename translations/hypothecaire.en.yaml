@@ -1,0 +1,95 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: hypothecaire.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+hypothecaire:
+  page_title: "Mortgage Loan"
+  page_description: "Finance your major projects with our mortgage loan. Large amounts secured by your real estate property."
+  
+  hero:
+    title: "Mortgage Loan"
+    subtitle: "Finance your major projects with our mortgage loan. Large amounts secured by your real estate property."
+    rate_value: "3.1%"
+    amount_value: "€500,000"
+    duration_value: "25 years"
+  
+  section_1:
+    title: "What is a mortgage loan?"
+    paragraph_1: "A mortgage loan is a loan secured by a mortgage on a real estate property. It allows you to finance large amounts for your major projects: work, investment, loan buyback or cash flow needs."
+    paragraph_2: "Thanks to this real estate guarantee, you benefit from preferential conditions and extended repayment periods, adapted to high amounts."
+  
+  features:
+    amount: "Up to €500,000"
+    amount_detail: "According to property value"
+    duration: "From 5 to 25 years"
+    duration_detail: "Extended durations"
+    rate: "From {rate}% APR*"
+    rate_detail: "Guaranteed preferential rate"
+    guarantee: "Mortgage"
+    guarantee_detail: "On real estate property"
+  
+  advantages:
+    advantage_1: "<strong>High amounts:</strong> Up to 70% of the value of the collateral property"
+    advantage_2: "<strong>Advantageous rates:</strong> Preferential conditions thanks to the mortgage"
+    advantage_3: "<strong>Long durations:</strong> Up to 25 years for reduced monthly payments"
+    advantage_4: "<strong>Free use:</strong> No justification required for use of funds"
+    advantage_5: "<strong>Tax deduction:</strong> Deductible interest depending on your situation"
+  
+  requirements:
+    borrower:
+      title: "Borrower conditions"
+      item_1: "Be owner of the mortgaged property"
+      item_2: "Regular and sufficient income"
+      item_3: "Available debt capacity"
+      item_4: "Maximum age 70 at end of loan"
+    property:
+      title: "Property conditions"
+      item_1: "Real estate property free of mortgage"
+      item_2: "Minimum value €150,000"
+      item_3: "Mandatory real estate appraisal"
+      item_4: "Home insurance required"
+  
+  documents:
+    personal:
+      title: "Personal documents"
+      item_1: "Identity documents of co-borrowers"
+      item_2: "Proof of address"
+      item_3: "Last 3 pay slips"
+      item_4: "Last 2 tax notices"
+    property:
+      title: "Real estate documents"
+      item_1: "Deed of ownership or notarial deed"
+      item_2: "Urban planning certificate"
+      item_3: "Recent mortgage status"
+      item_4: "Property tax last year"
+    financial:
+      title: "Financial documents"
+      item_1: "Last 3 account statements"
+      item_2: "Amortization schedule of current loans"
+      item_3: "Asset certificates"
+      item_4: "Proof of rental income"
+  
+  legal:
+    title: "Important legal information"
+    taeg: "<strong>*APR:</strong> Representative example: for a mortgage loan of €100,000 over 15 years at 3.1% APR, you repay 180 monthly installments of €694, i.e. a total amount of €124,920 (cost of credit: €24,920)."
+    mortgage: "<strong>Mortgage:</strong> Registration of a conventional mortgage on the real estate property."
+    fees: "<strong>Fees:</strong> Notary fees and mortgage registration fees at your expense."
+    expertise: "<strong>Appraisal:</strong> Mandatory real estate valuation by certified expert."
+    discharge: "<strong>Discharge:</strong> Automatic discharge of mortgage after repayment."
+  
+  cta:
+    title: "Leverage your assets"
+    subtitle: "Get the funds you need through your real estate property"
+  
+  sidebar:
+    evaluation_title: "Real estate appraisal"
+    step_1:
+      title: "Appraisal"
+      time: "5 days"
+    step_2:
+      title: "File review"
+      time: "15 days"
+    step_3:
+      title: "Notary signing"
+      time: "10 days"

@@ -1,0 +1,10 @@
+account_creation_service:
+  log_messages:
+    creation_started: "Start automatische account aanmaak na KYC-validatie"
+    user_has_account: "Gebruiker heeft al een lopende rekening"
+    iban_generated: "IBAN gegenereerd volgens het land"
+    account_created: "Account succesvol aangemaakt"
+    notification_error: "Fout bij verzenden van notificatie-email, maar account is aangemaakt"
+    creation_failed: "Fout bij het automatisch aanmaken van de account"
+    account_number_generated: "Rekeningnummer automatisch gegenereerd"
+    balance_initialized: "Startsaldo ingesteld op nul"

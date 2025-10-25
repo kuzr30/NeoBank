@@ -1,0 +1,96 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: travel-loan.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+travel_loan:
+  page_title: "Travel Loan"
+  page_description: "Finance your travel dreams with peace of mind."
+  
+  advantages:
+    -
+      title: "Preserved savings:"
+      description: "Keep your savings for unexpected expenses"
+    -
+      title: "Immediate release:"
+      description: "Funds available quickly to book"
+    -
+      title: "All trips:"
+      description: "Vacations, honeymoon, personal business trips"
+    -
+      title: "Freedom of use:"
+      description: "Transport, accommodation, activities, equipment"
+    -
+      title: "Travel insurance:"
+      description: "Possibility of cancellation/interruption coverage"
+  conditions:
+    octroi:
+      title: "Grant conditions"
+      items:
+        - "Be of legal age and reside in France"
+        - "Provide proof of regular income"
+        - "Sound financial situation"
+        - "Defined travel project"
+    utilisation:
+      title: "Recommended use"
+      items:
+        - "Exceptional or major trip"
+        - "Preservation of emergency savings"
+        - "Well-defined travel budget"
+        - "Guaranteed repayment capacity"
+  cta:
+    subtitle: Finance your travel dreams with our dedicated loan
+    title: Set off to discover the world
+  documents:
+    financiere:
+      title: "Financial situation"
+      items:
+        - "Last 3 pay slips"
+        - "Last tax notice"
+        - "Account statements"
+        - "Proof of other income"
+    identite:
+      title: "Identity and residence"
+      items:
+        - "Identity card or passport"
+        - "Recent proof of residence"
+        - "Family record book if applicable"
+    projet:
+      title: "Travel project"
+      items:
+        - "Travel agency quote"
+        - "Preliminary bookings"
+        - "Trip description"
+        - "Detailed budget"
+  features:
+    montant: "Up to €25,000"
+    montant_detail: "For all your travel projects"
+    duree: "From 12 months to 7 years"
+    duree_detail: "Comfortable repayment"
+    taux: "From {rate}% APR*"
+    taux_detail: "Competitive travel rate"
+    garantie: "Without guarantee"
+    garantie_detail: "Signature-based financing"
+  hero:
+    subtitle: Make your escape dreams come true
+    title: Travel Loan
+  legal:
+    title: "Important legal information"
+    details:
+      - "*APR: Representative example: for a travel loan of €8,000 over 48 months at APR of 5.2%, you repay 48 monthly payments of €185, i.e. a total amount of €8,880 (cost of credit: €880)."
+      - "Use: Funds exclusively intended to finance the declared trip."
+      - "Travel insurance: Subscription recommended to cover cancellation risks."
+      - "Early repayment: Possible without penalty over €10,000."
+      - "Withdrawal period: 14 days to cancel the credit without justification."
+  meta:
+    description: Finance your dream vacations and trips with our travel loan. Travel serenely with adapted conditions.
+    title: Travel Loan
+  section_1:
+    content:
+    - The travel loan allows you to finance your vacations, honeymoons, world tours or exceptional getaways without tapping into your emergency savings.
+    - A financing solution dedicated to leisure and well-being, it offers you the opportunity to live unique experiences while preserving your financial balance.
+    title: What is a travel loan?
+  values:
+    duree: 7 years
+    montant: €25,000
+    taux: 5.2%

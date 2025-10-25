@@ -1,0 +1,237 @@
+# Traductions globales - Néerlandais (langue par défaut)
+
+# Navigation
+nav:
+  home: "Home"
+  services: "Diensten"
+  about: "Over ons"
+  contact: "Contact"
+  login: "Inloggen"
+  signup: "Registreren"
+  mobile: "Mobiel Bankieren"
+  loans: "Leningen"
+  credit_simulation: "Krediet Simulatie"
+  our_credit_offers: "Onze Kredietaanbiedingen"
+  mobile_app: "Mobiele App"
+  credit_card: "Creditcard"
+  personal_loan: "Persoonlijke Lening"
+  travel_loan: "Reislening"
+  auto_loan: "Autolening"
+  home_loan: "Hypotheek"
+  client_space: "Klantenportaal"
+  branches: "Kantoren"
+  help: "Hulp"
+
+# Header User Dropdown  
+user_menu:
+  access_profile: "Ga naar mijn profiel"
+  identity_verification: "Identiteitsverificatie"
+  access_banking: "Ga naar mijn bankrekening"
+  administration: "Administratie" 
+  logout: "Uitloggen"
+
+# KYC Status
+kyc_status:
+  pending: "In afwachting"
+  rejected: "!"
+  required: "Vereist"
+
+# %company_name% Avantages Section
+bankit_advantages:
+  section_badge: "%company_name% Excellentie"
+  section_title: "Waarom %company_name% kiezen voor uw verzekeringen?"
+  section_subtitle: "Onze bankexpertise ten dienste van uw bescherming"
+  
+  coverage:
+    title: "Geïntegreerde Bankdekking"
+    description: "Uw verzekeringen direct gekoppeld aan uw bankrekeningen voor vereenvoudigd beheer en voordeeltarieven."
+    discount: "-30% op premies"
+    
+  automatic_payment:
+    title: "Automatische Afschrijving"
+    description: "Geen zorgen meer over betalingen met automatische afschrijving van uw %company_name% rekening."
+    
+  express_processing:
+    title: "Express Verwerking"
+    description: "Offerte binnen 24u, onmiddellijke inschrijving en snelle schadeafwikkeling dankzij ons banksysteem."
+    
+  dedicated_support:
+    title: "Toegewijde Bankondersteuning"
+    description: "Uw %company_name% bankadviseurs begeleiden u ook bij uw verzekeringen."
+    
+  real_time_tracking:
+    title: "Real-time Opvolging"
+    description: "Raadpleeg uw contracten en schades rechtstreeks vanuit uw online bankruimte."
+    
+  banking_security:
+    title: "Bankveiligheid"
+    description: "Uw gegevens beschermd door de hoogste bankbeveiligingsstandaarden."
+
+# Boutons communs
+buttons:
+  learn_more: "Meer informatie"
+  get_started: "Beginnen"
+  contact_us: "Contact opnemen"
+  sign_up: "Simulatie maken"
+  login: "Inloggen"
+  simulate: "Simuleren"
+  calculate: "Berekenen"
+  apply: "Lening aanvragen"
+
+# Krediet simulatie
+credit_simulation:
+  title: "Krediet Simulatie"
+  subtitle: "Ontdek uw leencapaciteit met een paar klikken"
+  form:
+    credit_type: "Type krediet"
+    amount: "Gewenst bedrag"
+    duration: "Looptijd"
+    duration_unit: "Tijdseenheid"
+    calculate: "Bereken mijn simulatie"
+  results:
+    monthly_payment: "Maandelijkse betaling"
+    total_cost: "Totale kosten van het krediet"
+    total_interest: "Totale rente"
+    interest_rate: "Rentepercentage"
+  units:
+    months: "Maanden"
+    years: "Jaren"
+  validation:
+    amount_required: "Het bedrag is verplicht"
+    amount_min: "Het minimumbedrag is € 1.000"
+    amount_max: "Het maximumbedrag is € 500.000"
+    duration_required: "De looptijd is verplicht"
+    duration_min: "De minimumlooptijd is 12 maanden"
+    duration_max_months: "De maximumlooptijd is 360 maanden"
+    duration_max_years: "De maximumlooptijd is 30 jaar"
+  book_appointment: "Afspraak maken"
+  call_advisor: "Adviseur bellen"
+  chat_online: "Online chatten"
+
+# Labels communs
+labels:
+  amount: "Bedrag"
+  duration: "Looptijd"
+  monthly_payment: "Maandelijks bedrag"
+  interest_rate: "Rente"
+  example: "Voorbeeld"
+  from: "Vanaf"
+  to: "Tot"
+  per_month: "per maand"
+  per_year: "per jaar"
+  years: "jaar"
+  months: "maanden"
+
+# Messages d'erreur
+errors:
+  required_field: "Dit veld is verplicht"
+  invalid_email: "Ongeldig e-mailadres"
+  invalid_phone: "Ongeldig telefoonnummer"
+  invalid_amount: "Ongeldig bedrag"
+  min_amount: "Minimumbedrag is {min}"
+  max_amount: "Maximumbedrag is {max}"
+
+# Messages de succès
+success:
+  form_submitted: "Formulier succesvol verzonden"
+  appointment_booked: "Afspraak succesvol geboekt"
+  simulation_complete: "Simulatie voltooid"
+
+
+
+# Contact
+contact:
+  phone: "Telefoon"
+  email: "E-mail"
+  address: "Adres"
+  opening_hours: "Openingstijden"
+  customer_service: "Klantenservice"
+  monday_friday: "Maandag - Vrijdag"
+  saturday: "Zaterdag"
+  sunday: "Zondag"
+  closed: "Gesloten"
+  phone_number: "Téléphone"
+  email_address: "Email"
+  business_hours: "Ma-Vr 8u-18u"
+
+# Mentions légales
+legal:
+  credit_warning: "Een krediet bindt u en moet worden terugbetaald. Controleer uw terugbetalingscapaciteit voordat u zich verbindt."
+  licensed_bank: "Betrouwbare financiële dienstverlening"
+  insurance_broker: "Verzekeringstussenpersoon"
+  under_supervision: "Professioneel financieel advies"
+
+# Footer
+footer:
+  rights_reserved: "Alle rechten voorbehouden"
+  privacy_policy: "Privacybeleid"
+  terms_conditions: "Algemene voorwaarden"
+  cookies: "Cookies"
+  sitemap: "Sitemap"
+  # Description principale
+  description: "Uw vertrouwde financiële partner. Ontdek onze moderne en veilige bankoplossingen voor al uw projecten."
+  
+  # Sections du footer
+  sections:
+    services_title: "Bankdiensten"
+    support_title: "Ondersteuning & Hulp"
+    legal_title: "Juridische Informatie"
+    contact_title: "Contact Opnemen"
+  
+  # Services bancaires
+  services:
+    accounts_cards: "Rekeningen & Kaarten"
+    savings_investments: "Sparen & Beleggen"
+    credits_loans: "Kredieten & Leningen"
+    insurance: "Verzekeringen"
+    private_banking: "Private Banking"
+    business_banking: "Zakelijk Bankieren"
+  
+  # Support et aide
+  support:
+    help_center: "Hulpcentrum"
+    contact: "Contact"
+    branches: "Kantoren"
+    faq: "FAQ"
+    security: "Veiligheid"
+    complaints: "Klachten"
+  
+  # Informations légales
+  legal_links:
+    legal_notices: "Juridische Mededelingen"
+    terms_conditions: "Algemene Voorwaarden"
+    privacy_policy: "Privacybeleid"
+    cookies: "Cookies"
+    pricing: "Tarieven"
+    accessibility: "Toegankelijkheid"
+  
+  # Contact
+  contact_info:
+    customer_service: "Klantenservice"
+    email: "E-mail"
+    headquarters: "Hoofdkantoor"
+    phone_number: "Telefoon"
+    email_address: "E-mail"
+    address: "Adres"
+  
+  # Footer bottom
+  bottom:
+    rights_reserved: "Alle rechten voorbehouden"
+    licensed_bank: "Betrouwbare financiële dienstverlening"
+    orias_number: ""
+    ssl_secured: "SSL Beveiligd"
+    acpr_approved: ""
+  
+  # Social media (aria-labels)
+  social:
+    facebook: "Facebook"
+    twitter: "Twitter"
+    linkedin: "LinkedIn"
+    instagram: "Instagram"
+
+# Beveiligings-/authenticatiefouten
+security:
+  invalid_credentials: "E-mail of wachtwoord onjuist"
+  account_locked: "Uw account is tijdelijk vergrendeld"
+  account_disabled: "Uw account is gedeactiveerd"
+  bad_credentials: "E-mail of wachtwoord onjuist"

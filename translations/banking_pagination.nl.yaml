@@ -1,0 +1,6 @@
+banking_pagination:
+  previous: "Vorige"
+  next: "Volgende"
+  page_info: "Pagina %current% van %pageCount% (%totalCount% termijnen)"
+  current_page: "Huidige pagina"
+  page_number: "Pagina %page%"

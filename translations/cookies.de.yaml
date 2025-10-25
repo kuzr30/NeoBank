@@ -1,0 +1,57 @@
+cookies:
+  page_title: "Cookie-Richtlinie"
+  page_description: "Informationen über die Verwendung von Cookies auf unserer Website"
+
+  what_are_cookies:
+    title: "Was ist ein Cookie?"
+    content: |
+      Ein Cookie ist eine kleine Textdatei, die auf Ihrem Computer, Tablet oder Smartphone gespeichert wird,
+      wenn Sie unsere Website besuchen. Cookies ermöglichen es uns, Ihr Browsing-Erlebnis zu verbessern
+      und Ihnen personalisierte Dienstleistungen anzubieten.
+
+  types_of_cookies:
+    title: "Arten von verwendeten Cookies"
+    essential:
+      title: "Wesentliche Cookies"
+      content: |
+        Diese Cookies sind für das Funktionieren der Website erforderlich und können nicht deaktiviert werden.
+        Sie ermöglichen es, Ihre Anmeldeeinstellungen zu speichern und die Sicherheit Ihrer Transaktionen zu gewährleisten.
+    
+    performance:
+      title: "Leistungs-Cookies"
+      content: |
+        Diese Cookies helfen uns zu verstehen, wie Besucher unsere Website nutzen,
+        indem sie anonyme Informationen über besuchte Seiten und aufgetretene Fehler sammeln.
+    
+    functionality:
+      title: "Funktionalitäts-Cookies"
+      content: |
+        Diese Cookies ermöglichen es der Website, Ihre Entscheidungen (Sprache, Region, Benutzername) zu speichern
+        und Ihnen verbesserte und personalisierte Funktionen anzubieten.
+
+  manage_cookies:
+    title: "Cookie-Verwaltung"
+    content: |
+      Sie können Cookies auf verschiedene Weise kontrollieren und verwalten:
+      <ul>
+        <li><strong>Browser-Einstellungen:</strong> Konfigurieren Sie Ihren Browser, um Cookies zu akzeptieren, abzulehnen oder zu löschen</li>
+        <li><strong>Online-Tools:</strong> Verwenden Sie Browser-Erweiterungen, um Cookies zu blockieren</li>
+        <li><strong>Website-Einstellungen:</strong> Ändern Sie Ihre Cookie-Einstellungen über Ihr Konto</li>
+      </ul>
+      <em>Achtung:</em> Die Deaktivierung bestimmter Cookies kann die Funktionsweise der Website beeinträchtigen.
+
+  third_party:
+    title: "Drittanbieter-Cookies"
+    content: |
+      Wir verwenden auch Cookies von Drittanbietern für:
+      <ul>
+        <li><strong>Google Analytics:</strong> Analyse von Traffic und Nutzerverhalten</li>
+        <li><strong>Soziale Netzwerke:</strong> Integration von Teilen-Buttons</li>
+        <li><strong>Werbung:</strong> Anzeige gezielter Werbung (mit Ihrer Zustimmung)</li>
+      </ul>
+
+  contact:
+    title: "Kontakt"
+    content: |
+      Für Fragen zu unserer Verwendung von Cookies
+      kontaktieren Sie uns unter der Adresse %email%.

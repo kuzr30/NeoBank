@@ -1,0 +1,691 @@
+<!-- Credit Section -->
+<section class="home__credit">
+  <div class="home__credit-container">
+    <div class="home__credit-content">
+      <!-- Left Content -->
+      <div class="home__credit-text">
+        <div class="home__credit-badge">
+          {{ ux_icon('heroicons:credit-card', {'class': 'home__credit-badge-icon'}) }}
+          <span>{{ tp('credit.badge') }}</span>
+        </div>
+        
+        <h2 class="home__credit-title">
+          {{ tp('credit.title') }} <span class="home__credit-title--accent">{{ tp('credit.title_accent') }}</span>
+        </h2>
+        
+        <p class="home__credit-description">
+          {{ tp('credit.description') }}
+        </p>
+
+        <!-- Credit Features -->
+        <div class="home__credit-features">
+          <div class="home__credit-feature">
+            <div class="home__credit-feature-icon">
+              {{ ux_icon('heroicons:clock', {'class': 'home__credit-feature-icon-svg'}) }}
+            </div>
+            <div class="home__credit-feature-content">
+              <h4>{{ tp('credit.features.response_48h') }}</h4>
+              <p>{{ tp('credit.features.response_48h_desc') }}</p>
+            </div>
+          </div>
+
+          <div class="home__credit-feature">
+            <div class="home__credit-feature-icon">
+              {{ ux_icon('heroicons:calculator', {'class': 'home__credit-feature-icon-svg'}) }}
+            </div>
+            <div class="home__credit-feature-content">
+              <h4>{{ tp('credit.features.attractive_rates') }}</h4>
+              <p>{{ tp('credit.features.attractive_rates_desc') }}</p>
+            </div>
+          </div>
+
+          <div class="home__credit-feature">
+            <div class="home__credit-feature-icon">
+              {{ ux_icon('heroicons:shield-check', {'class': 'home__credit-feature-icon-svg'}) }}
+            </div>
+            <div class="home__credit-feature-content">
+              <h4>{{ tp('credit.features.expert_support') }}</h4>
+              <p>{{ tp('credit.features.expert_support_desc') }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="home__credit-cta">
+          <a href="{{ path('credit_simulation_index') }}" class="home__credit-btn home__credit-btn--primary">
+            {{ ux_icon('heroicons:calculator', {'class': 'home__credit-btn-icon'}) }}
+            {{ tp('credit.cta.simulate') }}
+          </a>
+          <a href="{{ path('profile_index') }}" class="home__credit-btn home__credit-btn--secondary">
+            {{ ux_icon('heroicons:phone', {'class': 'home__credit-btn-icon'}) }}
+            {{ tp('credit.cta.contact_advisor') }}
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Content - Credit Types -->
+      <div class="home__credit-cards">
+        <div class="home__credit-card home__credit-card--immobilier">
+          <div class="home__credit-card-header">
+            <div class="home__credit-card-icon">
+              {{ ux_icon('heroicons:home', {'class': 'home__credit-card-icon-svg'}) }}
+            </div>
+            <h3>{{ tp('credit.types.mortgage.title') }}</h3>
+          </div>
+          <div class="home__credit-card-content">
+            <div class="home__credit-card-amount">
+              <span>{{ tp('credit.types.mortgage.amount') }}</span>
+            </div>
+            <div class="home__credit-card-rate">
+              <span class="home__credit-rate-from">{{ tp('credit.types.mortgage.rate_from') }}</span>
+              <span class="home__credit-rate-value">{{ credit_rate('immobilier') }}%</span>
+            </div>
+            <ul class="home__credit-card-features">
+              {% for feature in tp('credit.types.mortgage.features') %}
+                <li>{{ feature }}</li>
+              {% endfor %}
+            </ul>
+           
+          </div>
+          <a href="{{ path('credit_offers_home_loan') }}" class="home__credit-card-btn">{{ tp('credit.button') }}</a>
+        </div>
+
+        <div class="home__credit-card home__credit-card--auto">
+          <div class="home__credit-card-header">
+            <div class="home__credit-card-icon">
+              {{ ux_icon('heroicons:truck', {'class': 'home__credit-card-icon-svg'}) }}
+            </div>
+            <h3>{{ tp('credit.types.auto.title') }}</h3>
+          </div>
+          <div class="home__credit-card-content">
+            <div class="home__credit-card-amount">
+              <span>{{ tp('credit.types.auto.amount') }}</span>
+            </div>
+            <div class="home__credit-card-rate">
+              <span class="home__credit-rate-from">{{ tp('credit.types.auto.rate_from') }}</span>
+              <span class="home__credit-rate-value">{{ credit_rate('auto') }}%</span>
+            </div>
+            <ul class="home__credit-card-features">
+              {% for feature in tp('credit.types.auto.features') %}
+                <li>{{ feature }}</li>
+              {% endfor %}
+            </ul>
+
+          </div>
+          <a href="{{ path('credit_offers_auto_loan') }}" class="home__credit-card-btn">{{ tp('credit.button') }}</a>
+        </div>
+
+        <div class="home__credit-card home__credit-card--personnel">
+          <div class="home__credit-card-header">
+            <div class="home__credit-card-icon">
+              {{ ux_icon('heroicons:user-circle', {'class': 'home__credit-card-icon-svg'}) }}
+            </div>
+            <h3>{{ tp('credit.types.personal.title') }}</h3>
+          </div>
+          <div class="home__credit-card-content">
+            <div class="home__credit-card-amount">
+              <span>{{ tp('credit.types.personal.amount') }}</span>
+            </div>
+            <div class="home__credit-card-rate">
+              <span class="home__credit-rate-from">{{ tp('credit.types.personal.rate_from') }}</span>
+              <span class="home__credit-rate-value">{{ credit_rate('personal') }}%</span>
+            </div>
+            <ul class="home__credit-card-features">
+              {% for feature in tp('credit.types.personal.features') %}
+                <li>{{ feature }}</li>
+              {% endfor %}
+            </ul>
+          
+          </div>
+          <a href="{{ path('credit_offers_personal_loan') }}" class="home__credit-card-btn">{{ tp('credit.button') }}</a>
+        </div>
+
+        <div class="home__credit-card home__credit-card--travaux">
+          <div class="home__credit-card-header">
+            <div class="home__credit-card-icon">
+              {{ ux_icon('heroicons:wrench-screwdriver', {'class': 'home__credit-card-icon-svg'}) }}
+            </div>
+            <h3>{{ tp('credit.types.works.title') }}</h3>
+          </div>
+          <div class="home__credit-card-content">
+            <div class="home__credit-card-amount">
+              <span>{{ tp('credit.types.works.amount') }}</span>
+            </div>
+            <div class="home__credit-card-rate">
+              <span class="home__credit-rate-from">{{ tp('credit.types.works.rate_from') }}</span>
+              <span class="home__credit-rate-value">{{ credit_rate('travaux') }}%</span>
+            </div>
+            <ul class="home__credit-card-features">
+              {% for feature in tp('credit.types.works.features') %}
+                <li>{{ feature }}</li>
+              {% endfor %}
+            </ul>
+         
+          </div>
+          <a href="{{ path('credit_offers_travaux') }}" class="home__credit-card-btn">{{ tp('credit.button') }}</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Credit Process -->
+    <div class="home__credit-process">
+      <h3>{{ tp('credit.process.title') }}</h3>
+      <div class="home__credit-steps">
+        <div class="home__credit-step">
+          <div class="home__credit-step-number">1</div>
+          <div class="home__credit-step-content">
+            <h4>{{ tp('credit.process.steps.simulation.title') }}</h4>
+            <p>{{ tp('credit.process.steps.simulation.description') }}</p>
+          </div>
+        </div>
+        <div class="home__credit-step">
+          <div class="home__credit-step-number">2</div>
+          <div class="home__credit-step-content">
+            <h4>{{ tp('credit.process.steps.application.title') }}</h4>
+            <p>{{ tp('credit.process.steps.application.description') }}</p>
+          </div>
+        </div>
+        <div class="home__credit-step">
+          <div class="home__credit-step-number">3</div>
+          <div class="home__credit-step-content">
+            <h4>{{ tp('credit.process.steps.study.title') }}</h4>
+            <p>{{ tp('credit.process.steps.study.description') }}</p>
+          </div>
+        </div>
+        <div class="home__credit-step">
+          <div class="home__credit-step-number">4</div>
+          <div class="home__credit-step-content">
+            <h4>{{ tp('credit.process.steps.disbursement.title') }}</h4>
+            <p>{{ tp('credit.process.steps.disbursement.description') }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legal Disclaimer -->
+  <div class="home__credit-legal">
+    <div class="home__credit-legal-content">
+      <p><strong>{{ tp('credit.legal.main') }}</strong></p>
+      <div class="home__credit-legal-details">
+        {% for detail in tp('credit.legal.details') %}
+          <span>{{ detail }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Credit Section */
+.home__credit {
+  padding: 80px 0;
+  background: #f8fafc;
+  color: #1e293b;
+  position: relative;
+  overflow: hidden;
+}
+
+.home__credit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="creditgrid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23creditgrid)"/></svg>');
+  pointer-events: none;
+}
+
+.home__credit-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.home__credit-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+  margin-bottom: 80px;
+}
+
+.home__credit-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.home__credit-badge-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.home__credit-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.home__credit-title--accent {
+  color: #10b981;
+}
+
+.home__credit-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #64748b;
+  margin-bottom: 40px;
+}
+
+.home__credit-features {
+  margin-bottom: 40px;
+}
+
+.home__credit-feature {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.home__credit-feature-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(16, 185, 129, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.home__credit-feature-icon-svg {
+  width: 24px;
+  height: 24px;
+  color: #10b981;
+}
+
+.home__credit-feature-content h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.home__credit-feature-content p {
+  font-size: 16px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.home__credit-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.home__credit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.home__credit-btn--primary {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+}
+
+.home__credit-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+}
+
+.home__credit-btn--secondary {
+  background: white;
+  color: #1e293b;
+  border: 2px solid #e2e8f0;
+}
+
+.home__credit-btn--secondary:hover {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+}
+
+.home__credit-btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.home__credit-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.home__credit-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.home__credit-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.1);
+}
+
+.home__credit-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.home__credit-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__credit-card--immobilier .home__credit-card-icon {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.home__credit-card--auto .home__credit-card-icon {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.home__credit-card--personnel .home__credit-card-icon {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.home__credit-card--travaux .home__credit-card-icon {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.home__credit-card-icon-svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.home__credit-card-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.home__credit-card-amount {
+  margin-bottom: 12px;
+}
+
+.home__credit-card-amount span {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.home__credit-card-rate {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.home__credit-rate-from {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.home__credit-rate-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.home__credit-card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.home__credit-card-features li {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 6px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.home__credit-card-features li::before {
+  content: '•';
+  color: #10b981;
+  position: absolute;
+  left: 0;
+}
+
+.home__credit-card-simulation {
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.home__credit-sim-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.home__credit-sim-item:last-child {
+  margin-bottom: 0;
+}
+
+.home__credit-sim-label {
+  color: #64748b;
+}
+
+.home__credit-sim-value {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.home__credit-card-btn {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.home__credit-card-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+}
+
+.home__credit-process {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.home__credit-process h3 {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #1e293b;
+}
+
+.home__credit-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.home__credit-step {
+  text-align: center;
+}
+
+.home__credit-step-number {
+  width: 60px;
+  height: 60px;
+  background: indigo;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 auto 16px;
+}
+
+.home__credit-step-content h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: purple;
+  margin-bottom: 8px;
+}
+
+.home__credit-step-content p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.home__credit-legal {
+  background: indigo  ;
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.home__credit-legal-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.home__credit-legal-content > p {
+  font-size: 14px;
+  color: #fbbf24;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.home__credit-legal-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  font-size: 12px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .home__credit-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .home__credit-title {
+    font-size: 36px;
+  }
+  
+  .home__credit-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .home__credit-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .home__credit-legal-details {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Animation des cartes de crédit au scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = 'slideUpCredit 0.6s ease forwards';
+      }
+    });
+  }, observerOptions);
+
+  const cards = document.querySelectorAll('.home__credit-card');
+  cards.forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.animationDelay = `${index * 0.15}s`;
+    observer.observe(card);
+  });
+
+  // Animation des étapes
+  const steps = document.querySelectorAll('.home__credit-step');
+  steps.forEach((step, index) => {
+    step.style.opacity = '0';
+    step.style.transform = 'translateY(20px)';
+    step.style.animationDelay = `${0.8 + index * 0.1}s`;
+    observer.observe(step);
+  });
+});
+
+// CSS pour l'animation
+const creditStyle = document.createElement('style');
+creditStyle.textContent = `
+@keyframes slideUpCredit {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+`;
+document.head.appendChild(creditStyle);
+</script>

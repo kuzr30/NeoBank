@@ -1,0 +1,133 @@
+banking_credit_transfer:
+  # Header section
+  header:
+    title: "Virement interne"
+    subtitle: "Transfert entre vos comptes"
+    last_update: "Dernière mise à jour"
+
+  # Transfer sections
+  sections:
+    from: "Depuis"
+    to: "Vers"
+    amount: "Montant"
+
+  # Account types
+  accounts:
+    credit_account: "Compte Crédit"
+    main_account: "Compte Principal"
+    current_account: "Votre compte courant"
+    destination: "Destination"
+
+  # Form elements
+  form:
+    amount_placeholder: "0,00"
+    amount_currency: "€"
+    amount_help: "Maximum disponible : %amount% €"
+    amount_help_available: "Maximum disponible"
+    amount_required: "Le montant est requis"
+    amount_invalid: "Montant invalide"
+    hidden_sub_account: "ID du sous-compte"
+    hidden_token: "Jeton CSRF"
+
+  # Actions
+  actions:
+    cancel: "Annuler"
+    continue: "Continuer"
+    initiate_transfer: "Initier le virement"
+    confirm_transfer: "Confirmer le virement"
+
+  # Confirmation page
+  confirmation:
+    title: "Confirmation du virement"
+    verification_required: "Vérification requise"
+    transfer_summary: "Résumé du virement"
+    amount_label: "Montant"
+    verification_code_title: "Code de vérification"
+    verification_info: "Un code de vérification a été envoyé à votre adresse email."
+    code_placeholder: "000000"
+
+  # Status messages
+  messages:
+    success: "Virement initié avec succès"
+    error: "Erreur lors du virement"
+    insufficient_funds: "Solde insuffisant"
+    
+  # Form fields
+  form_fields:
+    credit_account: "Compte crédit source"
+    destination_account: "Compte de destination"
+    amount: "Montant à transférer"
+    amount_placeholder: "0,00"
+    description: "Motif du virement"
+    description_placeholder: "Description optionnelle..."
+    available_credit: "Crédit disponible"
+    transfer_fees: "Frais de virement"
+    
+  # Credit info
+  credit:
+    available_limit: "Limite disponible"
+    used_limit: "Crédit utilisé"
+    interest_rate: "Taux d'intérêt"
+    minimum_payment: "Paiement minimum mensuel"
+    next_payment_date: "Prochaine échéance"
+    
+  # Transfer process
+  process:
+    step1: "Sélection du montant"
+    step2: "Vérification"
+    step3: "Confirmation"
+    
+  # Verification
+  verification:
+    title: "Vérification de sécurité"
+    code_sent: "Un code de vérification a été envoyé à votre adresse email"
+    enter_code: "Saisissez le code de vérification"
+    code_placeholder: "000000"
+    resend_code: "Renvoyer le code"
+    code_expires: "Le code expire dans"
+    
+  # Confirmation details
+  confirmation_details:
+    transfer_details: "Détails du virement"
+    source_account: "Compte source"
+    destination_account: "Compte de destination"
+    amount: "Montant"
+    fees: "Frais"
+    total_debit: "Total débité"
+    
+  # Form Actions
+  form_actions:
+    initiate_transfer: "Initier le virement"
+    confirm_transfer: "Confirmer le virement"
+    cancel: "Annuler"
+    back: "Retour"
+    verify_code: "Vérifier le code"
+    
+  # Validation
+  validation:
+    amount_required: "Le montant est obligatoire"
+    amount_invalid: "Montant invalide"
+    amount_exceeds_limit: "Le montant dépasse la limite disponible"
+    amount_minimum: "Le montant minimum est de 10€"
+    code_required: "Le code de vérification est obligatoire"
+    code_invalid: "Code de vérification invalide"
+    code_expired: "Code de vérification expiré"
+    
+  # Status Messages
+  status_messages:
+    no_credit_accounts: "Aucun compte crédit disponible"
+    transfer_initiated: "Virement initié avec succès"
+    code_sent_success: "Code de vérification envoyé"
+    transfer_confirmed: "Virement confirmé avec succès"
+    transfer_failed: "Échec du virement"
+    insufficient_credit: "Crédit insuffisant"
+    account_blocked: "Compte bloqué"
+    access_denied: "Accès refusé à ce compte crédit"
+    
+  # Currency
+  currency: "€"
+  
+  # Time
+  time:
+    minutes: "minutes"
+    seconds: "secondes"

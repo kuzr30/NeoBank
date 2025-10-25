@@ -1,0 +1,52 @@
+profile_kyc_status:
+  page:
+    title: "Statut de ma vérification d'identité"
+  
+  header:
+    title: "Détail de ma demande KYC"
+  
+  info:
+    request_status: "Statut de la demande"
+    submitted_on: "Soumise le"
+  
+  status_badges:
+    pending: "En attente de validation"
+    approved: "Approuvée"
+    rejected: "Rejetée"
+  
+  timeline:
+    title: "Suivi de la demande"
+    documents_submitted: "Documents soumis"
+    under_review: "En cours d'examen"
+    under_review_message: "Notre équipe examine vos documents..."
+    approved: "Demande approuvée"
+    rejected: "Demande rejetée"
+    processed_by: "Par"
+  
+  documents:
+    title: "Documents soumis"
+    sent_on: "Envoyé le"
+  
+  admin_notes:
+    title: "Remarques de notre équipe"
+  
+  actions:
+    back: "Retour"
+    resubmit_documents: "Soumettre de nouveaux documents"
+    access_banking: "Accéder à mes services bancaires"
+  
+  status:
+    pending:
+      title: "Vérification en cours"
+      message: "Votre demande est en cours d'examen par notre équipe. Vous serez notifié par email dès que la vérification sera terminée."
+      estimated_time: "Temps d'attente estimé : 24-48 heures"
+    
+    approved:
+      title: "Vérification approuvée"
+      message: "Félicitations ! Votre identité a été vérifiée avec succès. Vous avez maintenant accès à tous nos services."
+      completion_date: "Date d'approbation"
+    
+    rejected:
+      title: "Vérification rejetée"
+      message: "Votre demande de vérification a été rejetée. Veuillez consulter les remarques ci-dessous et soumettre de nouveaux documents."
+      reason: "Motif du refus"

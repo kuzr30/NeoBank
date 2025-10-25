@@ -1,0 +1,29 @@
+email_welcome:
+  title: "Willkommen bei %company_name%"
+  content:
+    page_title: "Willkommen {firstName}!"
+    intro: "Wir freuen uns, Sie bei <strong>%company_name%</strong>, Ihrem neuen digitalen Bankpartner, begrüßen zu dürfen."
+    account_created:
+      title: "Ihr Konto wurde erfolgreich erstellt!"
+      description: "Sie können ab sofort auf alle unsere Online-Banking-Services zugreifen."
+    services_intro: "Mit Ihrem %company_name%-Konto können Sie:"
+    services:
+      item_1: "Ihre Konten in Echtzeit einsehen"
+      item_2: "Sofortüberweisungen durchführen"
+      item_3: "Ihre Bankkarten verwalten"
+      item_4: "Online einen Kredit beantragen"
+      item_5: "Ihre Investitionen verfolgen"
+      item_6: "Von 24/7-Kundensupport profitieren"
+    access_button: "Zu meinem Konto"
+    security_section:
+      title: "Verstärkte Sicherheit"
+      description: "Ihre Sicherheit ist unsere Priorität. Wir verwenden die neuesten Verschlüsselungs- und Authentifizierungstechnologien, um Ihre Daten zu schützen."
+    support_text: "Falls Sie Fragen haben oder Hilfe benötigen, steht Ihnen unser Support-Team rund um die Uhr zur Verfügung."
+    signature: "Nochmals vielen Dank für Ihr Vertrauen,<br><strong>Das %company_name%-Team</strong>"
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Versendung der Willkommens-E-Mail"
+    success: "Willkommens-E-Mail erfolgreich versendet"
+    error: "Fehler beim Versenden der Willkommens-E-Mail"
+    send_failed: "Versenden der Willkommens-E-Mail fehlgeschlagen"

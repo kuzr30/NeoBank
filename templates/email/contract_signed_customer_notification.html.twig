@@ -1,0 +1,73 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_contract_signed_customer.title', {}, 'email_contract_signed_customer') }}{% endblock %}
+
+{% block content %}
+    <div class="success-box">
+        <h2 style="color: #4caf50; margin: 0 0 15px 0; font-size: 24px; font-weight: 600;">
+            {{ tp('email_contract_signed_customer.content.confirmation.title', {}, 'email_contract_signed_customer') }}
+        </h2>
+        <p style="color: #4caf50; margin: 0; font-size: 16px; font-weight: 500;">
+            {{ tp('email_contract_signed_customer.content.confirmation.description', {customerName: customerName}, 'email_contract_signed_customer')|raw }}
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2; border-bottom: 2px solid #e3f2fd; padding-bottom: 10px;">{{ tp('email_contract_signed_customer.content.contract_details.title', {}, 'email_contract_signed_customer') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 12px; border-bottom: 1px solid #e0e0e0; font-weight: 600; color: #555; width: 35%;">{{ tp('email_contract_signed_customer.content.contract_details.reference_number', {}, 'email_contract_signed_customer') }}</td>
+                <td style="padding: 12px; border-bottom: 1px solid #e0e0e0; color: #333; font-weight: 500;">{{ referenceNumber ?? 'N/A' }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border-bottom: 1px solid #e0e0e0; font-weight: 600; color: #555;">{{ tp('email_contract_signed_customer.content.contract_details.loan_amount', {}, 'email_contract_signed_customer') }}</td>
+                <td style="padding: 12px; border-bottom: 1px solid #e0e0e0; color: #333; font-weight: 500;">{{ loanAmount|number_format(2, ',', ' ') }}€</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; font-weight: 600; color: #555;">{{ tp('email_contract_signed_customer.content.contract_details.status_label', {}, 'email_contract_signed_customer') }}</td>
+                <td style="padding: 12px;">
+                    <span style="background: #4caf50; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase;">
+                        {{ tp('email_contract_signed_customer.content.contract_details.status_value', {}, 'email_contract_signed_customer') }}
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="background-color: #e8f5e8; border-left: 5px solid #4caf50; padding: 20px; margin: 25px 0; border-radius: 8px;">
+        <h3 style="color: #2e7d32; margin: 0 0 10px 0; font-size: 18px; font-weight: 600;">
+            {{ tp('email_contract_signed_customer.content.next_steps.title', {}, 'email_contract_signed_customer') }}
+        </h3>
+        <p style="color: #2e7d32; margin: 0 0 15px 0; font-size: 16px;">
+            {{ tp('email_contract_signed_customer.content.next_steps.description', {}, 'email_contract_signed_customer') }}
+        </p>
+        <ul style="margin: 0; padding-left: 20px; color: #2e7d32;">
+            <li style="margin-bottom: 8px;"><strong>{{ tp('email_contract_signed_customer.content.next_steps.validation', {}, 'email_contract_signed_customer') }}</strong></li>
+            <li style="margin-bottom: 8px;"><strong>{{ tp('email_contract_signed_customer.content.next_steps.processing', {}, 'email_contract_signed_customer') }}</strong></li>
+            <li style="margin-bottom: 8px;"><strong>{{ tp('email_contract_signed_customer.content.next_steps.disbursement', {}, 'email_contract_signed_customer') }}</strong></li>
+        </ul>
+    </div>
+
+    <div style="background-color: #fff3e0; border-left: 5px solid #ff9800; padding: 20px; margin: 25px 0; border-radius: 8px;">
+        <h3 style="color: #e65100; margin: 0 0 10px 0; font-size: 18px; font-weight: 600;">
+            {{ tp('email_contract_signed_customer.content.important_info.title', {}, 'email_contract_signed_customer') }}
+        </h3>
+        <p style="color: #e65100; margin: 0; font-size: 16px;">
+            {{ tp('email_contract_signed_customer.content.important_info.description', {}, 'email_contract_signed_customer') }}
+        </p>
+    </div>
+
+    <div class="btn-container">
+        <a href="{{ loginUrl }}" 
+           style="display: inline-block; background-color: #4caf50; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">
+            {{ tp('email_contract_signed_customer.content.cta.button_text', {}, 'email_contract_signed_customer') }}
+        </a>
+    </div>
+
+    <div style="border-top: 2px solid #e0e0e0; padding-top: 20px; margin-top: 30px; font-size: 14px; color: #666;">
+        <p style="margin: 0; text-align: center;">
+            {{ tp('email_contract_signed_customer.content.footer.regards', {}, 'email_contract_signed_customer') }}<br>
+            <strong>{% if translationService %}{{ translationService.tpWithCompany('company.name', {}, 'company') }}{% else %}SEDEF BANK{% endif %}</strong>
+        </p>
+    </div>
+{% endblock %}

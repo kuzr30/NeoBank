@@ -1,0 +1,136 @@
+# ENGLISH TRANSLATION - Translated from French
+# Credit page translation file
+# Domain: credit_page
+# Language: English (en)
+
+credit_page:
+  index:
+    page_title: "Our credit offers"
+    page_description: "Discover all our financing solutions adapted to your needs."
+  
+  breadcrumb:
+    credit_offers: "Our credit offers"
+
+  hero:
+    highlights:
+      rate_from: "APR from"
+      max_amount: "Maximum amount"
+      max_duration: "Maximum duration"
+    actions:
+      simulate: "Simulate my credit"
+      apply: "Apply"
+
+  sections:
+    section_1:
+      title: "What is this credit?"
+      paragraph_1: "This financing solution allows you to realize your projects in the best conditions."
+      paragraph_2: "Contact our advisors to get personalized information adapted to your situation."
+
+    section_2:
+      title: "Financing conditions"
+      features:
+        amount:
+          title: "Amount"
+          description: "From €1,000 to €100,000"
+          detail: "Adapted to your project"
+        duration:
+          title: "Duration"
+          description: "From 6 months to 15 years"
+          detail: "Adjustable according to your capacity"
+        rate:
+          title: "Rate"
+          description: "From 3.5% APR*"
+          detail: "Preferential conditions"
+        guarantee:
+          title: "Guarantee"
+          description: "According to amount"
+          detail: "Adapted to your profile"
+
+    section_3:
+      title: "Advantages of this credit"
+      advantages:
+        advantage_1: "<strong>Advantageous rate:</strong> Benefit from preferential conditions"
+        advantage_2: "<strong>Flexibility:</strong> Solution adapted to your needs"
+        advantage_3: "<strong>Speed:</strong> Quick response to your request"
+    
+    section_4:
+      title: "Conditions and criteria"
+    
+    section_5:
+      title: "Required documents"
+
+  section_4:
+    title: "Eligibility conditions"
+    requirements:
+      borrower_profile:
+        title: "Borrower profile"
+        item_1: "Be of legal age and reside in France"
+        item_2: "Justify regular income"
+        item_3: "Not be registered with FICP"
+        item_4: "Debt ratio below 35%"
+      general_conditions:
+        title: "General conditions"
+        item_1: "Maximum age: 75 years at end of loan"
+        item_2: "Bank domiciliation desired"
+        item_3: "Borrower insurance possible"
+        item_4: "Processing fees applicable"
+
+  section_5:
+    title: "Required documents"
+    documents:
+      identity:
+        title: "Identity documents"
+        item_1: "National identity card or passport"
+        item_2: "Proof of residence less than 3 months old"
+        item_3: "Family record book (if married or in civil partnership)"
+      income:
+        title: "Income proof"
+        item_1: "Last 3 pay slips"
+        item_2: "Last 2 tax notices"
+        item_3: "Employment contract or employer certificate"
+        item_4: "Bank statements for the last 3 months"
+      additional:
+        title: "Additional documents"
+        item_1: "Amortization schedule of current credits"
+        item_2: "Proof of charges (rent, pensions...)"
+        item_3: "Quotes or invoices (depending on credit type)"
+        item_4: "Other documents according to your situation"
+
+  sidebar:
+    simulation:
+      title: "Simulate your loan"
+      text: "Calculate your monthly payment amount in a few clicks and get a personalized estimate."
+      button: "Make a simulation"
+    help:
+      title: "Need help?"
+      text: "Our advisors are at your disposal to answer all your questions."
+      phone: company_phone
+      email: company_email
+    processing:
+      title: "Processing times"
+      step_1:
+        title: "Pre-study"
+        time: "24h"
+      step_2:
+        title: "Instruction"
+        time: "2 days"
+      step_3:
+        title: "Agreement & signature"
+        time: "1 day"
+
+  legal:
+    warning:
+      title: "A credit commits you and must be repaid. Check your repayment capacity before committing."
+    details:
+      title: "Important legal information"
+      taeg: "<strong>APR:</strong> Annual Percentage Rate subject to acceptance of your file."
+      amount: "<strong>Amount:</strong> Offer valid for any credit between €500 and €200,000."
+      duration: "<strong>Duration:</strong> Repayment possible from 6 months to 25 years depending on credit type."
+      retraction: "<strong>Withdrawal period:</strong> You have 14 days to withdraw from your credit after accepting the offer."
+    footer: "%company_name% your daily financial partner. A credit commits you and must be repaid. Check your repayment capacity before committing."
+
+  cta:
+    title: "Ready to realize your project?"
+    subtitle: "Apply for credit online or contact our advisors"
+    apply_button: "Apply"
+    simulate_button: "Simulate my credit"

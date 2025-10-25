@@ -1,0 +1,10 @@
+# Übersetzungen für Admin - Geplante E-Mails
+email_template:
+  subject:
+    kyc_rejected: "KYC-Verifizierung - Aktion erforderlich"
+    incomplete_account: "Vervollständigen Sie Ihr Profil - Aktion erforderlich"
+    fees_inquiry: "Informationen zu Bankgebühren"
+    account_activation_reminder: "Erinnerung - Aktivieren Sie Ihr Konto"
+    credit_application_incomplete: "Ihr Kreditantrag - Fehlende Informationen"
+    account_creation_follow_up: "Nachverfolgung Ihres Antrags - Kontoerstellung erforderlich"
+    payment_details: "Zahlung von %amount%€ - Bankdaten für SOFORTÜBERWEISUNG"

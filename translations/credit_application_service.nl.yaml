@@ -1,0 +1,12 @@
+credit_application_service:
+  validation_errors:
+    age_minor: "De lener moet meerderjarig zijn"
+    age_maximum: "De maximumleeftijd voor een krediet is 75 jaar"
+    debt_ratio_exceeded: "De schuldgraad mag niet meer dan 33% bedragen ({debtRatio}% berekend)"
+    minimum_income: "Het vereiste minimum maandinkomen is €1000"
+    employment_required: "Een stabiele baan is vereist om een krediet te krijgen"
+    
+  eligibility:
+    eligible: "Geschikt voor krediet"
+    not_eligible: "Niet geschikt voor krediet"
+    debt_ratio_calculated: "Berekende schuldgraad: {ratio}%"

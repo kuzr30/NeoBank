@@ -1,0 +1,12 @@
+presta_sitemap:
+    timetolive: 3600
+    sitemap_file_prefix: sitemap
+    items_by_set: 50000
+    
+    defaults:
+        priority: 0.5
+        changefreq: weekly
+        lastmod: ~
+    
+    # Configuration pour différents types de contenus
+    default_section: default

@@ -1,0 +1,156 @@
+mobile_app:
+  # Meta tags
+  meta:
+    mobile_app:
+      title: "Mobile App %company_name%"
+      description: "Entdecken Sie unsere mobile %company_name%-App: Kontoverwaltung, Überweisungen und vieles mehr von Ihrem Smartphone aus."
+  
+  hero:
+    subtitle: "Revolutionieren Sie Ihr Banking mit der mobilen %company_name%-App. Ein Banking-Erlebnis der neuen Generation, einfach, sicher und völlig kostenlos."
+    features:
+      security:
+        title: "Militärische Banking-Sicherheit"
+        description: "AES-256-Verschlüsselung und biometrische Authentifizierung für maximalen Schutz Ihrer Daten"
+      transfers:
+        title: "SEPA-Sofortüberweisungen"
+        description: "Überweisen Sie Geld in Echtzeit, 24/7, auf alle europäischen Konten"
+      analysis:
+        title: "Intelligente Finanzanalyse"
+        description: "Fortschrittliche KI zur Analyse Ihrer Gewohnheiten und automatischen Optimierung Ihres Budgets"
+    actions:
+      discover: "App entdecken"
+      download: "Kostenlos herunterladen"
+    preview:
+      balance_card:
+        available_balance: "Verfügbares Guthaben"
+        amount: "12.847,50 €"
+        growth: "+2,8% diesen Monat"
+      quick_actions:
+        transfer: "Überweisung"
+        cards: "Karten"
+        savings: "Sparen"
+
+  features:
+    title: "Erweiterte Funktionen"
+    subtitle: "Entdecken Sie alle Funktionen, die %company_name% zur umfassendsten Banking-App auf dem Markt machen."
+    items:
+      instant_transfers:
+        title: "Sofortüberweisungen"
+        description: "Führen Sie SEPA-Überweisungen in Echtzeit durch, 24/7, auf alle europäischen Konten."
+      expense_analysis:
+        title: "Ausgabenanalyse"
+        description: "Künstliche Intelligenz zur Analyse Ihrer Gewohnheiten und automatischen Optimierung Ihres Budgets."
+      smart_notifications:
+        title: "Intelligente Benachrichtigungen"
+        description: "Personalisierte Benachrichtigungen für jede Transaktion, Ausgabenschwelle und Sparmöglichkeit."
+      virtual_cards:
+        title: "Virtuelle Karten"
+        description: "Erstellen Sie temporäre virtuelle Karten für Ihre Online-Einkäufe in völliger Sicherheit."
+      automatic_savings:
+        title: "Automatisches Sparen"
+        description: "Sparen Sie mühelos dank unserer Algorithmen, die Ihre Einkäufe automatisch aufrunden."
+      multi_currency:
+        title: "Multi-Währung"
+        description: "Verwalten Sie über 25 Währungen mit Echtzeit-Wechselkursen und ohne Provision."
+
+  security:
+    badge: "Banking-Sicherheit auf militärischem Niveau"
+    title: "Ihre Sicherheit ist unsere absolute Priorität"
+    subtitle: "%company_name% verwendet die fortschrittlichsten Sicherheitstechnologien zum Schutz Ihrer Daten und Transaktionen. Unsere Systeme entsprechen den strengsten Banking-Standards."
+    features:
+      encryption:
+        title: "AES-256-Verschlüsselung"
+        description: "Ihre Daten sind mit derselben Verschlüsselungsstufe geschützt wie Zentralbanken"
+      biometric:
+        title: "Biometrische Authentifizierung"
+        description: "Sichere Anmeldung mit Gesichtserkennung, Fingerabdruck oder Face ID"
+      monitoring:
+        title: "24/7-Überwachung"
+        description: "Automatische Betrugserkennung und sofortige Benachrichtigungen bei verdächtigen Aktivitäten"
+    certifications:
+      title: "Zertifizierungen und Compliance"
+      items:
+        pci_dss: "PCI DSS Level 1"
+        iso: "ISO 27001:2013"
+        gdpr: "DSGVO-konform"
+        psd2: "PSD2-Richtlinie"
+
+  support:
+    title: "24/7-Kundensupport"
+    subtitle: "Unser Expertenteam steht Ihnen jederzeit zur Verfügung, um Sie bei Ihrem Banking-Erlebnis zu begleiten."
+    channels:
+      live_chat:
+        title: "Live-Chat"
+        description: "Sofortige Antwort über unseren in die App integrierten Chat"
+        availability: "24/7 verfügbar"
+      phone:
+        title: "Telefon-Support"
+        description: "Persönliche Betreuung durch unsere Bankberater"
+        availability: "Montag bis Sonntag"
+      priority_email:
+        title: "Prioritäts-E-Mail"
+        description: "Garantierte Antwort in weniger als 2 Geschäftsstunden"
+        availability: "hello@sedef.fr"
+    stats:
+      satisfaction:
+        value: "98,5%"
+        label: "Kundenzufriedenheit"
+      resolution_time:
+        value: "4,2 min"
+        label: "durchschnittliche Lösungszeit"
+      response_time:
+        value: "< 30 sek"
+        label: "Chat-Antwortzeit"
+    faq:
+      title: "Häufig gestellte Fragen"
+      items:
+        account_opening:
+          question: "Wie eröffne ich ein Konto?"
+          answer: "Die Kontoeröffnung erfolgt in 5 Minuten über die App. Sie benötigen nur Ihren Ausweis und einen Wohnsitznachweis."
+        is_free:
+          question: "Ist die App kostenlos?"
+          answer: "Ja, %company_name% ist 100% kostenlos: Download, Kontoführung, SEPA-Überweisungen und virtuelle Karte ohne jegliche Gebühren."
+        data_security:
+          question: "Sind meine Daten sicher?"
+          answer: "Absolut. Wir verwenden Banking-AES-256-Verschlüsselung und sind PCI DSS Level 1 und ISO 27001 zertifiziert."
+        international:
+          question: "Kann ich %company_name% im Ausland nutzen?"
+          answer: "Ja, %company_name% funktioniert in über 50 Ländern mit Multi-Währungs-Support und kostenlosen internationalen Überweisungen."
+    contact:
+      title: "Eine spezifische Frage?"
+      description: "Unser Expertenteam ist bereit, Ihnen zu helfen. Kontaktieren Sie uns direkt über Ihren bevorzugten Kanal."
+      actions:
+        start_chat: "Chat starten"
+        phone_number: "%company_phone%"
+      agent:
+        name: "Sophie Martin"
+        role: "Senior-Bankberaterin"
+        status: "Jetzt online"
+
+  download:
+    title: "Laden Sie %company_name% jetzt herunter"
+    subtitle: "Schließen Sie sich über 2 Millionen Nutzern an, die %company_name% für ihre Finanzverwaltung vertrauen. Kostenlose App, ohne Werbung und ohne versteckte Gebühren."
+    stats:
+      rating:
+        value: "4,9"
+        label: "Durchschnittliche Bewertung"
+      users:
+        value: "2M+"
+        label: "Aktive Nutzer"
+      countries:
+        value: "50+"
+        label: "Verfügbare Länder"
+    buttons:
+      ios:
+        label: "Herunterladen bei"
+        store: "App Store"
+      android:
+        label: "Verfügbar bei"
+        store: "Google Play"
+    features:
+      - "Kostenlose und sichere Installation"
+      - "Keine Download-Gebühren"
+      - "Kompatibel mit iOS 13+ und Android 8+"
+    app:
+      name: "%company_name%"
+      description: "Digitalbank"

@@ -1,0 +1,571 @@
+<!-- Simulation Section -->
+<section class="home__simulation">
+  <div class="home__simulation-container">
+    <div class="home__simulation-content">
+      <!-- Header -->
+      <div class="home__simulation-header">
+        <div class="home__simulation-badge">
+          {{ ux_icon('heroicons:calculator', {'class': 'home__simulation-badge-icon'}) }}
+          <span>{{ tp('simulation.badge') }}</span>
+        </div>
+        
+        <h2 class="home__simulation-title">
+          {{ tp('simulation.title') }} <span class="home__simulation-title--accent">{{ tp('simulation.title_accent') }}</span>
+        </h2>
+        
+        <p class="home__simulation-description">
+          {{ tp('simulation.description') }}
+        </p>
+      </div>
+
+      <!-- Simulation Cards -->
+      <div class="home__simulation-grid">
+        <!-- Crédit Immobilier -->
+        <div class="home__simulation-card">
+          <div class="home__simulation-card-icon">
+            {{ ux_icon('heroicons:home', {'class': 'home__simulation-card-icon-svg'}) }}
+          </div>
+          <div class="home__simulation-card-content">
+            <h3>{{ tp('simulation.mortgage.title') }}</h3>
+            <p>{{ tp('simulation.mortgage.description') }}</p>
+            <div class="home__simulation-card-features">
+              <span>✓ {{ tp('simulation.mortgage.features.personalized_rate') }}</span>
+              <span>✓ {{ tp('simulation.mortgage.features.immediate_response') }}</span>
+              <span>✓ {{ tp('simulation.mortgage.features.no_commitment') }}</span>
+            </div>
+            <div class="home__simulation-card-form">
+              <a href="{{ path('credit_simulation_index') }}" class="home__simulation-btn home__simulation-btn--primary">
+                {{ tp('simulation.mortgage.button') }}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Crédit Consommation -->
+        <div class="home__simulation-card">
+          <div class="home__simulation-card-icon">
+            {{ ux_icon('heroicons:shopping-cart', {'class': 'home__simulation-card-icon-svg'}) }}
+          </div>
+          <div class="home__simulation-card-content">
+            <h3>{{ tp('simulation.consumer.title') }}</h3>
+            <p>{{ tp('simulation.consumer.description') }}</p>
+            <div class="home__simulation-card-features">
+              <span>✓ {{ tp('simulation.consumer.features.amount_range') }}</span>
+              <span>✓ {{ tp('simulation.consumer.features.flexible_repayment') }}</span>
+              <span>✓ {{ tp('simulation.consumer.features.quick_disbursement') }}</span>
+            </div>
+            <div class="home__simulation-card-form">
+              <a href="{{ path('credit_simulation_index') }}" class="home__simulation-btn home__simulation-btn--secondary">
+                {{ tp('simulation.consumer.button') }}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Épargne & Placement -->
+        <div class="home__simulation-card">
+          <div class="home__simulation-card-icon">
+            {{ ux_icon('heroicons:chart-bar-square', {'class': 'home__simulation-card-icon-svg'}) }}
+          </div>
+          <div class="home__simulation-card-content">
+            <h3>{{ tp('simulation.savings.title') }}</h3>
+            <p>{{ tp('simulation.savings.description') }}</p>
+            <div class="home__simulation-card-features">
+              <span>✓ {{ tp('simulation.savings.features.personalized_advice') }}</span>
+              <span>✓ {{ tp('simulation.savings.features.automatic_diversification') }}</span>
+              <span>✓ {{ tp('simulation.savings.features.optimized_taxation') }}</span>
+            </div>
+            <div class="home__simulation-card-form">
+              <a href="{{ path('services_savings_investments') }}" class="home__simulation-btn home__simulation-btn--accent">
+                {{ tp('simulation.savings.button') }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Bottom -->
+      <div class="home__simulation-cta">
+        <div class="home__simulation-cta-content">
+          <h3>{{ tp('simulation.cta.title') }}</h3>
+          <p>{{ tp('simulation.cta.description') }}</p>
+          <div class="home__simulation-cta-buttons">
+            <a href="{{ path('profile_index') }}" class="home__simulation-btn home__simulation-btn--outline">
+              {{ ux_icon('heroicons:phone', {'class': 'home__simulation-btn-icon'}) }}
+              {{ tp('simulation.cta.buttons.appointment') }}
+            </a>
+            <a href="{{ path('profile_index') }}" class="home__simulation-btn home__simulation-btn--chat">
+              {{ ux_icon('heroicons:chat-bubble-left-right', {'class': 'home__simulation-btn-icon'}) }}
+              {{ tp('simulation.cta.buttons.chat') }}
+            </a>
+          </div>
+        </div>
+        
+        <div class="home__simulation-contact-info">
+          <div class="home__simulation-contact-item">
+            <div class="home__simulation-contact-icon">📞</div>
+            <div class="home__simulation-contact-text">
+              <strong>{{ tp('simulation.cta.contact_info.customer_service.title') }}</strong>
+              <span>{{ tp('simulation.cta.contact_info.customer_service.phone') }}</span>
+            </div>
+          </div>
+          <div class="home__simulation-contact-item">
+            <div class="home__simulation-contact-icon">🕐</div>
+            <div class="home__simulation-contact-text">
+              <strong>{{ tp('simulation.cta.contact_info.hours.title') }}</strong>
+              <span>{{ tp('simulation.cta.contact_info.hours.schedule') }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legal Disclaimer -->
+  <div class="home__simulation-legal">
+    <div class="home__simulation-legal-content">
+      <p><strong>{{ tp('simulation.legal.title') }}</strong> {{ tp('simulation.legal.disclaimer') }}</p>
+      
+      <div class="home__simulation-legal-grid">
+        <div class="home__simulation-legal-item">
+          <strong>{{ tp('simulation.legal.mortgage_credit.title') }}</strong> {{ tp('simulation.legal.mortgage_credit.details') }}
+        </div>
+        <div class="home__simulation-legal-item">
+          <strong>{{ tp('simulation.legal.consumer_credit.title') }}</strong> {{ tp('simulation.legal.consumer_credit.details') }}
+        </div>
+        <div class="home__simulation-legal-item">
+          <strong>{{ tp('simulation.legal.investments.title') }}</strong> {{ tp('simulation.legal.investments.details') }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Simulation Section */
+.home__simulation {
+  padding: 80px 0;
+  background: #f8fafc;
+  color: #1e293b;
+  position: relative;
+  overflow: hidden;
+}
+
+.home__simulation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  pointer-events: none;
+}
+
+.home__simulation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.home__simulation-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.home__simulation-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.home__simulation-badge-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.home__simulation-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.home__simulation-title--accent {
+  color: #3b82f6;
+}
+
+.home__simulation-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.home__simulation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.home__simulation-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.home__simulation-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 15px 30px rgba(59, 130, 246, 0.1);
+}
+
+.home__simulation-card-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.home__simulation-card-icon-svg {
+  width: 28px;
+  height: 28px;
+  color: white;
+}
+
+.home__simulation-card-content h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1e293b;
+}
+
+.home__simulation-card-content > p {
+  font-size: 16px;
+  color: #64748b;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.home__simulation-card-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.home__simulation-card-features span {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.home__simulation-card-form {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 24px;
+}
+
+.home__simulation-input-group {
+  margin-bottom: 16px;
+}
+
+.home__simulation-input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.home__simulation-input,
+.home__simulation-select {
+  width: 100%;
+  padding: 12px 16px;
+  background: #f9fafb;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #1e293b;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.home__simulation-input:focus,
+.home__simulation-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background: white;
+}
+
+.home__simulation-input::placeholder {
+  color: #9ca3af;
+}
+
+.home__simulation-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  justify-content: center;
+  width: 100%;
+}
+
+.home__simulation-btn--primary {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+}
+
+.home__simulation-btn--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+.home__simulation-btn--secondary {
+  background: linear-gradient(135deg, #059669, #047857);
+  color: white;
+}
+
+.home__simulation-btn--secondary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(5, 150, 105, 0.3);
+}
+
+.home__simulation-btn--accent {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: white;
+}
+
+.home__simulation-btn--accent:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(220, 38, 38, 0.3);
+}
+
+.home__simulation-btn--outline {
+  background: white;
+  color: #3b82f6;
+  border: 2px solid #3b82f6;
+  width: auto;
+}
+
+.home__simulation-btn--outline:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+.home__simulation-btn--chat {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  color: white;
+  width: auto;
+}
+
+.home__simulation-btn--chat:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(22, 163, 74, 0.3);
+}
+
+.home__simulation-btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.home__simulation-cta {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.home__simulation-cta-content h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1e293b;
+}
+
+.home__simulation-cta-content p {
+  font-size: 16px;
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.home__simulation-cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.home__simulation-contact-info {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home__simulation-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.home__simulation-contact-icon {
+  font-size: 24px;
+}
+
+.home__simulation-contact-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.home__simulation-contact-text strong {
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.home__simulation-contact-text span {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.home__simulation-legal {
+  background: #f1f5f9;
+  padding: 30px 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.home__simulation-legal-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.home__simulation-legal-content > p {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.home__simulation-legal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.home__simulation-legal-item {
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.4;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.home__simulation-legal-item strong {
+  color: #374151;
+}
+
+@media (max-width: 768px) {
+  .home__simulation-title {
+    font-size: 36px;
+  }
+  
+  .home__simulation-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .home__simulation-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .home__simulation-contact-info {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .home__simulation-legal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Auto-format des montants
+  const inputs = document.querySelectorAll('.home__simulation-input[type="text"]');
+  
+  inputs.forEach(input => {
+    input.addEventListener('input', function(e) {
+      let value = e.target.value.replace(/[^\d]/g, '');
+      if (value) {
+        value = parseInt(value).toLocaleString('fr-FR') + ' €';
+        e.target.value = value;
+      }
+    });
+  });
+
+  // Animation des cartes au scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = 'slideUp 0.6s ease forwards';
+      }
+    });
+  }, observerOptions);
+
+  const cards = document.querySelectorAll('.home__simulation-card');
+  cards.forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.animationDelay = `${index * 0.1}s`;
+    observer.observe(card);
+  });
+});
+
+// CSS pour l'animation
+const ctaStyle = document.createElement('style');
+ctaStyle.textContent = `
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+`;
+document.head.appendChild(ctaStyle);
+</script>

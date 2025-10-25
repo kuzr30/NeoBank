@@ -1,0 +1,36 @@
+profile_preferences:
+  page:
+    title: "Einstellungen - %company_name%"
+  
+  header:
+    title: "Einstellungen"
+  
+  actions:
+    cancel: Abbrechen
+    save: Einstellungen speichern
+  
+  settings:
+    history:
+      title: Navigationshistorie
+      description: Historie Ihrer Aktionen speichern
+  
+  sections:
+    language:
+      title: "Sprache und Region"
+      language: "Sprache der Benutzeroberfläche"
+      currency: "Standardwährung"
+      timezone: "Zeitzone"
+      date_format: "Datumsformat"
+    
+    notifications:
+      title: "Benachrichtigungen"
+      email: "E-Mail-Benachrichtigungen"
+      sms: "SMS-Benachrichtigungen"
+      push: "Push-Benachrichtigungen"
+      marketing: "Kommerzielle Angebote"
+    
+    privacy:
+      title: "Datenschutz"
+      profile_visibility: "Profilsichtbarkeit"
+      data_sharing: "Datenaustausch"
+      activity_tracking: "Aktivitätsverfolgung"

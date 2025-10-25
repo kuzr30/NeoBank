@@ -1,0 +1,82 @@
+{# templates/home/index.html.twig - Exemple d'utilisation SEO #}
+
+{# Configuration SEO spécifique à cette page #}
+{% set seo_meta = {
+    'title': 'SEDEF BANK - ' ~ 'hero.title'|trans({}, 'home'),
+    'description': 'hero.description'|trans({}, 'home'),
+    'keywords': 'banque en ligne, crédit immobilier, assurance, épargne, financement, prêt personnel, compte bancaire, SEDEF',
+    'type': 'website',
+    'image': 'https://sedef.fr/images/sedef-bank-homepage.jpg',
+    'imageAlt': 'SEDEF BANK - Services bancaires et financiers'
+} %}
+
+{# Type de page pour JSON-LD #}
+{% set page_type = 'home' %}
+
+{# Données JSON-LD personnalisées #}
+{% set json_ld_data = {
+    'offers': [
+        {
+            '@type': 'Offer',
+            'name': 'Crédit Immobilier',
+            'description': 'Financez votre projet immobilier avec des taux compétitifs',
+            'category': 'Mortgage'
+        },
+        {
+            '@type': 'Offer',
+            'name': 'Assurance Habitation',
+            'description': 'Protégez votre logement avec une assurance adaptée',
+            'category': 'Insurance'
+        }
+    ]
+} %}
+
+{# Breadcrumbs pour la page d'accueil #}
+{% set breadcrumbs = [
+    {
+        'name': 'Accueil',
+        'url': 'https://sedef.fr/'
+    }
+] %}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ seo_meta.title }}{% endblock %}
+
+{# JSON-LD supplémentaire spécifique à la page #}
+{% block json_ld_additional %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Comment ouvrir un compte chez SEDEF BANK ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "L'ouverture d'un compte chez SEDEF BANK est simple et rapide. Vous pouvez faire votre demande en ligne en quelques minutes."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Quels sont les services bancaires proposés ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SEDEF BANK propose une gamme complète de services : comptes courants, crédits immobiliers, assurances, épargne et solutions de financement."
+            }
+        }
+    ]
+}
+</script>
+{% endblock %}
+
+{% block body %}
+<div class="home-page">
+    {# Contenu de votre page d'accueil #}
+    <h1>{{ 'hero.title'|trans({}, 'home') }}</h1>
+    <p>{{ 'hero.description'|trans({}, 'home') }}</p>
+    
+    {# Le reste de votre contenu... #}
+</div>
+{% endblock %}

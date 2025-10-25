@@ -1,0 +1,87 @@
+email_banking_notification:
+  titles:
+    transaction: "Nueva transacción"
+    security: "Alerta de seguridad"
+    statement: "Estado mensual disponible"
+    credit_approval: "Crédito aprobado"
+    credit_rejection: "Respuesta a su solicitud de crédito"
+    default: "Notificación %company_name%"
+  
+  headers:
+    transaction: "Nueva transacción"
+    security: "Alerta de seguridad"
+    statement: "Estado mensual"
+    credit_approval: "Crédito aprobado"
+    credit_rejection: "Respuesta a su solicitud"
+    default: "Notificación"
+  
+  common:
+    greeting: "Hola {firstName},"
+  
+  transaction:
+    intro: "Le informamos que se ha realizado una nueva transacción en su cuenta."
+    details_title: "Detalles de la transacción"
+    amount: "Importe: <strong>{amount}</strong>"
+    type: "Tipo: {transactionType}"
+    date: "Fecha: {date}"
+    account: "Cuenta: {accountNumber}"
+    description: "Descripción: {description}"
+    balance: "Nuevo saldo: <strong>{newBalance}</strong>"
+    
+  security:
+    intro: "Se ha detectado una actividad inusual en su cuenta."
+    alert_title: "Detalles de la alerta"
+    action: "Acción: {action}"
+    ip_address: "Dirección IP: {ipAddress}"
+    device: "Dispositivo: {device}"
+    location: "Ubicación: {location}"
+    date: "Fecha: {date}"
+    security_measures: "Si usted no es el origen de esta acción, contacte inmediatamente nuestro servicio al cliente y cambie su contraseña."
+    
+  statement:
+    intro: "Su estado de cuenta mensual para el mes de {month} {year} ya está disponible."
+    download_info: "Puede consultarlo y descargarlo desde su espacio cliente."
+    summary_title: "Resumen del mes"
+    total_transactions: "Transacciones totales: {totalTransactions}"
+    total_credits: "Total créditos: <strong>{totalCredits}</strong>"
+    total_debits: "Total débitos: <strong>{totalDebits}</strong>"
+    end_balance: "Saldo a fin de mes: <strong>{endBalance}</strong>"
+    download_button: "Descargar el estado"
+    
+  credit_approval:
+    intro: "¡Excelente noticia! Su solicitud de crédito ha sido aprobada."
+    details_title: "Detalles de su crédito"
+    approved_amount: "Importe aprobado: <strong>{approvedAmount}</strong>"
+    interest_rate: "Tasa de interés: {interestRate}%"
+    duration: "Duración: {duration} meses"
+    monthly_payment: "Cuota mensual: <strong>{monthlyPayment}</strong>"
+    start_date: "Fecha de inicio: {startDate}"
+    contract_info: "Recibirá próximamente su contrato de crédito por correo electrónico."
+    next_steps_title: "Próximos pasos"
+    step_1: "Firma electrónica del contrato"
+    step_2: "Transferencia de fondos en 48h hábiles"
+    step_3: "Configuración de débitos automáticos"
+    
+  credit_rejection:
+    intro: "Hemos estudiado su solicitud de crédito con atención."
+    result: "Lamentablemente, no podemos dar curso a su solicitud en esta fecha."
+    reasons_title: "Razones principales"
+    reason_income: "Ingresos insuficientes en relación al importe solicitado"
+    reason_history: "Historial de crédito incompleto"
+    reason_ratio: "Tasa de endeudamiento demasiado elevada"
+    alternative_title: "Soluciones alternativas"
+    alternative_1: "Renovar su solicitud en 6 meses"
+    alternative_2: "Solicitar un importe menor"
+    alternative_3: "Mejorar su situación financiera"
+    contact_info: "Nuestro equipo permanece disponible para asesorarle."
+  
+  common_footer:
+    automatic_message: "Este correo ha sido enviado automáticamente por %company_name%."
+    support: "Para cualquier pregunta, contacte nuestro servicio al cliente 24h/24 y 7d/7."
+  
+  # Mensajes de log para el MessageHandler
+  logs:
+    sending: "Enviando notificación bancaria"
+    success: "Notificación bancaria enviada con éxito"
+    error: "Error al enviar notificación bancaria"
+    send_failed: "Fallo en el envío de notificación bancaria"

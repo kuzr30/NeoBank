@@ -1,0 +1,56 @@
+privacy_policy:
+  page_title: "Datenschutzrichtlinie"
+  page_description: "Wie wir Ihre persönlichen Daten sammeln, verwenden und schützen"
+
+  data_collection:
+    title: "Datensammlung"
+    content: |
+      Wir sammeln verschiedene Arten von persönlichen Daten bei der Nutzung unserer Dienstleistungen:
+      <ul>
+        <li><strong>Identifikationsdaten:</strong> Name, Vorname, Geburtsdatum, Adresse</li>
+        <li><strong>Kontaktdaten:</strong> E-Mail, Telefon, Postadresse</li>
+        <li><strong>Finanzdaten:</strong> Einkommen, berufliche Situation, Bankgeschichte</li>
+        <li><strong>Navigationsdaten:</strong> Cookies, Verbindungsprotokolle, IP-Adresse</li>
+      </ul>
+
+  data_usage:
+    title: "Datenverwendung"
+    content: |
+      Ihre persönlichen Daten werden verwendet für:
+      <ul>
+        <li>Die Bereitstellung personalisierter Bankdienstleistungen</li>
+        <li>Die Verwaltung Ihrer Kundenbeziehung</li>
+        <li>Die Einhaltung gesetzlicher und regulatorischer Verpflichtungen</li>
+        <li>Die Prävention von Betrug und Geldwäsche</li>
+        <li>Die Verbesserung unserer Dienstleistungen</li>
+      </ul>
+
+  data_sharing:
+    title: "Datenaustausch"
+    content: |
+      Wir teilen Ihre Daten nur mit:
+      <ul>
+        <li>Unseren autorisierten Bankpartnern</li>
+        <li>Finanzaufsichtsbehörden</li>
+        <li>Unseren technischen Dienstleistern</li>
+        <li>Organisationen zur Betrugsbekämpfung</li>
+      </ul>
+      Immer unter Wahrung des Bankgeheimnisses und der DSGVO-Vorschriften.
+
+  user_rights:
+    title: "Ihre Rechte"
+    content: |
+      Gemäß der DSGVO haben Sie folgende Rechte:
+      <ul>
+        <li><strong>Auskunftsrecht:</strong> Ihre persönlichen Daten einsehen</li>
+        <li><strong>Berichtigungsrecht:</strong> Ihre Informationen korrigieren</li>
+        <li><strong>Löschungsrecht:</strong> Ihre Daten löschen</li>
+        <li><strong>Widerspruchsrecht:</strong> bestimmte Verarbeitungen ablehnen</li>
+        <li><strong>Datenübertragbarkeit:</strong> Ihre Daten abrufen</li>
+      </ul>
+
+  contact:
+    title: "Kontakt"
+    content: |
+      Um Ihre Rechte auszuüben oder bei Fragen zu dieser Datenschutzrichtlinie,
+      kontaktieren Sie unseren Datenschutzbeauftragten unter der Adresse %email%.

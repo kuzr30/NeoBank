@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="{{ _locale }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ 'title'|trans({'%contract_number%': contrat.numeroContrat}, 'insurance_contract', _locale) }}</title>
+    <style>
+        .header {
+            position: running(header);
+            padding: 10px 0;
+            margin-bottom: 3px;
+            background: linear-gradient(135deg, #f8fafe 0%, #e8f2ff 100%);
+            overfl        <d        <div class="company-info">
+            <strong>{{ company.name|default('SEDEF BANK') }}</strong><br>
+            {{ 'company_info.establishment'|trans({}, 'insurance_contract', _locale) }}<br>
+            {{ company.address|default('123 Avenue des Finances') }}<br>
+            {{ company.postal_code|default('75001') }} {{ company.city|default('Paris') }}
+        </div>
+        <div class="contract-ref">
+            <strong>{{ 'company_info.contract_number'|trans({'%number%': contrat.numeroContrat}, 'insurance_contract', _locale) }}</strong><br>
+            {{ 'company_info.establishment_date'|trans({'%date%': contrat.createdAt|date('d/m/Y')}, 'insurance_contract', _locale) }}<br>
+            {% if contrat.updatedAt %}
+                {{ 'company_info.signature_date'|trans({'%date%': contrat.updatedAt|date('d/m/Y à H:i')}, 'insurance_contract', _locale) }}
+            {% endif %}
+        </div>pany-info">
+            <strong>{{ company.name|default('SEDEF BANK') }}</strong><br>
+            {{ 'company_info.establishment'|trans({}, 'insurance_contract', _locale) }}<br>
+            {{ company.address|default('123 Avenue des Finances') }}<br>
+            {{ company.postal_code|default('75001') }} {{ company.city|default('Paris') }}
+        </div>
+        <div class="contract-ref">
+            <strong>{{ 'company_info.contract_number'|trans({'%number%': contrat.numeroContrat}, 'insurance_contract', _locale) }}</strong><br>
+            {{ 'company_info.establishment_date'|trans({'%date%': contrat.createdAt|date('d/m/Y')}, 'insurance_contract', _locale) }}<br>
+            {% if contrat.updatedAt %}
+                {{ 'company_info.signature_date'|trans({'%date%': contrat.updatedAt|date('d/m/Y à H:i')}, 'insurance_contract', _locale) }}
+            {% endif %}        }
+        
+        .header-logo {
+            float: left;
+            width: 200px;
+        }
+        
+        .header-logo-image {
+            height: 30px;
+            width: auto;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        
+        .header-logo-text {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1a237e;
+            vertical-align: middle;
+        }
+        
+        .header-info {
+            float: right;
+            font-size: 12px;
+            color: #1a237e;
+            text-align: right;
+        }
+        
+        .footer {
+            position: running(footer);
+            border-top: 2px solid #1a237e;
+            padding: 8px 0;
+            font-size: 7px;
+            color: #333;
+            text-align: center;
+            background: #f8fafe;
+            line-height: 1.2;
+        }
+        
+        .footer-logo {
+            height: 20px;
+            width: auto;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 11px;
+            line-height: 1.5;
+            color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        
+        /* Filigrane centré et toujours visible */
+        body::before {
+            content: "{{ company_name()|default('SEDEF BANK') }}";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 180px;
+            font-weight: bold;
+            color: #1a237e;
+            opacity: 0.15;
+            z-index: 1000;
+            pointer-events: none;
+            white-space: nowrap;
+            letter-spacing: 12px;
+        }
+        
+        .company-logo {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .logo-box {
+            display: inline-block;
+            background: linear-gradient(135deg, #f8fafe 0%, #e8f2ff 100%);
+            padding: 5px 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(26,35,126,0.2);
+            vertical-align: middle;
+        }
+        
+        .logo-image {
+            height: 35px;
+            width: auto;
+            vertical-align: middle;
+            margin-right: 12px;
+        }
+        
+        .logo-text {
+            display: inline-block;
+            color: #1a237e;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            vertical-align: middle;
+        }
+        
+        .info-section {
+            overflow: hidden;
+            margin-top: 15px;
+        }
+        
+        .company-details {
+            float: left;
+            width: 48%;
+            padding-right: 20px;
+        }
+        
+        .contract-ref {
+            float: right;
+            width: 48%;
+            text-align: right;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .document-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #1a237e;
+            margin: 2px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 2px 0;
+            background: linear-gradient(135deg, #f8fafe 0%, #e8f2ff 100%);
+        }
+        
+        .chapter {
+            margin: 15px 0;
+            border-left: 4px solid #1a237e;
+            background: linear-gradient(135deg, #fafbff 0%, #f0f4ff 100%);
+            padding: 15px;
+            border-radius: 6px;
+        }
+        
+        .chapter-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #1a237e;
+            padding-bottom: 6px;
+        }
+        
+        .section {
+            margin: 10px 0;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        .section-title {
+            font-size: 11px;
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 8px;
+            padding: 4px 0;
+            border-bottom: 1px solid #ccd9ff;
+        }
+        
+        .parties-section {
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        
+        .party-column {
+            float: left;
+            width: 48%;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 6px;
+            margin-right: 4%;
+            font-size: 10px;
+        }
+        
+        .party-column:last-child {
+            margin-right: 0;
+        }
+        
+        .party-header {
+            font-size: 12px;
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            background: #e8f2ff;
+            padding: 8px;
+            border-radius: 4px;
+        }
+        
+        .terms-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            border: 2px solid #1a237e;
+            border-radius: 4px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 10px;
+        }
+        
+        .terms-table th {
+            background: #e8f2ff;
+            color: #1a237e;
+            font-weight: bold;
+            font-size: 10px;
+            padding: 8px;
+            text-align: center;
+            border-right: 1px solid #ccd9ff;
+        }
+        
+        .terms-table td {
+            padding: 6px 8px;
+            border-bottom: 1px solid #e8f2ff;
+            border-right: 1px solid #e8f2ff;
+            vertical-align: middle;
+            font-size: 10px;
+        }
+        
+        .terms-table tr:nth-child(even) {
+            background: rgba(248, 250, 254, 0.8);
+        }
+        
+        .terms-label {
+            font-weight: bold;
+            color: #1a237e;
+        }
+        
+        .amount-emphasis {
+            color: #1a237e;
+            padding: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .article-list {
+            counter-reset: article-counter;
+        }
+        
+        .article-item {
+            counter-increment: article-counter;
+            margin: 10px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .article-item::before {
+            content: "Article " counter(article-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #1a237e;
+            color: white;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-size: 8px;
+            font-weight: bold;
+        }
+        
+        .subsection-list {
+            counter-reset: subsection-counter;
+            margin-left: 10px;
+        }
+        
+        .subsection-item {
+            counter-increment: subsection-counter;
+            margin: 6px 0;
+            position: relative;
+            font-size: 10px;
+            padding-left: 20px;
+        }
+        
+        .subsection-item::before {
+            content: counter(subsection-counter) ".";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #1a237e;
+            font-weight: bold;
+        }
+        
+        .emphasis-box {
+            background: #e8f2ff;
+            border: 2px solid #1a237e;
+            padding: 12px;
+            margin: 15px 0;
+            text-align: center;
+            font-weight: bold;
+            color: #1a237e;
+            border-radius: 8px;
+        }
+        
+        .signature-section {
+            margin-top: 90px;
+            overflow: hidden;
+        }
+        
+        .signature-column {
+            float: left;
+            width: 48%;
+            text-align: center;
+            padding: 20px 0;
+            border: 1px solid #1a237e;
+            border-radius: 6px;
+            margin-right: 4%;
+            background: rgba(248, 250, 254, 0.5);
+        }
+        
+        .signature-column:last-child {
+            margin-right: 0;
+        }
+        
+        .signature-line {
+            border-bottom: 1px solid #333;
+            width: 200px;
+            margin: 20px auto 10px;
+        }
+        
+        .clearfix {
+            clear: both;
+        }
+        
+        .page-break {
+            page-break-before: always;
+        }
+        
+        .insurance-visual {
+            text-align: center;
+            margin: 3px 0;
+            padding: 5px;
+            background: linear-gradient(135deg, #f8fafe 0%, #e8f2ff 100%);
+            border-radius: 8px;
+        }
+        
+        .insurance-icon {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+            border-radius: 50%;
+            position: relative;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(26,35,126,0.3);
+            font-size: 24px;
+            line-height: 40px;
+            text-align: center;
+        }
+        
+        .risk-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 9px;
+        }
+        
+        .risk-table th, .risk-table td {
+            border: 1px solid #ccd9ff;
+            padding: 5px;
+            text-align: left;
+        }
+        
+        .risk-table th {
+            background: #e8f2ff;
+            color: #1a237e;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+ <div class="header">
+        <div class="header-logo">
+            {% if company_logo_base64() %}
+                <img src="data:image/svg+xml;base64,{{ company_logo_base64() }}" class="header-logo-image" alt="{{ 'header.logo_alt'|trans({'%company_name%': company_name()|default('SEDEF BANK')}, 'insurance_contract', _locale) }}">
+            {% endif %}
+        </div>
+        <div class="header-info">
+            <strong>{{ 'header.contract_number'|trans({'%contract_number%': contrat.numeroContrat}, 'insurance_contract', _locale) }}</strong><br>
+            {{ "now"|date("d/m/Y") }}
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="company-logo">
+        <div class="logo-box">
+            {% if company_logo_base64() %}
+                <img src="data:image/svg+xml;base64,{{ company_logo_base64() }}" class="logo-image" alt="{{ 'main.logo_alt'|trans({'%company_name%': company_name()|default('SEDEF BANK')}, 'insurance_contract', _locale) }}">
+            {% endif %}
+            <span class="logo-text">{{ company_name()|default('SEDEF BANK') }}</span>
+        </div>
+    </div>
+
+
+    <!-- Informations entreprise et référence contrat -->
+    <div class="info-section">
+        <div class="company-details">
+            <strong>{{ company.name|default('SEDEF BANK') }}</strong><br>
+            {{ 'company_info.establishment'|trans({}, 'insurance_contract', _locale) }}<br>
+            {{ company.address|default('123 Avenue des Finances') }}<br>
+            {{ company.postal_code|default('75001') }} {{ company.city|default('Paris') }}
+        </div>
+        <div class="contract-ref">
+            <strong>{{ 'company_info.contract_number'|trans({'%number%': contrat.numeroContrat}, 'insurance_contract', _locale) }}</strong><br>
+            {{ 'company_info.establishment_date'|trans({'%date%': contrat.createdAt|date('d/m/Y')}, 'insurance_contract', _locale) }}<br>
+            {% if contrat.updatedAt %}
+                {{ 'company_info.signature_date'|trans({'%date%': contrat.updatedAt|date('d/m/Y à H:i')}, 'insurance_contract', _locale) }}
+            {% endif %}
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <!-- Titre du document -->
+    <h1 class="document-title">
+        {{ 'contract_title'|trans({}, 'insurance_contract', _locale) }}<br>
+        <span style="font-size: 16px;">
+            {{ contrat.typeAssurance|assurance_type_label|upper }}
+        </span>
+    </h1>
+
+    <!-- {{ 'chapter_1.title'|trans({}, 'insurance_contract', _locale) }} -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'chapter_1.title'|trans({}, 'insurance_contract', _locale) }}</h2>
+        
+        <div class="parties-section">
+            <div class="party-column">
+                <div class="party-header">{{ 'chapter_1.insurer.title'|trans({}, 'insurance_contract', _locale) }}</div>
+                <strong>{{ company.name|default('SEDEF BANK') }}</strong><br>
+                {{ 'chapter_1.insurer.establishment'|trans({}, 'insurance_contract', _locale) }}<br>
+                {{ 'chapter_1.insurer.capital'|trans({'%capital%': company.capital|default('1 000 000')}, 'insurance_contract', _locale) }}<br>
+                {{ 'chapter_1.insurer.headquarters'|trans({'%address%': company.address|default('123 Avenue des Finances')}, 'insurance_contract', _locale) }}<br>
+                {{ company.postal_code|default('75001') }} {{ company.city|default('Paris')|upper }}<br>
+                {{ 'chapter_1.insurer.siren'|trans({'%siren%': company.siren|default('123 456 789')}, 'insurance_contract', _locale) }}<br>
+                {{ 'chapter_1.insurer.ape'|trans({'%ape%': company.ape|default('6511Z')}, 'insurance_contract', _locale) }}<br>
+                {{ 'chapter_1.insurer.represented'|trans({}, 'insurance_contract', _locale) }}<br>
+                <em>{{ 'chapter_1.insurer.designation'|trans({}, 'insurance_contract', _locale) }}</em>
+            </div>
+            
+            <div class="party-column">
+                <div class="party-header">{{ 'chapter_1.insured.title'|trans({}, 'insurance_contract', _locale) }}</div>
+                {% set assure_nom = contrat.demandeDevis.nom|default(contrat.user.lastName) %}
+                {% set assure_prenom = contrat.demandeDevis.prenom|default(contrat.user.firstName) %}
+                {% set assure_email = contrat.demandeDevis.email|default(contrat.user.email) %}
+                {% set assure_telephone = contrat.demandeDevis.telephone|default(contrat.user.phone) %}
+                {% set assure_adresse = contrat.user.address %}
+                
+                <strong>{{ assure_prenom }} {{ assure_nom }}</strong><br>
+                {{ 'chapter_1.insured.residing'|trans({}, 'insurance_contract', _locale) }}<br>
+                {% if assure_adresse %}
+                    {{ assure_adresse }}<br>
+                {% else %}
+                    {{ 'chapter_1.insured.address_placeholder'|trans({}, 'insurance_contract', _locale) }}<br>
+                {% endif %}
+                {% if contrat.user.birthDate %}
+                    {{ 'chapter_1.insured.born'|trans({'%date%': contrat.user.birthDate|date('d/m/Y')}, 'insurance_contract', _locale) }}<br>
+                {% endif %}
+                {{ 'chapter_1.insured.phone'|trans({'%phone%': assure_telephone|default('[Non renseigné]')}, 'insurance_contract', _locale) }}<br>
+                {{ 'chapter_1.insured.email'|trans({'%email%': assure_email}, 'insurance_contract', _locale) }}<br>
+                {% if contrat.demandeDevis.numeroDevis %}
+                    {{ 'chapter_1.insured.quote_number'|trans({'%number%': contrat.demandeDevis.numeroDevis}, 'insurance_contract', _locale) }}<br>
+                {% endif %}
+                <em>{{ 'chapter_1.insured.designation'|trans({}, 'insurance_contract', _locale) }}</em>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        
+        <div class="emphasis-box">
+            {{ 'chapter_1.agreement'|trans({}, 'insurance_contract', _locale) }}
+        </div>
+    </div>
+
+    <!-- {{ 'chapter_2.title'|trans({}, 'insurance_contract', _locale) }} -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'chapter_2.title'|trans({}, 'insurance_contract', _locale) }}</h2>
+        
+        <div class="section">
+            <div class="section-title">{{ 'chapter_2.article_1.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <p>{{ 'chapter_2.article_1.paragraph_1'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p>{{ 'chapter_2.article_1.paragraph_2'|trans({'%insurance_type%': contrat.typeAssurance|assurance_type_label}, 'insurance_contract', _locale) }}</p>
+            
+            <p>{{ 'chapter_2.article_1.paragraph_3'|trans({}, 'insurance_contract', _locale) }}</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">{{ 'chapter_2.article_2.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <p><strong>{{ 'chapter_2.article_2.duration_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_2.article_2.duration_text'|trans({'%duration%': contrat.dureeEnMois, '%start_date%': contrat.dateActivation|date('d/m/Y'), '%end_date%': contrat.dateExpiration ? contrat.dateExpiration|date('d/m/Y') : 'À déterminer'}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_2.article_2.renewal_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_2.article_2.renewal_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_2.article_2.effective_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_2.article_2.effective_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_2.article_2.territory_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_2.article_2.territory_text'|trans({}, 'insurance_contract', _locale) }}</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">{{ 'chapter_2.article_3.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <p><strong>{{ 'chapter_2.article_3.definition_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_2.article_3.definition_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_2.article_3.coverage_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_2.article_3.coverage_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            {% set guarantees = {
+                'AUTO': [
+                    'chapter_2.guarantees.auto.civil_liability'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.auto.defense_recourse'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.auto.all_accidents'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.auto.theft_fire'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.auto.glass_breakage'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.auto.assistance'|trans({}, 'insurance_contract', _locale)
+                ],
+                'HABITATION': [
+                    'chapter_2.guarantees.home.fire_explosion'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.home.water_damage'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.home.theft_vandalism'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.home.civil_liability'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.home.glass_breakage'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.home.natural_disasters'|trans({}, 'insurance_contract', _locale)
+                ],
+                'SANTE': [
+                    'chapter_2.guarantees.health.medical_pharma'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.health.hospitalization'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.health.dental_care'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.health.optical'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.health.alternative_medicine'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.health.repatriation_assistance'|trans({}, 'insurance_contract', _locale)
+                ],
+                'VIE': [
+                    'chapter_2.guarantees.life.death_all_causes'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.life.permanent_disability'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.life.temporary_incapacity'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.life.education_pension'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.life.funeral_capital'|trans({}, 'insurance_contract', _locale),
+                    'chapter_2.guarantees.life.legal_assistance'|trans({}, 'insurance_contract', _locale)
+                ]
+            } %}
+            
+            {% set currentType = contrat.typeAssurance.value %}
+            {% set currentGuarantees = guarantees[currentType] ?? [
+                'chapter_2.guarantees.default.main_coverage'|trans({}, 'insurance_contract', _locale),
+                'chapter_2.guarantees.default.civil_liability'|trans({}, 'insurance_contract', _locale),
+                'chapter_2.guarantees.default.assistance_advice'|trans({}, 'insurance_contract', _locale),
+                'chapter_2.guarantees.default.defense_recourse'|trans({}, 'insurance_contract', _locale)
+            ] %}
+            
+            <table class="terms-table">
+                <thead>
+                    <tr>
+                        <th>{{ 'chapter_2.table.guarantee'|trans({}, 'insurance_contract', _locale) }}</th>
+                        <th>{{ 'chapter_2.table.coverage_amount'|trans({}, 'insurance_contract', _locale) }}</th>
+                        <th>{{ 'chapter_2.table.deductible'|trans({}, 'insurance_contract', _locale) }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for guarantee in currentGuarantees %}
+                        <tr>
+                            <td class="terms-label">{{ guarantee }}</td>
+                            <td class="amount-emphasis">
+                                {% if contrat.montantCouverture %}
+                                    {{ contrat.montantCouverture|number_format(0, ',', ' ') }} €
+                                {% else %}
+                                    1 000 000 €
+                                {% endif %}
+                            </td>
+                            <td>{{ 'chapter_2.table.variable_deductible'|trans({}, 'insurance_contract', _locale) }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- {{ 'chapter_3.title'|trans({}, 'insurance_contract', _locale) }} -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'chapter_3.title'|trans({}, 'insurance_contract', _locale) }}</h2>
+        
+        <div class="section">
+            <div class="section-title">{{ 'chapter_3.article_4.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <p><strong>{{ 'chapter_3.article_4.calculation_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_3.article_4.calculation_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_3.article_4.payment_schedule_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_3.article_4.payment_schedule_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+
+            <p><strong>{{ 'chapter_3.article_4.amounts_detail_label'|trans({}, 'insurance_contract', _locale) }}</strong></p>
+            <p>
+            {{ 'chapter_3.article_4.amounts_detail_text'|trans({}, 'insurance_contract', _locale) }}
+            </p>
+            <table class="terms-table">
+                <thead>
+                    <tr>
+                        <th>{{ 'chapter_3.table.element'|trans({}, 'insurance_contract', _locale) }}</th>
+                        <th>{{ 'chapter_3.table.amount'|trans({}, 'insurance_contract', _locale) }}</th>
+                        <th>{{ 'chapter_3.table.frequency'|trans({}, 'insurance_contract', _locale) }}</th>
+                        <th>{{ 'chapter_3.table.description'|trans({}, 'insurance_contract', _locale) }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="terms-label">{{ 'chapter_3.table.monthly_premium'|trans({}, 'insurance_contract', _locale) }}</td>
+                        <td class="amount-emphasis">{{ contrat.primeMensuelle|number_format(2, ',', ' ') }} €</td>
+                        <td>{{ 'chapter_3.table.monthly'|trans({}, 'insurance_contract', _locale) }}</td>
+                        <td>{{ 'chapter_3.table.main_premium'|trans({}, 'insurance_contract', _locale) }}</td>
+                    </tr>
+                    {% if contrat.fraisAssurance and contrat.fraisAssurance != '0.00' %}
+                        <tr>
+                            <td class="terms-label">{{ 'chapter_3.table.insurance_fees'|trans({}, 'insurance_contract', _locale) }}</td>
+                            <td class="amount-emphasis">{{ contrat.fraisAssurance|number_format(2, ',', ' ') }} €</td>
+                            <td>{{ 'chapter_3.table.one_time_payment'|trans({}, 'insurance_contract', _locale) }}</td>
+                            <td>{{ 'chapter_3.table.additional_fees'|trans({}, 'insurance_contract', _locale) }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if contrat.fraisDossier and contrat.fraisDossier != '0.00' %}
+                        <tr>
+                            <td class="terms-label">{{ 'chapter_3.table.processing_fees'|trans({}, 'insurance_contract', _locale) }}</td>
+                            <td class="amount-emphasis">{{ contrat.fraisDossier|number_format(2, ',', ' ') }} €</td>
+                            <td>{{ 'chapter_3.table.one_time_payment'|trans({}, 'insurance_contract', _locale) }}</td>
+                            <td>{{ 'chapter_3.table.administrative_fees'|trans({}, 'insurance_contract', _locale) }}</td>
+                        </tr>
+                    {% endif %}
+                    <tr style="border-top: 2px solid #1a237e;">
+                        <td class="terms-label"><strong>{{ 'chapter_3.table.monthly_total'|trans({}, 'insurance_contract', _locale) }}</strong></td>
+                        <td class="amount-emphasis"><strong>{{ contrat.primeMensuelle|number_format(2, ',', ' ') }} €</strong></td>
+                        <td><strong>{{ 'chapter_3.table.monthly'|trans({}, 'insurance_contract', _locale) }}</strong></td>
+                        <td><strong>{{ 'chapter_3.table.monthly_deduction'|trans({}, 'insurance_contract', _locale) }}</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="important-notice" style="margin-top: 15px; padding: 10px; background-color: #fff3cd; border-left: 4px solid #ffc107; border-radius: 4px;">
+                <strong style="color: #856404;">{{ 'chapter_3.payment_obligation.title'|trans({}, 'insurance_contract', _locale) }}</strong>
+                <span style="color: #856404;">{{ 'chapter_3.payment_obligation.text'|trans({}, 'insurance_contract', _locale) }}</span>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="section">
+            <div class="section-title">{{ 'chapter_3.article_5.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <p><strong>{{ 'chapter_3.article_5.payment_method_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_3.article_5.payment_method_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_3.article_5.payment_default_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_3.article_5.payment_default_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_3.article_5.processing_fees_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_3.article_5.processing_fees_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_3.article_5.indexation_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_3.article_5.indexation_text'|trans({}, 'insurance_contract', _locale) }}</p>
+        </div>
+    </div>
+
+    <!-- {{ 'chapter_4.title'|trans({}, 'insurance_contract', _locale) }} -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'chapter_4.title'|trans({}, 'insurance_contract', _locale) }}</h2>
+        
+        <div class="section">
+            <div class="section-title">{{ 'chapter_4.article_6.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <p><strong>{{ 'chapter_4.article_6.risk_declaration_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_4.article_6.risk_declaration_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_4.article_6.claim_declaration_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_4.article_6.claim_declaration_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_4.article_6.safeguard_measures_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_4.article_6.safeguard_measures_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_4.article_6.investigation_assistance_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_4.article_6.investigation_assistance_text'|trans({}, 'insurance_contract', _locale) }}</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">{{ 'chapter_4.article_7.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <p><strong>{{ 'chapter_4.article_7.never_covered'|trans({}, 'insurance_contract', _locale) }}</strong></p>
+            <div class="subsection-list">
+                <div class="subsection-item">• {{ 'chapter_4.article_7.exclusion_1'|trans({}, 'insurance_contract', _locale) }}</div>
+                <div class="subsection-item">• {{ 'chapter_4.article_7.exclusion_2'|trans({}, 'insurance_contract', _locale) }}</div>
+                <div class="subsection-item">• {{ 'chapter_4.article_7.exclusion_3'|trans({}, 'insurance_contract', _locale) }}</div>
+                <div class="subsection-item">• {{ 'chapter_4.article_7.exclusion_4'|trans({}, 'insurance_contract', _locale) }}</div>
+                <div class="subsection-item">• {{ 'chapter_4.article_7.exclusion_5'|trans({}, 'insurance_contract', _locale) }}</div>
+                <div class="subsection-item">• {{ 'chapter_4.article_7.exclusion_6'|trans({}, 'insurance_contract', _locale) }}</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- {{ 'chapter_5.title'|trans({}, 'insurance_contract', _locale) }} -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'chapter_5.title'|trans({}, 'insurance_contract', _locale) }}</h2>
+        
+        <div class="section">
+            <div class="section-title">{{ 'chapter_5.article_8.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <p><strong>{{ 'chapter_5.article_8.declaration_deadline_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_5.article_8.declaration_deadline_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_5.article_8.declaration_methods_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_5.article_8.declaration_methods_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_5.article_8.declaration_content_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_5.article_8.declaration_content_text'|trans({}, 'insurance_contract', _locale) }}</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">{{ 'chapter_5.article_9.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <p><strong>{{ 'chapter_5.article_9.expertise_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_5.article_9.expertise_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_5.article_9.settlement_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_5.article_9.settlement_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_5.article_9.subrogation_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_5.article_9.subrogation_text'|trans({}, 'insurance_contract', _locale) }}</p>
+        </div>
+    </div>
+
+    <!-- {{ 'chapter_6.title'|trans({}, 'insurance_contract', _locale) }} -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'chapter_6.title'|trans({}, 'insurance_contract', _locale) }}</h2>
+        
+        <div class="section">
+            <div class="section-title">{{ 'chapter_6.article_10.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <p><strong>{{ 'chapter_6.article_10.termination_maturity_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_6.article_10.termination_maturity_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_6.article_10.termination_during_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_6.article_10.termination_during_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_6.article_10.termination_nonpayment_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_6.article_10.termination_nonpayment_text'|trans({}, 'insurance_contract', _locale) }}</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">{{ 'chapter_6.article_11.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <p><strong>{{ 'chapter_6.article_11.risk_aggravation_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_6.article_11.risk_aggravation_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_6.article_11.risk_reduction_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_6.article_11.risk_reduction_text'|trans({}, 'insurance_contract', _locale) }}</p>
+        </div>
+    </div>
+
+    <!-- {{ 'chapter_7.title'|trans({}, 'insurance_contract', _locale) }} -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'chapter_7.title'|trans({}, 'insurance_contract', _locale) }}</h2>
+        
+        <div class="section">
+            <div class="section-title">{{ 'chapter_7.article_12.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <div style="background-color: #f8f9fa; border: 2px solid #1a237e; border-radius: 8px; padding: 20px; margin: 15px 0;">
+                <p style="text-align: center; font-size: 18px; font-weight: bold; color: #1a237e; margin-bottom: 20px;">
+                    {{ 'chapter_7.mandatory_amounts_title'|trans({}, 'insurance_contract', _locale) }}
+                </p>
+                
+                {% if contrat.fraisAssurance and contrat.fraisAssurance != '0.00' %}
+                <div style="margin-bottom: 15px; padding: 10px; background-color: white; border-radius: 5px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-weight: bold; color: #333;">{{ 'chapter_7.insurance_fees_label'|trans({}, 'insurance_contract', _locale) }}</span>
+                        <span style="font-size: 20px; font-weight: bold; color: #1a73e8;">{{ contrat.fraisAssurance|number_format(2, ',', ' ') }} €</span>
+                    </div>
+                    <div style="font-size: 14px; color: #666; margin-top: 5px;">
+                        <strong style="color: #d32f2f;">{{ 'chapter_7.mandatory_payment'|trans({}, 'insurance_contract', _locale) }}</strong> - {{ 'chapter_7.deducted_subscription'|trans({}, 'insurance_contract', _locale) }}
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if contrat.fraisDossier and contrat.fraisDossier != '0.00' %}
+                <div style="margin-bottom: 15px; padding: 10px; background-color: white; border-radius: 5px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-weight: bold; color: #333;">{{ 'chapter_7.processing_fees_label'|trans({}, 'insurance_contract', _locale) }}</span>
+                        <span style="font-size: 20px; font-weight: bold; color: #1a73e8;">{{ contrat.fraisDossier|number_format(2, ',', ' ') }} €</span>
+                    </div>
+                    <div style="font-size: 14px; color: #666; margin-top: 5px;">
+                        <strong style="color: #d32f2f;">{{ 'chapter_7.mandatory_payment'|trans({}, 'insurance_contract', _locale) }}</strong> - {{ 'chapter_7.administrative_fees_non_refundable'|trans({}, 'insurance_contract', _locale) }}
+                    </div>
+                </div>
+                {% endif %}
+                
+                <div style="border-top: 3px solid #1a237e; padding-top: 15px; margin-top: 20px;">
+                    <div style="text-align: center; font-size: 16px; color: #d32f2f; font-weight: bold;">
+                         {{ 'chapter_7.attention_mandatory'|trans({}, 'insurance_contract', _locale) }}
+                    </div>
+                    <div style="text-align: center; font-size: 14px; color: #666; margin-top: 10px;">
+                        {{ 'chapter_7.automatic_deduction_note'|trans({}, 'insurance_contract', _locale) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- {{ 'chapter_8.title'|trans({}, 'insurance_contract', _locale) }} -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'chapter_8.title'|trans({}, 'insurance_contract', _locale) }}</h2>
+        
+        <div class="section">
+            <div class="section-title">{{ 'chapter_8.article_13.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <p><strong>{{ 'chapter_8.article_13.applicable_law_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_8.article_13.applicable_law_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_8.article_13.jurisdiction_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_8.article_13.jurisdiction_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_8.article_13.mediation_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_8.article_13.mediation_text'|trans({}, 'insurance_contract', _locale) }}</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">{{ 'chapter_8.article_14.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <p><strong>{{ 'chapter_8.article_14.data_processing_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_8.article_14.data_processing_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_8.article_14.insured_rights_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_8.article_14.insured_rights_text'|trans({}, 'insurance_contract', _locale) }}</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">{{ 'chapter_8.article_15.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <p><strong>{{ 'chapter_8.article_15.partial_nullity_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_8.article_15.partial_nullity_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_8.article_15.contract_language_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_8.article_15.contract_language_text'|trans({}, 'insurance_contract', _locale) }}</p>
+            
+            <p><strong>{{ 'chapter_8.article_15.prescription_label'|trans({}, 'insurance_contract', _locale) }}</strong> {{ 'chapter_8.article_15.prescription_text'|trans({}, 'insurance_contract', _locale) }}</p>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+    <!-- {{ 'chapter_9.title'|trans({}, 'insurance_contract', _locale) }} -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'chapter_9.title'|trans({}, 'insurance_contract', _locale) }}</h2>
+        
+        <div class="article-list">
+            <div class="article-item">
+                <br>
+                <strong>{{ 'chapter_9.insured_obligations'|trans({}, 'insurance_contract', _locale) }}</strong><br>
+                {{ 'chapter_9.insured_obligations_text'|trans({}, 'insurance_contract', _locale) }}
+            </div>
+            
+            <div class="article-item">
+                <br>
+                <strong>{{ 'chapter_9.claim_declaration'|trans({}, 'insurance_contract', _locale) }}</strong><br>
+                {{ 'chapter_9.claim_declaration_text'|trans({}, 'insurance_contract', _locale) }}
+            </div>
+            
+            <div class="article-item">
+                <br>
+                <strong>{{ 'chapter_9.general_exclusions'|trans({}, 'insurance_contract', _locale) }}</strong><br>
+                {{ 'chapter_9.general_exclusions_text'|trans({}, 'insurance_contract', _locale) }}
+            </div>
+            
+            <div class="article-item">
+                <br>
+                <strong>{{ 'chapter_9.prevention'|trans({}, 'insurance_contract', _locale) }}</strong><br>
+                {{ 'chapter_9.prevention_text'|trans({}, 'insurance_contract', _locale) }}
+            </div>
+        </div>
+    </div>
+
+    <!-- {{ 'chapter_10.title'|trans({}, 'insurance_contract', _locale) }} -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'chapter_10.title'|trans({}, 'insurance_contract', _locale) }}</h2>
+        
+        <div class="section">
+            <div class="section-title">{{ 'chapter_10.article_5.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <div class="subsection-list">
+                <div class="subsection-item">{{ 'chapter_10.article_5.item_1'|trans({}, 'insurance_contract', _locale) }}</div>
+                <div class="subsection-item">{{ 'chapter_10.article_5.item_2'|trans({}, 'insurance_contract', _locale) }}</div>
+                <div class="subsection-item">{{ 'chapter_10.article_5.item_3'|trans({}, 'insurance_contract', _locale) }}</div>
+                <div class="subsection-item">{{ 'chapter_10.article_5.item_4'|trans({}, 'insurance_contract', _locale) }}</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">{{ 'chapter_10.article_6.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <div class="subsection-list">
+                <div class="subsection-item">{{ 'chapter_10.article_6.item_1'|trans({}, 'insurance_contract', _locale) }}</div>
+                <div class="subsection-item">{{ 'chapter_10.article_6.item_2'|trans({}, 'insurance_contract', _locale) }}</div>
+                <div class="subsection-item">{{ 'chapter_10.article_6.item_3'|trans({}, 'insurance_contract', _locale) }}</div>
+                <div class="subsection-item">{{ 'chapter_10.article_6.item_4'|trans({}, 'insurance_contract', _locale) }}</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- {{ 'chapter_11.title'|trans({}, 'insurance_contract', _locale) }} -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'chapter_11.title'|trans({}, 'insurance_contract', _locale) }}</h2>
+        
+        <div class="section">
+            <div class="section-title">{{ 'chapter_11.article_7.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            {% if expirationDate %}
+                <p>{{ 'chapter_11.article_7.duration_with_expiration'|trans({'%start_date%': contrat.dateActivation|date('d/m/Y'), '%end_date%': expirationDate|date('d/m/Y')}, 'insurance_contract', _locale) }}</p>
+            {% else %}
+                <p>{{ 'chapter_11.article_7.duration_renewable'|trans({'%start_date%': contrat.dateActivation|date('d/m/Y')}, 'insurance_contract', _locale) }}</p>
+            {% endif %}
+        </div>
+
+        <div class="section">
+            <div class="section-title">{{ 'chapter_11.article_8.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <div class="subsection-list">
+                <div class="subsection-item">{{ 'chapter_11.article_8.item_1'|trans({}, 'insurance_contract', _locale) }}</div>
+                <div class="subsection-item">{{ 'chapter_11.article_8.item_2'|trans({}, 'insurance_contract', _locale) }}</div>
+                <div class="subsection-item">{{ 'chapter_11.article_8.item_3'|trans({}, 'insurance_contract', _locale) }}</div>
+                <div class="subsection-item">{{ 'chapter_11.article_8.item_4'|trans({}, 'insurance_contract', _locale) }}</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- {{ 'chapter_12.title'|trans({}, 'insurance_contract', _locale) }} -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'chapter_12.title'|trans({}, 'insurance_contract', _locale) }}</h2>
+        
+        <div class="section">
+            <div class="section-title">{{ 'chapter_12.article_9.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <p>{{ 'chapter_12.article_9.text'|trans({}, 'insurance_contract', _locale) }}</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">{{ 'chapter_12.article_10.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <p>{{ 'chapter_12.article_10.text'|trans({'%company_name%': company.name|default('SEDEF BANK')}, 'insurance_contract', _locale) }}</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">{{ 'chapter_12.article_11.title'|trans({}, 'insurance_contract', _locale) }}</div>
+            <p>{{ 'chapter_12.article_11.text'|trans({}, 'insurance_contract', _locale) }}</p>
+        </div>
+    </div>
+
+    <!-- {{ 'special_conditions.title'|trans({}, 'insurance_contract', _locale) }} -->
+    {% if contrat.conditionsParticulieres %}
+        <div class="chapter">
+            <h2 class="chapter-title">{{ 'special_conditions.title'|trans({}, 'insurance_contract', _locale) }}</h2>
+            <div class="section">
+                <p>{{ contrat.conditionsParticulieres|nl2br }}</p>
+            </div>
+        </div>
+    {% endif %}
+
+    <!-- {{ 'signatures.title'|trans({}, 'insurance_contract', _locale) }} -->
+    <div class="signature-section">
+        <div class="signature-column">
+            <strong>{{ 'signatures.insured'|trans({}, 'insurance_contract', _locale) }}</strong><br>
+            {{ contrat.user.firstName }} {{ contrat.user.lastName }}<br>
+            <div class="signature-line" style="padding: 60px 0;"></div>
+            {{ 'signatures.date_and_signature'|trans({}, 'insurance_contract', _locale) }}<br>
+            <em>{{ 'signatures.read_and_approved'|trans({}, 'insurance_contract', _locale) }}</em>
+        </div>
+        
+          <div class="signature-column">
+                <div class="signature-title">{{ 'signatures.assureur'|trans({}, 'insurance_contract', _locale) }}</div>
+                <p><strong>{{ company_name()|default('SEDEF BANK') }}</strong></p>
+                <p>{{ 'signatures.directeur_general'|trans({}, 'insurance_contract', _locale) }}<br>
+                {{ 'signatures.habilite'|trans({}, 'insurance_contract', _locale) }}</p>
+               <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iMTI4MC4wMDAwMDBwdCIgaGVpZ2h0PSIxMjU5LjAwMDAwMHB0IiB2aWV3Qm94PSIwIDAgMTI4MC4wMDAwMDAgMTI1OS4wMDAwMDAiCiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0Ij4KPG1ldGFkYXRhPgpDcmVhdGVkIGJ5IHBvdHJhY2UgMS4xNSwgd3JpdHRlbiBieSBQZXRlciBTZWxpbmdlciAyMDAxLTIwMTcKPC9tZXRhZGF0YT4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsMTI1OS4wMDAwMDApIHNjYWxlKDAuMTAwMDAwLC0wLjEwMDAwMCkiCmZpbGw9IiMwMDAwMDAiIHN0cm9rZT0ibm9uZSI+CjxwYXRoIGQ9Ik0yNDQxIDEyNDUzIGMtMzEgLTYwIC0xNzUgLTc0NyAtNDg1IC0yMzI4IC03MSAtMzYwIC0yMTAgLTEwOTcgLTI1NgotMTM1MCAtMTE3IC02NTggLTE1MSAtODM3IC0yNTYgLTEzODAgLTI0OSAtMTI4MyAtNDg4IC0yNDQ4IC01MjYgLTI1NjAgLTQ4Ci0xNDEgLTEwOSAtMjI1IC0xNjIgLTIyNSAtMTA0IDAgLTI0OSAzMDEgLTMwMSA2MjMgLTggNDkgLTM2IDUwIC04MSAyIC03MQotNzYgLTE2MCAtNDYyIC0yNDAgLTEwMzggLTE2IC0xMTkgLTE2IC0xMjkgLTEgLTE0NSAzNCAtMzQgNDYgMSA4MiAyNDkgNDAKMjcxIDc2IDQ3MCAxMTEgNjE5IDI4IDEyMSA2MyAyMzAgNzIgMjMwIDQgMCAxNyAtNDQgMzAgLTk4IDQ3IC0yMDEgMTU5IC00MjMKMjQyIC00NzkgMTEzIC03NCAyMTQgLTkgMjg5IDE4NSAzNiA5MyAxMDEgMzg2IDI1MCAxMTE3IDE5OSA5ODIgNDAzIDIwMzUgNTAyCjI1OTAgMzMgMTg3IDYxIDM0NSA2MyAzNTAgMSA2IDYgLTE1MCA5IC0zNDUgMTkgLTExMzggMjg5IC0yODk5IDU1OCAtMzY0MiA2NwotMTg2IDExOCAtMzM4IDExMyAtMzM4IC0zIDAgLTE0IDUgLTI2IDExIC0zNyAyMCAtNjYgMyAtOTYgLTU4IC00NCAtOTAgLTEwNwotMTIxIC0yMDYgLTEwMiAtMTAzIDE5IC0xMzEgNjQgLTE3NSAyODMgLTMwIDE0OCAtNDYgMTg2IC04MSAxODYgLTQyIDAgLTU1Ci0zOCAtMTA5IC0zMjAgLTE2IC04NiAtNDEgLTE5MCAtNTQgLTIzMyAtMjIgLTY4IC0yMyAtNzkgLTEwIC05MiAyOSAtMzAgNDMKLTE2IDcyIDc1IDE5IDU3IDY3IDI3NyA4NiAzOTggNCAyMyAxMCA0MiAxMyA0MiA0IDAgMTcgLTUwIDI5IC0xMTEgMTMgLTY4IDMzCi0xMzYgNTIgLTE3NCAyOCAtNTcgMzggLTY3IDg5IC05MiAxMjUgLTYxIDI2MCAtMzMgMzI5IDY5IDE3IDI2IDMzIDUzIDM1IDYwCjMgOCAxOSAyIDQ4IC0xOCAzNCAtMjMgNDcgLTM5IDU4IC03NCA3IC0yNSA4MCAtMjc5IDE2MyAtNTY1IDI5NiAtMTAyOCA0MzgKLTEzODIgNzMyIC0xODI1IDIyMCAtMzMyIDQwOCAtNTExIDU1MSAtNTI3IDEyMCAtMTQgMjE2IDEwNyAyMzMgMjkzIDcgODEgLTE1CjE0NyAtNjAgMTc0IC01NSAzNCAtOTMgLTEwIC00MSAtNDcgMzIgLTI0IDQ0IC03NSAzMiAtMTQ5IC0xMSAtNzYgLTYwIC0xNzYKLTkzIC0xOTQgLTExNCAtNjEgLTMyMCAxMTQgLTU2NCA0NzggLTI5MSA0MzUgLTQzOCA4MDIgLTcxNiAxNzc3IC01MiAxODIKLTExMCAzODQgLTEzMCA0NTAgLTE5IDY2IC0zNSAxMjIgLTM1IDEyNiAwIDEzIDk5IC0yOCAxMzAgLTU1IDY0IC01MyAxMDIgLTY2CjIwMCAtNjYgMTIyIDAgMTY0IDI0IDIyMiAxMjcgbDI0IDQxIC00IC0yNTYgYy00IC0yODcgMCAtMzE1IDQ1IC0zMTAgMjYgMyAzMQoxMiA3NCAxMzMgOTggMjc2IDI0MSA2MTUgMjU5IDYxNSAxNCAwIDI3IC0yNSA2OSAtMTMyIDcxIC0xNzcgMTE3IC0yMzEgMjIwCi0yNTggODAgLTIxIDIwOCA2IDI4OCA2MSAyMyAxNiA0NSAyOSA0OCAyOSA0IDAgMjUgLTE2IDQ4IC0zNSA1MCAtNDMgMTA1IC02MgoxMzUgLTQ2IDExIDYgMjMgMTEgMjUgMTEgMiAwIDcgLTE4MyAxMCAtNDA3IDggLTU5NCA0NiAtOTQwIDE0MyAtMTMxMiAxMjEKLTQ2NiAzMzggLTc4MyA1OTggLTg3MyA3MyAtMjUgMTY1IC0yMyAyMjQgNCAxNzYgODIgMzg1IDQzOSA1NjMgOTYzIDMxIDk0IDYwCjE2MyA2MyAxNTUgMTMgLTM5IDMxIC01NzUgMzAgLTkyNSAwIC00MjggLTkgLTU0NCAtNjUgLTg3OCAtNzcgLTQ1OSAtMTc1Ci03MDcgLTI4OSAtNzMyIC0yNSAtNSAtMzcgLTIgLTU1IDE1IC00NyA0NCAtNTUgMTY1IC0zNCA1MjUgMTUgMjM4IDggMzAwIC0zMQozMDAgLTI1IDAgLTI1IC0xIC0yNyAtOTAgLTEgLTQ5IC03IC0xOTQgLTE0IC0zMjAgLTggLTE3NCAtOCAtMjQ5IDAgLTMwNSAyMgotMTQyIDY5IC0xOTcgMTU4IC0xODcgMTYzIDE4IDI2NSAyNDUgMzU3IDc5NyA1NyAzNDAgNjEgNDAwIDYxIDkxNSAwIDM0NiAtNQo1NTIgLTE5IDc4MSBsLTE5IDMxMSA2MSAyMzQgYzg1IDMyMyAyMDggODkwIDI0NCAxMTIzIDIgMTUgMjUgMjYgOTggNDggMjkyCjkwIDUzOCAyMDcgNzM0IDM1MSA2NiA0OSA2OSA1MCA4MiAzMiA4IC0xMSAxNyAtMzYgMjAgLTU2IDEwIC01OSAxNiAtNjQgNjAKLTQwIDcyIDM4IDk4IDY5IDEzMCAxNTMgbDIzIDYzIDEgLTQwIGMxIC02NCAyOCAtMTc1IDU2IC0yMzQgMzcgLTc1IDEwMiAtMTQxCjE0MCAtMTQxIDM3IDEgNTkgMTkgMTIzIDEwOCA2MCA4MiA4NCAxMDAgMTA4IDgwIDkgLTcgNTQgLTY0IDk5IC0xMjUgMTE1Ci0xNTYgMTg1IC0yMDMgMjgwIC0xODggNTEgNyAxMDEgNDYgMTM1IDEwMyAyOSA0OSA2MCA4MiA3NSA4MiA3IDAgNTUgLTg0IDEwOAotMTg3IDE0NCAtMjgyIDIyMyAtMzczIDMyMyAtMzczIDE1OSAwIDI2NiAxNTkgNDA4IDYwMyAxMTcgMzcwIDI0OCA4NTkgNjQwCjIzODcgMjY3IDEwNDIgMzIwIDEyNTkgMzg5IDE1OTUgMzYgMTcxIDY1IDMwMyA2NSAyOTUgMSAtOCAtMTAgLTExMiAtMjMgLTIzMAotNDEgLTM2MCAtNDkgLTU1MCAtNDMgLTk2MCAzIC0yMDYgMTEgLTQ0MiAxNiAtNTI1IDg4IC0xMjc5IDI2MCAtMjIwNSA1NTcKLTMwMDMgMTg1IC00OTYgMzcwIC04NjIgNTc2IC0xMTM2IDE3MSAtMjI4IDMxNSAtMzY5IDQ1NyAtNDQ0IDk4IC01MyAxNzQgLTcyCjI4MSAtNzIgMTA4IDAgMTgxIDE4IDI5NSA3NCAxMDkgNTQgMTU5IDk0IDE1MCAxMTggLTEwIDI2IC00MSAyMiAtOTEgLTEzCi0xMDYgLTczIC0yNDQgLTExOSAtMzU0IC0xMTkgLTIxNyAxIC00MDggMTM2IC02NzcgNDgwIC0yNjQgMzM5IC01NzQgMTAzMwotNzY3IDE3MjEgLTE3OCA2MzIgLTMxMyAxNTUxIC0zNjcgMjUwNCAtMTkgMzE5IC0xNiA4OTEgNCAxMTE1IDMzIDM1NiA5MyA4MTAKMTg4IDE0MjcgMTIgNzggMTkgMTQ5IDE2IDE1NyAtNCA5IC0xOCAxNiAtMzEgMTYgLTMyIDAgLTI2IDIxIC0xMzEgLTQ5NSAtNDgKLTIzMSAtMTExIC01NDEgLTE0MSAtNjkwIC0xMDEgLTQ5NyAtMTI1IC01OTcgLTMwNSAtMTMwNSAtNzI2IC0yODQxIC04MzcKLTMyMTcgLTEwMDAgLTMzODIgLTc2IC03NyAtMTMyIC03NCAtMjEwIDkgLTQ5IDUxIC03MSA4OCAtMTc0IDI5MSAtNTAgOTkgLTk4CjE4MSAtMTEzIDE5MyAtNDMgMzMgLTEwMyA5IC0xNTAgLTYzIC0xNSAtMjMgLTQxIC01NiAtNTggLTc0IC0yNyAtMjkgLTM5IC0zNAotNzYgLTM0IC02NCAwIC0xMTAgMzggLTIwMiAxNjQgLTkyIDEyNSAtMTI1IDE1NiAtMTcwIDE1NiAtNDIgMCAtNzUgLTI2IC0xMzAKLTEwNCAtMjUgLTM0IC01MyAtNzAgLTY0IC03OSAtMTkgLTE3IC0yMSAtMTcgLTQ3IDE1IC03MSA4NCAtMTA1IDIxNSAtMTA1CjQwNSAwIDQ2IC01IDkxIC0xMSAxMDEgLTggMTQgLTIgMzEgMzAgODcgMTk0IDMzMSAzMjUgMTA4OSAyOTIgMTY4MiAtMjEgMzUzCi02MiA1ODAgLTE1NyA4NjMgLTEwMyAzMDcgLTIxOSA1MTUgLTM2NyA2NTcgLTY4IDY1IC0xMDQgOTEgLTE3OSAxMjcgLTUxIDI1Ci0xMTAgNDggLTEzMCA1MiAtMzMgNSAtMzggMTAgLTM4IDM1IDAgMzUgNjcgNjY1IDEyMCAxMTI0IDEwMyA4OTQgMTIxIDEwODQKMTIzIDEzMDAgMSAyMjIgLTI2IDMyMCAtOTkgMzY1IC03MSA0NCAtMjA5IDE1IC0zNDIgLTczIC00NzEgLTMxNCAtNzg0IC0xMzg3Ci05MTIgLTMxMjIgLTUgLTc3IC0xMCAtMTQ3IC0xMCAtMTU1IDAgLTkgLTQ1IC02NSAtMTAxIC0xMjUgLTMxOSAtMzQ3IC02MDkKLTc3NCAtODEwIC0xMTkwIC0yOTIgLTYwNSAtNDgwIC0xMzM4IC01NDUgLTIxMTYgLTIzIC0yODcgLTU0IC0zMzYgLTE1NyAtMjUwCi03MCA1OCAtNzggNTkgLTE1NiAxMiAtODIgLTUwIC0xMTcgLTYxIC0xOTQgLTYxIC0xMDggMCAtMTYyIDQ2IC0yMTIgMTgzIC01MgoxNDEgLTg0IDE5NyAtMTIyIDIxNSBsLTM1IDE3IC0zMyAtMzggYy0zNyAtNDMgLTEyMSAtMjMwIC0yMDUgLTQ1NCAtMzEgLTg0Ci02MCAtMTU2IC02NSAtMTYxIC05IC04IDEgMjkyIDE2IDQ4OCA4IDEwNCAyMCAxNjcgNTAgMjc1IDc2IDI2OCAxODEgNzg0IDQxOAoyMDU1IDk4IDUyNiAxMDcgNjIxIDU4IDY1MiAtMjEgMTQgLTY0IDggLTgwIC0xMCAtNzQgLTgyIC0xOTggLTU5MiAtMzE2Ci0xMzA3IC03NyAtNDY2IC0xMzYgLTkzNCAtMTgwIC0xNDM1IC0xMyAtMTUwIC04NyAtMzQ1IC0xNTQgLTQwOCAtMzUgLTMzCi0xNjMgLTQwIC0yMTYgLTEyIC02NyAzNiAtNjcgMzYgLTQ2IDYwIDI5IDMyIDMzIDE1MiA3IDIwMCAtMjcgNDkgLTYzIDY1Ci0xMDAgNDYgLTQ0IC0yMyAtNjYgLTc3IC01OSAtMTQ4IGw1IC01OSAtMzEgMjAgYy0xOCAxMSAtMzUgMjYgLTM5IDMzIC0yNiA0NgotMjExIDU5NCAtMjUyIDc0OCAtMjYxIDk3MyAtNTAzIDI5NTIgLTQ0NyAzNjQwIDM0IDQwNSAxNzAgMTE1NCA1MjYgMjg4NSAxMDEKNDkyIDEzOSA3MTIgMTI5IDczOSAtOCAyMSAtNTEgMjAgLTYzIC0xeiBtNDY1MSAtMTIwOCBjNDMgLTQzIDUzIC0xMDEgNTMKLTMxMCAtMSAtMjI1IC0zIC0yNTYgLTEwNSAtMTE2MCAtNDQgLTM4NSAtOTEgLTgxMCAtMTA1IC05NDUgLTE0IC0xMzUgLTI3Ci0yNjMgLTMwIC0yODYgbC02IC00MSAtODcgLTYgYy0yNDggLTE3IC00OTcgLTE0NCAtNzk5IC00MDcgLTg0IC03MyAtOTMgLTc5Ci05MyAtNTYgMCAxMyA3IDEwOSAxNSAyMTMgMTM1IDE2ODUgNDYxIDI3MjYgOTMwIDI5NzAgMTEyIDU4IDE4OCA2OCAyMjcgMjh6Cm0tMjAyIC0yODMyIGMwIC00MSAtNzYgLTc4MiAtMTA1IC0xMDMzIC01NSAtNDY1IC0xMDAgLTc0MyAtMjI1IC0xNDAwIC05NwotNTA5IC0xMzQgLTcxMSAtMjA1IC0xMTM1IC02OCAtNDA2IC04MSAtNDc1IC05MiAtNDg1IC0xMCAtMTAgLTIyMiAtNTcgLTI5NQotNjYgbC01NCAtNiAtMTIgMTYyIGMtMzAgMzkxIC0zNiA2ODUgLTM3IDE2MTUgMCA5MjIgNSAxMTUzIDM2IDE2NzAgbDEwIDE3MAo3MiA3MCBjMjg5IDI4MSA2MTYgNDU3IDg2NSA0NjQgNDAgMSA0MiAtMSA0MiAtMjZ6IG0xNzcgLTE1IGMxMTcgLTQzIDI1MAotMTYxIDM0NiAtMzA2IDEzOCAtMjA3IDI4MCAtNjE1IDMyNiAtOTQwIDg1IC01ODggMzUgLTEyMjQgLTEzNiAtMTc1NyAtNjUKLTIwMiAtMTQyIC0zMzMgLTI4MiAtNDc4IC03OSAtODIgLTg2IC04NyAtMTE3IC04MSAtNDEgNyAtNTMgMSAtMTc4IC0xMDEKLTEwMyAtODMgLTE2MyAtMTI1IC0xODAgLTEyNSAtMTMgMCAtMiA2NiAyOSAxNjQgMjQgNzcgMjYgOTAgMTMgMTAyIC0yNiAyNgotNDcgNSAtNzIgLTc1IC0zOCAtMTIxIC01MSAtMTk4IC0zNyAtMjI3IDYgLTE0IDExIC0yNiAxMSAtMjggMCAtMTcgLTQzMwotMTc3IC00NDQgLTE2NSAtOCA5IDE2MSA5NzUgMjczIDE1NjQgMTYzIDg1NSAyMTMgMTIwNSAyOTYgMjA1MCA0NSA0NjYgNDAKNDM2IDczIDQyOSAxNSAtNCA1MSAtMTUgNzkgLTI2eiBtLTEyMzYgLTc3NSBjLTI3IC00ODUgLTM1IC04MjcgLTM1IC0xNTMzIDAKLTc2MiAxMyAtMTI2NyA0MCAtMTYxNCA4IC0xMDQgMTIgLTE5MSA5IC0xOTUgLTE0IC0xMyAtMTkyIC00IC0yNTAgMTMgLTUzIDE2Ci03MCAyOCAtMTYxIDEyMSAtMTEzIDExMyAtMTY0IDE0MyAtMjI4IDEzMSAtNTcgLTExIC04OCAtNjAgLTE0NiAtMjI5IC0yOAotODIgLTYwIC0xNjMgLTcxIC0xNzggLTMwIC00MyAtNzMgLTM5IC0xODYgMTYgLTEwNCA1MSAtMTk0IDEyOCAtMjcwIDIzMSAtMjYKMzUgLTU1IDY2IC02NSA3MCAtMTYgNSAtMTggMTMgLTE0IDQ3IDMgMjMgOCA3NCAxMSAxMTIgMzAgMzU5IDEyMyA4NDcgMjMwCjEyMTAgMjIwIDc0MyA1MzggMTMyMiAxMDQ0IDE4OTggNTEgNTkgOTYgMTA1IDk4IDEwMyAzIC0yIDAgLTk0IC02IC0yMDN6Cm0tMjExNCAtMzA3IGMtNCAtNDYgLTI1IC0xODQgLTQ3IC0zMDcgLTczIC00MDIgLTI5OSAtMTU4MCAtMzQwIC0xNzY5IC0yMgotMTAxIC00MCAtMTg5IC00MCAtMTk0IDAgLTUgLTMgLTcgLTYgLTQgLTggOSAzMSAzNTMgNzcgNjczIDEwMSA3MDcgMjI5IDEzNDkKMzIwIDE1OTggMTcgNDggMzMgODcgMzYgODcgMyAwIDMgLTM4IDAgLTg0eiBtMzY4OCAtMjQ0OCBjLTEyIC03MSAtNjEgLTE2OAotODUgLTE2OCAtNCAwIC0xNCAxOCAtMjMgNDEgbC0xNiA0MCA2MiA2MyBjMzQgMzUgNjQgNjQgNjUgNjUgMiAwIDEgLTE4IC0zCi00MXogbS00Njg2IC0zNTkgYzE1IC00MyAxNCAtOTEgLTIgLTExMyAtMTMgLTE3IC0xNSAtMTYgLTMwIDE3IC0yMCA0MSAtMjEKNjcgLTUgMTAyIDE1IDMzIDI0IDMyIDM3IC02eiBtMjU3MyAtNTIgYzIwIC0xMiA2NiAtNTUgMTAzIC05NSAzNyAtNDAgODYgLTg0CjEwOSAtOTcgNjAgLTM1IDE2NSAtNTcgMjY1IC01NCBsODYgMiAyMiAtMjg5IGMxMiAtMTU5IDM0IC00NDcgNDggLTY0MCBsMjUKLTM1MiAtMzkgLTEyOCBjLTkzIC0zMDAgLTE3MCAtNTA0IC0yNzEgLTcwOSAtMTQ0IC0yOTUgLTI4NiAtNDU0IC00MDcgLTQ1NQotNDcgMCAtMTQ3IDM0IC0yMDMgNzAgLTcyIDQ2IC0xOTggMTg0IC0yNTMgMjc5IC0yMDEgMzQwIC0zMDYgODMxIC0zMzkgMTU5MQotMTIgMjgwIC0zIDc2OSAxNSA3ODcgNSA0IDE4IC02IDMwIC0yMiA0MiAtNTkgMTQzIC0xNTggMjAyIC0xOTggNzAgLTQ4IDIwNwotMTA3IDI1MCAtMTA3IDQzIDAgOTAgMzIgMTE5IDgyIDEzIDI0IDQzIDk5IDY1IDE2OCA2NCAxOTcgODggMjIwIDE3MyAxNjd6Cm05MzIgLTM0OSBjLTY5IC0zNTcgLTIxMCAtOTc2IC0yMjAgLTk2NSAtNSA1IC04NSAxMDcwIC04MCAxMDc0IDEgMiA0MyAxMCA5MgoxOCA0OSA5IDExNCAyMiAxNDQgMjkgMTA3IDI3IDEwMiA0MSA2NCAtMTU2eiIvPgo8L2c+Cjwvc3ZnPgo=" style="width: 120px; height: auto; margin: 10px 0;" alt="Signature Directeur Général">
+                <div class="signature-date">
+                    Date : {{ "now"|date("d/m/Y") }}<br>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+    </div>
+</body>
+</html>

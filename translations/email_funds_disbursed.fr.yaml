@@ -1,0 +1,26 @@
+email_funds_disbursed:
+  title: "Fonds débloqués"
+  content:
+    page_title: "Vos fonds sont débloqués !"
+    greeting: "Bonjour <strong>%customerName%</strong>,"
+    disbursement_section:
+      title: "Déblocage confirmé"
+      message: "Excellente nouvelle ! Les fonds de votre crédit <strong>%contractNumber%</strong> d'un montant de <strong>%loanAmount% €</strong> ont été débloqués et sont maintenant disponibles sur votre compte."
+    transaction_details:
+      title: "Détails de la transaction"
+      contract: "Numéro de contrat"
+      amount: "Montant du prêt"
+      fees: "Frais déduits"
+      net_amount: "Montant net crédité"
+    important_info:
+      title: "Informations importantes"
+      message: "Les fonds sont immédiatement disponibles sur votre compte de crédit. Vous pouvez dès maintenant effectuer des virements depuis votre espace client."
+    repayment_info:
+      title: "Rappel de remboursement"
+      message: "N'oubliez pas que votre crédit doit être remboursé selon l'échéancier convenu. Votre première mensualité sera prélevée le mois prochain. Consultez votre espace client pour plus de détails."
+    access_account: "Accéder à mon compte"
+    thanks_message: "Félicitations et merci de votre confiance !"
+    footer: "L'équipe %company_name%<br><em>Ceci est un email automatique, merci de ne pas y répondre.</em>"
+  logs:
+    success: "Email de déblocage de fonds envoyé avec succès à %email% pour le contrat %contractNumber% (montant: %amount% €, locale: %locale%)"
+    error: "Erreur lors de l'envoi de l'email de déblocage de fonds pour le contrat %contractNumber% : %error%"

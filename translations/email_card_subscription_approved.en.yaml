@@ -1,0 +1,38 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_card_subscription_approved.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+email_card_subscription_approved:
+  title: "Your bank card application has been approved"
+  
+  content:
+    page_title: "Excellent news! Your card has been approved"
+    greeting: "Dear %firstName% %lastName%,"
+    
+    approval:
+      title: "Application approved"
+      description: "Congratulations! Your %cardType% card application has been approved by our teams."
+    
+    card_details:
+      title: "Your card details"
+      type: "Card type"
+      reference: "Reference"
+      account: "Associated account"
+    
+    contract_required:
+      title: "Contract signature required"
+      description: "To finalize your subscription, you will need to electronically sign a contract specifying the fees and conditions for using your card."
+    
+    next_step:
+      title: "Next step"
+      access_button: "Access my area"
+      instruction: "You will soon receive the contract to sign by email"
+    
+    delivery_info:
+      title: "Delivery information"
+      description: "Your physical card will be shipped to your address within 5-7 business days after contract signature and fee validation."
+    
+    assistance: "Our team remains at your disposal to assist you in this final step."
+    
+    footer: "This email was sent automatically by your bank. <br><strong>Congratulations on the approval of your application!</strong>"

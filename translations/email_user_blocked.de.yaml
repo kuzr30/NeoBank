@@ -1,0 +1,33 @@
+email_user_blocked:
+  title: "Konto vorübergehend gesperrt"
+  
+  content:
+    page_title: "Konto vorübergehend gesperrt"
+    greeting: "Hallo {firstName},"
+    
+    account_blocked:
+      title: "Ihr Konto wurde vorübergehend gesperrt"
+      description: "Aus Sicherheitsgründen wurde Ihr Konto nach mehreren fehlerhaften Validierungsversuchen vorübergehend gesperrt."
+    
+    transfer_details:
+      title: "Details der betroffenen Überweisung"
+      reference: "Überweisungsreferenz"
+      amount: "Betrag"
+      amount_value: "{amount} €"
+      blocked_at: "Gesperrt am"
+    
+    reason:
+      title: "Grund der Sperrung"
+      description: "Diese Sperrung erfolgte nach 3 aufeinanderfolgenden Versuchen, einen falschen Validierungscode einzugeben. Diese Sicherheitsmaßnahme schützt Ihr Konto vor unbefugten Zugriffen."
+    
+    next_steps:
+      title: "Was ist jetzt zu tun?"
+      step1: "1. Kontaktieren Sie unseren Kundenservice, um Ihr Konto zu entsperren"
+      step2: "2. Überprüfen Sie, dass Sie den richtigen Validierungscode haben"
+      step3: "3. Nach der Entsperrung können Sie die Validierung Ihrer Überweisung fortsetzen"
+    
+    security_notice:
+      title: "Sicherheit Ihres Kontos"
+      description: "Falls Sie diese Validierungsversuche nicht veranlasst haben, kontaktieren Sie sofort unseren Sicherheitsdienst. Ihr Konto bleibt bis zum Eingreifen unseres Teams gesperrt."
+    
+    footer: "%company_name% - Sicherheitsdienst<br>Diese Benachrichtigung wurde automatisch nach der Sperrung Ihres Kontos generiert."

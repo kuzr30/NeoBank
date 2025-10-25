@@ -1,0 +1,105 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_contract_signed_notification.title', {}, 'email_contract_signed_notification') }}{% endblock %}
+
+{% block content %}
+    <div style="background-color: #fff3cd; border-left: 5px solid #ffc107; padding: 20px; margin-bottom: 30px; border-radius: 8px;">
+        <h2 style="color: #856404; margin: 0 0 10px 0; font-size: 20px; font-weight: 600;">
+            {{ tp('email_contract_signed_notification.content.priority_notification.title', {}, 'email_contract_signed_notification') }}
+        </h2>
+        <p style="color: #856404; margin: 0; font-size: 16px; font-weight: 500;">
+            {{ tp('email_contract_signed_notification.content.priority_notification.description', {}, 'email_contract_signed_notification') }}
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2; border-bottom: 2px solid #e3f2fd; padding-bottom: 10px;">{{ tp('email_contract_signed_notification.content.file_reference.title', {}, 'email_contract_signed_notification') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 12px; border-bottom: 1px solid #e0e0e0; font-weight: 600; color: #555; width: 35%;">{{ tp('email_contract_signed_notification.content.file_reference.contract_number', {}, 'email_contract_signed_notification') }}</td>
+                <td style="padding: 12px; border-bottom: 1px solid #e0e0e0; color: #333; font-weight: 500;">{{ referenceNumber ?? 'N/A' }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border-bottom: 1px solid #e0e0e0; font-weight: 600; color: #555;">{{ tp('email_contract_signed_notification.content.file_reference.request_id', {}, 'email_contract_signed_notification') }}</td>
+                <td style="padding: 12px; border-bottom: 1px solid #e0e0e0; color: #333; font-weight: 500;">#{{ creditApplicationId ?? 'N/A' }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; font-weight: 600; color: #555;">{{ tp('email_contract_signed_notification.content.file_reference.status_label', {}, 'email_contract_signed_notification') }}</td>
+                <td style="padding: 12px;">
+                    <span style="background: #ff5722; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase;">
+                        {{ tp('email_contract_signed_notification.content.file_reference.status_value', {}, 'email_contract_signed_notification') }}
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="background-color: #f5f5f5; border-radius: 8px; padding: 25px; margin: 25px 0;">
+        <h3 style="margin-top: 0; color: #333; border-bottom: 2px solid #ddd; padding-bottom: 10px;">{{ tp('email_contract_signed_notification.content.customer_profile.title', {}, 'email_contract_signed_notification') }}</h3>
+        <table style="width: 100%; border-spacing: 0;">
+            <tr>
+                <td style="padding: 12px; border-bottom: 1px solid #e0e0e0; font-weight: 600; color: #555; width: 30%;">{{ tp('email_contract_signed_notification.content.customer_profile.full_name', {}, 'email_contract_signed_notification') }}</td>
+                <td style="padding: 12px; border-bottom: 1px solid #e0e0e0; color: #333;">{{ customerName ?? 'N/A' }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; font-weight: 600; color: #555;">{{ tp('email_contract_signed_notification.content.customer_profile.email', {}, 'email_contract_signed_notification') }}</td>
+                <td style="padding: 12px; color: #333;">{{ customerEmail ?? 'N/A' }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="error-box">
+        <h3 style="margin-top: 0; color: #d32f2f; font-size: 18px;">VALIDATION ADMINISTRATIVE REQUISE</h3>
+        <p style="color: #d32f2f; margin-bottom: 15px;">
+            Un client a signé et retourné son contrat de crédit. Une validation administrative est nécessaire avant le déblocage des fonds.
+        </p>
+        
+        <div style="background: white; padding: 15px; border-radius: 6px; margin: 15px 0;">
+            <h4 style="margin: 0 0 10px 0; color: #d32f2f;">Procédure de validation :</h4>
+            <ol style="margin: 0; padding-left: 20px; color: #666;">
+                <li>Vérifier la conformité des signatures</li>
+                <li>Contrôler que toutes les pages sont paraphées</li>
+                <li>Valider le contrat dans l'interface d'administration</li>
+                <li>Procéder au déblocage automatique des fonds</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="btn-container">
+        <a href="{{ adminDashboardUrl ?? '#' }}" 
+           style="display: inline-block; background-color: #d32f2f; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">
+            Accéder à l'administration
+        </a>
+    </div>
+
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #4caf50;">{{ tp('email_contract_signed_notification.content.actions_required.title', {}, 'email_contract_signed_notification') }}</h3>
+        <ul style="margin-bottom: 0; padding-left: 20px;">
+            <li><strong>{{ tp('email_contract_signed_notification.content.actions_required.validation', {}, 'email_contract_signed_notification') }}</strong></li>
+            <li><strong>{{ tp('email_contract_signed_notification.content.actions_required.financial_approval', {}, 'email_contract_signed_notification') }}</strong></li>
+            <li><strong>{{ tp('email_contract_signed_notification.content.actions_required.fund_transfer', {}, 'email_contract_signed_notification') }}</strong></li>
+            <li><strong>{{ tp('email_contract_signed_notification.content.actions_required.archiving', {}, 'email_contract_signed_notification') }}</strong></li>
+        </ul>
+    </div>
+
+    <div style="border-top: 2px solid #e0e0e0; padding-top: 20px; margin-top: 30px; font-size: 14px; color: #666;">
+        <table style="width: 100%; border-spacing: 0;">
+            <tr>
+                <td style="padding: 5px 0;">
+                    <strong>{{ tp('email_contract_signed_notification.content.footer.auto_notification', {}, 'email_contract_signed_notification') }}</strong>
+                </td>
+                <td style="padding: 5px 0; text-align: right;">
+                    <strong>{{ tp('email_contract_signed_notification.content.footer.system', {}, 'email_contract_signed_notification') }}</strong>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 5px 0;">
+                    {{ 'now'|date('d/m/Y à H:i:s') }}
+                </td>
+                <td style="padding: 5px 0; text-align: right;">
+                    {{ tp('email_contract_signed_notification.content.footer.service', {}, 'email_contract_signed_notification') }}
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

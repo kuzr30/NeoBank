@@ -1,0 +1,27 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: login.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+login:
+  title: "Login to your account"
+  subtitle: "Access your banking services securely"
+  email_label: "Email address"
+  email_placeholder: "your.email@example.com"
+  password_label: "Password"
+  password_placeholder: "••••••••"
+  remember_me: "Remember me"
+  login_button: "Login"
+  forgot_password: "Forgot password?"
+  create_account: "Create an account"
+  no_account: "Don't have an account?"
+  security_ssl: "SSL Secure"
+  security_data: "Protected data"
+  security_support: "24/7 Support"
+  back_home: "Back to home"
+  invalid_credentials: "Invalid email or password"
+
+errors:
+  email_required: "Email is required"
+  email_invalid: "Email is not valid"
+  password_required: "Password is required"

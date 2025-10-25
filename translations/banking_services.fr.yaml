@@ -1,0 +1,6 @@
+banking_services:
+  # Meta tags
+  meta:
+    mobile_app:
+      title: "Application Mobile %company_name%"
+      description: "Découvrez notre application mobile %company_name% : gestion de comptes, virements, et bien plus depuis votre smartphone."

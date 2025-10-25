@@ -1,0 +1,31 @@
+banking_credit_amortization:
+  header:
+    title: "Aflossingsschema"
+  
+  navigation:
+    back_to_credits: "Terug naar kredieten"
+  
+  loan_info:
+    initial_amount: "Oorspronkelijk bedrag"
+    interest_rate: "Rentevoet"
+    duration: "Looptijd"
+    monthly_payment: "Maandelijkse betaling"
+    months: "maanden"
+  
+  summary:
+    remaining_capital: "Resterende hoofdsom"
+    remaining_payments: "Resterende termijnen"
+  
+  table:
+    title: "Gedetailleerd aflossingsschema"
+    payment_number: "Termijn"
+    date: "Datum"
+    monthly_payment: "Maandelijkse betaling"
+    principal: "Hoofdsom"
+    interest: "Rente"
+    remaining_balance: "Resterende hoofdsom"
+    total: "Totaal"
+  
+  actions:
+    print: "Afdrukken"
+    export_pdf: "Exporteer PDF"

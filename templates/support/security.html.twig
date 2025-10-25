@@ -1,0 +1,473 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tp('help_center_security.page.title', {}, 'help_center_security') }} - {{ companySettings.companyName }}{% endblock %}
+
+{% block body %}
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title">{{ tp('help_center_security.hero.title', {}, 'help_center_security') }}</h1>
+                <p class="hero__subtitle">{{ tp('help_center_security.hero.subtitle', {}, 'help_center_security') }}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Security -->
+    <section class="security-details">
+        <div class="security-details__container">
+            <h2 class="security-details__title">{{ tp('help_center_security.sections.main_title', {}, 'help_center_security') }}</h2>
+            
+            <div class="security-grid">
+                <!-- Authentication Section -->
+                <div class="security-category">
+                    <div class="security-category__header">
+                        <div class="security-category__icon">
+                            <twig:ux:icon name="heroicons:finger-print" />
+                        </div>
+                        <h3 class="security-category__title">{{ tp('help_center_security.sections.authentication.title', {}, 'help_center_security') }}</h3>
+                        <p class="security-category__description">{{ tp('help_center_security.sections.authentication.description', {}, 'help_center_security') }}</p>
+                    </div>
+                    
+                    <div class="security-category__items">
+                        <div class="security-item">
+                            <div class="security-item__header">
+                                <twig:ux:icon name="heroicons:shield-check" class="security-item__icon" />
+                                <h4 class="security-item__title">{{ tp('help_center_security.sections.authentication.items.two_factor.title', {}, 'help_center_security') }}</h4>
+                            </div>
+                            <p class="security-item__description">{{ tp('help_center_security.sections.authentication.items.two_factor.description', {}, 'help_center_security') }}</p>
+                            <p class="security-item__details">{{ tp('help_center_security.sections.authentication.items.two_factor.details', {}, 'help_center_security') }}</p>
+                        </div>
+                        
+                        <div class="security-item">
+                            <div class="security-item__header">
+                                <twig:ux:icon name="heroicons:key" class="security-item__icon" />
+                                <h4 class="security-item__title">{{ tp('help_center_security.sections.authentication.items.strong_passwords.title', {}, 'help_center_security') }}</h4>
+                            </div>
+                            <p class="security-item__description">{{ tp('help_center_security.sections.authentication.items.strong_passwords.description', {}, 'help_center_security') }}</p>
+                            <p class="security-item__details">{{ tp('help_center_security.sections.authentication.items.strong_passwords.details', {}, 'help_center_security') }}</p>
+                        </div>
+                        
+                        <div class="security-item">
+                            <div class="security-item__header">
+                                <twig:ux:icon name="heroicons:finger-print" class="security-item__icon" />
+                                <h4 class="security-item__title">{{ tp('help_center_security.sections.authentication.items.biometric.title', {}, 'help_center_security') }}</h4>
+                            </div>
+                            <p class="security-item__description">{{ tp('help_center_security.sections.authentication.items.biometric.description', {}, 'help_center_security') }}</p>
+                            <p class="security-item__details">{{ tp('help_center_security.sections.authentication.items.biometric.details', {}, 'help_center_security') }}</p>
+                        </div>
+                        
+                        <div class="security-item">
+                            <div class="security-item__header">
+                                <twig:ux:icon name="heroicons:clock" class="security-item__icon" />
+                                <h4 class="security-item__title">{{ tp('help_center_security.sections.authentication.items.session_management.title', {}, 'help_center_security') }}</h4>
+                            </div>
+                            <p class="security-item__description">{{ tp('help_center_security.sections.authentication.items.session_management.description', {}, 'help_center_security') }}</p>
+                            <p class="security-item__details">{{ tp('help_center_security.sections.authentication.items.session_management.details', {}, 'help_center_security') }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fraud Prevention Section -->
+                <div class="security-category">
+                    <div class="security-category__header">
+                        <div class="security-category__icon">
+                            <twig:ux:icon name="heroicons:shield-exclamation" />
+                        </div>
+                        <h3 class="security-category__title">{{ tp('help_center_security.sections.fraud_prevention.title', {}, 'help_center_security') }}</h3>
+                        <p class="security-category__description">{{ tp('help_center_security.sections.fraud_prevention.description', {}, 'help_center_security') }}</p>
+                    </div>
+                    
+                    <div class="security-category__items">
+                        <div class="security-item">
+                            <div class="security-item__header">
+                                <twig:ux:icon name="heroicons:eye" class="security-item__icon" />
+                                <h4 class="security-item__title">{{ tp('help_center_security.sections.fraud_prevention.items.real_time_monitoring.title', {}, 'help_center_security') }}</h4>
+                            </div>
+                            <p class="security-item__description">{{ tp('help_center_security.sections.fraud_prevention.items.real_time_monitoring.description', {}, 'help_center_security') }}</p>
+                            <p class="security-item__details">{{ tp('help_center_security.sections.fraud_prevention.items.real_time_monitoring.details', {}, 'help_center_security') }}</p>
+                        </div>
+                        
+                        <div class="security-item">
+                            <div class="security-item__header">
+                                <twig:ux:icon name="heroicons:bell-alert" class="security-item__icon" />
+                                <h4 class="security-item__title">{{ tp('help_center_security.sections.fraud_prevention.items.transaction_alerts.title', {}, 'help_center_security') }}</h4>
+                            </div>
+                            <p class="security-item__description">{{ tp('help_center_security.sections.fraud_prevention.items.transaction_alerts.description', {}, 'help_center_security') }}</p>
+                            <p class="security-item__details">{{ tp('help_center_security.sections.fraud_prevention.items.transaction_alerts.details', {}, 'help_center_security') }}</p>
+                        </div>
+                        
+                        <div class="security-item">
+                            <div class="security-item__header">
+                                <twig:ux:icon name="heroicons:credit-card" class="security-item__icon" />
+                                <h4 class="security-item__title">{{ tp('help_center_security.sections.fraud_prevention.items.card_controls.title', {}, 'help_center_security') }}</h4>
+                            </div>
+                            <p class="security-item__description">{{ tp('help_center_security.sections.fraud_prevention.items.card_controls.description', {}, 'help_center_security') }}</p>
+                            <p class="security-item__details">{{ tp('help_center_security.sections.fraud_prevention.items.card_controls.details', {}, 'help_center_security') }}</p>
+                        </div>
+                        
+                        <div class="security-item">
+                            <div class="security-item__header">
+                                <twig:ux:icon name="heroicons:building-storefront" class="security-item__icon" />
+                                <h4 class="security-item__title">{{ tp('help_center_security.sections.fraud_prevention.items.merchant_verification.title', {}, 'help_center_security') }}</h4>
+                            </div>
+                            <p class="security-item__description">{{ tp('help_center_security.sections.fraud_prevention.items.merchant_verification.description', {}, 'help_center_security') }}</p>
+                            <p class="security-item__details">{{ tp('help_center_security.sections.fraud_prevention.items.merchant_verification.details', {}, 'help_center_security') }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Protection Section -->
+                <div class="security-category">
+                    <div class="security-category__header">
+                        <div class="security-category__icon">
+                            <twig:ux:icon name="heroicons:lock-closed" />
+                        </div>
+                        <h3 class="security-category__title">{{ tp('help_center_security.sections.data_protection.title', {}, 'help_center_security') }}</h3>
+                        <p class="security-category__description">{{ tp('help_center_security.sections.data_protection.description', {}, 'help_center_security') }}</p>
+                    </div>
+                    
+                    <div class="security-category__items">
+                        <div class="security-item">
+                            <div class="security-item__header">
+                                <twig:ux:icon name="heroicons:lock-closed" class="security-item__icon" />
+                                <h4 class="security-item__title">{{ tp('help_center_security.sections.data_protection.items.encryption.title', {}, 'help_center_security') }}</h4>
+                            </div>
+                            <p class="security-item__description">{{ tp('help_center_security.sections.data_protection.items.encryption.description', {}, 'help_center_security') }}</p>
+                            <p class="security-item__details">{{ tp('help_center_security.sections.data_protection.items.encryption.details', {}, 'help_center_security') }}</p>
+                        </div>
+                        
+                        <div class="security-item">
+                            <div class="security-item__header">
+                                <twig:ux:icon name="heroicons:document-check" class="security-item__icon" />
+                                <h4 class="security-item__title">{{ tp('help_center_security.sections.data_protection.items.gdpr_compliance.title', {}, 'help_center_security') }}</h4>
+                            </div>
+                            <p class="security-item__description">{{ tp('help_center_security.sections.data_protection.items.gdpr_compliance.description', {}, 'help_center_security') }}</p>
+                            <p class="security-item__details">{{ tp('help_center_security.sections.data_protection.items.gdpr_compliance.details', {}, 'help_center_security') }}</p>
+                        </div>
+                        
+                        <div class="security-item">
+                            <div class="security-item__header">
+                                <twig:ux:icon name="heroicons:chart-bar-square" class="security-item__icon" />
+                                <h4 class="security-item__title">{{ tp('help_center_security.sections.data_protection.items.data_minimization.title', {}, 'help_center_security') }}</h4>
+                            </div>
+                            <p class="security-item__description">{{ tp('help_center_security.sections.data_protection.items.data_minimization.description', {}, 'help_center_security') }}</p>
+                            <p class="security-item__details">{{ tp('help_center_security.sections.data_protection.items.data_minimization.details', {}, 'help_center_security') }}</p>
+                        </div>
+                        
+                        <div class="security-item">
+                            <div class="security-item__header">
+                                <twig:ux:icon name="heroicons:server" class="security-item__icon" />
+                                <h4 class="security-item__title">{{ tp('help_center_security.sections.data_protection.items.secure_storage.title', {}, 'help_center_security') }}</h4>
+                            </div>
+                            <p class="security-item__description">{{ tp('help_center_security.sections.data_protection.items.secure_storage.description', {}, 'help_center_security') }}</p>
+                            <p class="security-item__details">{{ tp('help_center_security.sections.data_protection.items.secure_storage.details', {}, 'help_center_security') }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Incident Response Section -->
+                <div class="security-category">
+                    <div class="security-category__header">
+                        <div class="security-category__icon">
+                            <twig:ux:icon name="heroicons:exclamation-triangle" />
+                        </div>
+                        <h3 class="security-category__title">{{ tp('help_center_security.sections.incident_response.title', {}, 'help_center_security') }}</h3>
+                        <p class="security-category__description">{{ tp('help_center_security.sections.incident_response.description', {}, 'help_center_security') }}</p>
+                    </div>
+                    
+                    <div class="security-category__items">
+                        <div class="security-item">
+                            <div class="security-item__header">
+                                <twig:ux:icon name="heroicons:bolt" class="security-item__icon" />
+                                <h4 class="security-item__title">{{ tp('help_center_security.sections.incident_response.items.immediate_action.title', {}, 'help_center_security') }}</h4>
+                            </div>
+                            <p class="security-item__description">{{ tp('help_center_security.sections.incident_response.items.immediate_action.description', {}, 'help_center_security') }}</p>
+                            <p class="security-item__details">{{ tp('help_center_security.sections.incident_response.items.immediate_action.details', {}, 'help_center_security') }}</p>
+                        </div>
+                        
+                        <div class="security-item">
+                            <div class="security-item__header">
+                                <twig:ux:icon name="heroicons:arrow-path" class="security-item__icon" />
+                                <h4 class="security-item__title">{{ tp('help_center_security.sections.incident_response.items.account_recovery.title', {}, 'help_center_security') }}</h4>
+                            </div>
+                            <p class="security-item__description">{{ tp('help_center_security.sections.incident_response.items.account_recovery.description', {}, 'help_center_security') }}</p>
+                            <p class="security-item__details">{{ tp('help_center_security.sections.incident_response.items.account_recovery.details', {}, 'help_center_security') }}</p>
+                        </div>
+                        
+                        <div class="security-item">
+                            <div class="security-item__header">
+                                <twig:ux:icon name="heroicons:magnifying-glass" class="security-item__icon" />
+                                <h4 class="security-item__title">{{ tp('help_center_security.sections.incident_response.items.investigation.title', {}, 'help_center_security') }}</h4>
+                            </div>
+                            <p class="security-item__description">{{ tp('help_center_security.sections.incident_response.items.investigation.description', {}, 'help_center_security') }}</p>
+                            <p class="security-item__details">{{ tp('help_center_security.sections.incident_response.items.investigation.details', {}, 'help_center_security') }}</p>
+                        </div>
+                        
+                        <div class="security-item">
+                            <div class="security-item__header">
+                                <twig:ux:icon name="heroicons:banknotes" class="security-item__icon" />
+                                <h4 class="security-item__title">{{ tp('help_center_security.sections.incident_response.items.compensation.title', {}, 'help_center_security') }}</h4>
+                            </div>
+                            <p class="security-item__description">{{ tp('help_center_security.sections.incident_response.items.compensation.description', {}, 'help_center_security') }}</p>
+                            <p class="security-item__details">{{ tp('help_center_security.sections.incident_response.items.compensation.details', {}, 'help_center_security') }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Security Tips Section -->
+            <div class="security-tips">
+                <div class="security-tips__header">
+                    <twig:ux:icon name="heroicons:light-bulb" class="security-tips__icon" />
+                    <h3 class="security-tips__title">{{ tp('help_center_security.sections.tips.title', {}, 'help_center_security') }}</h3>
+                    <p class="security-tips__description">{{ tp('help_center_security.sections.tips.description', {}, 'help_center_security') }}</p>
+                </div>
+                
+                <div class="security-tips__grid">
+                    {% for tip in tp('help_center_security.sections.tips.items', {}, 'help_center_security') %}
+                        <div class="security-tip">
+                            <twig:ux:icon name="heroicons:check-circle" class="security-tip__icon" />
+                            <span class="security-tip__text">{{ tip }}</span>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.hero__title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Security Section */
+.security-details {
+    padding: 4rem 0;
+    background: #f8fafc;
+}
+
+.security-details__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.security-details__title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 3rem;
+}
+
+.security-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.security-category {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.security-category__header {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.security-category__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 auto 1rem;
+    display: block;
+}
+
+.security-category__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+}
+
+.security-category__description {
+    opacity: 0.9;
+    margin: 0;
+}
+
+.security-category__items {
+    padding: 0;
+}
+
+.security-item {
+    padding: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.security-item:last-child {
+    border-bottom: none;
+}
+
+.security-item__header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.security-item__icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #dc2626;
+    flex-shrink: 0;
+}
+
+.security-item__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.security-item__description {
+    color: #374151;
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+}
+
+.security-item__details {
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* Security Tips */
+.security-tips {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.security-tips__header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.security-tips__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #f59e0b;
+    margin: 0 auto 1rem;
+    display: block;
+}
+
+.security-tips__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 0.5rem 0;
+}
+
+.security-tips__description {
+    color: #6b7280;
+    margin: 0;
+}
+
+.security-tips__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.security-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.security-tip__icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #10b981;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.security-tip__text {
+    color: #374151;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero__title {
+        font-size: 2rem;
+    }
+    
+    .hero__subtitle {
+        font-size: 1rem;
+    }
+    
+    .security-details__title {
+        font-size: 2rem;
+    }
+    
+    .security-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .security-category__header {
+        padding: 1.5rem;
+    }
+    
+    .security-item {
+        padding: 1rem;
+    }
+    
+    .security-tips {
+        padding: 1.5rem;
+    }
+    
+    .security-tips__grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+}
+</style>
+{% endblock %}

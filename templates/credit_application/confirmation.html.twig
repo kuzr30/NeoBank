@@ -1,0 +1,314 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tp('confirmation.title', {}, 'credit_confirmation') }} - {{ creditApplication.referenceNumber }}{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .credit-confirmation {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            text-align: center;
+        }
+
+        .credit-confirmation__icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2.5rem;
+            color: white;
+            animation: success-bounce 0.6s ease-out;
+        }
+
+        @keyframes success-bounce {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .credit-confirmation__title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .credit-confirmation__subtitle {
+            font-size: 1.125rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+
+        .credit-confirmation__card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .credit-confirmation__reference {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border: 2px solid #0ea5e9;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .credit-confirmation__reference-label {
+            font-size: 0.875rem;
+            color: #0c4a6e;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .credit-confirmation__reference-number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0369a1;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+        }
+
+        .credit-confirmation__info {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .credit-confirmation__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .credit-confirmation__item:last-child {
+            border-bottom: none;
+        }
+
+        .credit-confirmation__label {
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .credit-confirmation__value {
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .credit-confirmation__value--amount {
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+        }
+
+        .credit-confirmation__timeline {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .credit-confirmation__timeline-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #92400e;
+            margin-bottom: 1rem;
+        }
+
+        .credit-confirmation__timeline-steps {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .credit-confirmation__timeline-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            font-size: 0.875rem;
+            color: #78350f;
+        }
+
+        .credit-confirmation__timeline-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .credit-confirmation__timeline-step::before {
+            content: '✓';
+            background: #10b981;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .credit-confirmation__timeline-step--pending::before {
+            content: '○';
+            background: #d1d5db;
+            color: #6b7280;
+        }
+
+        .credit-confirmation__actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .credit-confirmation__btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .credit-confirmation__btn--primary {
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            color: white;
+        }
+
+        .credit-confirmation__btn--primary:hover {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+
+        .credit-confirmation__btn--secondary {
+            background: #f9fafb;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+
+        .credit-confirmation__btn--secondary:hover {
+            background: #f3f4f6;
+            border-color: #9ca3af;
+        }
+
+        .credit-confirmation__notice {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            color: #0c4a6e;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .credit-confirmation {
+                margin: 1rem auto;
+                padding: 0 0.5rem;
+            }
+
+            .credit-confirmation__card {
+                padding: 1.5rem 1rem;
+            }
+
+            .credit-confirmation__item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="credit-confirmation">
+    <div class="credit-confirmation__icon">{{ tp('confirmation.icon_success', {}, 'credit_confirmation') }}</div>
+    
+    <h1 class="credit-confirmation__title">{{ tp('confirmation.title', {}, 'credit_confirmation') }}</h1>
+    <p class="credit-confirmation__subtitle">
+        {{ tp('confirmation.subtitle', {}, 'credit_confirmation') }}
+    </p>
+
+    <div class="credit-confirmation__reference">
+        <div class="credit-confirmation__reference-label">{{ tp('confirmation.reference.label', {}, 'credit_confirmation') }}</div>
+        <div class="credit-confirmation__reference-number">{{ creditApplication.referenceNumber }}</div>
+    </div>
+
+        <div class="credit-confirmation__card">
+        <div class="credit-confirmation__info">
+            <div class="credit-confirmation__item">
+                <span class="credit-confirmation__label">{{ tp('confirmation.details.loan_amount_label', {}, 'credit_confirmation') }}</span>
+                <span class="credit-confirmation__value credit-confirmation__value--amount">{{ creditApplication.loanAmount|number_format(2, ',', ' ') }} €</span>
+            </div>
+            <div class="credit-confirmation__item">
+                <span class="credit-confirmation__label">{{ tp('confirmation.details.duration_label', {}, 'credit_confirmation') }}</span>
+                <span class="credit-confirmation__value">{{ creditApplication.duration }} {{ creditApplication.durationUnit ? creditApplication.durationUnit.value : 'mois' }}</span>
+            </div>
+            <div class="credit-confirmation__item">
+                <span class="credit-confirmation__label">{{ tp('confirmation.details.monthly_payment_label', {}, 'credit_confirmation') }}</span>
+                <span class="credit-confirmation__value credit-confirmation__value--amount">{{ creditApplication.monthlyPayment|number_format(2, ',', ' ') }} €</span>
+            </div>
+            <div class="credit-confirmation__item">
+                <span class="credit-confirmation__label">{{ tp('confirmation.details.credit_type_label', {}, 'credit_confirmation') }}</span>
+                <span class="credit-confirmation__value">{{ tp(creditApplication.creditType.getLabel(), {}, 'credit_step_forms') }}</span>
+            </div>
+            <div class="credit-confirmation__item">
+                <span class="credit-confirmation__label">{{ tp('confirmation.details.email_label', {}, 'credit_confirmation') }}</span>
+                <span class="credit-confirmation__value">{{ creditApplication.email }}</span>
+            </div>
+        </div>
+    </div>
+
+        <div class="credit-confirmation__timeline">
+        <h3 class="credit-confirmation__timeline-title">{{ tp('confirmation.timeline.title', {}, 'credit_confirmation') }}</h3>
+        <ul class="credit-confirmation__timeline-steps">
+            <li class="credit-confirmation__timeline-step">
+                {{ tp('confirmation.timeline.steps.confirmation_sent', {}, 'credit_confirmation') }}
+            </li>
+            <li class="credit-confirmation__timeline-step credit-confirmation__timeline-step--pending">
+                {{ tp('confirmation.timeline.steps.review_process', {}, 'credit_confirmation') }}
+            </li>
+            <li class="credit-confirmation__timeline-step credit-confirmation__timeline-step--pending">
+                {{ tp('confirmation.timeline.steps.decision_notification', {}, 'credit_confirmation') }}
+            </li>
+            <li class="credit-confirmation__timeline-step credit-confirmation__timeline-step--pending">
+                {{ tp('confirmation.timeline.steps.contract_signing', {}, 'credit_confirmation') }}
+            </li>
+            <li class="credit-confirmation__timeline-step credit-confirmation__timeline-step--pending">
+                {{ tp('confirmation.timeline.steps.funds_disbursement', {}, 'credit_confirmation') }}
+            </li>
+        </ul>
+    </div>
+
+    <div class="credit-confirmation__actions">
+        <a href="{{ path('home_index') }}" class="credit-confirmation__btn credit-confirmation__btn--primary">
+            🏠 {{ tp('confirmation.actions.back_to_home', {}, 'credit_confirmation') }}
+        </a>
+        <a href="{{ path('credit_application_start') }}" class="credit-confirmation__btn credit-confirmation__btn--secondary">
+            ➕ {{ tp('confirmation.actions.new_application', {}, 'credit_confirmation') }}
+        </a>
+    </div>
+
+    <div class="credit-confirmation__notice">
+        <strong>{{ tp('confirmation.notices.title', {}, 'credit_confirmation') }}</strong><br>
+        • {{ tp('confirmation.notices.email_sent', {'email': creditApplication.email}, 'credit_confirmation') }}<br>
+        • {{ tp('confirmation.notices.keep_reference', {}, 'credit_confirmation') }}<br>
+        • {{ tp('confirmation.notices.contact_info', {}, 'credit_confirmation') }}<br>
+        • {{ tp('confirmation.notices.no_fees', {}, 'credit_confirmation') }}
+    </div>
+</div>
+{% endblock %}

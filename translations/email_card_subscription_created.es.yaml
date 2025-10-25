@@ -1,0 +1,31 @@
+email_card_subscription_created:
+  title: "Solicitud de tarjeta bancaria registrada"
+  
+  content:
+    page_title: "Su solicitud de tarjeta ha sido registrada"
+    greeting: "Estimado/a %firstName% %lastName%,"
+    
+    confirmation:
+      title: "Solicitud registrada con éxito"
+      description: "Hemos recibido su solicitud de tarjeta bancaria. Actualmente está siendo examinada por nuestros equipos."
+    
+    card_details:
+      title: "Detalles de su solicitud"
+      type: "Tipo de tarjeta"
+      reference: "Referencia de la solicitud"
+      request_date: "Fecha de la solicitud"
+    
+    next_steps:
+      title: "Próximos pasos"
+      step1: "Examen de su expediente por nuestros equipos (2-3 días hábiles)"
+      step2: "Validación administrativa y verificación de las condiciones"
+      step3: "Notificación por correo del resultado del examen"
+    
+    timeline:
+      title: "Seguimiento de su solicitud"
+      access_button: "Acceder a mi espacio"
+      processing_time: "Plazo de procesamiento habitual: 2 a 3 días hábiles"
+    
+    assistance: "Nuestro servicio al cliente permanece a su disposición para cualquier pregunta relacionada con su solicitud."
+    
+    footer: "Este correo ha sido enviado automáticamente por su banco. <br><strong>Gracias por su confianza.</strong>"

@@ -1,0 +1,95 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_transactions.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_transactions:
+  # Meta tags
+  meta:
+    title: "My transactions - %company_name%"
+    description: "View your transaction history with %company_name%"
+
+  # Navigation
+  nav:
+    dashboard: "Dashboard"
+    transactions: "Transactions"
+    transaction_detail: "Transaction details"
+    back: "Back"
+
+  # Page headers
+  page:
+    title: "My transactions"
+    subtitle: "View the history of all your transactions"
+    transaction_detail_title: "Transaction details"
+    
+  # Transaction info
+  transaction:
+    amount: "Amount"
+    date: "Date"
+    time: "Time"
+    description: "Description"
+    type: "Type"
+    status: "Status"
+    account: "Account"
+    reference: "Reference"
+    balance_after: "Balance after transaction"
+    recipient: "Recipient"
+    sender: "Sender"
+    
+  # Transaction types
+  types:
+    transfer: "Transfer"
+    payment: "Payment"
+    withdrawal: "Withdrawal"
+    deposit: "Deposit"
+    fee: "Fee"
+    interest: "Interest"
+    refund: "Refund"
+    direct_debit: "Direct debit"
+    card_payment: "Card payment"
+    
+  # Status
+  status:
+    completed: "Completed"
+    pending: "Pending"
+    cancelled: "Cancelled"
+    failed: "Failed"
+    processing: "Processing"
+    
+  # Filters
+  filters:
+    title: "Filters"
+    date_range: "Period"
+    transaction_type: "Transaction type"
+    amount_min: "Minimum amount"
+    amount_max: "Maximum amount"
+    account_filter: "Account"
+    apply_filters: "Apply filters"
+    clear_filters: "Clear filters"
+    
+  # Actions
+  actions:
+    view_details: "View details"
+    download_receipt: "Download receipt"
+    export_transactions: "Export transactions"
+    search: "Search"
+    
+  # Date ranges
+  date_ranges:
+    today: "Today"
+    this_week: "This week"
+    this_month: "This month"
+    last_month: "Last month"
+    last_3_months: "Last 3 months"
+    last_6_months: "Last 6 months"
+    this_year: "This year"
+    custom: "Custom period"
+    
+  # Messages
+  messages:
+    no_transactions: "No transactions found"
+    loading: "Loading transactions..."
+    export_success: "Export successful"
+    
+  # Currency
+  currency: "€"

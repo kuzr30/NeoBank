@@ -1,0 +1,144 @@
+{% extends 'credit_offers/credit_page_structure.html.twig' %}
+
+{% set page_title = tp('personal_loan.page.title', [], 'personal_loan') %}
+{% set page_description = tp('personal_loan.page.description', [], 'personal_loan') %}
+{% set hero_class = tp('personal_loan.hero.class', [], 'personal_loan') %}
+
+{% block taux_value %}{{ credit_rate('personal') }}%{% endblock %}
+{% block montant_value %}{{ tp('personal_loan.hero.montant', [], 'personal_loan') }}{% endblock %}
+{% block duree_value %}{{ tp('personal_loan.hero.duree', [], 'personal_loan') }}{% endblock %}
+
+{% block hero_title %}{{ tp('personal_loan.hero.title', [], 'personal_loan') }}{% endblock %}
+{% block hero_subtitle %}{{ tp('personal_loan.hero.subtitle', [], 'personal_loan') }}{% endblock %}
+
+{% block section_1_title %}{{ tp('personal_loan.section_1.title', [], 'personal_loan') }}{% endblock %}
+
+{% block section_2_title %}{{ tp('personal_loan.features.title', [], 'personal_loan') }}{% endblock %}
+{% block section_3_title %}{{ tp('personal_loan.section_3.title', [], 'personal_loan') }}{% endblock %}
+{% block section_4_title %}{{ tp('personal_loan.section_4.title', [], 'personal_loan') }}{% endblock %}
+{% block section_5_title %}{{ tp('personal_loan.section_5.title', [], 'personal_loan') }}{% endblock %}
+
+{% block section_1_content %}
+<p>{{ tp('personal_loan.section_1.content.paragraph_1', [], 'personal_loan') }}</p>
+<p>{{ tp('personal_loan.section_1.content.paragraph_2', [], 'personal_loan') }}</p>
+{% endblock %}
+
+{% block feature_montant %}{{ tp('personal_loan.features.montant.value', [], 'personal_loan') }}{% endblock %}
+{% block feature_montant_detail %}{{ tp('personal_loan.features.montant.detail', [], 'personal_loan') }}{% endblock %}
+{% block feature_duree %}{{ tp('personal_loan.features.duree.value', [], 'personal_loan') }}{% endblock %}
+{% block feature_duree_detail %}{{ tp('personal_loan.features.duree.detail', [], 'personal_loan') }}{% endblock %}
+{% block feature_taux %}{{ tp('personal_loan.features.taux.value', [], 'personal_loan')|replace({'{rate}': credit_rate('personnel')})|raw }}{% endblock %}
+{% block feature_taux_detail %}{{ tp('personal_loan.features.taux.detail', [], 'personal_loan') }}{% endblock %}
+{% block feature_garantie %}{{ tp('personal_loan.features.garantie.value', [], 'personal_loan') }}{% endblock %}
+{% block feature_garantie_detail %}{{ tp('personal_loan.features.garantie.detail', [], 'personal_loan') }}{% endblock %}
+
+{% block section_3_content %}
+<ul class="credit-detail-advantages">
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('personal_loan.section_3.advantages.liberte.title', [], 'personal_loan') }} :</strong> {{ tp('personal_loan.section_3.advantages.liberte.description', [], 'personal_loan') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('personal_loan.section_3.advantages.rapidite.title', [], 'personal_loan') }} :</strong> {{ tp('personal_loan.section_3.advantages.rapidite.description', [], 'personal_loan') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('personal_loan.section_3.advantages.deblocage.title', [], 'personal_loan') }} :</strong> {{ tp('personal_loan.section_3.advantages.deblocage.description', [], 'personal_loan') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('personal_loan.section_3.advantages.taux_fixe.title', [], 'personal_loan') }} :</strong> {{ tp('personal_loan.section_3.advantages.taux_fixe.description', [], 'personal_loan') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('personal_loan.section_3.advantages.remboursement.title', [], 'personal_loan') }} :</strong> {{ tp('personal_loan.section_3.advantages.remboursement.description', [], 'personal_loan') }}</span>
+    </li>
+</ul>
+{% endblock %}
+
+{% block section_4_content %}
+<div class="credit-detail-requirements">
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('personal_loan.section_4.profil.title', [], 'personal_loan') }}</h3>
+        <ul>
+            <li>{{ tp('personal_loan.section_4.profil.items.majeur', [], 'personal_loan') }}</li>
+            <li>{{ tp('personal_loan.section_4.profil.items.revenus', [], 'personal_loan') }}</li>
+            <li>{{ tp('personal_loan.section_4.profil.items.ficp', [], 'personal_loan') }}</li>
+            <li>{{ tp('personal_loan.section_4.profil.items.endettement', [], 'personal_loan') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('personal_loan.section_4.conditions.title', [], 'personal_loan') }}</h3>
+        <ul>
+            <li>{{ tp('personal_loan.section_4.conditions.items.age', [], 'personal_loan') }}</li>
+            <li>{{ tp('personal_loan.section_4.conditions.items.domiciliation', [], 'personal_loan') }}</li>
+            <li>{{ tp('personal_loan.section_4.conditions.items.assurance', [], 'personal_loan') }}</li>
+            <li>{{ tp('personal_loan.section_4.conditions.items.frais', [], 'personal_loan') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block section_5_content %}
+<div class="credit-detail-documents">
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('personal_loan.section_5.identite.title', [], 'personal_loan') }}</h3>
+        <ul>
+            <li>{{ tp('personal_loan.section_5.identite.items.carte', [], 'personal_loan') }}</li>
+            <li>{{ tp('personal_loan.section_5.identite.items.domicile', [], 'personal_loan') }}</li>
+            <li>{{ tp('personal_loan.section_5.identite.items.famille', [], 'personal_loan') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('personal_loan.section_5.revenus.title', [], 'personal_loan') }}</h3>
+        <ul>
+            <li>{{ tp('personal_loan.section_5.revenus.items.salaires', [], 'personal_loan') }}</li>
+            <li>{{ tp('personal_loan.section_5.revenus.items.impots', [], 'personal_loan') }}</li>
+            <li>{{ tp('personal_loan.section_5.revenus.items.contrat', [], 'personal_loan') }}</li>
+            <li>{{ tp('personal_loan.section_5.revenus.items.rib', [], 'personal_loan') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('personal_loan.section_5.bancaires.title', [], 'personal_loan') }}</h3>
+        <ul>
+            <li>{{ tp('personal_loan.section_5.bancaires.items.releves', [], 'personal_loan') }}</li>
+            <li>{{ tp('personal_loan.section_5.bancaires.items.credits', [], 'personal_loan') }}</li>
+            <li>{{ tp('personal_loan.section_5.bancaires.items.amortissement', [], 'personal_loan') }}</li>
+            <li>{{ tp('personal_loan.section_5.bancaires.items.charges', [], 'personal_loan') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block legal_details %}
+<div class="credit-legal-notice__details">
+    <h4>{{ tp('personal_loan.legal.details.title', [], 'personal_loan') }}</h4>
+    <ul>
+        <li>{{ tp('personal_loan.legal.details.taeg', [], 'personal_loan')|raw }}</li>
+        <li>{{ tp('personal_loan.legal.details.simplicite', [], 'personal_loan')|raw }}</li>
+        <li>{{ tp('personal_loan.legal.details.flexibilite', [], 'personal_loan')|raw }}</li>
+        <li>{{ tp('personal_loan.legal.details.retractation', [], 'personal_loan')|raw }}</li>
+        <li>{{ tp('personal_loan.legal.details.utilisation', [], 'personal_loan')|raw }}</li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block cta_title %}{{ tp('personal_loan.cta.title', [], 'personal_loan') }}{% endblock %}
+{% block cta_subtitle %}{{ tp('personal_loan.cta.subtitle', [], 'personal_loan') }}{% endblock %}
+
+{% block custom_styles %}
+{{ parent() }}
+<style>
+/* Specific color for personal loan */
+.credit-detail-hero--personal {
+    background: 
+        linear-gradient(135deg, rgba(6, 182, 212, 0.4) 0%, rgba(8, 145, 178, 0.6) 100%),
+        url('/images/34eda6bbed.jpg') center/cover no-repeat;
+}
+
+.credit-detail-hero--personal .credit-highlight__value {
+    color: #67e8f9;
+}
+</style>
+{% endblock %}

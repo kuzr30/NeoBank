@@ -1,0 +1,345 @@
+credit_contract:
+  # Documenttitel
+  title: "Kredietcontract Nr. %reference_number%"
+  
+  # Koptekst
+  header:
+    repeated_header: "Koptekst herhaald op elke pagina"
+    logo_alt: "%company_name% Logo"
+    contract_number: "Contract Nr.%reference_number%"
+    
+  # Voettekst
+  footer:
+    company_description: "Financieringsmaatschappij goedgekeurd door ACPR (Autoriteit voor Prudentieel Toezicht en Resolutie)"
+    headquarters: "Hoofdkantoor"
+    country: "Frankrijk"
+    phone: "Tel"
+    email: "Email"
+    credit_warning: "EEN KREDIET VERPLICHT U EN MOET WORDEN TERUGBETAALD. CONTROLEER UW TERUGBETALINGSCAPACITEIT VOORDAT U ZICH VERBINDT."
+    confidential_notice: "Vertrouwelijk document - Elke reproductie is strikt verboden zonder schriftelijke toestemming"
+    
+  # Hoofdinhoud
+  main:
+    detailed_info_first_page: "Gedetailleerde informatie eerste pagina"
+    logo_alt: "%company_name% Logo"
+    document_title_comment: "Documenttitel"
+    
+  # Contracttitels per type
+  contract_titles:
+    immobilier: "VASTGOEDKREDIETCONTRACT"
+    auto: "AUTOKREDIETCONTRACT"
+    consommation: "CONSUMENTENKREDIETCONTRACT"
+    travaux: "WERKZAAMHEDENKREDIETCONTRACT"
+    professionnel: "PROFESSIONEEL KREDIETCONTRACT"
+    personal: "PERSOONLIJKE LENINGOVEREENKOMST"
+    home_improvement: "KREDIETCONTRACT WONINGVERBETERING"
+    debt_consolidation: "KREDIETCONSOLIDATIECONTRACT"
+    mortgage: "HYPOTHECAIR KREDIETCONTRACT"
+    renouvelable: "REVOLVEREND KREDIETCONTRACT"
+    etudiant: "STUDIEKREDIERTCONTRACT"
+    relais: "OVERBRUGGINGSKREDIETCONTRACT"
+    microcredit: "MICROKREDIETCONTRACT"
+    leasing: "LEASINGCONTRACT"
+    voyage: "REISKREDIETCONTRACT"
+    default: "PERSOONLIJKE LENINGOVEREENKOMST"
+    
+  # Hoofdstuk I - Contractpartijen
+  chapter_one:
+    title: "Hoofdstuk I - De Contractpartijen"
+    lender_header: "De Kredietverlener"
+    borrower_header: "De Kredietnemer"
+    company_type: "Financieringsmaatschappij"
+    share_capital: "Aandelenkapitaal: %amount% €"
+    head_office: "Hoofdkantoor:"
+    represented_by: "Vertegenwoordigd door zijn Algemeen Directeur"
+    hereinafter_lender: "Hierna genoemd \"De Kredietverlener\""
+    hereinafter_borrower: "Hierna genoemd \"De Kredietnemer\""
+    residing_at: "Wonend te:"
+    address_not_provided: "[Adres niet verstrekt]"
+    postal_code_city: "[Postcode] [Stad]"
+    profession: "Beroep: %job_title%"
+    born_on: "Geboren op: %birth_date%"
+    phone: "Telefoon: %phone%"
+    email: "Email: %email%"
+    parties_agreed: "Partijen hebben het volgende overeengekomen en vastgesteld"
+    
+  # Hoofdstuk II - Onderwerp en Aard van het Contract
+  chapter_two:
+    title: "Hoofdstuk II - Onderwerp en Aard van het Contract"
+    article_1_title: "Artikel 1 - Onderwerp van het Contract"
+    article_1_intro: "De Kredietverlener verleent aan de Kredietnemer, die accepteert, een"
+    credit_types:
+      immobilier: "vastgoedkrediet"
+      auto: "autokrediet"
+      consommation: "consumentenkrediet"
+      travaux: "werkzaamhedenkrediet"
+      professionnel: "professioneel krediet"
+      personal: "persoonlijke lening"
+      home_improvement: "krediet voor woningverbetering"
+      debt_consolidation: "kredietconsolidatie"
+      mortgage: "hypothecair krediet"
+      renouvelable: "revolverend krediet"
+      etudiant: "studiekrediet"
+      relais: "overbruggingskrediet"
+      microcredit: "microkrediet"
+      leasing: "leasing"
+      voyage: "reiskrediet"
+      default: "persoonlijke lening"
+    article_1_suffix: "met rente voor een hierna vastgesteld bedrag."
+    article_1_regulation: "Deze lening wordt beheerst door de bepalingen van het Burgerlijk Wetboek (artikelen 1905 tot 1914) en het Consumentenwetboek."
+    article_1_purpose: "Deze lening is bedoeld om de rekening van de kredietnemer in evenwicht te brengen in het kader van een persoonlijk investeringsproject."
+    
+    article_2_title: "Artikel 2 - Juridische Aard"
+    article_2_nature: "Het betreft een persoonlijke leningovereenkomst voor bepaalde tijd, tegen vaste rente, terugbetaalbaar in constante maandelijkse termijnen."
+    article_2_commitment: "Dit contract vormt een ferme en definitieve verbintenis van beide partijen."
+    article_2_funds_purpose: "Bestemming van de fondsen:"
+    article_2_funds_restriction: "De ter beschikking gestelde fondsen mogen niet worden gebruikt voor illegale, speculatieve of tegen de openbare orde strijdige doeleinden."
+    
+    article_3_title: "Artikel 3 - Verklaringen en Garanties van de Kredietnemer"
+    article_3_intro: "De Kredietnemer verklaart en garandeert dat:"
+    article_3_declaration_1: "Alle informatie die is verstrekt bij de kredietaanvraag juist en volledig is."
+    article_3_declaration_2: "Hij beschikt over de juridische bevoegdheid die nodig is om deze verbintenis aan te gaan."
+    article_3_declaration_3: "Hij bevindt zich niet in een situatie van overmatige schulden of collectieve procedure."
+    article_3_declaration_4: "Er bestaat geen bankverbod of registratie tegen hem."
+    article_3_declaration_5: "Zijn financiële situatie hem in staat stelt om de termijnen van deze lening na te komen."
+    
+  # Hoofdstuk III - Financiële Voorwaarden
+  chapter_three:
+    title: "Hoofdstuk III - Financiële Voorwaarden van de Lening"
+    table_characteristics: "Kenmerken"
+    table_values: "Waarden"
+    table_observations: "Opmerkingen"
+    
+    credit_type_label: "Type krediet"
+    credit_type_observation: "Aard van de financiering"
+    loan_amount_label: "Bedrag van het geleende kapitaal"
+    loan_amount_observation: "Ter beschikking gesteld kapitaal"
+    loan_duration_label: "Looptijd van de lening"
+    loan_duration_observation: "Maandelijkse termijnen"
+    interest_rate_label: "Nominale rentevoet"
+    interest_rate_observation: "Vaste rente"
+    annual_rate: "% per jaar"
+    global_rate_label: "Effectieve Globale Rentevoet (EGR)"
+    global_rate_observation: "Inclusief alle verplichte kosten"
+    insurance_label: "Facultatieve verzekering"
+    insurance_available: "Beschikbaar op aanvraag"
+    insurance_observation: "Overlijden/Invaliditeit/Arbeidsongeschiktheid"
+    monthly_payment_label: "Bedrag van de maandelijkse termijnen"
+    constant_payments: "constante termijnen"
+    total_cost_label: "Totale kosten van het krediet"
+    total_cost_observation: "Rente over de totale looptijd"
+    
+    table_credit_types:
+      immobilier: "Vastgoedkrediet"
+      auto: "Autokrediet"
+      consommation: "Consumentenkrediet"
+      travaux: "Werkzaamhedenkrediet"
+      professionnel: "Professioneel Krediet"
+      personal: "Persoonlijke Lening"
+      home_improvement: "Krediet Woningverbetering"
+      debt_consolidation: "Kredietconsolidatie"
+      mortgage: "Hypothecair Krediet"
+      renouvelable: "Revolverend Krediet"
+      etudiant: "Studiekrediet"
+      relais: "Overbruggingskrediet"
+      microcredit: "Microkrediet"
+      leasing: "Leasing"
+      voyage: "Reiskrediet"
+      default: "Persoonlijke Lening"
+      
+    article_3_title: "Artikel 3 - Opschortende Voorwaarden"
+    article_3_intro: "Dit contract wordt gesloten onder de volgende opschortende voorwaarden:"
+    condition_1: "Verificatie en validatie van de identiteit van de Kredietnemer en zijn juridische bevoegdheid."
+    condition_2: "Verificatie van de financiële situatie aangegeven door de Kredietnemer (loonstroken, belastingaangiften, bankafschriften)."
+    condition_3: "Afwezigheid van inschrijving in het FICP (Bestand van Incidenten bij Terugbetaling van Kredieten aan Particulieren)."
+    condition_4: "Afwezigheid van bankverbod of maatregelen van bescherming, reorganisatie of gerechtelijke liquidatie."
+    condition_5: "Samenstelling van de gevraagde garanties, indien van toepassing."
+    condition_6: "Naleving van de wettelijke herroepingstermijn van 14 dagen."
+    conditions_important: "Belangrijk:"
+    conditions_nullity: "Het niet realiseren van een van deze voorwaarden leidt tot automatische nietigheid van het contract zonder vergoeding van beide zijden."
+    
+    article_4_title: "Artikel 4 - Modaliteiten van Terbeschikkingstelling"
+    article_4_intro: "Onder voorbehoud van de realisatie van bovenstaande opschortende voorwaarden, zal het bedrag van %amount% € worden bijgeschreven op de bankrekening van de Kredietnemer binnen maximaal 3 werkdagen na:"
+    article_4_condition_1: "Definitieve ondertekening van dit contract door beide partijen"
+    article_4_condition_2: "Ontvangst van alle vereiste bewijsstukken"
+    article_4_condition_3: "Effectieve samenstelling van de gevraagde garanties"
+    article_4_usage: "De Kredietnemer verbindt zich ertoe deze fondsen te gebruiken conform het verklaarde doel van de lening."
+    payment_methods: "Modaliteiten van afschrijving:"
+    sepa_payment: "Automatische SEPA-incasso op %day% van elke maand. Bij ontoereikend saldo wordt een incidentcommissie van € 20 gefactureerd."
+    bank_account_label: "Bankrekening aangewezen voor incasso's:"
+    bank_establishment: "Bankinstelling:"
+    iban_label: "IBAN:"
+    iban_placeholder: "NL__ ____ ____ ____ ____ ____ ___ (In te vullen bij ondertekening)"
+    bank_maintenance: "De Kredietnemer verbindt zich ertoe deze bankrekening actief en voldoende van saldo voorzien te houden om de incasso's op de overeengekomen vervaldagen mogelijk te maken."
+    lender_right: "De Kredietverlener behoudt zich het recht voor om de terbeschikkingstelling van fondsen te weigeren bij niet-naleving van de contractvoorwaarden."
+    
+    insurance_title: "Artikel 4 - Kredietnemerverzekering"
+    insurance_general_principle: "4.1 - Algemeen principe"
+    insurance_coverage: "De kredietnemerverzekering dekt de risico's van overlijden, tijdelijke totale arbeidsongeschiktheid (TTA), permanente totale invaliditeit (PTI) en permanente gedeeltelijke invaliditeit (PGI). Deze dekking beschermt de Kredietnemer en zijn rechthebbenden bij onmogelijkheid van terugbetaling door deze gebeurtenissen."
+    insurance_choice: "4.2 - Keuze van de Kredietnemer"
+    insurance_question: "Wilt u een kredietnemerverzekering afsluiten om de terugbetaling van uw krediet te garanderen?"
+    
+    insurance_decision_title: "UW BESLISSING:"
+    insurance_decision_intro: "Met kennis van zaken, na volledige informatie:"
+    insurance_yes: "JA, ik sluit een kredietnemerverzekering af"
+    insurance_no: "NEE, ik weiger de verzekering met volledige kennis van de risico's"
+    insurance_legal_info: "Juridische informatie:"
+    insurance_legal_text: "Conform de wet Lagarde heeft u het recht om uw verzekeraar vrij te kiezen. U kunt ook elk jaar van verzekering veranderen op de verjaardag (wet Hamon)."
+    
+  # Hoofdstuk IV - Terugbetalingsmodaliteiten
+  chapter_four:
+    title: "Hoofdstuk IV - Terugbetalingsmodaliteiten"
+    repayment_schedule: "Aflossingsschema"
+    repayment_item_1: "De lening wordt afgelost door middel van %duration% constante maandelijkse termijnen van elk € %amount%."
+    repayment_item_2: "De eerste termijn wordt geïncasseerd op %first_date%."
+    repayment_item_3: "De laatste termijn wordt geïncasseerd op %last_date%."
+    repayment_item_4: "De incasso vindt automatisch plaats op de door de Kredietnemer aangewezen bankrekening via SEPA-mandaat."
+    repayment_item_5: "Bij afwijzing van incasso wordt de Kredietnemer binnen 48 uur geïnformeerd en moet hij zijn situatie binnen 10 werkdagen regulariseren."
+    repayment_item_6: "Een incidentcommissie van € 20 wordt gefactureerd voor elke afgewezen incasso wegens ontoereikend saldo."
+    
+    early_repayment_title: "Vervroegde Terugbetaling"
+    early_repayment_right: "De Kredietnemer heeft de mogelijkheid om geheel of gedeeltelijk het resterende kapitaal vervroegd terug te betalen."
+    early_repayment_minimum: "Gedeeltelijke vervroegde terugbetalingen kunnen niet minder zijn dan € %amount%, behalve als het gaat om het saldo van de lening."
+    early_repayment_indemnity: "Een vervroegde terugbetalingsvergoeding kan worden geïnd, gelijk aan een kwartaal rente van het terugbetaalde bedrag, zonder %rate%% van het resterende kapitaal te kunnen overschrijden."
+    
+  # Hoofdstuk V - Verplichtingen en Garanties
+  chapter_five:
+    title: "Hoofdstuk V - Verplichtingen en Garanties"
+    borrower_obligations_title: "Verplichtingen van de Kredietnemer"
+    obligation_1: "Het aflossingschema nauwgezet respecteren."
+    obligation_2: "De Kredietverlener onmiddellijk informeren van elke verandering in zijn persoonlijke, professionele of financiële situatie."
+    obligation_3: "Een verzekering onderhouden die de risico's van overlijden en invaliditeit dekt indien afgesloten."
+    obligation_4: "Geen andere leningen aangaan zonder voorafgaande toestemming van de Kredietverlener als het totale bedrag 33% van de netto-inkomsten overschrijdt."
+    obligation_5: "Een actieve en voorziene bankrekening onderhouden voor automatische incasso's."
+    obligation_6: "Elke adreswijziging binnen 30 dagen schriftelijk aangetekend melden."
+    
+    guarantees_title: "Gevraagde Garanties"
+    guarantees_intro: "Om de goede terugbetaling van deze lening te garanderen, kan de Kredietnemer verplicht worden om, volgens de door de Kredietverlener bepaalde voorwaarden, te stellen:"
+    guarantee_1: "Een bank- of persoonlijke borg van een bedrag gelijk aan 10% van het geleende bedrag, zijnde € %amount%."
+    guarantee_2: "Deze garantie wordt verstrekt door een erkende financiële instelling of door een solvente derde geaccepteerd door de Kredietverlener."
+    
+  # Hoofdstuk VI - Gevallen van Opeisbaarheid en Sancties
+  chapter_six:
+    title: "Hoofdstuk VI - Gevallen van Opeisbaarheid en Sancties"
+    early_demandability_title: "Vervroegde Opeisbaarheid"
+    early_demandability_intro: "Alle door de Kredietnemer verschuldigde bedragen worden onmiddellijk opeisbaar, zonder voorafgaande ingebrekestelling, in de volgende gevallen:"
+    demandability_1: "Niet-betaling van een termijn op zijn vervaldag;"
+    demandability_2: "Gebrek aan uitvoering van een van de contractuele verplichtingen;"
+    demandability_3: "Valse verklaring of verberging van belangrijke informatie;"
+    demandability_4: "Collectieve procedure (reorganisatie, gerechtelijke liquidatie);"
+    demandability_5: "Overlijden van de Kredietnemer (behalve tegenstrijdige bepalingen);"
+    demandability_6: "Significante verandering van situatie zonder voorafgaande informatie."
+    
+    penalties_title: "Boetes en Vergoedingen"
+    delay_penalty: "Vertragingsboete: %rate%% per maand vertraging op de verschuldigde bedragen."
+    recovery_penalty: "Forfaitaire invorderingsvergoeding: € 20 per onbetaalde termijn."
+    early_demandability_penalty: "Vervroegde opeisbaarheidsvergoeding: %rate%% van het resterende kapitaal."
+    
+  # Hoofdstuk VII - Diverse Bepalingen
+  chapter_seven:
+    title: "Hoofdstuk VII - Diverse Bepalingen"
+    domicile_title: "Keuze van Domicilie"
+    domicile_intro: "Voor de uitvoering van onderhavige en hun gevolgen, kiezen partijen domicilie:"
+    lender_domicile: "De Kredietverlener:"
+    borrower_domicile: "De Kredietnemer:"
+    address_not_provided: "[Adres niet verstrekt]"
+    
+    # Resterende secties en laatste erkenningen
+    acknowledgment_title: "Ik heb kennisgenomen van:"
+    acknowledgment_1: "De modaliteiten van vervroegde terugbetaling"
+    acknowledgment_2: "De gevolgen van een betalingsgebrek"
+    acknowledgment_3: "De contacten bij financiële moeilijkheden"
+    acknowledgment_4: "Ik accepteer alle voorwaarden van dit contract"
+    
+    # Handtekeningen
+    borrower_signature: "De Kredietnemer"
+    lender_signature: "De Kredietverlener"
+    general_director: "De Algemeen Directeur"
+    duly_authorized: "Behoorlijk gemachtigd voor onderhavige"
+    signature_date: "Datum: ____/____/________"
+    signature_mention: "Handtekening voorafgegaan door de vermelding"
+    signature_approval: "\"Gelezen en goedgekeurd, akkoord\""
+    
+    preteur: "De Kredietverlener"
+    emprunteur: "De Kredietnemer"
+    directeur_general: "De Algemeen Directeur"
+    habilite: "Behoorlijk gemachtigd voor onderhavige"
+    
+    # Bankinformatie
+    code_bic: "BIC-code:"
+    completer_signature: "(In te vullen bij ondertekening)"
+    informations_sepa: "Deze informatie wordt ingevuld bij de ondertekening van het contract of door een afzonderlijk SEPA-mandaat."
+    
+    # Kosten en rechten
+    frais_enregistrement: "De kosten en rechten voor registratie van dit contract bedragen %montant% en zijn voor rekening van de Kredietnemer."
+    frais_recouvrement: "De invorderingskosten bij niet-betaling zullen ook worden gedragen door de Kredietnemer."
+    
+    # Recht en jurisdictie
+    contrat_droit_francais: "Dit contract is onderworpen aan het Franse recht."
+    competence_tribunaux: "Bij geschil, en na uitputting van minnelijke wegen, wordt exclusieve bevoegdheid toegekend aan de rechtbanken van Parijs."
+    
+    # Bemiddeling en AVG
+    mediation_title: "Bemiddeling:"
+    mediation_content: "Alvorens gerechtelijke stappen te ondernemen, verbinden partijen zich ertoe een minnelijke oplossing te zoeken. De Kredietnemer kan de bemiddelaar van ACPR of de bankbemiddelaar van ASF aanspreken."
+    rgpd_title: "Bescherming van Persoonsgegevens (AVG)"
+    rgpd_intro: "Conform de Algemene Verordening Gegevensbescherming (AVG) en de wet Informatica en Vrijheden:"
+    rgpd_donnees_collectees: "De verzamelde gegevens zijn noodzakelijk voor de uitvoering van het contract en de wettelijke verplichtingen van de Kredietverlener."
+    rgpd_transmission: "Ze kunnen worden doorgegeven aan controleorganismen (ACPR, Banque de France, FICP, FCC)."
+    rgpd_droits_emprunteur: "De Kredietnemer beschikt over een recht van toegang, rectificatie, verwijdering en overdraagbaarheid van zijn gegevens."
+    rgpd_conservation: "De gegevens worden bewaard gedurende 10 jaar na beëindiging van het contract."
+    
+    # Herroepingsrecht
+    retractation_title: "HERROEPINGSRECHT (Artikelen L.311-15 tot L.311-18 van het Consumentenwetboek)"
+    retractation_important: "BELANGRIJK:"
+    retractation_delai: "De Kredietnemer beschikt over een termijn van 14 kalenderdagen om zijn herroepingsrecht uit te oefenen zonder motief of boete."
+    retractation_debut: "Deze termijn loopt vanaf de datum van ondertekening van dit contract."
+    retractation_notification: "De herroeping moet worden gemeld per aangetekende brief met ontvangstbewijs aan het adres van de Kredietverlener."
+    retractation_restitution: "Bij herroeping verbindt de Kredietnemer zich ertoe de reeds gestorte fondsen terug te geven binnen 30 dagen, verhoogd met de opgelopen rente tegen het contractuele tarief."
+    
+    # Andere bepalingen
+    modification_echeances: "Het bedrag van de termijnen (onder voorbehoud van acceptatie door de Kredietverlener)"
+    cession_creance_title: "Cessie van vordering:"
+    cession_creance_content: "De Kredietverlener behoudt zich het recht voor om geheel of gedeeltelijk zijn vorderingen te cederen aan een derde (financiële instelling, invorderingsmaatschappij, enz.), mits voorafgaande informatie aan de Kredietnemer per aangetekende brief met ontvangstbewijs, minimaal 30 dagen voor de effectieve cessie."
+    cession_information: "Bij cessie wordt de Kredietnemer geïnformeerd over de contactgegevens van de nieuwe crediteur en de terugbetalingsmodaliteiten die ongewijzigd blijven behalve bij anders akkoord."
+    frais_modification_title: "Wijzigingskosten:"
+    frais_modification_content: "Elke wijziging van dit contract geeft aanleiding tot dossierkosten van € 50 ten laste van de Kredietnemer, behalve wettelijke bepaling anders."
+    
+    # Slotclausule
+    contrat_effet: "Dit contract treedt in werking vanaf ondertekening door beide partijen. De Kredietnemer beschikt over een wettelijke herroepingstermijn en moet kennis nemen van alle voorwaarden alvorens zich definitief te verbinden."
+    
+    # Sectie klacht en wijziging
+    procedure_reclamation: "Klachtenprocedure"
+    service_clientele_title: "Klantenservice:"
+    service_clientele_content: "Bij moeilijkheden, neem contact op met onze klantenservice op %phone% of per email: %email%"
+    mediation_persistant: "Bemiddeling: Bij aanhoudend geschil kunt u de Association Française des Sociétés Financières (ASF) aanspreken"
+    modification_contrat: "Elke wijziging van dit contract moet het voorwerp zijn van een schriftelijke wijziging, ondertekend door beide partijen en gedateerd."
+    duree_pret_modification: "De looptijd van de lening (verlenging of verkorting)"
+    modalites_remboursement: "De terugbetalingsmodaliteiten"
+    garanties_apportees: "De verstrekte garanties"
+    
+    # Hoofdstuk VIII
+    chapitre_huit_title: "Hoofdstuk VIII - Modaliteiten van Ondertekening en Inwerkingtreding"
+    conditions_validite_title: "Geldigheidsvoorwaarden:"
+    conditions_validite_content: "De elektronische of handgeschreven handtekening geldt als volledige en gehele acceptatie van de contractvoorwaarden. Geen enkel voorbehoud kan worden gemaakt na ondertekening."
+    fait_a_paris: "Opgemaakt te PARIJS, op %date%, in twee (2) originele exemplaren"
+    delai_retractation_consommation: "Conform de bepalingen van het Consumentenwetboek beschikt de Kredietnemer over een herroepingstermijn van 14 volle kalenderdagen vanaf de ondertekening van dit contract."
+    contact_difficultes: "Bij financiële moeilijkheden, blijf niet geïsoleerd. Er bestaan oplossingen. Neem contact op met uw adviseur of de Banque de France (www.banque-france.fr) voor gratis begeleiding."
+    apres_connaissance: "Na kennisname van de algemene voorwaarden"
+    remis_chaque_partie: "Waarvan één overhandigd aan elke partij die erkent het te hebben ontvangen"
+    et_particulieres: "en bijzondere voorwaarden van dit contract"
+    signature_directeur_alt: "Handtekening Algemeen Directeur"
+    information_surendettement: "INFORMATIE OVERMATIGE SCHULDEN:"
+    current_date: "Datum: %date%"
+    
+    # Textes en dur ligne 867
+    droit_applicable_juridiction_title: "Toepasselijk Recht en Jurisdictie"
+    
+    # Textes en dur ligne 909
+    modification_contrat_title: "Wijziging van het Contract"
+    
+    # Autres traductions ajoutées
+    frais_et_droits_title: "Kosten en Rechten"
+    contact_dpo: "Contact DPO: %email%"
+    modifications_portent_sur: "De wijzigingen kunnen met name betrekking hebben op:"
+    points_accueil_banque_france: "Ontvangstpunten Banque de France:"
+    numero_banque_france: "0 811 901 801 (prijs van een lokaal gesprek)"

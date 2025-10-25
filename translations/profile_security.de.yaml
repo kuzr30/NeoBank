@@ -1,0 +1,46 @@
+profile_security:
+  page:
+    title: "Sicherheit - %company_name%"
+  
+  header:
+    title: "Kontosicherheit"
+  
+  sections:
+    password:
+      title: "Passwort"
+      configured: "Konfiguriert"
+      current: "Aktuelles Passwort"
+      never_changed: "Passwort wurde nie geändert"
+      edit: "Bearbeiten"
+      time_units:
+        minutes: "Minute(n)"
+        hours: "Stunde(n)"
+        days: "Tag(e)"
+        last_modified: "Letzte Änderung"
+        ago: "vor"
+        on: "am"
+    
+    two_factor:
+      title: "2-Faktor-Authentifizierung"
+      disabled: "Deaktiviert"
+      app:
+        title: "Authentifizierungs-App"
+        desc: "Verwenden Sie eine App wie Google Authenticator"
+        configure: "Konfigurieren"
+      sms:
+        title: "SMS-Verifizierung"
+        desc: "Erhalten Sie Codes per SMS"
+        add: "Hinzufügen"
+    
+    activity:
+      title: "Aktuelle Sicherheitsaktivität"
+      today: "Heute um"
+      yesterday: "Gestern um"
+      none_title: "Keine aktuelle Sicherheitsaktivität"
+      none_desc: "Ihr Konto ist sicher"
+      activities:
+        login_success: "Erfolgreiche Anmeldung"
+        login_failed: "Fehlgeschlagener Anmeldeversuch"
+        password_changed: "Passwort geändert"
+        profile_updated: "Profil aktualisiert"
+        account_locked: "Konto gesperrt"

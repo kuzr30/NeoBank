@@ -1,0 +1,143 @@
+banking_ribs:
+  # Meta tags
+  meta:
+    title: "Mis beneficiarios - %company_name%"
+    description: "Gestione sus cuentas beneficiarias con %company_name%"
+
+  # Navigation
+  nav:
+    dashboard: "Panel de control"
+    beneficiaries: "Beneficiarios"
+    rib_new: "Nuevo beneficiario"
+    rib_detail: "Detalle del beneficiario"
+    back: "Atrás"
+
+  # Page headers
+  page:
+    title: "Mis beneficiarios"
+    subtitle: "Gestione las cuentas de sus beneficiarios para sus transferencias"
+    new_rib_title: "Añadir un beneficiario"
+    rib_detail_title: "Detalle del beneficiario"
+    
+  # Header section (for ribs.html.twig)
+  header:
+    title: "Mis RIB/IBAN"
+    subtitle: "Gestión de sus datos de identidad bancaria"
+    add_button: "Añadir un RIB"
+  
+  # Empty state
+  empty_state:
+    title: "Ningún RIB registrado"
+    description: "Añada sus RIB para facilitar sus transferencias y recibir fondos más fácilmente."
+    add_first_button: "Añadir mi primer RIB"
+    
+  # RIB detail page (rib_show.html.twig)
+  detail_page:
+    title: "Detalles del RIB"
+    subtitle: "Información detallada de sus datos de identidad bancaria"
+    back_to_list: "Volver a la lista"
+    
+  # Detail fields
+  detail_fields:
+    account_name: "Nombre de la cuenta:"
+    bank_name: "Nombre del banco:"
+    full_iban: "IBAN completo:"
+    copy_button: "Copiar"
+    creation_date: "Fecha de adición:"
+    last_modification: "Última modificación:"
+    
+  # Actions
+  detail_actions:
+    delete_this_rib: "Eliminar este RIB"
+    
+  # JavaScript messages
+  js_messages:
+    iban_copied: "IBAN copiado al portapapeles"
+    
+  # New RIB form (rib_new.html.twig)
+  new_form:
+    title: "Añadir un nuevo RIB"
+    subtitle: "Registre sus datos bancarios para facilitar sus transferencias y recibir fondos."
+    
+  # Form fields and labels
+  form_fields:
+    account_name_label: "Nombre de la cuenta"
+    account_name_placeholder: "Ej: Cuenta principal, Cuenta ahorro..."
+    account_name_help: "Dé un nombre descriptivo a esta cuenta para reconocerla fácilmente."
+    bank_name_label: "Nombre del banco"
+    bank_name_placeholder: "Ej: Banco Santander, BBVA..."
+    iban_label: "IBAN"
+    iban_placeholder: "ES91 1234 5678 9012 3456 7890"
+    iban_help: "Introduzca su IBAN europeo. Los espacios se añadirán automáticamente."
+    
+  # Form actions
+  form_actions:
+    back_button: "Atrás"
+    save_button: "Guardar el RIB"
+    
+  # Form fields
+  form:
+    bank_name: "Nombre del banco"
+    bank_name_placeholder: "Introduzca el nombre del banco"
+    account_holder: "Titular de la cuenta"
+    account_holder_placeholder: "Nombre del titular"
+    iban: "IBAN"
+    iban_placeholder: "ES91 1234 5678 9012 3456 7890"
+    swift: "Código SWIFT/BIC"
+    swift_placeholder: "BSCHESMMXXX"
+    nickname: "Apodo (opcional)"
+    nickname_placeholder: "Ej: Mi cuenta ahorro"
+    address: "Dirección del banco"
+    address_placeholder: "Dirección completa del banco"
+    
+  # RIB info
+  rib:
+    bank_name: "Banco"
+    account_holder: "Titular"
+    iban: "IBAN"
+    swift: "SWIFT/BIC"
+    nickname: "Apodo"
+    created_date: "Fecha de adición"
+    last_used: "Última utilización"
+    usage_count: "Número de utilizaciones"
+    
+  # Actions
+  actions:
+    add_rib: "Añadir un beneficiario"
+    save: "Guardar"
+    cancel: "Cancelar"
+    edit: "Modificar"
+    delete: "Eliminar"
+    view_details: "Ver detalles"
+    use_for_transfer: "Usar para una transferencia"
+    
+  # Validation messages
+  validation:
+    iban_required: "El IBAN es obligatorio"
+    iban_invalid: "Formato IBAN inválido"
+    iban_exists: "Este IBAN ya existe en sus beneficiarios"
+    account_holder_required: "El nombre del titular es obligatorio"
+    bank_name_required: "El nombre del banco es obligatorio"
+    swift_invalid: "Formato SWIFT/BIC inválido"
+    
+  # Messages
+  messages:
+    no_ribs: "Ningún beneficiario registrado"
+    rib_added_success: "Beneficiario añadido con éxito"
+    rib_updated_success: "Beneficiario modificado con éxito"
+    rib_deleted_success: "Beneficiario eliminado con éxito"
+    confirm_delete: "¿Está seguro de que desea eliminar este beneficiario?"
+    access_denied: "Acceso denegado a este beneficiario"
+    
+  # Card actions  
+  card_actions:
+    view_details: "Ver detalles"
+    delete_button: "Eliminar"
+    delete_confirm: "¿Está seguro de que desea eliminar este RIB?"
+    
+  # Status
+  status:
+    active: "Activo"
+    inactive: "Inactivo"
+    verified: "Verificado"
+    pending: "En espera de verificación"

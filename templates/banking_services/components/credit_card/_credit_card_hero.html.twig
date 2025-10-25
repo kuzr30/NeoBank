@@ -1,0 +1,759 @@
+<!-- Credit Card Hero Section -->
+<section class="credit-hero">
+    <div class="credit-hero__container">
+        <div class="credit-hero__content">
+            <div class="credit-hero__text">
+                <h1 class="credit-hero__title">{{ tp('banking_cards.hero.title', [], 'banking_cards') }}</h1>
+                <p class="credit-hero__subtitle">
+                    {{ tp('banking_cards.hero.subtitle', [], 'banking_cards') }}
+                </p>
+                <div class="credit-hero__features">
+                    <div class="credit-hero__feature">
+                        <span class="credit-hero__feature-icon">
+                            {{ ux_icon('heroicons:banknotes', {'class': 'credit-hero__feature-svg'}) }}
+                        </span>
+                        <span>{{ tp('banking_cards.hero.features.cashback.title', [], 'banking_cards') }}</span>
+                    </div>
+                    <div class="credit-hero__feature">
+                        <span class="credit-hero__feature-icon">
+                            {{ ux_icon('heroicons:shield-check', {'class': 'credit-hero__feature-svg'}) }}
+                        </span>
+                        <span>{{ tp('banking_cards.hero.features.insurance.title', [], 'banking_cards') }}</span>
+                    </div>
+                    <div class="credit-hero__feature">
+                        <span class="credit-hero__feature-icon">
+                            {{ ux_icon('heroicons:globe-europe-africa', {'class': 'credit-hero__feature-svg'}) }}
+                        </span>
+                        <span>{{ tp('banking_cards.hero.features.worldwide.title', [], 'banking_cards') }}</span>
+                    </div>
+                </div>
+                <div class="credit-hero__actions">
+                    <a href="{{ path('app_login') }}" class="credit-hero__cta credit-hero__cta--primary">
+                        {{ ux_icon('heroicons:credit-card', {'class': 'credit-hero__cta-icon'}) }}
+                        {{ tp('banking_cards.hero.actions.choose_card', [], 'banking_cards') }}
+                    </a>
+                    <a href="{{ path('app_register') }}" class="credit-hero__cta credit-hero__cta--secondary">
+                        {{ ux_icon('heroicons:document-text', {'class': 'credit-hero__cta-icon'}) }}
+                        {{ tp('banking_cards.hero.actions.apply', [], 'banking_cards') }}
+                    </a>
+                </div>
+            </div>
+            
+            <div class="credit-hero__visual">
+                <div class="credit-hero__cards">
+                    <div class="credit-hero__card credit-hero__card--platinum">
+                        <div class="credit-hero__card-header">
+                            <div class="credit-hero__card-logo">
+                                {{ ux_icon('heroicons:banknotes', {'class': 'credit-hero__logo'}) }}
+                                <span>SEDEF BANK</span>
+                            </div>
+                            <div class="credit-hero__card-type">{{ tp('banking_cards.hero.card.type', [], 'banking_cards') }}</div>
+                        </div>
+                        <div class="credit-hero__card-chip">
+                            <div class="credit-hero__chip"></div>
+                        </div>
+                        <div class="credit-hero__card-number">
+                            <div class="credit-hero__number-line">{{ tp('banking_cards.hero.card.number', [], 'banking_cards') }}</div>
+                        </div>
+                        <div class="credit-hero__card-footer">
+                            <div class="credit-hero__card-holder">
+                                <div class="credit-hero__card-label">{{ tp('banking_cards.hero.card.holder_label', [], 'banking_cards') }}</div>
+                                <div class="credit-hero__card-name">{{ tp('banking_cards.hero.card.holder_name', [], 'banking_cards') }}</div>
+                            </div>
+                            <div class="credit-hero__card-right">
+                                <div class="credit-hero__card-expiry">
+                                    <div class="credit-hero__card-label">{{ tp('banking_cards.hero.card.expiry_label', [], 'banking_cards') }}</div>
+                                    <div class="credit-hero__card-date">{{ tp('banking_cards.hero.card.expiry_date', [], 'banking_cards') }}</div>
+                                </div>
+                                <div class="credit-hero__card-network">
+                                    <svg class="credit-hero__mastercard-icon" viewBox="0 0 48 48" width="40" height="24">
+                                        <circle cx="15" cy="24" r="12" fill="#FF5F00"/>
+                                        <circle cx="33" cy="24" r="12" fill="#EB001B"/>
+                                        <path d="M24 12c-3.314 0-6.34 1.343-8.516 3.516C17.66 17.66 19.003 20.686 24 24c4.997-3.314 6.34-6.34 8.516-8.484C30.34 13.343 27.314 12 24 12z" fill="#FF5F00"/>
+                                        <path d="M24 36c3.314 0 6.34-1.343 8.516-3.516C30.34 30.40 27.314 27.314 24 24c-4.997 3.314-6.34 6.34-8.516 8.484C17.66 34.657 20.686 36 24 36z" fill="#FF5F00"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="credit-hero__stats">
+                    <div class="credit-hero__stat">
+                        <div class="credit-hero__stat-number">{{ tp('banking_cards.hero.stats.clients', [], 'banking_cards') }}</div>
+                        <div class="credit-hero__stat-label">{{ tp('banking_cards.hero.stats.clients_label', [], 'banking_cards') }}</div>
+                    </div>
+                    <div class="credit-hero__stat">
+                        <div class="credit-hero__stat-number">{{ tp('banking_cards.hero.stats.rating', [], 'banking_cards') }}</div>
+                        <div class="credit-hero__stat-label">{{ tp('banking_cards.hero.stats.rating_label', [], 'banking_cards') }}</div>
+                    </div>
+                    <div class="credit-hero__stat">
+                        <div class="credit-hero__stat-number">{{ tp('banking_cards.hero.stats.fees', [], 'banking_cards') }}</div>
+                        <div class="credit-hero__stat-label">{{ tp('banking_cards.hero.stats.fees_label', [], 'banking_cards') }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* =================================================================
+   CREDIT CARD - HERO SECTION
+   ================================================================= */
+
+/* Block: credit-hero */
+.credit-hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.credit-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Crect width='1' height='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    z-index: 1;
+}
+
+/* Element: credit-hero__container */
+.credit-hero__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Element: credit-hero__content */
+.credit-hero__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+/* Element: credit-hero__text */
+.credit-hero__text {
+    max-width: 650px;
+}
+
+/* Element: credit-hero__title */
+.credit-hero__title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 800;
+    color: white;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+/* Element: credit-hero__subtitle */
+.credit-hero__subtitle {
+    font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* Element: credit-hero__features */
+.credit-hero__features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+/* Element: credit-hero__feature */
+.credit-hero__feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+/* Element: credit-hero__feature-icon */
+.credit-hero__feature-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    flex-shrink: 0;
+}
+
+/* Element: credit-hero__feature-svg */
+.credit-hero__feature-svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #fbbf24;
+}
+
+/* Element: credit-hero__actions */
+.credit-hero__actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: nowrap;
+}
+
+/* Element: credit-hero__cta */
+.credit-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    flex: 1;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+/* Modifier: credit-hero__cta--primary */
+.credit-hero__cta--primary {
+    background: white;
+    color: var(--color-primary);
+}
+
+.credit-hero__cta--primary:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+/* Modifier: credit-hero__cta--secondary */
+.credit-hero__cta--secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.credit-hero__cta--secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    color: white;
+    text-decoration: none;
+}
+
+/* Element: credit-hero__cta-icon */
+.credit-hero__cta-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Element: credit-hero__visual */
+.credit-hero__visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Element: credit-hero__cards */
+.credit-hero__cards {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+/* Hide cards on mobile and tablet */
+@media (max-width: 1024px) {
+    .credit-hero__cards {
+        display: none;
+    }
+    
+    .credit-hero__visual {
+        gap: 0;
+    }
+}
+
+/* Element: credit-hero__card */
+.credit-hero__card {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    border-radius: 1rem;
+    padding: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    overflow: visible;
+}
+
+.credit-hero__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(50px, -50px);
+}
+
+.credit-hero__card:hover {
+    transform: translateY(-10px) scale(1.02);
+    z-index: 10;
+}
+
+/* Modifier: credit-hero__card--platinum */
+.credit-hero__card--platinum {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+/* Element: credit-hero__card-header */
+.credit-hero__card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+/* Element: credit-hero__card-logo */
+.credit-hero__card-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* Element: credit-hero__logo */
+.credit-hero__logo {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Element: credit-hero__card-type */
+.credit-hero__card-type {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.9;
+    color: white;
+}
+
+/* Element: credit-hero__card-chip */
+.credit-hero__card-chip {
+    margin: 1.5rem 0 1rem 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Element: credit-hero__chip */
+.credit-hero__chip {
+    width: 2.5rem;
+    height: 2rem;
+    background: linear-gradient(135deg, #ffd700 0%, #daa520 100%);
+    border-radius: 0.25rem;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.credit-hero__chip::before {
+    content: '';
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 1px,
+        rgba(0, 0, 0, 0.1) 1px,
+        rgba(0, 0, 0, 0.1) 2px
+    );
+    border-radius: 0.125rem;
+}
+
+/* Element: credit-hero__card-number */
+.credit-hero__card-number {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    margin: 1.25rem 0;
+    color: white;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+}
+
+/* Element: credit-hero__card-footer */
+.credit-hero__card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+}
+
+/* Element: credit-hero__card-right */
+.credit-hero__card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+/* Element: credit-hero__card-holder, credit-hero__card-expiry */
+.credit-hero__card-holder,
+.credit-hero__card-expiry {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* Element: credit-hero__card-expiry */
+.credit-hero__card-expiry {
+    text-align: right;
+}
+
+/* Element: credit-hero__card-label */
+.credit-hero__card-label {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+    color: white;
+}
+
+/* Element: credit-hero__card-name, credit-hero__card-date */
+.credit-hero__card-name,
+.credit-hero__card-date {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.05em;
+}
+
+/* Element: credit-hero__card-network */
+.credit-hero__card-network {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.25rem;
+}
+
+/* Element: credit-hero__mastercard-icon */
+.credit-hero__mastercard-icon {
+    width: 40px;
+    height: 24px;
+    opacity: 0.9;
+}
+
+/* Element: credit-hero__network-icon */
+.credit-hero__network-icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Element: credit-hero__stats */
+.credit-hero__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Element: credit-hero__stat */
+.credit-hero__stat {
+    text-align: center;
+    color: white;
+}
+
+/* Element: credit-hero__stat-number */
+.credit-hero__stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Element: credit-hero__stat-label */
+.credit-hero__stat-label {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .credit-hero__container {
+        padding: 0 1.5rem;
+    }
+    
+    .credit-hero__content {
+        gap: 4rem;
+    }
+    
+    .credit-hero__cards {
+        width: 380px;
+        height: 280px;
+    }
+    
+    .credit-hero__card {
+        width: 380px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .credit-hero__content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .credit-hero__cards {
+        display: none;
+    }
+    
+    .credit-hero__visual {
+        gap: 0;
+    }
+    
+    .credit-hero__actions {
+        justify-content: center;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .credit-hero {
+        min-height: 85vh;
+        padding: 3rem 0;
+    }
+    
+    .credit-hero__title {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+    }
+    
+    .credit-hero__subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .credit-hero__features {
+        gap: 0.875rem;
+    }
+    
+    .credit-hero__feature {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .credit-hero {
+        min-height: 70vh;
+        padding: 2rem 0;
+    }
+    
+    .credit-hero__container {
+        padding: 0 1.5rem;
+    }
+    
+    .credit-hero__content {
+        gap: 2rem;
+    }
+    
+    .credit-hero__actions {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+    
+    .credit-hero__cta {
+        flex: 1;
+        font-size: 0.875rem;
+        padding: 0.75rem 1rem;
+    }
+    
+    .credit-hero__stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .credit-hero {
+        min-height: 60vh;
+        padding: 1.5rem 0;
+    }
+    
+    .credit-hero__container {
+        padding: 0 1.25rem;
+    }
+    
+    .credit-hero__content {
+        gap: 2rem;
+    }
+    
+    .credit-hero__title {
+        font-size: clamp(2rem, 6vw, 2.75rem);
+        margin-bottom: 1.25rem;
+    }
+    
+    .credit-hero__subtitle {
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+    }
+    
+    .credit-hero__features {
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+    }
+    
+    .credit-hero__feature {
+        font-size: 1rem;
+    }
+    
+    .credit-hero__feature-icon {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+    
+    .credit-hero__feature-svg {
+        width: 1.375rem;
+        height: 1.375rem;
+    }
+    
+    .credit-hero__actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .credit-hero__cta {
+        width: 100%;
+        padding: 0.875rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    
+    .credit-hero__stats {
+        padding: 1.25rem;
+        gap: 0.75rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .credit-hero__stat-number {
+        font-size: 1.75rem;
+    }
+    
+    .credit-hero__stat-label {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .credit-hero {
+        min-height: 50vh;
+        padding: 1rem 0;
+    }
+    
+    .credit-hero__container {
+        padding: 0 1rem;
+    }
+    
+    .credit-hero__content {
+        gap: 1.5rem;
+    }
+    
+    .credit-hero__title {
+        font-size: clamp(1.75rem, 5vw, 2.25rem);
+        margin-bottom: 1rem;
+    }
+    
+    .credit-hero__subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .credit-hero__features {
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .credit-hero__feature {
+        font-size: 1rem;
+    }
+    
+    .credit-hero__feature-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .credit-hero__feature-svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+    
+    .credit-hero__actions {
+        margin-top: 1.5rem;
+        gap: 0.5rem;
+    }
+    
+    .credit-hero__cta {
+        padding: 0.8rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .credit-hero__cta-icon {
+        width: 0.9rem;
+        height: 0.9rem;
+    }
+    
+    .credit-hero__stats {
+        padding: 1rem;
+        gap: 0.5rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .credit-hero__stat {
+        text-align: center;
+    }
+    
+    .credit-hero__stat-number {
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .credit-hero__stat-label {
+        font-size: 0.75rem;
+        line-height: 1.2;
+    }
+}
+</style>

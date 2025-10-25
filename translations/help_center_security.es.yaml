@@ -1,0 +1,107 @@
+help_center_security:
+  page:
+    title: "Seguridad y Protección - Centro de Ayuda %company_name%"
+    
+  hero:
+    title: "Seguridad y Protección"
+    subtitle: "Proteja sus cuentas y transacciones con nuestras medidas de seguridad avanzadas"
+    
+  sections:
+    main_title: "Su Seguridad es Nuestra Prioridad"
+    
+    authentication:
+      title: "Autenticación y Acceso"
+      description: "Asegure el acceso a sus cuentas con nuestros sistemas de autenticación robustos"
+      items:
+        two_factor:
+          title: "Autenticación de Dos Factores (2FA)"
+          description: "Refuerce la seguridad de su cuenta con una doble verificación"
+          details: "Active la 2FA en sus parámetros de seguridad. Use una aplicación de autenticación (Google Authenticator, Authy) o reciba códigos por SMS."
+        strong_passwords:
+          title: "Contraseñas Seguras"
+          description: "Cree contraseñas robustas para proteger sus cuentas"
+          details: "Use al menos 12 caracteres con mayúsculas, minúsculas, números y símbolos. Evite informaciones personales fácilmente adivinables."
+        biometric:
+          title: "Autenticación Biométrica"
+          description: "Use su huella digital o reconocimiento facial"
+          details: "Active Touch ID o Face ID en la aplicación móvil para un acceso rápido y seguro a sus cuentas."
+        session_management:
+          title: "Gestión de Sesiones"
+          description: "Controle sus conexiones activas y el historial de acceso"
+          details: "Vigile sus sesiones activas, descónectese de dispositivos no reconocidos y consulte el historial de sus conexiones."
+          
+    fraud_prevention:
+      title: "Prevención del Fraude"
+      description: "Nuestros sistemas avanzados protegen sus transacciones contra el fraude"
+      items:
+        real_time_monitoring:
+          title: "Vigilancia en Tiempo Real"
+          description: "Detección automática de actividades sospechosas"
+          details: "Nuestros algoritmos de IA analizan cada transacción en tiempo real para detectar comportamientos anormales y bloquear los intentos de fraude."
+        transaction_alerts:
+          title: "Alertas de Transacción"
+          description: "Notificaciones instantáneas para todas sus operaciones"
+          details: "Reciba notificaciones por SMS o email para cada transacción. Configure umbrales personalizados para ser alertado de importes elevados."
+        card_controls:
+          title: "Controles de Tarjeta"
+          description: "Gestione sus tarjetas y limite su uso"
+          details: "Bloquee temporalmente sus tarjetas, defina límites geográficos y de importe, active/desactive los pagos online."
+        merchant_verification:
+          title: "Verificación de Comerciantes"
+          description: "Validación de la identidad de comerciantes online"
+          details: "Verificamos la identidad y reputación de los comerciantes para reducir los riesgos de fraude durante sus compras online."
+          
+    data_protection:
+      title: "Protección de Datos"
+      description: "Sus informaciones personales están protegidas según los estándares más altos"
+      items:
+        encryption:
+          title: "Cifrado de Extremo a Extremo"
+          description: "Todos sus datos están cifrados con los últimos estándares"
+          details: "Utilizamos el cifrado AES-256 para proteger sus datos en tránsito y en reposo. Sus informaciones son ilegibles sin las claves apropiadas."
+        gdpr_compliance:
+          title: "Conformidad RGPD"
+          description: "Respeto total del Reglamento General de Protección de Datos"
+          details: "Respetamos sus derechos: acceso, rectificación, borrado y portabilidad de sus datos. Contacte con nuestro DPO para cualquier solicitud."
+        data_minimization:
+          title: "Minimización de Datos"
+          description: "Solo recopilamos los datos estrictamente necesarios"
+          details: "Principio de minimización: limitamos la recolección a los datos indispensables para nuestros servicios y los conservamos únicamente el tiempo necesario."
+        secure_storage:
+          title: "Almacenamiento Seguro"
+          description: "Centros de datos certificados y altamente seguros"
+          details: "Nuestros servidores están alojados en centros de datos certificados ISO 27001, con seguridad física 24/7 y redundancia geográfica."
+          
+    incident_response:
+      title: "Respuesta a Incidentes"
+      description: "Procedimientos rápidos en caso de problema de seguridad"
+      items:
+        immediate_action:
+          title: "Acción Inmediata"
+          description: "Qué hacer si detecta una actividad sospechosa"
+          details: "Contacte inmediatamente nuestra línea de seguridad 24/7 al Teléfono. Cambie sus contraseñas y verifique sus últimas transacciones."
+        account_recovery:
+          title: "Recuperación de Cuenta"
+          description: "Procedimiento de recuperación en caso de compromiso"
+          details: "Proceso de verificación de identidad reforzado, reinicialización segura de los accesos y auditoría completa de su cuenta."
+        investigation:
+          title: "Investigación y Seguimiento"
+          description: "Investigación exhaustiva de incidentes de seguridad"
+          details: "Nuestro equipo de ciberseguridad analiza cada incidente, identifica las causas y establece medidas preventivas adicionales."
+        compensation:
+          title: "Protección y Reembolso"
+          description: "Garantía de reembolso en caso de fraude comprobado"
+          details: "Protección integral contra el fraude: reembolso rápido de las sumas desviadas y asistencia personalizada para la regularización."
+          
+    tips:
+      title: "Consejos de Seguridad"
+      description: "Buenas prácticas para proteger sus cuentas a diario"
+      items:
+        - "Nunca comparta sus credenciales de conexión"
+        - "Verifique siempre la URL antes de introducir sus datos"
+        - "Use redes WiFi seguras para sus operaciones bancarias"
+        - "Actualice regularmente sus aplicaciones y navegadores"
+        - "Descónectese siempre después del uso en un dispositivo compartido"
+        - "Vigile regularmente sus extractos de cuenta"
+        - "Informe inmediatamente cualquier actividad sospechosa"
+        - "Active las notificaciones para todas sus transacciones"

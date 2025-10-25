@@ -1,0 +1,36 @@
+profile_edit:
+  page:
+    title: "Profil bearbeiten - %company_name%"
+  
+  header:
+    title: "Profil bearbeiten"
+  
+  email_pending:
+    title: "Neue E-Mail-Adresse ausstehend:"
+    text: "Klicken Sie auf den Link in der Bestätigungs-E-Mail, um die Änderung zu bestätigen."
+    instruction: "Klicken Sie auf den Link in der Bestätigungs-E-Mail, um die Änderung zu bestätigen."
+    cancel: "Abbrechen"
+    confirm_cancel: "Möchten Sie diese E-Mail-Änderung wirklich abbrechen?"
+    cancel_confirm: "Möchten Sie diese E-Mail-Änderung wirklich abbrechen?"
+  
+  sections:
+    avatar:
+      title: "Profilbild"
+      alt: "Profilbild"
+      info: "Format JPG, PNG oder WEBP. Maximale Größe 2MB."
+      default_first_letter: "B"
+      default_surname_letter: "U"
+    
+    personal_info:
+      title: "Persönliche Informationen"
+      email_help: "Diese Adresse wird für wichtige Benachrichtigungen verwendet."
+    
+    address:
+      title: "Adresse"
+    
+    preferences:
+      title: "Einstellungen"
+  
+  actions:
+    cancel: Abbrechen
+    save: Änderungen speichern

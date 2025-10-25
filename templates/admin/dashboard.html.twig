@@ -1,0 +1,124 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block content_title %}
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="h4 mb-1">Tableau de bord</h1>
+            <p class="text-muted small mb-0">Vue d'ensemble de l'activité en temps réel</p>
+        </div>
+        <div class="text-muted small">
+            <i class="fas fa-clock"></i> {{ "now"|date("d/m/Y à H:i") }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block main %}
+    <div class="row g-4">
+        <!-- Total demandes de crédit -->
+        <div class="col-md-6 col-xl-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="rounded-circle bg-primary bg-gradient p-3">
+                            <i class="fas fa-file-alt fa-2x text-white"></i>
+                        </div>
+                        <span class="badge bg-primary rounded-pill">Total</span>
+                    </div>
+                    <h2 class="display-4 fw-bold mb-2">
+                        {% set total = 0 %}
+                        {% for stat in stats %}
+                            {% set total = total + stat.count %}
+                        {% endfor %}
+                        {{ total }}
+                    </h2>
+                    <p class="text-muted text-uppercase fw-semibold small mb-0">Demandes de crédit</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Crédits en cours -->
+        <div class="col-md-6 col-xl-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="rounded-circle bg-warning bg-gradient p-3">
+                            <i class="fas fa-hourglass-half fa-2x text-white"></i>
+                        </div>
+                        <span class="badge bg-warning rounded-pill">Urgent</span>
+                    </div>
+                    <h2 class="display-4 fw-bold mb-2">{{ creditApplicationStats.in_progress }}</h2>
+                    <p class="text-muted text-uppercase fw-semibold small mb-0">Crédits en traitement</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- KYC -->
+        <div class="col-md-6 col-xl-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="rounded-circle bg-info bg-gradient p-3">
+                            <i class="fas fa-shield-alt fa-2x text-white"></i>
+                        </div>
+                        <span class="badge bg-info rounded-pill">Sécurité</span>
+                    </div>
+                    <h2 class="display-4 fw-bold mb-2">{{ kycStats.pending }}</h2>
+                    <p class="text-muted text-uppercase fw-semibold small mb-0">Vérifications KYC</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Virements -->
+        <div class="col-md-6 col-xl-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="rounded-circle bg-success bg-gradient p-3">
+                            <i class="fas fa-money-bill-transfer fa-2x text-white"></i>
+                        </div>
+                        <span class="badge bg-success rounded-pill">Finance</span>
+                    </div>
+                    <h2 class="display-4 fw-bold mb-2">{{ transferStats.pending }}</h2>
+                    <p class="text-muted text-uppercase fw-semibold small mb-0">Virements en attente</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Devis -->
+        <div class="col-md-6 col-xl-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="rounded-circle bg-secondary bg-gradient p-3">
+                            <i class="fas fa-file-invoice fa-2x text-white"></i>
+                        </div>
+                        <span class="badge bg-secondary rounded-pill">Commercial</span>
+                    </div>
+                    <h2 class="display-4 fw-bold mb-2">{{ demandeDevisStats.pending }}</h2>
+                    <p class="text-muted text-uppercase fw-semibold small mb-0">Demandes de devis</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cartes -->
+        <div class="col-md-6 col-xl-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="rounded-circle bg-danger bg-gradient p-3">
+                            <i class="fas fa-credit-card fa-2x text-white"></i>
+                        </div>
+                        <span class="badge bg-danger rounded-pill">Bancaire</span>
+                    </div>
+                    <h2 class="display-4 fw-bold mb-2">{{ cardSubscriptionStats.pending }}</h2>
+                    <p class="text-muted text-uppercase fw-semibold small mb-0">Cartes bancaires</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+

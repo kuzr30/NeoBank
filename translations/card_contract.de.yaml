@@ -1,0 +1,151 @@
+card_contract:
+  # Titre du document
+  title: "Bankkarten-Abonnementvertrag Nr. %reference%"
+  
+  # Header et meta
+  header:
+    document_lang: "de"
+    watermark: "%company_name%"
+    
+  # Titre principal
+  main:
+    title: "BANKKARTEN-ABONNEMENTVERTRAG"
+    card_subtitle: "KARTE %card_type% %card_brand%"
+    
+  # Company info
+  company:
+    payment_institution: "Zahlungsinstitut"
+    share_capital: "Grundkapital : %amount% €"
+    head_office: "Hauptsitz : %address%"
+    siren: "SIREN : %number%"
+    ape_code: "APE-Code : %code%"
+    represented_by: "Vertreten durch den Geschäftsführer"
+    
+  # Contract info
+  contract:
+    number: "VERTRAG Nr. %reference%"
+    establishment_date: "Vertragsdatum: %date%"
+    signature_date: "Unterzeichnungsdatum: %date%"
+    
+  # Chapter I - Contracting Parties
+  chapter_one:
+    title: "Kapitel I - Die Vertragsparteien"
+    issuing_institution: "Das ausgebende Institut"
+    cardholder: "Der Karteninhaber"
+    hereinafter_institution: 'Im Folgenden „das Institut" genannt'
+    hereinafter_cardholder: 'Im Folgenden „der Karteninhaber" genannt'
+    residing_at: "Wohnhaft in:"
+    address_not_provided: "[Adresse nicht angegeben]"
+    postal_code_city: "[Postleitzahl] [Stadt]"
+    born_on: "Geboren am: %birth_date%"
+    phone: "Telefon: %phone%"
+    phone_not_provided: "[Nicht angegeben]"
+    email: "E-Mail: %email%"
+    parties_agreed: "Die Parteien haben folgendes vereinbart:"
+    
+  # Chapter II - Object and Characteristics
+  chapter_two:
+    title: "Kapitel II - Zweck und Eigenschaften der Karte"
+    article_1_title: "Artikel 1 - Vertragsgegenstand"
+    article_1_content: "Das Institut stellt dem Karteninhaber eine Bankkarte vom Typ %card_type% %card_brand% zur Verfügung, die Zahlungs- und Abhebungsvorgänge nach den nachstehend definierten Bedingungen ermöglicht."
+    
+    article_2_title: "Artikel 2 - Technische Eigenschaften"
+    table_card_type: "Kartentyp"
+    table_brand: "Marke"
+    table_technology: "Technologie"
+    table_technology_value: "Chip und kontaktlos"
+    table_validity: "Gültigkeit"
+    table_validity_value: "3 Jahre verlängerbar"
+    table_usage_zone: "Nutzungszone"
+    table_usage_zone_value: "Weltweit"
+    
+  # Chapter III - Financial Conditions
+  chapter_three:
+    title: "Kapitel III - Finanzielle Bedingungen"
+    article_3_title: "Artikel 3 - Gebühren und Beiträge"
+    table_designation: "Bezeichnung"
+    table_amount: "Betrag"
+    table_frequency: "Häufigkeit"
+    
+    activation_fees: "Aktivierungsgebühren"
+    annual_fees: "Jahresbeitrag"
+    opposition_fees: "Sperrgebühren"
+    card_renewal: "Kartenerneuerung"
+    replacement_fees: "Ersatzgebühren"
+    
+    frequency_unique: "Einmalig bei Eröffnung"
+    frequency_annual: "Jährlich"
+    frequency_per_incident: "Pro Vorfall"
+    frequency_at_expiry: "Bei Ablauf"
+    frequency_per_replacement: "Pro Ersatz"
+    
+    free: "Kostenlos"
+    
+    article_4_title: "Artikel 4 - Nutzungslimits"
+    daily_withdrawal_limit: "Tägliches Abhebungslimit"
+    monthly_payment_limit: "Monatliches Zahlungslimit"
+    contactless_payment: "Kontaktlose Zahlung"
+    contactless_amount: "50 € pro Transaktion"
+    limits_modification_note: "Diese Limits können auf Antrag des Karteninhabers geändert werden, vorbehaltlich der Zustimmung des Instituts."
+    
+  # Chapter IV - Usage Conditions
+  chapter_four:
+    title: "Kapitel IV - Nutzungsbedingungen"
+    security_code_title: "Sicherheit und Geheimcode"
+    security_code_content: "Der Karteninhaber verpflichtet sich, seinen Geheimcode geheim zu halten und ihn niemals zu notieren oder anderen mitzuteilen. Der Code darf niemals mit der Karte aufbewahrt werden."
+    
+    authorized_use_title: "Autorisierte Nutzung"
+    authorized_use_content: "Die Karte ist ausschließlich persönlich und darf nur vom Karteninhaber verwendet werden. Jede Nutzung durch eine unbefugte dritte Person führt zur Haftung des Karteninhabers."
+    
+    card_conservation_title: "Kartenaufbewahrung"
+    card_conservation_content: "Der Karteninhaber muss seine Karte sorgfältig aufbewahren und sie vor jeder betrügerischen Nutzung, Diebstahl, Verlust oder Beschädigung schützen."
+    
+    opposition_title: "Kartensperrung"
+    opposition_content: "Bei Verlust, Diebstahl oder betrügerischer Nutzung muss der Karteninhaber sofort eine Kartensperrung veranlassen, indem er den 24/7-Kundendienst unter der auf der Kartenrückseite angegebenen Nummer kontaktiert."
+    
+  # Chapter V - Responsibilities
+  chapter_five:
+    title: "Kapitel V - Verantwortlichkeiten und Garantien"
+    article_5_title: "Artikel 5 - Verantwortlichkeit des Karteninhabers"
+    cardholder_responsibility_1: "Der Karteninhaber ist für alle mit seiner Karte durchgeführten Transaktionen bis zum Datum und zur Uhrzeit der Sperrung verantwortlich."
+    cardholder_responsibility_2: "Bei betrügerischer Nutzung vor der Sperrung ist die Haftung des Karteninhabers auf 50 € begrenzt, außer bei grober Fahrlässigkeit."
+    cardholder_responsibility_3: "Der Karteninhaber garantiert die Richtigkeit der bei der Anmeldung angegebenen Informationen."
+    
+    article_6_title: "Artikel 6 - Verantwortlichkeit des Instituts"
+    institution_responsibility_1: "Das Institut verpflichtet sich, eine funktionsfähige und sichere Karte zur Verfügung zu stellen."
+    institution_responsibility_2: "Das Institut garantiert die Bearbeitung von Kartensperrungen 24/7."
+    institution_responsibility_3: "Das Institut gewährleistet die Verfügbarkeit seines Netzwerks unter den besten technischen Bedingungen."
+    
+  # Chapter VI - Duration and Termination
+  chapter_six:
+    title: "Kapitel VI - Laufzeit und Kündigung"
+    article_7_title: "Artikel 7 - Vertragslaufzeit"
+    contract_duration: "Dieser Vertrag wird für eine Laufzeit von 3 Jahren ab dem Unterzeichnungsdatum geschlossen. Er verlängert sich stillschweigend um jeweils ein Jahr, sofern er nicht von einer der Parteien gekündigt wird."
+    
+    article_8_title: "Artikel 8 - Kündigung"
+    termination_1: "Jede Partei kann den Vertrag jederzeit mit einer Kündigungsfrist von 2 Monaten kündigen."
+    termination_2: "Die Kündigung muss per Einschreiben mit Rückschein mitgeteilt werden."
+    termination_3: "Bei einer Kündigung muss die Karte vom Karteninhaber zurückgegeben oder vernichtet werden."
+    termination_4: "Bereits erhobene Gebühren werden nicht erstattet, außer bei Kündigung innerhalb von 14 Tagen (Widerrufsrecht)."
+    
+  # Chapter VII - General Provisions
+  chapter_seven:
+    title: "Kapitel VII - Allgemeine Bestimmungen"
+    article_9_title: "Artikel 9 - Anwendbares Recht und Gerichtsstand"
+    applicable_law: "Dieser Vertrag unterliegt deutschem Recht. Bei Streitigkeiten sind ausschließlich die deutschen Gerichte zuständig."
+    
+    article_10_title: "Artikel 10 - Vertragsänderung"
+    contract_modification: "Jede Änderung dieses Vertrags muss Gegenstand einer von beiden Parteien unterzeichneten Zusatzvereinbarung sein oder 2 Monate vor ihrem Inkrafttreten mitgeteilt werden."
+    
+    article_11_title: "Artikel 11 - Datenschutz"
+    data_protection: "Das Institut verpflichtet sich, die personenbezogenen Daten des Karteninhabers gemäß der Datenschutz-Grundverordnung (DSGVO) und dem Bundesdatenschutzgesetz zu verarbeiten."
+    
+  # Signatures
+  signatures:
+    cardholder_signature: "Der Karteninhaber"
+    institution_signature: "Das Institut"
+    general_director: "Vertreten durch den Geschäftsführer"
+    date_signature: "Datum und Unterschrift"
+    date_label: "Datum:"
+    signed_electronically: "Elektronisch unterzeichnet am %date%"
+    current_date: "Datum: %date%"

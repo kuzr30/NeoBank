@@ -1,0 +1,105 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_loans.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_loans:
+  # Meta tags
+  meta:
+    title: "My loans - %company_name%"
+    description: "Manage your loans and borrowings with %company_name%"
+
+  # Navigation
+  nav:
+    dashboard: "Dashboard"
+    loans: "Loans"
+    loan_detail: "Loan details"
+    back: "Back"
+
+  # Page headers
+  page:
+    title: "My loans"
+    subtitle: "View and manage all your current loans"
+    loan_detail_title: "Loan details"
+    
+  # Loan info
+  loan:
+    amount: "Borrowed amount"
+    remaining_balance: "Remaining capital owed"
+    monthly_payment: "Monthly payment"
+    interest_rate: "Interest rate"
+    duration: "Total duration"
+    remaining_duration: "Remaining duration"
+    start_date: "Start date"
+    end_date: "Expected end date"
+    next_payment_date: "Next payment date"
+    payment_day: "Payment day"
+    loan_type: "Loan type"
+    status: "Status"
+    account: "Associated account"
+    
+  # Loan types
+  types:
+    personal: "Personal loan"
+    mortgage: "Mortgage"
+    auto: "Auto loan"
+    student: "Student loan"
+    business: "Business loan"
+    consumer: "Consumer credit"
+    bridge: "Bridge loan"
+    renovation: "Home improvement loan"
+    
+  # Status
+  status:
+    active: "Active"
+    completed: "Repaid"
+    suspended: "Suspended"
+    in_default: "In default"
+    early_repayment: "Early repayment"
+    
+  # Payment info
+  payment:
+    payment_number: "Payment No."
+    payment_date: "Payment date"
+    amount: "Amount"
+    principal: "Principal"
+    interest: "Interest"
+    remaining_balance: "Remaining balance"
+    status: "Status"
+    
+  # Payment status
+  payment_status:
+    paid: "Paid"
+    pending: "Pending"
+    overdue: "Overdue"
+    failed: "Failed"
+    
+  # Actions
+  actions:
+    view_details: "View details"
+    view_payments: "View payments"
+    view_amortization: "View amortization schedule"
+    make_payment: "Make payment"
+    early_repayment: "Early repayment"
+    download_statement: "Download statement"
+    contact_advisor: "Contact advisor"
+    
+  # Amortization table
+  amortization:
+    title: "Amortization schedule"
+    payment_number: "No."
+    date: "Date"
+    payment: "Payment"
+    principal: "Principal"
+    interest: "Interest"
+    remaining: "Remaining capital"
+    
+  # Messages
+  messages:
+    no_loans: "No current loans"
+    access_denied: "Access denied to this loan"
+    payment_success: "Payment made successfully"
+    payment_failed: "Payment failed"
+    
+  # Currency
+  currency: "€"

@@ -1,0 +1,50 @@
+register:
+  title: "Ihr Konto erstellen"
+  subtitle: "Treten Sie %company_name% bei und erhalten Sie Zugang zu unseren innovativen Bankdienstleistungen mit einem vereinfachten und sicheren Verfahren"
+  
+  sections:
+    personal_info: "Persönliche Informationen"
+    connection_info: "Anmeldeinformationen"
+    terms: "Nutzungsbedingungen"
+  fields:
+    first_name_label: "Vorname"
+    first_name_placeholder: "Ihr Vorname"
+    last_name_label: "Nachname"
+    last_name_placeholder: "Ihr Nachname"
+    email_label: "E-Mail-Adresse"
+    email_placeholder: "ihre.email@beispiel.com"
+    password_label: "Passwort"
+    password_placeholder: "••••••••"
+    password_confirm_label: "Passwort bestätigen"
+    password_confirm_placeholder: "••••••••"
+    agree_terms: 'Ich akzeptiere die <a href="#" class="form-link">Nutzungsbedingungen</a> und die <a href="#" class="form-link">Datenschutzrichtlinie</a>'
+    newsletter: "Ich möchte Neuigkeiten und Angebote von %company_name% per E-Mail erhalten"
+  buttons:
+    create_account: "Mein Konto erstellen"
+    login: "Anmelden"
+    
+  links:
+    terms_of_use: "Nutzungsbedingungen"
+    privacy_policy: "Datenschutzrichtlinie"
+    already_account: "Sie haben bereits ein Konto?"
+    back_home: "Zurück zur Startseite"
+  security:
+    ssl_secure: "SSL-gesichert"
+    data_protected: "Daten geschützt"
+    support_24_7: "24/7-Support"
+  messages:
+    account_created: "Ihr Konto muss von unserem Team aktiviert werden, bevor Sie sich zum ersten Mal anmelden können. Diese Validierung dauert normalerweise weniger als 24 Stunden."
+errors:
+  first_name_required: "Der Vorname ist erforderlich"
+  first_name_min: "Der Vorname muss mindestens {{ limit }} Zeichen lang sein"
+  first_name_max: "Der Vorname darf nicht mehr als {{ limit }} Zeichen haben"
+  last_name_required: "Der Nachname ist erforderlich"
+  last_name_min: "Der Nachname muss mindestens {{ limit }} Zeichen lang sein"
+  last_name_max: "Der Nachname darf nicht mehr als {{ limit }} Zeichen haben"
+  email_required: "Die E-Mail ist erforderlich"
+  email_invalid: "Die E-Mail ist nicht gültig"
+  email_exists: "Es gibt bereits ein Konto mit dieser E-Mail"
+  password_required: "Das Passwort ist erforderlich"
+  password_min: "Ihr Passwort muss mindestens {{ limit }} Zeichen enthalten"
+  password_mismatch: "Die Passwörter stimmen nicht überein"
+  terms_required: "Sie müssen unsere Bedingungen akzeptieren"

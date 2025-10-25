@@ -1,0 +1,110 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: personal_loan.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+personal_loan:
+  page:
+    title: "Personal Loan"
+    description: "Finance all your personal projects with our personal loan. Flexible solution without proof of use."
+  
+  hero:
+    class: "credit-detail-hero--personal"
+    taux: "5.2%"
+    montant: "50,000€"
+    duree: "10 years"
+    title: "Personal Loan"
+    subtitle: "Finance all your projects without justification"
+  
+  section_1:
+    title: "What is a personal loan?"
+    content:
+      paragraph_1: "A personal loan is an unallocated credit that allows you to finance all your projects without having to justify the use of funds: vehicle, equipment, wedding, travel or any other expense."
+      paragraph_2: "A flexible and fast financing solution, it offers you total freedom of use while benefiting from advantageous conditions and repayment adapted to your budget."
+  
+  features:
+    title: "Loan features"
+    montant:
+      value: "Up to €50,000"
+      detail: "According to your income"
+    duree:
+      value: "From 12 months to 10 years"
+      detail: "Flexible duration"
+    taux:
+      value: "From {rate}% APR*"
+      detail: "Advantageous fixed rate"
+    garantie:
+      value: "Without guarantee"
+      detail: "Signature only"
+  
+  section_3:
+    title: "Personal loan benefits"
+    advantages:
+      liberte:
+        title: "Total freedom"
+        description: "No justification required for use of funds"
+      rapidite:
+        title: "Quick response"
+        description: "Decision within 48 hours maximum"
+      deblocage:
+        title: "Immediate release"
+        description: "Funds available upon acceptance"
+      taux_fixe:
+        title: "Fixed rate"
+        description: "Constant monthly payments throughout the duration"
+      remboursement:
+        title: "Early repayment"
+        description: "Possible without penalty"
+  
+  section_4:
+    title: "Eligibility conditions"
+    profil:
+      title: "Borrower profile"
+      items:
+        majeur: "Be of legal age and reside in France"
+        revenus: "Provide proof of regular income"
+        ficp: "Not registered with FICP"
+        endettement: "Debt ratio below 35%"
+    conditions:
+      title: "General conditions"
+      items:
+        age: "Maximum age: 75 years at end of loan"
+        domiciliation: "Bank domiciliation desired"
+        assurance: "Borrower insurance available"
+        frais: "Processing fees apply"
+  
+  section_5:
+    title: "Required documents"
+    identite:
+      title: "Identity documents"
+      items:
+        carte: "National identity card or passport"
+        domicile: "Proof of residence less than 3 months old"
+        famille: "Family record book (if married or in civil partnership)"
+    revenus:
+      title: "Proof of income"
+      items:
+        salaires: "Last 3 pay slips"
+        impots: "Last 2 tax notices"
+        contrat: "Employment contract or employer certificate"
+        rib: "Bank account details"
+    bancaires:
+      title: "Banking documents"
+      items:
+        releves: "Last 3 account statements"
+        credits: "Proof of other ongoing credits"
+        amortissement: "Amortization schedule of existing loans"
+        charges: "Proof of current charges"
+  
+  legal:
+    details:
+      title: "Important legal information"
+      taeg: "<strong>*APR:</strong> Representative example: for a personal loan of €15,000 over 4 years at APR of 5.2%, you repay 48 monthly payments of €347, i.e. a total amount of €16,656 (cost of credit: €1,656)."
+      simplicite: "<strong>Simplicity:</strong> Simple application and quick response within 48 business hours."
+      flexibilite: "<strong>Flexibility:</strong> Early repayment possible without fees or penalties."
+      retractation: "<strong>Withdrawal period:</strong> You have 14 days to cancel your credit after acceptance of the offer."
+      utilisation: "<strong>Free use:</strong> No justification for use of funds is required."
+  
+  cta:
+    title: "Need quick financing?"
+    subtitle: "Get your personal loan with ease"

@@ -1,0 +1,219 @@
+# Traducciones para la simulación de crédito - Español
+credit_simulation:
+  title: "Simulador de crédito"
+  subtitle: "Calcule su crédito en pocos clics"
+  amortization_title: "Tabla de amortización"
+  
+  # Hero Section
+  hero:
+    title: "Simulador de crédito"
+    subtitle: "Obtenga su estimación en 2 minutos"
+    description: "Calcule sus mensualidades y descubra las mejores condiciones para su proyecto"
+    disclaimer: "Simulación gratuita y sin compromiso"
+
+  # Formulario
+  form:
+    amount:
+      label: "Monto del crédito"
+      help: "Monto deseado entre 1 000 € y 500 000 €"
+      placeholder: "Ej: 50 000"
+      currency: "€"
+    
+    credit_type:
+      label: "Tipo de crédito"
+      help: "Seleccione el tipo de crédito adaptado a su proyecto"
+      placeholder: "Elija un tipo de crédito"
+    duration:
+      label: "Duración del crédito"
+      help: "Duración de reembolso deseada"
+      placeholder: "Seleccione una duración"
+    duration_unit:
+      label: "Unidad de duración"
+      help: "Meses o años"
+    rate_info: "Tasa indicativa:"
+    calculate_button: "Calcular mi mensualidad"
+    calculating: "Cálculo en curso..."
+  # Tipos de crédito
+  credit_types:
+    immobilier:
+      label: "Crédito Inmobiliario"
+      description: "Financiamiento para la compra de un bien inmobiliario"
+    auto:
+      label: "Crédito Auto"
+      description: "Financiamiento para la compra de un vehículo"
+    consommation:
+      label: "Crédito al Consumo"
+      description: "Crédito para sus proyectos personales"
+    travaux:
+      label: "Crédito Obras"
+      description: "Financiamiento para sus trabajos de renovación"
+    professionnel:
+      label: "Crédito Profesional"
+      description: "Crédito para sus proyectos profesionales"
+    personal:
+      label: "Préstamo Personal"
+      description: "Préstamo sin justificativo de uso"
+    home_improvement:
+      label: "Crédito Obras/Renovación"
+    debt_consolidation:
+      label: "Compra de Crédito"
+      description: "Agrupación de sus créditos existentes"
+    mortgage:
+      label: "Préstamo Hipotecario"
+      description: "Crédito garantizado por una hipoteca"
+    renouvelable:
+      label: "Crédito Renovable"
+      description: "Reserva de dinero reutilizable a voluntad"
+    etudiant:
+      label: "Préstamo Estudiantil"
+      description: "Financiamiento de estudios superiores"
+    relais:
+      label: "Préstamo Puente"
+      description: "Anticipo de fondos esperando la venta de un bien inmobiliario"
+    microcredit:
+      label: "Microcrédito Personal"
+      description: "Pequeños montos para personas excluidas del crédito bancario clásico"
+    leasing:
+      label: "Arrendamiento financiero (Leasing)"
+      description: "Alquiler con opción de compra (coche, material profesional)"
+    voyage:
+      label: "Crédito Viaje"
+      description: "Financiamiento para sus proyectos de viaje"
+  # Unidades de duración
+  duration_units:
+    months: "Meses"
+    years: "Años"
+  # Duraciones
+  durations:
+    twelve_months: "12 meses"
+    twenty_four_months: "24 meses" 
+    thirty_six_months: "3 años"
+    forty_eight_months: "4 años"
+    sixty_months: "5 años"
+    seventy_two_months: "6 años"
+    eighty_four_months: "7 años"
+    ninety_six_months: "8 años"
+    one_hundred_twenty_months: "10 años"
+    one_hundred_eighty_months: "15 años"
+    two_hundred_forty_months: "20 años"
+    three_hundred_months: "25 años"
+  # Resultados
+  results:
+    title: "Su simulación"
+    success_title: "¡Simulación exitosa!"
+    monthly_payment: "Mensualidad"
+    total_amount: "Monto total"
+    total_interest: "Coste del crédito"
+    rate: "Tasa aplicada"
+    duration: "Duración"
+    summary:
+      title: "Resumen"
+      amount_borrowed: "Monto prestado"
+      monthly_payment: "Mensualidad"
+      duration: "Duración"
+      rate: "Tasa"
+      total_cost: "Monto total a reembolsar"
+      total_interest: "Intereses"
+      insurance_rate: "Tasa seguro"
+      insurance_monthly: "de los cuales seguro"
+      interest_monthly: "de los cuales intereses"
+      insurance_total: "de los cuales seguro"
+      interest_total: "de los cuales intereses"
+      per_month: "/mes"
+      per_year: "/año"
+    actions:
+      apply: "Hacer una solicitud"
+      modify: "Modificar la simulación"
+      amortization_table: "Ver la tabla de amortización"
+      save: "Guardar"
+      share: "Compartir"
+  # Tabla de amortización
+  amortization:
+    title: "Tabla de amortización"
+    subtitle: "Detalle del reembolso mes por mes"
+    back_to_simulation: "Volver a la simulación"
+    summary:
+      amount_borrowed: "Capital prestado"
+      monthly_payment: "Mensualidad"
+      total_interest: "Total de intereses"
+      total_amount: "Monto total"
+    table:
+      month: "Mes"
+      payment: "Mensualidad"
+      interest: "Intereses"
+      principal: "Capital"
+      balance: "Capital restante"
+      print: "Imprimir"
+      download: "Descargar"
+      back: "Volver"
+      show_amortization: "Ver la tabla de amortización"
+      apply_now: "Hacer una solicitud"
+  # Mensajes de error
+  errors:
+    title: "Error de simulación"
+    invalid_data: "Datos inválidos. Por favor verifique su entrada."
+    amount_required: "El monto es obligatorio"
+    amount_too_low: "El monto mínimo es de 1 000 €"
+    amount_too_high: "El monto máximo es de 500 000 €"
+    duration_required: "La duración es obligatoria"
+    duration_too_low: "La duración mínima es de 12 meses"
+    duration_too_high: "La duración máxima depende del tipo de crédito"
+    credit_type_required: "El tipo de crédito es obligatorio"
+    invalid_credit_type: "Tipo de crédito inválido"
+    calculation_error: "Error durante el cálculo"
+    actions:
+      retry: "Reintentar"
+      modify: "Modificar los parámetros"
+    tips:
+      title: "Consejos"
+      tip1: "Verifique que el monto esté comprendido entre 1 000 € y 500 000 €"
+      tip2: "Asegúrese de que la duración sea adaptada al tipo de crédito"
+      tip3: "Contacte un consejero para montos importantes"
+      tip4: "Consulte nuestros términos generales para más información"
+  # Mensajes legales
+  legal:
+    title: "Información legal"
+    text: "Esta simulación se proporciona a título indicativo. Las tasas y condiciones definitivas serán determinadas durante su solicitud de crédito, sujeto a aceptación de su expediente."
+    credit_warning: "Un crédito le compromete y debe ser reembolsado. Verifique sus capacidades de reembolso antes de comprometerse."
+    licensed_bank: "Establecimiento de crédito autorizado"
+    insurance_broker: "Corredor de seguros"
+    badges:
+      acpr: "Autorizado ACPR"
+      guarantee_fund: "Fondo de garantía"
+      security: "Transacciones seguras"
+  # Mensajes de validación
+  validation:
+    processing: "Procesamiento en curso..."
+    success: "Simulación calculada exitosamente"
+    time_estimate: "Tiempo estimado: 2 minutos"
+  # Mensajes JavaScript
+  js:
+    errors:
+      incomplete_fields: "Por favor complete todos los campos correctamente."
+      calculation_error: "Error durante el cálculo de la simulación"
+      invalid_amount: "El monto ingresado es inválido"
+      invalid_duration: "La duración ingresada es inválida"
+      
+    currency:
+      symbol: "€"
+      per_month: "€/mes"
+    formatting:
+      zero_value: "0"
+      zero_currency: "0€"
+      zero_per_month: "0€/mes"
+    console:
+      connected: "Controlador de simulación de crédito conectado"
+      calculation_data: "Cálculo:"
+      calculation_error: "Error durante el cálculo:"
+      requesting_rate: "Solicitud de tasa personalizada en curso..."
+      contact_advisor: "Contacte un consejero para obtener una tasa personalizada"
+    # CTA Section
+  cta:
+    view_amortization_table: "Ver la tabla de amortización"
+    apply_for_credit: "Hacer mi solicitud"
+    monthly_details: "Detalle mensual de su reembolso"
+  
+  # Términos comunes
+  common:
+    months: "meses"
+    years: "años"

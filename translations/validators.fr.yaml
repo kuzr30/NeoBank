@@ -1,0 +1,88 @@
+register:
+  errors:
+    first_name_required: "Le prénom est obligatoire"
+    first_name_min: "Le prénom doit faire au moins {{ limit }} caractères"
+    first_name_max: "Le prénom ne peut pas dépasser {{ limit }} caractères"
+    last_name_required: "Le nom est obligatoire"
+    last_name_min: "Le nom doit faire au moins {{ limit }} caractères"
+    last_name_max: "Le nom ne peut pas dépasser {{ limit }} caractères"
+    email_required: "L'email est obligatoire"
+    email_invalid: "L'email n'est pas valide"
+    email_exists: "Il existe déjà un compte avec cet email"
+    password_required: "Le mot de passe est obligatoire"
+    password_min: "Votre mot de passe doit contenir au moins {{ limit }} caractères"
+    password_mismatch: "Les mots de passe ne correspondent pas"
+    terms_required: "Vous devez accepter nos conditions"
+
+validators:
+  european_iban:
+    message: "L'IBAN \"{{ value }}\" n'est pas valide."
+    invalid_format: "L'IBAN doit respecter le format européen."
+  sufficient_balance:
+    message: "Le montant ne peut pas dépasser votre solde disponible de {{ balance }} €"
+  devis_form:
+    lastname_required: "Le nom est obligatoire"
+    lastname_max: "Le nom ne peut pas dépasser {{ limit }} caractères"
+    firstname_required: "Le prénom est obligatoire"
+    firstname_max: "Le prénom ne peut pas dépasser {{ limit }} caractères"
+    email_required: "L'email est obligatoire"
+    email_invalid: "Veuillez saisir un email valide"
+    phone_required: "Le téléphone est obligatoire"
+    phone_invalid: "Veuillez saisir un numéro de téléphone valide"
+    insurance_type_required: "Veuillez sélectionner un type d'assurance"
+    contact_preference_invalid: "Veuillez choisir une préférence de contact valide"
+    comments_max: "Les commentaires ne peuvent pas dépasser {{ limit }} caractères"
+
+# Messages de validation pour le domaine credit_step_forms
+# Étape 1 - Champs personnels
+step1.fields.firstname.errors.required: "Le prénom est obligatoire"
+step1.fields.lastname.errors.required: "Le nom de famille est obligatoire"
+step1.fields.email.errors.required: "L'adresse e-mail est obligatoire"
+step1.fields.email.errors.invalid: "Veuillez saisir une adresse e-mail valide"
+step1.fields.phone.errors.required: "Le numéro de téléphone est obligatoire"
+step1.fields.phone.errors.invalid: "Veuillez saisir un numéro de téléphone valide"
+step1.fields.birth_date.errors.required: "La date de naissance est obligatoire"
+step1.fields.birth_date.errors.age_restriction: "Vous devez être majeur pour faire une demande de crédit"
+step1.fields.nationality.errors.required: "La nationalité est obligatoire"
+step1.fields.marital_status.errors.required: "La situation familiale est obligatoire"
+step1.fields.marital_status.errors.invalid: "Situation familiale invalide"
+step1.fields.dependents.errors.required: "Le nombre de personnes à charge est obligatoire"
+step1.fields.dependents.errors.invalid_range: "Le nombre de personnes à charge doit être entre 0 et 20"
+
+# Étape 1 - Section adresse
+step1.address_section.address.errors.required: "L'adresse est obligatoire"
+step1.address_section.city.errors.required: "La ville est obligatoire"
+step1.address_section.postal_code.errors.required: "Le code postal est obligatoire"
+step1.address_section.postal_code.errors.invalid: "Le code postal doit contenir 5 chiffres"
+step1.address_section.country.errors.required: "Le pays est obligatoire"
+step1.address_section.housing_type.errors.required: "Le type de logement est obligatoire"
+step1.address_section.housing_type.errors.invalid: "Type de logement invalide"
+
+# Étape 2 - Situation financière
+step2.fields.monthly_income.errors.required: "Les revenus mensuels sont obligatoires"
+step2.fields.monthly_income.errors.min_value: "Le revenu mensuel minimum requis est de 1000€"
+step2.fields.employment_type.errors.required: "Le type d'emploi est obligatoire"
+step2.fields.employment_type.errors.invalid: "Type d'emploi invalide"
+step2.fields.monthly_expenses.errors.required: "Les charges mensuelles sont obligatoires"
+step2.fields.monthly_expenses.errors.min_value: "Les charges ne peuvent être négatives"
+step2.fields.existing_loans.errors.min_value: "Le montant ne peut être négatif"
+
+# Étape 3 - Configuration du crédit
+step3.credit_configuration.loan_amount.errors.required: "Le montant du crédit est obligatoire"
+step3.credit_configuration.loan_amount.errors.invalid_range: "Le montant du crédit doit être entre 3000€ et 30 000 000€"
+step3.credit_configuration.duration.errors.required: "La durée du crédit est obligatoire"
+step3.credit_configuration.duration.errors.min_value: "La durée doit être de minimum 2 mois"
+
+# Étape 3 - Consentements
+step3.consent.terms_accepted.errors.required: "Vous devez accepter les conditions générales"
+step3.consent.data_processing_accepted.errors.required: "Vous devez accepter le traitement de vos données personnelles"
+
+# Validateurs IBAN supplémentaires
+european_iban:
+  invalid_checksum: "L'IBAN \"{{ value }}\" a une somme de contrôle invalide."
+  non_european: "L'IBAN \"{{ value }}\" n'appartient pas à un pays européen accepté."
+  
+iban_validator:
+  message: "L'IBAN \"{{ value }}\" n'est pas valide."
+  invalid_format: "L'IBAN doit être au format français (FR suivi de 25 caractères)."
+  invalid_checksum: "L'IBAN \"{{ value }}\" a une somme de contrôle invalide."

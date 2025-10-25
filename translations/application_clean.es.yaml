@@ -1,0 +1,269 @@
+credit_application:
+  messages:
+    step_completed: "Paso completado"
+    complete_previous_steps: "Por favor complete los pasos anteriores"
+    complete_all_steps: "Todos los pasos deben estar completados"
+    form_errors: "Por favor corrija {count} error{plural} en el formulario."
+    application_submitted: "Su solicitud ha sido enviada con éxito"
+    confirmation_not_found: "Confirmación no encontrada"
+    technical_error: "Ha ocurrido un error técnico. Por favor inténtelo de nuevo."
+
+  steps:
+    step1:
+      title: "Información personal"
+      subtitle: "Introduzca sus datos personales"
+      description: "Esta información nos permitirá procesar su solicitud de crédito"
+      personal_info:
+        title: "Información básica"
+        first_name:
+          label: "Nombre"
+          placeholder: "Su nombre"
+          help: "Introduzca su nombre tal como aparece en sus documentos oficiales"
+          errors:
+            required: "El nombre es obligatorio"
+            min_length: "El nombre debe contener al menos 2 caracteres"
+            max_length: "El nombre no puede superar los 50 caracteres"
+            invalid_format: "El nombre solo puede contener letras, espacios, guiones y apóstrofes"
+        last_name:
+          label: "Apellido"
+          placeholder: "Su apellido"
+          help: "Introduzca su apellido tal como aparece en sus documentos oficiales"
+          errors:
+            required: "El apellido es obligatorio"
+            min_length: "El apellido debe contener al menos 2 caracteres"
+            max_length: "El apellido no puede superar los 50 caracteres"
+            invalid_format: "El apellido solo puede contener letras, espacios, guiones y apóstrofes"
+        email:
+          label: "Dirección de email"
+          placeholder: "su.email@ejemplo.com"
+          help: "Use una dirección de email válida donde podamos contactarle"
+          errors:
+            required: "La dirección de email es obligatoria"
+            invalid: "Por favor ingrese una dirección de email válida"
+        phone_number:
+          label: "Número de teléfono"
+          placeholder: "+34 1 23 45 67 89"
+          help: "Ingrese su número de teléfono móvil o fijo"
+          errors:
+            required: "El número de teléfono es obligatorio"
+            invalid: "Por favor ingrese un número de teléfono válido"
+        birth_date:
+          label: "Fecha de nacimiento"
+          help: "Seleccione su fecha de nacimiento (debe ser mayor de edad)"
+          errors:
+            required: "La fecha de nacimiento es obligatoria"
+            underage: "Debe ser mayor de edad para hacer una solicitud de crédito"
+        nationality:
+          label: "Nacionalidad"
+          placeholder: "Seleccione su nacionalidad"
+          help: "Indique su nacionalidad actual"
+          choices:
+            french: "Francesa"
+            eu: "Unión Europea"
+            non_eu: "Fuera de la Unión Europea"
+          errors:
+            required: "La nacionalidad es obligatoria"
+        birth_country:
+          label: "País de nacimiento"
+          placeholder: "España"
+          help: "Indique el país donde nació"
+          errors:
+            required: "El país de nacimiento es obligatorio"
+        birth_city:
+          label: "Ciudad de nacimiento"
+          placeholder: "Madrid"
+          help: "Indique la ciudad donde nació"
+          errors:
+            required: "La ciudad de nacimiento es obligatoria"
+
+    step2:
+      title: "Dirección y residencia"
+      subtitle: "Información sobre su lugar de residencia"
+      description: "Necesitamos conocer su dirección actual"
+      address_info:
+        address:
+          label: "Dirección"
+          placeholder: "123 Calle de la República"
+          help: "Ingrese su dirección completa de residencia"
+          errors:
+            required: "La dirección es obligatoria"
+            min_length: "La dirección debe contener al menos 5 caracteres"
+        postal_code:
+          label: "Código postal"
+          placeholder: "28001"
+          help: "Ingrese el código postal de su ciudad de residencia"
+          errors:
+            required: "El código postal es obligatorio"
+            invalid_format: "El código postal debe estar en formato español (5 dígitos)"
+        city:
+          label: "Ciudad"
+          placeholder: "Madrid"
+          help: "Indique la ciudad donde reside actualmente"
+          errors:
+            required: "La ciudad es obligatoria"
+        country:
+          label: "País"
+          placeholder: "España"
+          errors:
+            required: "El país es obligatorio"
+
+    step3:
+      title: "Situación profesional"
+      subtitle: "Información sobre su empleo e ingresos"
+      description: "Esta información nos ayuda a evaluar su capacidad de reembolso"
+      professional_info:
+        employment_status:
+          label: "Estado profesional"
+          choices:
+            employee: "Asalariado(a)"
+            self_employed: "Independiente"
+            retired: "Jubilado(a)"
+            unemployed: "Sin empleo"
+            student: "Estudiante"
+          errors:
+            required: "El estado profesional es obligatorio"
+        company_name:
+          label: "Nombre del empleador"
+          placeholder: "Nombre de su empresa"
+          errors:
+            required: "El nombre del empleador es obligatorio"
+        monthly_income:
+          label: "Ingresos mensuales netos"
+          placeholder: "3000"
+          help: "Indique sus ingresos mensuales netos en euros"
+          errors:
+            required: "Los ingresos mensuales son obligatorios"
+            min_value: "El monto debe ser superior a 0"
+
+    step4:
+      title: "Información bancaria"
+      subtitle: "Su banco actual"
+      description: "Información sobre su cuenta bancaria principal"
+      banking_info:
+        current_bank:
+          label: "Banco actual"
+          placeholder: "Nombre de su banco"
+          errors:
+            required: "El nombre del banco es obligatorio"
+        account_duration:
+          label: "Antigüedad de la cuenta"
+          choices:
+            less_than_1_year: "Menos de un año"
+            between_1_and_3_years: "Entre 1 y 3 años"
+            more_than_3_years: "Más de 3 años"
+          errors:
+            required: "La antigüedad de la cuenta es obligatoria"
+
+    credit_details:
+      title: "Detalles del crédito"
+      subtitle: "Información sobre su solicitud"
+      description: "Especifique las características del crédito deseado"
+      credit_amount:
+        label: "Monto deseado"
+        placeholder: "50000"
+        help: "Monto en euros"
+        errors:
+          required: "El monto del crédito es obligatorio"
+          min_value: "El monto mínimo es de 1 000 €"
+          max_value: "El monto máximo es de 200 000 €"
+      credit_duration:
+        label: "Duración deseada"
+        choices:
+          12_months: "12 meses"
+          24_months: "24 meses"
+          36_months: "36 meses"
+          60_months: "60 meses"
+          120_months: "120 meses"
+        errors:
+          required: "La duración del crédito es obligatoria"
+
+  navigation:
+    back: "Volver"
+    next: "Siguiente"
+    previous: "Anterior"
+    submit: "Enviar la solicitud"
+    title: "Solicitud de crédito"
+    step_progress: "Paso {current} de {total}"
+    continue: "Continuar"
+
+  summary:
+    title: "Resumen de su solicitud"
+    sections:
+      personal: "Información personal"
+      address: "Dirección"
+      professional: "Situación profesional"
+      banking: "Información bancaria"
+      credit: "Detalles del crédito"
+
+  common:
+    months: "meses"
+
+  confirmation:
+    title: "Solicitud enviada con éxito"
+    subtitle: "Hemos recibido correctamente su solicitud de crédito"
+    reference: "Referencia de su solicitud"
+    reference_text: "Conserve cuidadosamente este número de referencia: {reference}"
+    summary:
+      title: "Resumen de su solicitud"
+      amount: "Monto solicitado: {amount} €"
+      duration: "Duración: {duration} meses"
+      monthly_payment: "Cuota mensual estimada: {payment} €"
+    next_steps:
+      title: "Próximos pasos"
+      step1:
+        title: "Solicitud recibida"
+        description: "Su solicitud ha sido registrada y está siendo procesada"
+        time: "Ahora"
+      step2:
+        title: "Estudio de su expediente"
+        description: "Nuestros expertos analizan su solicitud"
+        time: "En 24h"
+      step3:
+        title: "Toma de contacto"
+        description: "Un asesor le contactará para finalizar su expediente"
+        time: "En 48h"
+      step4:
+        title: "Finalización del contrato"
+        description: "Firma y puesta en marcha de su crédito"
+        time: "En 7 días"
+
+  actions:
+    new_simulation: "Nueva simulación"
+    print: "Imprimir"
+
+  forms:
+    personal_info:
+      title: "Información personal"
+    address_info:
+      title: "Dirección"
+    professional_info:
+      title: "Situación profesional"
+    banking_info:
+      title: "Información bancaria"
+    bank_validation:
+      title: "Validación bancaria"
+    consents:
+      title: "Consentimientos"
+
+navigation:
+  home: "Inicio"
+  simulation: "Simulación"
+  application: "Solicitud"
+  about: "Acerca de"
+  contact: "Contacto"
+  language: "Español"
+
+buttons:
+  next: "Siguiente"
+  previous: "Anterior"
+  submit: "Enviar"
+  cancel: "Cancelar"
+  back_home: "Volver al inicio"
+  start_application: "Comenzar la solicitud"
+
+general:
+  loading: "Cargando..."
+  optional: "Opcional"
+  required: "Obligatorio"
+  "True": "Sí"
+  "False": "No"

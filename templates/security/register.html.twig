@@ -1,0 +1,665 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'register.title'|trans({}, 'register') }} - SEDEF BANK{% endblock %}
+
+{% block body %}
+<div class="auth-page">
+    <div class="auth-container auth-container--wide">
+        <div class="auth-card">
+            <!-- Logo et En-tête -->
+            <div class="auth-header">
+                <div class="auth-logo">
+                    {{ ux_icon('heroicons:user-plus', {'class': 'auth-logo-icon'}) }}
+                </div>
+                <h1 class="auth-title">{{ 'register.title'|trans({}, 'register') }}</h1>
+                <p class="auth-subtitle">{{ 'register.subtitle'|trans({}, 'register') }}</p>
+            </div>
+
+            {{ form_start(registrationForm, {'attr': {'class': 'auth-form', 'data-controller': 'form-validation'}}) }}
+                
+                <!-- Informations personnelles -->
+                <div class="form-section">
+                    <h3 class="form-section-title">
+                        {{ ux_icon('heroicons:identification', {'class': 'section-icon'}) }}
+                        {{ 'register.sections.personal_info'|trans({}, 'register') }}
+                    </h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            {{ form_label(registrationForm.firstName, null, {'label_attr': {'class': 'form-label'}}) }}
+                            <div class="form-input-wrapper">
+                                {{ ux_icon('heroicons:user', {'class': 'form-input-icon'}) }}
+                                {{ form_widget(registrationForm.firstName, {'attr': {'class': 'form-input', 'placeholder': 'register.fields.first_name_placeholder'|trans({}, 'register')}}) }}
+                            </div>
+                            <span class="form-error-wrapper">{{ form_errors(registrationForm.firstName) }}</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            {{ form_label(registrationForm.lastName, null, {'label_attr': {'class': 'form-label'}}) }}
+                            <div class="form-input-wrapper">
+                                {{ ux_icon('heroicons:user', {'class': 'form-input-icon'}) }}
+                                {{ form_widget(registrationForm.lastName, {'attr': {'class': 'form-input', 'placeholder': 'register.fields.last_name_placeholder'|trans({}, 'register')}}) }}
+                            </div>
+                            <span class="form-error-wrapper">{{ form_errors(registrationForm.lastName) }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Informations de connexion -->
+                <div class="form-section">
+                    <h3 class="form-section-title">
+                        {{ ux_icon('heroicons:envelope', {'class': 'section-icon'}) }}
+                        {{ 'register.sections.connection_info'|trans({}, 'register') }}
+                    </h3>
+                    
+                    <div class="form-group">
+                        {{ form_label(registrationForm.email, null, {'label_attr': {'class': 'form-label'}}) }}
+                        <div class="form-input-wrapper">
+                            {{ ux_icon('heroicons:at-symbol', {'class': 'form-input-icon'}) }}
+                            {{ form_widget(registrationForm.email, {'attr': {'class': 'form-input', 'placeholder': 'register.fields.email_placeholder'|trans({}, 'register')}}) }}
+                        </div>
+                        <span class="form-error-wrapper">{{ form_errors(registrationForm.email) }}</span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group" 
+                             data-controller="password-toggle form-validation"
+                             data-password-toggle-input-value="password1">
+                            {{ form_label(registrationForm.plainPassword.first, null, {'label_attr': {'class': 'form-label'}}) }}
+                            <div class="form-input-wrapper">
+                                {{ ux_icon('heroicons:lock-closed', {'class': 'form-input-icon'}) }}
+                                {{ form_widget(registrationForm.plainPassword.first, {'attr': {'class': 'form-input', 'placeholder': 'register.fields.password_placeholder'|trans({}, 'register'), 'id': 'password1', 'data-password-toggle-target': 'input'}}) }}
+                                <button type="button" 
+                                        class="form-toggle-password" 
+                                        data-action="click->password-toggle#toggle">
+                                    <svg class="toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-password-toggle-target="icon">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="form-error-wrapper">{{ form_errors(registrationForm.plainPassword.first) }}</span>
+                        </div>
+
+                        <div class="form-group" 
+                             data-controller="password-toggle form-validation"
+                             data-password-toggle-input-value="password2">
+                            {{ form_label(registrationForm.plainPassword.second, null, {'label_attr': {'class': 'form-label'}}) }}
+                            <div class="form-input-wrapper">
+                                {{ ux_icon('heroicons:lock-closed', {'class': 'form-input-icon'}) }}
+                                {{ form_widget(registrationForm.plainPassword.second, {'attr': {'class': 'form-input', 'placeholder': 'register.fields.password_confirm_placeholder'|trans({}, 'register'), 'id': 'password2', 'data-password-toggle-target': 'input', 'data-form-validation-target': 'passwordConfirm'}}) }}
+                                <button type="button" 
+                                        class="form-toggle-password" 
+                                        data-action="click->password-toggle#toggle">
+                                    <svg class="toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-password-toggle-target="icon">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="form-error-wrapper">{{ form_errors(registrationForm.plainPassword.second) }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conditions d'utilisation -->
+                <div class="form-section">
+                    <div class="form-group">
+                        <div class="form-checkbox-group">
+                            {{ form_widget(registrationForm.agreeTerms, {'attr': {'class': 'checkbox-input', 'id': 'agreeTerms'}}) }}
+                            <label for="agreeTerms" class="checkbox-label">
+                                {{ 'register.fields.agree_terms'|trans({}, 'register')|raw }}
+                            </label>
+                        </div>
+                        <span class="form-error-wrapper">{{ form_errors(registrationForm.agreeTerms) }}</span>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-checkbox-group">
+                            <input type="checkbox" class="checkbox-input" id="newsletter">
+                            <label for="newsletter" class="checkbox-label">
+                                {{ 'register.fields.newsletter'|trans({}, 'register') }}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nouveau compte créé ? -->
+                {% if app.request.get('created') %}
+                    <div class="auth-alert auth-alert--success">
+                        {{ ux_icon('heroicons:check-circle', {'class': 'auth-alert-icon'}) }}
+                        {{ 'register.messages.account_created'|trans({}, 'register') }}
+                    </div>
+                {% endif %}
+
+                <button type="submit" class="auth-btn auth-btn--primary">
+                    {{ ux_icon('heroicons:user-plus', {'class': 'btn-icon'}) }}
+                    {{ 'register.buttons.create_account'|trans({}, 'register') }}
+                </button>
+            {{ form_end(registrationForm) }}
+
+            <!-- Lien de connexion -->
+            <div class="auth-divider">
+                <span>{{ 'register.links.already_account'|trans({}, 'register') }}</span>
+            </div>
+
+            <a href="{{ path('app_login') }}" class="auth-btn auth-btn--secondary">
+                {{ ux_icon('heroicons:arrow-right-on-rectangle', {'class': 'btn-icon'}) }}
+                {{ 'register.buttons.login'|trans({}, 'register') }}
+            </a>
+
+            <!-- Informations de sécurité -->
+            <div class="auth-info">
+                <div class="info-item">
+                    {{ ux_icon('heroicons:shield-check', {'class': 'info-icon'}) }}
+                    <span>{{ 'register.security.ssl_secure'|trans({}, 'register') }}</span>
+                </div>
+                <div class="info-item">
+                    {{ ux_icon('heroicons:lock-closed', {'class': 'info-icon'}) }}
+                    <span>{{ 'register.security.data_protected'|trans({}, 'register') }}</span>
+                </div>
+                <div class="info-item">
+                    {{ ux_icon('heroicons:clock', {'class': 'info-icon'}) }}
+                    <span>{{ 'register.security.support_24_7'|trans({}, 'register') }}</span>
+                </div>
+            </div>
+
+            <!-- Lien retour -->
+            <div class="auth-back">
+                <a href="{{ path('home_index') }}" class="back-link">
+                    {{ ux_icon('heroicons:arrow-left', {'class': 'back-icon'}) }}
+                    {{ 'register.links.back_home'|trans({}, 'register') }}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* ===== AUTH PAGE STYLES ===== */
+.auth-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-container--wide {
+    max-width: 600px;
+}
+
+.auth-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* En-tête */
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-logo {
+    margin-bottom: 1rem;
+}
+
+.auth-logo-icon {
+    width: 4rem;
+    height: 4rem;
+    color: var(--color-primary);
+}
+
+.auth-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+}
+
+.auth-subtitle {
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+/* Sections du formulaire */
+.form-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0;
+}
+
+.form-section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+}
+
+.section-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--color-primary);
+}
+
+/* Alertes */
+.auth-alert {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.auth-alert--error {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.auth-alert--success {
+    background: rgba(34, 197, 94, 0.1);
+    color: #16a34a;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.auth-alert-icon {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+}
+
+/* Formulaire */
+.auth-form {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.form-input-wrapper {
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.75rem;
+    border: 2px solid var(--color-border);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+.form-input::placeholder {
+    color: #9ca3af;
+}
+
+.form-input-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #6b7280;
+    pointer-events: none;
+}
+
+.form-toggle-password {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+}
+
+.form-toggle-password:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.toggle-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #6b7280;
+}
+
+/* Checkboxes */
+.form-checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.checkbox-input {
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--color-primary);
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+}
+
+.checkbox-label {
+    color: var(--color-text);
+    cursor: pointer;
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+.form-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-link:hover {
+    text-decoration: underline;
+}
+
+/* Boutons */
+.auth-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.auth-btn--primary {
+    background: var(--color-primary);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(30, 64, 175, 0.3);
+}
+
+.auth-btn--primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 8px -1px rgba(30, 64, 175, 0.4);
+}
+
+.auth-btn--secondary {
+    background: white;
+    color: var(--color-primary);
+    border: 2px solid var(--color-border);
+}
+
+.auth-btn--secondary:hover {
+    background: var(--color-background);
+    border-color: var(--color-primary);
+}
+
+.btn-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Séparateur */
+.auth-divider {
+    text-align: center;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.auth-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--color-border);
+}
+
+.auth-divider span {
+    background: white;
+    padding: 0 1rem;
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    position: relative;
+}
+
+/* Informations de sécurité */
+.auth-info {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+}
+
+.info-icon {
+    width: 1rem;
+    height: 1rem;
+    color: var(--color-success);
+}
+
+/* Lien retour */
+.auth-back {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--color-primary);
+}
+
+.back-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Erreurs de formulaire */
+.form-error-wrapper {
+    color: #dc2626 !important;
+    font-size: 0.8125rem;
+    margin-top: 0.375rem;
+    display: block;
+    font-weight: 500;
+}
+
+.form-error-wrapper ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.form-error-wrapper li {
+    display: flex !important;
+    align-items: center;
+    gap: 0.375rem;
+    margin-bottom: 0.25rem;
+    color: #dc2626 !important;
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+.form-error-wrapper li::before {
+    content: '⚠' !important;
+    color: #dc2626 !important;
+    font-weight: bold;
+}
+
+/* Erreurs de formulaire Symfony */
+.form-error {
+    color: var(--color-error, #dc2626);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* Classes d'erreur Symfony */
+.invalid-feedback {
+    display: block !important;
+    color: var(--color-error, #dc2626) !important;
+    font-size: 0.8125rem;
+    margin-top: 0.375rem;
+    font-weight: 500;
+}
+
+/* Classes d'erreur de Symfony */
+ul.form-error-list {
+    margin: 0.375rem 0 0 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+ul.form-error-list li {
+    display: flex !important;
+    align-items: center;
+    gap: 0.375rem;
+    margin-bottom: 0.25rem;
+    color: var(--color-error, #dc2626) !important;
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+ul.form-error-list li::before {
+    content: '⚠' !important;
+    color: var(--color-error, #dc2626) !important;
+    font-weight: bold;
+}
+
+/* Tous les éléments d'erreur */
+.form-errors, 
+.form-error, 
+.invalid-feedback,
+ul.form-error-list,
+ul.form-error-list li {
+    color: var(--color-error, #dc2626) !important;
+}
+
+/* Input avec erreur */
+.form-input.is-invalid {
+    border-color: var(--color-error);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* Supprimer la validation automatique des navigateurs */
+.form-input:invalid {
+    box-shadow: none;
+}
+
+/* Input avec erreur uniquement après interaction */
+.form-input.is-invalid:not(:focus) {
+    border-color: var(--color-error);
+}
+
+/* Wrapper d'input avec erreur */
+.form-input-wrapper.has-error .form-input {
+    border-color: var(--color-error);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.form-input-wrapper.has-error .form-input-icon {
+    color: var(--color-error);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .auth-container--wide {
+        max-width: 400px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .auth-info {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-page {
+        padding: 1rem;
+    }
+    
+    .auth-card {
+        padding: 1.5rem;
+    }
+    
+    .auth-title {
+        font-size: 1.5rem;
+    }
+    
+    .info-item {
+        font-size: 0.6875rem;
+    }
+}
+</style>
+
+{% endblock %}

@@ -1,0 +1,508 @@
+<!-- Hero Section avec traduction Symfony 7 -->
+<section class="home__hero">
+  <div class="home__hero-container">
+    <div class="home__hero-content">
+      <!-- Hero Text -->
+      <div class="home__hero-text">
+        <div class="home__hero-badge">
+          {{ ux_icon('heroicons:shield-check', {'class': 'home__hero-badge-icon'}) }}
+          <span>{{ t('legal.licensed_bank') }}</span>
+        </div>
+        
+        <h1 class="home__hero-title">
+          {{ tp('hero.title', {}, 'home') }} <span class="home__hero-title--accent">{{ tp('hero.subtitle', {}, 'home') }}</span>
+        </h1>
+        
+        <p class="home__hero-description">
+          {{ tp('hero.description', {}, 'home') }}
+        </p>
+        
+        <!-- Hero CTA -->
+        <div class="home__hero-cta">
+          <a href="{{ path('credit_simulation_index') }}" class="home__hero-btn home__hero-btn--primary">
+            {{ ux_icon('heroicons:rocket-launch', {'class': 'home__hero-btn-icon'}) }}
+            <span>{{ t('buttons.sign_up') }}</span>
+          </a>
+          <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="home__hero-btn home__hero-btn--secondary">
+            {{ ux_icon('streamline-cyber:cash-bag-give', {'class': 'home__hero-btn-icon'}) }}
+            <span>{{ t('buttons.apply') }}</span>
+          </a>
+        </div>
+        
+        <!-- Hero Stats -->
+        <div class="home__hero-stats">
+          <div class="home__hero-stat">
+            <div class="home__hero-stat-number">500K+</div>
+            <div class="home__hero-stat-label">{{ tp('hero.stats.clients', {}, 'home') }}</div>
+          </div>
+          <div class="home__hero-stat">
+            <div class="home__hero-stat-number">4.9/5</div>
+            <div class="home__hero-stat-label">{{ tp('hero.stats.satisfaction', {}, 'home') }}</div>
+          </div>
+          <div class="home__hero-stat">
+            <div class="home__hero-stat-number">24/7</div>
+            <div class="home__hero-stat-label">{{ tp('hero.stats.support', {}, 'home') }}</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Hero Visual -->
+      <div class="home__hero-visual">
+        <div class="home__hero-image-container">
+          <!-- Floating Cards -->
+          <div class="home__hero-floating-card home__hero-floating-card--1">
+            <div class="home__hero-card-content">
+              {{ ux_icon('heroicons:chart-bar', {'class': 'home__hero-card-icon'}) }}
+              <div class="home__hero-card-text">
+                <div class="home__hero-card-title">{{ tp('hero.cards.savings_plus', {}, 'home') }}</div>
+                <div class="home__hero-card-value">+12.5%</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="home__hero-floating-card home__hero-floating-card--2">
+            <div class="home__hero-card-content">
+              {{ ux_icon('heroicons:credit-card', {'class': 'home__hero-card-icon'}) }}
+              <div class="home__hero-card-text">
+                <div class="home__hero-card-title">{{ tp('hero.cards.premium_card', {}, 'home') }}</div>
+                <div class="home__hero-card-value">**** 1234</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="home__hero-floating-card home__hero-floating-card--3">
+            <div class="home__hero-card-content">
+              {{ ux_icon('heroicons:banknotes', {'class': 'home__hero-card-icon'}) }}
+              <div class="home__hero-card-text">
+                <div class="home__hero-card-title">{{ tp('hero.cards.balance', {}, 'home') }}</div>
+                <div class="home__hero-card-value">€24,580</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Main Hero Image -->
+          <div class="home__hero-main-image">
+            <div class="home__hero-image-placeholder">
+              {{ ux_icon('heroicons:device-phone-mobile', {'class': 'home__hero-phone-icon'}) }}
+              <div class="home__hero-phone-screen">
+                <div class="home__hero-screen-header"></div>
+                <div class="home__hero-screen-content">
+                  <div class="home__hero-screen-line"></div>
+                  <div class="home__hero-screen-line home__hero-screen-line--short"></div>
+                  <div class="home__hero-screen-line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Background Elements -->
+        <div class="home__hero-bg-elements">
+          <div class="home__hero-bg-circle home__hero-bg-circle--1"></div>
+          <div class="home__hero-bg-circle home__hero-bg-circle--2"></div>
+          <div class="home__hero-bg-gradient"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ===== HERO SECTION STYLES ===== */
+.home__hero {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.2) 100%), 
+              url('/images/4ea2c627ba.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 4rem 0 6rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.home__hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.home__hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 600px;
+}
+
+.home__hero-text {
+  z-index: 2;
+  position: relative;
+}
+
+.home__hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: blue;
+  color: white;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.home__hero-badge-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.home__hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: white;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.home__hero-title--accent {
+  background: linear-gradient(135deg, blue 0%, lightblue 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home__hero-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 2.5rem;
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.home__hero-cta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.6s ease-out 0.6s both;
+}
+
+.home__hero-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.home__hero-btn--primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: white;
+  box-shadow: 0 10px 25px rgba(var(--color-primary-rgb), 0.3);
+}
+
+.home__hero-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(var(--color-primary-rgb), 0.4);
+}
+
+.home__hero-btn--secondary {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 2px solid var(--color-border);
+}
+
+.home__hero-btn--secondary:hover {
+  background: var(--color-primary);
+  color: var(--color-surface);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.home__hero-btn-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.home__hero-stats {
+  display: flex;
+  gap: 2rem;
+  animation: fadeInUp 0.6s ease-out 0.8s both;
+}
+
+.home__hero-stat {
+  text-align: center;
+}
+
+.home__hero-stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.home__hero-stat-label {
+  font-size: 0.875rem;
+  color: white;
+}
+
+.home__hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__hero-image-container {
+  position: relative;
+  width: 400px;
+  height: 500px;
+}
+
+.home__hero-floating-card {
+  position: absolute;
+  background: var(--color-surface);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: float 3s ease-in-out infinite;
+}
+
+.home__hero-floating-card--1 {
+  top: 20%;
+  left: -10%;
+  width: 180px;
+  background: linear-gradient(135deg, var(--color-success) 0%, var(--color-success-light) 100%);
+  color: var(--color-surface);
+}
+
+.home__hero-floating-card--2 {
+  top: 60%;
+  right: -10%;
+  width: 180px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: var(--color-surface);
+  animation-delay: 1s;
+}
+
+.home__hero-floating-card--3 {
+  bottom: 10%;
+  left: -5%;
+  width: 160px;
+  background: linear-gradient(135deg, var(--color-warning) 0%, var(--color-warning-light) 100%);
+  color: var(--color-surface);
+  animation-delay: 2s;
+  z-index: 2;
+}
+
+.home__hero-card-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.home__hero-card-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+
+.home__hero-card-text {
+  flex: 1;
+}
+
+.home__hero-card-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.home__hero-card-value {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.home__hero-main-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.home__hero-image-placeholder {
+  position: relative;
+  width: 200px;
+  height: 350px;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(30, 64, 175, 0.3);
+}
+
+.home__hero-phone-icon {
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.home__hero-phone-screen {
+  width: 150px;
+  height: 200px;
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.home__hero-screen-header {
+  width: 100%;
+  height: 20px;
+  background: #e2e8f0;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.home__hero-screen-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.home__hero-screen-line {
+  height: 12px;
+  background: #e2e8f0;
+  border-radius: 0.25rem;
+}
+
+.home__hero-screen-line--short {
+  width: 60%;
+}
+
+.home__hero-bg-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.home__hero-bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+}
+
+.home__hero-bg-circle--1 {
+  width: 300px;
+  height: 300px;
+  top: -50px;
+  right: -50px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.home__hero-bg-circle--2 {
+  width: 200px;
+  height: 200px;
+  bottom: -30px;
+  left: -30px;
+  animation: float 5s ease-in-out infinite reverse;
+}
+
+.home__hero-bg-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home__hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .home__hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .home__hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .home__hero-stats {
+    justify-content: center;
+  }
+  
+  .home__hero-image-container {
+    width: 300px;
+    height: 400px;
+  }
+  
+  .home__hero-floating-card--1 {
+    width: 140px;
+    left: -5%;
+  }
+  
+  .home__hero-floating-card--2 {
+    width: 140px;
+    right: -5%;
+  }
+  
+  .home__hero-floating-card--3 {
+    width: 120px;
+  }
+  
+  .home__hero-image-placeholder {
+    width: 160px;
+    height: 280px;
+  }
+  
+  .home__hero-phone-screen {
+    width: 120px;
+    height: 160px;
+  }
+}
+</style>

@@ -1,0 +1,47 @@
+card_controllers:
+  # Messages flash communs
+  flash:
+    kyc_required: "Vous devez compléter votre vérification d'identité pour accéder aux services de cartes bancaires."
+    
+  # CardController
+  card_controller:
+    access_denied:
+      card: "Accès refusé à cette carte."
+      subscription: "Accès refusé à cette souscription."
+      opposition: "Accès refusé à cette opposition."
+  
+  # SubscriptionController
+  subscription:
+    flash:
+      already_has_card: "Vous avez déjà une carte ou une demande en cours."
+      no_active_account: "Vous devez avoir un compte actif pour souscrire une carte."
+      success_created: "Votre demande de souscription a été enregistrée avec succès. Vous recevrez une notification dès qu'elle sera traitée."
+      error_processing: "Une erreur est survenue lors de l'enregistrement de votre demande. Veuillez réessayer."
+      only_pending_can_cancel: "Seules les souscriptions en attente peuvent être annulées."
+      invalid_csrf_token: "Token de sécurité invalide."
+      success_cancelled: "Votre demande de souscription a été annulée avec succès."
+      error_cancelling: "Une erreur est survenue lors de l'annulation."
+    
+    default_description: "Demande automatique via interface bancaire"
+  
+  # OppositionController
+  opposition:
+    flash:
+      only_active_cards: "Seules les cartes actives peuvent faire l'objet d'une opposition."
+      already_in_progress: "Une opposition est déjà en cours de traitement pour cette carte."
+      success_created: "Votre opposition a été enregistrée avec succès. Votre carte a été immédiatement bloquée pour votre sécurité."
+      error_processing: "Une erreur est survenue lors de l'enregistrement de votre opposition. Veuillez réessayer ou contacter notre service client."
+      select_card: "Veuillez sélectionner une carte."
+      select_card_required: "Veuillez sélectionner une carte."
+      card_not_found: "Carte non trouvée ou accès refusé."
+      emergency_success: "OPPOSITION ENREGISTRÉE - Votre carte a été immédiatement bloquée. Référence: {reference}"
+      emergency_error: "Erreur lors du blocage. Contactez immédiatement le service client au 02/XXX.XX.XX"
+    
+    emergency_description: "Opposition d'urgence via interface rapide"
+    
+    # Motifs d'opposition
+    reasons:
+      lost: "Carte perdue"
+      stolen: "Carte volée"
+      compromised: "Carte compromise"
+      fraudulent_activity: "Activité frauduleuse"

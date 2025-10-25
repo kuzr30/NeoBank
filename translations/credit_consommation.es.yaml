@@ -1,0 +1,104 @@
+credit_consommation:
+  page:
+    title: "Crédito de Consumo"
+    description: "Financie sus proyectos personales con nuestro crédito de consumo. Tasas ventajosas y reembolso flexible."
+
+  hero:
+    title: "Crédito de Consumo"
+    subtitle: "Realice todos sus proyectos personales"
+    values:
+      taux: "{rate}% TAE*"
+      montant: "75 000€"
+      duree: "10 años"
+
+  section_1:
+    title: "¿Qué es un crédito de consumo?"
+    content:
+      paragraph_1: "El crédito de consumo le permite financiar todos sus proyectos personales: compra de un coche, equipamiento del hogar, viaje, boda o cualquier otro gasto importante."
+      paragraph_2: "Solución flexible y rápida, este crédito no afectado le da la libertad de usar los fondos como desee, sin tener que justificar su uso."
+
+  features:
+    montant: "De 2 000€ a 75 000€"
+    montant_detail: "Según sus necesidades"
+    duree: "De 12 meses a 10 años"
+    duree_detail: "Reembolso adaptado"
+    taux: "Desde {rate}% TAE*"
+    taux_detail: "Tasa competitiva garantizada"
+    garantie: "Sin garantía"
+    garantie_detail: "Solo con firma"
+
+  advantages:
+    liberte_usage:
+      title: "Libertad de uso:"
+      text: "Ninguna justificación de uso de los fondos"
+    reponse_rapide:
+      title: "Respuesta rápida:"
+      text: "Decisión en 48h y desembolso inmediato"
+    sans_garantie:
+      title: "Sin garantía:"
+      text: "Financiamiento solo con firma"
+    remboursement_anticipe:
+      title: "Pago anticipado:"
+      text: "Posible en cualquier momento sin penalizaciones"
+    mensualites_fixes:
+      title: "Cuotas fijas:"
+      text: "Presupuesto controlado durante toda la duración"
+
+  requirements:
+    conditions_octroi:
+      title: "Condiciones de otorgamiento"
+      items:
+        majeur: "Ser mayor de edad y residir en Francia"
+        revenus: "Justificar ingresos regulares"
+        endettement: "Tasa de endeudamiento inferior al 35%"
+        incidents: "Sin incidentes de pago"
+    criteres_eligibilite:
+      title: "Criterios de elegibilidad"
+      items:
+        contrat: "CDI, CDD o profesión liberal"
+        anciennete: "Antigüedad profesional mínima 6 meses"
+        capacite: "Capacidad de reembolso verificada"
+        age: "Edad máxima 75 años al final del préstamo"
+
+  documents:
+    pieces_identite:
+      title: "Documentos de identidad"
+      items:
+        carte: "Cédula de identidad o pasaporte"
+        domicile: "Justificante de domicilio reciente"
+        livret: "Libro de familia si está casado(a)"
+    justificatifs_revenus:
+      title: "Justificantes de ingresos"
+      items:
+        bulletins: "3 últimas nóminas"
+        avis: "Última declaración de impuestos"
+        contrat: "Contrato de trabajo"
+        attestation: "Certificado del empleador"
+    informations_bancaires:
+      title: "Información bancaria"
+      items:
+        releves: "3 últimos extractos de cuenta"
+        rib: "RIB de la cuenta de domiciliación"
+        tableau: "Tabla de amortización de créditos en curso"
+
+  legal:
+    title: "Información legal importante"
+    taeg:
+      title: "*TAE:"
+      text: "Ejemplo representativo: para un crédito de consumo de 15 000€ en 60 meses al TAE del 4,5%, usted reembolsa 60 cuotas de 279€, es decir un monto total de 16 740€ (costo del crédito: 1 740€)."
+    retractation:
+      title: "Plazo de retractación:"
+      text: "Dispone de un plazo de 14 días para renunciar a su crédito."
+    remboursement:
+      title: "Pago anticipado:"
+      text: "Posible en cualquier momento, comisiones limitadas por ley."
+    assurance:
+      title: "Seguro:"
+      text: "Facultativo pero recomendado para asegurar sus reembolsos."
+    fichage:
+      title: "Registro:"
+      text: "En caso de impago, corre el riesgo de ser inscrito en los archivos del Banco de Francia."
+
+  cta:
+    title: "Concrete sus proyectos"
+    subtitle: "Obtenga su crédito de consumo rápida y fácilmente"

@@ -1,0 +1,37 @@
+email_transfer_executed:
+  title: "Overschrijving succesvol uitgevoerd"
+  
+  content:
+    page_title: "Overschrijving succesvol voltooid"
+    greeting: "Gefeliciteerd {firstName}!"
+    
+    transaction_completed:
+      title: "Transactie afgerond"
+      description: "Uw overschrijving is succesvol uitgevoerd. Alle validatiecodes zijn bevestigd en de geldoverdracht is volgens uw instructies uitgevoerd."
+    
+    execution_details:
+      title: "Uitvoeringsdetails"
+      reference: "Overschrijvingsreferentie"
+      amount: "Overgeschreven bedrag"
+      amount_value: "{amount} €"
+      beneficiary_account: "Begunstigde rekening"
+      transfer_reason: "Reden van overschrijving"
+      execution_date: "Uitvoeringsdatum"
+      executed_at: "{executedAt}"
+    
+    account_update:
+      title: "Update van uw rekeningen"
+      description: "Het bedrag is gedebiteerd van uw hoofdrekening. U kunt uw bewegingen en bijgewerkt saldo bekijken in uw online bankruimte."
+    
+    banking_access:
+      title: "Toegang tot uw rekeningen"
+      view_banking_button: "Mijn bankruimte bekijken"
+      check_instruction: "Bekijk uw bijgewerkte bewegingen en saldi"
+    
+    security_thanks: "Dank u voor uw vertrouwen. Uw transactie is verlopen onder optimale veiligheidsomstandigheden."
+    
+    footer: "<strong>%company_name% - Overschrijvingsdienst</strong><br>Automatische bevestiging van uitvoering overschrijving"
+  
+  log:
+    transfer_executed: "Overschrijving {transferId} succesvol uitgevoerd voor een bedrag van {amount}€"
+    email_sent: "Bevestigingsmail uitvoering verzonden naar {userEmail}"

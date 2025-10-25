@@ -1,0 +1,131 @@
+credit_page:
+  index:
+    page_title: "Nuestras ofertas de crédito"
+    page_description: "Descubra todas nuestras soluciones de financiamiento adaptadas a sus necesidades."
+  
+  breadcrumb:
+    credit_offers: "Nuestras ofertas de crédito"
+
+  hero:
+    highlights:
+      rate_from: "TAE desde"
+      max_amount: "Monto máximo"
+      max_duration: "Duración máxima"
+    actions:
+      simulate: "Simular mi crédito"
+      apply: "Hacer una solicitud"
+
+  sections:
+    section_1:
+      title: "¿Qué es este crédito?"
+      paragraph_1: "Esta solución de financiamiento le permite realizar sus proyectos en las mejores condiciones."
+      paragraph_2: "Contacte nuestros asesores para obtener información personalizada adaptada a su situación."
+
+    section_2:
+      title: "Condiciones de financiamiento"
+      features:
+        amount:
+          title: "Monto"
+          description: "De 1 000€ a 100 000€"
+          detail: "Adaptado a su proyecto"
+        duration:
+          title: "Duración"
+          description: "De 6 meses a 15 años"
+          detail: "Modulable según su capacidad"
+        rate:
+          title: "Tasa"
+          description: "Desde 3,5% TAE*"
+          detail: "Condiciones preferenciales"
+        guarantee:
+          title: "Garantía"
+          description: "Según el monto"
+          detail: "Adaptada a su perfil"
+
+    section_3:
+      title: "Ventajas de este crédito"
+      advantages:
+        advantage_1: "<strong>Tasa ventajosa:</strong> Benéficiese de condiciones preferenciales"
+        advantage_2: "<strong>Flexibilidad:</strong> Solución adaptada a sus necesidades"
+        advantage_3: "<strong>Rapidez:</strong> Respuesta rápida a su solicitud"
+    
+    section_4:
+      title: "Condiciones y criterios"
+    
+    section_5:
+      title: "Documentos necesarios"
+
+  section_4:
+    title: "Condiciones de elegibilidad"
+    requirements:
+      borrower_profile:
+        title: "Perfil prestatario"
+        item_1: "Ser mayor de edad y residir en Francia"
+        item_2: "Justificar ingresos regulares"
+        item_3: "No estar inscrito en el FICP"
+        item_4: "Tasa de endeudamiento inferior al 35%"
+      general_conditions:
+        title: "Condiciones generales"
+        item_1: "Edad máxima: 75 años al final del préstamo"
+        item_2: "Domiciliación bancaria deseada"
+        item_3: "Seguro de prestatario posible"
+        item_4: "Gastos de expediente aplicables"
+
+  section_5:
+    title: "Documentos necesarios"
+    documents:
+      identity:
+        title: "Documentos de identidad"
+        item_1: "Cédula de identidad nacional o pasaporte"
+        item_2: "Justificante de domicilio de menos de 3 meses"
+        item_3: "Libro de familia (si está casado o en unión civil)"
+      income:
+        title: "Justificantes de ingresos"
+        item_1: "3 últimas nóminas"
+        item_2: "2 últimas declaraciones de impuestos"
+        item_3: "Contrato de trabajo o certificado del empleador"
+        item_4: "Extractos de cuenta de los últimos 3 meses"
+      additional:
+        title: "Documentos complementarios"
+        item_1: "Tabla de amortización de créditos en curso"
+        item_2: "Justificantes de gastos (alquiler, pensiones...)"
+        item_3: "Presupuestos o facturas (según el tipo de crédito)"
+        item_4: "Otros documentos según su situación"
+
+  sidebar:
+    simulation:
+      title: "Simular su préstamo"
+      text: "Calcule en pocos clics el monto de sus cuotas mensuales y obtenga una estimación personalizada."
+      button: "Hacer una simulación"
+    help:
+      title: "¿Necesita ayuda?"
+      text: "Nuestros asesores están a su disposición para responder todas sus preguntas."
+      phone: company_phone
+      email: company_email
+    processing:
+      title: "Plazos de procesamiento"
+      step_1:
+        title: "Preestudio"
+        time: "24h"
+      step_2:
+        title: "Instrucción"
+        time: "2 días"
+      step_3:
+        title: "Acuerdo y firma"
+        time: "1 día"
+
+  legal:
+    warning:
+      title: "Un crédito le compromete y debe ser reembolsado. Verifique sus capacidades de reembolso antes de comprometerse."
+    details:
+      title: "Información legal importante"
+      taeg: "<strong>TAE:</strong> Tasa Anual Equivalente sujeta a la aceptación de su expediente."
+      amount: "<strong>Monto:</strong> Oferta válida para todo crédito entre 500€ y 200 000€."
+      duration: "<strong>Duración:</strong> Reembolso posible de 6 meses a 25 años según el tipo de crédito."
+      retraction: "<strong>Plazo de retractación:</strong> Dispone de un plazo de 14 días para renunciar a su crédito después de la aceptación de la oferta."
+    footer: "%company_name% su socio financiero del día a día. Un crédito le compromete y debe ser reembolsado. Verifique sus capacidades de reembolso antes de comprometerse."
+
+  cta:
+    title: "¿Listo para concretar su proyecto?"
+    subtitle: "Haga su solicitud de crédito en línea o contacte nuestros asesores"
+    apply_button: "Hacer mi solicitud"
+    simulate_button: "Simular mi crédito"

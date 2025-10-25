@@ -1,0 +1,103 @@
+credit_relais:
+  page:
+    title: "Überbrückungskredit"
+    description: "Finanzieren Sie Ihre neue Wohnung vor dem Verkauf der alten mit unserem Überbrückungskredit. Flexible temporäre Lösung."
+    
+  hero:
+    title: "Überbrückungskredit"
+    subtitle: "Die ideale Zwischenlösung für Ihr Immobilienprojekt"
+    taux: "{rate}%"
+    montant: "80%"
+    duree: "24 Monate"
+    
+  section_1:
+    title: "Was ist ein Überbrückungskredit?"
+    content_1: "Der Überbrückungskredit ist eine temporäre Finanzierungslösung, die es Ihnen ermöglicht, eine neue Wohnung zu kaufen, bevor Sie die alte verkauft haben. Er vermeidet Timing-Zwänge zwischen Kauf und Verkauf."
+    content_2: "Kurzfristiger Kredit, der normalerweise in einer Summe beim Verkauf Ihrer aktuellen Immobilie zurückgezahlt wird, bietet er die nötige Flexibilität, um gute Immobiliengelegenheiten zu nutzen."
+    
+  features:
+    montant:
+      value: "Bis zu 80%"
+      detail: "Des Wertes der zu verkaufenden Immobilie"
+    duree:
+      value: "12 bis 24 Monate"
+      detail: "Durchschnittsdauer 18 Monate"
+    taux:
+      value: "Ab {rate}% effektiver Jahreszins*"
+      detail: "Fester Kurzzeitzins"
+    garantie:
+      value: "Hypothek"
+      detail: "Auf die zu verkaufende Immobilie"
+      
+  advantages:
+    chainag:
+      title: "Keine Verkettung:"
+      text: "Kaufen Sie, ohne auf den Verkauf Ihrer Immobilie zu warten"
+    negociation:
+      title: "Verstärkte Verhandlungsposition:"
+      text: "Position als freier und glaubwürdiger Käufer"
+    flexibilite:
+      title: "Flexibilität:"
+      text: "Rückzahlung beim Verkauf, ohne feste Raten"
+    cumul:
+      title: "Kombination möglich:"
+      text: "Kombinierbar mit einem klassischen Immobilienkredit"
+    serenite:
+      title: "Gelassenheit:"
+      text: "Organisierter Umzug ohne Timing-Zwänge"
+      
+  requirements:
+    bien_vendre:
+      title: "Bedingungen der zu verkaufenden Immobilie"
+      proprietaire: "Eigentümer seit mehr als 2 Jahren sein"
+      libre: "Immobilie frei von jeder Belegung"
+      estimation: "Aktuelle Immobilienbewertung"
+      commercialisation: "Effektive Vermarktung der Immobilie"
+    emprunteur:
+      title: "Kreditnehmerbedingungen"
+      revenus: "Regelmäßige und ausreichende Einkommen"
+      capacite: "Fähigkeit, temporär 2 Belastungen zu tragen"
+      apport: "Eigenanteil für Erwerbskosten"
+      difficultes: "Keine finanziellen Schwierigkeiten"
+      
+  documents:
+    bien_vendre:
+      title: "Zu verkaufende Immobilie"
+      titre: "Eigentumsnachweis"
+      estimation: "Immobilienbewertung"
+      mandat: "Unterschriebenes Verkaufsmandat"
+      diagnostics: "Immobiliendiagnosen"
+    bien_acquerir:
+      title: "Zu erwerbende Immobilie"
+      compromis: "Unterschriebener Kaufvertrag"
+      plan: "Finanzierungsplan"
+      descriptif: "Immobilienbeschreibung"
+      conditions: "Aufschiebende Bedingungen"
+    dossier:
+      title: "Finanzakte"
+      revenus: "Einkommensnachweise"
+      comptes: "Kontoauszüge"
+      charges: "Tabelle aktueller Belastungen"
+      patrimoine: "Vermögenssituation"
+      
+  legal:
+    title: "Wichtige rechtliche Informationen"
+    taeg:
+      title: "*Effektiver Jahreszins:"
+      text: "Repräsentatives Beispiel: Für einen Überbrückungskredit von 200.000€ über 18 Monate mit einem effektiven Jahreszins von 4,2% zahlen Sie 412.700€ bei Fälligkeit zurück (Kreditkosten: 12.700€ einschließlich Zinsen und Gebühren)."
+    remboursement:
+      title: "Rückzahlung:"
+      text: "In einer Summe beim Verkauf der Immobilie, Möglichkeit monatlicher Zinszahlungen."
+    garantie:
+      title: "Sicherheit:"
+      text: "Erstrangige Hypothek auf die zu verkaufende Immobilie."
+    assurance:
+      title: "Versicherung:"
+      text: "Todesfall-Invaliditäts-Versicherung obligatorisch."
+    prolongation:
+      title: "Verlängerung:"
+      text: "Möglich bei Verkaufsverzögerung, unter Bedingungen."
+      
+  cta:
+    title: "Befreien Sie sich von Timing-Zwängen"
+    subtitle: "Verwirklichen Sie Ihr Immobilienprojekt mit unserem Überbrückungskredit"

@@ -1,0 +1,1713 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tp('services.accounts_cards.page.title', [], 'services') }} - SEDEF BANK{% endblock %}
+
+{% block meta_description %}{{ tp('services.accounts_cards.page.description', [], 'services') }}{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<style>
+/* Page Comptes & Cartes - BEM CSS */
+.accounts-cards {
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+/* Hero Section */
+.accounts-cards__hero {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.accounts-cards__hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.accounts-cards__hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: white;
+}
+
+.accounts-cards__hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+.accounts-cards__hero-cta {
+  display: inline-block;
+  background-color: white;
+  color: #3b82f6;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.accounts-cards__hero-cta:hover {
+  background-color: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Products Section */
+.accounts-cards__products {
+  padding: 5rem 0;
+  background-color: #f8fafc;
+}
+
+.accounts-cards__products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.accounts-cards__products-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.accounts-cards__products-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.accounts-cards__products-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.accounts-cards__products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Product Card */
+.product-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.product-card__icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.product-card__icon--current {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.product-card__icon--savings {
+  background-color: rgba(34, 197, 94, 0.1);
+}
+
+.product-card__icon--credit {
+  background-color: rgba(168, 85, 247, 0.1);
+}
+
+.product-card__icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.product-card__icon--current svg {
+  color: #3b82f6;
+}
+
+.product-card__icon--savings svg {
+  color: #22c55e;
+}
+
+.product-card__icon--credit svg {
+  color: #a855f7;
+}
+
+.product-card__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.product-card__description {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.product-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.product-card__feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.product-card__feature-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #22c55e;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.product-card__cta {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.product-card__cta--current {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.product-card__cta--current:hover {
+  background-color: #2563eb;
+}
+
+.product-card__cta--savings {
+  background-color: #22c55e;
+  color: white;
+}
+
+.product-card__cta--savings:hover {
+  background-color: #16a34a;
+}
+
+.product-card__cta--credit {
+  background-color: #a855f7;
+  color: white;
+}
+
+.product-card__cta--credit:hover {
+  background-color: #9333ea;
+}
+
+/* Features Section */
+.accounts-cards__features {
+  background: white;
+  padding: 5rem 0;
+}
+
+.accounts-cards__features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.accounts-cards__features-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.accounts-cards__features-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.accounts-cards__features-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.accounts-cards__features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Feature Item */
+.feature-item {
+  text-align: center;
+}
+
+.feature-item__icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+}
+
+.feature-item__icon--security {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.feature-item__icon--simple {
+  background-color: rgba(34, 197, 94, 0.1);
+}
+
+.feature-item__icon--fast {
+  background-color: rgba(245, 158, 11, 0.1);
+}
+
+.feature-item__icon--support {
+  background-color: rgba(168, 85, 247, 0.1);
+}
+
+.feature-item__icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.feature-item__icon--security svg {
+  color: #3b82f6;
+}
+
+.feature-item__icon--simple svg {
+  color: #22c55e;
+}
+
+.feature-item__icon--fast svg {
+  color: #f59e0b;
+}
+
+.feature-item__icon--support svg {
+  color: #a855f7;
+}
+
+.feature-item__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.feature-item__description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* CTA Section */
+.accounts-cards__cta {
+  background-color: #1f2937;
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.accounts-cards__cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.accounts-cards__cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.accounts-cards__cta-description {
+  font-size: 1.125rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+.accounts-cards__cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.accounts-cards__cta-button {
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.accounts-cards__cta-button--primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.accounts-cards__cta-button--primary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.accounts-cards__cta-button--secondary {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.accounts-cards__cta-button--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Comparison Section */
+.accounts-cards__comparison {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 5rem 0;
+}
+
+.accounts-cards__comparison-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.accounts-cards__comparison-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.accounts-cards__comparison-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.accounts-cards__comparison-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.comparison-table {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.comparison-table__header {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.comparison-table__header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.comparison-table__header p {
+  opacity: 0.9;
+}
+
+.comparison-table__body {
+  padding: 0;
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid #e5e7eb;
+  align-items: center;
+}
+
+.comparison-row:hover {
+  background-color: #f9fafb;
+}
+
+.comparison-cell {
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.comparison-cell:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.comparison-cell--bankit {
+  background-color: rgba(59, 130, 246, 0.05);
+  color: #3b82f6;
+  font-weight: 700;
+}
+
+.comparison-cell--competitor {
+  color: #6b7280;
+}
+
+.comparison-check {
+  color: #22c55e;
+  font-size: 1.5rem;
+}
+
+.comparison-cross {
+  color: #ef4444;
+  font-size: 1.5rem;
+}
+
+/* Process Section */
+.accounts-cards__process {
+  background: white;
+  padding: 5rem 0;
+}
+
+.accounts-cards__process-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.accounts-cards__process-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.accounts-cards__process-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.accounts-cards__process-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.accounts-cards__process-time {
+  display: inline-block;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.process-step {
+  position: relative;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.process-step:hover {
+  border-color: #3b82f6;
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1);
+}
+
+.process-step__number {
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.process-step__icon {
+  width: 4rem;
+  height: 4rem;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+}
+
+.process-step__icon svg {
+  width: 2rem;
+  height: 2rem;
+  color: #3b82f6;
+}
+
+.process-step__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.process-step__description {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.process-step__time {
+  background: rgba(34, 197, 94, 0.1);
+  color: #16a34a;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* Security Section */
+.accounts-cards__security {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  color: white;
+  padding: 5rem 0;
+}
+
+.accounts-cards__security-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.accounts-cards__security-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.accounts-cards__security-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.accounts-cards__security-subtitle {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.security-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.security-feature {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.security-feature:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.security-feature__icon {
+  width: 4rem;
+  height: 4rem;
+  background: rgba(59, 130, 246, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+}
+
+.security-feature__icon svg {
+  width: 2rem;
+  height: 2rem;
+  color: #60a5fa;
+}
+
+.security-feature__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.security-feature__description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.security-certifications {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.security-certification {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+}
+
+.security-certification__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(34, 197, 94, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.security-certification__icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #4ade80;
+}
+
+.security-certification__text {
+  color: white;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .accounts-cards__hero-title {
+    font-size: 2rem;
+  }
+  
+  .accounts-cards__hero-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .accounts-cards__products-title,
+  .accounts-cards__features-title,
+  .accounts-cards__cta-title {
+    font-size: 2rem;
+  }
+  
+  .accounts-cards__products-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .accounts-cards__cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .accounts-cards__cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accounts-cards__hero {
+    padding: 3rem 0;
+  }
+  
+  .accounts-cards__products,
+  .accounts-cards__features,
+  .accounts-cards__cta {
+    padding: 3rem 0;
+  }
+  
+  .product-card {
+    padding: 1.5rem;
+  }
+  
+  .accounts-cards__hero-title {
+    font-size: 1.75rem;
+  }
+}
+
+/* Services Section Styles */
+.accounts-cards__services {
+    background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+    padding: 80px 0;
+}
+
+.accounts-cards__services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.accounts-cards__services-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.accounts-cards__services-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+.accounts-cards__services-subtitle {
+    font-size: 1.2rem;
+    color: #6b7280;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-item {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    transition: all 0.3s ease;
+}
+
+.service-item:hover::before {
+    left: 0;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-item__icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.service-item__icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.service-item__title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 15px;
+}
+
+.service-item__description {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.service-item__features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-item__features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #374151;
+    font-size: 0.95rem;
+}
+
+.service-item__features li::before {
+    content: '✓';
+    color: #10b981;
+    font-weight: bold;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ecfdf5;
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
+
+/* Benefits Section Styles */
+.accounts-cards__benefits {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #581c87 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.accounts-cards__benefits::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 5L93.3 25v50L50 95 6.7 75V25z' fill='none' stroke='%23ffffff' stroke-width='0.5' stroke-opacity='0.1'/%3E%3C/svg%3E") repeat;
+    opacity: 0.3;
+}
+
+.accounts-cards__benefits-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.accounts-cards__benefits-header {
+    text-align: center;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.accounts-cards__benefits-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.accounts-cards__benefits-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.benefit-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: all 0.6s ease;
+}
+
+.benefit-card:hover::before {
+    left: 100%;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.benefit-card__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.3);
+}
+
+.benefit-card__icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+.benefit-card__title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.benefit-card__description {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.benefit-card__value {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: white;
+    font-size: 0.95rem;
+}
+
+/* Support Section Styles */
+.accounts-cards__support {
+    background: white;
+    padding: 80px 0;
+}
+
+.accounts-cards__support-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.accounts-cards__support-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.accounts-cards__support-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+.accounts-cards__support-subtitle {
+    font-size: 1.2rem;
+    color: #6b7280;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.support-channels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.support-channel {
+    background: linear-gradient(145deg, #f8fafc, #f1f5f9);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.support-channel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(145deg, #3b82f6, #8b5cf6);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.support-channel:hover::before {
+    opacity: 0.05;
+}
+
+.support-channel:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(59, 130, 246, 0.15);
+    border-color: #3b82f6;
+}
+
+.support-channel__icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.support-channel__icon svg {
+    width: 35px;
+    height: 35px;
+}
+
+.support-channel__title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.support-channel__description {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.support-channel__availability {
+    display: inline-block;
+    background: #ecfdf5;
+    color: #065f46;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+}
+
+.support-channel__response-time {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #3b82f6;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="accounts-cards">
+    <!-- Hero Section -->
+    <section class="accounts-cards__hero">
+        <div class="accounts-cards__hero-container">
+            <h1 class="accounts-cards__hero-title">{{ tp('services.accounts_cards.hero.title', [], 'services') }}</h1>
+            <p class="accounts-cards__hero-subtitle">{{ tp('services.accounts_cards.hero.subtitle', [], 'services') }}</p>
+            <a href="#products" class="accounts-cards__hero-cta">
+                {{ tp('services.accounts_cards.hero.cta', [], 'services') }}
+            </a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="accounts-cards__products">
+        <div class="accounts-cards__products-container">
+            <div class="accounts-cards__products-header">
+                <h2 class="accounts-cards__products-title">{{ tp('services.accounts_cards.products.title', [], 'services') }}</h2>
+                <p class="accounts-cards__products-subtitle">{{ tp('services.accounts_cards.products.subtitle', [], 'services') }}</p>
+            </div>
+
+            <div class="accounts-cards__products-grid">
+                <!-- Compte Courant -->
+                <div class="product-card">
+                    <div class="product-card__icon product-card__icon--current">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
+                            <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="product-card__title">{{ tp('services.accounts_cards.products.current_account.title', [], 'services') }}</h3>
+                    <p class="product-card__description">{{ tp('services.accounts_cards.products.current_account.description', [], 'services') }}</p>
+                    <ul class="product-card__features">
+                        <li class="product-card__feature">
+                            <svg class="product-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            {{ tp('services.accounts_cards.products.current_account.features.0', [], 'services') }}
+                        </li>
+                        <li class="product-card__feature">
+                            <svg class="product-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            {{ tp('services.accounts_cards.products.current_account.features.1', [], 'services') }}
+                        </li>
+                        <li class="product-card__feature">
+                            <svg class="product-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            {{ tp('services.accounts_cards.products.current_account.features.2', [], 'services') }}
+                        </li>
+                    </ul>
+                    <button class="product-card__cta product-card__cta--current">
+                        {{ tp('services.accounts_cards.products.current_account.cta', [], 'services') }}
+                    </button>
+                </div>
+
+                <!-- Compte Épargne -->
+                <div class="product-card">
+                    <div class="product-card__icon product-card__icon--savings">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="product-card__title">{{ tp('services.accounts_cards.products.savings_account.title', [], 'services') }}</h3>
+                    <p class="product-card__description">{{ tp('services.accounts_cards.products.savings_account.description', [], 'services') }}</p>
+                    <ul class="product-card__features">
+                        <li class="product-card__feature">
+                            <svg class="product-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            {{ tp('services.accounts_cards.products.savings_account.features.0', [], 'services') }}
+                        </li>
+                        <li class="product-card__feature">
+                            <svg class="product-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            {{ tp('services.accounts_cards.products.savings_account.features.1', [], 'services') }}
+                        </li>
+                        <li class="product-card__feature">
+                            <svg class="product-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            {{ tp('services.accounts_cards.products.savings_account.features.2', [], 'services') }}
+                        </li>
+                    </ul>
+                    <button class="product-card__cta product-card__cta--savings">
+                        {{ tp('services.accounts_cards.products.savings_account.cta', [], 'services') }}
+                    </button>
+                </div>
+
+                <!-- Carte de Crédit -->
+                <div class="product-card">
+                    <div class="product-card__icon product-card__icon--credit">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
+                            <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="product-card__title">{{ tp('services.accounts_cards.products.credit_card.title', [], 'services') }}</h3>
+                    <p class="product-card__description">{{ tp('services.accounts_cards.products.credit_card.description', [], 'services') }}</p>
+                    <ul class="product-card__features">
+                        <li class="product-card__feature">
+                            <svg class="product-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            {{ tp('services.accounts_cards.products.credit_card.features.0', [], 'services') }}
+                        </li>
+                        <li class="product-card__feature">
+                            <svg class="product-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            {{ tp('services.accounts_cards.products.credit_card.features.1', [], 'services') }}
+                        </li>
+                        <li class="product-card__feature">
+                            <svg class="product-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            {{ tp('services.accounts_cards.products.credit_card.features.2', [], 'services') }}
+                        </li>
+                    </ul>
+                    <button class="product-card__cta product-card__cta--credit">
+                        {{ tp('services.accounts_cards.products.credit_card.cta', [], 'services') }}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="accounts-cards__features">
+        <div class="accounts-cards__features-container">
+            <div class="accounts-cards__features-header">
+                <h2 class="accounts-cards__features-title">{{ tp('services.accounts_cards.features.title', [], 'services') }}</h2>
+                <p class="accounts-cards__features-subtitle">{{ tp('services.accounts_cards.features.subtitle', [], 'services') }}</p>
+            </div>
+
+            <div class="accounts-cards__features-grid">
+                <div class="feature-item">
+                    <div class="feature-item__icon feature-item__icon--security">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-item__title">{{ tp('services.accounts_cards.features.security.title', [], 'services') }}</h3>
+                    <p class="feature-item__description">{{ tp('services.accounts_cards.features.security.description', [], 'services') }}</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-item__icon feature-item__icon--simple">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414-1.414L9 7.586 7.707 6.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4a1 1 0 000-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-item__title">{{ tp('services.accounts_cards.features.simple.title', [], 'services') }}</h3>
+                    <p class="feature-item__description">{{ tp('services.accounts_cards.features.simple.description', [], 'services') }}</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-item__icon feature-item__icon--fast">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-item__title">{{ tp('services.accounts_cards.features.fast.title', [], 'services') }}</h3>
+                    <p class="feature-item__description">{{ tp('services.accounts_cards.features.fast.description', [], 'services') }}</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-item__icon feature-item__icon--support">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-item__title">{{ tp('services.accounts_cards.features.support.title', [], 'services') }}</h3>
+                    <p class="feature-item__description">{{ tp('services.accounts_cards.features.support.description', [], 'services') }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="accounts-cards__comparison">
+        <div class="accounts-cards__comparison-container">
+            <div class="accounts-cards__comparison-header">
+                <h2 class="accounts-cards__comparison-title">{{ tp('services.accounts_cards.comparison.title', [], 'services') }}</h2>
+                <p class="accounts-cards__comparison-subtitle">{{ tp('services.accounts_cards.comparison.subtitle', [], 'services') }}</p>
+            </div>
+
+            <div class="comparison-table">
+                <div class="comparison-table__header">
+                    <h3>{{ tp('services.accounts_cards.comparison.table_title', [], 'services') }}</h3>
+                    <p>{{ tp('services.accounts_cards.comparison.table_subtitle', [], 'services') }}</p>
+                </div>
+                <div class="comparison-table__body">
+                    <div class="comparison-row">
+                        <div class="comparison-cell">{{ tp('services.accounts_cards.comparison.features.0', [], 'services') }}</div>
+                        <div class="comparison-cell comparison-cell--bankit">{{ tp('services.accounts_cards.comparison.bankit', [], 'services') }}</div>
+                        <div class="comparison-cell comparison-cell--competitor">{{ tp('services.accounts_cards.comparison.competitor_a', [], 'services') }}</div>
+                        <div class="comparison-cell comparison-cell--competitor">{{ tp('services.accounts_cards.comparison.competitor_b', [], 'services') }}</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">{{ tp('services.accounts_cards.comparison.features.1', [], 'services') }}</div>
+                        <div class="comparison-cell comparison-cell--bankit"><span class="comparison-check">✓</span></div>
+                        <div class="comparison-cell comparison-cell--competitor">{{ tp('services.accounts_cards.comparison.competitor_values.a.card_fee', [], 'services') }}</div>
+                        <div class="comparison-cell comparison-cell--competitor">{{ tp('services.accounts_cards.comparison.competitor_values.b.card_fee', [], 'services') }}</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">{{ tp('services.accounts_cards.comparison.features.2', [], 'services') }}</div>
+                        <div class="comparison-cell comparison-cell--bankit"><span class="comparison-check">✓</span></div>
+                        <div class="comparison-cell comparison-cell--competitor">{{ tp('services.accounts_cards.comparison.competitor_values.a.transfers_fee', [], 'services') }}</div>
+                        <div class="comparison-cell comparison-cell--competitor"><span class="comparison-cross">{{ tp('services.accounts_cards.comparison.competitor_values.b.transfers_fee', [], 'services') }}</span></div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">{{ tp('services.accounts_cards.comparison.features.3', [], 'services') }}</div>
+                        <div class="comparison-cell comparison-cell--bankit"><span class="comparison-check">✓</span></div>
+                        <div class="comparison-cell comparison-cell--competitor">{{ tp('services.accounts_cards.comparison.competitor_values.a.app_quality', [], 'services') }}</div>
+                        <div class="comparison-cell comparison-cell--competitor">{{ tp('services.accounts_cards.comparison.competitor_values.b.app_quality', [], 'services') }}</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">{{ tp('services.accounts_cards.comparison.features.4', [], 'services') }}</div>
+                        <div class="comparison-cell comparison-cell--bankit"><span class="comparison-check">✓</span></div>
+                        <div class="comparison-cell comparison-cell--competitor">{{ tp('services.accounts_cards.comparison.competitor_values.a.support_hours', [], 'services') }}</div>
+                        <div class="comparison-cell comparison-cell--competitor">{{ tp('services.accounts_cards.comparison.competitor_values.b.support_hours', [], 'services') }}</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">{{ tp('services.accounts_cards.comparison.features.5', [], 'services') }}</div>
+                        <div class="comparison-cell comparison-cell--bankit">{{ tp('services.accounts_cards.comparison.values.overdraft', [], 'services') }}</div>
+                        <div class="comparison-cell comparison-cell--competitor">{{ tp('services.accounts_cards.comparison.competitor_values.a.overdraft_limit', [], 'services') }}</div>
+                        <div class="comparison-cell comparison-cell--competitor">{{ tp('services.accounts_cards.comparison.competitor_values.b.overdraft_limit', [], 'services') }}</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">{{ tp('services.accounts_cards.comparison.features.6', [], 'services') }}</div>
+                        <div class="comparison-cell comparison-cell--bankit">{{ tp('services.accounts_cards.comparison.values.savings_rate', [], 'services') }}</div>
+                        <div class="comparison-cell comparison-cell--competitor">{{ tp('services.accounts_cards.comparison.competitor_values.a.savings_rate', [], 'services') }}</div>
+                        <div class="comparison-cell comparison-cell--competitor">{{ tp('services.accounts_cards.comparison.competitor_values.b.savings_rate', [], 'services') }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="accounts-cards__process">
+        <div class="accounts-cards__process-container">
+            <div class="accounts-cards__process-header">
+                <h2 class="accounts-cards__process-title">{{ tp('services.accounts_cards.process.title', [], 'services') }}</h2>
+                <p class="accounts-cards__process-subtitle">{{ tp('services.accounts_cards.process.subtitle', [], 'services') }}</p>
+                <span class="accounts-cards__process-time">{{ tp('services.accounts_cards.process.time', [], 'services') }}</span>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-step__number">1</div>
+                    <div class="process-step__icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="process-step__title">{{ tp('services.accounts_cards.process.steps.step1.title', [], 'services') }}</h3>
+                    <p class="process-step__description">{{ tp('services.accounts_cards.process.steps.step1.description', [], 'services') }}</p>
+                    <span class="process-step__time">{{ tp('services.accounts_cards.process.steps.step1.time', [], 'services') }}</span>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step__number">2</div>
+                    <div class="process-step__icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="process-step__title">{{ tp('services.accounts_cards.process.steps.step2.title', [], 'services') }}</h3>
+                    <p class="process-step__description">{{ tp('services.accounts_cards.process.steps.step2.description', [], 'services') }}</p>
+                    <span class="process-step__time">{{ tp('services.accounts_cards.process.steps.step2.time', [], 'services') }}</span>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step__number">3</div>
+                    <div class="process-step__icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="process-step__title">{{ tp('services.accounts_cards.process.steps.step3.title', [], 'services') }}</h3>
+                    <p class="process-step__description">{{ tp('services.accounts_cards.process.steps.step3.description', [], 'services') }}</p>
+                    <span class="process-step__time">{{ tp('services.accounts_cards.process.steps.step3.time', [], 'services') }}</span>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step__number">4</div>
+                    <div class="process-step__icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="process-step__title">{{ tp('services.accounts_cards.process.steps.step4.title', [], 'services') }}</h3>
+                    <p class="process-step__description">{{ tp('services.accounts_cards.process.steps.step4.description', [], 'services') }}</p>
+                    <span class="process-step__time">{{ tp('services.accounts_cards.process.steps.step4.time', [], 'services') }}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="accounts-cards__services">
+        <div class="accounts-cards__services-container">
+            <div class="accounts-cards__services-header">
+                <h2 class="accounts-cards__services-title">{{ tp('services.accounts_cards.services.title', [], 'services') }}</h2>
+                <p class="accounts-cards__services-subtitle">{{ tp('services.accounts_cards.services.subtitle', [], 'services') }}</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-item__icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
+                            <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-item__title">{{ tp('services.accounts_cards.services.items.payment_management.title', [], 'services') }}</h3>
+                    <p class="service-item__description">{{ tp('services.accounts_cards.services.items.payment_management.description', [], 'services') }}</p>
+                    <ul class="service-item__features">
+                        <li>{{ tp('services.accounts_cards.services.items.payment_management.features.0', [], 'services') }}</li>
+                        <li>{{ tp('services.accounts_cards.services.items.payment_management.features.1', [], 'services') }}</li>
+                        <li>{{ tp('services.accounts_cards.services.items.payment_management.features.2', [], 'services') }}</li>
+                        <li>{{ tp('services.accounts_cards.services.items.payment_management.features.3', [], 'services') }}</li>
+                        <li>{{ tp('services.accounts_cards.services.items.payment_management.features.4', [], 'services') }}</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item__icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-item__title">{{ tp('services.accounts_cards.services.items.financial_analysis.title', [], 'services') }}</h3>
+                    <p class="service-item__description">{{ tp('services.accounts_cards.services.items.financial_analysis.description', [], 'services') }}</p>
+                    <ul class="service-item__features">
+                        <li>{{ tp('services.accounts_cards.services.items.financial_analysis.features.0', [], 'services') }}</li>
+                        <li>{{ tp('services.accounts_cards.services.items.financial_analysis.features.1', [], 'services') }}</li>
+                        <li>{{ tp('services.accounts_cards.services.items.financial_analysis.features.2', [], 'services') }}</li>
+                        <li>{{ tp('services.accounts_cards.services.items.financial_analysis.features.3', [], 'services') }}</li>
+                        <li>{{ tp('services.accounts_cards.services.items.financial_analysis.features.4', [], 'services') }}</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item__icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-item__title">{{ tp('services.accounts_cards.services.items.personalized_advice.title', [], 'services') }}</h3>
+                    <p class="service-item__description">{{ tp('services.accounts_cards.services.items.personalized_advice.description', [], 'services') }}</p>
+                    <ul class="service-item__features">
+                        <li>{{ tp('services.accounts_cards.services.items.personalized_advice.features.0', [], 'services') }}</li>
+                        <li>{{ tp('services.accounts_cards.services.items.personalized_advice.features.1', [], 'services') }}</li>
+                        <li>{{ tp('services.accounts_cards.services.items.personalized_advice.features.2', [], 'services') }}</li>
+                        <li>{{ tp('services.accounts_cards.services.items.personalized_advice.features.3', [], 'services') }}</li>
+                        <li>{{ tp('services.accounts_cards.services.items.personalized_advice.features.4', [], 'services') }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="accounts-cards__benefits">
+        <div class="accounts-cards__benefits-container">
+            <div class="accounts-cards__benefits-header">
+                <h2 class="accounts-cards__benefits-title">{{ tp('services.accounts_cards.benefits.title', [], 'services') }}</h2>
+                <p class="accounts-cards__benefits-subtitle">{{ tp('services.accounts_cards.benefits.subtitle', [], 'services') }}</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-card__title">{{ tp('services.accounts_cards.benefits.items.instant_transactions.title', [], 'services') }}</h3>
+                    <p class="benefit-card__description">{{ tp('services.accounts_cards.benefits.items.instant_transactions.description', [], 'services') }}</p>
+                    <span class="benefit-card__value">{{ tp('services.accounts_cards.benefits.items.instant_transactions.value', [], 'services') }}</span>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-card__title">{{ tp('services.accounts_cards.benefits.items.cashback.title', [], 'services') }}</h3>
+                    <p class="benefit-card__description">{{ tp('services.accounts_cards.benefits.items.cashback.description', [], 'services') }}</p>
+                    <span class="benefit-card__value">{{ tp('services.accounts_cards.benefits.items.cashback.value', [], 'services') }}</span>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                            <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-card__title">{{ tp('services.accounts_cards.benefits.items.insurance.title', [], 'services') }}</h3>
+                    <p class="benefit-card__description">{{ tp('services.accounts_cards.benefits.items.insurance.description', [], 'services') }}</p>
+                    <span class="benefit-card__value">{{ tp('services.accounts_cards.benefits.items.insurance.value', [], 'services') }}</span>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-card__title">{{ tp('services.accounts_cards.benefits.items.global_access.title', [], 'services') }}</h3>
+                    <p class="benefit-card__description">{{ tp('services.accounts_cards.benefits.items.global_access.description', [], 'services') }}</p>
+                    <span class="benefit-card__value">{{ tp('services.accounts_cards.benefits.items.global_access.value', [], 'services') }}</span>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-card__title">{{ tp('services.accounts_cards.benefits.items.loyalty_program.title', [], 'services') }}</h3>
+                    <p class="benefit-card__description">{{ tp('services.accounts_cards.benefits.items.loyalty_program.description', [], 'services') }}</p>
+                    <span class="benefit-card__value">{{ tp('services.accounts_cards.benefits.items.loyalty_program.value', [], 'services') }}</span>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-card__title">{{ tp('services.accounts_cards.benefits.items.automatic_savings.title', [], 'services') }}</h3>
+                    <p class="benefit-card__description">{{ tp('services.accounts_cards.benefits.items.automatic_savings.description', [], 'services') }}</p>
+                    <span class="benefit-card__value">{{ tp('services.accounts_cards.benefits.items.automatic_savings.value', [], 'services') }}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="accounts-cards__support">
+        <div class="accounts-cards__support-container">
+            <div class="accounts-cards__support-header">
+                <h2 class="accounts-cards__support-title">{{ tp('services.accounts_cards.support.title', [], 'services') }}</h2>
+                <p class="accounts-cards__support-subtitle">{{ tp('services.accounts_cards.support.subtitle', [], 'services') }}</p>
+            </div>
+
+            <div class="support-channels">
+                <div class="support-channel">
+                    <div class="support-channel__icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="support-channel__title">{{ tp('services.accounts_cards.support.channels.live_chat.title', [], 'services') }}</h3>
+                    <p class="support-channel__description">{{ tp('services.accounts_cards.support.channels.live_chat.description', [], 'services') }}</p>
+                    <span class="support-channel__availability">{{ tp('services.accounts_cards.support.channels.live_chat.availability', [], 'services') }}</span>
+                    <span class="support-channel__response-time">{{ tp('services.accounts_cards.support.channels.live_chat.response_time', [], 'services') }}</span>
+                </div>
+
+                <div class="support-channel">
+                    <div class="support-channel__icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="support-channel__title">{{ tp('services.accounts_cards.support.channels.phone_hotline.title', [], 'services') }}</h3>
+                    <p class="support-channel__description">{{ tp('services.accounts_cards.support.channels.phone_hotline.description', [], 'services') }}</p>
+                    <span class="support-channel__availability">{{ tp('services.accounts_cards.support.channels.phone_hotline.availability', [], 'services') }}</span>
+                    <span class="support-channel__response-time">{{ tp('services.accounts_cards.support.channels.phone_hotline.response_time', [], 'services') }}</span>
+                </div>
+
+                <div class="support-channel">
+                    <div class="support-channel__icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                        </svg>
+                    </div>
+                    <h3 class="support-channel__title">{{ tp('services.accounts_cards.support.channels.email_form.title', [], 'services') }}</h3>
+                    <p class="support-channel__description">{{ tp('services.accounts_cards.support.channels.email_form.description', [], 'services') }}</p>
+                    <span class="support-channel__availability">{{ tp('services.accounts_cards.support.channels.email_form.availability', [], 'services') }}</span>
+                    <span class="support-channel__response-time">{{ tp('services.accounts_cards.support.channels.email_form.response_time', [], 'services') }}</span>
+                </div>
+
+                <div class="support-channel">
+                    <div class="support-channel__icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="support-channel__title">{{ tp('services.accounts_cards.support.channels.interactive_faq.title', [], 'services') }}</h3>
+                    <p class="support-channel__description">{{ tp('services.accounts_cards.support.channels.interactive_faq.description', [], 'services') }}</p>
+                    <span class="support-channel__availability">{{ tp('services.accounts_cards.support.channels.interactive_faq.availability', [], 'services') }}</span>
+                    <span class="support-channel__response-time">{{ tp('services.accounts_cards.support.channels.interactive_faq.response_time', [], 'services') }}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="accounts-cards__cta">
+        <div class="accounts-cards__cta-container">
+            <h2 class="accounts-cards__cta-title">{{ tp('services.accounts_cards.cta.title', [], 'services') }}</h2>
+            <p class="accounts-cards__cta-description">{{ tp('services.accounts_cards.cta.description', [], 'services') }}</p>
+            <div class="accounts-cards__cta-buttons">
+                <a href="{{ path('app_register') }}" class="accounts-cards__cta-button accounts-cards__cta-button--primary">
+                    {{ tp('services.accounts_cards.cta.primary_button', [], 'services') }}
+                </a>
+                <a href="{{ path('support_contact') }}" class="accounts-cards__cta-button accounts-cards__cta-button--secondary">
+                    {{ tp('services.accounts_cards.cta.secondary_button', [], 'services') }}
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

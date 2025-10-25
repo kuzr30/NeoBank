@@ -1,0 +1,66 @@
+help_center_complaints:
+  # Breadcrumb
+  breadcrumb:
+    home: "Inicio"
+    support: "Soporte"
+    complaints: "Reclamaciones"
+  
+  # Hero section
+  title: "Reclamaciones"
+  subtitle: "Su satisfacción es nuestra prioridad. Tratamos cada reclamación con seriedad y transparencia."
+  
+  # Process section
+  process:
+    title: "Proceso de Reclamación"
+    subtitle: "Cómo tratamos sus reclamaciones"
+    
+    step1:
+      title: "Depósito de la reclamación"
+      description: "Envíe su reclamación a través del formulario online o directamente en agencia"
+      
+    step2:
+      title: "Acuse de recibo"
+      description: "Confirmación en 2 días laborables con asignación de un número de seguimiento"
+      
+    step3:
+      title: "Análisis y tratamiento"
+      description: "Examen exhaustivo de su expediente por nuestros especialistas cualificados"
+      
+    step4:
+      title: "Resolución y respuesta"
+      description: "Respuesta detallada y solución propuesta en 15 días laborables máximo"
+  
+  # Contact section
+  contact:
+    title: "Contactarnos"
+    subtitle: "Varios medios para comunicarnos sus preocupaciones"
+    
+    phone:
+      title: "Por Teléfono"
+      hours: "De lunes a viernes de 8h a 18h"
+      
+    email:
+      title: "Por Email"
+      response_time: "Respuesta en 48h"
+      
+    branch:
+      title: "En Agencia"
+      address: "Dirección"
+      hours: "De lunes a viernes de 9h a 17h"
+  
+  # Tracking section
+  tracking:
+    title: "Seguimiento de su reclamación"
+    subtitle: "Introduzca su número de referencia para conocer el estado de avance"
+    placeholder: "Ej: REF-2024-123456"
+    search: "Buscar"
+    searching: "Búsqueda en curso..."
+    
+    status:
+      received: "Reclamación recibida"
+      in_progress: "En curso de tratamiento"
+      resolved: "Resuelta"
+      
+    error:
+      empty: "Por favor introduzca un número de seguimiento"
+      invalid: "El número de seguimiento debe contener al menos 5 caracteres"

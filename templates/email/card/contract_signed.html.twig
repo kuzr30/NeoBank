@@ -1,0 +1,59 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ 'email_card_contract_signed.title'|trans({}, 'email_card_contract_signed', _locale) }} - {{ parent() }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ 'email_card_contract_signed.content.page_title'|trans({}, 'email_card_contract_signed', _locale) }}</h2>
+    
+    <p class="content-text">
+        {{ 'email_card_contract_signed.content.greeting'|trans({firstName: user.firstName, lastName: user.lastName}, 'email_card_contract_signed', _locale) }}
+    </p>
+
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #2e7d32;">{{ 'email_card_contract_signed.content.success.title'|trans({}, 'email_card_contract_signed', _locale) }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {{ 'email_card_contract_signed.content.success.description'|trans({}, 'email_card_contract_signed', _locale) }}
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ 'email_card_contract_signed.content.contract_details.title'|trans({}, 'email_card_contract_signed', _locale) }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #f8f9fa; border-radius: 6px;">
+                    <div style="margin-bottom: 12px;">
+                        <strong style="color: #1976d2;">{{ 'email_card_contract_signed.content.contract_details.reference'|trans({}, 'email_card_contract_signed', _locale) }}</strong><br>
+                        <span style="color: #424242; font-family: monospace;">{{ subscription.reference }}</span>
+                    </div>
+                    <div style="margin-bottom: 12px;">
+                        <strong style="color: #1976d2;">{{ 'email_card_contract_signed.content.contract_details.card_type'|trans({}, 'email_card_contract_signed', _locale) }}</strong><br>
+                        <span style="color: #424242;">{{ subscription.cardBrand|title }} {{ subscription.cardType|title }}</span>
+                    </div>
+                    <div>
+                        <strong style="color: #1976d2;">{{ 'email_card_contract_signed.content.contract_details.signed_date'|trans({}, 'email_card_contract_signed', _locale) }}</strong><br>
+                        <span style="color: #424242;">{{ subscription.contract.signedAt|date('d/m/Y à H:i') }}</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ 'email_card_contract_signed.content.next_steps.title'|trans({}, 'email_card_contract_signed', _locale) }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #f8f9fa; border-radius: 6px;">
+                    <ol style="margin: 0; padding-left: 20px; color: #000000;">
+                        <li style="margin-bottom: 8px;">{{ 'email_card_contract_signed.content.next_steps.step1'|trans({}, 'email_card_contract_signed', _locale) }}</li>
+                        <li style="margin-bottom: 8px;">{{ 'email_card_contract_signed.content.next_steps.step2'|trans({}, 'email_card_contract_signed', _locale) }}</li>
+                        <li style="margin-bottom: 0;">{{ 'email_card_contract_signed.content.next_steps.step3'|trans({}, 'email_card_contract_signed', _locale) }}</li>
+                    </ol>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p class="content-text">
+        {{ 'email_card_contract_signed.content.closing'|trans({}, 'email_card_contract_signed', _locale) }}
+    </p>
+{% endblock %}

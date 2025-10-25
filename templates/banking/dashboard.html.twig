@@ -1,0 +1,191 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tp('banking_dashboard.meta.title', [], 'banking_dashboard') }} - {{ parent() }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/banking-dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/banking-cards.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="banking" data-controller="banking-tabs" data-banking-tabs-active-tab-value="{{ activeTab|default('comptes') }}" data-banking-tabs-base-url-value="/banking">
+    <!-- Top Navigation Bar -->
+    <nav class="banking__navbar">
+        <div class="banking__navbar-container">
+            <div class="banking__nav-left">
+                <div class="banking__user-info">
+                    <div class="banking__user-avatar">{{ user.firstName|first|upper }}{{ user.lastName|first|upper }}</div>
+                    <div class="banking__user-details">
+                        <span class="banking__user-name">{{ user.firstName }} {{ user.lastName }}</span>
+                        <span class="banking__user-status">{{ tp('banking_dashboard.user.status', [], 'banking_dashboard') }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="banking__nav-center">
+                <div class="banking__nav-tabs">
+                    <a href="#" class="banking__nav-tab {% if activeTab|default('comptes') == 'comptes' %}banking__nav-tab--active{% endif %}" data-banking-tabs-target="tab" data-tab="comptes" data-tab-type="main" data-action="click->banking-tabs#switchTab">{{ tp('banking_dashboard.nav.accounts', [], 'banking_dashboard') }}</a>
+                    <a href="#" class="banking__nav-tab {% if activeTab == 'cartes' %}banking__nav-tab--active{% endif %}" data-banking-tabs-target="tab" data-tab="cartes" data-action="click->banking-tabs#switchTab">{{ tp('banking_dashboard.nav.cards', [], 'banking_dashboard') }}</a>
+                    <a href="#" class="banking__nav-tab {% if activeTab == 'virements' or activeTab == 'transfers' or activeTab == 'transfer_details' %}banking__nav-tab--active{% endif %}" data-banking-tabs-target="tab" data-tab="virements" data-action="click->banking-tabs#switchTab">{{ tp('banking_dashboard.nav.transfers', [], 'banking_dashboard') }}</a>
+                    <a href="#" class="banking__nav-tab {% if activeTab == 'ribs' or activeTab == 'rib_new' or activeTab == 'rib_show' %}banking__nav-tab--active{% endif %}" data-banking-tabs-target="tab" data-tab="ribs" data-action="click->banking-tabs#switchTab">{{ tp('banking_dashboard.nav.ribs', [], 'banking_dashboard') }}</a>
+                   {#  <a href="#" class="banking__nav-tab {% if activeTab == 'epargne' %}banking__nav-tab--active{% endif %}" data-banking-tabs-target="tab" data-tab="epargne" data-action="click->banking-tabs#switchTab">{{ tp('banking_dashboard.nav.savings', [], 'banking_dashboard') }}</a> #}
+                    <a href="#" class="banking__nav-tab {% if activeTab == 'credits' %}banking__nav-tab--active{% endif %}" data-banking-tabs-target="tab" data-tab="credits" data-action="click->banking-tabs#switchTab">{{ tp('banking_dashboard.nav.credits', [], 'banking_dashboard') }}</a>
+                    <a href="#" class="banking__nav-tab {% if activeTab == 'assurances' %}banking__nav-tab--active{% endif %}" data-banking-tabs-target="tab" data-tab="assurances" data-action="click->banking-tabs#switchTab">{{ tp('banking_dashboard.nav.insurance', [], 'banking_dashboard') }}</a>
+                </div>
+            </div>
+        
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="banking__main">
+        <div class="banking__container">
+            
+            <!-- Sidebar -->
+            <aside class="banking__sidebar">
+                <div class="banking__sidebar-section">
+                    <h3 class="banking__sidebar-title">{{ tp('banking_dashboard.sidebar.my_accounts', [], 'banking_dashboard') }}</h3>
+                    <div class="banking__account-list">
+                        {% if accounts is defined and accounts|length > 0 %}
+                            {% set mainAccount = accounts[0] %}
+                            <!-- Compte Principal -->
+                            <div class="banking__account-item banking__account-item--main banking__account-item--active">
+                                <div class="banking__account-header">
+                                    {{ ux_icon('heroicons:building-library', {'class': 'banking__account-icon'}) }}
+                                    <span class="banking__account-name">{{ tp('banking_dashboard.accounts.main_account', [], 'banking_dashboard') }}</span>
+                                    <span class="banking__account-number">****{{ mainAccount.iban[-4:] }}</span>
+                                </div>
+                                <div class="banking__account-balance">{{ mainAccount.balance|number_format(2, ',', ' ') }} {{ tp('banking_dashboard.currency', [], 'banking_dashboard') }}</div>
+                                <div class="banking__account-status {% if mainAccount.monthlyBalanceChange >= 0 %}banking__account-status--positive{% else %}banking__account-status--negative{% endif %}">
+                                    {% if mainAccount.monthlyBalanceChange >= 0 %}
+                                        +{{ mainAccount.monthlyBalanceChange|number_format(2, ',', ' ') }} {{ tp('banking_dashboard.currency', [], 'banking_dashboard') }} {{ tp('banking_dashboard.status.this_month', [], 'banking_dashboard') }}
+                                    {% else %}
+                                        {{ mainAccount.monthlyBalanceChange|number_format(2, ',', ' ') }} {{ tp('banking_dashboard.currency', [], 'banking_dashboard') }} {{ tp('banking_dashboard.status.this_month', [], 'banking_dashboard') }}
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <!-- Sous-comptes -->
+                            {% if mainAccount.subAccountCredit %}
+                                <div class="banking__account-item banking__account-item--sub">
+                                    <div class="banking__account-header">
+                                        {{ ux_icon('heroicons:credit-card', {'class': 'banking__account-icon banking__account-icon--credit'}) }}
+                                        <span class="banking__account-name">{{ tp('banking_dashboard.accounts.credit_account', [], 'banking_dashboard') }}</span>
+                                    </div>
+                                    <div class="banking__account-balance">{{ mainAccount.subAccountCredit.amount|number_format(2, ',', ' ') }} {{ tp('banking_dashboard.currency', [], 'banking_dashboard') }}</div>
+                                    <div class="banking__account-status">{{ tp('banking_dashboard.status.available_credit', [], 'banking_dashboard') }}</div>
+                                </div>
+                            {% endif %}
+
+                            {% if mainAccount.subAccountCard %}
+                                <div class="banking__account-item banking__account-item--sub">
+                                    <div class="banking__account-header">
+                                        {{ ux_icon('heroicons:rectangle-stack', {'class': 'banking__account-icon banking__account-icon--card'}) }}
+                                        <span class="banking__account-name">{{ tp('banking_dashboard.accounts.card_account', [], 'banking_dashboard') }}</span>
+                                    </div>
+                                    <div class="banking__account-balance">{{ mainAccount.subAccountCard.amount|number_format(2, ',', ' ') }} {{ tp('banking_dashboard.currency', [], 'banking_dashboard') }}</div>
+                                    <div class="banking__account-status">{{ tp('banking_dashboard.status.card_balance', [], 'banking_dashboard') }}</div>
+                                </div>
+                            {% endif %}
+
+                            {% if mainAccount.subAccountSavings %}
+                                <div class="banking__account-item banking__account-item--sub">
+                                    <div class="banking__account-header">
+                                        {{ ux_icon('heroicons:banknotes', {'class': 'banking__account-icon banking__account-icon--savings'}) }}
+                                        <span class="banking__account-name">{{ tp('banking_dashboard.accounts.savings_account', [], 'banking_dashboard') }}</span>
+                                    </div>
+                                    <div class="banking__account-balance">{{ mainAccount.subAccountSavings.amount|number_format(2, ',', ' ') }} {{ tp('banking_dashboard.currency', [], 'banking_dashboard') }}</div>
+                                    <div class="banking__account-status">{{ tp('banking_dashboard.status.savings_built', [], 'banking_dashboard') }}</div>
+                                </div>
+                            {% endif %}
+
+                            {% if mainAccount.subAccountInsurance %}
+                                <div class="banking__account-item banking__account-item--sub">
+                                    <div class="banking__account-header">
+                                        {{ ux_icon('heroicons:shield-check', {'class': 'banking__account-icon banking__account-icon--insurance'}) }}
+                                        <span class="banking__account-name">{{ tp('banking_dashboard.accounts.insurance_account', [], 'banking_dashboard') }}</span>
+                                    </div>
+                                    <div class="banking__account-balance">{{ mainAccount.subAccountInsurance.amount|number_format(2, ',', ' ') }} {{ tp('banking_dashboard.currency', [], 'banking_dashboard') }}</div>
+                                    <div class="banking__account-status">{{ tp('banking_dashboard.status.insurance_provision', [], 'banking_dashboard') }}</div>
+                                </div>
+                            {% endif %}
+                        {% else %}
+                            <div class="banking__account-item">
+                                <div class="banking__account-header">
+                                    <span class="banking__account-name">{{ tp('banking_dashboard.accounts.no_account', [], 'banking_dashboard') }}</span>
+                                </div>
+                                <div class="banking__account-balance">0,00 {{ tp('banking_dashboard.currency', [], 'banking_dashboard') }}</div>
+                                <div class="banking__account-status">{{ tp('banking_dashboard.status.contact_advisor', [], 'banking_dashboard') }}</div>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="banking__sidebar-section">
+                    <h3 class="banking__sidebar-title">{{ tp('banking_dashboard.sidebar.quick_actions', [], 'banking_dashboard') }}</h3>
+                    <div class="banking__quick-actions">
+                        <a href="#" class="banking__quick-btn" data-banking-tabs-target="tab" data-tab="virements" data-action="click->banking-tabs#switchTab">
+                            {{ ux_icon('heroicons:arrow-right', {'class': 'banking__quick-icon'}) }}
+                            {{ tp('banking_dashboard.actions.transfer', [], 'banking_dashboard') }}
+                        </a>
+                        <button class="banking__quick-btn">
+                            {{ ux_icon('heroicons:credit-card', {'class': 'banking__quick-icon'}) }}
+                            {{ tp('banking_dashboard.actions.card_opposition', [], 'banking_dashboard') }}
+                        </button>
+                        <a href="#" class="banking__quick-btn" data-banking-tabs-target="tab" data-tab="ribs" data-action="click->banking-tabs#switchTab">
+                            {{ ux_icon('heroicons:document-text', {'class': 'banking__quick-icon'}) }}
+                            {{ tp('banking_dashboard.actions.rib_iban', [], 'banking_dashboard') }}
+                        </a>
+                        <button class="banking__quick-btn">
+                            {{ ux_icon('heroicons:phone', {'class': 'banking__quick-icon'}) }}
+                            {{ tp('banking_dashboard.actions.contact_us', [], 'banking_dashboard') }}
+                        </button>
+                    </div>
+                </div>
+            </aside>
+
+
+            <!-- Dynamic Tab Content -->
+            <div data-banking-tabs-target="content">
+                {% if activeTab == 'cartes' %}
+                    {% include 'banking/cards/index.html.twig' %}
+                {% elseif activeTab == 'card-subscription' %}
+                    {% include 'banking/tabs/card-subscription.html.twig' %}
+                {% elseif activeTab == 'contract-signature' %}
+                    {% include 'banking/tabs/contract-signature.html.twig' %}
+                {% elseif activeTab == 'contract-success' %}
+                    {% include 'banking/tabs/contract-success.html.twig' %}
+                {% elseif activeTab == 'virements' or activeTab == 'transfers' %}
+                    {% include 'banking/tabs/transfers.html.twig' %}
+                {% elseif activeTab == 'transfer_new' %}
+                    {% include 'banking/tabs/transfer_new.html.twig' %}
+                {% elseif activeTab == 'transfer_validate' %}
+                    {% include 'banking/tabs/transfer_validate.html.twig' %}
+                {% elseif activeTab == 'transfer_details' %}
+                    {% include 'banking/tabs/transfer_details.html.twig' %}
+                {% elseif activeTab == 'ribs' %}
+                    {% include 'banking/tabs/ribs.html.twig' %}
+                {% elseif activeTab == 'rib_new' %}
+                    {% include 'banking/tabs/rib_new.html.twig' %}
+                {% elseif activeTab == 'rib_show' %}
+                    {% include 'banking/tabs/rib_show.html.twig' %}
+                {% elseif activeTab == 'epargne' %}
+                    {% include 'banking/tabs/epargne.html.twig' %}
+                {% elseif activeTab == 'credits' %}
+                    {% include 'banking/tabs/credits.html.twig' %}
+                {% elseif activeTab == 'credit_transfer_form' %}
+                    {% include 'banking/tabs/credit_transfer_form.html.twig' %}
+                {% elseif activeTab == 'credit_transfer_confirm' %}
+                    {% include 'banking/tabs/credit_transfer_confirm.html.twig' %}
+                {% elseif activeTab == 'assurances' %}
+                    {% include 'banking/tabs/assurances.html.twig' %}
+                {% else %}
+                    {% include 'banking/tabs/comptes.html.twig' %}
+                {% endif %}
+            </div>
+
+
+        </div>
+    </main>
+</div>
+{% endblock %}

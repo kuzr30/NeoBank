@@ -1,0 +1,77 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_user_blocked.title', {}, 'email_user_blocked') }} - {{ parent() }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('email_user_blocked.content.page_title', {}, 'email_user_blocked') }}</h2>
+    
+    <p class="content-text">
+        {{ tp('email_user_blocked.content.greeting', {firstName: user.firstName}, 'email_user_blocked') }}
+    </p>
+
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #d32f2f;">{{ tp('email_user_blocked.content.account_blocked.title', {}, 'email_user_blocked') }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {{ tp('email_user_blocked.content.account_blocked.description', {}, 'email_user_blocked') }}
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_user_blocked.content.transfer_details.title', {}, 'email_user_blocked') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 12px 16px; background: #e3f2fd; font-weight: 600; color: #0d47a1; width: 35%; border-right: 1px solid #bbdefb;">{{ tp('email_user_blocked.content.transfer_details.reference', {}, 'email_user_blocked') }}</td>
+                <td style="padding: 12px 16px; font-family: monospace; font-weight: 700; color: #1976d2; font-size: 16px;">{{ transfer.reference }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px 16px; background: #f5f5f5; font-weight: 600; color: #0d47a1; border-right: 1px solid #bbdefb;">{{ tp('email_user_blocked.content.transfer_details.amount', {}, 'email_user_blocked') }}</td>
+                <td style="padding: 12px 16px;">
+                    <span style="font-size: 20px; font-weight: 700; color: #d32f2f;">{{ tp('email_user_blocked.content.transfer_details.amount_value', {amount: transfer.amount|number_format(2, ',', ' ')}, 'email_user_blocked') }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 12px 16px; background: #e3f2fd; font-weight: 600; color: #0d47a1; border-right: 1px solid #bbdefb;">{{ tp('email_user_blocked.content.transfer_details.blocked_at', {}, 'email_user_blocked') }}</td>
+                <td style="padding: 12px 16px; color: #d32f2f; font-weight: 600;">{{ "now"|date('d/m/Y à H:i') }}</td>
+            </tr>
+        </table>
+    </div>
+            
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ tp('email_user_blocked.content.reason.title', {}, 'email_user_blocked') }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {{ tp('email_user_blocked.content.reason.description', {}, 'email_user_blocked') }}
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_user_blocked.content.next_steps.title', {}, 'email_user_blocked') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 10px 16px; background: #e3f2fd; border-left: 4px solid #1976d2; border-bottom: 1px solid #bbdefb;">
+                    <strong style="color: #0d47a1;">{{ tp('email_user_blocked.content.next_steps.step1', {}, 'email_user_blocked') }}</strong>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 16px; background: #f9f9f9; border-left: 4px solid #1976d2; border-bottom: 1px solid #bbdefb;">
+                    <strong style="color: #0d47a1;">{{ tp('email_user_blocked.content.next_steps.step2', {}, 'email_user_blocked') }}</strong>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 16px; background: #e3f2fd; border-left: 4px solid #1976d2;">
+                    <strong style="color: #0d47a1;">{{ tp('email_user_blocked.content.next_steps.step3', {}, 'email_user_blocked') }}</strong>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #d32f2f;">{{ tp('email_user_blocked.content.security_notice.title', {}, 'email_user_blocked') }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {{ tp('email_user_blocked.content.security_notice.description', {}, 'email_user_blocked') }}
+        </p>
+    </div>
+
+    <p class="footer-text">
+        {{ tp('email_user_blocked.content.footer', {}, 'email_user_blocked')|raw }}
+    </p>
+{% endblock %}

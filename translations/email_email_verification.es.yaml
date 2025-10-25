@@ -1,0 +1,27 @@
+email_email_verification:
+  title: "Validación de su nueva dirección de correo electrónico - %company_name%"
+  content:
+    page_title: "Validación de su nueva dirección de correo electrónico"
+    greeting: "Hola <strong>{firstName}</strong>,"
+    intro: "Ha solicitado modificar la dirección de correo electrónico de su cuenta %company_name%."
+    new_email:
+      title: "Nueva dirección de correo electrónico"
+      label: "Nueva dirección:"
+      value: "{newEmail}"
+    instruction: "Para confirmar este cambio y validar su nueva dirección de correo electrónico, haga clic en el botón de abajo:"
+    button_text: "Validar mi dirección de correo"
+    warning:
+      title: "⏰ Enlace temporal"
+      description: "<strong>Importante:</strong> Este enlace de validación expira el <strong>{expirationDate}</strong>. Después de esta fecha, deberá hacer una nueva solicitud de cambio."
+    security:
+      title: "Seguridad"
+      description: "Si no ha solicitado este cambio de dirección de correo electrónico, ignore este correo y conéctese inmediatamente a su cuenta para verificar su seguridad."
+    manual_link: "Si el botón no funciona, puede copiar y pegar este enlace en su navegador:"
+    signature: "Cordialmente,<br><strong>El equipo %company_name%</strong>"
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Enviando el correo de verificación de dirección"
+    success: "Correo de verificación enviado con éxito"
+    error: "Error al enviar el correo de verificación"
+    send_failed: "Fallo en el envío del correo de verificación"

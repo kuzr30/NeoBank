@@ -1,0 +1,28 @@
+# Configuration des routes principales avec locale
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+# Route par défaut (redirection automatique vers locale préférée)
+_default_redirect:
+    path: /
+    controller: App\Controller\LocaleRedirectController::defaultRedirect
+    methods: [GET]
+
+# Routes de redirection automatique pour les URLs sans locale
+_legacy_routes:
+    path: /{path}
+    controller: App\Controller\LocaleRedirectController::legacyRedirect
+    requirements:
+        path: '(profile|banking|credit|simulation|dashboard).*'
+    methods: [GET]
+
+# Route de fallback pour les anciennes URLs
+_legacy_credit_application:
+    path: /credit-application/{path}
+    controller: App\Controller\LocaleRedirectController::legacyRedirect
+    requirements:
+        path: '.*'
+    methods: [GET]

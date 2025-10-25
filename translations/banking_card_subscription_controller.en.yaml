@@ -1,0 +1,66 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_card_subscription_controller.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_card_subscription_controller:
+  # User interface
+  ui:
+    confirm_card_title: "Confirm your"
+    advantages_title: "Included benefits"
+    limits_title: "Limits"
+    request_card_button: "Request this card"
+    cancel_button: "Cancel"
+  
+  flash:
+    kyc_required: "You must complete your identity verification to access banking card services."
+    existing_card_or_subscription: "You already have a card or an application in progress."
+    no_active_account: "You must have an active account to subscribe to a card."
+    subscription_success: "Your subscription request has been registered successfully. You will receive a notification as soon as it is processed."
+    subscription_error: "An error occurred while registering your request. Please try again."
+    access_denied_subscription: "Access denied to this subscription."
+    cannot_cancel_subscription: "Only pending subscriptions can be cancelled."
+    invalid_security_token: "Invalid security token."
+    subscription_cancelled: "Your subscription request has been cancelled successfully."
+    cancellation_error: "An error occurred during cancellation."
+  card_info:
+    classic:
+      title: "Classic Card"
+      description: "Ideal for beginners, free the first year"
+      price: "Free the first year"
+      features:
+        - "Contactless payments"
+        - "Free withdrawals throughout Europe"
+        - "Purchase insurance included"
+        - "Dedicated mobile app"
+      limits:
+        - "Withdrawal limit: 300€/day"
+        - "Payment limit: 1,000€/day"
+    gold:
+      title: "Gold Card"
+      description: "The most popular choice for daily use"
+      price: "5€ per month"
+      features:
+        - "All Classic card benefits"
+        - "Travel insurance included"
+        - "Extended warranty guarantee"
+        - "24/7 concierge service"
+        - "1% cashback refund"
+      limits:
+        - "Withdrawal limit: 500€/day"
+        - "Payment limit: 2,500€/day"
+    platinum:
+      title: "Platinum Card"
+      description: "The pinnacle of banking excellence"
+      price: "15€ per month"
+      features:
+        - "All Gold card benefits"
+        - "Airport VIP lounge access"
+        - "Premium travel insurance"
+        - "Premium 24/7 concierge service"
+        - "2% cashback refund"
+        - "Dedicated account manager"
+      limits:
+        - "Withdrawal limit: 1,000€/day"
+        - "Payment limit: 5,000€/day"
+  automated_request: "Automated request via banking interface"

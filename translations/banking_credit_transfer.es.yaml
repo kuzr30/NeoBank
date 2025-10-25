@@ -1,0 +1,133 @@
+banking_credit_transfer:
+  # Header section
+  header:
+    title: "Transferencia interna"
+    subtitle: "Transferencia entre sus cuentas"
+    last_update: "Última actualización"
+
+  # Transfer sections
+  sections:
+    from: "Desde"
+    to: "Hacia"
+    amount: "Importe"
+
+  # Account types
+  accounts:
+    credit_account: "Cuenta Crédito"
+    main_account: "Cuenta Principal"
+    current_account: "Su cuenta corriente"
+    destination: "Destino"
+
+  # Form elements
+  form:
+    amount_placeholder: "0,00"
+    amount_currency: "€"
+    amount_help: "Máximo disponible: %amount% €"
+    amount_help_available: "Máximo disponible"
+    amount_required: "El importe es requerido"
+    amount_invalid: "Importe inválido"
+    hidden_sub_account: "ID de la subcuenta"
+    hidden_token: "Token CSRF"
+
+  # Actions
+  actions:
+    cancel: "Cancelar"
+    continue: "Continuar"
+    initiate_transfer: "Iniciar la transferencia"
+    confirm_transfer: "Confirmar la transferencia"
+
+  # Confirmation page
+  confirmation:
+    title: "Confirmación de la transferencia"
+    verification_required: "Verificación requerida"
+    transfer_summary: "Resumen de la transferencia"
+    amount_label: "Importe"
+    verification_code_title: "Código de verificación"
+    verification_info: "Un código de verificación ha sido enviado a su dirección de email."
+    code_placeholder: "000000"
+
+  # Status messages
+  messages:
+    success: "Transferencia iniciada con éxito"
+    error: "Error durante la transferencia"
+    insufficient_funds: "Saldo insuficiente"
+    
+  # Form fields
+  form_fields:
+    credit_account: "Cuenta crédito origen"
+    destination_account: "Cuenta de destino"
+    amount: "Importe a transferir"
+    amount_placeholder: "0,00"
+    description: "Motivo de la transferencia"
+    description_placeholder: "Descripción opcional..."
+    available_credit: "Crédito disponible"
+    transfer_fees: "Gastos de transferencia"
+    
+  # Credit info
+  credit:
+    available_limit: "Límite disponible"
+    used_limit: "Crédito utilizado"
+    interest_rate: "Tipo de interés"
+    minimum_payment: "Pago mínimo mensual"
+    next_payment_date: "Próximo vencimiento"
+    
+  # Transfer process
+  process:
+    step1: "Selección del importe"
+    step2: "Verificación"
+    step3: "Confirmación"
+    
+  # Verification
+  verification:
+    title: "Verificación de seguridad"
+    code_sent: "Un código de verificación ha sido enviado a su dirección de email"
+    enter_code: "Introduzca el código de verificación"
+    code_placeholder: "000000"
+    resend_code: "Reenviar el código"
+    code_expires: "El código caduca en"
+    
+  # Confirmation details
+  confirmation_details:
+    transfer_details: "Detalles de la transferencia"
+    source_account: "Cuenta origen"
+    destination_account: "Cuenta de destino"
+    amount: "Importe"
+    fees: "Gastos"
+    total_debit: "Total debitado"
+    
+  # Form Actions
+  form_actions:
+    initiate_transfer: "Iniciar la transferencia"
+    confirm_transfer: "Confirmar la transferencia"
+    cancel: "Cancelar"
+    back: "Atrás"
+    verify_code: "Verificar el código"
+    
+  # Validation
+  validation:
+    amount_required: "El importe es obligatorio"
+    amount_invalid: "Importe inválido"
+    amount_exceeds_limit: "El importe supera el límite disponible"
+    amount_minimum: "El importe mínimo es de 10€"
+    code_required: "El código de verificación es obligatorio"
+    code_invalid: "Código de verificación inválido"
+    code_expired: "Código de verificación caducado"
+    
+  # Status Messages
+  status_messages:
+    no_credit_accounts: "Ninguna cuenta crédito disponible"
+    transfer_initiated: "Transferencia iniciada con éxito"
+    code_sent_success: "Código de verificación enviado"
+    transfer_confirmed: "Transferencia confirmada con éxito"
+    transfer_failed: "Fallo de la transferencia"
+    insufficient_credit: "Crédito insuficiente"
+    account_blocked: "Cuenta bloqueada"
+    access_denied: "Acceso denegado a esta cuenta crédito"
+    
+  # Currency
+  currency: "€"
+  
+  # Time
+  time:
+    minutes: "minutos"
+    seconds: "segundos"

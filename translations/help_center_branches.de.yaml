@@ -1,0 +1,123 @@
+help_center_branches:
+  page:
+    title: "Unsere Filialen - Hilfezentrum %company_name%"
+    
+  hero:
+    title: "Finden Sie Ihre %company_name% Filiale"
+    subtitle: "Entdecken Sie unsere Filialen in Ihrer Nähe und profitieren Sie von unseren persönlichen Dienstleistungen"
+    
+  sections:
+    main_title: "Unsere Filialen Zu Ihren Diensten"
+    
+    locator:
+      title: "Filialfinder"
+      description: "Finden Sie die Filiale am nächsten zu Ihrem Zuhause oder Arbeitsplatz"
+      search_placeholder: "Geben Sie Ihre Stadt oder Postleitzahl ein"
+      map_title: "Karte der Filialen"
+      
+    services:
+      title: "Filialdienstleistungen"
+      description: "Entdecken Sie alle verfügbaren Dienstleistungen in unseren Filialen"
+      items:
+        consultation:
+          title: "Persönliche Beratung"
+          description: "Treffen Sie unsere Berater für Ihre Finanzprojekte"
+          details: "Private Gespräche für Kredite, Sparen, Versicherungen und Investitionen. Terminvereinbarung online oder telefonisch."
+        account_opening:
+          title: "Kontoeröffnung"
+          description: "Eröffnen Sie Ihr Konto direkt in der Filiale"
+          details: "Vollständige Unterstützung bei der Eröffnung aller Kontotypen mit sofortiger Validierung Ihrer Dokumente."
+        cash_services:
+          title: "Bargelddienstleistungen"
+          description: "Einzahlungen, Abhebungen und Währungswechsel"
+          details: "24/7 Geldautomaten, Schalter für große Scheine, Wechselservice für Fremdwährungen."
+        safe_deposit:
+          title: "Schließfächer"
+          description: "Vermietung sicherer Schließfächer"
+          details: "Verschiedene Größen verfügbar, sicherer Zugang mit doppelter Authentifizierung, Versicherung inbegriffen."
+        business_services:
+          title: "Geschäftsdienstleistungen"
+          description: "Lösungen für Geschäftskunden"
+          details: "Spezialisierte Begleitung für Unternehmensgründer, Geschäftsfinanzierung, Zahlungslösungen."
+        digital_assistance:
+          title: "Digitale Hilfe"
+          description: "Schulung für Online- und mobile Dienste"
+          details: "Kostenlose Workshops zur Beherrschung der mobilen App und Online-Dienste, persönliche Unterstützung."
+          
+    branches:
+      title: "Unsere Hauptfilialen"
+      description: "Finden Sie die Informationen unserer Hauptfilialen"
+      
+      brussels_center:
+        name: "%company_name% Brüssel Zentrum"
+        address: "Eugène Flageyplatz 25, 1050 Brüssel"
+        phone: "02 123 45 10"
+        hours:
+          monday_friday: "Mo-Fr : 9:00 - 17:00"
+          saturday: "Sa : 9:00 - 12:00"
+          sunday: "So : Geschlossen"
+        services: "Alle Dienste • Schließfächer • Anlageberatung"
+        parking: "Kostenlose Kundenparkplätze 2h"
+        
+      antwerp:
+        name: "%company_name% Antwerpen"
+        address: "Meir 78, 2000 Antwerpen"
+        phone: "03 234 56 20"
+        hours:
+          monday_friday: "Mo-Fr : 9:00 - 17:00"
+          saturday: "Sa : 9:00 - 12:00"
+          sunday: "So : Geschlossen"
+        services: "Alle Dienste • Geschäftsdienste • Digitale Schulung"
+        parking: "Kostenpflichtige Parkplätze in der Nähe"
+        
+      ghent:
+        name: "%company_name% Gent"
+        address: "Korenlei 12, 9000 Gent"
+        phone: "09 345 67 30"
+        hours:
+          monday_friday: "Mo-Fr : 9:00 - 17:00"
+          saturday: "Sa : 9:00 - 12:00"
+          sunday: "So : Geschlossen"
+        services: "Alle Dienste • Vermögensberatung • Währungswechsel"
+        parking: "Fußgängerzone - Parking Vrijdagmarkt"
+        
+      liege:
+        name: "%company_name% Lüttich"
+        address: "Sankt-Lambertus-Platz 41, 4000 Lüttich"
+        phone: "04 456 78 40"
+        hours:
+          monday_friday: "Mo-Fr : 9:00 - 17:00"
+          saturday: "Sa : 9:00 - 12:00"
+          sunday: "So : Geschlossen"
+        services: "Alle Dienste • Spezialkredite • Versicherungen"
+        parking: "Parking Opera 2 Min entfernt"
+        
+    appointment:
+      title: "Termin Vereinbaren"
+      description: "Reservieren Sie einen Zeitslot mit unseren Beratern"
+      online_booking: "Online-Buchung"
+      phone_booking: "Telefonisch : Téléphone"
+      reasons:
+        - "Anlageberatung"
+        - "Kreditantrag"
+        - "Kontoeröffnung"
+        - "Versicherung und Vorsorge"
+        - "Geschäftsdienste"
+        - "Digitale Schulung"
+        
+    accessibility:
+      title: "Barrierefreiheit"
+      description: "Unsere Filialen sind für alle zugänglich"
+      features:
+        wheelchair: "Behindertengerechter Zugang in allen unseren Filialen"
+        hearing: "Induktionsschleifen für Hörgeschädigte"
+        visual: "Taktile Führung und Beschilderung in Braille"
+        assistance: "Personal geschult im Empfang von Menschen mit Behinderungen"
+        
+    contact:
+      title: "Kontakt und Notfälle"
+      description: "Brauchen Sie Hilfe? Kontaktieren Sie uns"
+      emergency_line: "24/7 Notfallleitung : Téléphone"
+      customer_service: "Kundenservice : Téléphone"
+      email: "Email"
+      chat: "Online-Chat verfügbar auf unserer Website"

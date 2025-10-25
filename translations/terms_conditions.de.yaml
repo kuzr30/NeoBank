@@ -1,0 +1,54 @@
+terms_conditions:
+  page_title: "Allgemeine Nutzungsbedingungen"
+  page_description: "Nutzungsbedingungen der Bankdienstleistungen von %company_name%"
+
+  scope:
+    title: "Gegenstand"
+    content: |
+      Diese Allgemeinen Nutzungsbedingungen (AGB) definieren die Modalitäten und Bedingungen für die Nutzung
+      der von <strong>%company_name%</strong> auf dieser Website angebotenen Bankdienstleistungen.
+
+  acceptance:
+    title: "Annahme der Bedingungen"
+    content: |
+      Die Nutzung unserer Dienstleistungen impliziert die vollständige Annahme dieser AGB.
+      Wenn Sie diese Bedingungen nicht akzeptieren, nutzen Sie bitte unsere Dienstleistungen nicht.
+
+  services:
+    title: "Beschreibung der Dienstleistungen"
+    content: |
+      %company_name% bietet eine vollständige Palette von Bankdienstleistungen an, einschließlich:
+      <ul>
+        <li>Bankkonten für Privatpersonen und Unternehmen</li>
+        <li>Kredit- und Finanzierungsdienstleistungen</li>
+        <li>Spar- und Anlageprodukte</li>
+        <li>Zahlungs- und Wechselkursdienstleistungen</li>
+      </ul>
+
+  obligations:
+    title: "Verpflichtungen des Kunden"
+    content: |
+      Der Kunde verpflichtet sich:
+      <ul>
+        <li>Genaue und aktuelle Informationen bereitzustellen</li>
+        <li>Die Nutzungsbedingungen der Dienstleistungen zu respektieren</li>
+        <li>Seine Anmeldedaten zu schützen</li>
+        <li>Jeden Sicherheitsvorfall zu melden</li>
+      </ul>
+
+  liability:
+    title: "Haftung"
+    content: |
+      %company_name% verpflichtet sich, seine Dienstleistungen mit Sorgfalt und Professionalität zu erbringen.
+      Unsere Haftung ist gemäß den geltenden Bankvorschriften begrenzt.
+
+  modification:
+    title: "Änderung der Bedingungen"
+    content: |
+      %company_name% behält sich das Recht vor, diese AGB jederzeit zu ändern.
+      Die Änderungen treten mit ihrer Veröffentlichung auf der Website in Kraft.
+
+  contact:
+    title: "Kontakt"
+    content: |
+      Für Fragen zu diesen AGB kontaktieren Sie uns unter der Adresse %email%.

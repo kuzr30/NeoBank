@@ -1,0 +1,124 @@
+# Archivo de traducción para la interfaz de tarjetas bancarias de usuario
+# Dominio: card_account_user  
+# Idioma: Español (es)
+
+card_account_user:
+  # Sección principal
+  title: "Mis tarjetas bancarias"
+  subtitle: "Gestione sus tarjetas y descubra nuestras ofertas"
+  
+  # Sección tarjeta existente
+  user_card:
+    title: "Mi tarjeta"
+    status:
+      active: "Activa"
+      blocked: "Bloqueada" 
+      expired: "Expirada"
+      pending: "Pendiente"
+    
+    # Información de la tarjeta
+    card_info:
+      holder_label: "TITULAR"
+      expiry_label: "EXPIRA FIN"
+      account_label: "Cuenta"
+      daily_limit_label: "Límite diario"
+      daily_limit_undefined: "No definido"
+      
+  # Sección suscripción en curso
+  subscription:
+    title: "Su solicitud de tarjeta está en curso"
+    subtitle: "Su tarjeta {cardType} {cardBrand} está siendo procesada"
+    request_date: "Solicitud realizada el {date}"
+    
+    # Estados de suscripción
+    status:
+      contract_pending: "Contrato en preparación"
+      contract_sent: "Contrato enviado - Firma requerida"
+      admin_validation: "En espera de validación administrativa"
+      contract_expired: "Contrato expirado"
+      pending: "En espera de validación"
+    
+    # Detalles de la suscripción
+    details:
+      card_type_label: "Tipo de tarjeta:"
+      brand_label: "Marca:"
+      contract_label: "Contrato:"
+    
+    # Acciones
+    actions:
+      sign_contract: "Firmar el contrato"
+      sign_deadline: "Debe firmar su contrato en los próximos 7 días para validar su solicitud."
+    
+    # Mensajes informativos
+    messages:
+      contract_signature_required: "Por favor firme su contrato para que su solicitud pueda ser procesada por nuestros equipos."
+      contract_signed_processing: "Su contrato está firmado. Nuestros equipos examinan su solicitud y le contactarán en 48h laborales."
+      contract_expired_message: "Su contrato ha expirado. Será necesaria una nueva solicitud de suscripción."
+      default_processing: "Su solicitud está siendo procesada por nuestros equipos. Recibirá un email tan pronto como su tarjeta sea validada y lista para usar."
+  
+  # Sección selección de tarjetas (nuevas suscripciones)
+  card_selection:
+    title: "Elija su tarjeta"
+    subtitle: "Descubra nuestras diferentes tarjetas y sus ventajas"
+    
+    # Marcas
+    brands:
+      visa_title: "Tarjetas Visa"
+      mastercard_title: "Tarjetas Mastercard"
+    
+    # Tipos de tarjetas
+    card_types:
+      classic:
+        name: "Tarjeta Classic"
+        badge: "Ideal para comenzar"
+        visa_price: "Gratuita"
+        visa_period: "el primer año"
+        mastercard_price: "2€"
+        mastercard_period: "por mes"
+        
+      gold:
+        name: "Tarjeta Gold"
+        badge: "La más popular"
+        badge_alt: "Popular"
+        visa_price: "5€"
+        mastercard_price: "8€"
+        period: "por mes"
+        
+      platinum:
+        name: "Tarjeta Platinum"
+        badge: "Premium"
+        visa_price: "15€"
+        mastercard_price: "20€"
+        period: "por mes"
+    
+    # Acción de suscripción
+    subscribe_action: "Suscribirse"
+  
+  # Mensajes generales
+  common:
+    loading: "Cargando..."
+    error: "Ha ocurrido un error"
+    retry: "Reintentar"
+    
+  # Navegación y acciones
+  navigation:
+    back: "Volver"
+    continue: "Continuar"
+    close: "Cerrar"
+    
+  # Formularios
+  forms:
+    required: "Obligatorio"
+    optional: "Opcional"
+    select_placeholder: "Seleccionar..."
+    
+  # Seguridad y validaciones
+  security:
+    card_blocked_warning: "Esta tarjeta ha sido bloqueada por razones de seguridad"
+    card_expired_warning: "Esta tarjeta ha expirado y debe ser renovada"
+    
+  # Asistencia
+  help:
+    need_help: "¿Necesita ayuda?"
+    contact_support: "Contactar soporte"
+    faq: "Preguntas frecuentes"

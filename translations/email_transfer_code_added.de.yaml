@@ -1,0 +1,41 @@
+email_transfer_code_added:
+  title: "Neuer Validierungscode"
+  
+  content:
+    page_title: "Validierungscode generiert"
+    greeting: "Hallo {firstName},"
+    
+    new_code_section:
+      title: "Neuer Code verfügbar"
+      description: "Ein neuer Validierungscode wurde für Ihre Überweisung #{transferId} hinzugefügt. Dieser Code ist Teil des Sicherungsprozesses Ihrer Transaktion."
+    
+    transfer_summary:
+      title: "Zusammenfassung Ihrer Überweisung"
+      amount_destination: "{amount} € an {destination}"
+    
+    validation_code:
+      code_name: "{codeName}"
+      code_number: "Code {codeOrder}"
+      created_date: "Erstellt am {createdAt}"
+    
+    validation_rules:
+      title: "Wichtige Validierungsregeln"
+      attempts_limit: "Begrenzte Versuche"
+      attempts_description: "Sie haben maximal 3 Versuche, den richtigen Code einzugeben"
+      expiration: "Ablaufzeit"
+      expiration_description: "Der Code läuft 6 Stunden nach seiner ersten Validierung ab"
+      security: "Verstärkte Sicherheit"
+      security_description: "Bei wiederholten Fehlern wird Ihr Konto vorübergehend gesperrt"
+    
+    action_required:
+      title: "Erforderliche Aktion"
+      validate_button: "Code jetzt validieren"
+      instruction: "Geben Sie diesen Code in Ihrem sicheren Banking-Bereich ein"
+    
+    security_warning: "Falls Sie diese Anfrage nicht veranlasst haben, kontaktieren Sie umgehend unseren Kundenservice."
+    
+    footer: "<strong>%company_name% - Sicherheitsdienst</strong><br>Automatische Benachrichtigung über Validierungscode"
+  
+  log:
+    code_added: "Validierungscode für Überweisung {transferId} hinzugefügt"
+    email_sent: "Validierungscode-E-Mail an {userEmail} gesendet"

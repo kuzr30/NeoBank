@@ -1,0 +1,32 @@
+banking_transfer_validate:
+  header:
+    title: "Validation du virement"
+    subtitle: "Saisissez les codes de sécurité pour valider votre virement"
+    back_button: "Retour"
+  
+  summary:
+    title: "Virement en cours de validation"
+    amount_label: "Montant :"
+    beneficiary_label: "Bénéficiaire :"
+    description_label: "Description :"
+    status_label: "Statut :"
+  
+  status:
+    pending: "En attente"
+    executing: "En cours d'exécution"
+    completed: "Terminé"
+    expired: "Expiré"
+    cancelled: "Annulé"
+    blocked: "Bloqué"
+  
+  validation:
+    form_title: "Validation du virement"
+    submit_button: "Valider"
+  
+  alerts:
+    code_expired: "Le code \"%code%\" a expiré."
+    transfer_confirmed: "Le virement est confirmé."
+    transfer_completed: "Le virement a été exécuté avec succès le %date%."
+    transfer_expired: "Ce virement a expiré et ne peut plus être validé. Vous devez créer un nouveau virement."
+    transfer_cancelled: "Ce virement a été annulé."
+    transfer_blocked: "Ce virement a été bloqué suite à des tentatives de validation incorrectes. Contactez le service client pour débloquer votre compte."

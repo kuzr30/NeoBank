@@ -1,0 +1,26 @@
+email_contract_signed_customer:
+  title: "Bestätigung der Vertragsunterzeichnung"
+  subject: "Bestätigung der Vertragsunterzeichnung - %referenceNumber%"
+  content:
+    confirmation:
+      title: "Ihr Vertrag wurde erfolgreich unterzeichnet!"
+      description: "Liebe(r) %customerName%, wir bestätigen, dass Ihr Kreditvertrag unterzeichnet und von unseren Diensten erhalten wurde."
+    contract_details:
+      title: "Details Ihres Vertrags"
+      reference_number: "Referenznummer"
+      loan_amount: "Darlehensbetrag"
+      status_label: "Status"
+      status_value: "Unterzeichnet"
+    next_steps:
+      title: "Nächste Schritte"
+      description: "Ihr Dossier durchläuft nun den administrativen Validierungsprozess:"
+      validation: "Überprüfung und Validierung Ihres Vertrags durch unsere Teams"
+      processing: "Administrative Bearbeitung und Finalisierung"
+      disbursement: "Freigabe der Mittel auf Ihr Konto"
+    important_info:
+      title: "Wichtige Information"
+      description: "Die Freigabe der Mittel erfolgt innerhalb von 24-48 Werktagen nach administrativer Validierung."
+    cta:
+      button_text: "Mein Dossier ansehen"
+    footer:
+      regards: "Mit freundlichen Grüßen,"

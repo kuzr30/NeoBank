@@ -1,0 +1,6 @@
+# Vertalingen voor CreditContractController
+flash:
+  contract_not_found: "Contract niet gevonden."
+  contract_uploaded_success: "Ondertekend contract succesvol geüpload. We zullen zo spoedig mogelijk overgaan tot validatie."
+  upload_error: "Fout bij het uploaden van het bestand."
+  no_file_selected: "Gelieve een bestand te selecteren."

@@ -1,0 +1,30 @@
+general:
+  title: "Ein Fehler ist aufgetreten"
+  subtitle: "Wir entschuldigen uns für die Unannehmlichkeiten"
+  back_to_homepage: "Zurück zur Startseite"
+  back_button: "Zurück"
+
+error_404:
+  title: "Seite nicht gefunden"
+  subtitle: "Die gesuchte Seite existiert nicht oder wurde verschoben"
+  message: "Die Adresse wurde möglicherweise falsch eingegeben oder die Seite wurde gelöscht."
+
+error_403:
+  title: "Zugriff verweigert"
+  subtitle: "Sie haben keine Berechtigung, auf diese Seite zuzugreifen"
+  message: "Diese Ressource erfordert besondere Berechtigungen, die Sie nicht besitzen."
+
+error_500:
+  title: "Interner Serverfehler"
+  subtitle: "Ein technischer Fehler ist aufgetreten"
+  message: "Unsere technischen Teams wurden benachrichtigt und arbeiten an der Lösung dieses Problems."
+
+suggestions:
+  title: "Was können Sie tun?"
+  check_url: "Überprüfen Sie die URL-Adresse"
+  go_home: "Kehren Sie zur Startseite zurück"
+  contact_support: "Kontaktieren Sie unseren Support"
+  try_later: "Versuchen Sie es später erneut"
+  check_permissions: "Überprüfen Sie Ihre Zugriffsberechtigungen"
+  login_authorized: "Melden Sie sich mit einem autorisierten Konto an"
+  refresh_page: "Seite aktualisieren"

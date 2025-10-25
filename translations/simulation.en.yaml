@@ -1,0 +1,224 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: simulation.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+# Traductions pour la simulation de crédit - Français
+credit_simulation:
+  title: "Credit Simulator"
+  subtitle: "Calculate your credit in just a few clicks"
+  amortization_title: "Amortization Schedule"
+  
+  # Hero Section
+  hero:
+    title: "Credit Simulator"
+    subtitle: "Get your estimate in 2 minutes"
+    description: "Calculate your monthly payments and discover the best conditions for your project"
+    disclaimer: "Free simulation with no commitment"
+
+  # Formulaire
+  form:
+    amount:
+      label: "Credit Amount"
+      help: "Desired amount between €1,000 and €500,000"
+      placeholder: "Ex: 50,000"
+      currency: "€"
+    
+    credit_type:
+      label: "Credit Type"
+      help: "Select the credit type suited to your project"
+      placeholder: "Choose a credit type"
+    duration:
+      label: "Credit Duration"
+      help: "Desired repayment period"
+      placeholder: "Select a duration"
+    duration_unit:
+      label: "Duration Unit"
+      help: "Months or years"
+    rate_info: "Indicative rate:"
+    calculate_button: "Calculate my monthly payment"
+    calculating: "Calculating..."
+  # Types de crédit
+  credit_types:
+    immobilier:
+      label: "Mortgage Loan"
+      description: "Financing for purchasing real estate"
+    auto:
+      label: "Car Loan"
+      description: "Financing for vehicle purchase"
+    consommation:
+      label: "Consumer Credit"
+      description: "Credit for your personal projects"
+    travaux:
+      label: "Home Improvement Loan"
+      description: "Financing for your renovation work"
+    professionnel:
+      label: "Business Loan"
+      description: "Credit for your business projects"
+    personal:
+      label: "Personal Loan"
+      description: "Loan without proof of use"
+    home_improvement:
+      label: "Home Improvement/Renovation Loan"
+    debt_consolidation:
+      label: "Debt Consolidation"
+      description: "Consolidation of your existing credits"
+    mortgage:
+      label: "Mortgage Loan"
+      description: "Credit guaranteed by a mortgage"
+    renouvelable:
+      label: "Revolving Credit"
+      description: "Reusable reserve of money at will"
+    etudiant:
+      label: "Student Loan"
+      description: "Financing for higher education"
+    relais:
+      label: "Bridge Loan"
+      description: "Advance of funds while awaiting the sale of a property"
+    microcredit:
+      label: "Personal Microcredit"
+      description: "Small amounts for people excluded from traditional bank credit"
+    leasing:
+      label: "Leasing (Hire Purchase)"
+      description: "Rental with purchase option (car, professional equipment)"
+    voyage:
+      label: "Travel Loan"
+      description: "Financing for your travel projects"
+  # Unités de durée
+  duration_units:
+    months: "Months"
+    years: "Years"
+  # Durées
+  durations:
+    twelve_months: "12 months"
+    twenty_four_months: "24 months" 
+    thirty_six_months: "3 years"
+    forty_eight_months: "4 years"
+    sixty_months: "5 years"
+    seventy_two_months: "6 years"
+    eighty_four_months: "7 years"
+    ninety_six_months: "8 years"
+    one_hundred_twenty_months: "10 years"
+    one_hundred_eighty_months: "15 years"
+    two_hundred_forty_months: "20 years"
+    three_hundred_months: "25 years"
+  # Résultats
+  results:
+    title: "Your Simulation"
+    success_title: "Successful simulation!"
+    monthly_payment: "Monthly Payment"
+    total_amount: "Total Amount"
+    total_interest: "Credit Cost"
+    rate: "Applied Rate"
+    duration: "Duration"
+    summary:
+      title: "Summary"
+      amount_borrowed: "Amount Borrowed"
+      monthly_payment: "Monthly Payment"
+      duration: "Duration"
+      rate: "Rate"
+      total_cost: "Total amount to repay"
+      total_interest: "Interest"
+      insurance_rate: "Insurance rate"
+      insurance_monthly: "including insurance"
+      interest_monthly: "including interest"
+      insurance_total: "including insurance"
+      interest_total: "including interest"
+      per_month: "/month"
+      per_year: "/year"
+    actions:
+      apply: "Apply"
+      modify: "Modify the simulation"
+      amortization_table: "View amortization schedule"
+      save: "Save"
+      share: "Share"
+  # Tableau d'amortissement
+  amortization:
+    title: "Amortization Schedule"
+    subtitle: "Detailed month-by-month repayment"
+    back_to_simulation: "Back to simulation"
+    summary:
+      amount_borrowed: "Borrowed Capital"
+      monthly_payment: "Monthly Payment"
+      total_interest: "Total Interest"
+      total_amount: "Total Amount"
+    table:
+      month: "Month"
+      payment: "Monthly Payment"
+      interest: "Interest"
+      principal: "Principal"
+      balance: "Remaining Principal"
+      print: "Print"
+      download: "Download"
+      back: "Back"
+      show_amortization: "View amortization schedule"
+      apply_now: "Apply"
+  # Messages d'erreur
+  errors:
+    title: "Simulation Error"
+    invalid_data: "Invalid data. Please check your input."
+    amount_required: "Amount is required"
+    amount_too_low: "Minimum amount is €1,000"
+    amount_too_high: "Maximum amount is €500,000"
+    duration_required: "Duration is required"
+    duration_too_low: "Minimum duration is 12 months"
+    duration_too_high: "Maximum duration depends on credit type"
+    credit_type_required: "Credit type is required"
+    invalid_credit_type: "Invalid credit type"
+    calculation_error: "Calculation error"
+    actions:
+      retry: "Retry"
+      modify: "Modify parameters"
+    tips:
+      title: "Tips"
+      tip1: "Check that the amount is between €1,000 and €500,000"
+      tip2: "Make sure the duration is suitable for the credit type"
+      tip3: "Contact an advisor for large amounts"
+      tip4: "Consult our general conditions for more information"
+  # Messages légaux
+  legal:
+    title: "Legal Information"
+    text: "This simulation is provided for information purposes only. Final rates and conditions will be determined when you apply for credit, subject to acceptance of your application."
+    credit_warning: "A credit commits you and must be repaid. Check your repayment capacity before committing."
+    licensed_bank: "Licensed credit institution"
+    insurance_broker: "Insurance broker"
+    badges:
+      acpr: "ACPR Approved"
+      guarantee_fund: "Guarantee Fund"
+      security: "Secure Transactions"
+  # Messages de validation
+  validation:
+    processing: "Processing..."
+    success: "Simulation calculated successfully"
+    time_estimate: "Estimated time: 2 minutes"
+  # Messages JavaScript
+  js:
+    errors:
+      incomplete_fields: "Please fill in all fields correctly."
+      calculation_error: "Error calculating the simulation"
+      invalid_amount: "The entered amount is invalid"
+      invalid_duration: "The entered duration is invalid"
+      
+    currency:
+      symbol: "€"
+      per_month: "€/month"
+    formatting:
+      zero_value: "0"
+      zero_currency: "0€"
+      zero_per_month: "0€/month"
+    console:
+      connected: "Credit simulation controller connected"
+      calculation_data: "Calculation:"
+      calculation_error: "Calculation error:"
+      requesting_rate: "Requesting personalized rate..."
+      contact_advisor: "Contact an advisor to get a personalized rate"
+    # CTA Section
+  cta:
+    view_amortization_table: "View amortization schedule"
+    apply_for_credit: "Submit my application"
+    monthly_details: "Monthly details of your repayment"
+  
+  # Termes communs
+  common:
+    months: "months"
+    years: "years"

@@ -1,0 +1,156 @@
+mobile_app:
+  # Meta tags
+  meta:
+    mobile_app:
+      title: "Aplicación Móvil %company_name%"
+      description: "Descubra nuestra aplicación móvil %company_name%: gestión de cuentas, transferencias, y mucho más desde su smartphone."
+  
+  hero:
+    subtitle: "Revolucione su gestión bancaria con la aplicación móvil %company_name%. Una experiencia bancaria de nueva generación, simple, segura y totalmente gratuita."
+    features:
+      security:
+        title: "Seguridad bancaria militar"
+        description: "Cifrado AES-256 y autenticación biométrica para una protección máxima de sus datos"
+      transfers:
+        title: "Transferencias instantáneas SEPA"
+        description: "Transfiera dinero en tiempo real, 24h/24 y 7d/7, hacia todas las cuentas europeas"
+      analysis:
+        title: "Análisis inteligente de finanzas"
+        description: "IA avanzada para analizar sus hábitos y optimizar automáticamente su presupuesto"
+    actions:
+      discover: "Descubrir la aplicación"
+      download: "Descargar gratuitamente"
+    preview:
+      balance_card:
+        available_balance: "Solde disponible"
+        amount: "12 847,50 €"
+        growth: "+2.8% ce mois"
+      quick_actions:
+        transfer: "Virement"
+        cards: "Cartes"
+        savings: "Épargne"
+
+  features:
+    title: "Funcionalidades avanzadas"
+    subtitle: "Descubra todas las funcionalidades que hacen de %company_name% la aplicación bancaria más completa del mercado."
+    items:
+      instant_transfers:
+        title: "Transferencias instantáneas"
+        description: "Efectúe transferencias SEPA en tiempo real, 24h/24 y 7d/7, hacia todas las cuentas europeas."
+      expense_analysis:
+        title: "Análisis de gastos"
+        description: "Inteligencia artificial para analizar sus hábitos y optimizar su presupuesto automáticamente."
+      smart_notifications:
+        title: "Notificaciones inteligentes"
+        description: "Alertas personalizadas para cada transacción, umbral de gasto y oportunidad de ahorro."
+      virtual_cards:
+        title: "Tarjetas virtuales"
+        description: "Cree tarjetas virtuales temporales para sus compras en línea con total seguridad."
+      automatic_savings:
+        title: "Ahorro automático"
+        description: "Ahorre sin esfuerzo gracias a nuestros algoritmos que redondean sus compras automáticamente."
+      multi_currency:
+        title: "Multidivisas"
+        description: "Gestione más de 25 divisas con tipos de cambio en tiempo real y sin comisión."
+
+  security:
+    badge: "Seguridad bancaria de nivel militar"
+    title: "Su seguridad es nuestra prioridad absoluta"
+    subtitle: "%company_name% utiliza las tecnologías de seguridad más avanzadas para proteger sus datos y transacciones. Nuestros sistemas respetan los estándares bancarios más estrictos."
+    features:
+      encryption:
+        title: "Cifrado AES-256"
+        description: "Sus datos están protegidos por el mismo nivel de cifrado que los bancos centrales"
+      biometric:
+        title: "Autenticación biométrica"
+        description: "Conexión segura con reconocimiento facial, huella digital o Face ID"
+      monitoring:
+        title: "Supervisión 24/7"
+        description: "Detección automática de fraudes y alertas instantáneas en caso de actividad sospechosa"
+    certifications:
+      title: "Certificaciones y conformidad"
+      items:
+        pci_dss: "PCI DSS Nivel 1"
+        iso: "ISO 27001:2013"
+        gdpr: "Conforme RGPD"
+        psd2: "Directiva PSD2"
+
+  support:
+    title: "Soporte al cliente 24/7"
+    subtitle: "Nuestro equipo de expertos está disponible en cualquier momento para acompañarle en su experiencia bancaria."
+    channels:
+      live_chat:
+        title: "Chat en directo"
+        description: "Respuesta inmediata vía nuestro chat integrado en la aplicación"
+        availability: "Disponible 24/7"
+      phone:
+        title: "Soporte telefónico"
+        description: "Asistencia personalizada con nuestros consejeros bancarios"
+        availability: "De lunes a domingo"
+      priority_email:
+        title: "Email prioritario"
+        description: "Respuesta garantizada en menos de 2 horas laborables"
+        availability: "hello@sedef.fr"
+    stats:
+      satisfaction:
+        value: "98.5%"
+        label: "de satisfacción del cliente"
+      resolution_time:
+        value: "4.2 min"
+        label: "tiempo de resolución promedio"
+      response_time:
+        value: "< 30 seg"
+        label: "tiempo de respuesta chat"
+    faq:
+      title: "Preguntas frecuentes"
+      items:
+        account_opening:
+          question: "¿Cómo abrir una cuenta?"
+          answer: "La apertura de cuenta se hace en 5 minutos vía la aplicación. Solo necesita su documento de identidad y un justificante de domicilio."
+        is_free:
+          question: "¿La aplicación es gratuita?"
+          answer: "Sí, %company_name% es 100% gratuito: descarga, mantenimiento de cuenta, transferencias SEPA y tarjeta virtual sin ninguna comisión."
+        data_security:
+          question: "¿Están seguros mis datos?"
+          answer: "Absolutamente. Utilizamos un cifrado bancario AES-256 y estamos certificados PCI DSS nivel 1 e ISO 27001."
+        international:
+          question: "¿Puedo usar %company_name% en el extranjero?"
+          answer: "Sí, %company_name% funciona en más de 50 países con soporte multidivisas y transferencias internacionales gratuitas."
+    contact:
+      title: "¿Una pregunta específica?"
+      description: "Nuestro equipo de expertos está listo para ayudarle. Contáctenos directamente vía su canal preferido."
+      actions:
+        start_chat: "Iniciar un chat"
+        phone_number: "%company_phone%"
+      agent:
+        name: "Sophie Martin"
+        role: "Consejera bancaria senior"
+        status: "En línea ahora"
+
+  download:
+    title: "Descargue %company_name% ahora"
+    subtitle: "Únase a más de 2 millones de usuarios que confían en %company_name% para gestionar sus finanzas. Aplicación gratuita, sin publicidad y sin gastos ocultos."
+    stats:
+      rating:
+        value: "4.9"
+        label: "Puntuación promedio"
+      users:
+        value: "2M+"
+        label: "Usuarios activos"
+      countries:
+        value: "50+"
+        label: "Países disponibles"
+    buttons:
+      ios:
+        label: "Descargar en"
+        store: "App Store"
+      android:
+        label: "Disponible en"
+        store: "Google Play"
+    features:
+      - "Instalación gratuita y segura"
+      - "Ninguna comisión de descarga"
+      - "Compatible iOS 13+ y Android 8+"
+    app:
+      name: "%company_name%"
+      description: "Banco digital"

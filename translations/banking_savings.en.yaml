@@ -1,0 +1,69 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_savings.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_savings:
+  header:
+    title: "Savings & Investments"
+    subtitle: "Manage your savings products"
+    last_update: "Last update:"
+    total_savings: "Total savings"
+  
+  products:
+    livret_a: "Livret A"
+    pea: "Stock Savings Plan"
+    term_deposit: "Term Deposit"
+  
+  labels:
+    ceiling: "Ceiling"
+    available: "Available"
+    interests_2025: "Interest 2025"
+    plus_minus_value: "+/- value"
+    performance_ytd: "YTD Performance"
+    maturity: "Maturity"
+    remaining_duration: "Remaining duration"
+    expected_interests: "Expected interest"
+    days: "days"
+  
+  actions:
+    fund: "Fund"
+    withdraw: "Withdraw"
+    invest: "Invest"
+    arbitrate: "Arbitrate"
+    blocked: "Blocked"
+    details: "Details"
+  
+  opportunities:
+    section_title: "Savings opportunities"
+    section_subtitle: "Discover our products to optimize your savings"
+    pel_title: "Housing Savings Plan"
+    pel_description: "Prepare your real estate project with a guaranteed rate"
+    pel_rate: "2.20% + state bonus"
+    youth_savings_title: "Youth Savings Account"
+    youth_savings_description: "For 12-25 year olds, an account with advantageous conditions"
+    youth_savings_rate: "3.50% tax-free"
+    life_insurance_title: "Life Insurance"
+    life_insurance_description: "Build your wealth with our multi-support contract"
+    life_insurance_rate: "Attractive return"
+    discover_button: "Discover"
+  
+  movements:
+    section_title: "Recent movements"
+    table_headers:
+      date: "Date"
+      product: "Product"
+      operation: "Operation"
+      amount: "Amount"
+      new_balance: "New balance"
+      actions: "Actions"
+    operations:
+      transfer_from_checking: "Transfer from Checking Account"
+      interest_capitalization: "Interest capitalization"
+      stock_purchase: "LVMH stock purchase"
+      livret_a_interests: "Livret A interest"
+  
+  pagination:
+    previous: "Previous"
+    next: "Next"
+    page_info: "Page %current% of %total% (%count% movements)"

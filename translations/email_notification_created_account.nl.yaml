@@ -1,0 +1,28 @@
+email_notification_created_account:
+  title: "Uw %company_name% account is aangemaakt!"
+  
+  content:
+    page_title: "Gefeliciteerd %firstName%!"
+    intro: "Uw %company_name% account is succesvol aangemaakt."
+    
+    account_details:
+      title: "Details van uw account"
+      account_number: "Accountnummer"
+      iban: "IBAN"
+      country: "Land"
+    
+    access_info:
+      title: "Toegang tot uw klantportaal"
+      text: "U kunt nu inloggen op uw klantportaal om uw bankzaken te beheren."
+    
+    support_info: "Als u vragen heeft, staat ons supportteam voor u klaar."
+    signature: "Het %company_name% team"
+      
+  countries:
+    FR: "Frankrijk"
+    BE: "België"  
+    NL: "Nederland"
+    DE: "Duitsland"
+    IT: "Italië"
+    ES: "Spanje"
+    LU: "Luxemburg"

@@ -1,0 +1,15 @@
+file_upload_service:
+  exceptions:
+    upload_error: "Fehler beim Hochladen der Datei: {error}"
+    
+  validation_errors:
+    invalid_file_type: "Dateityp nicht erlaubt. Nur PDF und Bilder (JPG, PNG) werden akzeptiert."
+    file_too_large: "Die Datei ist zu groß (max. 10MB)."
+    upload_failed: "Fehler beim Hochladen der Datei."
+    
+  file_sizes:
+    bytes: "B"
+    kilobytes: "KB" 
+    megabytes: "MB"
+    gigabytes: "GB"
+    file_not_found: "0 B"

@@ -1,0 +1,103 @@
+credit_relais:
+  page:
+    title: "Crédito Puente"
+    description: "Financie su nueva vivienda antes de la venta de la anterior con nuestro crédito puente. Solución temporal flexible."
+    
+  hero:
+    title: "Crédito Puente"
+    subtitle: "El intermediario ideal para su proyecto inmobiliario"
+    taux: "{rate}%"
+    montant: "80%"
+    duree: "24 meses"
+    
+  section_1:
+    title: "¿Qué es un crédito puente?"
+    content_1: "El crédito puente es una solución de financiamiento temporal que le permite comprar una nueva vivienda antes de haber vendido la anterior. Evita la restricción de tiempo entre compra y venta."
+    content_2: "Crédito a corto plazo generalmente reembolsado en una sola vez durante la venta de su bien actual, ofrece la flexibilidad necesaria para aprovechar las buenas oportunidades inmobiliarias."
+    
+  features:
+    montant:
+      value: "Hasta 80%"
+      detail: "Del valor del bien vendido"
+    duree:
+      value: "12 a 24 meses"
+      detail: "Duración promedio 18 meses"
+    taux:
+      value: "Desde {rate}% TAE*"
+      detail: "Tasa fija corto plazo"
+    garantie:
+      value: "Hipoteca"
+      detail: "Sobre el bien a vender"
+      
+  advantages:
+    chainag:
+      title: "Sin encadenamiento:"
+      text: "Compre sin esperar la venta de su bien"
+    negociation:
+      title: "Negociación reforzada:"
+      text: "Posición de comprador libre y creíble"
+    flexibilite:
+      title: "Flexibilidad:"
+      text: "Reembolso en la venta, sin cuotas fijas"
+    cumul:
+      title: "Acumulación posible:"
+      text: "Combinable con un crédito inmobiliario clásico"
+    serenite:
+      title: "Serenidad:"
+      text: "Mudanza organizada sin restricción de tiempo"
+      
+  requirements:
+    bien_vendre:
+      title: "Condiciones del bien a vender"
+      proprietaire: "Ser propietario desde hace más de 2 años"
+      libre: "Bien libre de toda ocupación"
+      estimation: "Tasación inmobiliaria reciente"
+      commercialisation: "Comercialización efectiva del bien"
+    emprunteur:
+      title: "Condiciones prestatario"
+      revenus: "Ingresos regulares y suficientes"
+      capacite: "Capacidad para soportar temporalmente 2 cargas"
+      apport: "Aporte para los gastos de adquisición"
+      difficultes: "Sin dificultades financieras"
+      
+  documents:
+    bien_vendre:
+      title: "Bien a vender"
+      titre: "Título de propiedad"
+      estimation: "Tasación inmobiliaria"
+      mandat: "Mandato de venta firmado"
+      diagnostics: "Diagnósticos inmobiliarios"
+    bien_acquerir:
+      title: "Bien a adquirir"
+      compromis: "Contrato de compraventa firmado"
+      plan: "Plan de financiación"
+      descriptif: "Descripción del bien"
+      conditions: "Condiciones suspensivas"
+    dossier:
+      title: "Expediente financiero"
+      revenus: "Justificantes de ingresos"
+      comptes: "Extractos de cuentas"
+      charges: "Tabla de cargas actuales"
+      patrimoine: "Situación patrimonial"
+      
+  legal:
+    title: "Información legal importante"
+    taeg:
+      title: "*TAE:"
+      text: "Ejemplo representativo: para un crédito puente de 200.000€ en 18 meses al TAE del 4,2%, reembolsa 412.700€ al vencimiento (coste del crédito: 12.700€ incluyendo intereses y gastos)."
+    remboursement:
+      title: "Reembolso:"
+      text: "En una sola vez durante la venta del bien, posibilidad de vencimientos de intereses mensuales."
+    garantie:
+      title: "Garantía:"
+      text: "Hipoteca de 1er rango sobre el bien a vender."
+    assurance:
+      title: "Seguro:"
+      text: "Seguro de fallecimiento-invalidez obligatorio."
+    prolongation:
+      title: "Prolongación:"
+      text: "Posible en caso de retraso de venta, bajo condiciones."
+      
+  cta:
+    title: "Libérese de las limitaciones de tiempo"
+    subtitle: "Realice su proyecto inmobiliario con nuestro crédito puente"

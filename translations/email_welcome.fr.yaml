@@ -1,0 +1,29 @@
+email_welcome:
+  title: "Bienvenue chez %company_name%"
+  content:
+    page_title: "Bienvenue {firstName} !"
+    intro: "Nous sommes ravis de vous accueillir chez <strong>%company_name%</strong>, votre nouveau partenaire bancaire digital."
+    account_created:
+      title: "Votre compte a été créé avec succès !"
+      description: "Vous pouvez dès maintenant accéder à tous nos services bancaires en ligne."
+    services_intro: "Avec votre compte %company_name%, vous pouvez :"
+    services:
+      item_1: "Consulter vos comptes en temps réel"
+      item_2: "Effectuer des virements instantanés"
+      item_3: "Gérer vos cartes bancaires"
+      item_4: "Demander un crédit en ligne"
+      item_5: "Suivre vos investissements"
+      item_6: "Bénéficier d'un support client 24/7"
+    access_button: "Accéder à mon compte"
+    security_section:
+      title: "Sécurité renforcée"
+      description: "Votre sécurité est notre priorité. Nous utilisons les dernières technologies de cryptage et d'authentification pour protéger vos données."
+    support_text: "Si vous avez des questions ou besoin d'aide, notre équipe support est disponible 24h/24 et 7j/7 pour vous accompagner."
+    signature: "Encore merci pour votre confiance,<br><strong>L'équipe %company_name%</strong>"
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Envoi de l'email de bienvenue"
+    success: "Email de bienvenue envoyé avec succès"
+    error: "Erreur lors de l'envoi de l'email de bienvenue"
+    send_failed: "Échec de l'envoi de l'email de bienvenue"

@@ -1,0 +1,30 @@
+banking_transfer_details:
+  header:
+    title: "Overschrijvingsdetails"
+    subtitle: "Volledige informatie over uw overschrijving"
+    back_button: "Terug naar lijst"
+  
+  transfer_card:
+    title: "Overschrijving"
+  
+  status:
+    pending: "In behandeling"
+    executing: "In uitvoering"
+    completed: "Voltooid"
+    expired: "Verlopen"
+    cancelled: "Geannuleerd"
+    blocked: "Geblokkeerd"
+  
+  details:
+    amount_label: "Bedrag"
+    beneficiary_account_label: "Begunstigde rekening"
+    beneficiary_iban_label: "Begunstigde IBAN"
+    description_label: "Beschrijving"
+    creation_date_label: "Aanmaakdatum"
+    execution_date_label: "Uitvoeringsdatum"
+    ip_address_label: "IP-adres"
+    ip_not_available: "Niet beschikbaar"
+  
+  actions:
+    continue_validation: "Validatie voortzetten"
+    success_message: "Deze overschrijving werd succesvol uitgevoerd"

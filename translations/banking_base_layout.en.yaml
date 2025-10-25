@@ -1,0 +1,26 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_base_layout.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_base_layout:
+  navigation:
+    tabs:
+      accounts: "Accounts"
+      cards: "Cards" 
+      transfers: "Transfers"
+      rib_iban: "RIB/IBAN"
+      savings: "Savings"
+      credits: "Credits"
+      insurance: "Insurance"
+  
+  user:
+    status: "Individual Customer"
+    notifications: "Notifications"
+    profile_menu: "My profile"
+  
+  profile_menu:
+    my_profile: "My profile"
+    preferences: "Preferences"
+    security: "Security"
+    logout: "Logout"

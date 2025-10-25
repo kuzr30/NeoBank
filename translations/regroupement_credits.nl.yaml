@@ -1,0 +1,106 @@
+regroupement_credits:
+  page:
+    title: "Krediethergroepering"
+    description: "Vereenvoudig uw financiën met onze krediethergroepering. Één maandelijkse afbetaling voor al uw leningen."
+  
+  hero:
+    class: "credit-detail-hero--regroupement"
+    taux: "{rate}%"
+    montant: "200 000€"
+    duree: "25 jaar"
+    title: "Krediethergroepering"
+    subtitle: "Vereenvoudig het beheer van uw kredieten"
+  
+  section_1:
+    title: "Wat is krediethergroepering?"
+    content:
+      paragraph_1: "Krediethergroepering bestaat uit het samenvoegen van meerdere lopende leningen (hypotheek, consumptie, creditcards) in één krediet met één unieke maandelijkse afbetaling, meestal lager."
+      paragraph_2: "Deze financiële herstructurering stelt u in staat uw budgetbeheer te vereenvoudigen, uw maandelijkse afbetalingen te verlagen en rust te vinden in uw persönlijke financiën."
+  
+  features:
+    title: "Kenmerken van hergroepering"
+    montant:
+      value: "Tot 200 000€"
+      detail: "Bedrag van gehergroepeerde kredieten"
+    duree:
+      value: "Tot 25 jaar"
+      detail: "Verlenging mogelijk"
+    taux:
+      value: "Vanaf {rate}% JTKS*"
+      detail: "Uniek geoptimaliseerd tarief"
+    garantie:
+      value: "Hypotheek"
+      detail: "Bij hoog bedrag"
+  
+  section_3:
+    title: "Voordelen van hergroepering"
+    advantages:
+      mensualite_unique:
+        title: "Unieke maandelijkse afbetaling"
+        description: "Slechts één afschrijving te beheren"
+      baisse_echeances:
+        title: "Verlaging van vervaldagen"
+        description: "Vermindering tot 50% van totale maandelijkse afbetalingen"
+      tresorerie_liberee:
+        title: "Vrij gemaakte liquiditeiten"
+        description: "Koopkracht hersteld"
+      gestion_simplifiee:
+        title: "Vereenvoudigd beheer"
+        description: "Eén contactpersoon voor al uw kredieten"
+      tresorerie_supplementaire:
+        title: "Extra liquiditeiten"
+        description: "Mogelijkheid om aanvullende fondsen te verkrijgen"
+  
+  section_4:
+    title: "Geschiktheidsvereisten"
+    conditions:
+      title: "Algemene voorwaarden"
+      items:
+        revenus: "Regelmatige en voldoende inkomsten"
+        credits_existants: "Minstens 2 lopende kredieten"
+        montant_minimum: "Minimum totaalbedrag van 20 000€"
+        capacite_remboursement: "Aanvaardbare schuldenlast"
+    dossier:
+      title: "Samenstelling van het dossier"
+      items:
+        tableaux: "Aflossingschema's van bestaande kredieten"
+        assurances: "Lopende verzekeringscontracten"
+        justificatifs: "Recente inkomensbewijs"
+        situation: "Volledige vermogenssituatie"
+  
+  section_5:
+    title: "Benodigde documenten"
+    personnels:
+      title: "Persoonlijke documenten"
+      items:
+        identite: "Identiteitsbewijs"
+        domicile: "Woonplaatsbewijs"
+        familiale: "Gezinssituatie"
+        rib: "Rekeningnummer van hoofdrekening"
+    financiers:
+      title: "Financiële bewijsstukken"
+      items:
+        revenus: "3 laatste loonstroken"
+        impots: "Laatste belastingaangifte"
+        comptes: "Rekeninguittreksels over 3 maanden"
+        patrimoine: "Vermogensverklaring"
+    credits:
+      title: "Bestaande kredieten"
+      items:
+        contrats: "Lopende leningscontracten"
+        echeanciers: "Kredietschema's"
+        assurances_contrats: "Leningverzekeringscontracten"
+        releves: "Laatste uittreksels van gecrediteerde rekeningen"
+  
+  legal:
+    details:
+      title: "Belangrijke juridische informatie"
+      taeg: "<strong>*JTKS :</strong> Representatief voorbeeld: hergroepering van 3 kredieten van in totaal 80 000€, nieuw krediet van 90 000€ over 180 maanden tegen JTKS van 4,8%, 180 maandelijkse afbetalingen van 500€, totale kosten: 90 000€."
+      duree: "<strong>Looptijd :</strong> Verlenging van de looptijd verhoogt de totale kosten van het krediet."
+      garantie: "<strong>Garantie :</strong> Hypotheek mogelijk volgens bedrag en situatie."
+      assurance: "<strong>Verzekering :</strong> Overlijdens- en arbeidsongeschiktheidsverzekering verplicht, werkloosheidsverzekering aanbevolen."
+      reflexion: "<strong>Bedenktijd :</strong> 14 dagen wettelijke herroepingstermijn."
+  
+  cta:
+    title: "Vereenvoudig uw financiën"
+    subtitle: "Vind rust met een krediethergroepering"

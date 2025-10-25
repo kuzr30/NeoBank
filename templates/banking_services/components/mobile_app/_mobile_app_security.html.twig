@@ -1,0 +1,524 @@
+<!-- Security Section -->
+<section class="security" id="security">
+    <div class="security__container">
+        <div class="security__content">
+            <div class="security__text">
+                <div class="security__badge">
+                    {{ ux_icon('heroicons:shield-check', {'class': 'security__badge-icon'}) }}
+                    <span>{{ tp('mobile_app.security.badge', [], 'mobile_app') }}</span>
+                </div>
+                
+                <h2 class="security__title">
+                    {{ tp('mobile_app.security.title', [], 'mobile_app') }}
+                </h2>
+                
+                <p class="security__subtitle">
+                    {{ tp('mobile_app.security.subtitle', [], 'mobile_app') }}
+                </p>
+                
+                <div class="security__features">
+                    <div class="security__feature">
+                        <div class="security__feature-icon">
+                            {{ ux_icon('heroicons:lock-closed', {'class': 'security__feature-svg'}) }}
+                        </div>
+                        <div class="security__feature-content">
+                            <h3 class="security__feature-title">{{ tp('mobile_app.security.features.encryption.title', [], 'mobile_app') }}</h3>
+                            <p class="security__feature-desc">
+                                {{ tp('mobile_app.security.features.encryption.description', [], 'mobile_app') }}
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="security__feature">
+                        <div class="security__feature-icon">
+                            {{ ux_icon('heroicons:finger-print', {'class': 'security__feature-svg'}) }}
+                        </div>
+                        <div class="security__feature-content">
+                            <h3 class="security__feature-title">{{ tp('mobile_app.security.features.biometric.title', [], 'mobile_app') }}</h3>
+                            <p class="security__feature-desc">
+                                {{ tp('mobile_app.security.features.biometric.description', [], 'mobile_app') }}
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="security__feature">
+                        <div class="security__feature-icon">
+                            {{ ux_icon('heroicons:eye-slash', {'class': 'security__feature-svg'}) }}
+                        </div>
+                        <div class="security__feature-content">
+                            <h3 class="security__feature-title">{{ tp('mobile_app.security.features.monitoring.title', [], 'mobile_app') }}</h3>
+                            <p class="security__feature-desc">
+                                {{ tp('mobile_app.security.features.monitoring.description', [], 'mobile_app') }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="security__certifications">
+                    <h4 class="security__cert-title">{{ tp('mobile_app.security.certifications.title', [], 'mobile_app') }}</h4>
+                    <div class="security__cert-list">
+                        <div class="security__cert-item">
+                            <span class="security__cert-badge">{{ tp('mobile_app.security.certifications.items.pci_dss', [], 'mobile_app') }}</span>
+                            <span class="security__cert-label">Niveau 1</span>
+                        </div>
+                        <div class="security__cert-item">
+                            <span class="security__cert-badge">{{ tp('mobile_app.security.certifications.items.iso', [], 'mobile_app') }}</span>
+                            <span class="security__cert-label">Certifié</span>
+                        </div>
+                        <div class="security__cert-item">
+                            <span class="security__cert-badge">{{ tp('mobile_app.security.certifications.items.gdpr', [], 'mobile_app') }}</span>
+                            <span class="security__cert-label">Conforme</span>
+                        </div>
+                        <div class="security__cert-item">
+                            <span class="security__cert-badge">{{ tp('mobile_app.security.certifications.items.psd2', [], 'mobile_app') }}</span>
+                            <span class="security__cert-label">Agréé</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="security__visual">
+                <div class="security__shield">
+                    <div class="security__shield-inner">
+                        <div class="security__shield-icon">
+                            {{ ux_icon('heroicons:shield-check', {'class': 'security__main-icon'}) }}
+                        </div>
+                        <div class="security__shield-rings">
+                            <div class="security__ring security__ring--1"></div>
+                            <div class="security__ring security__ring--2"></div>
+                            <div class="security__ring security__ring--3"></div>
+                        </div>
+                    </div>
+                    <div class="security__particles">
+                        <div class="security__particle" style="--delay: 0s; --x: 20%; --y: 30%;"></div>
+                        <div class="security__particle" style="--delay: 1s; --x: 80%; --y: 20%;"></div>
+                        <div class="security__particle" style="--delay: 2s; --x: 60%; --y: 70%;"></div>
+                        <div class="security__particle" style="--delay: 0.5s; --x: 30%; --y: 80%;"></div>
+                        <div class="security__particle" style="--delay: 1.5s; --x: 85%; --y: 60%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* =================================================================
+   MOBILE APP - SECURITY SECTION
+   ================================================================= */
+
+/* Block: security */
+.security {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.security::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M20 20c0 4.4-3.6 8-8 8s-8-3.6-8-8 3.6-8 8-8 8 3.6 8 8zm0-20v20h20V0H20z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Element: security__container */
+.security__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Element: security__content */
+.security__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+/* Element: security__text */
+.security__text {
+    color: white;
+}
+
+/* Element: security__badge */
+.security__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 2rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+/* Element: security__badge-icon */
+.security__badge-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #fbbf24;
+}
+
+/* Element: security__title */
+.security__title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+/* Element: security__subtitle */
+.security__subtitle {
+    font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+/* Element: security__features */
+.security__features {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Element: security__feature */
+.security__feature {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+/* Element: security__feature-icon */
+.security__feature-icon {
+    width: 3rem;
+    height: 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Element: security__feature-svg */
+.security__feature-svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #fbbf24;
+}
+
+/* Element: security__feature-content */
+.security__feature-content {
+    flex: 1;
+}
+
+/* Element: security__feature-title */
+.security__feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+/* Element: security__feature-desc */
+.security__feature-desc {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+/* Element: security__certifications */
+.security__certifications {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Element: security__cert-title */
+.security__cert-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+/* Element: security__cert-list */
+.security__cert-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+/* Element: security__cert-item */
+.security__cert-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* Element: security__cert-badge */
+.security__cert-badge {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #fbbf24;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Element: security__cert-label */
+.security__cert-label {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+/* Element: security__visual */
+.security__visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Element: security__shield */
+.security__shield {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Element: security__shield-inner */
+.security__shield-inner {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Element: security__shield-icon */
+.security__shield-icon {
+    position: relative;
+    z-index: 3;
+}
+
+/* Element: security__main-icon */
+.security__main-icon {
+    width: 4rem;
+    height: 4rem;
+    color: #fbbf24;
+    filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.3));
+}
+
+/* Element: security__shield-rings */
+.security__shield-rings {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Element: security__ring */
+.security__ring {
+    position: absolute;
+    border: 2px solid rgba(229, 90, 43, 0.3);
+    border-radius: 50%;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.security__ring--1 {
+    width: 250px;
+    height: 250px;
+    top: -125px;
+    left: -125px;
+    animation-delay: 0s;
+}
+
+.security__ring--2 {
+    width: 300px;
+    height: 300px;
+    top: -150px;
+    left: -150px;
+    animation-delay: 1s;
+}
+
+.security__ring--3 {
+    width: 350px;
+    height: 350px;
+    top: -175px;
+    left: -175px;
+    animation-delay: 2s;
+}
+
+/* Element: security__particles */
+.security__particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Element: security__particle */
+.security__particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #fbbf24;
+    border-radius: 50%;
+    top: var(--y);
+    left: var(--x);
+    animation: float 4s ease-in-out infinite;
+    animation-delay: var(--delay);
+    opacity: 0.7;
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .security {
+        padding: 4rem 0;
+    }
+    
+    .security__content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .security__shield {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .security__shield-inner {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .security__main-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .security {
+        padding: 3rem 0;
+    }
+    
+    .security__container {
+        padding: 0 1.5rem;
+    }
+    
+    .security__features {
+        gap: 1.5rem;
+    }
+    
+    .security__feature {
+        gap: 1rem;
+    }
+    
+    .security__cert-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .security__shield {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .security__ring--1 {
+        width: 200px;
+        height: 200px;
+        top: -100px;
+        left: -100px;
+    }
+    
+    .security__ring--2 {
+        width: 230px;
+        height: 230px;
+        top: -115px;
+        left: -115px;
+    }
+    
+    .security__ring--3 {
+        width: 260px;
+        height: 260px;
+        top: -130px;
+        left: -130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .security__container {
+        padding: 0 1rem;
+    }
+    
+    .security__certifications {
+        padding: 1.5rem;
+    }
+    
+    .security__shield {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .security__shield-inner {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .security__main-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+</style>

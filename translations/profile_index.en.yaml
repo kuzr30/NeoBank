@@ -1,0 +1,96 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: profile_index.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+profile_index:
+  page:
+    title: "My Profile - %company_name%"
+  
+  header:
+    default_user: "User"
+    default_surname: "Unknown" 
+    default_first_letter: "U"
+    default_surname_letter: "S"
+    account_verified: "Verified account"
+    edit_profile: "Edit profile"
+    security: "Security"
+    alt_profile_picture: "Profile picture"
+  
+  kyc:
+    alerts:
+      not_submitted:
+        title: "Identity verification required"
+        text: "To access all our banking services, you must complete your identity verification (KYC)."
+        action: "Start verification"
+      pending:
+        title: "Verification in progress"
+        text: "Your identity verification request is being reviewed. You will be notified by email as soon as it is processed."
+        action: "View status"
+      rejected:
+        title: "Verification rejected"
+        text: "Your identity verification request has been rejected. Please review the comments and submit new documents."
+        action: "Start verification"
+  
+  sections:
+    personal_info:
+      title: Personal information
+      edit: Edit
+      fields:
+        first_name: First name
+        last_name: Last name
+        email: Email
+        phone: Phone
+        birth_date: Date of birth
+        not_provided: Not provided
+        not_provided_feminine: Not provided
+    
+    security:
+      title: Security
+      manage: Manage
+      fields:
+        password: Password
+        configured: Configured
+        two_factor: Two-factor authentication
+        disabled: Disabled
+        last_password_change: Last password change
+        not_provided: Not provided
+    
+    preferences:
+      title: Preferences
+      edit: Edit
+      fields:
+        language: Language
+        currency: Currency
+        timezone: Timezone
+        timezone_default: Europe/Paris (CET)
+        notifications: Notifications
+        notifications_default: Email + SMS
+      languages:
+        french: Français
+        english: English
+        german: Deutsch
+        spanish: Español
+        dutch: Nederlands
+      currencies:
+        eur: Euro (EUR)
+        usd: US Dollar (USD)
+        gbp: Pound Sterling (GBP)
+        chf: Swiss Franc (CHF)
+        cad: Canadian Dollar (CAD)
+      
+      values:
+        languages:
+          fr: "Français"
+          en: "English"
+          de: "Deutsch"
+          es: "Español"
+          nl: "Nederlands"
+        currencies:
+          EUR: "Euro (EUR)"
+          USD: "US Dollar (USD)"
+          GBP: "Pound Sterling (GBP)"
+          CHF: "Swiss Franc (CHF)"
+          CAD: "Canadian Dollar (CAD)"
+        default_timezone: "Europe/Paris (CET)"
+        notifications_value: "Email + SMS"

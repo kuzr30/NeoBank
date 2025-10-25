@@ -1,0 +1,52 @@
+# ENGLISH TRANSLATION - Translated from French
+# Bank card controllers translation file
+# Domain: card_controllers
+# Language: English (en)
+
+card_controllers:
+  # Common flash messages
+  flash:
+    kyc_required: "You must complete your identity verification to access bank card services."
+    
+  # CardController
+  card_controller:
+    access_denied:
+      card: "Access denied to this card."
+      subscription: "Access denied to this subscription."
+      opposition: "Access denied to this opposition."
+  
+  # SubscriptionController
+  subscription:
+    flash:
+      already_has_card: "You already have a card or a request in progress."
+      no_active_account: "You must have an active account to subscribe to a card."
+      success_created: "Your subscription request has been successfully registered. You will receive a notification as soon as it is processed."
+      error_processing: "An error occurred while registering your request. Please try again."
+      only_pending_can_cancel: "Only pending subscriptions can be cancelled."
+      invalid_csrf_token: "Invalid security token."
+      success_cancelled: "Your subscription request has been successfully cancelled."
+      error_cancelling: "An error occurred during cancellation."
+    
+    default_description: "Automatic request via banking interface"
+  
+  # OppositionController
+  opposition:
+    flash:
+      only_active_cards: "Only active cards can be subject to opposition."
+      already_in_progress: "An opposition is already being processed for this card."
+      success_created: "Your opposition has been successfully registered. Your card has been immediately blocked for your security."
+      error_processing: "An error occurred while registering your opposition. Please try again or contact our customer service."
+      select_card: "Please select a card."
+      select_card_required: "Please select a card."
+      card_not_found: "Card not found or access denied."
+      emergency_success: "OPPOSITION REGISTERED - Your card has been immediately blocked. Reference: {reference}"
+      emergency_error: "Error during blocking. Contact customer service immediately at 02/XXX.XX.XX"
+    
+    emergency_description: "Emergency opposition via quick interface"
+    
+    # Opposition reasons
+    reasons:
+      lost: "Lost card"
+      stolen: "Stolen card"
+      compromised: "Compromised card"
+      fraudulent_activity: "Fraudulent activity"

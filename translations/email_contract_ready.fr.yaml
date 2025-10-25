@@ -1,0 +1,47 @@
+email_contract_ready:
+  title: "Votre contrat de crédit est prêt - Signature requise"
+  content:
+    page_title: "Votre contrat personnalisé est prêt"
+    greeting: "Bonjour,"
+    contract_finalized:
+      title: "Contrat finalisé par nos experts"
+      description: "Excellente nouvelle ! Votre contrat de crédit a été finalisé par notre équipe juridique et est maintenant prêt pour signature. Nos conseillers ont préparé votre dossier avec soin."
+    contract_details:
+      title: "Détails du contrat"
+      contract_number: "Numéro de contrat : {contractNumber}"
+      document_info: "Document préparé par nos spécialistes juridiques au format PDF sécurisé"
+    signature_process:
+      title: "Processus de signature"
+      step_1:
+        title: "1. Téléchargement"
+        description: "Récupérer le contrat en pièce jointe de cet email"
+      step_2:
+        title: "2. Lecture approfondie"
+        description: "Étudier attentivement toutes les clauses et conditions contractuelles"
+      step_3:
+        title: "3. Signature complète"
+        description: "Signer la dernière page et parapher chaque page du document"
+      step_4:
+        title: "4. Retour sécurisé"
+        description: "Nous retourner le contrat par email, courrier ou dépôt en agence"
+    return_methods:
+      title: "Modes de retour du contrat signé"
+      email_secure: "Email sécurisé"
+      email_description: "Scan ou photo de qualité professionnelle"
+      postal_mail: "Courrier postal"
+      postal_description: "Envoi recommandé à nos services"
+      agency_deposit: "Dépôt en agence"
+      agency_description: "Remise directe dans nos bureaux"
+    express_processing:
+      title: "Traitement express"
+      processing_time: "Délai de traitement : 24-48h ouvrées"
+      processing_description: "Dès réception de votre contrat signé, notre équipe procédera à la validation finale et notre service comptable effectuera le versement des fonds directement sur votre compte bancaire."
+    support_text: "Pour toute question concernant votre contrat ou le processus de signature, nos conseillers spécialisés restent à votre disposition."
+    footer: "%company_name% - Département Crédits<br>Notification de contrat prêt à signer"
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Envoi de notification de contrat prêt"
+    success: "Notification de contrat prêt envoyée avec succès"
+    error: "Erreur lors de l'envoi de notification de contrat prêt"
+    send_failed: "Échec de l'envoi de notification de contrat prêt"

@@ -1,0 +1,99 @@
+{% extends 'credit_application/base_step.html.twig' %}
+
+{% block step_content %}
+<div class="credit-application__form">
+  <div class="credit-application__form-header">
+    <h2 class="credit-application__form-title">
+      {{ ux_icon('heroicons:user', {'class': 'credit-application__form-icon'}) }}
+      {{ tp('credit_application.steps.step1.title', {}, 'application') }}
+    </h2>
+    <p class="credit-application__form-subtitle">
+      {{ tp('credit_application.steps.step1.subtitle', {}, 'application') }}
+    </p>
+  </div>
+
+  {{ form_start(form, {
+    'attr': {
+      'class': 'credit-application__form-content'
+    }
+  }) }}
+  
+  <div class="credit-application__form-grid credit-application__form-grid--two-columns">
+    
+    {% include 'partials/_form_field.html.twig' with {
+      'field': form.firstName,
+      'help': tp('credit_application.forms.personal_info.first_name.help', {}, 'application')
+    } %}
+
+    {% include 'partials/_form_field.html.twig' with {
+      'field': form.lastName,
+      'help': tp('credit_application.forms.personal_info.last_name.help', {}, 'application')
+    } %}
+
+    {% include 'partials/_form_field.html.twig' with {
+      'field': form.email,
+      'help': tp('credit_application.forms.personal_info.email.help', {}, 'application')
+    } %}
+
+    {% include 'partials/_form_field.html.twig' with {
+      'field': form.phoneNumber,
+      'help': tp('credit_application.forms.personal_info.phone_number.help', {}, 'application')
+    } %}
+
+    {% include 'partials/_form_field.html.twig' with {
+      'field': form.birthDate,
+      'help': tp('credit_application.forms.personal_info.birth_date.help', {}, 'application')
+    } %}
+
+    {% include 'partials/_form_field.html.twig' with {
+      'field': form.nationality,
+      'help': tp('credit_application.forms.personal_info.nationality.help', {}, 'application')
+    } %}
+
+    {% include 'partials/_form_field.html.twig' with {
+      'field': form.birthCountry,
+      'help': tp('credit_application.forms.personal_info.birth_country.help', {}, 'application')
+    } %}
+
+    {% include 'partials/_form_field.html.twig' with {
+      'field': form.birthCity,
+      'help': tp('credit_application.forms.personal_info.birth_city.help', {}, 'application')
+    } %}
+
+  </div>
+
+  <div class="credit-application__actions">
+    <a href="{{ path('credit_simulation_index') }}" class="credit-application__button credit-application__button--secondary">
+      {{ tp('credit_application.navigation.back', {}, 'application') }}
+    </a>
+    
+    <button type="submit" class="credit-application__button credit-application__button--primary">
+      {{ tp('credit_application.navigation.continue', {}, 'application') }} →
+    </button>
+  </div>
+
+  {{ form_end(form) }}
+</div>
+
+<style>
+.credit-application__form-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.credit-application__form-grid--two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .credit-application__form-grid--two-columns {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+{% endblock %}

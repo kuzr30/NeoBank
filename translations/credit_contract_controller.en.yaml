@@ -1,0 +1,11 @@
+# ENGLISH TRANSLATION - Translated from French
+# Credit contract controller translation file
+# Domain: credit_contract_controller
+# Language: English (en)
+
+# Translations for CreditContractController
+flash:
+  contract_not_found: "Contract not found."
+  contract_uploaded_success: "Signed contract uploaded successfully. We will proceed with validation as soon as possible."
+  upload_error: "Error uploading file."
+  no_file_selected: "Please select a file."

@@ -1,0 +1,16 @@
+security:
+  activation_notice:
+    title: "¡Verifique su email!"
+    message: "Hemos enviado un email de activación a su dirección. Haga clic en el enlace del email para activar su cuenta y comenzar a usar %company_name%."
+    info: "El enlace de activación expirará en 24 horas. Si no encuentra el email, revise su carpeta de spam."
+    actions:
+      login: "Ir al inicio de sesión"
+      resend: "Reenviar el email de activación"
+  
+  resend_activation:
+    title: "Reenviar la activación"
+    subtitle: "Ingrese su dirección de email para recibir un nuevo enlace de activación de su cuenta."
+    email_label: "Dirección de email"
+    email_placeholder: "su@email.com"
+    submit_button: "Reenviar el email de activación"
+    back_button: "Volver"

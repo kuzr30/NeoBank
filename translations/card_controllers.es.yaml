@@ -1,0 +1,47 @@
+card_controllers:
+  # Mensajes flash comunes
+  flash:
+    kyc_required: "Debe completar su verificación de identidad para acceder a los servicios de tarjetas bancarias."
+    
+  # CardController
+  card_controller:
+    access_denied:
+      card: "Acceso denegado a esta tarjeta."
+      subscription: "Acceso denegado a esta suscripción."
+      opposition: "Acceso denegado a esta oposición."
+  
+  # SubscriptionController
+  subscription:
+    flash:
+      already_has_card: "Ya tiene una tarjeta o una solicitud en curso."
+      no_active_account: "Debe tener una cuenta activa para suscribir una tarjeta."
+      success_created: "Su solicitud de suscripción ha sido registrada con éxito. Recibirá una notificación tan pronto como sea procesada."
+      error_processing: "Ha ocurrido un error durante el registro de su solicitud. Por favor inténtelo de nuevo."
+      only_pending_can_cancel: "Solo las suscripciones pendientes pueden ser canceladas."
+      invalid_csrf_token: "Token de seguridad inválido."
+      success_cancelled: "Su solicitud de suscripción ha sido cancelada con éxito."
+      error_cancelling: "Ha ocurrido un error durante la cancelación."
+    
+    default_description: "Solicitud automática vía interfaz bancaria"
+  
+  # OppositionController
+  opposition:
+    flash:
+      only_active_cards: "Solo las tarjetas activas pueden ser objeto de una oposición."
+      already_in_progress: "Ya hay una oposición en proceso para esta tarjeta."
+      success_created: "Su oposición ha sido registrada con éxito. Su tarjeta ha sido inmediatamente bloqueada para su seguridad."
+      error_processing: "Ha ocurrido un error durante el registro de su oposición. Por favor inténtelo de nuevo o contacte nuestro servicio al cliente."
+      select_card: "Por favor seleccione una tarjeta."
+      select_card_required: "Por favor seleccione una tarjeta."
+      card_not_found: "Tarjeta no encontrada o acceso denegado."
+      emergency_success: "OPOSICIÓN REGISTRADA - Su tarjeta ha sido inmediatamente bloqueada. Referencia: {reference}"
+      emergency_error: "Error durante el bloqueo. Contacte inmediatamente el servicio al cliente al 02/XXX.XX.XX"
+    
+    emergency_description: "Oposición de emergencia vía interfaz rápida"
+    
+    # Motivos de oposición
+    reasons:
+      lost: "Tarjeta perdida"
+      stolen: "Tarjeta robada"
+      compromised: "Tarjeta comprometida"
+      fraudulent_activity: "Actividad fraudulenta"

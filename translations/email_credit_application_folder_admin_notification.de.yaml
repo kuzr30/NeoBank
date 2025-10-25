@@ -1,0 +1,48 @@
+email_credit_application_folder_admin_notification:
+  title: "Neuer Kreditantrag - %company_name%"
+  
+  content:
+    page_title: "Neuer Kreditantrag"
+    tagline: "Ihr vertrauensvoller Bankpartner"
+    
+    reference_info:
+      title: "Referenz des Antrags"
+      reference_number: "{referenceNumber}"
+      submitted_on: "Eingereicht am {submittedDate}"
+    
+    applicant_info:
+      title: "Antragstellerinformationen"
+      full_name: "Vollständiger Name"
+      email: "E-Mail"
+      phone: "Telefon"
+      birth_date: "Geburtsdatum"
+      nationality: "Staatsangehörigkeit"
+      address: "Adresse"
+      address_format: "{address}, {postalCode} {city}, {country}"
+    
+    credit_details:
+      title: "Details des beantragten Kredits"
+      amount: "Betrag"
+      amount_value: "{amount} €"
+      credit_type: "Kreditart"
+      duration: "Laufzeit"
+      duration_months: "{duration} Monate"
+      monthly_payment: "Monatsrate"
+      monthly_payment_value: "{monthlyPayment} €"
+      total_cost: "Gesamtkosten"
+      total_cost_value: "{totalCost} €"
+    
+    financial_situation:
+      title: "Finanzielle Situation"
+      monthly_income: "Monatliches Einkommen"
+      monthly_income_value: "{monthlyIncome} €"
+      monthly_expenses: "Monatliche Ausgaben"
+      monthly_expenses_value: "{monthlyExpenses} €"
+      employment_type: "Beschäftigungsart"
+      existing_loans: "Bestehende Kredite"
+      existing_loans_value: "{existingLoans} €"
+      dependents: "Unterhaltsberechtigte"
+  
+  log:
+    admin_notification_sent: "Admin-Benachrichtigung für Kreditantrag {referenceNumber} gesendet"
+    email_sent: "Admin-E-Mail für Kreditantrag an das Team gesendet"

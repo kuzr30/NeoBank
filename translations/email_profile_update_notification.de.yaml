@@ -1,0 +1,21 @@
+email_profile_update_notification:
+  title: "Aktualisierung Ihres Profils"
+  content:
+    page_title: "Aktualisierung Ihres Profils"
+    greeting: "Hallo {firstName},"
+    notification: "Wir informieren Sie, dass Ihr %company_name%-Profil am {updateDate} aktualisiert wurde."
+    changes_section:
+      title: "Vorgenommene Änderungen"
+      old_value: "Alter Wert: {oldValue}"
+      new_value: "Neuer Wert: {newValue}"
+    security_info:
+      title: "Sicherheitsinformation"
+      warning: "Falls Sie diese Änderungen nicht vorgenommen haben, loggen Sie sich sofort in Ihr Konto ein und ändern Sie Ihr Passwort."
+    footer: "Diese E-Mail wurde automatisch von %company_name% versendet."
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Versendung der Profilaktualisierungs-Benachrichtigung"
+    success: "Profilaktualisierungs-Benachrichtigung erfolgreich versendet"
+    error: "Fehler beim Versenden der Profilaktualisierungs-Benachrichtigung"
+    send_failed: "Versenden der Profilaktualisierungs-Benachrichtigung fehlgeschlagen"

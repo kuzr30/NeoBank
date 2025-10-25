@@ -1,0 +1,53 @@
+# Traducciones para CreditApplicationController
+flash:
+  # Mensajes de error
+  complete_previous_steps: "Por favor complete los pasos anteriores antes de continuar."
+  missing_data: "Datos faltantes en la sesión. Por favor reinicie la solicitud."
+  application_not_found: "La solicitud de crédito no ha sido encontrada."
+  session_expired: "Su sesión ha expirado. Por favor reinicie su solicitud."
+  invalid_request: "Solicitud inválida. Por favor complete todos los pasos."
+  complete_all_steps: "Por favor complete todos los pasos antes de proceder al resumen."
+  invalid_security_token: "Token de seguridad inválido. Por favor inténtelo de nuevo."
+  submission_error: "Ha ocurrido un error durante el envío de su solicitud. Por favor inténtelo de nuevo."
+  
+  # Mensajes de éxito
+  step_completed: "Paso %d completado con éxito."
+  application_submitted: "Su solicitud de crédito ha sido enviada con éxito. Recibirá pronto una confirmación por email."
+  data_saved: "Su información ha sido guardada."
+  
+  # Mensajes de información
+  step_progress: "Está en el paso %d de %d."
+  review_information: "Por favor verifique su información antes de enviar su solicitud."
+  fields_updated: "Los campos han sido actualizados automáticamente."
+  
+  # Mensajes de advertencia
+  unsaved_changes: "Tiene modificaciones no guardadas. ¿Está seguro de que desea salir?"
+
+# Excepciones
+exceptions:
+  step_not_found: "Paso no encontrado."
+  invalid_step: "Paso inválido."
+  credit_application_not_found: "Solicitud de crédito no encontrada."
+
+# Mensajes API
+api:
+  invalid_data: "Datos inválidos proporcionados."
+  calculation_error: "Error durante el cálculo del crédito."
+
+# Otras traducciones del controlador
+step_titles:
+  1: "Detalles del crédito"
+  2: "Información personal"
+  3: "Situación financiera"
+  unknown: "Paso desconocido"
+
+step_descriptions:
+  1: "Configure su crédito y obtenga una simulación"
+  2: "Ingrese su información personal y su dirección"
+  3: "Describa su situación profesional y financiera"
+
+buttons:
+  continue: "Continuar"
+  previous: "Anterior" 
+  submit: "Enviar la solicitud"
+  save_draft: "Guardar el borrador"

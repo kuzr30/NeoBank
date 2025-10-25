@@ -1,0 +1,49 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_transfer_created.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+email_transfer_created:
+  title: "Transfer created successfully"
+  
+  content:
+    page_title: "Bank transfer initiated"
+    greeting: "Hello {firstName} {lastName},"
+    
+    transfer_created:
+      title: "Transfer request created"
+      description: "Your transfer request has been successfully created and is now being processed securely. The multi-step validation process will begin."
+    
+    transaction_details:
+      title: "Transaction details"
+      reference: "Transfer reference"
+      amount: "Amount to transfer"
+      amount_value: "{amount} €"
+      beneficiary_account: "Beneficiary account"
+      transfer_reason: "Transfer reason"
+      creation_date: "Creation date"
+      created_at: "{createdAt}"
+    
+    validation_process:
+      title: "Secure validation process"
+      step1: "1. Administration generates successive validation codes"
+      step2: "2. Email notification for each new available code"
+      step3: "3. Validation required within a maximum of 6 hours"
+      step4: "4. Automatic execution after complete validation"
+    
+    tracking:
+      title: "Track your transfer"
+      view_details_button: "📊 View transfer details"
+      access_instruction: "Access your banking area to track progress in real time"
+    
+    security_info:
+      title: "Security and traceability"
+      description: "All validation steps are recorded and secured. You will receive a final confirmation by email once the transfer is successfully executed."
+    
+    supervision_note: "Our banking security team supervises the process to ensure the compliance of your transaction."
+    
+    footer: "<strong>%company_name% - Transfer Service</strong><br>Automatic transfer creation notification"
+  
+  log:
+    transfer_created: "Transfer created {transferId} for an amount of {amount}€"
+    email_sent: "Transfer creation email sent to {userEmail}"

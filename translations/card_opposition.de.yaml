@@ -1,0 +1,21 @@
+card_opposition:
+  # Notfallseite
+  emergency:
+    title: "Notfallsperrung"
+    subtitle: "Sperren Sie Ihre Karte sofort"
+    select_card: "Wählen Sie Ihre Karte:"
+    reason_label: "Grund:"
+    submit_button: "KARTE SOFORT SPERREN"
+    
+  # Sperrung erstellen
+  create:
+    title: "Sperrungserklärung"
+    form_subtitle: "Formular zur Kartensperrung"
+    
+  # Index
+  index:
+    title: "Sperrungsverwaltung"
+    active_cards: "Aktive Karten"
+    opposition_history: "Sperrungshistorie"
+    no_active_cards: "Keine aktiven Karten"
+    no_opposition_history: "Keine Sperrungshistorie"

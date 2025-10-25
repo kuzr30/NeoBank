@@ -1,0 +1,33 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ customEmail.subject }}{% endblock %}
+
+{% block tagline %}{{ 'email.base.tagline'|trans({}, 'email') }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ customEmail.subject }}</h2>
+    
+    <div class="content-text">
+        {{ customEmail.message|raw }}
+    </div>
+
+    {% if customEmail.attachments is not null and customEmail.attachments|length > 0 %}
+        <div class="info-box" style="margin-top: 40px;">
+            <h3 style="margin-top: 0; color: #1976d2;">
+                <svg width="20" height="20" style="vertical-align: middle; margin-right: 8px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/>
+                </svg>
+                {{ 'custom_email.content.attachments.title'|trans({}, 'custom_email') }}
+            </h3>
+            <p style="margin-bottom: 0; color: #000000;">
+                {% if customEmail.attachments|length == 1 %}
+                    {{ 'custom_email.content.attachments.count_single'|trans({'count': customEmail.attachments|length}, 'custom_email') }}
+                {% else %}
+                    {{ 'custom_email.content.attachments.count_plural'|trans({'count': customEmail.attachments|length}, 'custom_email') }}
+                {% endif %}
+            </p>
+        </div>
+    {% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,147 @@
+banking_credits:
+  # Header section
+  header:
+    title: "Mis créditos"
+    breadcrumb_home: "Inicio"
+    breadcrumb_banking: "Servicios bancarios"
+    breadcrumb_current: "Mis créditos"
+    last_update: "Última actualización"
+
+  # Credit statistics section
+  statistics:
+    total_credits: "Créditos activos"
+    total_amount: "Importe total prestado"
+    total_remaining: "Capital pendiente"
+    average_rate: "Tipo medio"
+    available_balance: "Saldo total disponible"
+    monthly_payments: "Mensualidades totales"
+
+  # Available credits section  
+  available_credits:
+    title: "Créditos disponibles"
+    subtitle: "Importes desembolsados y disponibles para uso"
+    view_all: "Ver todos los créditos disponibles"
+    from: "A partir de"
+    rate: "Tipo a partir del %"
+    simulate: "Simular"
+    apply: "Solicitar"
+    duration: "A %d meses"
+    credit_account: "Cuenta Crédito"
+    available: "Disponible"
+    funds_released: "Fondos desembolsados"
+    transfer_to_main: "Transferir a mi cuenta principal"
+
+  # Active credits section
+  active_credits:
+    title: "Mis créditos activos"
+    remaining_capital: "Capital pendiente"
+    monthly_payment: "Mensualidad"
+    next_payment: "Próximo vencimiento"
+    progress: "Progresión"
+    view_details: "Ver detalles"
+    view_amortization: "Ver amortización"
+    real_estate: "Bien inmobiliario"
+
+  # Applications section
+  applications:
+    title: "Mis solicitudes"
+    reference: "Solicitud n°"
+    date: "Fecha de solicitud"
+    amount: "Importe"
+    status: "Estado"
+    actions: "Acciones"
+    view: "Ver"
+    no_applications: "Ninguna solicitud de crédito"
+    credit_type: "Tipo de crédito"
+
+  # Empty state
+  empty_state:
+    title: "Ningún crédito activo"
+    message: "Actualmente no tiene ningún crédito en curso. Descubra nuestras ofertas de crédito adaptadas a sus necesidades."
+
+  # Pagination
+  pagination:
+    previous: "Anterior"
+    next: "Siguiente"
+    page_info: "Página {{ page }} de {{ total }} ({{ count }} solicitudes)"
+
+  # Labels - Common labels used across sections
+  labels:
+    initial_capital: "Capital inicial"
+    duration: "Duración"
+    months: "meses"
+    start_date: "Fecha de inicio"
+    status: "Estado"
+    type: "Tipo de crédito"
+    reference: "Referencia"
+    monthly_payment_short: "Mensualidad"
+    browse_offers: "Explorar ofertas"
+    property: "Bien inmobiliario"
+    status_fund_disbursed: "Fondos desembolsados"
+    available: "Disponible"
+    transfer_to_main: "Transferir a mi cuenta principal"
+    percent_repaid: "%d%% reembolsado"
+    
+  # Credit info
+  credit:
+    amount: "Importe"
+    remaining_amount: "Capital pendiente"
+    monthly_payment: "Mensualidad"
+    interest_rate: "Tipo de interés"
+    duration: "Duración"
+    start_date: "Fecha de inicio"
+    end_date: "Fecha de fin"
+    next_payment: "Próximo vencimiento"
+    status: "Estado"
+    type: "Tipo de crédito"
+    
+  # Credit types
+  types:
+    personal: "Crédito personal"
+    mortgage: "Crédito inmobiliario"
+    auto: "Crédito auto"
+    consumer: "Crédito al consumo"
+    professional: "Crédito profesional"
+    student: "Crédito estudiante"
+    revolving: "Crédito renovable"
+    
+  # Status
+  status:
+    active: "Activo"
+    pending: "Pendiente"
+    approved: "Aprobado"
+    rejected: "Rechazado"
+    completed: "Terminado"
+    suspended: "Suspendido"
+    contract_sent: "Contrato enviado"
+    contract_signed: "Contrato firmado"
+    funds_disbursed: "Fondos desembolsados"
+    
+  # Actions
+  actions:
+    view_details: "Ver los detalles"
+    view_amortization: "Ver la amortización"
+    simulate_credit: "Simular un crédito"
+    apply_credit: "Solicitar un crédito"
+    download_contract: "Descargar el contrato"
+    make_payment: "Efectuar un pago"
+    
+  # Simulation form
+  simulation:
+    amount_label: "Importe deseado"
+    duration_label: "Duración en meses"
+    purpose_label: "Objeto del crédito"
+    calculate: "Calcular"
+    results_title: "Resultados de la simulación"
+    monthly_payment_result: "Mensualidad estimada"
+    total_cost: "Coste total del crédito"
+    
+  # Messages
+  messages:
+    no_credits: "Ningún crédito en curso"
+    no_applications: "Ninguna solicitud en curso"
+    access_denied: "Acceso denegado a este crédito"
+    simulation_success: "Simulación calculada con éxito"
+    
+  # Currency
+  currency: "€"

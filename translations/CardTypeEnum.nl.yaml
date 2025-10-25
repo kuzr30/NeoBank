@@ -1,0 +1,41 @@
+# Vertaalbestand voor CardTypeEnum  
+# Domein: CardTypeEnum
+# Taal: Nederlands (nl)
+
+CardTypeEnum:
+  # Kaarttypes - Labels
+  labels:
+    debit: "Debetkaart"
+    credit: "Creditcard"
+    prepaid: "Prepaidkaart"
+  
+  # Kaarttypes - Beschrijvingen
+  descriptions:
+    debit: "Direct afgeschreven van uw rekening"
+    credit: "Met betalingsgemak"
+    prepaid: "Oplaadbaar volgens uw behoeften"
+  
+  # Aanvullende informatie
+  info:
+    title: "Bankkaart types"
+    subtitle: "Kies het kaarttype dat bij u past"
+    
+  # Berichten voor formulieren
+  form:
+    placeholder: "Selecteer een kaarttype"
+    help: "Het kaarttype bepaalt de werking ervan"
+    
+  # Voordelen per type
+  advantages:
+    debit:
+      - "Volledige controle over uw uitgaven"
+      - "Geen risico op schulden"
+      - "Onmiddellijk gebruik"
+    credit:
+      - "Betalingsgemak"
+      - "Hernieuwbaar krediet"
+      - "Flexibele terugbetaling"
+    prepaid:
+      - "Perfecte budgetcontrole"
+      - "Geen rood staan mogelijk"
+      - "Ideaal voor cadeaus"

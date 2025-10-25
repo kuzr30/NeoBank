@@ -1,0 +1,91 @@
+travel_loan:
+  page_title: "Crédito viaje"
+  page_description: "Financie sus sueños de viaje con toda serenidad."
+  
+  advantages:
+    -
+      title: "Ahorro preservado:"
+      description: "Conserve sus ahorros para imprevistos"
+    -
+      title: "Desbloqueo inmediato:"
+      description: "Fondos disponibles rápidamente para reservar"
+    -
+      title: "Todos los viajes:"
+      description: "Vacaciones, luna de miel, viaje de negocios personal"
+    -
+      title: "Libertad de uso:"
+      description: "Transporte, alojamiento, actividades, equipamiento"
+    -
+      title: "Seguro de viaje:"
+      description: "Posibilidad de cobertura cancelación/interrupción"
+  conditions:
+    octroi:
+      title: "Condiciones de otorgamiento"
+      items:
+        - "Ser mayor de edad y residir en Francia"
+        - "Justificar ingresos regulares"
+        - "Situación financiera sana"
+        - "Proyecto de viaje definido"
+    utilisation:
+      title: "Uso recomendado"
+      items:
+        - "Viaje excepcional o importante"
+        - "Preservación del ahorro de precaución"
+        - "Presupuesto de viaje bien definido"
+        - "Capacidad de reembolso asegurada"
+  cta:
+    subtitle: Financie sus sueños de viaje con nuestro crédito dedicado
+    title: Parta a descubrir el mundo
+  documents:
+    financiere:
+      title: "Situación financiera"
+      items:
+        - "3 últimas nóminas"
+        - "Último certificado de ingresos"
+        - "Estados de cuentas"
+        - "Justificantes de otros ingresos"
+    identite:
+      title: "Identidad y domicilio"
+      items:
+        - "Documento de identidad o pasaporte"
+        - "Justificante de domicilio reciente"
+        - "Libro de familia si aplica"
+    projet:
+      title: "Proyecto viaje"
+      items:
+        - "Presupuesto agencia de viajes"
+        - "Reservaciones preliminares"
+        - "Descripción del viaje"
+        - "Presupuesto detallado"
+  features:
+    montant: "Hasta 25 000€"
+    montant_detail: "Para todos sus proyectos de viaje"
+    duree: "De 12 meses a 7 años"
+    duree_detail: "Reembolso cómodo"
+    taux: "A partir de {rate}% TAE*"
+    taux_detail: "Tasa competitiva viaje"
+    garantie: "Sin garantía"
+    garantie_detail: "Financiamiento sobre firma"
+  hero:
+    subtitle: Concrete sus sueños de evasión
+    title: Crédito Viaje
+  legal:
+    title: "Información legal importante"
+    details:
+      - "*TAE: Ejemplo representativo: para un crédito viaje de 8 000€ en 48 meses al TAE de 5,2%, usted reembolsa 48 mensualidades de 185€, es decir un monto total de 8 880€ (coste del crédito: 880€)."
+      - "Utilización: Fondos destinados exclusivamente al financiamiento del viaje declarado."
+      - "Seguro de viaje: Suscripción recomendada para cubrir los riesgos de cancelación."
+      - "Reembolso anticipado: Posible sin penalización más allá de 10 000€."
+      - "Plazo de retractación: 14 días para renunciar al crédito sin justificación."
+  meta:
+    description: Financie sus vacaciones y viajes de ensueño con nuestro crédito viaje. Parta serenamente con condiciones adaptadas.
+    title: Crédito Viaje
+  section_1:
+    content:
+    - El crédito viaje le permite financiar sus vacaciones, viajes de novios, vueltas al mundo o escapadas excepcionales sin usar sus ahorros de precaución.
+    - Solución de financiamiento dedicada al ocio y al bienestar, le ofrece la posibilidad de vivir experiencias únicas preservando su equilibrio financiero.
+    title: ¿Qué es un crédito viaje?
+  values:
+    duree: 7 años
+    montant: 25 000€
+    taux: 5,2%

@@ -1,0 +1,24 @@
+# ENGLISH TRANSLATION
+# Original file: custom_email.fr.yaml
+# Generated on: 2025-10-11
+
+custom_email:
+  title: "Custom message"
+  content:
+    attachments:
+      title: "Attachments"
+      count_single: "This message contains {count} attachment."
+      count_plural: "This message contains {count} attachments."
+    footer:
+      sent_by: "This email was sent to you by the {company_name} team."
+      sender: "Sender: {sender_name}"
+  
+  # Log messages for MessageHandler
+  logs:
+    sending: "Sending custom email"
+    success: "Custom email sent successfully"
+    error: "Error sending custom email"
+    not_found: "Custom email not found"
+    already_sent: "Custom email already sent"
+    attachment_not_found: "Attachment file not found"
+    send_failed: "Failed to send custom email"

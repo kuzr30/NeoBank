@@ -1,0 +1,39 @@
+notification_service:
+  email_subjects:
+    account_created: "Votre compte %company_name% est prêt !"
+    account_suspended: "Suspension temporaire de vos comptes %company_name%"
+    
+  email_content:
+    account_created:
+      greeting: "Félicitations %firstName% !"
+      intro: "Votre compte %company_name% a été créé avec succès."
+      account_details: "Détails de votre compte :"
+      account_number: "Numéro de compte"
+      iban: "IBAN"
+      country: "Pays"
+      access_info: "Accès à votre espace client"
+      access_info_text: "Vous pouvez maintenant accéder à votre espace client pour effectuer vos opérations bancaires."
+      support_info: "Si vous avez des questions, notre équipe support est à votre disposition."
+      signature: "L'équipe %company_name%"
+      
+    account_suspended:
+      greeting: "Cher(e) %s,"
+      suspension_notice: "Nous vous informons que vos comptes %company_name% ont été temporairement suspendus."
+      reason_security: "Cette mesure de sécurité a été prise suite à une activité inhabituelle détectée."
+      next_steps: "Notre équipe vérifie actuellement votre compte et vous contactera sous 48h."
+      contact_info: "En cas d'urgence, contactez notre service client."
+      signature: "L'équipe %company_name%"
+      
+  log_messages:
+    account_created_sent: "Email de création de compte envoyé"
+    account_suspended_sent: "Email de suspension de compte envoyé"
+    account_created_error: "Erreur envoi email création de compte"
+    account_suspended_error: "Erreur envoi email suspension de compte"
+    
+  countries:
+    FR: "France"
+    BE: "Belgique"
+    NL: "Pays-Bas"
+    DE: "Allemagne"
+    IT: "Italie"
+    ES: "Espagne"

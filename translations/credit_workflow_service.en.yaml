@@ -1,0 +1,25 @@
+# ENGLISH TRANSLATION - Translated from French
+# Credit workflow service translation file
+# Domain: credit_workflow_service
+# Language: English (en)
+
+credit_workflow_service:
+  admin_notes:
+    approved: "Application approved on {date}"
+    rejected: "Application rejected on {date}"
+    contract_generated: "Contract generated and sent on {date}"
+    contract_signed: "Contract signed by customer on {date}"
+    contract_admin_signed: "Contract marked as signed by administrator on {date}"
+    contract_validated: "Contract validated by administrator on {date}"
+    funds_released: "Funds released on {date}"
+    
+  exceptions:
+    contract_not_validated: "The contract must be validated before releasing funds."
+    user_not_found: "User not found for email: {email}"
+    main_account_not_found: "Main account not found for user: {email}"
+    
+  transaction_descriptions:
+    credit_release: "Credit release - Contract {contractNumber}"
+    
+  log_messages:
+    contract_generation_error: "Contract generation error for application #{id}: {error}"

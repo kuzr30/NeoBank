@@ -1,0 +1,57 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{% if translationService is defined %}{{ translationService.tp('email_notification_created_account.title', {}, 'email_notification_created_account') }}{% else %}{{ tp('email_notification_created_account.title', {}, 'email_notification_created_account') }}{% endif %}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{% if translationService is defined %}{{ translationService.tp('email_notification_created_account.content.page_title', {firstName: firstName}, 'email_notification_created_account') }}{% else %}{{ tp('email_notification_created_account.content.page_title', {firstName: firstName}, 'email_notification_created_account') }}{% endif %}</h2>
+    
+    <p class="content-text">
+        {% if translationService is defined %}{{ translationService.tp('email_notification_created_account.content.intro', {}, 'email_notification_created_account') }}{% else %}{{ tp('email_notification_created_account.content.intro', {}, 'email_notification_created_account') }}{% endif %}
+    </p>
+
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #2e7d32;">{% if translationService is defined %}{{ translationService.tp('email_notification_created_account.content.account_details.title', {}, 'email_notification_created_account') }}{% else %}{{ tp('email_notification_created_account.content.account_details.title', {}, 'email_notification_created_account') }}{% endif %}</h3>
+        
+        <table style="width: 100%; margin: 20px 0;">
+            <tr>
+                <td style="padding: 10px 0; font-weight: 600; color: #2c3e50; width: 40%;">
+                    {% if translationService is defined %}{{ translationService.tp('email_notification_created_account.content.account_details.account_number', {}, 'email_notification_created_account') }}{% else %}{{ tp('email_notification_created_account.content.account_details.account_number', {}, 'email_notification_created_account') }}{% endif %}:
+                </td>
+                <td style="padding: 10px 0; color: #000000; font-family: 'Courier New', monospace; font-size: 16px;">
+                    {{ accountNumber }}
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; font-weight: 600; color: #2c3e50;">
+                    {% if translationService is defined %}{{ translationService.tp('email_notification_created_account.content.account_details.iban', {}, 'email_notification_created_account') }}{% else %}{{ tp('email_notification_created_account.content.account_details.iban', {}, 'email_notification_created_account') }}{% endif %}:
+                </td>
+                <td style="padding: 10px 0; color: #000000; font-family: 'Courier New', monospace; font-size: 16px;">
+                    {{ formattedIban }}
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; font-weight: 600; color: #2c3e50;">
+                    {% if translationService is defined %}{{ translationService.tp('email_notification_created_account.content.account_details.country', {}, 'email_notification_created_account') }}{% else %}{{ tp('email_notification_created_account.content.account_details.country', {}, 'email_notification_created_account') }}{% endif %}:
+                </td>
+                <td style="padding: 10px 0; color: #000000;">
+                    {% if translationService is defined %}{{ translationService.tp('email_notification_created_account.countries.' ~ countryCode, {}, 'email_notification_created_account') }}{% else %}{{ tp('email_notification_created_account.countries.' ~ countryCode, {}, 'email_notification_created_account') }}{% endif %}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{% if translationService is defined %}{{ translationService.tp('email_notification_created_account.content.access_info.title', {}, 'email_notification_created_account') }}{% else %}{{ tp('email_notification_created_account.content.access_info.title', {}, 'email_notification_created_account') }}{% endif %}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {% if translationService is defined %}{{ translationService.tp('email_notification_created_account.content.access_info.text', {}, 'email_notification_created_account') }}{% else %}{{ tp('email_notification_created_account.content.access_info.text', {}, 'email_notification_created_account') }}{% endif %}
+        </p>
+    </div>
+
+    <p class="content-text">
+        {% if translationService is defined %}{{ translationService.tp('email_notification_created_account.content.support_info', {}, 'email_notification_created_account') }}{% else %}{{ tp('email_notification_created_account.content.support_info', {}, 'email_notification_created_account') }}{% endif %}
+    </p>
+
+    <p class="content-text" style="margin-bottom: 0;">
+        {% if translationService is defined %}{{ translationService.tp('email_notification_created_account.content.signature', {}, 'email_notification_created_account') }}{% else %}{{ tp('email_notification_created_account.content.signature', {}, 'email_notification_created_account') }}{% endif %}
+    </p>
+{% endblock %}

@@ -1,0 +1,54 @@
+# Traductions françaises pour le module d'assurance bancaire
+banking_insurance:
+  header:
+    title: "Mes Assurances"
+    subtitle: "Gestion de vos contrats d'assurance"
+    last_update: "Dernière mise à jour"
+    new_quote: "Demander un devis"
+
+  statistics:
+    active_contracts: "Contrats actifs"
+    monthly_premium: "Prime mensuelle totale"
+    insurance_types: "Types d'assurance"
+    expiring_contracts: "Contrats à échéance"
+
+  contracts:
+    title: "Mes Contrats d'Assurance"
+    contract_number: "Contrat n°"
+    active_status: "Actif"
+    suspended_status: "Suspendu"
+    expired_status: "Expiré"
+    cancelled_status: "Annulé"
+
+  coverage:
+    monthly_premium: "Prime mensuelle"
+    coverage_amount: "Montant de couverture"
+
+  details:
+    activation_date: "Date d'activation"
+    expiration_date: "Date d'expiration"
+    duration: "Durée"
+    months: "mois"
+    next_premium: "Prochaine échéance"
+
+  actions:
+    manage: "Gérer"
+    certificate: "Attestation"
+    reactivate: "Réactiver"
+    details: "Détails"
+
+  empty_state:
+    no_contracts_title: "Aucun contrat d'assurance"
+    no_contracts_description: "Vous n'avez actuellement aucun contrat d'assurance actif. Découvrez nos offres personnalisées pour protéger ce qui compte le plus pour vous."
+    request_quote: "Demander un devis"
+    learn_more: "En savoir plus"
+
+  pending_quotes:
+    title: "Devis en attente"
+    subtitle: "Vos demandes de devis en cours de traitement"
+    quote_number: "N° Devis"
+    type: "Type"
+    date: "Date"
+    status: "Statut"
+    actions: "Actions"
+    view: "Consulter"

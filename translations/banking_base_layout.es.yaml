@@ -1,0 +1,21 @@
+banking_base_layout:
+  navigation:
+    tabs:
+      accounts: "Cuentas"
+      cards: "Tarjetas" 
+      transfers: "Transferencias"
+      rib_iban: "Cuentas/IBAN"
+      savings: "Ahorro"
+      credits: "Créditos"
+      insurance: "Seguros"
+  
+  user:
+    status: "Cliente Particular"
+    notifications: "Notificaciones"
+    profile_menu: "Mi perfil"
+  
+  profile_menu:
+    my_profile: "Mi perfil"
+    preferences: "Preferencias"
+    security: "Seguridad"
+    logout: "Cerrar sesión"

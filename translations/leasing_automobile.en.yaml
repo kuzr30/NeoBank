@@ -1,0 +1,111 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: leasing_automobile.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+leasing_automobile:
+  page:
+    title: "Automobile Leasing"
+    description: "Drive the car of your dreams with our automobile leasing. Rental with flexible purchase option."
+  
+  hero:
+    class: "credit-detail-hero--leasing"
+    taux: "2.9%"
+    montant: "€80,000"
+    duree: "5 years"
+    title: "Automobile Leasing"
+    subtitle: "Your vehicle on lease with purchase option"
+  
+  section_1:
+    title: "What is automobile leasing?"
+    content:
+      paragraph_1: "Automobile leasing, or Lease with Purchase Option (LPO), allows you to drive a new vehicle by paying only its depreciation during the contract period."
+      paragraph_2: "At maturity, you can either purchase the vehicle for its residual value, return it, or replace it with a more recent model."
+  
+  features:
+    title: "Leasing features"
+    montant:
+      value: "Up to €80,000"
+      detail: "All types of vehicles"
+    duree:
+      value: "From 2 to 5 years"
+      detail: "Flexible contract"
+    taux:
+      value: "From {rate}% APR*"
+      detail: "Advantageous financing"
+    garantie:
+      value: "Vehicle under warranty"
+      detail: "Ownership until option exercised"
+  
+  section_3:
+    title: "Automobile leasing advantages"
+    advantages:
+      vehicule_recent:
+        title: "Recent vehicle"
+        description: "Always under manufacturer's warranty"
+      loyers_reduits:
+        title: "Reduced payments"
+        description: "Lower than a classic auto loan"
+      flexibilite:
+        title: "Flexibility"
+        description: "3 options at contract end"
+      entretien:
+        title: "Maintenance included"
+        description: "Maintenance package available"
+      deductibilite:
+        title: "Deductibility"
+        description: "Tax benefits for professionals"
+  
+  section_4:
+    title: "Contract conditions"
+    contrat:
+      title: "Contract conditions"
+      items:
+        vehicule: "New or recent vehicle (less than 2 years)"
+        kilometrage: "Predefined annual mileage"
+        entretien: "Maintenance at authorized dealer"
+        assurance: "Comprehensive insurance required"
+    locataire:
+      title: "Lessee conditions"
+      items:
+        permis: "Valid driver's license"
+        revenus: "Justified stable income"
+        interdiction: "No banking ban"
+        domicile: "Residence in metropolitan France"
+  
+  section_5:
+    title: "Required documents"
+    personnels:
+      title: "Personal documents"
+      items:
+        permis: "Driver's license"
+        identite: "Identity document"
+        domicile: "Proof of address"
+        rib: "Account RIB"
+    financiers:
+      title: "Financial documents"
+      items:
+        salaires: "Last 3 pay slips"
+        impots: "Tax assessment notice"
+        comptes: "Bank statements"
+        contrat: "Employment contract"
+    vehicule:
+      title: "Vehicle"
+      items:
+        commande: "Dealer's order form"
+        fiche: "Vehicle technical sheet"
+        devis_assurance: "Comprehensive insurance quote"
+        certificat: "Certificate of conformity"
+  
+  legal:
+    details:
+      title: "Important legal information"
+      taeg: "<strong>*APR:</strong> Representative example: for a vehicle of €25,000 on lease over 48 months at 2.9% APR, 48 payments of €315 + purchase option of €10,000, total cost if purchased: €25,120."
+      kilometrage: "<strong>Mileage:</strong> Compliance with contractual mileage, penalties in case of excess."
+      etat: "<strong>Vehicle condition:</strong> Return in good condition, except normal wear."
+      assurance: "<strong>Insurance:</strong> Comprehensive required with theft and fire."
+      resiliation: "<strong>Termination:</strong> Early termination possible under conditions, applicable penalties."
+  
+  cta:
+    title: "Drive your ideal vehicle"
+    subtitle: "Discover the advantages of automobile leasing"

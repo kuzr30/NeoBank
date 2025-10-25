@@ -1,0 +1,20 @@
+email:
+  base:
+    company_name: "{company_name}"
+    tagline: "Uw vertrouwde bankpartner"
+    default_title: "Standaardinhoud"
+    default_text: "Deze sjabloon moet worden uitgebreid met specifieke inhoud."
+    
+  footer:
+    brand: "{company_name}"
+    address: "{company_address}"
+    
+    links:
+      help: "Helpcentrum"
+      terms: "Gebruiksvoorwaarden"
+      privacy: "Privacybeleid"
+    
+    disclaimer:
+      text: "U ontvangt deze e-mail omdat u een account bij {company_name} hebt."
+      unsubscribe_text: "Als u deze e-mails niet meer wilt ontvangen,"
+      unsubscribe_link: "klik hier"

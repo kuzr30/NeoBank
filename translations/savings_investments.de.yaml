@@ -1,0 +1,154 @@
+savings_investments:
+  # Meta tags
+  meta:
+    title: "Intelligente Sparen & Anlagen - %company_name%"
+    description: "Entdecken Sie unsere Spar- und Anlagelösungen, um Ihr Geld intelligent mit %company_name% zu vermehren."
+
+  # Hero Section
+  hero:
+    title: "Intelligente Sparen & Anlagen"
+    subtitle: "Lassen Sie Ihr Geld mit unseren maßgeschneiderten Spar- und Investmentlösungen wachsen, angepasst an alle Ihre finanziellen Ziele."
+    stats:
+      average_rate:
+        value: "4.2%"
+        label: "Durchschnittszins"
+      savers:
+        value: "500K+"
+        label: "Sparer"
+      total_savings:
+        value: "2.8M€"
+        label: "Gesamtersparnisse"
+      products:
+        value: "15+"
+        label: "Produkte"
+    cta: "Unsere Lösungen entdecken"
+    
+  # Phone mockup content
+  phone:
+    header:
+      time: "14:32"
+    balance:
+      label: "Gesamtersparnisse"
+      amount: "45 680€"
+      change: "+2.8% diesen Monat"
+    investments:
+      livret:
+        name: "%company_name% Sparbuch"
+        return: "+3.2%"
+      pea:
+        name: "PEA Aktien"
+        return: "+8.7%"
+      life_insurance:
+        name: "Lebensversicherung"
+        return: "+5.4%"
+
+  # Solutions Section
+  solutions:
+    header:
+      title: "Personalisierte Lösungen"
+      subtitle: "Spar- und Anlageprodukte für jedes Anlegerprofil, vom vorsichtigsten bis zum dynamischsten"
+    secure_savings:
+      title: "Sichere Ersparnisse"
+      description: "Bilden Sie Ihre Notfallersparnisse mit unseren regulierten Sparbüchern und garantierten Festgeldkonten. Risikofreie Lösungen zum Schutz und zur Vermehrung Ihrer Ersparnisse."
+      features:
+        - "Livret A und LDDS zu regulierten Zinssätzen"
+        - "%company_name% Sparbuch bis zu 4.5% brutto"
+        - "Festgelder von 6 Monaten bis 5 Jahren"
+        - "100% garantiertes Kapital"
+        - "Sofortige Verfügbarkeit"
+      cta: "Mehr erfahren"
+    dashboard:
+      title: "Sichere Ersparnisse"
+      date: "August 2025"
+      metrics:
+        total:
+          value: "25 890€"
+          label: "Gesamtersparnisse"
+        rate:
+          value: "3.8%"
+          label: "Durchschnittszins"
+        gains:
+          value: "+156€"
+          label: "Gewinne/Monat"
+
+  # Products Section
+  products:
+    header:
+      title: "Unsere Flaggschiff-Produkte"
+      subtitle: "Eine komplette Palette von Spar- und Anlagewerkzeugen für alle Ihre Projekte"
+    mobile_app:
+      title: "Meine Anlagen"
+      menu_icon: "☰"
+      summary:
+        label: "Gesamtersparnisse"
+        amount: "67 240€"
+        growth: "+12.4% dieses Jahr"
+      products:
+        pea:
+          name: "PEA Aktien"
+          rate: "+15.2%"
+          amount: "28 450€"
+        life_insurance:
+          name: "Lebensversicherung"
+          rate: "+6.8%"
+          amount: "22 890€"
+        livret:
+          name: "%company_name% Sparbuch"
+          rate: "+4.5%"
+          amount: "15 900€"
+    info:
+      title: "Intuitive Mobile App"
+      description: "Verwalten Sie alle Ihre Anlagen von Ihrem Smartphone aus mit unserer mobilen App der neuen Generation. Verfolgen Sie Ihre Performance in Echtzeit und treffen Sie die besten Investitionsentscheidungen."
+      benefits:
+        interface:
+          title: "Intuitive Benutzeroberfläche"
+          description: "Modernes und ergonomisches Design"
+        realtime:
+          title: "Echtzeitdaten"
+          description: "Aktualisierte Kurse und Performance"
+        alerts:
+          title: "Personalisierte Benachrichtigungen"
+          description: "Maßgeschneiderte Mitteilungen"
+        goals:
+          title: "Intelligente Ziele"
+          description: "Automatisierte Planung"
+      cta: "App herunterladen"
+
+  # Tools Section
+  tools:
+    header:
+      title: "Simulationswerkzeuge"
+      subtitle: "Planen Sie Ihre finanzielle Zukunft mit unseren intelligenten Rechnern und erweiterten Simulationswerkzeugen"
+    calculator:
+      title: "Spar-Simulator"
+      subtitle: "Berechnen Sie Ihre zukünftigen Ersparnisse"
+      form:
+        monthly_payment:
+          label: "Monatliche Einzahlung"
+          value: "300"
+        duration:
+          label: "Laufzeit (Jahre)"
+        interest_rate:
+          label: "Jährlicher Zinssatz"
+      result:
+        label: "Aufgebaute Ersparnisse"
+        amount: "89 420€"
+    content:
+      title: "Intelligente Planung"
+      description: "Nutzen Sie unsere Simulationswerkzeuge, um Ihre Spar- und Anlagestrategie zu definieren. Visualisieren Sie die Auswirkungen Ihrer finanziellen Entscheidungen auf lange Sicht."
+      features:
+        - "Monatlicher Spar-Simulator"
+        - "Rentenrechner"
+        - "Steueroptimierung"
+        - "Portfolio-Analyse"
+        - "Personalisierte Prognosen"
+        - "Produktvergleich"
+      cta: "Simulatoren ausprobieren"
+
+  # CTA Section
+  cta:
+    title: "Beginnen Sie heute zu sparen"
+    subtitle: "Schließen Sie sich mehr als 500 000 Sparern an, die uns vertrauen, ihr Vermögen zu vermehren. Eröffnen Sie Ihr Konto in wenigen Minuten."
+    buttons:
+      primary: "Konto eröffnen"
+      secondary: "Mit einem Berater sprechen"

@@ -1,0 +1,149 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'terms_conditions.page_title'|trans([], 'terms_conditions') }} - {{ parent() }}{% endblock %}
+
+{% block body %}
+<div class="legal-page">
+    <div class="legal-page__container">
+        <div class="legal-page__header">
+            <h1 class="legal-page__title">{{ 'terms_conditions.page_title'|trans([], 'terms_conditions') }}</h1>
+            <p class="legal-page__subtitle">{{ 'terms_conditions.page_description'|trans({'%company_name%': companySettings.companyName}, 'terms_conditions') }}</p>
+        </div>
+
+        <div class="legal-page__content">
+            <section class="legal-section">
+                <h2 class="legal-section__title">{{ 'terms_conditions.scope.title'|trans([], 'terms_conditions') }}</h2>
+                <div class="legal-section__content">
+                    <p>{{ 'terms_conditions.scope.content'|trans({'%company_name%': companySettings.companyName}, 'terms_conditions')|raw }}</p>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2 class="legal-section__title">{{ 'terms_conditions.acceptance.title'|trans([], 'terms_conditions') }}</h2>
+                <div class="legal-section__content">
+                    <p>{{ 'terms_conditions.acceptance.content'|trans([], 'terms_conditions')|raw }}</p>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2 class="legal-section__title">{{ 'terms_conditions.services.title'|trans([], 'terms_conditions') }}</h2>
+                <div class="legal-section__content">
+                    <p>{{ 'terms_conditions.services.content'|trans({'%company_name%': companySettings.companyName}, 'terms_conditions')|raw }}</p>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2 class="legal-section__title">{{ 'terms_conditions.obligations.title'|trans([], 'terms_conditions') }}</h2>
+                <div class="legal-section__content">
+                    <p>{{ 'terms_conditions.obligations.content'|trans([], 'terms_conditions')|raw }}</p>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2 class="legal-section__title">{{ 'terms_conditions.liability.title'|trans([], 'terms_conditions') }}</h2>
+                <div class="legal-section__content">
+                    <p>{{ 'terms_conditions.liability.content'|trans({'%company_name%': companySettings.companyName}, 'terms_conditions')|raw }}</p>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2 class="legal-section__title">{{ 'terms_conditions.modification.title'|trans([], 'terms_conditions') }}</h2>
+                <div class="legal-section__content">
+                    <p>{{ 'terms_conditions.modification.content'|trans({'%company_name%': companySettings.companyName}, 'terms_conditions')|raw }}</p>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2 class="legal-section__title">{{ 'terms_conditions.contact.title'|trans([], 'terms_conditions') }}</h2>
+                <div class="legal-section__content">
+                    <p>{{ 'terms_conditions.contact.content'|trans({'%email%': companySettings.email}, 'terms_conditions')|raw }}</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+{% block custom_styles %}
+<style>
+.legal-page {
+    min-height: 100vh;
+    background: #fafbfc;
+    padding: 4rem 0;
+}
+
+.legal-page__container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.legal-page__header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.legal-page__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.legal-page__subtitle {
+    font-size: 1.125rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.legal-page__content {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.legal-section {
+    margin-bottom: 3rem;
+}
+
+.legal-section:last-child {
+    margin-bottom: 0;
+}
+
+.legal-section__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #10b981;
+    padding-bottom: 0.5rem;
+}
+
+.legal-section__content p {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.legal-section__content p:last-child {
+    margin-bottom: 0;
+}
+
+.legal-section__content strong {
+    color: #0f172a;
+}
+
+.legal-section__content ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.legal-section__content li {
+    margin-bottom: 0.5rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+</style>
+{% endblock %}
+{% endblock %}

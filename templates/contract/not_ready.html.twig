@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contrat non disponible{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card border-warning">
+                <div class="card-header bg-warning text-dark">
+                    <h4 class="mb-0">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Contrat non disponible pour signature
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-warning" role="alert">
+                        <h5 class="alert-heading">Signature non autorisée</h5>
+                        <p>{{ message|default('Ce contrat ne peut pas encore être signé.') }}</p>
+                    </div>
+
+                    {% if subscription %}
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Informations sur votre demande :</h6>
+                                <ul class="list-unstyled">
+                                    <li><strong>Référence :</strong> {{ subscription.reference }}</li>
+                                    <li><strong>Type de carte :</strong> {{ subscription.cardType|title }}</li>
+                                    <li><strong>Marque :</strong> {{ subscription.cardBrand|title }}</li>
+                                    <li><strong>Statut actuel :</strong> 
+                                        {% set statusLabels = {
+                                            'pending': 'En attente de traitement',
+                                            'fees_set': 'Frais définis - En cours d\'approbation',
+                                            'approved': 'Approuvée - Contrat prêt à signer',
+                                            'signed': 'Contrat signé - En attente de validation paiement',
+                                            'active': 'Carte active',
+                                            'rejected': 'Demande rejetée'
+                                        } %}
+                                        <span class="badge badge-{% if subscription.status == 'pending' %}warning{% elseif subscription.status == 'fees_set' %}info{% elseif subscription.status == 'approved' %}success{% elseif subscription.status == 'signed' %}primary{% elseif subscription.status == 'active' %}success{% else %}danger{% endif %}">
+                                            {{ statusLabels[subscription.status]|default(subscription.status|title) }}
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Étapes suivantes :</h6>
+                                {% if subscription.status == 'pending' %}
+                                    <ol>
+                                        <li>Notre équipe examine votre demande</li>
+                                        <li>Définition des frais personnalisés</li>
+                                        <li>Approbation de la demande</li>
+                                        <li>Vous pourrez alors signer le contrat</li>
+                                    </ol>
+                                {% elseif subscription.status == 'fees_set' %}
+                                    <ol>
+                                        <li>Notre équipe finalise l'approbation</li>
+                                        <li>Vous recevrez un email pour signer le contrat</li>
+                                        <li>Paiement des frais</li>
+                                        <li>Activation de votre carte</li>
+                                    </ol>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    <div class="mt-4">
+                        <h6>Que faire maintenant ?</h6>
+                        <p>Vous recevrez un email dès que votre demande sera approuvée et que le contrat sera prêt à être signé.</p>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card bg-light">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-clock fa-2x text-muted mb-2"></i>
+                                        <h6>Délai de traitement</h6>
+                                        <p class="small text-muted">1 à 3 jours ouvrés</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card bg-light">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-envelope fa-2x text-muted mb-2"></i>
+                                        <h6>Notification</h6>
+                                        <p class="small text-muted">Email automatique</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-between">
+                        <a href="{{ path('app_banking_dashboard') }}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i>
+                            Retour au tableau de bord
+                        </a>
+                        
+                        <a href="{{ path('app_banking_card_index') }}" class="btn btn-primary">
+                            <i class="fas fa-credit-card"></i>
+                            Mes cartes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

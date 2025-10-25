@@ -1,0 +1,12 @@
+profile_controller:
+  flash:
+    password_changed: "Ihr Passwort wurde erfolgreich geändert."
+    profile_updated: "Ihr Profil wurde erfolgreich aktualisiert."
+    email_change_initiated: "Eine Bestätigungs-E-Mail wurde an {email} gesendet. Bitte klicken Sie auf den Link, um Ihre neue E-Mail-Adresse zu bestätigen."
+    
+  security_activities:
+    login_success: "Erfolgreiche Anmeldung"
+    login_failed: "Fehlgeschlagener Anmeldeversuch"
+    password_changed: "Passwort geändert"
+    profile_updated: "Profil aktualisiert"
+    account_locked: "Konto gesperrt"

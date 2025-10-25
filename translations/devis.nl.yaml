@@ -1,0 +1,56 @@
+devis_confirmation:
+  title: "Aanvraag succesvol verzonden!"
+  description: "Uw offerte-aanvraag is doorgestuurd naar ons team. U ontvangt zo spoedig mogelijk een reactie."
+  reference_number: "Referentienummer"
+  summary_title: "Samenvatting van uw aanvraag"
+  summary:
+    insurance_type: "Type verzekering"
+    full_name: "Volledige naam"
+    email: "E-mail"
+    phone: "Telefoon"
+    contact_preference: "Contactvoorkeur"
+    request_date: "Aanvraagdatum"
+  next_steps_title: "Volgende stappen"
+  next_steps:
+    step1: "Ons team analyseert uw aanvraag binnen 24 uur"
+    step2: "U ontvangt een gepersonaliseerde offerte per e-mail"
+    step3: "Een adviseur neemt contact met u op volgens uw voorkeur"
+  other_insurances: "Andere verzekeringen"
+  back_to_home: "Terug naar home"
+
+devis_form:
+  personal_info_title: "Uw persoonlijke gegevens"
+  insurance_details_title: "Details van uw verzekering"
+  additional_info_title: "Aanvullende informatie"
+  additional_info_help: "Beschrijf uw specifieke behoeften of informatie die ons kan helpen uw offerte te personaliseren"
+  why_choose_title: "Waarom kiezen voor onze %type% verzekering?"
+  advantages:
+    optimal_coverage:
+      title: "Optimale dekking"
+      description: "Bescherming aangepast aan uw specifieke behoeften met volledige garanties."
+    competitive_rates:
+      title: "Concurrerende tarieven"
+      description: "De beste prijzen op de markt dankzij onze bevoorrechte partnerschappen."
+    customer_service:
+      title: "24/7 klantenservice"
+      description: "Een toegewijd team beschikbaar om u op elk moment te begeleiden."
+    fast_processing:
+      title: "Snelle behandeling"
+      description: "Vereenvoudigde procedures voor een snelle behandeling van uw dossiers."
+  notes:
+    free_quote: "Gratis offerte zonder verplichting"
+    data_protection: "Uw gegevens zijn beschermd en vertrouwelijk"
+    response_time: "Reactie binnen 24 werkuren"
+  
+  validation:
+    lastname_required: "Achternaam is verplicht"
+    lastname_max: "Achternaam mag niet meer dan {{ limit }} karakters bevatten"
+    firstname_required: "Voornaam is verplicht"
+    firstname_max: "Voornaam mag niet meer dan {{ limit }} karakters bevatten"
+    email_required: "E-mail is verplicht"
+    email_invalid: "Voer een geldig e-mailadres in"
+    phone_required: "Telefoonnummer is verplicht"
+    phone_invalid: "Voer een geldig telefoonnummer in"
+    insurance_type_required: "Selecteer een verzekeringstype"
+    contact_preference_invalid: "Kies een geldige contactvoorkeur"
+    comments_max: "Opmerkingen mogen niet meer dan {{ limit }} karakters bevatten"

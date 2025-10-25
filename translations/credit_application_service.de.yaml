@@ -1,0 +1,12 @@
+credit_application_service:
+  validation_errors:
+    age_minor: "Der Kreditnehmer muss volljährig sein"
+    age_maximum: "Das Höchstalter für einen Kredit beträgt 75 Jahre"
+    debt_ratio_exceeded: "Die Verschuldungsquote darf 33% nicht überschreiten ({debtRatio}% berechnet)"
+    minimum_income: "Das erforderliche Mindesteinkommen beträgt 1000€ pro Monat"
+    employment_required: "Eine stabile Anstellung ist erforderlich, um einen Kredit zu erhalten"
+    
+  eligibility:
+    eligible: "Berechtigt für Kredit"
+    not_eligible: "Nicht berechtigt für Kredit"
+    debt_ratio_calculated: "Berechnete Verschuldungsquote: {ratio}%"

@@ -1,0 +1,105 @@
+credit_professionnel:
+  page:
+    title: "Crédito Profesional"
+    description: "Desarrolle su actividad con nuestro crédito profesional. Soluciones adaptadas a las necesidades de empresas y profesionales."
+
+  hero:
+    title: "Crédito Profesional"
+    subtitle: "Desarrolle su actividad"
+    values:
+      taux: "{rate}%"
+      montant: "500 000€"
+      duree: "15 años"
+
+  section_1:
+    title: "¿Qué es un crédito profesional?"
+    content:
+      paragraph_1: "El crédito profesional le acompaña en el desarrollo de su actividad: financiamiento de equipos, vehículos utilitarios, obras de locales, necesidad de capital de trabajo o adquisición de participaciones sociales."
+      paragraph_2: "Solución flexible adaptada a profesionales, artesanos, comerciantes y PYMES, con condiciones preferenciales para apoyar su crecimiento."
+
+  features:
+    montant: "Hasta 500 000€"
+    montant_detail: "Según el proyecto profesional"
+    duree: "De 2 a 15 años"
+    duree_detail: "Duración adaptada a la inversión"
+    taux: "Desde {rate}% TAE*"
+    taux_detail: "Tasa preferencial profesional"
+    garantie: "Hipoteca o prenda"
+    garantie_detail: "Según el monto"
+
+  advantages:
+    taux_preferentiel:
+      title: "Tipo preferencial:"
+      text: "Condiciones ventajosas para profesionales"
+    accompagnement:
+      title: "Acompañamiento:"
+      text: "Asesor dedicado a profesionales"
+    souplesse:
+      title: "Flexibilidad:"
+      text: "Modulación de cuotas según la actividad"
+    deblocage_rapide:
+      title: "Desbloqueo rápido:"
+      text: "Fondos disponibles en 15 días"
+    deductibilite:
+      title: "Deducibilidad:"
+      text: "Intereses deducibles fiscalmente"
+
+  requirements:
+    conditions_activite:
+      title: "Condiciones de actividad"
+      items:
+        creation: "Empresa creada hace más de 2 años"
+        declaration: "Actividad declarada y en regla"
+        chiffre_affaires: "Facturación regular"
+        difficultes: "Sin dificultades financieras"
+    criteres_financiers:
+      title: "Criterios financieros"
+      items:
+        capacite: "Capacidad de reembolso demostrada"
+        fonds_propres: "Fondos propios suficientes"
+        apport: "Aporte personal mínimo 20%"
+        garanties: "Garantías a proponer"
+
+  documents:
+    title: "Documentos necesarios"
+    entreprise:
+      title: "Documentos de la empresa"
+      kbis: "Kbis de menos de 3 meses"
+      statuts: "Estatutos de la sociedad"
+      bilans: "3 últimos balances contables"
+      liasse_fiscale: "Declaración fiscal completa"
+      situation_banque: "Extractos bancarios de los 6 últimos meses"
+    dirigeant:
+      title: "Documentos del dirigente"
+      identite: "Documento de identidad del dirigente"
+      revenus: "Justificantes de ingresos"
+      patrimoine: "Declaración de patrimonio"
+      releves: "Extractos de cuentas personales"
+    projet:
+      title: "Proyecto de inversión"
+      plan_financement: "Plan de financiación detallado"
+      devis: "Presupuestos de proveedores"
+      business_plan: "Plan de negocio a 3 años"
+      garanties: "Garantías propuestas"
+
+  legal:
+    title: "Información legal importante"
+    taeg:
+      title: "TAE:"
+      text: "Ejemplo representativo: para un crédito profesional de 100.000€ en 10 años al TAE del 3,8%, reembolsa 120 mensualidades de 1.017€, es decir un importe total de 122.040€ (coste del crédito: 22.040€)."
+    garanties:
+      title: "Garantías:"
+      text: "Hipoteca, prenda o aval según el importe y la duración."
+    assurance:
+      title: "Seguro:"
+      text: "Seguro de persona clave recomendado para asegurar el préstamo."
+    fiscalite:
+      title: "Fiscalidad:"
+      text: "Intereses de préstamo deducibles del resultado imponible."
+    remboursement:
+      title: "Reembolso:"
+      text: "Posibilidad de modulación según la estacionalidad de la actividad."
+
+  cta:
+    title: "Dinamice su empresa"
+    subtitle: "Financie sus proyectos profesionales con nuestro crédito dedicado"

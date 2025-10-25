@@ -1,0 +1,14 @@
+banking_card_opposition_controller:
+  flash:
+    access_denied_card: "Zugriff auf diese Karte verweigert."
+    only_active_cards: "Nur aktive Karten können gesperrt werden."
+    active_opposition_exists: "Eine Sperrung für diese Karte wird bereits bearbeitet."
+    opposition_success: "Ihre Kartensperrung wurde erfolgreich registriert. Ihre Karte wurde zu Ihrer Sicherheit sofort gesperrt."
+    opposition_error: "Bei der Registrierung Ihrer Kartensperrung ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie unseren Kundenservice."
+    access_denied_opposition: "Zugriff auf diese Sperrung verweigert."
+    card_not_found: "Karte nicht gefunden oder Zugriff verweigert."
+    select_card: "Bitte wählen Sie eine Karte aus."
+    emergency_opposition_success: "SPERRUNG REGISTRIERT - Ihre Karte wurde sofort gesperrt. Referenz: {reference}"
+    emergency_opposition_error: "Fehler beim Sperren. Kontaktieren Sie sofort den Kundenservice unter 02/XXX.XX.XX"
+  emergency:
+    opposition_reason: "Notfallsperrung über Schnellzugriff"

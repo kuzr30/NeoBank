@@ -1,0 +1,46 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_credit_application_confirmation.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+email_credit_application_confirmation:
+  title: "Confirmation of your credit application"
+  
+  content:
+    page_title: "Credit application confirmed"
+    subtitle: "Your application has been received and is being processed"
+    
+    greeting: "Hello %customerName%,"
+    introduction: "We have received your credit application and thank you for trusting us. Your file is now being reviewed by our specialized advisors."
+    
+    summary:
+      title: "Summary of your application"
+      request_number: "Application number:"
+      amount_requested: "Amount requested:"
+      request_date: "Application date:"
+      status: "Status:"
+      status_value: "Under review"
+    
+    next_steps:
+      title: "Next steps"
+      step1: "Review of your file by our advisors (24-48h)"
+      step2: "Verification of information and documents"
+      step3: "Financing decision within 3-5 business days"
+      step4: "Notification by email and/or phone"
+    
+    track_button: "View my application"
+    
+    help_section:
+      title: "Need help?"
+      intro: "Our team of advisors is at your disposal for any questions:"
+      phone: "<strong>Phone:</strong> %company_phone% (Mon-Fri 9am-6pm)"
+      email: "<strong>Email:</strong> credit@sedef.fr"
+      chat: "<strong>Online chat:</strong> Available on our website"
+    
+    important_note: "<strong>Important:</strong> Keep this email as proof of your application. You can track the progress of your file at any time by clicking on the link above."
+    disclaimer: "This email was sent automatically, please do not reply directly."
+
+  logs:
+    credit_application_confirmed: "Credit application confirmation sent to %email%"
+    credit_application_failed: "Error sending credit confirmation to %email%"
+    credit_application_submitted: "Credit application #%applicationId% submitted by %customerName%"

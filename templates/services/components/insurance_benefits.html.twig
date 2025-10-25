@@ -1,0 +1,102 @@
+<section class="insurance-benefits">
+    <h2 class="insurance-benefits__title">{{ tp('insurance.benefits.title', [], 'insurance') }}</h2>
+    <div class="insurance-benefits__grid">
+        <div class="insurance-benefit">
+            <div class="insurance-benefit__icon insurance-benefit__icon--tarif">
+                <!-- Icône pièce/économie -->
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M8 12a4 4 0 108 0 4 4 0 00-8 0z" stroke-width="2"/><path d="M12 8v4l2 2" stroke-width="2"/></svg>
+            </div>
+            <h3 class="insurance-benefit__subtitle">{{ tp('insurance.benefits.competitive_rates.title', [], 'insurance') }}</h3>
+            <p class="insurance-benefit__desc">{{ tp('insurance.benefits.competitive_rates.description', [], 'insurance') }}</p>
+        </div>
+        <div class="insurance-benefit">
+            <div class="insurance-benefit__icon insurance-benefit__icon--support">
+                <!-- Icône casque support -->
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 15v-3a8 8 0 0116 0v3" stroke-width="2"/><rect x="2" y="15" width="4" height="6" rx="2" stroke-width="2"/><rect x="18" y="15" width="4" height="6" rx="2" stroke-width="2"/><path d="M8 21h8" stroke-width="2"/></svg>
+            </div>
+            <h3 class="insurance-benefit__subtitle">{{ tp('insurance.benefits.support_24_7.title', [], 'insurance') }}</h3>
+            <p class="insurance-benefit__desc">{{ tp('insurance.benefits.support_24_7.description', [], 'insurance') }}</p>
+        </div>
+        <div class="insurance-benefit">
+            <div class="insurance-benefit__icon insurance-benefit__icon--gestion">
+                <!-- Icône ordinateur/gestion -->
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" stroke-width="2"/><path d="M8 21h8M12 17v4" stroke-width="2"/></svg>
+            </div>
+            <h3 class="insurance-benefit__subtitle">{{ tp('insurance.benefits.online_management.title', [], 'insurance') }}</h3>
+            <p class="insurance-benefit__desc">{{ tp('insurance.benefits.online_management.description', [], 'insurance') }}</p>
+        </div>
+        <div class="insurance-benefit">
+            <div class="insurance-benefit__icon insurance-benefit__icon--surmesure">
+                <!-- Icône puzzle/sur-mesure -->
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 9V7a2 2 0 012-2h2V3a2 2 0 114 0v2h2a2 2 0 012 2v2h2a2 2 0 010 4h-2v2a2 2 0 01-2 2h-2v2a2 2 0 11-4 0v-2H8a2 2 0 01-2-2v-2H4a2 2 0 010-4h2z" stroke-width="2"/></svg>
+            </div>
+            <h3 class="insurance-benefit__subtitle">{{ tp('insurance.benefits.custom_offers.title', [], 'insurance') }}</h3>
+            <p class="insurance-benefit__desc">{{ tp('insurance.benefits.custom_offers.description', [], 'insurance') }}</p>
+        </div>
+    </div>
+    <style>
+        .insurance-benefits {
+            padding: 3rem 0 2rem 0;
+            background: var(--color-bg-alt, #f8fafc);
+        }
+        .insurance-benefits__title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--color-primary, #1e293b);
+        }
+        .insurance-benefits__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+        .insurance-benefit {
+            background: #fff;
+            border-radius: 1.25rem;
+            box-shadow: 0 4px 20px rgba(30,41,59,0.10);
+            padding: 3rem 2.2rem 2.2rem 2.2rem;
+            text-align: center;
+            transition: box-shadow 0.2s;
+            min-height: 340px;
+        }
+        .insurance-benefit:hover {
+            box-shadow: 0 8px 32px rgba(30,41,59,0.16);
+        }
+        .insurance-benefit__icon {
+            width: 5rem;
+            height: 5rem;
+            margin: 0 auto 1.5rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--color-primary, #6366f1);
+            color: #fff;
+        }
+        .insurance-benefit__icon svg {
+            width: 2.8rem;
+            height: 2.8rem;
+        }
+        .insurance-benefit__subtitle {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 0.7rem;
+            color: var(--color-primary, #1e293b);
+        }
+        .insurance-benefit__desc {
+            font-size: 1.12rem;
+            color: var(--color-text, #475569);
+        }
+        @media (max-width: 600px) {
+            .insurance-benefits__grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            .insurance-benefits {
+                padding: 2rem 0 1rem 0;
+            }
+        }
+    </style>
+</section>

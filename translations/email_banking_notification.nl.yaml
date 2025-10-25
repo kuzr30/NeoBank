@@ -1,0 +1,64 @@
+email_banking_notification:
+  title:
+    transaction: "Nieuwe transactie"
+    security: "Beveiligingsalert"
+    statement: "Maandelijks overzicht beschikbaar"
+    credit_approval: "Krediet goedgekeurd"
+    credit_rejection: "Antwoord op uw kredietaanvraag"
+    default: "%company_name% Melding"
+
+  content:
+    greeting: "Hallo %firstName%,"
+    
+    transaction:
+      message: "Er is een nieuwe transactie uitgevoerd op uw rekening."
+      details_title: "Transactiedetails"
+      amount: "Bedrag:"
+      date: "Datum:"
+      description: "Beschrijving:"
+      merchant: "Handelaar:"
+    
+    security:
+      title: "Verdachte activiteit gedetecteerd"
+      default_message: "Er is ongebruikelijke activiteit gedetecteerd op uw rekening."
+      default_details: "Als deze activiteit u verdacht voorkomt of als u deze actie niet heeft ondernomen, beveilig dan onmiddellijk uw rekening."
+    
+    statement:
+      message: "Uw maandelijks overzicht voor de periode %period% is nu beschikbaar."
+      summary_title: "Samenvatting van de maand"
+      transactions_count: "%count% transacties uitgevoerd"
+      total_spent: "Totaal uitgegeven: %amount%"
+      total_received: "Totaal ontvangen: %amount%"
+    
+    credit_approval:
+      title: "Gefeliciteerd!"
+      message: "Uw kredietaanvraag is goedgekeurd!"
+      details_title: "Kredietdetails"
+      amount_granted: "Toegekend bedrag:"
+      interest_rate: "Rentepercentage:"
+      duration: "Looptijd:"
+    
+    credit_rejection:
+      title: "Antwoord op uw aanvraag"
+      message: "Na bestudering van uw dossier kunnen wij op dit moment geen gevolg geven aan uw kredietaanvraag."
+      default_reason: "Deze beslissing is gebaseerd op onze analyse van uw huidige financiële situatie."
+      advice_title: "Onze adviezen"
+      advice:
+        - "Verbeter uw kredietgeschiedenis"
+        - "Verminder uw bestaande schulden"
+        - "Verhoog uw inkomsten"
+        - "U kunt over 6 maanden opnieuw een aanvraag indienen"
+    
+    default:
+      message: "We hebben belangrijke informatie voor u."
+    
+    dashboard_button: "Toegang tot mijn account"
+    signature: "Met vriendelijke groet,<br><strong>Het %company_name% team</strong>"
+
+  logs:
+    banking_notification_sent: "Bankmelding succesvol verzonden naar %email%"
+    banking_notification_failed: "Fout bij het verzenden van bankmelding naar %email%"
+    transaction_notification_sent: "Transactiemelding verzonden naar %email%"
+    security_alert_sent: "Beveiligingsalert verzonden naar %email%"
+    statement_notification_sent: "Overzichtmelding verzonden naar %email%"
+    credit_notification_sent: "Kredietmelding verzonden naar %email%"

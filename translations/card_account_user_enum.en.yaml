@@ -1,0 +1,32 @@
+# ENGLISH TRANSLATION - Translated from French
+# Bank card user account enumeration translations
+# Domain: card_account_user_enum
+# Language: English (en)
+
+card_account_user_enum:
+  # Card status labels
+  status:
+    active: "Active"
+    inactive: "Inactive"
+    blocked: "Blocked"
+    expired: "Expired"
+    pending: "Pending"
+    cancelled: "Cancelled"
+    
+  # Card types
+  types:
+    debit: "Debit Card"
+    credit: "Credit Card"
+    prepaid: "Prepaid Card"
+    
+  # Card brands
+  brands:
+    visa: "Visa"
+    mastercard: "Mastercard"
+    
+  # Card conditions
+  conditions:
+    classic: "Classic"
+    gold: "Gold"
+    platinum: "Platinum"
+

@@ -1,0 +1,47 @@
+email_contract_ready:
+  title: "Su contrato de crédito está listo - Firma requerida"
+  content:
+    page_title: "Su contrato personalizado está listo"
+    greeting: "Hola,"
+    contract_finalized:
+      title: "Contrato finalizado por nuestros expertos"
+      description: "¡Excelente noticia! Su contrato de crédito ha sido finalizado por nuestro equipo jurídico y ya está listo para la firma. Nuestros asesores han preparado su expediente con cuidado."
+    contract_details:
+      title: "Detalles del contrato"
+      contract_number: "Número de contrato: {contractNumber}"
+      document_info: "Documento preparado por nuestros especialistas jurídicos en formato PDF seguro"
+    signature_process:
+      title: "Proceso de firma"
+      step_1:
+        title: "1. Descarga"
+        description: "Recuperar el contrato en el archivo adjunto de este correo"
+      step_2:
+        title: "2. Lectura minuciosa"
+        description: "Estudiar atentamente todas las cláusulas y condiciones contractuales"
+      step_3:
+        title: "3. Firma completa"
+        description: "Firmar la última página y rubricar cada página del documento"
+      step_4:
+        title: "4. Devolución segura"
+        description: "Devolvernos el contrato por correo electrónico, correo postal o depósito en agencia"
+    return_methods:
+      title: "Modos de devolución del contrato firmado"
+      email_secure: "Correo electrónico seguro"
+      email_description: "Escaneo o foto de calidad profesional"
+      postal_mail: "Correo postal"
+      postal_description: "Envío certificado a nuestros servicios"
+      agency_deposit: "Depósito en agencia"
+      agency_description: "Entrega directa en nuestras oficinas"
+    express_processing:
+      title: "Procesamiento express"
+      processing_time: "Plazo de procesamiento: 24-48h hábiles"
+      processing_description: "Desde la recepción de su contrato firmado, nuestro equipo procederá a la validación final y nuestro servicio contable efectuará la transferencia de fondos directamente a su cuenta bancaria."
+    support_text: "Para cualquier pregunta relacionada con su contrato o el proceso de firma, nuestros asesores especializados permanecen a su disposición."
+    footer: "%company_name% - Departamento Créditos<br>Notificación de contrato listo para firmar"
+  
+  # Mensajes de log para el MessageHandler
+  logs:
+    sending: "Enviando notificación de contrato listo"
+    success: "Notificación de contrato listo enviada con éxito"
+    error: "Error al enviar notificación de contrato listo"
+    send_failed: "Fallo en el envío de notificación de contrato listo"

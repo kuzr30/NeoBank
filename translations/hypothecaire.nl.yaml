@@ -1,0 +1,90 @@
+hypothecaire:
+  page_title: "Hypothecair Krediet"
+  page_description: "Financier uw grote projecten met ons hypothecaire krediet. Belangrijke bedragen gegarandeerd door uw onroerend goed."
+  
+  hero:
+    title: "Hypothecair Krediet"
+    subtitle: "Financier uw grote projecten met ons hypothecaire krediet. Belangrijke bedragen gegarandeerd door uw onroerend goed."
+    rate_value: "3,1%"
+    amount_value: "€500.000"
+    duration_value: "25 jaar"
+  
+  section_1:
+    title: "Wat is een hypothecair krediet?"
+    paragraph_1: "Het hypothecaire krediet is een lening gegarandeerd door een hypotheek op een onroerend goed. Het maakt het mogelijk om belangrijke bedragen te financieren voor uw grote projecten: werken, investering, krediethergroepering of liquiditeitsbehoeften."
+    paragraph_2: "Dankzij deze onroerende garantie geniet u van preferentiële voorwaarden en uitgebreide terugbetalingsduren, aangepast aan hoge bedragen."
+  
+  features:
+    amount: "Tot €500.000"
+    amount_detail: "Volgens de waarde van het goed"
+    duration: "Van 5 tot 25 jaar"
+    duration_detail: "Uitgebreide duren"
+    rate: "Vanaf {rate}% JTKS*"
+    rate_detail: "Gegarandeerd preferentieel tarief"
+    guarantee: "Hypotheek"
+    guarantee_detail: "Op onroerend goed"
+  
+  advantages:
+    advantage_1: "<strong>Hoge bedragen:</strong> Tot 70% van de waarde van het goed als garantie"
+    advantage_2: "<strong>Voordelige tarieven:</strong> Preferentiële voorwaarden dankzij de hypotheek"
+    advantage_3: "<strong>Lange duren:</strong> Tot 25 jaar voor verminderde maandelijkse betalingen"
+    advantage_4: "<strong>Vrij gebruik:</strong> Geen rechtvaardiging van het gebruik van fondsen vereist"
+    advantage_5: "<strong>Fiscale aftrek:</strong> Aftrekbare rente volgens uw situatie"
+  
+  requirements:
+    borrower:
+      title: "Leningsvoorwaarden"
+      item_1: "Eigenaar zijn van het gehypothekeerde goed"
+      item_2: "Regelmatige en voldoende inkomsten"
+      item_3: "Beschikbare schuldcapaciteit"
+      item_4: "Maximumleeftijd 70 jaar aan het einde van de lening"
+    property:
+      title: "Goedvoorwaarden"
+      item_1: "Onroerend goed vrij van hypotheek"
+      item_2: "Minimumwaarde €150.000"
+      item_3: "Verplichte onroerende expertise"
+      item_4: "Woningverzekering vereist"
+  
+  documents:
+    personal:
+      title: "Persoonlijke documenten"
+      item_1: "Identiteitspapieren van mede-leners"
+      item_2: "Woonplaatsbewijzen"
+      item_3: "3 laatste loonstroken"
+      item_4: "2 laatste belastingaangiftes"
+    property:
+      title: "Onroerende documenten"
+      item_1: "Eigendomstitel of notariële akte"
+      item_2: "Stedenbouwkundig certificaat"
+      item_3: "Recente hypothecaire staat"
+      item_4: "Onroerende voorheffing laatste jaar"
+    financial:
+      title: "Financiële documenten"
+      item_1: "3 laatste rekeningafschriften"
+      item_2: "Afbetalingstabel lopende kredieten"
+      item_3: "Vermogensattesten"
+      item_4: "Bewijsstukken huurinkomsten"
+  
+  legal:
+    title: "Belangrijke juridische informatie"
+    taeg: "<strong>*JTKS:</strong> Representatief voorbeeld: voor een hypothecair krediet van €100.000 over 15 jaar tegen een JTKS van 3,1%, betaalt u 180 maandelijkse termijnen van €694, dus een totaalbedrag van €124.920 (kostprijs van het krediet: €24.920)."
+    mortgage: "<strong>Hypotheek:</strong> Inschrijving van een conventionele hypotheek op het onroerend goed."
+    fees: "<strong>Kosten:</strong> Notariskosten en hypotheekinschrijving voor uw rekening."
+    expertise: "<strong>Expertise:</strong> Verplichte onroerende waardering door erkende expert."
+    discharge: "<strong>Opheffing:</strong> Automatische doorhaling van de hypotheek na terugbetaling."
+  
+  cta:
+    title: "Waardeer uw vermogen"
+    subtitle: "Verkrijg de fondsen die u nodig heeft dankzij uw onroerend goed"
+  
+  sidebar:
+    evaluation_title: "Onroerende waardering"
+    step_1:
+      title: "Expertise"
+      time: "5 dagen"
+    step_2:
+      title: "Dossierstudie"
+      time: "15 dagen"
+    step_3:
+      title: "Notaris ondertekening"
+      time: "10 dagen"

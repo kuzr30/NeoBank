@@ -1,0 +1,6 @@
+banking_services:
+  # Meta tags
+  meta:
+    mobile_app:
+      title: "%company_name% Mobiele App"
+      description: "Ontdek onze %company_name% mobiele app: accountbeheer, overmakingen, en nog veel meer vanaf uw smartphone."

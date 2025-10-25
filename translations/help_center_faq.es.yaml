@@ -1,0 +1,108 @@
+help_center_faq:
+  page:
+    title: "Preguntas Frecuentes - Centro de Ayuda %company_name%"
+    
+  hero:
+    title: "Preguntas Frecuentes"
+    subtitle: "Encuentre rápidamente las respuestas a las preguntas más habituales"
+    search:
+      placeholder: "Buscar en las FAQ..."
+      
+  sections:
+    main_title: "Categorías de Preguntas"
+    
+    banking:
+      title: "Banco y Cuentas"
+      questions:
+        account_creation:
+          question: "¿Cómo abrir una cuenta en %company_name%?"
+          answer: "Puede abrir una cuenta online en pocos minutos. Solo necesita proporcionar un documento de identidad válido y un justificante de domicilio."
+        account_types:
+          question: "¿Qué tipos de cuentas ofrecen?"
+          answer: "Ofrecemos cuentas corrientes, cuentas de ahorro, cuentas profesionales y cuentas jóvenes con ventajas específicas."
+        fees:
+          question: "¿Cuáles son sus tarifas bancarias?"
+          answer: "Nuestras tarifas son transparentes y competitivas. Consulte nuestra tabla de tarifas detallada en nuestra web o contacte con un asesor."
+        mobile_app:
+          question: "¿Cómo descargar la aplicación móvil?"
+          answer: "La aplicación %company_name% está disponible gratuitamente en App Store y Google Play. Busque '%company_name%' y descargue la aplicación oficial."
+          
+    transfers:
+      title: "Transferencias y Pagos"
+      questions:
+        domestic_transfer:
+          question: "¿Cómo realizar una transferencia nacional?"
+          answer: "Conéctese a su área de cliente o use la aplicación móvil. Seleccione 'Transferencias' y siga los pasos guiados."
+        international_transfer:
+          question: "¿Puedo hacer transferencias internacionales?"
+          answer: "Sí, ofrecemos transferencias SEPA e internacionales con tarifas preferenciales para nuestros clientes premium."
+        transfer_limits:
+          question: "¿Cuáles son los límites de transferencia?"
+          answer: "Los límites varían según su tipo de cuenta. Por defecto: 3000€/día para transferencias online, personalizables según sus necesidades."
+        payment_cards:
+          question: "¿Cómo solicitar una nueva tarjeta?"
+          answer: "Diríjase a su área de cliente, sección 'Mis tarjetas', y haga clic en 'Solicitar una tarjeta'. La entrega toma 5-7 días laborables."
+          
+    security:
+      title: "Seguridad y Autenticación"
+      questions:
+        two_factor:
+          question: "¿Cómo activar la autenticación de dos factores?"
+          answer: "En sus parámetros de seguridad, active la opción '2FA'. Puede usar una aplicación de autenticación o SMS."
+        password_reset:
+          question: "He olvidado mi contraseña, ¿qué hacer?"
+          answer: "Haga clic en 'Contraseña olvidada' en la página de conexión. Recibirá un email para reinicializar su contraseña."
+        account_blocked:
+          question: "Mi cuenta está bloqueada, ¿cómo desbloquearla?"
+          answer: "Contacte inmediatamente nuestro servicio de atención al cliente al Teléfono o vía el chat online para desbloquear su cuenta rápidamente."
+        fraud_prevention:
+          question: "¿Cómo se protegen contra el fraude?"
+          answer: "Utilizamos sistemas de detección avanzados, cifrado SSL, y vigilancia 24/7 para proteger sus transacciones."
+          
+    credits:
+      title: "Créditos y Financiación"
+      questions:
+        credit_application:
+          question: "¿Cómo hacer una solicitud de crédito?"
+          answer: "Use nuestro simulador online para estimar su capacidad de préstamo, luego envíe su solicitud con los documentos requeridos."
+        credit_types:
+          question: "¿Qué tipos de créditos ofrecen?"
+          answer: "Crédito personal, crédito auto, crédito inmobiliario, crédito obras, y soluciones de financiación profesional."
+        approval_time:
+          question: "¿Cuánto tiempo para una respuesta de crédito?"
+          answer: "Respuesta de principio en 48h para créditos personales, 7-15 días para inmobiliario según la complejidad del expediente."
+        early_repayment:
+          question: "¿Puedo devolver mi crédito por anticipado?"
+          answer: "Sí, la devolución anticipada es posible con condiciones preferenciales detalladas en su contrato de crédito."
+          
+    technical:
+      title: "Soporte Técnico"
+      questions:
+        app_issues:
+          question: "La aplicación no funciona, ¿qué hacer?"
+          answer: "Verifique su conexión a internet, reinicie la app, o actualícela. Si el problema persiste, contacte con el soporte."
+        browser_compatibility:
+          question: "¿Qué navegadores son compatibles?"
+          answer: "Chrome, Firefox, Safari, Edge en sus versiones recientes. Evite Internet Explorer para una experiencia óptima."
+        data_security:
+          question: "¿Están mis datos seguros?"
+          answer: "Absolutamente. Respetamos el RGPD, ciframos todos los datos, y nunca compartimos sus informaciones personales."
+        maintenance:
+          question: "¿Cuándo tienen lugar los mantenimientos?"
+          answer: "Los mantenimientos programados tienen lugar generalmente el domingo entre las 2h y 6h de la mañana, con notificación previa."
+          
+    contact:
+      title: "Contacto y Agencias"
+      questions:
+        customer_service:
+          question: "¿Cómo contactar el servicio de atención al cliente?"
+          answer: "Teléfono: Teléfono (7d/7, 8h-20h), Chat online en la web, Email: Email"
+        branch_appointment:
+          question: "¿Cómo pedir cita en agencia?"
+          answer: "Reserve online vía su área de cliente, por teléfono, o directamente en agencia según sus disponibilidades."
+        complaint:
+          question: "¿Cómo presentar una reclamación?"
+          answer: "Formulario de reclamación en su área de cliente, por correo, o con su asesor habitual."
+        opening_hours:
+          question: "¿Cuáles son los horarios de apertura?"
+          answer: "Lun-Vie: 9h-17h, Sáb: 9h-12h. Horarios ampliados para ciertas agencias. Verifique los horarios específicos en nuestra web."

@@ -1,0 +1,120 @@
+# KYC abgelehnt E-Mail
+kyc_rejected:
+  title: "Identitätsprüfung - Aktion erforderlich"
+  greeting: "Hallo %name%,"
+  intro: "Wir haben die Dokumente überprüft, die Sie für Ihre Identitätsprüfung (KYC) eingereicht haben. Leider können wir Ihr Konto aus folgenden Gründen nicht validieren:"
+  reasons_title: "Gründe für die Ablehnung:"
+  action_title: "Aktion erforderlich"
+  action_required: "Um die Eröffnung Ihres Kontos abzuschließen, melden Sie sich bitte an und reichen Sie die erforderlichen Dokumente unter Berücksichtigung der obigen Anmerkungen erneut ein."
+  custom_message_title: "WICHTIG:"
+  login_button: "Mein Konto anmelden"
+  closing: "Wir stehen Ihnen für Fragen zur Verfügung."
+  signature: "Mit freundlichen Grüßen,<br>Das Team"
+
+incomplete_account:
+  title: "Vervollständigen Sie Ihr Profil"
+  greeting: "Hallo %name%,"
+  intro: "Wir haben festgestellt, dass Ihr Profil noch nicht vollständig ist. Um alle unsere Bankdienstleistungen vollständig zu nutzen, laden wir Sie ein, die fehlenden Informationen zu ergänzen."
+  reasons_title: "Zu korrigierende Punkte:"
+  warning_title: "Achtung"
+  warning: "Ein vollständiges Profil ermöglicht Ihnen den Zugriff auf alle unsere Dienste und gewährleistet die Sicherheit Ihres Kontos."
+  action_title: "Aktion erforderlich"
+  action_required: "Bitte melden Sie sich an, um Ihr Profil zu vervollständigen."
+  custom_message_title: "WICHTIG:"
+  login_button: "Mein Profil vervollständigen"
+  closing: "Wir danken Ihnen für Ihr Vertrauen."
+  signature: "Mit freundlichen Grüßen,<br>Das Team"
+
+fees_inquiry:
+  title: "Informationen zu Bankgebühren"
+  greeting: "Hallo %name%,"
+  intro: "Wir kontaktieren Sie bezüglich Gebühren im Zusammenhang mit Ihrem Bankkonto."
+  info_title: "Wichtige Information"
+  info: "Für weitere Details zu diesen Gebühren melden Sie sich bitte in Ihrem Kundenbereich an."
+  custom_message_title: "Zusätzliche Informationen:"
+  login_button: "Auf mein Konto zugreifen"
+  closing: "Unser Kundenservice steht Ihnen für Fragen zur Verfügung."
+  signature: "Mit freundlichen Grüßen,<br>Das Team"
+
+account_activation_reminder:
+  title: "Erinnerung - Aktivieren Sie Ihr Konto"
+  greeting: "Hallo %name%,"
+  intro: "Wir stellen fest, dass Sie Ihr Bankkonto noch nicht aktiviert haben."
+  warning_title: "Wichtige Erinnerung"
+  warning: "Die Aktivierung Ihres Kontos ist erforderlich, um auf alle unsere Dienste zugreifen zu können."
+  action_title: "Aktion erforderlich"
+  action_required: "Bitte melden Sie sich an, um die Aktivierung Ihres Kontos abzuschließen."
+  custom_message_title: "WICHTIG:"
+  login_button: "Mein Konto aktivieren"
+  closing: "Wir freuen uns darauf, Sie zu unseren aktiven Kunden zu zählen."
+  signature: "Mit freundlichen Grüßen,<br>Das Team"
+
+credit_application_incomplete:
+  title: "Ihr Kreditantrag - Fehlende Informationen"
+  greeting: "Hallo %name%,"
+  intro: "Wir haben Ihren Kreditantrag erhalten. Allerdings fehlen einige Informationen, um die Bearbeitung Ihres Antrags fortzusetzen."
+  reasons_title: "Fehlende Punkte:"
+  warning_title: "Achtung"
+  warning: "Um Ihren Antrag schnell zu bearbeiten, benötigen wir, dass Sie die fehlenden Informationen ergänzen."
+  action_title: "Aktion erforderlich"
+  action_required: "Bitte melden Sie sich an, um Ihren Kreditantrag zu vervollständigen."
+  custom_message_title: "Erforderliche Informationen:"
+  login_button: "Meinen Antrag vervollständigen"
+  closing: "Wir werden Ihren Antrag prüfen, sobald wir die vollständigen Informationen erhalten haben."
+  signature: "Mit freundlichen Grüßen,<br>Das Team"
+
+# E-Mail zur Kontoeröffnung und KYC-Validierung
+account_creation_follow_up:
+  title: "Nachverfolgung Ihres Antrags - Aktion erforderlich"
+  greeting: "Hallo %name%,"
+  intro: "Wir bestätigen den Eingang Ihres Antrags. Dieser wird derzeit von unseren Teams bearbeitet."
+  
+  status_title: "Status Ihres Antrags"
+  status_description: "Ihr Antrag wurde empfangen und eine Antwort wurde gesendet. Um diese Antwort einzusehen und den Fortschritt Ihres Antrags zu verfolgen, laden wir Sie ein, Ihr sicheres Kundenkonto zu erstellen."
+  
+  action_required_title: "Erforderliche Aktion zum Anzeigen Ihrer Antwort"
+  action_required_intro: "Um auf Ihren Kundenbereich zuzugreifen und die Antwort auf Ihren Antrag einzusehen, folgen Sie bitte diesen Schritten:"
+  step_1: "Erstellen Sie Ihr Online-Konto auf unserer sicheren Plattform"
+  step_2: "Vervollständigen Sie Ihr Profil mit Ihren persönlichen Informationen"
+  step_3: "Validieren Sie Ihre Identität durch den KYC-Verifizierungsprozess"
+  
+  kyc_title: "Warum ist die Identitätsüberprüfung (KYC) obligatorisch?"
+  kyc_intro: "Die KYC-Überprüfung (Know Your Customer) ist ein obligatorisches regulatorisches Verfahren im Banken- und Finanzsektor. Dieser Prozess ist gesetzlich vorgeschrieben und zielt darauf ab, alle unsere Kunden zu schützen."
+  kyc_why: "Regulatorische und Sicherheitsgründe:"
+  kyc_reason_1: "Einhaltung der europäischen Richtlinien zur Bekämpfung von Geldwäsche (AML-CFT)"
+  kyc_reason_2: "Prävention von Betrug und Identitätsdiebstahl"
+  kyc_reason_3: "Schutz Ihrer persönlichen Daten und Ihres Vermögens"
+  kyc_reason_4: "Einhaltung gesetzlicher Verpflichtungen für Finanzinstitute"
+  
+  documents_title: "Erforderliche Dokumente zur Überprüfung"
+  documents_intro: "Um Ihre Identitätsüberprüfung abzuschließen, müssen Sie Folgendes bereitstellen:"
+  document_1: "Ein gültiges Ausweisdokument (Personalausweis, Reisepass oder Aufenthaltstitel)"
+  document_2: "Aktueller Adressnachweis (weniger als 3 Monate alt)"
+  document_3: "Ein Selfie mit Ihrem Ausweisdokument zur biometrischen Authentifizierung"
+  
+  custom_message_title: "Wichtige Nachricht von unserem Team"
+  
+  create_account_button: "Konto erstellen und Identität verifizieren"
+  
+  processing_time_title: "Bearbeitungszeit"
+  processing_time_text: "Sobald Ihre Identität validiert ist, können Sie sofort die Antwort auf Ihren Antrag einsehen. Die KYC-Überprüfung wird in der Regel innerhalb von 24 bis 48 Werktagen bearbeitet."
+  
+  closing: "Wir stehen Ihnen für zusätzliche Informationen oder Unterstützung bei diesem Prozess vollständig zur Verfügung."
+  signature: "Mit freundlichen Grüßen,<br>Kundenservice<br>%company_name%"
+  
+  legal_notice: "Diese Nachricht und Anhänge sind vertraulich und ausschließlich für ihre Empfänger bestimmt. Jede unbefugte Nutzung oder Verbreitung ist untersagt. Die Identitätsüberprüfung ist gemäß Richtlinie (EU) 2015/849 zur Verhinderung der Nutzung des Finanzsystems zum Zwecke der Geldwäsche und Terrorismusfinanzierung obligatorisch."
+
+# E-Mail Bankdaten für Zahlung
+payment_details:
+  greeting: "Sehr geehrte(r) %name%,"
+  title: "Bankdaten für Ihre Zahlung"
+  intro: "Wir übermitteln Ihnen hiermit die Bankdaten, die für die Zahlung des oben angegebenen Betrags erforderlich sind. Nachfolgend finden Sie die Kontoinformationen:"
+  bank_details_title: "Bankkontoinformationen"
+  account_holder: "Kontoinhaber"
+  iban: "IBAN"
+  bic: "BIC"
+  instant_transfer_title: "ECHTZEITÜBERWEISUNG ZWINGEND ERFORDERLICH"
+  instant_transfer_message: "Es ist ZWINGEND ERFORDERLICH, dass diese Zahlung per ECHTZEITÜBERWEISUNG (oder Sofortüberweisung) erfolgt. Wir bestehen auf der absoluten Notwendigkeit, diese Sofortüberweisungsoption zu verwenden, um den sofortigen Geldeingang zu gewährleisten."
+  proof_title: "Überweisungsbestätigung"
+  proof_message: "Nach Ausführung der Überweisung bitten wir Sie, uns zur Bestätigung eine Kopie des Überweisungsbelegs zukommen zu lassen."
+  support_message: "Wir danken Ihnen für Ihre Sorgfalt und Schnelligkeit."

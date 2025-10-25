@@ -1,0 +1,83 @@
+{% extends '@EasyAdmin/crud/new.html.twig' %}
+
+{% block body_javascript %}
+    {{ parent() }}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait a bit for EasyAdmin to fully render
+            setTimeout(function() {
+                const templateTypeField = document.querySelector('select[name="scheduled_email[templateType]"]');
+                
+                if (templateTypeField) {
+                    console.log('Template type field found');
+                    
+                    // Find all reason checkboxes
+                    const reasonCheckboxes = document.querySelectorAll('input[name^="scheduled_email[reasons]"]');
+                    
+                    if (reasonCheckboxes.length > 0) {
+                        console.log('Found', reasonCheckboxes.length, 'reason checkboxes');
+                        
+                        // Define which reasons belong to which template type
+                        const reasonsByTemplate = {
+                            'kyc_rejected': [
+                                'document_unreadable', 'photo_blurry', 'document_expired',
+                                'missing_front', 'missing_back', 'missing_selfie',
+                                'information_mismatch', 'invalid_document_type', 'poor_lighting',
+                                'document_damaged', 'underage', 'restricted_country'
+                            ],
+                            'incomplete_account': [
+                                'missing_personal_info', 'missing_address', 'missing_phone',
+                                'missing_id_document', 'missing_proof_of_address', 'incomplete_profile',
+                                'missing_employment_info', 'missing_tax_info'
+                            ],
+                            'credit_application_incomplete': [
+                                'missing_income_proof', 'missing_employment_contract', 'missing_tax_return',
+                                'missing_bank_statements', 'incomplete_financial_info', 'missing_collateral_info',
+                                'missing_co_borrower_info', 'missing_project_details', 'missing_credit_amount',
+                                'missing_loan_purpose'
+                            ]
+                        };
+                        
+                        function updateReasonsVisibility() {
+                            const selectedTemplate = templateTypeField.value;
+                            console.log('Selected template:', selectedTemplate);
+                            
+                            const validReasons = reasonsByTemplate[selectedTemplate] || [];
+                            
+                            reasonCheckboxes.forEach(function(checkbox) {
+                                const reasonValue = checkbox.value;
+                                const container = checkbox.closest('.form-check');
+                                
+                                if (validReasons.includes(reasonValue)) {
+                                    // Show this reason
+                                    if (container) container.style.display = '';
+                                } else {
+                                    // Hide and uncheck this reason
+                                    if (container) container.style.display = 'none';
+                                    checkbox.checked = false;
+                                }
+                            });
+                            
+                            // Show/hide the entire reasons container
+                            const reasonsContainer = reasonCheckboxes[0]?.closest('.form-group');
+                            if (reasonsContainer) {
+                                const templatesRequiringReasons = ['kyc_rejected', 'incomplete_account', 'credit_application_incomplete'];
+                                reasonsContainer.style.display = templatesRequiringReasons.includes(selectedTemplate) ? '' : 'none';
+                            }
+                        }
+                        
+                        // Initial state
+                        updateReasonsVisibility();
+                        
+                        // On change
+                        templateTypeField.addEventListener('change', updateReasonsVisibility);
+                    } else {
+                        console.log('Reasons checkboxes NOT found');
+                    }
+                } else {
+                    console.log('Template type field NOT found');
+                }
+            }, 500);
+        });
+    </script>
+{% endblock %}

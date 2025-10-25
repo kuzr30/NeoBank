@@ -1,0 +1,64 @@
+banking_savings:
+  header:
+    title: "Épargne & Placements"
+    subtitle: "Gérer vos produits d'épargne"
+    last_update: "Dernière mise à jour :"
+    total_savings: "Total épargne"
+  
+  products:
+    livret_a: "Livret A"
+    pea: "Plan Épargne Actions"
+    term_deposit: "Dépôt à Terme"
+  
+  labels:
+    ceiling: "Plafond"
+    available: "Disponible"
+    interests_2025: "Intérêts 2025"
+    plus_minus_value: "+/- value"
+    performance_ytd: "Performance YTD"
+    maturity: "Échéance"
+    remaining_duration: "Durée restante"
+    expected_interests: "Intérêts prévus"
+    days: "jours"
+  
+  actions:
+    fund: "Alimenter"
+    withdraw: "Retirer"
+    invest: "Investir"
+    arbitrate: "Arbitrer"
+    blocked: "Bloqué"
+    details: "Détails"
+  
+  opportunities:
+    section_title: "Opportunités d'épargne"
+    section_subtitle: "Découvrez nos produits pour optimiser votre épargne"
+    pel_title: "Plan Épargne Logement"
+    pel_description: "Préparez votre projet immobilier avec un taux garanti"
+    pel_rate: "2,20% + prime d'État"
+    youth_savings_title: "Livret Jeune"
+    youth_savings_description: "Pour les 12-25 ans, un livret aux conditions avantageuses"
+    youth_savings_rate: "3,50% nets d'impôts"
+    life_insurance_title: "Assurance Vie"
+    life_insurance_description: "Constituez votre patrimoine avec notre contrat multisupports"
+    life_insurance_rate: "Rendement attractif"
+    discover_button: "Découvrir"
+  
+  movements:
+    section_title: "Derniers mouvements"
+    table_headers:
+      date: "Date"
+      product: "Produit"
+      operation: "Opération"
+      amount: "Montant"
+      new_balance: "Nouveau solde"
+      actions: "Actions"
+    operations:
+      transfer_from_checking: "Virement depuis Compte Chèques"
+      interest_capitalization: "Capitalisation des intérêts"
+      stock_purchase: "Achat actions LVMH"
+      livret_a_interests: "Intérêts Livret A"
+  
+  pagination:
+    previous: "Précédent"
+    next: "Suivant"
+    page_info: "Page %current% sur %total% (%count% mouvements)"

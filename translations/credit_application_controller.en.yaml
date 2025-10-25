@@ -1,0 +1,58 @@
+# ENGLISH TRANSLATION - Translated from French
+# Credit application controller translation file
+# Domain: credit_application_controller
+# Language: English (en)
+
+# Translations for CreditApplicationController
+flash:
+  # Error messages
+  complete_previous_steps: "Please complete the previous steps before continuing."
+  missing_data: "Missing data in session. Please restart the application."
+  application_not_found: "The credit application was not found."
+  session_expired: "Your session has expired. Please restart your application."
+  invalid_request: "Invalid request. Please complete all steps."
+  complete_all_steps: "Please complete all steps before proceeding to the summary."
+  invalid_security_token: "Invalid security token. Please try again."
+  submission_error: "An error occurred while submitting your application. Please try again."
+  
+  # Success messages
+  step_completed: "Step %d completed successfully."
+  application_submitted: "Your credit application has been successfully submitted. You will soon receive a confirmation email."
+  data_saved: "Your information has been saved."
+  
+  # Information messages
+  step_progress: "You are at step %d of %d."
+  review_information: "Please review your information before submitting your application."
+  fields_updated: "Fields have been automatically updated."
+  
+  # Warning messages
+  unsaved_changes: "You have unsaved changes. Are you sure you want to leave?"
+
+# Exceptions
+exceptions:
+  step_not_found: "Step not found."
+  invalid_step: "Invalid step."
+  credit_application_not_found: "Credit application not found."
+
+# API messages
+api:
+  invalid_data: "Invalid data provided."
+  calculation_error: "Error calculating credit."
+
+# Other controller translations
+step_titles:
+  1: "Credit details"
+  2: "Personal information"
+  3: "Financial situation"
+  unknown: "Unknown step"
+
+step_descriptions:
+  1: "Configure your credit and get a simulation"
+  2: "Enter your personal information and address"
+  3: "Describe your professional and financial situation"
+
+buttons:
+  continue: "Continue"
+  previous: "Previous"
+  submit: "Submit application"
+  save_draft: "Save draft"

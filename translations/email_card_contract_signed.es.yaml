@@ -1,0 +1,19 @@
+email_card_contract_signed:
+  title: "Contrato firmado - Su tarjeta estará disponible pronto"
+  content:
+    page_title: "¡Contrato firmado con éxito!"
+    greeting: "Hola {firstName} {lastName},"
+    success:
+      title: "¡Felicitaciones!"
+      description: "Su contrato de suscripción de tarjeta ha sido firmado con éxito. Hemos recibido correctamente su firma electrónica."
+    contract_details:
+      title: "Detalles de su contrato"
+      reference: "Referencia"
+      card_type: "Tipo de tarjeta"
+      signed_date: "Fecha de firma"
+    next_steps:
+      title: "Próximos pasos"
+      step1: "Nuestro equipo validará ahora su expediente"
+      step2: "Su pago será procesado a la mayor brevedad"
+      step3: "Su tarjeta será producida y enviada en 5-7 días laborales"
+    closing: "Le mantendremos informado(a) de la evolución de su solicitud por email. ¡Gracias por su confianza!"

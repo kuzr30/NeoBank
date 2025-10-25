@@ -1,0 +1,45 @@
+legal_notices:
+  page_title: "Juridische Vermeldingen"
+  page_description: "Juridische informatie en regelgevingsverplichtingen van %company_name%"
+
+  company_info:
+    title: "Bedrijfsinformatie"
+    content: |
+      <strong>Bedrijfsnaam:</strong> %company_name%<br>
+      <strong>Adres:</strong> %company_address%<br>
+      <strong>Telefoon:</strong> %company_phone%<br>
+      <strong>E-mail:</strong> %company_email%<br>
+      <strong>SIRET:</strong> %company_siret%<br>
+      <strong>Website:</strong> %company_website%
+
+  hosting:
+    title: "Hosting"
+    content: |
+      Deze website wordt gehost door <strong>%hosting_provider%</strong><br>
+      Adres: %hosting_address%<br>
+      Website: %hosting_website%
+
+  intellectual_property:
+    title: "Intellectueel eigendom"
+    content: |
+      Deze gehele website valt onder de Franse en internationale wetgeving betreffende auteursrechten en intellectueel eigendom.
+      Alle reproductierechten zijn voorbehouden, inclusief voor downloadbare documenten en iconografische en fotografische voorstellingen.
+
+  liability:
+    title: "Aansprakelijkheid"
+    content: |
+      De informatie op deze website is zo nauwkeurig mogelijk en de website wordt op verschillende tijden van het jaar bijgewerkt.
+      Er kunnen echter fouten of weglatingen optreden. De internetgebruiker moet daarom de nauwkeurigheid van de informatie bij %company_name% verifiëren,
+      en alle wijzigingen aan de website die hij nuttig acht melden.
+
+  gdpr:
+    title: "Bescherming van persoonlijke gegevens"
+    content: |
+      In toepassing van wet nr. 78-17 van 6 januari 1978 betreffende informatica, bestanden en vrijheden (AVG),
+      hebben gebruikers het recht op toegang, rectificatie, verwijdering en bezwaar van hun persoonlijke gegevens.
+      Dit recht wordt uitgeoefend bij %company_name% op het adres %company_email%.
+
+  contact:
+    title: "Contact"
+    content: |
+      Voor vragen betreffende deze juridische vermeldingen, kunt u contact met ons opnemen op het adres %email%.

@@ -1,0 +1,14 @@
+banking_card_opposition_controller:
+  flash:
+    access_denied_card: "Toegang geweigerd tot deze kaart."
+    only_active_cards: "Alleen actieve kaarten kunnen worden geblokkeerd."
+    active_opposition_exists: "Er wordt al een blokkering verwerkt voor deze kaart."
+    opposition_success: "Uw blokkering is succesvol geregistreerd. Uw kaart is onmiddellijk geblokkeerd voor uw veiligheid."
+    opposition_error: "Er is een fout opgetreden bij het registreren van uw blokkering. Probeer het opnieuw of neem contact op met onze klantenservice."
+    access_denied_opposition: "Toegang geweigerd tot deze blokkering."
+    card_not_found: "Kaart niet gevonden of toegang geweigerd."
+    select_card: "Selecteer een kaart."
+    emergency_opposition_success: "BLOKKERING GEREGISTREERD - Uw kaart is onmiddellijk geblokkeerd. Referentie: {reference}"
+    emergency_opposition_error: "Fout bij blokkering. Neem onmiddellijk contact op met de klantenservice op 02/XXX.XX.XX"
+  emergency:
+    opposition_reason: "Spoedblokade via snelle interface"

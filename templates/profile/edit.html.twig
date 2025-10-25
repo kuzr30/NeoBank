@@ -1,0 +1,777 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tp('profile_edit.page.title', {}, 'profile_edit') }}{% endblock %}
+
+{% block body %}
+
+<style>
+/* Profile Edit Page Specific Styles */
+.profile-edit__container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+.profile-edit__header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.profile-edit__back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    color: #0066cc;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.profile-edit__back:hover {
+    background: #f8f9fa;
+    border-color: #0066cc;
+    color: #0066cc;
+}
+
+.profile-edit__back-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.profile-edit__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.profile-edit__email-pending {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.profile-edit__email-pending-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.profile-edit__email-pending-icon {
+    width: 20px;
+    height: 20px;
+    color: #e67e22;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.profile-edit__email-pending-text {
+    flex: 1;
+    font-size: 14px;
+    color: #856404;
+}
+
+.profile-edit__email-pending-text strong {
+    color: #6c4f00;
+}
+
+.profile-edit__email-pending-cancel {
+    margin: 0;
+}
+
+.profile-edit__email-pending-cancel-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    background: transparent;
+    border: 1px solid #e67e22;
+    border-radius: 4px;
+    color: #e67e22;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.profile-edit__email-pending-cancel-btn:hover {
+    background: #e67e22;
+    color: white;
+}
+
+.profile-edit__email-pending-cancel-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.profile-edit__form {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    padding: 32px;
+}
+
+.profile-edit__section {
+    margin-bottom: 32px;
+}
+
+.profile-edit__section:last-child {
+    margin-bottom: 0;
+}
+
+.profile-edit__section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-edit__section-icon {
+    width: 20px;
+    height: 20px;
+    color: #0066cc;
+}
+
+.profile-edit__section-divider {
+    height: 1px;
+    background: #e1e8ed;
+    margin: 32px 0;
+}
+
+.profile-edit__avatar-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.profile-edit__avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0066cc, #3b82f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.profile-edit__avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-edit__avatar-upload {
+    flex: 1;
+    min-width: 0;
+}
+
+.profile-edit__avatar-info {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 12px;
+}
+
+/* Styles pour l'upload de fichier et checkbox */
+.profile-edit__avatar-upload input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #f8fafc;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.profile-edit__avatar-upload input[type="file"]:hover {
+    border-color: #0066cc;
+    background: #f1f5f9;
+}
+
+.profile-edit__avatar-upload input[type="file"]:focus {
+    outline: none;
+    border-color: #0066cc;
+    border-style: solid;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+    background: #ffffff;
+}
+
+/* Conteneur pour le nom de fichier avec gestion du débordement */
+.profile-edit__file-display {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #475569;
+    word-break: break-all;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    position: relative;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.profile-edit__file-display::before {
+    content: "📄";
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+/* Style ULTRA IMPACTANT pour la checkbox "Supprimer" */
+.profile-edit__delete-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    background: linear-gradient(135deg, #ff1744, #d32f2f);
+    border: 3px solid #b71c1c;
+    border-radius: 12px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(255, 23, 68, 0.4);
+    animation: danger-pulse 2s infinite;
+}
+
+@keyframes danger-pulse {
+    0%, 100% { 
+        box-shadow: 0 8px 25px rgba(255, 23, 68, 0.4);
+        transform: scale(1);
+    }
+    50% { 
+        box-shadow: 0 12px 35px rgba(255, 23, 68, 0.6);
+        transform: scale(1.02);
+    }
+}
+
+.profile-edit__delete-checkbox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.profile-edit__delete-checkbox:hover {
+    background: linear-gradient(135deg, #e91e63, #c62828);
+    border-color: #880e4f;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(255, 23, 68, 0.6);
+}
+
+.profile-edit__delete-checkbox input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    accent-color: #ffffff;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.2);
+}
+
+.profile-edit__delete-checkbox label {
+    margin: 0;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.profile-edit__delete-checkbox label::before {
+    content: "�";
+    font-size: 24px;
+    animation: skull-shake 1s infinite;
+}
+
+@keyframes skull-shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+
+.profile-edit__delete-checkbox label::after {
+    content: "DANGER !";
+    background: rgba(255,255,255,0.9);
+    color: #d32f2f;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 900;
+    margin-left: auto;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+}
+
+.profile-edit__delete-checkbox input[type="checkbox"]:checked + label {
+    color: #ffeb3b;
+    animation: warning-flash 0.5s infinite;
+}
+
+@keyframes warning-flash {
+    0%, 100% { color: #ffeb3b; }
+    50% { color: #ffffff; }
+}
+
+.profile-edit__delete-checkbox input[type="checkbox"]:checked + label::before {
+    content: "☠️";
+    animation: death-spin 0.8s infinite;
+}
+
+@keyframes death-spin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+.profile-edit__delete-checkbox input[type="checkbox"]:checked + label::after {
+    content: "SUPPRESSION ACTIVE !";
+    background: #ffeb3b;
+    color: #d32f2f;
+    animation: urgent-blink 0.3s infinite;
+}
+
+@keyframes urgent-blink {
+    0%, 100% { 
+        background: #ffeb3b;
+        transform: scale(1);
+    }
+    50% { 
+        background: #ff5722;
+        color: #ffffff;
+        transform: scale(1.1);
+    }
+}
+
+.profile-edit__upload-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #0066cc, #3b82f6);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 102, 204, 0.2);
+}
+
+.profile-edit__upload-btn:hover {
+    background: linear-gradient(135deg, #0052a3, #2563eb);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 102, 204, 0.3);
+    color: white;
+}
+
+.profile-edit__upload-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.profile-edit__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.profile-edit__field {
+    margin-bottom: 16px;
+}
+
+.profile-edit__field--full {
+    grid-column: 1 / -1;
+}
+
+.profile-edit__label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 6px;
+}
+
+.profile-edit__input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #ffffff;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.profile-edit__input:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.profile-edit__input::placeholder {
+    color: #95a5a6;
+}
+
+}
+
+.profile-edit__textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #ffffff;
+    transition: all 0.2s ease;
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.profile-edit__textarea:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.profile-edit__select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #ffffff;
+    transition: all 0.2s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.profile-edit__select:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.profile-edit__field-help {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-top: 4px;
+}
+
+.profile-edit__actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #e1e8ed;
+}
+
+.profile-edit__btn {
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+}
+
+.profile-edit__btn--cancel {
+    background: #f8f9fa;
+    color: #7f8c8d;
+    border: 1px solid #e1e8ed;
+}
+
+.profile-edit__btn--cancel:hover {
+    background: #f1f5f9;
+    color: #6c757d;
+}
+
+.profile-edit__btn--save {
+    background: #0066cc;
+    color: white;
+}
+
+.profile-edit__btn--save:hover {
+    background: #0052a3;
+}
+
+.profile-edit__btn-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-edit__container {
+        padding: 16px;
+    }
+    
+    .profile-edit__form {
+        padding: 24px 16px;
+    }
+    
+    .profile-edit__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-edit__avatar-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+    
+    .profile-edit__actions {
+        flex-direction: column-reverse;
+    }
+    
+    .profile-edit__btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+</style>
+
+<div class="profile-edit__container">
+    <!-- Header -->
+    <div class="profile-edit__header">
+        <a href="{{ path('profile_index') }}" class="profile-edit__back">
+            {{ ux_icon('heroicons:arrow-left', {'class': 'profile-edit__back-icon'}) }}
+        </a>
+        <h1 class="profile-edit__title">Modifier le profil</h1>
+    </div>
+
+    <!-- Email pending validation notice -->
+    {% if user.pendingEmail %}
+        <div class="profile-edit__email-pending">
+            <div class="profile-edit__email-pending-content">
+                {{ ux_icon('heroicons:envelope', {'class': 'profile-edit__email-pending-icon'}) }}
+                <div class="profile-edit__email-pending-text">
+                    <strong>Nouvelle adresse email en attente :</strong> {{ user.pendingEmail }}<br>
+                    <small>{{ tp('profile_edit.email_pending.instruction', {}, 'profile_edit') }}</small>
+                </div>
+                <form method="post" action="{{ path('app_email_verification_cancel') }}" class="profile-edit__email-pending-cancel">
+                    <input type="hidden" name="_token" value="{{ csrf_token('cancel_email_change') }}">
+                    <button type="submit" class="profile-edit__email-pending-cancel-btn" onclick="return confirm('{{ tp('profile_edit.email_pending.cancel_confirm', {}, 'profile_edit') }}')">
+                        {{ ux_icon('heroicons:x-mark', {'class': 'profile-edit__email-pending-cancel-icon'}) }}
+                        {{ tp('profile_edit.email_pending.cancel', {}, 'profile_edit') }}
+                    </button>
+                </form>
+            </div>
+        </div>
+    {% endif %}
+
+    <!-- Form -->
+    {{ form_start(profileForm, {'attr': {'class': 'profile-edit__form'}}) }}
+        <!-- Avatar Section -->
+        <div class="profile-edit__section">
+            <h2 class="profile-edit__section-title">
+                {{ ux_icon('heroicons:photo', {'class': 'profile-edit__section-icon'}) }}
+                Photo de profil
+            </h2>
+            
+            <div class="profile-edit__avatar-section">
+                <div class="profile-edit__avatar">
+                    {% if user.profilePicture %}
+                        <img src="{{ vich_uploader_asset(user, 'profilePictureFile') }}" alt="Photo de profil" class="profile-edit__avatar-img">
+                    {% else %}
+                        {{ user.firstName|default('U')|first|upper }}{{ user.lastName|default('S')|first|upper }}
+                    {% endif %}
+                </div>
+                <div class="profile-edit__avatar-upload">
+                    {{ form_widget(profileForm.profilePictureFile) }}
+                    {{ form_errors(profileForm.profilePictureFile) }}
+                    <div class="profile-edit__avatar-info">
+                        Format JPG, PNG ou WEBP. Taille maximale de 2MB.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-edit__section-divider"></div>
+
+        <!-- Personal Information -->
+        <div class="profile-edit__section">
+            <h2 class="profile-edit__section-title">
+                {{ ux_icon('heroicons:user', {'class': 'profile-edit__section-icon'}) }}
+                Informations personnelles
+            </h2>
+            
+            <div class="profile-edit__grid">
+                <div class="profile-edit__field">
+                    {{ form_label(profileForm.firstName, null, {'attr': {'class': 'profile-edit__label'}}) }}
+                    {{ form_widget(profileForm.firstName) }}
+                    {{ form_errors(profileForm.firstName) }}
+                </div>
+                
+                <div class="profile-edit__field">
+                    {{ form_label(profileForm.lastName, null, {'attr': {'class': 'profile-edit__label'}}) }}
+                    {{ form_widget(profileForm.lastName) }}
+                    {{ form_errors(profileForm.lastName) }}
+                </div>
+            </div>
+            
+            <div class="profile-edit__field">
+                {{ form_label(profileForm.email, null, {'attr': {'class': 'profile-edit__label'}}) }}
+                {{ form_widget(profileForm.email) }}
+                {{ form_errors(profileForm.email) }}
+                <div class="profile-edit__field-help">
+                    Cette adresse sera utilisée pour les notifications importantes.
+                </div>
+            </div>
+            
+            <div class="profile-edit__grid">
+                <div class="profile-edit__field">
+                    {{ form_label(profileForm.phone, null, {'attr': {'class': 'profile-edit__label'}}) }}
+                    {{ form_widget(profileForm.phone) }}
+                    {{ form_errors(profileForm.phone) }}
+                </div>
+                
+                <div class="profile-edit__field">
+                    {{ form_label(profileForm.birthDate, null, {'attr': {'class': 'profile-edit__label'}}) }}
+                    {{ form_widget(profileForm.birthDate) }}
+                    {{ form_errors(profileForm.birthDate) }}
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-edit__section-divider"></div>
+
+        <!-- Address Information -->
+        <div class="profile-edit__section">
+            <h2 class="profile-edit__section-title">
+                {{ ux_icon('heroicons:map-pin', {'class': 'profile-edit__section-icon'}) }}
+                Adresse
+            </h2>
+            
+            <div class="profile-edit__field">
+                {{ form_label(profileForm.address, null, {'attr': {'class': 'profile-edit__label'}}) }}
+                {{ form_widget(profileForm.address) }}
+                {{ form_errors(profileForm.address) }}
+            </div>
+            
+            <div class="profile-edit__grid">
+                <div class="profile-edit__field">
+                    {{ form_label(profileForm.city, null, {'attr': {'class': 'profile-edit__label'}}) }}
+                    {{ form_widget(profileForm.city) }}
+                    {{ form_errors(profileForm.city) }}
+                </div>
+                
+                <div class="profile-edit__field">
+                    {{ form_label(profileForm.postalCode, null, {'attr': {'class': 'profile-edit__label'}}) }}
+                    {{ form_widget(profileForm.postalCode) }}
+                    {{ form_errors(profileForm.postalCode) }}
+                </div>
+            </div>
+            
+            <div class="profile-edit__field">
+                {{ form_label(profileForm.country, null, {'attr': {'class': 'profile-edit__label'}}) }}
+                {{ form_widget(profileForm.country) }}
+                {{ form_errors(profileForm.country) }}
+            </div>
+        </div>
+
+        <div class="profile-edit__section-divider"></div>
+
+        <!-- Preferences -->
+        <div class="profile-edit__section">
+            <h2 class="profile-edit__section-title">
+                {{ ux_icon('heroicons:cog-6-tooth', {'class': 'profile-edit__section-icon'}) }}
+                Préférences
+            </h2>
+            
+            <div class="profile-edit__grid">
+                <div class="profile-edit__field">
+                    {{ form_label(profileForm.language, null, {'attr': {'class': 'profile-edit__label'}}) }}
+                    {{ form_widget(profileForm.language) }}
+                    {{ form_errors(profileForm.language) }}
+                </div>
+                
+                <div class="profile-edit__field">
+                    {{ form_label(profileForm.currency, null, {'attr': {'class': 'profile-edit__label'}}) }}
+                    {{ form_widget(profileForm.currency) }}
+                    {{ form_errors(profileForm.currency) }}
+                </div>
+            </div>
+            
+            <div class="profile-edit__field">
+                {{ form_label(profileForm.timezone, null, {'attr': {'class': 'profile-edit__label'}}) }}
+                {{ form_widget(profileForm.timezone) }}
+                {{ form_errors(profileForm.timezone) }}
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="profile-edit__actions">
+            <a href="{{ path('profile_index') }}" class="profile-edit__btn profile-edit__btn--cancel">
+                {{ ux_icon('heroicons:x-mark', {'class': 'profile-edit__btn-icon'}) }}
+                {{ tp('profile_edit.actions.cancel', {}, 'profile_edit') }}
+            </a>
+            <button type="submit" class="profile-edit__btn profile-edit__btn--save">
+                {{ ux_icon('heroicons:check', {'class': 'profile-edit__btn-icon'}) }}
+                {{ tp('profile_edit.actions.save', {}, 'profile_edit') }}
+            </button>
+        </div>
+    {{ form_end(profileForm) }}
+</div>
+
+{% endblock %}

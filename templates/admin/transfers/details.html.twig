@@ -1,0 +1,651 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Virement #{{ transfer.id }} - Détails{% endblock %}
+
+{% block body %}
+<style>
+/* Admin Transfer Details Styles */
+.admin-badge--large {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+}
+
+.admin-transfer-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    padding: 16px 20px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+}
+
+.admin-summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.admin-summary-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.admin-summary-value {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.admin-codes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.admin-code-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.admin-code-card:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+}
+
+.admin-code-card--validated {
+    border-color: #34d399;
+    background: #f0fdf4;
+}
+
+.admin-code-card--expired {
+    border-color: #fbbf24;
+    background: #fffbeb;
+}
+
+.admin-code-card--pending {
+    border-color: #d1d5db;
+    background: #f9fafb;
+}
+
+.admin-code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.admin-code-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.admin-code-name {
+    font-weight: 600;
+    color: #111827;
+    font-size: 1rem;
+}
+
+.admin-code-order {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.admin-code-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-code-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.admin-code-icon--success {
+    color: #16a34a;
+}
+
+.admin-code-icon--warning {
+    color: #d97706;
+}
+
+.admin-code-icon--pending {
+    color: #6b7280;
+}
+
+.admin-code-status-text {
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.admin-code-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.admin-code-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.admin-code-meta-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.admin-code-meta-item:last-child {
+    border-bottom: none;
+}
+
+.admin-code-meta-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6b7280;
+}
+
+.admin-code-meta-value {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.admin-code-secret {
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 12px;
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #374151;
+}
+
+.admin-attempts-section {
+    margin-top: 20px;
+    padding: 16px;
+    background: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.admin-attempts-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.admin-attempts-icon {
+    width: 18px;
+    height: 18px;
+    color: #6b7280;
+}
+
+.admin-attempts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.admin-attempt-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+}
+
+.admin-attempt-item--success {
+    border-color: #34d399;
+    background: #f0fdf4;
+}
+
+.admin-attempt-item--failed {
+    border-color: #f87171;
+    background: #fef2f2;
+}
+
+.admin-attempt-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.admin-attempt-time {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #111827;
+}
+
+.admin-attempt-ip {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-family: monospace;
+}
+
+.admin-attempt-code {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-family: monospace;
+}
+
+.admin-attempt-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.admin-attempt-item--success .admin-attempt-status {
+    color: #166534;
+}
+
+.admin-attempt-item--failed .admin-attempt-status {
+    color: #991b1b;
+}
+
+.admin-attempt-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.admin-attempt-icon--success {
+    color: #16a34a;
+}
+
+.admin-attempt-icon--failed {
+    color: #dc2626;
+}
+
+.admin-actions-panel {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+}
+
+.admin-actions-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.admin-action-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-action-card:hover {
+    border-color: #3b82f6;
+    background: #f8fafc;
+    text-decoration: none;
+}
+
+.admin-action-card--highlight {
+    border-color: #3b82f6;
+    background: #eff6ff;
+}
+
+.admin-action-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f4f6;
+    color: #6b7280;
+    flex-shrink: 0;
+}
+
+.admin-action-card--highlight .admin-action-icon {
+    background: #3b82f6;
+    color: white;
+}
+
+.admin-action-icon-svg {
+    width: 20px;
+    height: 20px;
+}
+
+.admin-action-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.admin-action-title {
+    font-weight: 600;
+    color: #111827;
+    font-size: 0.875rem;
+}
+
+.admin-action-description {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+</style>
+
+<div class="admin-container">
+    
+    <!-- Header -->
+    <div class="admin-header">
+        <div class="admin-header-content">
+            <h1 class="admin-title">
+                {{ ux_icon('heroicons:arrow-right-start-on-rectangle', {'class': 'admin-title-icon'}) }}
+                Virement #{{ transfer.id }}
+            </h1>
+            <span class="admin-badge admin-badge--{{ transfer.status }} admin-badge--large">
+                {% if transfer.status == 'pending' %}En attente
+                {% elseif transfer.status == 'executing' %}En cours d'exécution
+                {% elseif transfer.status == 'completed' %}Terminé
+                {% elseif transfer.status == 'expired' %}Expiré
+                {% elseif transfer.status == 'cancelled' %}Annulé
+                {% elseif transfer.status == 'blocked' %}Bloqué
+                {% endif %}
+            </span>
+        </div>
+        <div class="admin-header-actions">
+            <a href="{{ path('admin_transfers') }}" class="admin-btn admin-btn--secondary">
+                {{ ux_icon('heroicons:arrow-left', {'class': 'admin-btn-icon'}) }}
+                Retour à la liste
+            </a>
+        </div>
+    </div>
+
+    <!-- Informations principales -->
+    <div class="admin-card">
+        <div class="admin-card-header">
+            <h2 class="admin-card-title">
+                {{ ux_icon('heroicons:information-circle', {'class': 'admin-card-icon'}) }}
+                Informations du virement
+            </h2>
+        </div>
+        <div class="admin-card-content">
+            <div class="admin-details-grid">
+                <div class="admin-detail-item">
+                    <span class="admin-detail-label">Utilisateur</span>
+                    <div class="admin-detail-value">
+                        <div class="admin-user-info">
+                            <span class="admin-user-name">{{ transfer.user.firstName }} {{ transfer.user.lastName }}</span>
+                            <span class="admin-user-email">{{ transfer.user.email }}</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="admin-detail-item">
+                    <span class="admin-detail-label">Montant</span>
+                    <span class="admin-detail-value admin-amount-large">{{ transfer.amount|number_format(2, ',', ' ') }} €</span>
+                </div>
+                
+                <div class="admin-detail-item">
+                    <span class="admin-detail-label">Compte bénéficiaire</span>
+                    <span class="admin-detail-value">{{ transfer.destinationAccount.accountNumber }}</span>
+                </div>
+                
+                {% if transfer.description %}
+                <div class="admin-detail-item admin-detail-item--full">
+                    <span class="admin-detail-label">Description</span>
+                    <span class="admin-detail-value">{{ transfer.description }}</span>
+                </div>
+                {% endif %}
+                
+                <div class="admin-detail-item">
+                    <span class="admin-detail-label">Date de création</span>
+                    <span class="admin-detail-value">{{ transfer.createdAt|date('d/m/Y à H:i:s') }}</span>
+                </div>
+                
+                {% if transfer.executedAt %}
+                <div class="admin-detail-item">
+                    <span class="admin-detail-label">Date d'exécution</span>
+                    <span class="admin-detail-value">{{ transfer.executedAt|date('d/m/Y à H:i:s') }}</span>
+                </div>
+                {% endif %}
+                
+                <div class="admin-detail-item">
+                    <span class="admin-detail-label">Adresse IP</span>
+                    <span class="admin-detail-value">{{ transfer.ipAddress }}</span>
+                </div>
+                
+                <div class="admin-detail-item">
+                    <span class="admin-detail-label">Codes validés</span>
+                    <span class="admin-detail-value">
+                        {{ transfer.transferCodes|filter(c => c.isValidated)|length }} / {{ transfer.transferCodes|length }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gestion des codes -->
+    <div class="admin-card">
+        <div class="admin-card-header">
+            <h2 class="admin-card-title">
+                {{ ux_icon('heroicons:key', {'class': 'admin-card-icon'}) }}
+                Codes de validation
+            </h2>
+            {% if transfer.status == 'pending' or transfer.status == 'executing' %}
+                <div class="admin-card-actions">
+                    <a href="{{ path('admin_transfer_add_code', {'id': transfer.id}) }}" 
+                       class="admin-btn admin-btn--primary admin-btn--small">
+                        {{ ux_icon('heroicons:plus', {'class': 'admin-btn-icon'}) }}
+                        Ajouter un code
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+        
+        <div class="admin-card-content">
+            {% if transfer.transferCodes is not empty %}
+                <div class="admin-codes-list">
+                    {% for code in transfer.transferCodes %}
+                        <div class="admin-code-card admin-code-card--{{ code.isValidated ? 'validated' : (code.isExpired ? 'expired' : 'pending') }}">
+                            <div class="admin-code-header">
+                                <div class="admin-code-info">
+                                    <h3 class="admin-code-name">{{ code.name }}</h3>
+                                    <span class="admin-code-order">Code {{ code.codeOrder }}</span>
+                                </div>
+                                <div class="admin-code-status">
+                                    {% if code.isValidated %}
+                                        {{ ux_icon('heroicons:check-circle', {'class': 'admin-code-icon admin-code-icon--success'}) }}
+                                        <span class="admin-code-status-text">Validé</span>
+                                    {% elseif code.isExpired %}
+                                        {{ ux_icon('heroicons:clock', {'class': 'admin-code-icon admin-code-icon--warning'}) }}
+                                        <span class="admin-code-status-text">Expiré</span>
+                                    {% else %}
+                                        {{ ux_icon('heroicons:ellipsis-horizontal-circle', {'class': 'admin-code-icon admin-code-icon--pending'}) }}
+                                        <span class="admin-code-status-text">En attente</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            
+                            <div class="admin-code-details">
+                                <div class="admin-code-meta">
+                                    <div class="admin-code-meta-item">
+                                        <span class="admin-code-meta-label">Code secret :</span>
+                                        <span class="admin-code-secret">{{ code.code }}</span>
+                                    </div>
+                                    <div class="admin-code-meta-item">
+                                        <span class="admin-code-meta-label">Créé le :</span>
+                                        <span class="admin-code-meta-value">{{ code.createdAt|date('d/m/Y à H:i') }}</span>
+                                    </div>
+                                    {% if code.validatedAt %}
+                                        <div class="admin-code-meta-item">
+                                            <span class="admin-code-meta-label">Validé le :</span>
+                                            <span class="admin-code-meta-value">{{ code.validatedAt|date('d/m/Y à H:i') }}</span>
+                                        </div>
+                                    {% endif %}
+                                    {% if code.expiresAt %}
+                                        <div class="admin-code-meta-item">
+                                            <span class="admin-code-meta-label">{% if code.isExpired %}Expiré le :{% else %}Expire le :{% endif %}</span>
+                                            <span class="admin-code-meta-value">{{ code.expiresAt|date('d/m/Y à H:i') }}</span>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                
+                                <!-- Tentatives de validation -->
+                                {% if code.transferAttempts is not empty %}
+                                    <div class="admin-attempts-section">
+                                        <h4 class="admin-attempts-title">
+                                            {{ ux_icon('heroicons:exclamation-triangle', {'class': 'admin-attempts-icon'}) }}
+                                            Tentatives de validation ({{ code.transferAttempts|length }})
+                                        </h4>
+                                        <div class="admin-attempts-list">
+                                            {% for attempt in code.transferAttempts %}
+                                                <div class="admin-attempt-item admin-attempt-item--{{ attempt.isSuccessful ? 'success' : 'failed' }}">
+                                                    <div class="admin-attempt-info">
+                                                        <span class="admin-attempt-time">{{ attempt.attemptedAt|date('d/m/Y H:i:s') }}</span>
+                                                        <span class="admin-attempt-ip">{{ attempt.ipAddress }}</span>
+                                                        <span class="admin-attempt-code">Code saisi : {{ attempt.enteredCode }}</span>
+                                                    </div>
+                                                    <div class="admin-attempt-status">
+                                                        {% if attempt.isSuccessful %}
+                                                            {{ ux_icon('heroicons:check', {'class': 'admin-attempt-icon admin-attempt-icon--success'}) }}
+                                                            <span class="admin-attempt-text">Réussi</span>
+                                                        {% else %}
+                                                            {{ ux_icon('heroicons:x-mark', {'class': 'admin-attempt-icon admin-attempt-icon--failed'}) }}
+                                                            <span class="admin-attempt-text">Échec</span>
+                                                        {% endif %}
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="admin-empty-state admin-empty-state--small">
+                    {{ ux_icon('heroicons:key', {'class': 'admin-empty-icon'}) }}
+                    <h3 class="admin-empty-title">Aucun code ajouté</h3>
+                    <p class="admin-empty-text">Ajoutez des codes de validation pour permettre la progression du virement.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Actions administratives -->
+    <div class="admin-actions-panel">
+        <h2 class="admin-actions-title">Actions administratives</h2>
+        
+        <div class="admin-actions-grid">
+            {% if transfer.status == 'pending' or transfer.status == 'executing' %}
+                <!-- Ajouter un code -->
+                <div class="admin-action-card">
+                    <div class="admin-action-icon">
+                        {{ ux_icon('heroicons:plus-circle', {'class': 'admin-action-icon-svg'}) }}
+                    </div>
+                    <div class="admin-action-content">
+                        <h3 class="admin-action-title">Ajouter un code</h3>
+                        <p class="admin-action-description">Ajouter un nouveau code de validation personnalisé</p>
+                        <a href="{{ path('admin_transfer_add_code', {'id': transfer.id}) }}" 
+                           class="admin-btn admin-btn--primary">
+                            Ajouter
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Générer un code -->
+                <div class="admin-action-card">
+                    <div class="admin-action-icon">
+                        {{ ux_icon('heroicons:sparkles', {'class': 'admin-action-icon-svg'}) }}
+                    </div>
+                    <div class="admin-action-content">
+                        <h3 class="admin-action-title">Générer un code</h3>
+                        <p class="admin-action-description">Générer automatiquement un code aléatoire</p>
+                        <form method="POST" action="{{ path('admin_transfer_generate_code', {'id': transfer.id}) }}">
+                            <input type="hidden" name="_token" value="{{ csrf_token('generate_code_' ~ transfer.id) }}">
+                            <button type="submit" class="admin-btn admin-btn--success">
+                                Générer
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Exécuter le virement -->
+                {% if transfer.isFullyValidated %}
+                    <div class="admin-action-card">
+                        <div class="admin-action-icon">
+                            {{ ux_icon('heroicons:play-circle', {'class': 'admin-action-icon-svg'}) }}
+                        </div>
+                        <div class="admin-action-content">
+                            <h3 class="admin-action-title">Exécuter le virement</h3>
+                            <p class="admin-action-description">Tous les codes sont validés, exécuter maintenant</p>
+                            <form method="POST" action="{{ path('admin_transfer_complete', {'id': transfer.id}) }}">
+                                <input type="hidden" name="_token" value="{{ csrf_token('complete_transfer_' ~ transfer.id) }}">
+                                <button type="submit" 
+                                        class="admin-btn admin-btn--warning"
+                                        onclick="return confirm('Exécuter ce virement maintenant ?')">
+                                    Exécuter
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endif %}
+            
+            <!-- Débloquer l'utilisateur -->
+            {% if transfer.status == 'blocked' %}
+                <div class="admin-action-card admin-action-card--highlight">
+                    <div class="admin-action-icon">
+                        {{ ux_icon('heroicons:lock-open', {'class': 'admin-action-icon-svg'}) }}
+                    </div>
+                    <div class="admin-action-content">
+                        <h3 class="admin-action-title">Débloquer l'utilisateur</h3>
+                        <p class="admin-action-description">Permettre à l'utilisateur de reprendre les validations</p>
+                        <form method="POST" action="{{ path('admin_transfer_unblock_user', {'id': transfer.id}) }}">
+                            <input type="hidden" name="_token" value="{{ csrf_token('unblock_user_' ~ transfer.id) }}">
+                            <button type="submit" 
+                                    class="admin-btn admin-btn--info"
+                                    onclick="return confirm('Débloquer cet utilisateur ?')">
+                                Débloquer
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+help_center:
+  page:
+    title: "Hilfezentrum - %company_name%"
+    meta:
+      description: "Finden Sie schnell Antworten auf Ihre Fragen zu unseren Bankdienstleistungen"
+  
+  hero:
+    title: "Hilfezentrum"
+    subtitle: "Finden Sie schnell Antworten auf Ihre Fragen zu unseren Bankdienstleistungen"
+    search:
+      placeholder: "In der Hilfe suchen..."
+  
+  sections:
+    main_title: "Wie können wir Ihnen helfen?"
+    
+    accounts_cards:
+      title: "Konten und Karten"
+      description: "Verwaltung Ihrer Konten, Bankkarten, Überweisungen und Zahlungen"
+      links:
+        balance: "Mein Saldo einsehen"
+        transfers: "Eine Überweisung tätigen"
+    
+    security:
+      title: "Sicherheit"
+      description: "Schutz Ihrer Daten und Bankensicherheitsberatung"
+      links:
+        authentication: "Starke Authentifizierung"
+        fraud: "Betrug melden"
+    
+    contact:
+      title: "Kontakt"
+      description: "Verschiedene Möglichkeiten, uns je nach Ihren Bedürfnissen zu kontaktieren"
+      links:
+        chat: "Online-Chat"
+        appointment: "Termin vereinbaren"
+    
+    services:
+      title: "Online-Dienste"
+      description: "Hilfe bei der Nutzung unserer Online-Banking-Plattform"
+      links:
+        login: "Anmelden"
+        settings: "Kontoeinstellungen"
+    
+    credits_savings:
+      title: "Kredite und Sparen"
+      description: "Informationen über unsere Kredit- und Sparprodukte"
+      links:
+        simulation: "Kredit simulieren"
+        savings: "Sparprodukte"
+    
+    documents:
+      title: "Dokumente"
+      description: "Zugriff auf und Verwaltung Ihrer Bankdokumente"
+      links:
+        rib: "RIB herunterladen"
+        statements: "Meine Auszüge"

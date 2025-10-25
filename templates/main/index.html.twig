@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+{{parent()}} | {{ tp('page_title', {}, 'home') }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('assets/styles/home-bem.css') }}">
+{% endblock %}
+
+{% block body %}
+    <!-- Hero Section -->
+    {% include 'main/_hero.html.twig' %}
+    
+    <!-- Services Section -->
+    {% include 'main/_services.html.twig' %}
+
+    <!-- Digital Banking Section -->
+    {% include 'main/_trust.html.twig' %}
+    
+    <!-- Offers Section -->
+    {% include 'main/_offers.html.twig' %}
+    
+    <!-- Credit Section -->
+    {% include 'main/_credit.html.twig' %}
+    
+    <!-- Simulation Section -->
+    {% include 'main/_cta.html.twig' %}
+    
+    <!-- Engagement Section -->
+    {% include 'main/_engagement.html.twig' %}
+
+    <!-- Testimonials Section -->
+    {% include 'main/_testimonials.html.twig' %}
+
+{% endblock %}

@@ -1,0 +1,19 @@
+email_devis_approval:
+  subject: "Uw verzekeringsaanvraag is goedgekeurd!"
+  content:
+    page_title: "Verzekeringsaanvraag goedgekeurd"
+    department: "Verzekeringsdienst"
+    greeting: "Beste %prenom% %nom%,"
+    approval_message: "We zijn verheugd u te informeren dat uw aanvraag voor %typeAssurance% verzekering is goedgekeurd door ons team."
+    reference:
+      title: "Referentienummer"
+    next_steps:
+      title: "Volgende stappen"
+      step1: "Onze adviseur neemt binnen 48 uur contact met u op om uw contract af te ronden"
+      step2: "Bereid uw identiteitsdocumenten en bewijsstukken voor"
+      step3: "Onderteken uw contract en geniet van uw dekking"
+    contact:
+      title: "Hulp nodig?"
+      phone_service: "Telefonische service"
+      email_support: "Email ondersteuning"
+    closing_message: "Dank u voor uw vertrouwen. Ons team kijkt ernaar uit u te begeleiden in deze nieuwe stap."

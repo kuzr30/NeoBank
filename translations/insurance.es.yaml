@@ -1,0 +1,214 @@
+insurance:
+  # Meta tags
+  meta:
+    title: "Seguros Bancarios - Protección Completa - %company_name%"
+    description: "Descubra nuestras soluciones de seguro bancario completas: auto, hogar, salud, viaje y más. Protección óptima con %company_name%."
+
+  # Hero Section
+  hero:
+    title_part1: "Su Socio"
+    title_accent: "Seguro"
+    title_part2: "de Confianza"
+    description: "Ahorre y compare los presupuestos de seguro auto. Personalice su cobertura y obtenga la mejor oferta en pocos minutos."
+    email_placeholder: "Su Email"
+    cta_button: "Obtener un Presupuesto"
+    support_badge: "Atención al Cliente"
+    nav:
+      auto: "Auto"
+      home: "Hogar"
+      health: "Salud"
+      life: "Vida"
+      professional: "Profesional"
+  
+  packages:
+    title: "Nuestras Fórmulas de Seguro"
+    subtitle: "Soluciones adaptadas a sus necesidades - elija la que le conviene mejor"
+    essential:
+      title: "Cobertura Esencial"
+      description: "Protección básica para su tranquilidad con una tarifa asequible"
+      features:
+        - "Responsabilidad civil"
+        - "Protección jurídica"
+    standard:
+      badge: "Recomendado"
+      title: "Cobertura Estándar"
+      description: "Un plan equilibrado que ofrece protección reforzada y ventajas extendidas"
+      features:
+        - "Todo riesgo colisión"
+        - "Vehículo de reemplazo"
+    premium:
+      title: "Cobertura Premium"
+      description: "Cobertura completa con ventajas exclusivas para una seguridad total"
+      features:
+        - "Cobertura todo riesgo"
+        - "Conductor secundario"
+    custom:
+      title: "Cobertura a Medida"
+      description: "Cree su propio plan - elija las garantías que más le corresponden"
+      features:
+        - "Garantías modulables"
+        - "Ajustes flexibles"  # Section hero original (para hero_assurances.html.twig)  
+  hero_banner:
+    badge: "Protección Bancaria Integral"
+    title: "Proteja su patrimonio con nuestros"
+    title_highlight: "seguros bancarios"
+    description: "Descubra nuestras soluciones de seguro diseñadas especialmente para proteger sus inversiones, sus créditos y su tranquilidad. Más de 50 000 clientes confían en nosotros."
+    stats:
+      satisfaction:
+        value: "98%"
+        label: "Satisfacción del cliente"
+      processing:
+        value: "24h"
+        label: "Tratamiento presupuesto"
+      types:
+        value: "12"
+        label: "Tipos de seguro"
+    actions:
+      primary: "Descubrir nuestros seguros"
+      secondary: "Por qué elegirnos"
+    cards:
+      home:
+        title: "Seguro de Hogar"
+        description: "Protección completa de su domicilio"
+      loan:
+        title: "Seguro de Préstamo"
+        description: "Asegure sus reembolsos"
+      auto:
+        title: "Seguro Auto"
+        description: "Conduzca con total serenidad"
+
+  # Insurance Types Section
+  types:
+    header:
+      title: "Nos Solutions d'Assurance"
+      subtitle: "Une gamme complète d'assurances adaptées à tous vos besoins, avec des tarifs compétitifs et un service client d'exception."
+    auto:
+      title: "Seguro Auto"
+      description: "Protección completa para su vehículo con asistencia 24h/24 y garantías extendidas."
+      features:
+        - "Asistencia 24h/24 y 7d/7"
+        - "Reparación en todos nuestros socios"
+        - "Vehículo de reemplazo"
+        - "Protección del conductor"
+        - "Rotura de cristales incluida"
+      cta: "Obtener un presupuesto auto"
+      popular: "Popular"
+    credit:
+      title: "Seguro Prestatario"
+      description: "Proteja a su familia y sus proyectos en caso de incapacidad de reembolso de su crédito."
+      features:
+        - "Cobertura fallecimiento e invalidez"
+        - "Incapacidad temporal de trabajo"
+        - "Pérdida de empleo (opción)"
+        - "Tarifas preferenciales clientes"
+        - "Delegación de seguro posible"
+      cta: "Obtener un presupuesto crédito"
+    home:
+      title: "Seguro de Hogar"
+      description: "Proteja su vivienda y sus bienes contra todos los riesgos del día a día."
+      features:
+        - "Multirriesgo hogar completa"
+        - "Responsabilidad civil incluida"
+        - "Asistencia reparación 24h/24"
+        - "Protección jurídica"
+        - "Bienes nómadas cubiertos"
+      cta: "Obtener un presupuesto hogar"
+    health:
+      title: "Assurance Santé"
+      description: "Complémentaire santé adaptée à vos besoins avec un large réseau de professionnels."
+      features:
+        - "Remboursements rapides"
+        - "Tiers payant généralisé"
+        - "Téléconsultation incluse"
+        - "Médecines douces couvertes"
+        - "Optique et dentaire renforcés"
+      cta: "Obtenir un devis santé"
+    life:
+      title: "Seguro de Vida"
+      description: "Asegure el futuro de sus seres queridos y prepare su retiro serenamente."
+      features:
+        - "Capital garantizado en caso de fallecimiento"
+        - "Inversión a largo plazo"
+        - "Ventajas fiscales atractivas"
+        - "Cláusula beneficiario modificable"
+        - "Rescates parciales autorizados"
+      cta: "Obtener un presupuesto vida"
+    travel:
+      title: "Seguro de Viaje"
+      description: "Viaje con tranquilidad con una cobertura completa para todas sus salidas al extranjero."
+      features:
+        - "Asistencia médica internacional"
+        - "Repatriación sanitaria"
+        - "Equipajes y efectos personales"
+        - "Anulación y interrupción de estancia"
+        - "Responsabilidad civil en el extranjero"
+      cta: "Obtener un presupuesto viaje"
+    professional:
+      title: "Seguro Profesional"
+      description: "Proteja su actividad profesional con nuestras garantías a medida."
+      features:
+        - "Responsabilidad civil profesional"
+        - "Protección jurídica"
+        - "Multirriesgo profesional"
+        - "Ciber-riesgos incluidos"
+        - "Pérdida de explotación"
+      cta: "Obtener un presupuesto profesional"
+    decennial:
+      title: "Responsabilidad Decenal"
+      description: "Obligación legal para todos los profesionales de la construcción y edificación."
+      features:
+        - "Cobertura 10 años obligatoria"
+        - "Defensa y recursos"
+        - "Daños a las obras"
+        - "Atestación inmediata"
+        - "Tarifas preferenciales"
+      cta: "Obtener un presupuesto decenal"
+
+  # Benefits Section
+  benefits:
+    title: "¿Por qué elegir nuestros seguros?"
+    competitive_rates:
+      title: "Tarifas competitivas"
+      description: "Ofertas adaptadas a todos los presupuestos, sin comprometer la calidad de cobertura."
+    support_24_7:
+      title: "Soporte 24/7"
+      description: "Una asistencia reactiva y humana, disponible en cualquier momento para acompañarle."
+    online_management:
+      title: "Gestión 100% en línea"
+      description: "Suscripción, gestión y seguimiento de sus contratos directamente desde su espacio cliente seguro."
+    custom_offers:
+      title: "Ofertas a medida"
+      description: "Soluciones personalizadas según sus necesidades, ya sea particular o profesional."
+
+  # Process Section
+  process:
+    title: "¡Suscribir un seguro es simple!"
+    steps:
+      choose:
+        title: "Elija su tipo de seguro"
+        description: "Seleccione el tipo de cobertura que corresponde a sus necesidades"
+      form:
+        title: "Complete el formulario de presupuesto en línea"
+        description: "Unas pocas informaciones son suficientes para obtener su propuesta"
+      proposal:
+        title: "Reciba una propuesta personalizada"
+        description: "Nuestro equipo estudia su expediente y le propone la mejor oferta"
+      subscribe:
+        title: "Suscriba y esté protegido inmediatamente"
+        description: "Validación en línea y protección efectiva desde la firma"
+
+  # Contact CTA Section
+  contact_cta:
+    title: "¿Necesita un consejo o un presupuesto?"
+    description: "Nuestros consejeros están a su disposición para acompañarle en su proyecto de seguro."
+    button: "Contáctenos"
+
+  # Common elements
+  common:
+    get_quote: "Obtener un presupuesto"
+    learn_more: "Saber más"
+    contact_us: "Contáctenos"
+    from: "Desde"
+    per_month: "por mes"
+    popular: "Popular"
+    recommended: "Recomendado"

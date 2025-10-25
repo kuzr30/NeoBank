@@ -1,0 +1,10 @@
+# Translations for admin - Scheduled emails
+email_template:
+  subject:
+    kyc_rejected: "KYC Verification - Action Required"
+    incomplete_account: "Complete Your Profile - Action Required"
+    fees_inquiry: "Information About Banking Fees"
+    account_activation_reminder: "Reminder - Activate Your Account"
+    credit_application_incomplete: "Your Credit Application - Missing Information"
+    account_creation_follow_up: "Application Follow-up - Account Creation Required"
+    payment_details: "Payment of €%amount% - Bank Details for INSTANT Transfer"

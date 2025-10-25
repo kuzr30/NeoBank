@@ -1,0 +1,107 @@
+help_center_security:
+  page:
+    title: "Sicherheit und Schutz - Hilfezentrum %company_name%"
+    
+  hero:
+    title: "Sicherheit und Schutz"
+    subtitle: "Schützen Sie Ihre Konten und Transaktionen mit unseren fortschrittlichen Sicherheitsmaßnahmen"
+    
+  sections:
+    main_title: "Ihre Sicherheit ist Unsere Priorität"
+    
+    authentication:
+      title: "Authentifizierung und Zugang"
+      description: "Sichern Sie den Zugang zu Ihren Konten mit unseren robusten Authentifizierungssystemen"
+      items:
+        two_factor:
+          title: "Zwei-Faktor-Authentifizierung (2FA)"
+          description: "Verstärken Sie die Sicherheit Ihres Kontos mit doppelter Verifikation"
+          details: "Aktivieren Sie 2FA in Ihren Sicherheitseinstellungen. Verwenden Sie eine Authentifizierungs-App (Google Authenticator, Authy) oder erhalten Sie Codes per SMS."
+        strong_passwords:
+          title: "Sichere Passwörter"
+          description: "Erstellen Sie robuste Passwörter zum Schutz Ihrer Konten"
+          details: "Verwenden Sie mindestens 12 Zeichen mit Groß-, Kleinbuchstaben, Zahlen und Symbolen. Vermeiden Sie persönliche Informationen, die leicht zu erraten sind."
+        biometric:
+          title: "Biometrische Authentifizierung"
+          description: "Verwenden Sie Ihren Fingerabdruck oder Gesichtserkennung"
+          details: "Aktivieren Sie Touch ID oder Face ID auf der mobilen App für schnellen und sicheren Zugang zu Ihren Konten."
+        session_management:
+          title: "Session-Verwaltung"
+          description: "Kontrollieren Sie Ihre aktiven Verbindungen und Zugangshistorie"
+          details: "Überwachen Sie Ihre aktiven Sessions, loggen Sie sich von nicht erkannten Geräten aus und prüfen Sie die Geschichte Ihrer Verbindungen."
+          
+    fraud_prevention:
+      title: "Betrugsvorbeugung"
+      description: "Unsere fortschrittlichen Systeme schützen Ihre Transaktionen vor Betrug"
+      items:
+        real_time_monitoring:
+          title: "Echtzeit-Überwachung"
+          description: "Automatische Erkennung verdächtiger Aktivitäten"
+          details: "Unsere KI-Algorithmen analysieren jede Transaktion in Echtzeit, um abnormales Verhalten zu erkennen und Betrugsversuche zu blockieren."
+        transaction_alerts:
+          title: "Transaktions-Warnungen"
+          description: "Sofortige Benachrichtigungen für alle Ihre Operationen"
+          details: "Erhalten Sie Benachrichtigungen per SMS oder E-Mail für jede Transaktion. Stellen Sie persönliche Schwellenwerte ein, um bei großen Beträgen gewarnt zu werden."
+        card_controls:
+          title: "Kartenkontrollen"
+          description: "Verwalten Sie Ihre Karten und begrenzen Sie deren Nutzung"
+          details: "Blockieren Sie vorübergehend Ihre Karten, setzen Sie geografische und Betragslimits, aktivieren/deaktivieren Sie Online-Zahlungen."
+        merchant_verification:
+          title: "Händler-Verifizierung"
+          description: "Validierung der Identität von Online-Händlern"
+          details: "Wir verifizieren die Identität und den Ruf von Händlern, um Betrugsrisiken bei Ihren Online-Einkäufen zu reduzieren."
+          
+    data_protection:
+      title: "Datenschutz"
+      description: "Ihre persönlichen Informationen werden nach höchsten Standards geschützt"
+      items:
+        encryption:
+          title: "End-to-End-Verschlüsselung"
+          description: "Alle Ihre Daten sind mit den neuesten Standards verschlüsselt"
+          details: "Wir verwenden AES-256-Verschlüsselung zum Schutz Ihrer Daten in Transit und at Rest. Ihre Informationen sind ohne die entsprechenden Schlüssel unlesbar."
+        gdpr_compliance:
+          title: "DSGVO-Konformität"
+          description: "Vollständige Einhaltung der Datenschutz-Grundverordnung"
+          details: "Wir respektieren Ihre Rechte: Zugang, Berichtigung, Löschung und Übertragbarkeit Ihrer Daten. Kontaktieren Sie unseren DSB für jede Anfrage."
+        data_minimization:
+          title: "Datenminimierung"
+          description: "Wir sammeln nur strikt notwendige Daten"
+          details: "Minimierungsprinzip: Wir begrenzen die Sammlung auf Daten, die für unsere Dienste unerlässlich sind, und bewahren sie nur so lange wie nötig auf."
+        secure_storage:
+          title: "Sichere Speicherung"
+          description: "Zertifizierte und hochsichere Rechenzentren"
+          details: "Unsere Server werden in ISO 27001-zertifizierten Rechenzentren gehostet, mit 24/7 physischer Sicherheit und geografischer Redundanz."
+          
+    incident_response:
+      title: "Incident Response"
+      description: "Schnelle Verfahren bei Sicherheitsproblemen"
+      items:
+        immediate_action:
+          title: "Sofortige Maßnahmen"
+          description: "Was zu tun ist, wenn Sie verdächtige Aktivitäten erkennen"
+          details: "Kontaktieren Sie sofort unsere 24/7-Sicherheitslinie unter Téléphone. Ändern Sie Ihre Passwörter und überprüfen Sie Ihre letzten Transaktionen."
+        account_recovery:
+          title: "Konto-Wiederherstellung"
+          description: "Wiederherstellungsverfahren bei Kompromittierung"
+          details: "Verstärkter Identitätsverifikationsprozess, sichere Zurücksetzung der Zugänge und vollständige Prüfung Ihres Kontos."
+        investigation:
+          title: "Untersuchung und Nachverfolgung"
+          description: "Gründliche Untersuchung von Sicherheitsvorfällen"
+          details: "Unser Cybersecurity-Team analysiert jeden Vorfall, identifiziert Ursachen und implementiert zusätzliche präventive Maßnahmen."
+        compensation:
+          title: "Schutz und Erstattung"
+          description: "Garantie der Erstattung bei nachgewiesenem Betrug"
+          details: "Vollständiger Schutz vor Betrug: schnelle Erstattung gestohlener Beträge und persönliche Unterstützung bei der Regularisierung."
+          
+    tips:
+      title: "Sicherheitstipps"
+      description: "Bewährte Praktiken zum täglichen Schutz Ihrer Konten"
+      items:
+        - "Teilen Sie niemals Ihre Anmeldedaten"
+        - "Überprüfen Sie immer die URL, bevor Sie Ihre Daten eingeben"
+        - "Verwenden Sie sichere WiFi-Netzwerke für Ihre Bankgeschäfte"
+        - "Aktualisieren Sie regelmäßig Ihre Apps und Browser"
+        - "Loggen Sie sich immer aus nach der Nutzung auf einem geteilten Gerät"
+        - "Überwachen Sie regelmäßig Ihre Kontoauszüge"
+        - "Melden Sie sofort jede verdächtige Aktivität"
+        - "Aktivieren Sie Benachrichtigungen für alle Ihre Transaktionen"

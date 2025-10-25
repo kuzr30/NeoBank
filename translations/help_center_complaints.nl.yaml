@@ -1,0 +1,66 @@
+help_center_complaints:
+  # Breadcrumb
+  breadcrumb:
+    home: "Home"
+    support: "Ondersteuning"
+    complaints: "Klachten"
+  
+  # Hero section
+  title: "Klachten"
+  subtitle: "Uw tevredenheid is onze prioriteit. We behandelen elke klacht serieus en transparant."
+  
+  # Process section
+  process:
+    title: "Klachtenproces"
+    subtitle: "Hoe we uw klachten behandelen"
+    
+    step1:
+      title: "Klacht indienen"
+      description: "Dien uw klacht in via het online formulier of direct op kantoor"
+      
+    step2:
+      title: "Ontvangstbevestiging"
+      description: "Bevestiging binnen 2 werkdagen met toewijzing van een volgnummer"
+      
+    step3:
+      title: "Analyse en behandeling"
+      description: "Grondige beoordeling van uw zaak door onze gekwalificeerde specialisten"
+      
+    step4:
+      title: "Oplossing en reactie"
+      description: "Gedetailleerde reactie en voorgestelde oplossing binnen maximaal 15 werkdagen"
+  
+  # Contact section
+  contact:
+    title: "Contact Opnemen"
+    subtitle: "Verschillende manieren om uw zorgen met ons te delen"
+    
+    phone:
+      title: "Per Telefoon"
+      hours: "Maandag tot vrijdag van 8:00 tot 18:00"
+      
+    email:
+      title: "Per E-mail"
+      response_time: "Reactie binnen 48 uur"
+      
+    branch:
+      title: "Op Kantoor"
+      address: "Adresse"
+      hours: "Maandag tot vrijdag van 9:00 tot 17:00"
+  
+  # Tracking section
+  tracking:
+    title: "Uw klacht volgen"
+    subtitle: "Voer uw referentienummer in om de voortgang te bekijken"
+    placeholder: "Bijv.: REF-2024-123456"
+    search: "Zoeken"
+    searching: "Aan het zoeken..."
+    
+    status:
+      received: "Klacht ontvangen"
+      in_progress: "In behandeling"
+      resolved: "Opgelost"
+      
+    error:
+      empty: "Voer een volgnummer in"
+      invalid: "Het volgnummer moet minstens 5 karakters bevatten"

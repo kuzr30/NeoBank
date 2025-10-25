@@ -1,0 +1,52 @@
+transfer_manager:
+  exceptions:
+    account_blocked: "Votre compte est bloqué. Contactez l'administration."
+    transfer_expired: "Ce virement a expiré."
+    transfer_not_cancellable: "Ce virement ne peut pas être annulé."
+    transfer_not_validatable: "Ce virement ne peut pas être validé."
+    transfer_not_blockable: "Ce virement ne peut pas être bloqué."
+    transfer_not_blocked: "Ce virement n'est pas bloqué."
+    
+  user_messages:
+    account_blocked: "Votre compte est bloqué. Contactez l'administration."
+    transfer_expired: "Ce virement a expiré."
+    code_expired: "Ce code ne peut plus être validé (trop de tentatives échouées)."
+    code_validated_success: "Code validé avec succès. Virement en cours d'exécution."
+    account_blocked_attempts: "Compte bloqué après trop de tentatives échouées. Contactez l'administration."
+    no_pending_code: "Aucun code en attente. Générez d'abord un code."
+    transfer_completed: "Virement terminé avec succès !"
+    next_code_needed: "Code validé. Générez le prochain code pour continuer."
+    
+  admin_notes:
+    blocked_after_attempts: "Compte bloqué après 9 tentatives de validation incorrectes"
+    
+  log_messages:
+    transfer_initiated: "Nouveau virement initié avec débit immédiat"
+    code_added: "Code ajouté au virement"
+    code_validated_success: "Code validé avec succès"
+    code_attempt_failed: "Tentative de code échouée"
+    transfer_executed: "Virement exécuté avec succès"
+    transfer_execution_failed: "Échec de l'exécution du virement"
+    user_unblocked: "Utilisateur débloqué"
+    code_expired_next_requested: "Code expiré - demande du code suivant"
+    cancellation_started: "Début annulation virement"
+    amount_recredited: "Montant recredité suite à annulation"
+    transfer_cancelled: "Virement annulé avec succès"
+    transfer_blocked: "Virement bloqué par le service transfert"
+    transfer_unblocked: "Virement débloqué par admin"
+    admin_validation_simulated: "Validation simulée par l'administration"
+    
+  transaction_notes:
+    money_debited_on_init: "Argent déjà débité lors de l'initiation"
+    money_always_debited_comment: "TOUJOURS recréditer le montant car l'argent est TOUJOURS débité lors de l'initiation"
+
+  validation:
+    amount_must_be_positive: "Le montant doit être un nombre positif."
+    insufficient_credit_amount: "Montant insuffisant dans le compte crédit."
+  
+  errors:
+    sub_account_not_found: "Sous-compte crédit non trouvé"
+    no_pending_transfer: "Aucun transfert en attente."
+    verification_code_expired: "Code de vérification expiré."
+    verification_code_invalid: "Code de vérification invalide."
+    insufficient_amount: "Montant insuffisant"

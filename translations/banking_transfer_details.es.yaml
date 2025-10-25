@@ -1,0 +1,30 @@
+banking_transfer_details:
+  header:
+    title: "Detalles de la transferencia"
+    subtitle: "Información completa sobre su transferencia"
+    back_button: "Volver a la lista"
+  
+  transfer_card:
+    title: "Transferencia"
+  
+  status:
+    pending: "En espera"
+    executing: "En curso de ejecución"
+    completed: "Completado"
+    expired: "Caducado"
+    cancelled: "Cancelado"
+    blocked: "Bloqueado"
+  
+  details:
+    amount_label: "Importe"
+    beneficiary_account_label: "Cuenta beneficiaria"
+    beneficiary_iban_label: "IBAN beneficiario"
+    description_label: "Descripción"
+    creation_date_label: "Fecha de creación"
+    execution_date_label: "Fecha de ejecución"
+    ip_address_label: "Dirección IP"
+    ip_not_available: "No disponible"
+  
+  actions:
+    continue_validation: "Continuar la validación"
+    success_message: "Esta transferencia se ha ejecutado con éxito"

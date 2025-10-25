@@ -1,0 +1,5 @@
+banking_controller:
+  flash:
+    kyc_required: "Vous devez compléter votre vérification d'identité (KYC) pour accéder aux services bancaires."
+  transactions:
+    transfer_outgoing: "Virement sortant"

@@ -1,0 +1,128 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: help_center_branches.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+help_center_branches:
+  page:
+    title: "Our Branches - %company_name% Help Center"
+    
+  hero:
+    title: "Find Your %company_name% Branch"
+    subtitle: "Discover our branches near you and enjoy our personalized services"
+    
+  sections:
+    main_title: "Our Branches at Your Service"
+    
+    locator:
+      title: "Branch Locator"
+      description: "Find the branch closest to your home or workplace"
+      search_placeholder: "Enter your city or postal code"
+      map_title: "Branch Map"
+      
+    services:
+      title: "Branch Services"
+      description: "Discover all services available at our branches"
+      items:
+        consultation:
+          title: "Personalized Advice"
+          description: "Meet with our advisors for your financial projects"
+          details: "Private consultations for loans, savings, insurance and investments. Make appointments online or by phone."
+        account_opening:
+          title: "Account Opening"
+          description: "Open your account directly at the branch"
+          details: "Complete assistance for opening all types of accounts with immediate validation of your documents."
+        cash_services:
+          title: "Cash Services"
+          description: "Deposits, withdrawals and currency exchange"
+          details: "24/7 ATMs, counters for large bills, foreign currency exchange service."
+        safe_deposit:
+          title: "Safe Deposit Boxes"
+          description: "Secure safe deposit box rental"
+          details: "Different sizes available, secure access with two-factor authentication, insurance included."
+        business_services:
+          title: "Business Services"
+          description: "Solutions dedicated to professionals"
+          details: "Specialized support for business creators, professional financing, payment solutions."
+        digital_assistance:
+          title: "Digital Assistance"
+          description: "Training on online and mobile services"
+          details: "Free workshops to master the mobile app and online services, personalized assistance."
+          
+    branches:
+      title: "Our Main Branches"
+      description: "Find information about our main branches"
+      
+      brussels_center:
+        name: "%company_name% Brussels Center"
+        address: "Place Eugène Flagey 25, 1050 Brussels"
+        phone: "02 123 45 10"
+        hours:
+          monday_friday: "Mon-Fri: 9:00 AM - 5:00 PM"
+          saturday: "Sat: 9:00 AM - 12:00 PM"
+          sunday: "Sun: Closed"
+        services: "All services • Safe deposit boxes • Investment advice"
+        parking: "Free customer parking 2h"
+        
+      antwerp:
+        name: "%company_name% Antwerp"
+        address: "Meir 78, 2000 Antwerp"
+        phone: "03 234 56 20"
+        hours:
+          monday_friday: "Mon-Fri: 9:00 AM - 5:00 PM"
+          saturday: "Sat: 9:00 AM - 12:00 PM"
+          sunday: "Sun: Closed"
+        services: "All services • Business services • Digital training"
+        parking: "Paid parking nearby"
+        
+      ghent:
+        name: "%company_name% Ghent"
+        address: "Korenlei 12, 9000 Ghent"
+        phone: "09 345 67 30"
+        hours:
+          monday_friday: "Mon-Fri: 9:00 AM - 5:00 PM"
+          saturday: "Sat: 9:00 AM - 12:00 PM"
+          sunday: "Sun: Closed"
+        services: "All services • Wealth management • Currency exchange"
+        parking: "Pedestrian zone - Vrijdagmarkt Parking"
+        
+      liege:
+        name: "%company_name% Liège"
+        address: "Place Saint-Lambert 41, 4000 Liège"
+        phone: "04 456 78 40"
+        hours:
+          monday_friday: "Mon-Fri: 9:00 AM - 5:00 PM"
+          saturday: "Sat: 9:00 AM - 12:00 PM"
+          sunday: "Sun: Closed"
+        services: "All services • Specialized loans • Insurance"
+        parking: "Opéra Parking 2 min away"
+        
+    appointment:
+      title: "Make an Appointment"
+      description: "Book a time slot with our advisors"
+      online_booking: "Online Booking"
+      phone_booking: "By Phone: Phone"
+      reasons:
+        - "Investment advice"
+        - "Loan application"
+        - "Account opening"
+        - "Insurance and protection"
+        - "Business services"
+        - "Digital training"
+        
+    accessibility:
+      title: "Accessibility"
+      description: "Our branches are accessible to everyone"
+      features:
+        wheelchair: "Wheelchair access in all our branches"
+        hearing: "Hearing loops for the hearing impaired"
+        visual: "Tactile guidance and braille signage"
+        assistance: "Staff trained to welcome people with disabilities"
+        
+    contact:
+      title: "Contact and Emergencies"
+      description: "Need help? Contact us"
+      emergency_line: "24/7 Emergency Line: Phone"
+      customer_service: "Customer Service: Phone"
+      email: "Email"
+      chat: "Online chat available on our website"

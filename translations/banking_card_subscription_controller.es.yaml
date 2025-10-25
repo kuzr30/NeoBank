@@ -1,0 +1,61 @@
+banking_card_subscription_controller:
+  # Interface utilisateur
+  ui:
+    confirm_card_title: "Confirme su"
+    advantages_title: "Ventajas incluidas"
+    limits_title: "Límites"
+    request_card_button: "Solicitar esta tarjeta"
+    cancel_button: "Cancelar"
+  
+  flash:
+    kyc_required: "Debe completar su verificación de identidad para acceder a los servicios de tarjetas bancarias."
+    existing_card_or_subscription: "Ya tiene una tarjeta o una solicitud en curso."
+    no_active_account: "Debe tener una cuenta activa para suscribir una tarjeta."
+    subscription_success: "Su solicitud de suscripción ha sido registrada con éxito. Recibirá una notificación tan pronto como sea procesada."
+    subscription_error: "Ha ocurrido un error durante el registro de su solicitud. Por favor inténtelo de nuevo."
+    access_denied_subscription: "Acceso denegado a esta suscripción."
+    cannot_cancel_subscription: "Solo las suscripciones pendientes pueden ser canceladas."
+    invalid_security_token: "Token de seguridad inválido."
+    subscription_cancelled: "Su solicitud de suscripción ha sido cancelada con éxito."
+    cancellation_error: "Ha ocurrido un error durante la cancelación."
+  card_info:
+    classic:
+      title: "Tarjeta Classic"
+      description: "Ideal para empezar, gratuita el primer año"
+      price: "Gratuita el primer año"
+      features:
+        - "Pagos sin contacto"
+        - "Retiradas gratuitas en toda Europa"
+        - "Seguro de compras incluido"
+        - "Aplicación móvil dedicada"
+      limits:
+        - "Límite de retirada: 300€/día"
+        - "Límite de pago: 1.000€/día"
+    gold:
+      title: "Tarjeta Gold"
+      description: "La opción más popular para uso diario"
+      price: "5€ por mes"
+      features:
+        - "Todas las ventajas de la tarjeta Classic"
+        - "Seguro de viaje incluido"
+        - "Garantía extensión de garantía"
+        - "Conserjería 24h/24"
+        - "Reembolso cashback 1%"
+      limits:
+        - "Límite de retirada: 500€/día"
+        - "Límite de pago: 2.500€/día"
+    platinum:
+      title: "Tarjeta Platinum"
+      description: "La cumbre de la excelencia bancaria"
+      price: "15€ por mes"
+      features:
+        - "Todas las ventajas de la tarjeta Gold"
+        - "Acceso a salones VIP de aeropuertos"
+        - "Seguro de viaje premium"
+        - "Conserjería premium 24h/24"
+        - "Reembolso cashback 2%"
+        - "Gestor de cuenta dedicado"
+      limits:
+        - "Límite de retirada: 1.000€/día"
+        - "Límite de pago: 5.000€/día"
+  automated_request: "Solicitud automática vía interfaz bancaria"

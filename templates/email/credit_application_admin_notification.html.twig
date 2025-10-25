@@ -1,0 +1,113 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_credit_application_admin_notification.title', {applicationId: '%06d'|format(creditApplicationId)}, 'email_credit_application_admin_notification') }}{% endblock %}
+
+{% block content %}
+    <div style="background-color: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 20px; margin-bottom: 30px;">
+        <h1 style="color: #856404; margin: 0 0 10px 0; font-size: 24px;">
+            {{ tp('email_credit_application_admin_notification.content.page_title', {}, 'email_credit_application_admin_notification') }}
+        </h1>
+        <p style="color: #856404; margin: 0; font-size: 16px;">
+            {{ tp('email_credit_application_admin_notification.content.subtitle', {}, 'email_credit_application_admin_notification') }}
+        </p>
+    </div>
+
+    <div style="background-color: #f8f9fa; border-radius: 8px; padding: 25px; margin-bottom: 30px;">
+        <h2 style="color: #007bff; font-size: 20px; margin: 0 0 20px 0; border-bottom: 1px solid #e9ecef; padding-bottom: 10px;">
+            {{ tp('email_credit_application_admin_notification.content.request_details.title', {}, 'email_credit_application_admin_notification') }}
+        </h2>
+        
+        <div style="display: grid; gap: 15px;">
+            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #e9ecef;">
+                <span style="font-weight: 600; color: #495057;">{{ tp('email_credit_application_admin_notification.content.request_details.request_number', {}, 'email_credit_application_admin_notification') }}</span>
+                <span style="color: #212529; font-family: monospace; font-weight: 600; font-size: 16px;">
+                    #{{ '%06d'|format(creditApplicationId) }}
+                </span>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #e9ecef;">
+                <span style="font-weight: 600; color: #495057;">{{ tp('email_credit_application_admin_notification.content.request_details.submission_date', {}, 'email_credit_application_admin_notification') }}</span>
+                <span style="color: #212529;">{{ "now"|date("d/m/Y à H:i") }}</span>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: #e3f2fd; border-radius: 8px; padding: 25px; margin-bottom: 30px;">
+        <h3 style="color: #1976d2; font-size: 18px; margin: 0 0 20px 0; border-bottom: 1px solid #bbdefb; padding-bottom: 10px;">
+            {{ tp('email_credit_application_admin_notification.content.client_info.title', {}, 'email_credit_application_admin_notification') }}
+        </h3>
+        
+        <div style="display: grid; gap: 15px;">
+            <div style="display: flex; justify-content: space-between; padding: 8px 0;">
+                <span style="font-weight: 600; color: #495057;">{{ tp('email_credit_application_admin_notification.content.client_info.full_name', {}, 'email_credit_application_admin_notification') }}</span>
+                <span style="color: #212529; font-weight: 600;">{{ customerName }}</span>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; padding: 8px 0;">
+                <span style="font-weight: 600; color: #495057;">{{ tp('email_credit_application_admin_notification.content.client_info.email', {}, 'email_credit_application_admin_notification') }}</span>
+                <span style="color: #212529;">
+                    <a href="mailto:{{ customerEmail }}" style="color: #007bff; text-decoration: none;">
+                        {{ customerEmail }}
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: #e8f5e8; border-radius: 8px; padding: 25px; margin-bottom: 30px;">
+        <h3 style="color: #2e7d32; font-size: 18px; margin: 0 0 20px 0; border-bottom: 1px solid #c8e6c9; padding-bottom: 10px;">
+            {{ tp('email_credit_application_admin_notification.content.credit_details.title', {}, 'email_credit_application_admin_notification') }}
+        </h3>
+        
+        <div style="display: grid; gap: 15px;">
+            <div style="display: flex; justify-content: space-between; padding: 8px 0;">
+                <span style="font-weight: 600; color: #495057;">{{ tp('email_credit_application_admin_notification.content.credit_details.amount_requested', {}, 'email_credit_application_admin_notification') }}</span>
+                <span style="color: #2e7d32; font-weight: 700; font-size: 18px;">
+                    {{ loanAmount|number_format(2, ',', ' ') }} €
+                </span>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; padding: 8px 0;">
+                <span style="font-weight: 600; color: #495057;">{{ tp('email_credit_application_admin_notification.content.credit_details.credit_type', {}, 'email_credit_application_admin_notification') }}</span>
+                <span style="color: #212529; font-weight: 600;">{{ creditType|title }}</span>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; padding: 8px 0;">
+                <span style="font-weight: 600; color: #495057;">{{ tp('email_credit_application_admin_notification.content.credit_details.duration', {}, 'email_credit_application_admin_notification') }}</span>
+                <span style="color: #212529; font-weight: 600;">{{ tp('email_credit_application_admin_notification.content.credit_details.duration_months', {duration: duration}, 'email_credit_application_admin_notification') }}</span>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: #fff2e6; border-left: 4px solid #ff9800; padding: 20px; margin-bottom: 30px;">
+        <h4 style="color: #f57c00; margin: 0 0 10px 0; font-size: 16px;">
+            {{ tp('email_credit_application_admin_notification.content.required_actions.title', {}, 'email_credit_application_admin_notification') }}
+        </h4>
+        <ul style="color: #ef6c00; margin: 0; padding-left: 20px; line-height: 1.6;">
+            <li>{{ tp('email_credit_application_admin_notification.content.required_actions.review_within_24h', {}, 'email_credit_application_admin_notification') }}</li>
+            <li>{{ tp('email_credit_application_admin_notification.content.required_actions.verify_solvency', {}, 'email_credit_application_admin_notification') }}</li>
+            <li>{{ tp('email_credit_application_admin_notification.content.required_actions.analyze_documents', {}, 'email_credit_application_admin_notification') }}</li>
+            <li>{{ tp('email_credit_application_admin_notification.content.required_actions.make_decision', {}, 'email_credit_application_admin_notification') }}</li>
+        </ul>
+    </div>
+
+    <div style="text-align: center; margin: 30px 0;">
+        <a href="{{ path('app_admin_dashboard_credit_application_index') }}" 
+           style="display: inline-block; background-color: #007bff; color: white; padding: 15px 30px; 
+                  text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px; margin-right: 10px;">
+            {{ tp('email_credit_application_admin_notification.content.view_admin_button', {}, 'email_credit_application_admin_notification') }}
+        </a>
+        
+        <a href="mailto:{{ customerEmail }}" 
+           style="display: inline-block; background-color: #28a745; color: white; padding: 15px 30px; 
+                  text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px;">
+            {{ tp('email_credit_application_admin_notification.content.contact_client_button', {}, 'email_credit_application_admin_notification') }}
+        </a>
+    </div>
+
+    <div style="border-top: 1px solid #e9ecef; padding-top: 20px; color: #6c757d; font-size: 14px;">
+        <p style="margin: 0;">
+            {{ tp('email_credit_application_admin_notification.content.footer_note', {}, 'email_credit_application_admin_notification')|raw }}
+        </p>
+    </div>
+{% endblock %}

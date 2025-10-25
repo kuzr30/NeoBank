@@ -1,0 +1,70 @@
+profile_kyc_index:
+  page:
+    title: "Verificación de identidad (KYC) - %company_name%"
+  
+  header:
+    title: "Verificación de identidad (KYC)"
+    subtitle: "Confirme su identidad para acceder a todos nuestros servicios"
+  
+  alerts:
+    rejected:
+      title: "Verificación de identidad rechazada"
+      text: "Su solicitud de verificación de identidad ha sido rechazada."
+      reason: "Razón:"
+      action_text: "Puede enviar nuevos documentos haciendo clic en el botón de abajo."
+      common_reasons:
+        documents_non_conformes: "Documentos no conformes"
+        documents_illegibles: "Documentos ilegibles"
+        documents_expires: "Documentos caducados"
+        quality_insufficient: "Calidad insuficiente"
+        missing_information: "Información faltante"
+    pending:
+      title: "Verificación en curso"
+      text: "Su solicitud de verificación de identidad está siendo examinada. Será notificado por email tan pronto como se complete el procesamiento."
+    approved:
+      title: "Verificación de identidad aprobada"
+      text: "¡Felicitaciones! Su identidad ha sido verificada con éxito. Ahora tiene acceso a todos nuestros servicios bancarios."
+    required:
+      title: "Verificación de identidad requerida"
+      text: "Para acceder a nuestros servicios bancarios, primero debe verificar su identidad. Este paso es obligatorio debido a las regulaciones KYC."
+  
+  documents:
+    title: "Documentos requeridos"
+    subtitle: "Asegure su cuenta verificando su identidad. Este paso es obligatorio debido a las regulaciones KYC."
+    
+    identity_document:
+      title: "Documento de identidad"
+      description: "Documento oficial en vigor"
+      items:
+        - "Cédula de Identidad Nacional"
+        - "Pasaporte"
+        - "Licencia de conducir"
+    
+    income_document:
+      title: "Comprobante de ingresos"
+      description: "Documento de menos de 3 meses"
+      items:
+        - "Nómina"
+        - "Declaración de impuestos"
+    
+    address_document:
+      title: "Comprobante de domicilio"
+      description: "Documento de menos de 3 meses"
+      items:
+        - "Factura (electricidad, gas, internet)"
+        - "Recibo de alquiler"
+    
+    selfie:
+      title: "Selfie"
+      badge: "Opcional"
+      description: "Foto con su documento de identidad"
+      items:
+        - "Rostro bien visible"
+        - "Documento de identidad legible"
+  
+  actions:
+    access_banking: "Acceder a mis servicios bancarios"
+    view_status: "Ver el estado de mi solicitud"
+    submit_documents: "Enviar mis documentos"
+    submit_new_documents: "Enviar nuevos documentos"
+    submission_guide: "Guía de envío"

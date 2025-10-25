@@ -1,0 +1,70 @@
+profile_kyc_index:
+  page:
+    title: "Identitätsprüfung (KYC) - %company_name%"
+  
+  header:
+    title: "Identitätsprüfung (KYC)"
+    subtitle: "Bestätigen Sie Ihre Identität, um Zugang zu all unseren Dienstleistungen zu erhalten"
+  
+  alerts:
+    rejected:
+      title: "Identitätsprüfung abgelehnt"
+      text: "Ihr Antrag auf Identitätsprüfung wurde abgelehnt."
+      reason: "Grund:"
+      action_text: "Sie können neue Dokumente einreichen, indem Sie auf die Schaltfläche unten klicken."
+      common_reasons:
+        documents_non_conformes: "Dokumente nicht konform"
+        documents_illegibles: "Dokumente unleserlich"
+        documents_expires: "Dokumente abgelaufen"
+        quality_insufficient: "Unzureichende Qualität"
+        missing_information: "Fehlende Informationen"
+    pending:
+      title: "Prüfung läuft"
+      text: "Ihr Antrag auf Identitätsprüfung wird derzeit geprüft. Sie werden per E-Mail benachrichtigt, sobald die Bearbeitung abgeschlossen ist."
+    approved:
+      title: "Identitätsprüfung genehmigt"
+      text: "Herzlichen Glückwunsch! Ihre Identität wurde erfolgreich verifiziert. Sie haben nun Zugang zu all unseren Bankdienstleistungen."
+    required:
+      title: "Identitätsprüfung erforderlich"
+      text: "Um Zugang zu unseren Bankdienstleistungen zu erhalten, müssen Sie zunächst Ihre Identität verifizieren. Dieser Schritt ist aufgrund der KYC-Vorschriften obligatorisch."
+  
+  documents:
+    title: "Erforderliche Dokumente"
+    subtitle: "Sichern Sie Ihr Konto, indem Sie Ihre Identität verifizieren. Dieser Schritt ist aufgrund der KYC-Vorschriften obligatorisch."
+    
+    identity_document:
+      title: "Ausweisdokument"
+      description: "Gültiges offizielles Dokument"
+      items:
+        - "Personalausweis"
+        - "Reisepass"
+        - "Führerschein"
+    
+    income_document:
+      title: "Einkommensnachweis"
+      description: "Dokument nicht älter als 3 Monate"
+      items:
+        - "Gehaltsabrechnung"
+        - "Steuerbescheid"
+    
+    address_document:
+      title: "Wohnsitznachweis"
+      description: "Dokument nicht älter als 3 Monate"
+      items:
+        - "Rechnung (Strom, Gas, Internet)"
+        - "Mietquittung"
+    
+    selfie:
+      title: "Selfie"
+      badge: "Optional"
+      description: "Foto mit Ihrem Ausweisdokument"
+      items:
+        - "Gesicht gut sichtbar"
+        - "Ausweisdokument lesbar"
+  
+  actions:
+    access_banking: "Zugang zu meinen Bankdienstleistungen"
+    view_status: "Status meines Antrags anzeigen"
+    submit_documents: "Meine Dokumente einreichen"
+    submit_new_documents: "Neue Dokumente einreichen"
+    submission_guide: "Einreichungsleitfaden"

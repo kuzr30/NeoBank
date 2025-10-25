@@ -1,0 +1,279 @@
+{# Contenu de l'onglet détails RIB dans le dashboard #}
+
+{# Inclure les notifications pour les requêtes AJAX #}
+{% include 'partials/_notifications.html.twig' %}
+
+<style>
+/* Styles spécifiques pour la vue détaillée du RIB */
+.banking__rib-show-card {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.banking__rib-show-header {
+    padding: 24px;
+    background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+    color: white;
+    text-align: center;
+}
+
+.banking__rib-show-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.banking__rib-show-subtitle {
+    font-size: 14px;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.banking__rib-show-body {
+    padding: 24px;
+}
+
+.banking__rib-detail {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid #f1f3f4;
+}
+
+.banking__rib-detail:last-child {
+    border-bottom: none;
+}
+
+.banking__rib-detail-icon {
+    width: 16px;
+    height: 16px;
+    color: #6c757d;
+    flex-shrink: 0;
+}
+
+.banking__rib-detail strong {
+    min-width: 150px;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.banking__rib-detail span {
+    flex: 1;
+    color: #495057;
+    font-size: 14px;
+}
+
+.banking__rib-iban-display {
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+    font-weight: 500;
+    color: #0066cc !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.banking__copy-iban-btn {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #6c757d;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.banking__copy-iban-btn:hover {
+    background: #e9ecef;
+    color: #0066cc;
+    border-color: #0066cc;
+}
+
+.banking__copy-iban-btn svg {
+    width: 12px;
+    height: 12px;
+}
+
+.banking__rib-show-actions {
+    padding: 20px 24px;
+    background: #f8f9fa;
+    border-top: 1px solid #f1f3f4;
+    display: flex;
+    gap: 12px;
+}
+
+.banking__back-btn,
+.banking__delete-btn {
+    flex: 1;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.banking__back-btn {
+    background: #0066cc;
+    color: white;
+}
+
+.banking__back-btn:hover {
+    background: #0052a3;
+    color: white;
+    text-decoration: none;
+}
+
+.banking__delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.banking__delete-btn:hover {
+    background: #c82333;
+    color: white;
+}
+
+.banking__back-btn svg,
+.banking__delete-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+@media (max-width: 768px) {
+    .banking__rib-show-actions {
+        flex-direction: column;
+    }
+}
+</style>
+
+<div class="banking__content">
+    <div class="banking__operations-header">
+        <div>
+            <h2 class="banking__account-title">{{ tp('banking_ribs.detail_page.title', [], 'banking_ribs') }}</h2>
+            <div class="banking__account-details">
+                <span>{{ tp('banking_ribs.detail_page.subtitle', [], 'banking_ribs') }}</span>
+            </div>
+        </div>
+        <div>
+            <a href="{{ path('banking_ribs') }}" class="banking__action-secondary" onclick="loadBankingTab('ribs'); return false;">
+                {{ ux_icon('heroicons:arrow-left', {'class': 'banking__nav-icon'}) }}
+                {{ tp('banking_ribs.detail_page.back_to_list', [], 'banking_ribs') }}
+            </a>
+        </div>
+    </div>
+
+    <div class="banking__rib-grid">
+        <div class="banking__rib-show-card">
+            
+            <div class="banking__rib-show-body">
+                <div class="banking__rib-detail">
+                    {{ ux_icon('heroicons:user', {'class': 'banking__rib-detail-icon'}) }}
+                    <strong>{{ tp('banking_ribs.detail_fields.account_name', [], 'banking_ribs') }}</strong>
+                    <span>{{ bank_account.accountName }}</span>
+                </div>
+                
+                <div class="banking__rib-detail">
+                    {{ ux_icon('heroicons:building-library', {'class': 'banking__rib-detail-icon'}) }}
+                    <strong>{{ tp('banking_ribs.detail_fields.bank_name', [], 'banking_ribs') }}</strong>
+                    <span>{{ bank_account.bankName }}</span>
+                </div>
+                
+                <div class="banking__rib-detail">
+                    {{ ux_icon('heroicons:credit-card', {'class': 'banking__rib-detail-icon'}) }}
+                    <strong>{{ tp('banking_ribs.detail_fields.full_iban', [], 'banking_ribs') }}</strong>
+                    <span class="banking__rib-iban-display">{{ bank_account.formattedIban }}</span>
+                    <button class="banking__copy-iban-btn" onclick="copyToClipboard('{{ bank_account.iban }}')">
+                        {{ ux_icon('heroicons:clipboard-document') }}
+                        {{ tp('banking_ribs.detail_fields.copy_button', [], 'banking_ribs') }}
+                    </button>
+                </div>
+            
+                
+                <div class="banking__rib-detail">
+                    {{ ux_icon('heroicons:calendar', {'class': 'banking__rib-detail-icon'}) }}
+                    <strong>{{ tp('banking_ribs.detail_fields.creation_date', [], 'banking_ribs') }}</strong>
+                    <span>{{ bank_account.createdAt|date('d/m/Y à H:i') }}</span>
+                </div>
+                
+                {% if bank_account.updatedAt %}
+                <div class="banking__rib-detail">
+                    {{ ux_icon('heroicons:clock', {'class': 'banking__rib-detail-icon'}) }}
+                    <strong>{{ tp('banking_ribs.detail_fields.last_modification', [], 'banking_ribs') }}</strong>
+                    <span>{{ bank_account.updatedAt|date('d/m/Y à H:i') }}</span>
+                </div>
+                {% endif %}
+            </div>
+            
+            <div class="banking__rib-show-actions">
+                <a href="{{ path('banking_ribs') }}" class="banking__back-btn" onclick="loadBankingTab('ribs'); return false;">
+                    {{ ux_icon('heroicons:arrow-left') }}
+                    {{ tp('banking_ribs.detail_page.back_to_list', [], 'banking_ribs') }}
+                </a>
+                
+                <form method="post" action="{{ path('banking_rib_delete', {'id': bank_account.id}) }}" 
+                      onsubmit="return confirm('{{ tp('banking_ribs.card_actions.delete_confirm', [], 'banking_ribs') }}');" style="flex: 1;">
+                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ bank_account.id) }}">
+                    <button type="submit" class="banking__delete-btn">
+                        {{ ux_icon('heroicons:trash') }}
+                        {{ tp('banking_ribs.detail_actions.delete_this_rib', [], 'banking_ribs') }}
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(function() {
+        // Utiliser le système de notifications existant
+        if (window.notify) {
+            window.notify.success('{{ tp('banking_ribs.js_messages.iban_copied', [], 'banking_ribs') }}');
+        } else {
+            alert('{{ tp('banking_ribs.js_messages.iban_copied', [], 'banking_ribs') }}');
+        }
+    }).catch(function() {
+        // Fallback pour les navigateurs plus anciens
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        
+        if (window.notify) {
+            window.notify.success('{{ tp('banking_ribs.js_messages.iban_copied', [], 'banking_ribs') }}');
+        } else {
+            alert('{{ tp('banking_ribs.js_messages.iban_copied', [], 'banking_ribs') }}');
+        }
+    });
+}
+
+// Fonction pour charger un onglet (utilisée par les liens de retour)
+function loadBankingTab(tabName) {
+    // Cette fonction sera appelée par le contrôleur banking-tabs
+    const bankingTabsController = document.querySelector('[data-controller="banking-tabs"]');
+    if (bankingTabsController) {
+        const tab = bankingTabsController.querySelector(`[data-tab="${tabName}"]`);
+        if (tab) {
+            tab.click();
+        }
+    }
+}
+</script>

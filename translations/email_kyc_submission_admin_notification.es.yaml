@@ -1,0 +1,44 @@
+email_kyc_submission_admin_notification:
+  title: "Nueva presentación KYC para examinar - %company_name% Admin"
+  tagline: "Administración %company_name%"
+  
+  content:
+    page_title: "Nueva solicitud de verificación de identidad"
+    greeting: "Hola <strong>%firstName%</strong>,"
+    
+    priority:
+      title: "Examen requerido - Prioridad normal"
+      message: "Una nueva solicitud de verificación KYC (Know Your Customer) ha sido presentada por un cliente y necesita su validación antes de la activación completa de los servicios bancarios."
+    
+    client_profile:
+      title: "Perfil del cliente"
+      identity: "Identidad"
+      email: "Dirección de correo"
+      account_status: "Estado de la cuenta"
+      pending_status: "En espera de verificación"
+      submission_date: "Fecha de presentación"
+    
+    documents:
+      title: "Documentos proporcionados por el cliente"
+      downloaded_status: "Descargado"
+    
+    actions:
+      title: "Acciones disponibles"
+      examine_request: "Examinar la solicitud"
+      kyc_dashboard: "Panel de control KYC"
+      processing_time: "Plazo de procesamiento recomendado: <strong>24-48 horas</strong>"
+    
+    checklist:
+      title: "Lista de verificación"
+      verify_authenticity: "□ Verificar la autenticidad de los documentos de identidad"
+      check_consistency: "□ Controlar la coherencia de la información personal"
+      regulatory_checks: "□ Efectuar las verificaciones regulatorias AML/KYC"
+      document_decision: "□ Documentar la decisión en el sistema de gestión"
+    
+    support_info: "Para cualquier pregunta relacionada con este procedimiento de verificación, póngase en contacto con el equipo de cumplimiento."
+    footer: "<strong>%company_name% - Departamento Cumplimiento</strong><br>Notificación automática del sistema de gestión KYC"
+
+  logs:
+    kyc_admin_notification_sent: "Notificación admin KYC enviada para la presentación de %firstName% %lastName%"
+    kyc_admin_notification_failed: "Error al enviar la notificación admin KYC"
+    kyc_pending_review: "Presentación KYC de %firstName% %lastName% en espera de examen"

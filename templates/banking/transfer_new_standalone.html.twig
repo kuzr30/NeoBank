@@ -1,0 +1,407 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tp('banking_transfer.meta.title', [], 'banking_transfer') }} - {{ parent() }}{% endblock %}
+
+{% block body %}
+<div class="banking__wrapper">
+    
+    <!-- Header -->
+    <header class="banking__header">
+        <div class="banking__nav-container">
+            <div class="banking__nav-brand">
+                <a href="{{ path('banking_dashboard') }}" class="banking__brand-link">
+                    <img src="{{ asset('logo.svg') }}" alt="SEDEF BANK" class="banking__brand-logo">
+                </a>
+            </div>
+            <nav class="banking__nav">
+                <a href="{{ path('banking_dashboard') }}" class="banking__nav-link">
+                    {{ tp('banking_transfer.nav.dashboard', [], 'banking_transfer') }}
+                </a>
+                <a href="{{ path('banking_transfers') }}" class="banking__nav-link banking__nav-link--active">
+                    {{ tp('banking_transfer.nav.transfers', [], 'banking_transfer') }}
+                </a>
+            </nav>
+            <div class="banking__user-menu">
+                <span class="banking__user-name">{{ user.firstName }} {{ user.lastName }}</span>
+                <a href="{{ path('app_logout') }}" class="banking__logout-btn">{{ tp('banking_transfer.nav.logout', [], 'banking_transfer') }}</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="banking__main banking__main--centered">
+        <div class="banking__form-container">
+            
+            <!-- Steps -->
+            <div class="banking__process-steps">
+                <div class="banking__step banking__step--active">
+                    <span class="banking__step-number">1</span>
+                    <span>{{ tp('banking_transfer.steps.details', [], 'banking_transfer') }}</span>
+                </div>
+                <div class="banking__step">
+                    <span class="banking__step-number">2</span>
+                    <span>{{ tp('banking_transfer.steps.validation', [], 'banking_transfer') }}</span>
+                </div>
+                <div class="banking__step">
+                    <span class="banking__step-number">3</span>
+                    <span>{{ tp('banking_transfer.steps.confirmation', [], 'banking_transfer') }}</span>
+                </div>
+            </div>
+
+            <!-- Header -->
+            <div class="banking__form-header">
+                <h1 class="banking__form-title">{{ tp('banking_transfer.form.title', [], 'banking_transfer') }}</h1>
+                <p class="banking__form-subtitle">{{ tp('banking_transfer.form.subtitle', [], 'banking_transfer') }}</p>
+            </div>
+
+            <!-- Account Source Info -->
+            {% if user_accounts|length > 0 %}
+            {% set mainAccount = user_accounts[0] %}
+            <div class="banking__account-source">
+                <div class="banking__account-info">
+                    <span class="banking__account-name">{{ mainAccount.accountName }} - {{ mainAccount.iban }}</span>
+                    <span class="banking__account-iban">{{ mainAccount.iban }}</span>
+                </div>
+                <div class="banking__account-balance">
+                    <span class="banking__balance-label">{{ tp('banking_transfer.account.available_balance', [], 'banking_transfer') }}</span>
+                    <span class="banking__balance-amount">{{ mainAccount.balance|number_format(2, ',', ' ') }} {{ tp('banking_transfer.currency', [], 'banking_transfer') }}</span>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Transfer Form -->
+            {{ form_start(form, {'attr': {'class': 'banking__form'}}) }}
+                
+                <div class="banking__form-group">
+                    {{ form_label(form.destinationAccount, tp('banking_transfer.fields.destination_account', [], 'banking_transfer')) }}
+                    {{ form_widget(form.destinationAccount, {'attr': {'class': 'banking__form-select'}}) }}
+                    {{ form_errors(form.destinationAccount) }}
+                </div>
+
+                <div class="banking__form-group">
+                    {{ form_label(form.amount, tp('banking_transfer.fields.amount', [], 'banking_transfer')) }}
+                    <div class="banking__amount-input">
+                        {{ form_widget(form.amount, {'attr': {'class': 'banking__form-input', 'placeholder': tp('banking_transfer.fields.amount_placeholder', [], 'banking_transfer')}}) }}
+                        <span class="banking__currency">{{ tp('banking_transfer.currency', [], 'banking_transfer') }}</span>
+                    </div>
+                    {{ form_errors(form.amount) }}
+                </div>
+
+                <div class="banking__form-group">
+                    {{ form_label(form.description, tp('banking_transfer.fields.description', [], 'banking_transfer')) }}
+                    {{ form_widget(form.description, {'attr': {'class': 'banking__form-textarea', 'placeholder': tp('banking_transfer.fields.description_placeholder', [], 'banking_transfer')}}) }}
+                    {{ form_errors(form.description) }}
+                </div>
+
+                <div class="banking__form-actions">
+                    <a href="{{ path('banking_transfers') }}" class="banking__btn banking__btn--secondary">
+                        {{ tp('banking_transfer.actions.cancel', [], 'banking_transfer') }}
+                    </a>
+                    <button type="submit" class="banking__btn banking__btn--primary">
+                        {{ tp('banking_transfer.actions.continue', [], 'banking_transfer') }}
+                    </button>
+                </div>
+
+            {{ form_end(form) }}
+
+        </div>
+    </main>
+</div>
+
+<style>
+.banking__wrapper {
+    min-height: 100vh;
+    background: #f8fafc;
+}
+
+.banking__header {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1rem 0;
+}
+
+.banking__nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banking__brand-logo {
+    height: 32px;
+}
+
+.banking__nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.banking__nav-link {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #6b7280;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.banking__nav-link--active {
+    background: #3b82f6;
+    color: white;
+}
+
+.banking__user-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.banking__user-name {
+    color: #374151;
+    font-weight: 500;
+}
+
+.banking__logout-btn {
+    padding: 0.5rem 1rem;
+    background: #ef4444;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.875rem;
+}
+
+.banking__main--centered {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 2rem;
+}
+
+.banking__form-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.banking__process-steps {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.banking__step {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    background: #f3f4f6;
+    color: #6b7280;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    min-width: 120px;
+}
+
+.banking__step--active {
+    background: #3b82f6;
+    color: white;
+}
+
+.banking__step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.banking__form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.banking__form-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.banking__form-subtitle {
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+.banking__account-source {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.banking__account-info .banking__account-name {
+    font-weight: 600;
+    color: #1e40af;
+    margin-bottom: 0.25rem;
+}
+
+.banking__account-iban {
+    font-family: monospace;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.banking__balance-label {
+    display: block;
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+}
+
+.banking__balance-amount {
+    font-weight: 700;
+    color: #059669;
+    font-size: 1.25rem;
+}
+
+.banking__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.banking__form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.banking__form-group label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.875rem;
+}
+
+.banking__form-input,
+.banking__form-select,
+.banking__form-textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.banking__form-input:focus,
+.banking__form-select:focus,
+.banking__form-textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.banking__amount-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.banking__amount-input .banking__form-input {
+    padding-right: 2rem;
+}
+
+.banking__currency {
+    position: absolute;
+    right: 1rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.banking__form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.banking__form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.banking__btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+    flex: 1;
+}
+
+.banking__btn--primary {
+    background: #3b82f6;
+    color: white;
+}
+
+.banking__btn--primary:hover {
+    background: #2563eb;
+}
+
+.banking__btn--secondary {
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.banking__btn--secondary:hover {
+    background: #e5e7eb;
+}
+
+.invalid-feedback {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+@media (max-width: 768px) {
+    .banking__form-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .banking__process-steps {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .banking__step {
+        margin: 0;
+    }
+    
+    .banking__account-source {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .banking__form-actions {
+        flex-direction: column;
+    }
+}
+</style>
+{% endblock %}

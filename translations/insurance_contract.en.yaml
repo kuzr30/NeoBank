@@ -1,0 +1,332 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: insurance_contract.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+title: "Insurance Contract No. %contract_number%"
+contract_title: "INSURANCE CONTRACT"
+
+# Header
+header:
+  logo_alt: "Logo %company_name%"
+  contract_number: "CONTRACT NO. %contract_number%"
+
+# Main section
+main:
+  logo_alt: "Logo %company_name%"
+
+# Company information
+company_info:
+  title: "Company information and contract reference"
+  establishment: "Financial Institution - Insurance"
+  contract_number: "CONTRACT NO. %number%"
+  establishment_date: "Establishment date: %date%"
+  signature_date: "Signature date: %date%"
+activation_date: "Activation date: %date%"
+expiration_date: "Expiration date: %date%"
+
+# Chapter I - Contracting Parties
+chapter_1:
+  title: "Chapter I - Contracting Parties"
+  article_1:
+    title: "Article 1 - The Insurer"
+    company_name: "Company name:"
+    company_name_value: "%company_name%"
+    legal_form: "Legal form:"
+    legal_form_value: "Limited company"
+    capital: "Share capital:"
+    capital_value: "€50,000,000"
+    siren: "SIREN number:"
+    siren_value: "%siren%"
+    ape: "APE code:"
+    ape_value: "%ape_code%"
+    address: "Head office address:"
+    address_value: "%company_address%"
+  article_2:
+    title: "Article 2 - The Insured"
+    full_name: "Last and First Name(s):"
+    full_name_value: "%insured_last_name% %insured_first_name%"
+    birth_date: "Date of birth:"
+    birth_date_value: "%insured_birth_date%"
+    birth_place: "Place of birth:"
+    birth_place_value: "%insured_birth_place%"
+    address: "Residential address:"
+    address_value: "%insured_address%"
+    email: "Email:"
+    email_value: "%insured_email%"
+    phone: "Phone:"
+    phone_value: "%insured_phone%"
+
+# Chapter II - Purpose and Coverage
+chapter_2:
+  title: "Chapter II - Purpose and Coverage"
+  article_1:
+    title: "Article 1 - Purpose of the Contract"
+    paragraph_1: "The purpose of this insurance contract is to guarantee the Insured, subject to payment of the agreed premiums and contributions, coverage for the financial consequences resulting from the occurrence of the risks defined in these general and specific conditions."
+    paragraph_2: "The Insurer undertakes, within the limits of the subscribed coverage and agreed ceilings, to indemnify the Insured or their beneficiaries for damages suffered due to the occurrence of a claim falling within the scope of this %insurance_type% insurance contract."
+    paragraph_3: "Coverage is granted according to the terms, conditions, limits, exclusions and deductibles defined herein, subject to actual payment of premiums at agreed deadlines and compliance by the Insured with their contractual obligations."
+  article_2:
+    title: "Article 2 - Duration and Effective Date"
+    duration_label: "Contract duration:"
+    duration_text: "This insurance contract is subscribed for a duration of %duration% months, taking effect on %start_date% at midnight and expiring on %end_date% at midnight, except for early termination under the conditions provided herein."
+    renewal_label: "Renewal:"
+    renewal_text: "Unless terminated by either party with two months' notice before the due date, the contract is automatically renewed for successive one-year periods, under the conditions in force at the renewal date."
+    effective_label: "Coverage effective date:"
+    effective_text: "Coverage takes effect on the date indicated above, subject to actual payment of the first premium or premium fraction and any processing fees. In case of non-payment, coverage is automatically suspended."
+    territory_label: "Coverage territory:"
+    territory_text: "Coverage applies within the geographical limits of the European Union, unless otherwise expressly provided in the specific conditions."
+  article_3:
+    title: "Article 3 - Coverage Granted"
+    definition_label: "Coverage definition:"
+    definition_text: "The Insurer grants the Insured the coverage defined below, within the limits of the ceilings, deductibles and conditions stipulated in these general and specific conditions."
+    coverage_label: "Coverage scope:"
+    coverage_text: "Coverage is valid for claims occurring during the contract validity period, declared within prescribed deadlines and resulting from events not excluded from these conditions."
+  guarantees:
+    auto:
+      civil_liability: "Mandatory Civil Liability"
+      defense_recourse: "Defense and Recourse"
+      all_accidents: "All-accident damage"
+      theft_fire: "Theft and fire"
+      glass_breakage: "Glass breakage"
+      assistance: "24/7 Assistance"
+    home:
+      fire_explosion: "Fire and explosions"
+      water_damage: "Water damage"
+      theft_vandalism: "Theft and vandalism"
+      civil_liability: "Personal Civil Liability"
+      glass_breakage: "Glass breakage"
+      natural_disasters: "Natural disasters"
+    health:
+      medical_pharma: "Medical and pharmaceutical expenses"
+      hospitalization: "Hospitalization"
+      dental_care: "Dental care"
+      optical: "Optical"
+      alternative_medicine: "Complementary medicine"
+      repatriation_assistance: "Repatriation assistance"
+    life:
+      death_all_causes: "Death from all causes"
+      permanent_disability: "Total permanent disability"
+      temporary_incapacity: "Temporary work incapacity"
+      education_pension: "Education annuity"
+      funeral_capital: "Funeral capital"
+      legal_assistance: "Legal assistance"
+    default:
+      main_coverage: "Main coverage according to defined risks"
+      civil_liability: "Civil Liability"
+      assistance_advice: "Assistance and advice"
+      defense_recourse: "Defense and recourse"
+  table:
+    guarantee: "Coverage"
+    coverage_amount: "Coverage Amount"
+    deductible: "Deductible"
+    variable_deductible: "Variable per coverage"
+
+# Chapter III - Financial Conditions
+chapter_3:
+  title: "Chapter III - Financial Conditions"
+  article_4:
+    title: "Article 4 - Premium and Fees"
+    calculation_label: "Premium calculation:"
+    calculation_text: "The insurance premium has been calculated based on the risk elements declared by the Insured and the subscribed coverage. Any modification of these elements may result in a premium revision."
+    payment_schedule_label: "Payment schedule:"
+    payment_schedule_text: "The premium is payable monthly, in arrears, no later than the last day of each month. The first payment is due at subscription."
+    amounts_detail_label: "Amount details:"
+    amounts_detail_text: "The table below details the composition of the monthly premium as well as the fees associated with the contract, including insurance fees and processing fees, where applicable."
+  article_5:
+    title: "Article 5 - Payment Methods and Obligations"
+    payment_method_label: "Payment method:"
+    payment_method_text: "The premium is payable monthly by automatic debit from the bank account designated by the Insured. The first debit occurs on the contract activation date."
+    payment_default_label: "Payment default:"
+    payment_default_text: "In case of non-payment of a premium at its due date, the Insurer sends the Insured a formal notice by registered letter. If this notice remains without effect for ten days, coverage is automatically suspended."
+    processing_fees_label: "Processing fees:"
+    processing_fees_text: "Processing and insurance fees are collected upon contract subscription and are non-refundable, except in case of withdrawal within 14 days of signing."
+    indexation_label: "Indexation:"
+    indexation_text: "The premium may be revised annually based on the evolution of the consumer price index published by INSEE."
+  table:
+    element: "Item"
+    amount: "Amount"
+    frequency: "Frequency"
+    description: "Description"
+    monthly_premium: "Monthly premium"
+    monthly: "Monthly"
+    main_premium: "Main insurance premium"
+    insurance_fees: "Insurance fees"
+    one_time_payment: "One-time payment"
+    additional_fees: "Additional fees related to insurance"
+    processing_fees: "Processing fees"
+    administrative_fees: "Administrative processing fees"
+    monthly_total: "Monthly total"
+    monthly_deduction: "Amount to be debited each month"
+  payment_obligation:
+    title: "PAYMENT OBLIGATION:"
+    text: "Payment of the monthly premium, insurance fees and processing fees is mandatory to maintain the validity of the contract. Any payment default results in immediate suspension of coverage after a formal notice remaining without effect for 10 days."
+
+# Chapter IV - Obligations and Exclusions
+chapter_4:
+  title: "Chapter IV - Obligations and Exclusions"
+  article_6:
+    title: "Article 6 - Insured's Obligations"
+    risk_declaration_label: "Risk declaration:"
+    risk_declaration_text: "The Insured undertakes to declare honestly and completely, at subscription and during the contract, all circumstances known to them that are likely to enable the Insurer to assess the risks they undertake."
+    claim_declaration_label: "Claim declaration:"
+    claim_declaration_text: "In case of a claim, the Insured must declare it in writing to the Insurer within five working days following the day they became aware of it, except in case of fortuitous event or force majeure."
+    safeguard_measures_label: "Safeguard measures:"
+    safeguard_measures_text: "The Insured must take all reasonable measures to limit the extent of the claim and preserve recourse against responsible third parties."
+    investigation_assistance_label: "Investigation assistance:"
+    investigation_assistance_text: "The Insured undertakes to provide the Insurer with all documents, information and supporting evidence necessary for processing the claim file."
+  article_7:
+    title: "Article 7 - General Exclusions"
+    never_covered: "Never covered:"
+    exclusion_1: "Damages intentionally caused by the Insured or with their complicity"
+    exclusion_2: "Consequences of civil or foreign war, riots, popular movements"
+    exclusion_3: "Direct or indirect effects of explosion, heat release or nuclear radiation"
+    exclusion_4: "Damages resulting from intentional or fraudulent faults of the Insured"
+    exclusion_5: "Claims occurring before the contract effective date or after its expiration"
+    exclusion_6: "Fines, penalties and financial sanctions of any nature"
+
+# Chapter V - Claims and Compensation
+chapter_5:
+  title: "Chapter V - Claims and Compensation"
+  article_8:
+    title: "Article 8 - Declaration Procedure"
+    declaration_deadline_label: "Declaration deadline:"
+    declaration_deadline_text: "Any claim must be declared within five working days following its occurrence or the Insured's knowledge of it. For theft claims, this deadline is reduced to two working days."
+    declaration_methods_label: "Declaration methods:"
+    declaration_methods_text: "The declaration must be sent by registered letter with acknowledgment of receipt or by any means allowing proof of receipt to the address of the Insurer's head office."
+    declaration_content_label: "Declaration content:"
+    declaration_content_text: "The declaration must specify the circumstances, date, place of the claim, its probable causes, the nature and approximate estimate of damages."
+  article_9:
+    title: "Article 9 - Expertise and Settlement"
+    expertise_label: "Expertise:"
+    expertise_text: "The Insurer reserves the right to have the damages assessed by an expert of their choice. The Insured may appoint their own expert in case of disagreement."
+    settlement_label: "Compensation settlement:"
+    settlement_text: "The compensation is paid within the month following the agreement of the parties or the final judicial decision, after deduction of any deductibles."
+    subrogation_label: "Subrogation:"
+    subrogation_text: "The Insurer is subrogated in the rights and actions of the Insured against responsible third parties, up to the amount of the compensation paid."
+
+# Chapter VI - Termination and Modification
+chapter_6:
+  title: "Chapter VI - Termination and Modification"
+  article_10:
+    title: "Article 10 - Contract Termination"
+    termination_maturity_label: "Termination at maturity:"
+    termination_maturity_text: "Either party may terminate the contract at its annual maturity with two months' notice, given by registered letter."
+    termination_during_label: "Termination during the contract:"
+    termination_during_text: "The contract may be terminated during the period in case of risk modification, claim, payment default or in other cases provided by the Insurance Code."
+    termination_nonpayment_label: "Termination for non-payment:"
+    termination_nonpayment_text: "In case of non-payment of a premium, the Insurer may terminate the contract ten days after a formal notice remaining without effect."
+  article_11:
+    title: "Article 11 - Contract Modification"
+    risk_aggravation_label: "Risk aggravation:"
+    risk_aggravation_text: "The Insured must declare to the Insurer any modification likely to increase risks or create new ones. This declaration may result in a premium revision."
+    risk_reduction_label: "Risk reduction:"
+    risk_reduction_text: "If the risk decreases significantly, the Insured may request a corresponding premium reduction."
+
+# Chapter VII - Summary of Mandatory Fees
+chapter_7:
+  title: "Chapter VII - Summary of Mandatory Fees"
+  article_12:
+    title: "Article 12 - Detail of Amounts to be Paid"
+  mandatory_amounts_title: "MANDATORY AMOUNTS TO BE PAID"
+  insurance_fees_label: "Insurance fees (one-time payment):"
+  processing_fees_label: "Processing fees (one-time payment):"
+  mandatory_payment: "MANDATORY PAYMENT"
+  deducted_subscription: "Deducted at subscription"
+  administrative_fees_non_refundable: "Non-refundable administrative fees"
+  attention_mandatory: "ATTENTION: Payment of these fees is MANDATORY and constitutes a sine qua non condition for the validity and effective date of this insurance contract."
+  automatic_deduction_note: "These amounts are automatically deducted at subscription and cannot be refunded, except for the exercise of the right of withdrawal within 14 days."
+
+# Chapter VIII - Final Provisions
+chapter_8:
+  title: "Chapter VIII - Final Provisions"
+  article_13:
+    title: "Article 13 - Applicable Law and Jurisdiction"
+    applicable_law_label: "Applicable law:"
+    applicable_law_text: "This contract is governed by French law and in particular by the provisions of the Insurance Code."
+    jurisdiction_label: "Competent jurisdiction:"
+    jurisdiction_text: "In case of dispute, French courts have sole jurisdiction. However, the Insured may refer the matter to the court of their domicile."
+    mediation_label: "Mediation:"
+    mediation_text: "In case of disagreement, the Insured may contact the insurance mediator whose contact details are available on the French Insurance Federation website."
+  article_14:
+    title: "Article 14 - Data Protection"
+    data_processing_label: "Data processing:"
+    data_processing_text: "Personal data collected is necessary for contract management and the Insurer's legal obligations. It is subject to computerized processing in compliance with GDPR."
+    insured_rights_label: "Insured's rights:"
+    insured_rights_text: "The Insured has the right to access, rectify, erase and port their personal data, as well as the right to object to their processing."
+  article_15:
+    title: "Article 15 - Miscellaneous Provisions"
+    partial_nullity_label: "Partial nullity:"
+    partial_nullity_text: "If a clause of this contract were declared null, this nullity would not affect the validity of the other clauses."
+    contract_language_label: "Contract language:"
+    contract_language_text: "In case of translation of this contract, only the French version is authoritative."
+    prescription_label: "Prescription:"
+    prescription_text: "All actions arising from this contract are prescribed by two years from the event giving rise to them."
+
+# Chapters IX-XII
+chapter_9:
+  title: "Chapter IX - Obligations and Exclusions"
+  insured_obligations: "Insured's Obligations"
+  insured_obligations_text: "The Insured undertakes to truthfully declare all elements necessary for risk assessment and to report any modifications during the contract."
+  claim_declaration: "Claim Declaration"
+  claim_declaration_text: "The Insured must declare any claim within 5 working days from when they became aware of it, except in case of fortuitous event or force majeure."
+  general_exclusions: "General Exclusions"
+  general_exclusions_text: "Excluded from coverage: acts of war, nuclear disasters, intentional acts by the insured, and claims occurring while under the influence of alcohol."
+  prevention: "Prevention"
+  prevention_text: "The Insured undertakes to take all reasonable preventive measures to avoid the occurrence of a claim."
+
+chapter_10:
+  title: "Chapter X - Claims and Compensation"
+  article_5:
+    title: "Article 5 - Declaration Procedure"
+    item_1: "Declare the claim within legal deadlines."
+    item_2: "Provide all requested supporting documents."
+    item_3: "Facilitate expertise if necessary."
+    item_4: "Do not acknowledge responsibility without Insurer's agreement."
+  article_6:
+    title: "Article 6 - Claim Settlement"
+    item_1: "The Insurer has 30 days to make their compensation offer."
+    item_2: "Settlement occurs within 15 days following the agreement."
+    item_3: "In case of disagreement, recourse to contradictory expertise."
+    item_4: "Prescription of actions in 2 years from the triggering event."
+
+chapter_11:
+  title: "Chapter XI - Duration and Termination"
+  article_7:
+    title: "Article 7 - Contract Duration"
+    duration_with_expiration: "This contract takes effect on %start_date% at 00:00 and expires on %end_date%, date corresponding to the last debit of the associated credit. The contract is not automatically renewable."
+    duration_renewable: "This contract takes effect on %start_date% at 00:00 for a duration of one year. It is automatically renewed by tacit agreement unless terminated by either party."
+  article_8:
+    title: "Article 8 - Termination"
+    item_1: "Annual termination: 2 months' notice before maturity."
+    item_2: "Termination for non-payment after formal notice."
+    item_3: "Termination for risk aggravation."
+    item_4: "14-day right of withdrawal for new contracts."
+
+chapter_12:
+  title: "Chapter XII - General Provisions"
+  article_9:
+    title: "Article 9 - Applicable Law and Jurisdiction"
+    text: "This contract is subject to French law and the Insurance Code. In case of dispute, exclusive jurisdiction of French courts."
+  article_10:
+    title: "Article 10 - Complaints"
+    text: "All complaints must be addressed to the Customer Service of %company_name%. In case of persistent disagreement, contact the Insurance Mediator."
+  article_11:
+    title: "Article 11 - Data Protection"
+    text: "The Insurer undertakes to process personal data in compliance with GDPR and the Data Protection Act. Retention period: 5 years after termination."
+
+# Specific conditions
+special_conditions:
+  title: "Specific Conditions"
+
+# Signatures
+signatures:
+  title: "Signatures"
+  insured: "The Insured"
+  insurer: "The Insurer"
+  assureur: "The Insurer"
+  date_and_signature: "Date and signature"
+  read_and_approved: "Read and approved"
+  represented_by_ceo: "Represented by the Chief Executive Officer"
+  directeur_general: "Chief Executive Officer"
+  habilite: "Authorized to bind the company"
+  company_stamp: "Company stamp"

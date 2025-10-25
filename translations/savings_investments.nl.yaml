@@ -1,0 +1,154 @@
+savings_investments:
+  # Meta tags
+  meta:
+    title: "Intelligente Spaar- en Beleggingsoplossingen - %company_name%"
+    description: "Ontdek onze spaar- en beleggingsoplossingen om uw geld intelligent te laten groeien met %company_name%."
+
+  # Hero Section
+  hero:
+    title: "Intelligente Spaar- en Beleggingsoplossingen"
+    subtitle: "Laat uw geld groeien met onze op maat gemaakte spaar- en beleggingsoplossingen, aangepast aan al uw financiële doelstellingen."
+    stats:
+      average_rate:
+        value: "4.2%"
+        label: "Gemiddeld tarief"
+      savers:
+        value: "500K+"
+        label: "Spaarders"
+      total_savings:
+        value: "2.8M€"
+        label: "Totaal spargeld"
+      products:
+        value: "15+"
+        label: "Producten"
+    cta: "Ontdek onze oplossingen"
+    
+  # Phone mockup content
+  phone:
+    header:
+      time: "14:32"
+    balance:
+      label: "Totaal spargeld"
+      amount: "45 680€"
+      change: "+2.8% deze maand"
+    investments:
+      livret:
+        name: "%company_name% Spaarboekje"
+        return: "+3.2%"
+      pea:
+        name: "Aandelen PEA"
+        return: "+8.7%"
+      life_insurance:
+        name: "Levensverzekering"
+        return: "+5.4%"
+
+  # Solutions Section
+  solutions:
+    header:
+      title: "Gepersonaliseerde Oplossingen"
+      subtitle: "Spaar- en beleggingsproducten aangepast aan elk beleggersprofiel, van de meest voorzichtige tot de meest dynamische"
+    secure_savings:
+      title: "Veilig Sparen"
+      description: "Bouw uw noodreserve op met onze gereglementeerde spaarboekjes en gegarandeerde termijnrekeningen. Risicoloze oplossingen om uw spaargeld te beschermen en te laten groeien."
+      features:
+        - "Spaarboekje A en LDDS tegen gereglementeerde tarieven"
+        - "%company_name% Spaarboekje tot 4.5% bruto"
+        - "Termijnrekeningen van 6 maanden tot 5 jaar"
+        - "100% gegarandeerd kapitaal"
+        - "Onmiddellijke beschikbaarheid"
+      cta: "Meer informatie"
+    dashboard:
+      title: "Veilig Sparen"
+      date: "Augustus 2025"
+      metrics:
+        total:
+          value: "25 890€"
+          label: "Totaal spargeld"
+        rate:
+          value: "3.8%"
+          label: "Gemiddeld tarief"
+        gains:
+          value: "+156€"
+          label: "Winst/maand"
+
+  # Products Section
+  products:
+    header:
+      title: "Onze Topproducten"
+      subtitle: "Een compleet gamma van spaar- en beleggingsinstrumenten voor al uw projecten"
+    mobile_app:
+      title: "Mijn Beleggingen"
+      menu_icon: "☰"
+      summary:
+        label: "Totaal spargeld"
+        amount: "67 240€"
+        growth: "+12.4% dit jaar"
+      products:
+        pea:
+          name: "Aandelen PEA"
+          rate: "+15.2%"
+          amount: "28 450€"
+        life_insurance:
+          name: "Levensverzekering"
+          rate: "+6.8%"
+          amount: "22 890€"
+        livret:
+          name: "%company_name% Spaarboekje"
+          rate: "+4.5%"
+          amount: "15 900€"
+    info:
+      title: "Intuïtieve Mobiele App"
+      description: "Beheer al uw beleggingen vanaf uw smartphone met onze nieuwe generatie mobiele applicatie. Volg uw prestaties in realtime en neem de beste beleggingsbeslissingen."
+      benefits:
+        interface:
+          title: "Intuïtieve Interface"
+          description: "Modern en ergonomisch ontwerp"
+        realtime:
+          title: "Realtime Data"
+          description: "Bijgewerkte koersen en prestaties"
+        alerts:
+          title: "Gepersonaliseerde Waarschuwingen"
+          description: "Op maat gemaakte notificaties"
+        goals:
+          title: "Intelligente Doelen"
+          description: "Geautomatiseerde planning"
+      cta: "App downloaden"
+
+  # Tools Section
+  tools:
+    header:
+      title: "Simulatietools"
+      subtitle: "Plan uw financiële toekomst met onze intelligente calculators en geavanceerde simulatietools"
+    calculator:
+      title: "Spaarsimulator"
+      subtitle: "Bereken uw toekomstig spargeld"
+      form:
+        monthly_payment:
+          label: "Maandelijkse storting"
+          value: "300"
+        duration:
+          label: "Looptijd (jaren)"
+        interest_rate:
+          label: "Jaarlijks rentepercentage"
+      result:
+        label: "Opgebouwd spargeld"
+        amount: "89 420€"
+    content:
+      title: "Intelligente Planning"
+      description: "Gebruik onze simulatietools om uw spaar- en beleggingsstrategie te definiëren. Visualiseer de impact van uw financiële beslissingen op lange termijn."
+      features:
+        - "Maandelijkse spaarsimulator"
+        - "Pensioencalculator"
+        - "Belastingoptimizer"
+        - "Portefeuilleanalyse"
+        - "Gepersonaliseerde projecties"
+        - "Productenvergelijker"
+      cta: "Simulators uitproberen"
+
+  # CTA Section
+  cta:
+    title: "Begin Vandaag nog met Sparen"
+    subtitle: "Sluit u aan bij meer dan 500.000 spaarders die ons vertrouwen om hun vermogen te laten groeien. Open uw rekening in enkele minuten."
+    buttons:
+      primary: "Account openen"
+      secondary: "Met een adviseur spreken"

@@ -1,0 +1,4 @@
+# Vertalingen voor KycController
+flash:
+  existing_submission: "U heeft al een KYC-aanvraag met de status: %status%."
+  submission_success: "Uw KYC-aanvraag is succesvol ingediend."

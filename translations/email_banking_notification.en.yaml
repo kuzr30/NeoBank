@@ -1,0 +1,92 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_banking_notification.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+email_banking_notification:
+  titles:
+    transaction: "New transaction"
+    security: "Security alert"
+    statement: "Monthly statement available"
+    credit_approval: "Credit approved"
+    credit_rejection: "Response to your credit application"
+    default: "%company_name% Notification"
+  
+  headers:
+    transaction: "New transaction"
+    security: "Security alert"
+    statement: "Monthly statement"
+    credit_approval: "Credit approved"
+    credit_rejection: "Response to your application"
+    default: "Notification"
+  
+  common:
+    greeting: "Hello {firstName},"
+  
+  transaction:
+    intro: "We inform you that a new transaction has been made on your account."
+    details_title: "Transaction details"
+    amount: "Amount: <strong>{amount}</strong>"
+    type: "Type: {transactionType}"
+    date: "Date: {date}"
+    account: "Account: {accountNumber}"
+    description: "Description: {description}"
+    balance: "New balance: <strong>{newBalance}</strong>"
+    
+  security:
+    intro: "Unusual activity has been detected on your account."
+    alert_title: "Alert details"
+    action: "Action: {action}"
+    ip_address: "IP Address: {ipAddress}"
+    device: "Device: {device}"
+    location: "Location: {location}"
+    date: "Date: {date}"
+    security_measures: "If you are not the origin of this action, immediately contact our customer service and change your password."
+    
+  statement:
+    intro: "Your monthly statement for {month} {year} is now available."
+    download_info: "You can view and download it from your client area."
+    summary_title: "Monthly summary"
+    total_transactions: "Total transactions: {totalTransactions}"
+    total_credits: "Total credits: <strong>{totalCredits}</strong>"
+    total_debits: "Total debits: <strong>{totalDebits}</strong>"
+    end_balance: "End of month balance: <strong>{endBalance}</strong>"
+    download_button: "Download statement"
+    
+  credit_approval:
+    intro: "Excellent news! Your credit application has been approved."
+    details_title: "Your credit details"
+    approved_amount: "Approved amount: <strong>{approvedAmount}</strong>"
+    interest_rate: "Interest rate: {interestRate}%"
+    duration: "Duration: {duration} months"
+    monthly_payment: "Monthly payment: <strong>{monthlyPayment}</strong>"
+    start_date: "Start date: {startDate}"
+    contract_info: "You will receive your credit contract by email shortly."
+    next_steps_title: "Next steps"
+    step_1: "Electronic signature of the contract"
+    step_2: "Fund transfer within 48 working hours"
+    step_3: "Setup of automatic debits"
+    
+  credit_rejection:
+    intro: "We have carefully studied your credit application."
+    result: "Unfortunately, we cannot proceed with your application at this time."
+    reasons_title: "Main reasons"
+    reason_income: "Insufficient income relative to the requested amount"
+    reason_history: "Incomplete credit history"
+    reason_ratio: "Debt ratio too high"
+    alternative_title: "Alternative solutions"
+    alternative_1: "Renew your application in 6 months"
+    alternative_2: "Request a lower amount"
+    alternative_3: "Improve your financial situation"
+    contact_info: "Our team remains available to advise you."
+  
+  common_footer:
+    automatic_message: "This email has been sent automatically by %company_name%."
+    support: "For any questions, contact our customer service 24/7."
+  
+  # Log messages for MessageHandler
+  logs:
+    sending: "Sending banking notification"
+    success: "Banking notification sent successfully"
+    error: "Error sending banking notification"
+    send_failed: "Failed to send banking notification"

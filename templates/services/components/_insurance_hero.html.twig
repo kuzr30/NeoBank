@@ -1,0 +1,697 @@
+{% block hero_section %}
+<section class="insurance__hero">
+    <div class="insurance__hero-container">
+        <!-- Left Content -->
+        <div class="insurance__hero-content">
+            <h1 class="insurance__hero-title">
+                {{ tp('insurance.hero.title_part1', [], 'insurance') }}
+                <span class="insurance__hero-accent">{{ tp('insurance.hero.title_accent', [], 'insurance') }}</span>
+                {{ tp('insurance.hero.title_part2', [], 'insurance') }}
+            </h1>
+            
+            <p class="insurance__hero-description">
+                {{ tp('insurance.hero.description', [], 'insurance') }}
+            </p>
+            
+            <div class="insurance__hero-form">
+                <input type="email" 
+                       class="insurance__hero-input" 
+                       placeholder="{{ tp('insurance.hero.email_placeholder', [], 'insurance') }}"
+                       aria-label="Adresse email">
+                <button type="button" class="insurance__hero-btn">
+                    {{ tp('insurance.hero.cta_button', [], 'insurance') }}
+                </button>
+            </div>
+            
+            <!-- Insurance Types Navigation -->
+            <div class="insurance__hero-nav">
+                <a href="#auto" class="insurance__nav-item insurance__nav-item--active">
+                    <svg class="insurance__nav-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                    </svg>
+                    <span>{{ tp('insurance.hero.nav.auto', [], 'insurance') }}</span>
+                </a>
+                <a href="#habitation" class="insurance__nav-item">
+                    <svg class="insurance__nav-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                    <span>{{ tp('insurance.hero.nav.home', [], 'insurance') }}</span>
+                </a>
+                <a href="#sante" class="insurance__nav-item">
+                    <svg class="insurance__nav-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <span>{{ tp('insurance.hero.nav.health', [], 'insurance') }}</span>
+                </a>
+                <a href="#vie" class="insurance__nav-item">
+                    <svg class="insurance__nav-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span>{{ tp('insurance.hero.nav.life', [], 'insurance') }}</span>
+                </a>
+                <a href="#pro" class="insurance__nav-item">
+                    <svg class="insurance__nav-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 00-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10 2 10 2 10 2 9 2.54 8.5 3.35l-.5.68-.5-.67C7.04 2.54 6 2 5 2a3 3 0 00-3 3c0 .35.07.69.18 1H0v5c0 1.1.9 2 2 2h1v9c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-9h1c1.1 0 2-.9 2-2V6zM7 19H5v-7h2v7zm4 0H9v-7h2v7zm4 0h-2v-7h2v7zm4 0h-2v-7h2v7z"/>
+                    </svg>
+                    <span>{{ tp('insurance.hero.nav.professional', [], 'insurance') }}</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Right Visual -->
+        <div class="insurance__hero-visual">
+            <div class="insurance__hero-image">
+                <img src="{{ asset('images/insurance-car-happy.jpg') }}" 
+                     alt="Client satisfait SEDEF BANK Assurance" 
+                     loading="lazy">
+            </div>
+            
+            <!-- 24/7 Support Badge -->
+            <div class="insurance__hero-badge">
+                <div class="insurance__badge-icon">
+                    <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                </div>
+                <div class="insurance__badge-content">
+                    <div class="insurance__badge-number">24/7</div>
+                    <div class="insurance__badge-text">{{ tp('insurance.hero.support_badge', [], 'insurance') }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Insurance Hero - Inspired by Modern Design */
+.insurance__hero {
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--color-background);
+  color: var(--color-text);
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    overflow: hidden;
+}
+
+.insurance__hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Content Section */
+.insurance__hero-content {
+    color: #1a1a1a;
+}
+
+.insurance__hero-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: #2d2d2d;
+}
+
+.insurance__hero-accent {
+    color: var(--color-primary);
+    display: block;
+}
+
+.insurance__hero-description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #666;
+    max-width: 90%;
+}
+
+.insurance__hero-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    max-width: 500px;
+}
+
+.insurance__hero-input {
+    flex: 1;
+    padding: 1rem 1.25rem;
+    border: 2px solid #e5e5e5;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.insurance__hero-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.insurance__hero-btn {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.insurance__hero-btn:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+}
+
+/* Navigation Tabs */
+.insurance__hero-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.insurance__nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    color: #666;
+    background: white;
+    border: 1px solid #e5e5e5;
+}
+
+.insurance__nav-item:hover {
+    background: #f8f8f8;
+    color: #333;
+}
+
+.insurance__nav-item--active {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.insurance__nav-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Visual Section */
+.insurance__hero-visual {
+    position: relative;
+    height: 600px;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.insurance__hero-image {
+    position: relative;
+    height: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.insurance__hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* 24/7 Support Badge */
+.insurance__hero-badge {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: var(--color-primary);
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: white;
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: 3;
+    animation: badge-float 3s ease-in-out infinite;
+}
+
+.insurance__badge-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.insurance__badge-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.insurance__badge-text {
+    font-size: 0.75rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Animations */
+@keyframes badge-float {
+    0%, 100% { 
+        transform: translateY(0);
+    }
+    50% { 
+        transform: translateY(-8px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .insurance__hero-container {
+        gap: 3rem;
+        padding: 0 1.5rem;
+    }
+    
+    .insurance__hero-visual {
+        height: 500px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .insurance__hero-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .insurance__hero-visual {
+        order: -1;
+        height: 400px;
+    }
+    
+    .insurance__hero-form {
+        justify-content: center;
+        margin: 0 auto 3rem;
+    }
+    
+    .insurance__hero-nav {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .insurance__hero {
+        min-height: 90vh;
+        padding: 1rem 0;
+    }
+    
+    .insurance__hero-container {
+        padding: 0 1rem;
+    }
+    
+    .insurance__hero-form {
+        flex-direction: column;
+        max-width: 100%;
+    }
+    
+    .insurance__hero-nav {
+        gap: 0.25rem;
+    }
+    
+    .insurance__nav-item {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.75rem;
+    }
+    
+    .insurance__hero-visual {
+        height: 300px;
+    }
+    
+    .insurance__hero-badge {
+        top: 1rem;
+        right: 1rem;
+        padding: 0.75rem;
+        gap: 0.5rem;
+    }
+    
+    .insurance__badge-number {
+        font-size: 1.125rem;
+    }
+    
+    .insurance__badge-text {
+        font-size: 0.625rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .insurance__hero-nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .insurance__nav-item {
+        justify-content: center;
+    }
+}
+</style>
+{% endblock %}
+
+<!-- Insurance Packages Section -->
+<section class="insurance__packages" id="insurance-packages">
+    <div class="insurance__packages-container">
+        <div class="insurance__packages-header">
+            <h2 class="insurance__packages-title">{{ tp('insurance.packages.title', [], 'insurance') }}</h2>
+            <p class="insurance__packages-subtitle">
+                {{ tp('insurance.packages.subtitle', [], 'insurance') }}
+            </p>
+        </div>
+        
+        <div class="insurance__packages-grid">
+            <!-- Basic Coverage -->
+            <div class="insurance__package">
+                <div class="insurance__package-icon">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <h3 class="insurance__package-title">{{ tp('insurance.packages.essential.title', [], 'insurance') }}</h3>
+                <p class="insurance__package-description">
+                    {{ tp('insurance.packages.essential.description', [], 'insurance') }}
+                </p>
+                <ul class="insurance__package-features">
+                    <li>✓ {{ tp('insurance.packages.essential.features.0', [], 'insurance') }}</li>
+                    <li>✓ {{ tp('insurance.packages.essential.features.1', [], 'insurance') }}</li>
+                    <li>✓ {{ tp('insurance.packages.essential.features.2', [], 'insurance') }}</li>
+                </ul>
+  
+            </div>
+            
+            <!-- Standard Coverage -->
+            <div class="insurance__package insurance__package--featured">
+                <div class="insurance__package-badge">{{ tp('insurance.packages.standard.badge', [], 'insurance') }}</div>
+                <div class="insurance__package-icon">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                </div>
+                <h3 class="insurance__package-title">{{ tp('insurance.packages.standard.title', [], 'insurance') }}</h3>
+                <p class="insurance__package-description">
+                    {{ tp('insurance.packages.standard.description', [], 'insurance') }}
+                </p>
+                <ul class="insurance__package-features">
+                    <li>✓ {{ tp('insurance.packages.standard.features.0', [], 'insurance') }}</li>
+                    <li>✓ {{ tp('insurance.packages.standard.features.1', [], 'insurance') }}</li>
+                    <li>✓ {{ tp('insurance.packages.standard.features.2', [], 'insurance') }}</li>
+                    <li>✓ {{ tp('insurance.packages.standard.features.3', [], 'insurance') }}</li>
+                </ul>
+              
+            </div>
+            
+            <!-- Premium Coverage -->
+            <div class="insurance__package">
+                <div class="insurance__package-icon">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5 16L3 14l5.5-5.5L16 16l-5.5 5.5L5 16zm0 0l5.5-5.5L16 16l5.5-5.5L27 21l-5.5 5.5L16 21l-5.5 5.5L5 21l5.5-5.5L16 10.5 21.5 16 27 10.5 32.5 16 27 21.5 21.5 16 16 21.5 10.5 16z"/>
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                </div>
+                <h3 class="insurance__package-title">{{ tp('insurance.packages.premium.title', [], 'insurance') }}</h3>
+                <p class="insurance__package-description">
+                    {{ tp('insurance.packages.premium.description', [], 'insurance') }}
+                </p>
+                <ul class="insurance__package-features">
+                    <li>✓ {{ tp('insurance.packages.premium.features.0', [], 'insurance') }}</li>
+                    <li>✓ {{ tp('insurance.packages.premium.features.1', [], 'insurance') }}</li>
+                    <li>✓ {{ tp('insurance.packages.premium.features.2', [], 'insurance') }}</li>
+                    <li>✓ {{ tp('insurance.packages.premium.features.3', [], 'insurance') }}</li>
+                </ul>
+  
+            </div>
+            
+            <!-- Custom Coverage -->
+            <div class="insurance__package">
+                <div class="insurance__package-icon">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                    </svg>
+                </div>
+                <h3 class="insurance__package-title">{{ tp('insurance.packages.custom.title', [], 'insurance') }}</h3>
+                <p class="insurance__package-description">
+                    {{ tp('insurance.packages.custom.description', [], 'insurance') }}
+                </p>
+                <ul class="insurance__package-features">
+                    <li>✓ {{ tp('insurance.packages.custom.features.0', [], 'insurance') }}</li>
+                    <li>✓ {{ tp('insurance.packages.custom.features.1', [], 'insurance') }}</li>
+                    <li>✓ {{ tp('insurance.packages.custom.features.2', [], 'insurance') }}</li>
+                    <li>✓ {{ tp('insurance.packages.custom.features.3', [], 'insurance') }}</li>
+                </ul>
+  
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Insurance Packages Section */
+.insurance__packages {
+    padding: 5rem 0;
+    background: #f8f9fa;
+    position: relative;
+}
+
+.insurance__packages-container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.insurance__packages-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.insurance__packages-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.insurance__packages-subtitle {
+    font-size: 1.125rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.insurance__packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.insurance__package {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.insurance__package:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.insurance__package--featured {
+    border-color: #ff6b35;
+    transform: scale(1.05);
+}
+
+.insurance__package--featured:hover {
+    transform: scale(1.05) translateY(-8px);
+}
+
+.insurance__package-badge {
+    position: absolute;
+    top: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff6b35;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.insurance__package-icon {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, #ff6b35, #e55a2b);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.insurance__package-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.insurance__package-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.insurance__package-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.insurance__package-features li {
+    padding: 0.5rem 0;
+    color: #444;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.insurance__package-btn {
+    width: 100%;
+    background: #ff6b35;
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.insurance__package-btn:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+.insurance__package-btn--featured {
+    background: linear-gradient(135deg, #ff6b35, #e55a2b);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.insurance__package-btn--featured:hover {
+    background: linear-gradient(135deg, #e55a2b, #cc4f26);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+}
+
+.insurance__package-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.insurance__package-btn:hover svg {
+    transform: translateX(4px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .insurance__packages {
+        padding: 4rem 0;
+    }
+    
+    .insurance__packages-container {
+        padding: 0 1.5rem;
+    }
+    
+    .insurance__packages-grid {
+        gap: 1.5rem;
+    }
+    
+    .insurance__package--featured {
+        transform: none;
+    }
+    
+    .insurance__package--featured:hover {
+        transform: translateY(-8px);
+    }
+}
+
+@media (max-width: 768px) {
+    .insurance__packages {
+        padding: 3rem 0;
+    }
+    
+    .insurance__packages-container {
+        padding: 0 1rem;
+    }
+    
+    .insurance__packages-header {
+        margin-bottom: 3rem;
+    }
+    
+    .insurance__packages-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .insurance__package {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .insurance__package {
+        padding: 1.25rem;
+    }
+    
+    .insurance__package-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .insurance__package-btn {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.8rem;
+    }
+}
+</style>

@@ -1,0 +1,31 @@
+email_transfer_attention:
+  title: "Uw overschrijving vereist uw aandacht"
+  
+  content:
+    page_title: "Actie vereist voor uw overschrijving"
+    greeting: "Beste %firstName% %lastName%,"
+    
+    attention_required:
+      title: "Aandacht vereist"
+      description: "Uw overboekingsopdracht (ref. %transferReference%) vereist een aanvullende beveiligingsvalidatie van uw kant om verwerkt te worden."
+    
+    transfer_details:
+      title: "Details van uw overboekingsopdracht"
+      amount: "Bedrag"
+      beneficiary: "Begunstigde"
+      iban: "IBAN"
+      reference: "Referentie"
+    
+    next_step:
+      title: "Volgende stap"
+      description: "Gelieve in te loggen op uw beveiligde bankierruimte om de authenticatie van deze operatie te voltooien."
+      login_button: "Naar mijn account"
+      instruction: "Klik op de knop hierboven om veilig in te loggen"
+    
+    security_notice:
+      title: "Beveiligingsmelding"
+      description: "Deze aanvullende beveiligingsstap wordt ingevoerd om uw fondsen te beschermen en ervoor te zorgen dat u de oorsprong bent van deze bankoperatie."
+    
+    assistance: "Voor vragen betreffende deze operatie blijft onze klantenservice ter beschikking via uw beveiligde klantruimte."
+    
+    footer: "Deze e-mail werd automatisch verzonden door uw bank. <br><strong>Deel nooit uw beveiligingscodes via e-mail of telefoon.</strong>"

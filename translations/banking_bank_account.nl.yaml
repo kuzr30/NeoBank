@@ -1,0 +1,91 @@
+banking_bank_account:
+  # Index page
+  index:
+    title: "Mijn RIB/IBAN"
+    subtitle: "Beheer van uw bankidentiteitsbewijzen"
+    
+    # Empty state
+    empty:
+      title: "Geen RIB geregistreerd"
+      text: "Voeg uw RIB's toe om uw overschrijvingen te vergemakkelijken en gemakkelijker geld te ontvangen."
+      add_first: "Mijn eerste RIB toevoegen"
+    
+    # Card actions
+    actions:
+      view_details: "Details bekijken"
+      edit: "Bewerken"
+      delete: "Verwijderen"
+      confirm_delete: "Weet u zeker dat u deze RIB wilt verwijderen?"
+    
+    # Card details
+    details:
+      added_on: "Toegevoegd op"
+
+  # New RIB page
+  new:
+    title: "Nieuwe RIB toevoegen"
+    subtitle: "Registreer uw bankgegevens om uw overschrijvingen te vergemakkelijken en geld te ontvangen."
+    
+    # Form labels and placeholders
+    form:
+      account_name:
+        label: "Rekeningnaam"
+        placeholder: "Bijv: Hoofdrekening, Spaarrekening..."
+        help: "Geef een beschrijvende naam aan deze rekening om hem gemakkelijk te herkennen."
+      
+      bank_name:
+        label: "Banknaam"
+        placeholder: "Bijv: BNP Paribas, Crédit Agricole..."
+      
+      iban:
+        label: "IBAN"
+        placeholder: "FR76 1234 5678 9012 3456 7890 123"
+        help: "Voer uw Europese IBAN in. Spaties worden automatisch verwijderd."
+    
+    # Actions
+    actions:
+      cancel: "Annuleren"
+      save: "RIB opslaan"
+
+  # Show RIB page
+  show:
+    title: "RIB-details"
+    back_to_list: "Terug naar lijst"
+    
+    # Sections
+    sections:
+      account_info: "Rekeninginformatie"
+      technical_info: "Technische informatie"
+    
+    # Details
+    details:
+      account_title: "Rekeningtitel"
+      bank: "Bank"
+      iban: "IBAN"
+      country: "Land"
+      added_date: "Toevoegdatum"
+      last_modified: "Laatste wijziging"
+      copy: "Kopiëren"
+      copied: "Gekopieerd!"
+      european: "Europees"
+      delete_rib: "Deze RIB verwijderen"
+    
+    # Countries
+    countries:
+      FR: "Frankrijk"
+      DE: "Duitsland"
+      IT: "Italië"
+      ES: "Spanje"
+      BE: "België"
+      NL: "Nederland"
+      AT: "Oostenrijk"
+      CH: "Zwitserland"
+      LU: "Luxemburg"
+      PT: "Portugal"
+      IE: "Ierland"
+      GB: "Verenigd Koninkrijk"
+
+  # Common elements
+  common:
+    page_title_new: "RIB toevoegen"
+    confirm_delete: "Weet u zeker dat u deze RIB wilt verwijderen?"

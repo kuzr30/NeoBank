@@ -1,0 +1,14 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: sub_account_service.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+sub_account_service:
+  exceptions:
+    main_account_not_found: "No main account found for user: {email}"
+    credit_subaccount_creation_failed: "Unable to create credit subaccount for user: {email}"
+    
+  log_messages:
+    sub_accounts_created: "Sub-accounts created for main account"
+    credit_subaccount_retrieved: "Credit subaccount successfully retrieved"
+    balances_calculated: "Balances of all sub-accounts calculated"

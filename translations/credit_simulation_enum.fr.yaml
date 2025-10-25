@@ -1,0 +1,31 @@
+credit_types:
+  immobilier:
+    label: "Crédit Immobilier"
+  auto:
+    label: "Crédit Auto"
+  consommation:
+    label: "Crédit à la Consommation"
+  travaux:
+    label: "Crédit Travaux"
+  professionnel:
+    label: "Crédit Professionnel"
+  personal:
+    label: "Prêt Personnel"
+  home_improvement:
+    label: "Amélioration de l'habitat"
+  debt_consolidation:
+    label: "Rachat de crédit"
+  mortgage:
+    label: "Hypothèque"
+  renouvelable:
+    label: "Crédit renouvelable"
+  etudiant:
+    label: "Crédit étudiant"
+  relais:
+    label: "Crédit relais"
+  microcredit:
+    label: "Microcrédit"
+  leasing:
+    label: "Leasing"
+  voyage:
+    label: "Crédit voyage"

@@ -1,0 +1,31 @@
+email_card_subscription_created:
+  title: "Kartenantrag registriert"
+  
+  content:
+    page_title: "Ihr Kartenantrag wurde registriert"
+    greeting: "Liebe(r) %firstName% %lastName%,"
+    
+    confirmation:
+      title: "Antrag erfolgreich registriert"
+      description: "Wir haben Ihren Kartenantrag erhalten. Er wird derzeit von unseren Teams geprüft."
+    
+    card_details:
+      title: "Details Ihres Antrags"
+      type: "Kartentyp"
+      reference: "Antragsnummer"
+      request_date: "Antragsdatum"
+    
+    next_steps:
+      title: "Nächste Schritte"
+      step1: "Prüfung Ihres Antrags durch unsere Teams (2-3 Werktage)"
+      step2: "Administrative Validierung und Überprüfung der Bedingungen"
+      step3: "E-Mail-Benachrichtigung über das Prüfungsergebnis"
+    
+    timeline:
+      title: "Verfolgen Sie Ihren Antrag"
+      access_button: "Zu meinem Bereich"
+      processing_time: "Übliche Bearbeitungszeit: 2 bis 3 Werktage"
+    
+    assistance: "Unser Kundendienst steht Ihnen für alle Fragen zu Ihrem Antrag zur Verfügung."
+    
+    footer: "Diese E-Mail wurde automatisch von Ihrer Bank gesendet. <br><strong>Vielen Dank für Ihr Vertrauen.</strong>"

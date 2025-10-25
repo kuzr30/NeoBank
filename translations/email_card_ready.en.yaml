@@ -1,0 +1,27 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_card_ready.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+email_card_ready:
+  title: "Your bank card is ready!"
+  subtitle: "Your new card is now available"
+  greeting: "Hello %firstname%,"
+  main_message: "Excellent news! Your bank card has been created and is now available in your client area."
+
+  card_details_title: "Your card details"
+  card_type_label: "Type"
+  card_brand_label: "Brand"
+  card_number_label: "Number"
+  card_status_label: "Status"
+  card_status_active: "Active"
+
+  what_you_can_do_title: "You can now:"
+  action_1: "View your card details in your client area"
+  action_2: "Make online payments"
+  action_3: "Manage your limits and settings"
+
+  physical_card_title: "Physical card on the way"
+  physical_card_message: "Your physical card will be sent to your address within 3-5 business days."
+
+  cta_button: "Access my client area"

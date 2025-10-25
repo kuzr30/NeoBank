@@ -1,0 +1,27 @@
+banking_transfer_new:
+  header:
+    title: "Nueva transferencia"
+    subtitle: "Transfiera dinero a una cuenta beneficiaria"
+    back_button: "Volver"
+  
+  process_steps:
+    step1: "Información"
+    step2: "Validación"
+    step3: "Confirmación"
+  
+  source_account:
+    title: "Cuenta de origen"
+    main_account: "Cuenta Principal"
+    available_balance: "Saldo disponible:"
+    no_account_warning: "Ninguna cuenta de origen disponible. Contacte con su asesor."
+  
+  destination_account:
+    title: "Cuenta beneficiaria"
+    help_text: "Seleccione la cuenta a la cual desea realizar la transferencia"
+  
+  transfer_details:
+    title: "Detalles de la transferencia"
+    description_help: "Describa el motivo de esta transferencia (opcional)"
+  
+  actions:
+    cancel: "Cancelar"

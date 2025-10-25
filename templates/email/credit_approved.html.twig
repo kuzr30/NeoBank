@@ -1,0 +1,87 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_credit_approved.title', {}, 'email_credit_approved') }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('email_credit_approved.content.page_title', {customerName: customerName}, 'email_credit_approved') }}</h2>
+    
+    <p class="content-text">
+        {{ tp('email_credit_approved.content.intro', {}, 'email_credit_approved') }}
+    </p>
+
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #2e7d32;">{{ tp('email_credit_approved.content.credit_approved.title', {}, 'email_credit_approved') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 20px; background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%); color: white; text-align: center; border-radius: 6px;">
+                    <div style="font-size: 14px; font-weight: 500; margin-bottom: 8px;">{{ tp('email_credit_approved.content.credit_approved.amount_label', {}, 'email_credit_approved') }}</div>
+                    <div style="font-size: 28px; font-weight: 700; margin: 12px 0;">{{ loanAmount|number_format(2, ',', ' ') }} €</div>
+                    <div style="font-size: 12px; opacity: 0.9;">{{ tp('email_credit_approved.content.credit_approved.financing_note', {}, 'email_credit_approved') }}</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    {% if referenceNumber %}
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_credit_approved.content.contract_info.title', {}, 'email_credit_approved') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 12px 16px; background: #e3f2fd; font-weight: 600; color: #0d47a1; width: 40%; border-right: 1px solid #bbdefb;">{{ tp('email_credit_approved.content.contract_info.contract_number', {}, 'email_credit_approved') }}</td>
+                <td style="padding: 12px 16px; font-family: monospace; font-weight: 700; color: #1976d2; font-size: 16px;">{{ referenceNumber }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px 16px; background: #f5f5f5; font-weight: 600; color: #0d47a1; border-right: 1px solid #bbdefb;">{{ tp('email_credit_approved.content.contract_info.status_label', {}, 'email_credit_approved') }}</td>
+                <td style="padding: 12px 16px;">
+                    <span style="background: #e8f5e8; color: #2e7d32; padding: 4px 12px; border-radius: 12px; font-size: 13px; font-weight: 600;">
+                        {{ tp('email_credit_approved.content.contract_info.status_value', {}, 'email_credit_approved') }}
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    {% endif %}
+
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ tp('email_credit_approved.content.next_steps.title', {}, 'email_credit_approved') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 10px 16px; background: #fff8e1; border-left: 4px solid #f57c00; border-bottom: 1px solid #ffcc02;">
+                    <strong style="color: #e65100;">{{ tp('email_credit_approved.content.next_steps.step_1.title', {}, 'email_credit_approved') }}</strong><br>
+                    <span style="color: #424242;">{{ tp('email_credit_approved.content.next_steps.step_1.description', {}, 'email_credit_approved') }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 16px; background: #f9f9f9; border-left: 4px solid #f57c00; border-bottom: 1px solid #ffcc02;">
+                    <strong style="color: #e65100;">{{ tp('email_credit_approved.content.next_steps.step_2.title', {}, 'email_credit_approved') }}</strong><br>
+                    <span style="color: #424242;">{{ tp('email_credit_approved.content.next_steps.step_2.description', {}, 'email_credit_approved') }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 16px; background: #fff8e1; border-left: 4px solid #f57c00;">
+                    <strong style="color: #e65100;">{{ tp('email_credit_approved.content.next_steps.step_3.title', {}, 'email_credit_approved') }}</strong><br>
+                    <span style="color: #424242;">{{ tp('email_credit_approved.content.next_steps.step_3.description', {}, 'email_credit_approved') }}</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_credit_approved.content.personalized_support.title', {}, 'email_credit_approved') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #f8f9fa; border-left: 4px solid #1976d2; color: #424242; line-height: 1.6;">
+                    {{ tp('email_credit_approved.content.personalized_support.description', {}, 'email_credit_approved') }}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p class="content-text">
+        {{ tp('email_credit_approved.content.thanks_message', {}, 'email_credit_approved') }}
+    </p>
+
+    <p class="footer-text">
+        {% if translationService is defined %}{{ translationService.tpWithCompany('email_credit_approved.content.footer', {}, 'email_credit_approved') }}{% else %}{{ tp_with_company('email_credit_approved.content.footer', {}, 'email_credit_approved') }}{% endif %}
+    </p>
+{% endblock %}

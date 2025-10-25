@@ -1,0 +1,90 @@
+hypothecaire:
+  page_title: "Crédit Hypothécaire"
+  page_description: "Financez vos gros projets avec notre crédit hypothécaire. Montants importants garantis par votre bien immobilier."
+  
+  hero:
+    title: "Crédit Hypothécaire"
+    subtitle: "Financez vos gros projets avec notre crédit hypothécaire. Montants importants garantis par votre bien immobilier."
+    rate_value: "3,1%"
+    amount_value: "500 000€"
+    duration_value: "25 ans"
+  
+  section_1:
+    title: "Qu'est-ce qu'un crédit hypothécaire ?"
+    paragraph_1: "Le crédit hypothécaire est un prêt garanti par une hypothèque sur un bien immobilier. Il permet de financer des montants importants pour vos grands projets : travaux, investissement, rachat de crédits ou besoins de trésorerie."
+    paragraph_2: "Grâce à cette garantie immobilière, vous bénéficiez de conditions préférentielles et de durées de remboursement étendues, adaptées aux montants élevés."
+  
+  features:
+    amount: "Jusqu'à 500 000€"
+    amount_detail: "Selon la valeur du bien"
+    duration: "De 5 à 25 ans"
+    duration_detail: "Durées étendues"
+    rate: "À partir de {rate}% TAEG*"
+    rate_detail: "Taux préférentiel garanti"
+    guarantee: "Hypothèque"
+    guarantee_detail: "Sur bien immobilier"
+  
+  advantages:
+    advantage_1: "<strong>Montants élevés :</strong> Jusqu'à 70% de la valeur du bien en garantie"
+    advantage_2: "<strong>Taux avantageux :</strong> Conditions préférentielles grâce à l'hypothèque"
+    advantage_3: "<strong>Durées longues :</strong> Jusqu'à 25 ans pour des mensualités réduites"
+    advantage_4: "<strong>Utilisation libre :</strong> Aucune justification d'emploi des fonds"
+    advantage_5: "<strong>Déduction fiscale :</strong> Intérêts déductibles selon votre situation"
+  
+  requirements:
+    borrower:
+      title: "Conditions emprunteur"
+      item_1: "Être propriétaire du bien hypothéqué"
+      item_2: "Revenus réguliers et suffisants"
+      item_3: "Capacité d'endettement disponible"
+      item_4: "Âge maximum 70 ans en fin de prêt"
+    property:
+      title: "Conditions du bien"
+      item_1: "Bien immobilier libre d'hypothèque"
+      item_2: "Valeur minimum 150 000€"
+      item_3: "Expertise immobilière obligatoire"
+      item_4: "Assurance habitation exigée"
+  
+  documents:
+    personal:
+      title: "Documents personnels"
+      item_1: "Pièces d'identité des co-emprunteurs"
+      item_2: "Justificatifs de domicile"
+      item_3: "3 derniers bulletins de salaire"
+      item_4: "2 derniers avis d'imposition"
+    property:
+      title: "Documents immobiliers"
+      item_1: "Titre de propriété ou acte notarié"
+      item_2: "Certificat d'urbanisme"
+      item_3: "État hypothécaire récent"
+      item_4: "Taxe foncière dernière année"
+    financial:
+      title: "Documents financiers"
+      item_1: "3 derniers relevés de compte"
+      item_2: "Tableau d'amortissement crédits en cours"
+      item_3: "Attestations de patrimoine"
+      item_4: "Justificatifs revenus locatifs"
+  
+  legal:
+    title: "Informations légales importantes"
+    taeg: "<strong>*TAEG :</strong> Exemple représentatif : pour un crédit hypothécaire de 100 000€ sur 15 ans au TAEG de 3,1%, vous remboursez 180 mensualités de 694€, soit un montant total de 124 920€ (coût du crédit : 24 920€)."
+    mortgage: "<strong>Hypothèque :</strong> Inscription d'une hypothèque conventionnelle sur le bien immobilier."
+    fees: "<strong>Frais :</strong> Frais de notaire et d'inscription hypothécaire à votre charge."
+    expertise: "<strong>Expertise :</strong> Évaluation immobilière obligatoire par expert agréé."
+    discharge: "<strong>Mainlevée :</strong> Radiation automatique de l'hypothèque après remboursement."
+  
+  cta:
+    title: "Valorisez votre patrimoine"
+    subtitle: "Obtenez les fonds dont vous avez besoin grâce à votre bien immobilier"
+  
+  sidebar:
+    evaluation_title: "Évaluation immobilière"
+    step_1:
+      title: "Expertise"
+      time: "5 jours"
+    step_2:
+      title: "Étude dossier"
+      time: "15 jours"
+    step_3:
+      title: "Signature notaire"
+      time: "10 jours"

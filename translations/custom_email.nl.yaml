@@ -1,0 +1,24 @@
+# DUTCH TRANSLATION
+# Original file: custom_email.fr.yaml
+# Generated on: 2025-10-11
+
+custom_email:
+  title: "Gepersonaliseerd bericht"
+  content:
+    attachments:
+      title: "Bijlagen"
+      count_single: "Dit bericht bevat {count} bijlage."
+      count_plural: "Dit bericht bevat {count} bijlagen."
+    footer:
+      sent_by: "Deze e-mail is naar u verzonden door het {company_name} team."
+      sender: "Afzender: {sender_name}"
+  
+  # Logberichten voor MessageHandler
+  logs:
+    sending: "Verzenden van gepersonaliseerde e-mail"
+    success: "Gepersonaliseerde e-mail succesvol verzonden"
+    error: "Fout bij het verzenden van gepersonaliseerde e-mail"
+    not_found: "Gepersonaliseerde e-mail niet gevonden"
+    already_sent: "Gepersonaliseerde e-mail al verzonden"
+    attachment_not_found: "Bijlagebestand niet gevonden"
+    send_failed: "Verzenden van gepersonaliseerde e-mail mislukt"

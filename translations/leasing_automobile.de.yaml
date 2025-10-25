@@ -1,0 +1,106 @@
+leasing_automobile:
+  page:
+    title: "Fahrzeug-Leasing"
+    description: "Fahren Sie Ihr Traumfahrzeug mit unserem Fahrzeug-Leasing. Flexibles Leasing mit Kaufoption."
+  
+  hero:
+    class: "credit-detail-hero--leasing"
+    taux: "2,9%"
+    montant: "80 000€"
+    duree: "5 Jahre"
+    title: "Fahrzeug-Leasing"
+    subtitle: "Ihr Fahrzeug im Leasing mit Kaufoption"
+  
+  section_1:
+    title: "Was ist Fahrzeug-Leasing?"
+    content:
+      paragraph_1: "Das Fahrzeug-Leasing ermöglicht es Ihnen, ein neues Fahrzeug zu fahren, indem Sie nur dessen Wertverlust während der Vertragslaufzeit bezahlen."
+      paragraph_2: "Bei Vertragsende können Sie das Fahrzeug zu seinem Restwert kaufen, es zurückgeben oder gegen ein neueres Modell austauschen."
+  
+  features:
+    title: "Leasing-Merkmale"
+    montant:
+      value: "Bis zu 80 000€"
+      detail: "Alle Fahrzeugtypen"
+    duree:
+      value: "Von 2 bis 5 Jahren"
+      detail: "Flexibler Vertrag"
+    taux:
+      value: "Ab {rate}% effektiver Jahreszins*"
+      detail: "Vorteilhafte Finanzierung"
+    garantie:
+      value: "Fahrzeug als Sicherheit"
+      detail: "Eigentum bis Optionsausübung"
+  
+  section_3:
+    title: "Vorteile des Fahrzeug-Leasings"
+    advantages:
+      vehicule_recent:
+        title: "Neues Fahrzeug"
+        description: "Immer unter Herstellergarantie"
+      loyers_reduits:
+        title: "Reduzierte Raten"
+        description: "Niedriger als bei klassischem Autokredit"
+      flexibilite:
+        title: "Flexibilität"
+        description: "3 Optionen bei Vertragsende"
+      entretien:
+        title: "Wartung inklusive"
+        description: "Wartungspaket möglich"
+      deductibilite:
+        title: "Steuerliche Absetzbarkeit"
+        description: "Steuervorteile für Gewerbetreibende"
+  
+  section_4:
+    title: "Vertragsbedingungen"
+    contrat:
+      title: "Vertragsbedingungen"
+      items:
+        vehicule: "Neues oder junges Fahrzeug (unter 2 Jahren)"
+        kilometrage: "Vordefinierte Jahreskilometer"
+        entretien: "Wartung bei autorisiertem Händler"
+        assurance: "Vollkaskoversicherung obligatorisch"
+    locataire:
+      title: "Leasingnehmer-Bedingungen"
+      items:
+        permis: "Gültiger Führerschein"
+        revenus: "Nachgewiesene stabile Einkommen"
+        interdiction: "Keine Kontosperrung"
+        domicile: "Wohnsitz in Deutschland"
+  
+  section_5:
+    title: "Erforderliche Dokumente"
+    personnels:
+      title: "Persönliche Dokumente"
+      items:
+        permis: "Führerschein"
+        identite: "Personalausweis"
+        domicile: "Wohnsitznachweis"
+        rib: "Kontoverbindung"
+    financiers:
+      title: "Finanzielle Nachweise"
+      items:
+        salaires: "3 letzte Gehaltsabrechnungen"
+        impots: "Steuerbescheid"
+        comptes: "Kontoauszüge"
+        contrat: "Arbeitsvertrag"
+    vehicule:
+      title: "Fahrzeug"
+      items:
+        commande: "Bestellschein des Händlers"
+        fiche: "Technisches Datenblatt des Fahrzeugs"
+        devis_assurance: "Vollkaskoversicherungs-Angebot"
+        certificat: "Konformitätsbescheinigung"
+  
+  legal:
+    details:
+      title: "Wichtige rechtliche Informationen"
+      taeg: "<strong>*Effektiver Jahreszins:</strong> Repräsentatives Beispiel: Für ein Fahrzeug von 25 000€ im Leasing über 48 Monate mit effektivem Jahreszins von 2,9%, 48 Raten von 315€ + Kaufoption von 10 000€, Gesamtkosten bei Kauf: 25 120€."
+      kilometrage: "<strong>Kilometerleistung:</strong> Einhaltung der vertraglich vereinbarten Kilometer, Strafen bei Überschreitung."
+      etat: "<strong>Fahrzeugzustand:</strong> Rückgabe in gutem Zustand, normale Abnutzung ausgenommen."
+      assurance: "<strong>Versicherung:</strong> Vollkasko obligatorisch mit Diebstahl und Brand."
+      resiliation: "<strong>Vorzeitige Kündigung:</strong> Unter Umständen möglich, Strafen anwendbar."
+  
+  cta:
+    title: "Fahren Sie Ihr ideales Fahrzeug"
+    subtitle: "Entdecken Sie die Vorteile des Fahrzeug-Leasings"

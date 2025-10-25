@@ -1,0 +1,955 @@
+<style>
+/* Insurance (Assurances) Specific Styles */
+.banking__insurance-summary {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: 20px !important;
+    margin-bottom: 32px !important;
+}
+
+.banking__insurance-stat {
+    background: #ffffff !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    text-align: center !important;
+}
+
+.banking__insurance-stat-value {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 8px !important;
+}
+
+.banking__insurance-stat-label {
+    font-size: 13px !important;
+    color: #7f8c8d !important;
+    font-weight: 500 !important;
+}
+
+.banking__insurance-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)) !important;
+    gap: 24px !important;
+    margin-bottom: 32px !important;
+}
+
+.banking__insurance-card {
+    background: #ffffff !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    transition: box-shadow 0.2s ease !important;
+}
+
+.banking__insurance-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+}
+
+.banking__insurance-header {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    margin-bottom: 20px !important;
+}
+
+.banking__insurance-icon {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+}
+
+.banking__insurance-icon--auto {
+    background: linear-gradient(135deg, #3498db, #2980b9) !important;
+}
+
+.banking__insurance-icon--home, .banking__insurance-icon--habitation {
+    background: linear-gradient(135deg, #e74c3c, #c0392b) !important;
+}
+
+.banking__insurance-icon--life, .banking__insurance-icon--vie {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad) !important;
+}
+
+.banking__insurance-icon--health, .banking__insurance-icon--sante {
+    background: linear-gradient(135deg, #1abc9c, #16a085) !important;
+}
+
+.banking__insurance-icon--professional, .banking__insurance-icon--professionnelle {
+    background: linear-gradient(135deg, #f39c12, #e67e22) !important;
+}
+
+.banking__insurance-icon-svg {
+    width: 24px !important;
+    height: 24px !important;
+    color: white !important;
+}
+
+.banking__insurance-info {
+    flex: 1 !important;
+}
+
+.banking__insurance-name {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin: 0 0 4px 0 !important;
+}
+
+.banking__insurance-reference {
+    font-size: 13px !important;
+    color: #7f8c8d !important;
+    margin: 0 0 4px 0 !important;
+}
+
+.banking__insurance-property {
+    font-size: 13px !important;
+    color: #95a5a6 !important;
+    margin: 0 !important;
+}
+
+.banking__insurance-status {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 6px 12px !important;
+    border-radius: 20px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+}
+
+.banking__insurance-status--active, .banking__insurance-status--actif {
+    background: #d5f4e6 !important;
+    color: #16a085 !important;
+}
+
+.banking__insurance-status--suspended, .banking__insurance-status--suspendu {
+    background: #ffeaa7 !important;
+    color: #f39c12 !important;
+}
+
+.banking__insurance-status--expired, .banking__insurance-status--expire {
+    background: #fab1a0 !important;
+    color: #e74c3c !important;
+}
+
+.banking__insurance-status--cancelled, .banking__insurance-status--resilie {
+    background: #ddd !important;
+    color: #7f8c8d !important;
+}
+
+.banking__insurance-status-icon {
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.banking__insurance-coverage {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+    gap: 16px !important;
+    margin-bottom: 20px !important;
+}
+
+.banking__insurance-coverage-item {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+}
+
+.banking__insurance-coverage-label {
+    font-size: 13px !important;
+    color: #7f8c8d !important;
+}
+
+.banking__insurance-coverage-value {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+}
+
+.banking__insurance-details {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+    margin-bottom: 20px !important;
+}
+
+.banking__insurance-detail {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+}
+
+.banking__insurance-detail-label {
+    font-size: 12px !important;
+    color: #7f8c8d !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+}
+
+.banking__insurance-detail-value {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+}
+
+.banking__insurance-actions {
+    display: flex !important;
+    gap: 12px !important;
+}
+
+.banking__insurance-btn {
+    flex: 1 !important;
+    padding: 10px 16px !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.banking__insurance-btn--primary {
+    background: #3498db !important;
+    color: white !important;
+}
+
+.banking__insurance-btn--primary:hover {
+    background: #2980b9 !important;
+}
+
+.banking__insurance-btn--secondary {
+    background: #ecf0f1 !important;
+    color: #2c3e50 !important;
+}
+
+.banking__insurance-btn--secondary:hover {
+    background: #d5dbdb !important;
+}
+
+/* Empty State Styles */
+.banking__empty-state {
+    text-align: center !important;
+    padding: 60px 20px !important;
+    background: #ffffff !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 12px !important;
+    margin-bottom: 32px !important;
+}
+
+.banking__empty-state-icon {
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto 20px !important;
+    border-radius: 50% !important;
+    background: #f8f9fa !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.banking__empty-state-icon-svg {
+    width: 40px !important;
+    height: 40px !important;
+    color: #7f8c8d !important;
+}
+
+.banking__empty-state-title {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin: 0 0 12px 0 !important;
+}
+
+.banking__empty-state-description {
+    font-size: 16px !important;
+    color: #7f8c8d !important;
+    margin: 0 0 24px 0 !important;
+    line-height: 1.5 !important;
+}
+
+.banking__empty-state-btn {
+    display: inline-block !important;
+    padding: 12px 24px !important;
+    background: #3498db !important;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    transition: background 0.2s ease !important;
+}
+
+.banking__empty-state-btn:hover {
+    background: #2980b9 !important;
+    text-decoration: none !important;
+    color: white !important;
+}
+
+/* Insurance Offers Styles */
+.banking__insurance-offers {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 20px !important;
+    margin-bottom: 32px !important;
+}
+
+.banking__insurance-offer {
+    background: #ffffff !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+    transition: box-shadow 0.2s ease !important;
+}
+
+.banking__insurance-offer:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+}
+
+.banking__insurance-offer-icon {
+    width: 56px !important;
+    height: 56px !important;
+    border-radius: 12px !important;
+    background: #f8f9fa !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+}
+
+.banking__insurance-offer-icon-svg {
+    width: 28px !important;
+    height: 28px !important;
+    color: #3498db !important;
+}
+
+.banking__insurance-offer-content {
+    flex: 1 !important;
+}
+
+.banking__insurance-offer-title {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin: 0 0 4px 0 !important;
+}
+
+.banking__insurance-offer-description {
+    font-size: 14px !important;
+    color: #7f8c8d !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+}
+
+.banking__insurance-offer-actions {
+    flex-shrink: 0 !important;
+}
+
+.banking__insurance-offer-btn {
+    padding: 8px 16px !important;
+    background: #3498db !important;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    transition: background 0.2s ease !important;
+}
+
+.banking__insurance-offer-btn:hover {
+    background: #2980b9 !important;
+    text-decoration: none !important;
+    color: white !important;
+}
+
+@media (max-width: 768px) {
+    .banking__insurance-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .banking__insurance-offers {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .banking__insurance-details {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .banking__insurance-coverage {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .banking__insurance-actions {
+        flex-direction: column !important;
+    }
+    
+    .banking__insurance-offer {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+}
+</style>
+
+<section class="banking__content" data-tab="assurances">
+    <!-- Insurance Statistics -->
+    <div class="banking__insurance-summary">
+        <div class="banking__insurance-stat">
+            <div class="banking__insurance-stat-value">{{ statistiques.contratsActifs|default(0) }}</div>
+            <div class="banking__insurance-stat-label">{{ tp('banking_insurance.statistics.active_contracts', [], 'banking_insurance') }}</div>
+        </div>
+        <div class="banking__insurance-stat">
+            <div class="banking__insurance-stat-value">{{ statistiques.primeMensuelleTotal|default(0) }}€</div>
+            <div class="banking__insurance-stat-label">{{ tp('banking_insurance.statistics.monthly_premium', [], 'banking_insurance') }}</div>
+        </div>
+        <div class="banking__insurance-stat">
+            <div class="banking__insurance-stat-value">{{ statistiques.typesAssurance|default(0) }}</div>
+            <div class="banking__insurance-stat-label">{{ tp('banking_insurance.statistics.insurance_types', [], 'banking_insurance') }}</div>
+        </div>
+        <div class="banking__insurance-stat">
+            <div class="banking__insurance-stat-value">{% if statistiques.contratsExpirant is not empty %}{{ statistiques.contratsExpirant }}{% else %}-{% endif %}</div>
+            <div class="banking__insurance-stat-label">{{ tp('banking_insurance.statistics.days_until_renewal', [], 'banking_insurance') }}</div>
+        </div>
+    </div>
+
+    <!-- Active Insurance Contracts -->
+    {% if contratsActifs is defined and contratsActifs is not empty %}
+        <div class="banking__section-header">
+            <h2 class="banking__section-title">{{ tp('banking_insurance.contracts.title', [], 'banking_insurance') }}</h2>
+        </div>
+
+        <div class="banking__insurance-grid">
+            {% for contrat in contratsActifs %}
+                <div class="banking__insurance-card">
+                    <div class="banking__insurance-header">
+                        <div class="banking__insurance-icon banking__insurance-icon--{{ contrat.typeAssurance.value }}">
+                            {% if contrat.typeAssurance.value == 'auto' %}
+                                {{ ux_icon('heroicons:truck', {'class': 'banking__insurance-icon-svg'}) }}
+                            {% elseif contrat.typeAssurance.value == 'habitation' %}
+                                {{ ux_icon('heroicons:home', {'class': 'banking__insurance-icon-svg'}) }}
+                            {% elseif contrat.typeAssurance.value == 'sante' %}
+                                {{ ux_icon('heroicons:heart', {'class': 'banking__insurance-icon-svg'}) }}
+                            {% elseif contrat.typeAssurance.value == 'vie' %}
+                                {{ ux_icon('heroicons:user', {'class': 'banking__insurance-icon-svg'}) }}
+                            {% else %}
+                                {{ ux_icon('heroicons:shield-check', {'class': 'banking__insurance-icon-svg'}) }}
+                            {% endif %}
+                        </div>
+                        <div class="banking__insurance-info">
+                            <h3 class="banking__insurance-name">{{ contrat.typeAssurance.label }}</h3>
+                            <p class="banking__insurance-reference">{{ tp('banking_insurance.contracts.contract_number', [], 'banking_insurance') }} {{ contrat.numeroContrat }}</p>
+                            {% if contrat.demandeDevis %}
+                                <p class="banking__insurance-property">{{ contrat.demandeDevis.nom }} {{ contrat.demandeDevis.prenom }}</p>
+                            {% endif %}
+                        </div>
+                        <div class="banking__insurance-status banking__insurance-status--{{ contrat.statut.value }}">
+                            {% if contrat.statut.value == 'actif' %}
+                                {{ ux_icon('heroicons:check-circle', {'class': 'banking__insurance-status-icon'}) }}
+                                {{ tp('banking_insurance.contracts.active_status', [], 'banking_insurance') }}
+                            {% elseif contrat.statut.value == 'suspendu' %}
+                                {{ ux_icon('heroicons:pause-circle', {'class': 'banking__insurance-status-icon'}) }}
+                                {{ tp('banking_insurance.contracts.suspended_status', [], 'banking_insurance') }}
+                            {% elseif contrat.statut.value == 'expire' %}
+                                {{ ux_icon('heroicons:x-circle', {'class': 'banking__insurance-status-icon'}) }}
+                                {{ tp('banking_insurance.contracts.expired_status', [], 'banking_insurance') }}
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <div class="banking__insurance-coverage">
+                        {% if contrat.primeMensuelle %}
+                            <div class="banking__insurance-coverage-item">
+                                <span class="banking__insurance-coverage-label">{{ tp('banking_insurance.coverage.monthly_premium', [], 'banking_insurance') }}</span>
+                                <span class="banking__insurance-coverage-value">{{ contrat.primeMensuelle }}€</span>
+                            </div>
+                        {% endif %}
+                        {% if contrat.primeAnnuelle %}
+                            <div class="banking__insurance-coverage-item">
+                                <span class="banking__insurance-coverage-label">{{ tp('banking_insurance.coverage.annual_premium', [], 'banking_insurance') }}</span>
+                                <span class="banking__insurance-coverage-value">{{ contrat.primeAnnuelle }}€</span>
+                            </div>
+                        {% endif %}
+                        {% if contrat.montantCouverture %}
+                            <div class="banking__insurance-coverage-item">
+                                <span class="banking__insurance-coverage-label">{{ tp('banking_insurance.coverage.coverage_amount', [], 'banking_insurance') }}</span>
+                                <span class="banking__insurance-coverage-value">{{ contrat.montantCouverture }}€</span>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="banking__insurance-details">
+                        {% if contrat.dateFinPrevue %}
+                            <div class="banking__insurance-detail">
+                                <span class="banking__insurance-detail-label">{{ tp('banking_insurance.details.expiration_date', [], 'banking_insurance') }}</span>
+                                <span class="banking__insurance-detail-value">{{ contrat.dateFinPrevue|date('d/m/Y') }}</span>
+                            </div>
+                        {% endif %}
+                        {% if contrat.franchise %}
+                            <div class="banking__insurance-detail">
+                                <span class="banking__insurance-detail-label">{{ tp('banking_insurance.details.deductible', [], 'banking_insurance') }}</span>
+                                <span class="banking__insurance-detail-value">{{ contrat.franchise }}€</span>
+                            </div>
+                        {% endif %}
+                        {% if contrat.prochaineEcheance %}
+                            <div class="banking__insurance-detail">
+                                <span class="banking__insurance-detail-label">{{ tp('banking_insurance.details.next_payment', [], 'banking_insurance') }}</span>
+                                <span class="banking__insurance-detail-value">{{ contrat.prochaineEcheance|date('d/m/Y') }}</span>
+                            </div>
+                        {% endif %}
+                        <div class="banking__insurance-detail">
+                            <span class="banking__insurance-detail-label">{{ tp('banking_insurance.details.contract_start', [], 'banking_insurance') }}</span>
+                            <span class="banking__insurance-detail-value">{{ contrat.dateDebut|date('d/m/Y') }}</span>
+                        </div>
+                    </div>
+
+                    <div class="banking__insurance-actions">
+                        {% if contrat.statut.value == 'actif' %}
+                            <button class="banking__insurance-btn banking__insurance-btn--primary">{{ tp('banking_insurance.actions.declare_claim', [], 'banking_insurance') }}</button>
+                            <button class="banking__insurance-btn banking__insurance-btn--secondary">{{ tp('banking_insurance.actions.certificate', [], 'banking_insurance') }}</button>
+                        {% elseif contrat.statut.value == 'suspendu' %}
+                            <button class="banking__insurance-btn banking__insurance-btn--primary">{{ tp('banking_insurance.actions.reactivate', [], 'banking_insurance') }}</button>
+                            <button class="banking__insurance-btn banking__insurance-btn--secondary">{{ tp('banking_insurance.actions.details', [], 'banking_insurance') }}</button>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <!-- No Active Contracts -->
+        <div class="banking__section-header">
+            <h2 class="banking__section-title">{{ tp('banking_insurance.contracts.title', [], 'banking_insurance') }}</h2>
+        </div>
+        
+        <div class="banking__empty-state">
+            <div class="banking__empty-state-icon">
+                {{ ux_icon('heroicons:shield-exclamation', {'class': 'banking__empty-state-icon-svg'}) }}
+            </div>
+            <h3 class="banking__empty-state-title">{{ tp('banking_insurance.empty_state.no_contracts_title', [], 'banking_insurance') }}</h3>
+            <p class="banking__empty-state-description">{{ tp('banking_insurance.empty_state.no_contracts_description', [], 'banking_insurance') }}</p>
+            <a href="{{ path('services_devis_form', {'type': 'auto'}) }}" class="banking__empty-state-btn">{{ tp('banking_insurance.empty_state.request_quote', [], 'banking_insurance') }}</a>
+        </div>
+    {% endif %}
+
+    <!-- Available Insurance Types -->
+    {% if opportunites is defined and opportunites is not empty %}
+        <div class="banking__section-header">
+            <h2 class="banking__section-title">{{ tp('banking_insurance.available_types.title', [], 'banking_insurance') }}</h2>
+            <p class="banking__section-subtitle">{{ tp('banking_insurance.available_types.subtitle', [], 'banking_insurance') }}</p>
+        </div>
+
+        <div class="banking__insurance-offers">
+            {% for insuranceType in opportunites %}
+                <div class="banking__insurance-offer">
+                    <div class="banking__insurance-offer-icon">
+                        {% if insuranceType.type.value == 'auto' %}
+                            {{ ux_icon('heroicons:truck', {'class': 'banking__insurance-offer-icon-svg'}) }}
+                        {% elseif insuranceType.type.value == 'habitation' %}
+                            {{ ux_icon('heroicons:home', {'class': 'banking__insurance-offer-icon-svg'}) }}
+                        {% elseif insuranceType.type.value == 'sante' %}
+                            {{ ux_icon('heroicons:heart', {'class': 'banking__insurance-offer-icon-svg'}) }}
+                        {% elseif insuranceType.type.value == 'vie' %}
+                            {{ ux_icon('heroicons:user', {'class': 'banking__insurance-offer-icon-svg'}) }}
+                        {% else %}
+                            {{ ux_icon('heroicons:briefcase', {'class': 'banking__insurance-offer-icon-svg'}) }}
+                        {% endif %}
+                    </div>
+                    <div class="banking__insurance-offer-content">
+                        <h3 class="banking__insurance-offer-title">{{ insuranceType.label }}</h3>
+                        <p class="banking__insurance-offer-description">{{ tp('banking_insurance.types.' ~ insuranceType.type.value ~ '.description', [], 'banking_insurance') }}</p>
+                    </div>
+                    <div class="banking__insurance-offer-actions">
+                        <a href="{{ path('services_devis_form', {'type': insuranceType.type.value}) }}" class="banking__insurance-offer-btn">{{ tp('banking_insurance.available_types.get_quote', [], 'banking_insurance') }}</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+
+<!-- Assurances -->
+<section class="banking__content">
+    
+    <!-- Insurance Header -->
+    <div class="banking__operations-header">
+        <div class="banking__account-summary">
+            <h1 class="banking__account-title">{{ tp('banking_insurance.header.title', [], 'banking_insurance') }}</h1>
+            <div class="banking__account-details">
+                <span class="banking__account-type">{{ tp('banking_insurance.header.subtitle', [], 'banking_insurance') }}</span>
+                <span class="banking__account-updated">{{ tp('banking_insurance.header.last_update', [], 'banking_insurance') }} : {{ "now"|date('d/m/Y à H:i') }}</span>
+            </div>
+        </div>
+        <div class="banking__balance-display">
+            <button class="banking__action-primary">
+                {{ ux_icon('heroicons:plus', {'class': 'banking__action-icon'}) }}
+                {{ tp('banking_insurance.header.new_quote', [], 'banking_insurance') }}
+            </button>
+        </div>
+    </div>
+
+    <!-- Insurance Summary -->
+    <div class="banking__insurance-summary">
+        <div class="banking__insurance-stat">
+            <div class="banking__insurance-stat-value">5</div>
+            <div class="banking__insurance-stat-label">{{ tp('banking_insurance.statistics.active_contracts', [], 'banking_insurance') }}</div>
+        </div>
+        <div class="banking__insurance-stat">
+            <div class="banking__insurance-stat-value">342,50 €</div>
+            <div class="banking__insurance-stat-label">{{ tp('banking_insurance.statistics.monthly_premium', [], 'banking_insurance') }}</div>
+        </div>
+        <div class="banking__insurance-stat">
+            <div class="banking__insurance-stat-value">2</div>
+            <div class="banking__insurance-stat-label">{{ tp('banking_insurance.statistics.claims_in_progress', [], 'banking_insurance') }}</div>
+        </div>
+        <div class="banking__insurance-stat">
+            <div class="banking__insurance-stat-value">98%</div>
+            <div class="banking__insurance-stat-label">{{ tp('banking_insurance.statistics.satisfaction_rate', [], 'banking_insurance') }}</div>
+        </div>
+    </div>
+
+    <!-- Active Insurance Contracts -->
+    <div class="banking__section-header">
+        <h2 class="banking__section-title">{{ tp('banking_insurance.contracts.title', [], 'banking_insurance') }}</h2>
+    </div>
+
+    <div class="banking__insurance-grid">
+        <!-- Assurance Habitation -->
+        <div class="banking__insurance-card">
+            <div class="banking__insurance-header">
+                <div class="banking__insurance-icon banking__insurance-icon--home">
+                    {{ ux_icon('heroicons:home', {'class': 'banking__insurance-icon-svg'}) }}
+                </div>
+                <div class="banking__insurance-info">
+                    <h3 class="banking__insurance-name">{{ tp('banking_insurance.contracts.home_insurance', [], 'banking_insurance') }}</h3>
+                    <p class="banking__insurance-reference">{{ tp('banking_insurance.contracts.contract_number', [], 'banking_insurance') }} HAB-2024-789</p>
+                    <p class="banking__insurance-property">{{ tp('banking_insurance.contracts.apartment', [], 'banking_insurance') }} - Paris 15ème</p>
+                </div>
+                <div class="banking__insurance-status banking__insurance-status--active">
+                    {{ ux_icon('heroicons:check-circle', {'class': 'banking__insurance-status-icon'}) }}
+                    {{ tp('banking_insurance.contracts.active_status', [], 'banking_insurance') }}
+                </div>
+            </div>
+            
+            <div class="banking__insurance-coverage">
+                <div class="banking__insurance-coverage-item">
+                    <span class="banking__insurance-coverage-label">{{ tp('banking_insurance.coverage.furniture_capital', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-coverage-value">75 000 €</span>
+                </div>
+                <div class="banking__insurance-coverage-item">
+                    <span class="banking__insurance-coverage-label">{{ tp('banking_insurance.coverage.civil_liability', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-coverage-value">10 000 000 €</span>
+                </div>
+                <div class="banking__insurance-coverage-item">
+                    <span class="banking__insurance-coverage-label">{{ tp('banking_insurance.coverage.monthly_premium', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-coverage-value">42,50 €</span>
+                </div>
+            </div>
+
+            <div class="banking__insurance-details">
+                <div class="banking__insurance-detail">
+                    <span class="banking__insurance-detail-label">{{ tp('banking_insurance.details.annual_deadline', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-detail-value">15/03/2025</span>
+                </div>
+                <div class="banking__insurance-detail">
+                    <span class="banking__insurance-detail-label">{{ tp('banking_insurance.details.deductible', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-detail-value">150 €</span>
+                </div>
+                <div class="banking__insurance-detail">
+                    <span class="banking__insurance-detail-label">{{ tp('banking_insurance.details.assistance_24h', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-detail-value">{{ tp('banking_insurance.details.included', [], 'banking_insurance') }}</span>
+                </div>
+            </div>
+
+            <div class="banking__insurance-actions">
+                <button class="banking__insurance-btn banking__insurance-btn--primary">{{ tp('banking_insurance.actions.declare_claim', [], 'banking_insurance') }}</button>
+                <button class="banking__insurance-btn banking__insurance-btn--secondary">{{ tp('banking_insurance.actions.certificate', [], 'banking_insurance') }}</button>
+            </div>
+        </div>
+
+        <!-- Assurance Auto -->
+        <div class="banking__insurance-card">
+            <div class="banking__insurance-header">
+                <div class="banking__insurance-icon banking__insurance-icon--auto">
+                    {{ ux_icon('heroicons:truck', {'class': 'banking__insurance-icon-svg'}) }}
+                </div>
+                <div class="banking__insurance-info">
+                    <h3 class="banking__insurance-name">{{ tp('banking_insurance.contracts.auto_insurance', [], 'banking_insurance') }}</h3>
+                    <p class="banking__insurance-reference">{{ tp('banking_insurance.contracts.contract_number', [], 'banking_insurance') }} AUTO-2024-456</p>
+                    <p class="banking__insurance-property">BMW Série 3 - DH-123-AB</p>
+                </div>
+                <div class="banking__insurance-status banking__insurance-status--active">
+                    {{ ux_icon('heroicons:check-circle', {'class': 'banking__insurance-status-icon'}) }}
+                    {{ tp('banking_insurance.contracts.active_status', [], 'banking_insurance') }}
+                </div>
+            </div>
+            
+            <div class="banking__insurance-coverage">
+                <div class="banking__insurance-coverage-item">
+                    <span class="banking__insurance-coverage-label">{{ tp('banking_insurance.coverage.formula', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-coverage-value">{{ tp('banking_insurance.contracts.all_risks', [], 'banking_insurance') }}</span>
+                </div>
+                <div class="banking__insurance-coverage-item">
+                    <span class="banking__insurance-coverage-label">{{ tp('banking_insurance.coverage.vehicle_value', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-coverage-value">35 000 €</span>
+                </div>
+                <div class="banking__insurance-coverage-item">
+                    <span class="banking__insurance-coverage-label">{{ tp('banking_insurance.coverage.monthly_premium', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-coverage-value">89,90 €</span>
+                </div>
+            </div>
+
+            <div class="banking__insurance-details">
+                <div class="banking__insurance-detail">
+                    <span class="banking__insurance-detail-label">{{ tp('banking_insurance.details.annual_deadline', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-detail-value">22/08/2025</span>
+                </div>
+                <div class="banking__insurance-detail">
+                    <span class="banking__insurance-detail-label">{{ tp('banking_insurance.details.deductible', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-detail-value">300 €</span>
+                </div>
+                <div class="banking__insurance-detail">
+                    <span class="banking__insurance-detail-label">{{ tp('banking_insurance.details.bonus_malus', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-detail-value">0,85</span>
+                </div>
+            </div>
+
+            <div class="banking__insurance-actions">
+                <button class="banking__insurance-btn banking__insurance-btn--primary">{{ tp('banking_insurance.actions.declare_claim', [], 'banking_insurance') }}</button>
+                <button class="banking__insurance-btn banking__insurance-btn--secondary">{{ tp('banking_insurance.actions.green_card', [], 'banking_insurance') }}</button>
+            </div>
+        </div>
+
+        <!-- Assurance Vie -->
+        <div class="banking__insurance-card">
+            <div class="banking__insurance-header">
+                <div class="banking__insurance-icon banking__insurance-icon--life">
+                    {{ ux_icon('heroicons:heart', {'class': 'banking__insurance-icon-svg'}) }}
+                </div>
+                <div class="banking__insurance-info">
+                    <h3 class="banking__insurance-name">{{ tp('banking_insurance.contracts.life_insurance', [], 'banking_insurance') }}</h3>
+                    <p class="banking__insurance-reference">{{ tp('banking_insurance.contracts.contract_number', [], 'banking_insurance') }} VIE-2020-123</p>
+                    <p class="banking__insurance-property">{{ tp('banking_insurance.contracts.multisupport', [], 'banking_insurance') }}</p>
+                </div>
+                <div class="banking__insurance-status banking__insurance-status--active">
+                    {{ ux_icon('heroicons:check-circle', {'class': 'banking__insurance-status-icon'}) }}
+                    {{ tp('banking_insurance.contracts.active_status', [], 'banking_insurance') }}
+                </div>
+            </div>
+            
+            <div class="banking__insurance-coverage">
+                <div class="banking__insurance-coverage-item">
+                    <span class="banking__insurance-coverage-label">{{ tp('banking_insurance.coverage.surrender_value', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-coverage-value">45 678,90 €</span>
+                </div>
+                <div class="banking__insurance-coverage-item">
+                    <span class="banking__insurance-coverage-label">{{ tp('banking_insurance.coverage.performance_2024', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-coverage-value banking__amount--credit">+4,2%</span>
+                </div>
+                <div class="banking__insurance-coverage-item">
+                    <span class="banking__insurance-coverage-label">{{ tp('banking_insurance.coverage.monthly_payment', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-coverage-value">150,00 €</span>
+                </div>
+            </div>
+
+            <div class="banking__insurance-details">
+                <div class="banking__insurance-detail">
+                    <span class="banking__insurance-detail-label">{{ tp('banking_insurance.details.opening_date', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-detail-value">15/06/2020</span>
+                </div>
+                <div class="banking__insurance-detail">
+                    <span class="banking__insurance-detail-label">{{ tp('banking_insurance.details.beneficiary', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-detail-value">{{ tp('banking_insurance.details.spouse', [], 'banking_insurance') }}</span>
+                </div>
+                <div class="banking__insurance-detail">
+                    <span class="banking__insurance-detail-label">{{ tp('banking_insurance.details.taxation', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-detail-value">{{ tp('banking_insurance.details.optimized', [], 'banking_insurance') }}</span>
+                </div>
+            </div>
+
+            <div class="banking__insurance-actions">
+                <button class="banking__insurance-btn banking__insurance-btn--primary">{{ tp('banking_insurance.actions.arbitrage', [], 'banking_insurance') }}</button>
+                <button class="banking__insurance-btn banking__insurance-btn--secondary">{{ tp('banking_insurance.actions.payment', [], 'banking_insurance') }}</button>
+            </div>
+        </div>
+
+        <!-- Prévoyance -->
+        <div class="banking__insurance-card">
+            <div class="banking__insurance-header">
+                <div class="banking__insurance-icon banking__insurance-icon--health">
+                    {{ ux_icon('heroicons:shield-check', {'class': 'banking__insurance-icon-svg'}) }}
+                </div>
+                <div class="banking__insurance-info">
+                    <h3 class="banking__insurance-name">{{ tp('banking_insurance.contracts.health_insurance', [], 'banking_insurance') }}</h3>
+                    <p class="banking__insurance-reference">{{ tp('banking_insurance.contracts.contract_number', [], 'banking_insurance') }} PREV-2023-654</p>
+                    <p class="banking__insurance-property">{{ tp('banking_insurance.contracts.incapacity_death', [], 'banking_insurance') }}</p>
+                </div>
+                <div class="banking__insurance-status banking__insurance-status--active">
+                    {{ ux_icon('heroicons:check-circle', {'class': 'banking__insurance-status-icon'}) }}
+                    {{ tp('banking_insurance.contracts.active_status', [], 'banking_insurance') }}
+                </div>
+            </div>
+            
+            <div class="banking__insurance-coverage">
+                <div class="banking__insurance-coverage-item">
+                    <span class="banking__insurance-coverage-label">{{ tp('banking_insurance.coverage.death_capital', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-coverage-value">200 000 €</span>
+                </div>
+                <div class="banking__insurance-coverage-item">
+                    <span class="banking__insurance-coverage-label">{{ tp('banking_insurance.coverage.disability_pension', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-coverage-value">2 500 €/mois</span>
+                </div>
+                <div class="banking__insurance-coverage-item">
+                    <span class="banking__insurance-coverage-label">{{ tp('banking_insurance.coverage.monthly_premium', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-coverage-value">45,20 €</span>
+                </div>
+            </div>
+
+            <div class="banking__insurance-details">
+                <div class="banking__insurance-detail">
+                    <span class="banking__insurance-detail-label">{{ tp('banking_insurance.details.annual_deadline', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-detail-value">01/09/2025</span>
+                </div>
+                <div class="banking__insurance-detail">
+                    <span class="banking__insurance-detail-label">{{ tp('banking_insurance.details.waiting_period', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-detail-value">90 {{ tp('banking_insurance.details.days', [], 'banking_insurance') }}</span>
+                </div>
+                <div class="banking__insurance-detail">
+                    <span class="banking__insurance-detail-label">{{ tp('banking_insurance.details.beneficiaries', [], 'banking_insurance') }}</span>
+                    <span class="banking__insurance-detail-value">2 {{ tp('banking_insurance.details.children', [], 'banking_insurance') }}</span>
+                </div>
+            </div>
+
+            <div class="banking__insurance-actions">
+                <button class="banking__insurance-btn banking__insurance-btn--primary">{{ tp('banking_insurance.actions.declare_stop', [], 'banking_insurance') }}</button>
+                <button class="banking__insurance-btn banking__insurance-btn--secondary">{{ tp('banking_insurance.actions.certificate', [], 'banking_insurance') }}</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Insurance Opportunities -->
+    <div class="banking__section-header">
+        <h2 class="banking__section-title">{{ tp('banking_insurance.opportunities.title', [], 'banking_insurance') }}</h2>
+        <p class="banking__section-subtitle">{{ tp('banking_insurance.opportunities.subtitle', [], 'banking_insurance') }}</p>
+    </div>
+
+    <div class="banking__insurance-offers">
+        <div class="banking__insurance-offer-card">
+            <div class="banking__insurance-offer-icon">
+                {{ ux_icon('heroicons:device-phone-mobile', {'class': 'banking__insurance-offer-icon-svg'}) }}
+            </div>
+            <h3 class="banking__insurance-offer-title">{{ tp('banking_insurance.opportunities.mobile_insurance.title', [], 'banking_insurance') }}</h3>
+            <p class="banking__insurance-offer-description">{{ tp('banking_insurance.opportunities.mobile_insurance.description', [], 'banking_insurance') }}</p>
+            <div class="banking__insurance-offer-price">{{ tp('banking_insurance.opportunities.mobile_insurance.price', [], 'banking_insurance') }}</div>
+            <div class="banking__insurance-offer-features">
+                <div class="banking__insurance-offer-feature">• {{ tp('banking_insurance.opportunities.mobile_insurance.features.0', [], 'banking_insurance') }}</div>
+                <div class="banking__insurance-offer-feature">• {{ tp('banking_insurance.opportunities.mobile_insurance.features.1', [], 'banking_insurance') }}</div>
+                <div class="banking__insurance-offer-feature">• {{ tp('banking_insurance.opportunities.mobile_insurance.features.2', [], 'banking_insurance') }}</div>
+            </div>
+            <button class="banking__insurance-offer-btn">{{ tp('banking_insurance.general_actions.subscribe', [], 'banking_insurance') }}</button>
+        </div>
+
+        <div class="banking__insurance-offer-card">
+            <div class="banking__insurance-offer-icon">
+                {{ ux_icon('heroicons:globe-europe-africa', {'class': 'banking__insurance-offer-icon-svg'}) }}
+            </div>
+            <h3 class="banking__insurance-offer-title">{{ tp('banking_insurance.opportunities.travel_insurance.title', [], 'banking_insurance') }}</h3>
+            <p class="banking__insurance-offer-description">{{ tp('banking_insurance.opportunities.travel_insurance.description', [], 'banking_insurance') }}</p>
+            <div class="banking__insurance-offer-price">{{ tp('banking_insurance.opportunities.travel_insurance.price', [], 'banking_insurance') }}</div>
+            <div class="banking__insurance-offer-features">
+                <div class="banking__insurance-offer-feature">• {{ tp('banking_insurance.opportunities.travel_insurance.features.0', [], 'banking_insurance') }}</div>
+                <div class="banking__insurance-offer-feature">• {{ tp('banking_insurance.opportunities.travel_insurance.features.1', [], 'banking_insurance') }}</div>
+                <div class="banking__insurance-offer-feature">• {{ tp('banking_insurance.opportunities.travel_insurance.features.2', [], 'banking_insurance') }}</div>
+            </div>
+            <button class="banking__insurance-offer-btn">{{ tp('banking_insurance.general_actions.subscribe', [], 'banking_insurance') }}</button>
+        </div>
+
+        <div class="banking__insurance-offer-card">
+            <div class="banking__insurance-offer-icon">
+                {{ ux_icon('heroicons:academic-cap', {'class': 'banking__insurance-offer-icon-svg'}) }}
+            </div>
+            <h3 class="banking__insurance-offer-title">{{ tp('banking_insurance.opportunities.school_insurance.title', [], 'banking_insurance') }}</h3>
+            <p class="banking__insurance-offer-description">{{ tp('banking_insurance.opportunities.school_insurance.description', [], 'banking_insurance') }}</p>
+            <div class="banking__insurance-offer-price">{{ tp('banking_insurance.opportunities.school_insurance.price', [], 'banking_insurance') }}</div>
+            <div class="banking__insurance-offer-features">
+                <div class="banking__insurance-offer-feature">• {{ tp('banking_insurance.opportunities.school_insurance.features.0', [], 'banking_insurance') }}</div>
+                <div class="banking__insurance-offer-feature">• {{ tp('banking_insurance.opportunities.school_insurance.features.1', [], 'banking_insurance') }}</div>
+                <div class="banking__insurance-offer-feature">• {{ tp('banking_insurance.opportunities.school_insurance.features.2', [], 'banking_insurance') }}</div>
+            </div>
+            <button class="banking__insurance-offer-btn">{{ tp('banking_insurance.general_actions.subscribe', [], 'banking_insurance') }}</button>
+        </div>
+    </div>
+
+    <!-- Recent Claims -->
+    <div class="banking__section-header">
+        <h2 class="banking__section-title">{{ tp('banking_insurance.claims.title', [], 'banking_insurance') }}</h2>
+    </div>
+
+    <div class="banking__operations">
+        <table class="banking__table">
+            <thead class="banking__table-head">
+                <tr>
+                    <th class="banking__table-th">{{ tp('banking_insurance.claims.declaration_date', [], 'banking_insurance') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_insurance.claims.contract', [], 'banking_insurance') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_insurance.claims.claim_type', [], 'banking_insurance') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_insurance.claims.claimed_amount', [], 'banking_insurance') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_insurance.claims.compensation', [], 'banking_insurance') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_insurance.claims.status', [], 'banking_insurance') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_insurance.claims.actions', [], 'banking_insurance') }}</th>
+                </tr>
+            </thead>
+            <tbody class="banking__table-body">
+                <tr class="banking__table-row">
+                    <td class="banking__table-td">28/07/2025</td>
+                    <td class="banking__table-td">
+                        <div class="banking__claim-contract">
+                            <div class="banking__claim-name">{{ tp('banking_insurance.contracts.auto_insurance', [], 'banking_insurance') }}</div>
+                            <div class="banking__claim-ref">AUTO-2024-456</div>
+                        </div>
+                    </td>
+                    <td class="banking__table-td">{{ tp('banking_insurance.claims.types.glass_breakage', [], 'banking_insurance') }}</td>
+                    <td class="banking__table-td">650,00 €</td>
+                    <td class="banking__table-td banking__amount--credit">350,00 €</td>
+                    <td class="banking__table-td">
+                        <span class="banking__status banking__status--processing">{{ tp('banking_insurance.claims.claim_status.in_progress', [], 'banking_insurance') }}</span>
+                    </td>
+                    <td class="banking__table-td">
+                        <button class="banking__action-btn">{{ ux_icon('heroicons:eye', {'class': 'banking__action-icon'}) }}</button>
+                    </td>
+                </tr>
+
+                <tr class="banking__table-row">
+                    <td class="banking__table-td">15/06/2025</td>
+                    <td class="banking__table-td">
+                        <div class="banking__claim-contract">
+                            <div class="banking__claim-name">{{ tp('banking_insurance.contracts.home_insurance', [], 'banking_insurance') }}</div>
+                            <div class="banking__claim-ref">HAB-2024-789</div>
+                        </div>
+                    </td>
+                    <td class="banking__table-td">{{ tp('banking_insurance.claims.types.water_damage', [], 'banking_insurance') }}</td>
+                    <td class="banking__table-td">2 450,00 €</td>
+                    <td class="banking__table-td banking__amount--credit">2 300,00 €</td>
+                    <td class="banking__table-td">
+                        <span class="banking__status banking__status--completed">{{ tp('banking_insurance.claims.claim_status.compensated', [], 'banking_insurance') }}</span>
+                    </td>
+                    <td class="banking__table-td">
+                        <button class="banking__action-btn">{{ ux_icon('heroicons:eye', {'class': 'banking__action-icon'}) }}</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Pagination 
+    <div class="banking__pagination">
+        <button class="banking__page-btn banking__page-btn--disabled">{{ tp('banking_insurance.pagination.previous', [], 'banking_insurance') }}</button>
+        <span class="banking__page-info">{{ tp('banking_insurance.pagination.page_info', [1, 3, 24], 'banking_insurance') }}</span>
+        <button class="banking__page-btn">{{ tp('banking_insurance.pagination.next', [], 'banking_insurance') }}</button>
+    </div>
+-->
+</section>

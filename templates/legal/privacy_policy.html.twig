@@ -1,0 +1,124 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'privacy_policy.page_title'|trans([], 'privacy_policy') }} - {{ parent() }}{% endblock %}
+
+{% block body %}
+<div class="legal-page">
+    <div class="legal-page__container">
+        <div class="legal-page__header">
+            <h1 class="legal-page__title">{{ 'privacy_policy.page_title'|trans([], 'privacy_policy') }}</h1>
+            <p class="legal-page__subtitle">{{ 'privacy_policy.page_description'|trans([], 'privacy_policy') }}</p>
+        </div>
+
+        <div class="legal-page__content">
+            <section class="legal-section">
+                <h2 class="legal-section__title">{{ 'privacy_policy.data_collection.title'|trans([], 'privacy_policy') }}</h2>
+                <div class="legal-section__content">
+                    <p>{{ 'privacy_policy.data_collection.content'|trans([], 'privacy_policy')|raw }}</p>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2 class="legal-section__title">{{ 'privacy_policy.data_usage.title'|trans([], 'privacy_policy') }}</h2>
+                <div class="legal-section__content">
+                    <p>{{ 'privacy_policy.data_usage.content'|trans([], 'privacy_policy')|raw }}</p>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2 class="legal-section__title">{{ 'privacy_policy.data_sharing.title'|trans([], 'privacy_policy') }}</h2>
+                <div class="legal-section__content">
+                    <p>{{ 'privacy_policy.data_sharing.content'|trans([], 'privacy_policy')|raw }}</p>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2 class="legal-section__title">{{ 'privacy_policy.user_rights.title'|trans([], 'privacy_policy') }}</h2>
+                <div class="legal-section__content">
+                    <p>{{ 'privacy_policy.user_rights.content'|trans([], 'privacy_policy')|raw }}</p>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2 class="legal-section__title">{{ 'privacy_policy.contact.title'|trans([], 'privacy_policy') }}</h2>
+                <div class="legal-section__content">
+                    <p>{{ 'privacy_policy.contact.content'|trans({'%email%': companySettings.email}, 'privacy_policy')|raw }}</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+{% block custom_styles %}
+<style>
+.legal-page {
+    min-height: 100vh;
+    background: #fafbfc;
+    padding: 4rem 0;
+}
+
+.legal-page__container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.legal-page__header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.legal-page__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.legal-page__subtitle {
+    font-size: 1.125rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.legal-page__content {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.legal-section {
+    margin-bottom: 3rem;
+}
+
+.legal-section:last-child {
+    margin-bottom: 0;
+}
+
+.legal-section__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #10b981;
+    padding-bottom: 0.5rem;
+}
+
+.legal-section__content p {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.legal-section__content p:last-child {
+    margin-bottom: 0;
+}
+
+.legal-section__content strong {
+    color: #0f172a;
+}
+</style>
+{% endblock %}
+{% endblock %}

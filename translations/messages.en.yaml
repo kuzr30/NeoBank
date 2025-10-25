@@ -1,0 +1,427 @@
+# Navigation
+nav:
+  home: "Home"
+  services: "Services"
+  about: "About"
+  contact: "Contact"
+  login: "Login"
+  signup: "Sign Up"
+  mobile: "Mobile Banking"
+  loans: "Loans"
+  credit_simulation: "Credit Simulation"
+  mobile_app: "Mobile App"
+  credit_card: "Credit Card"
+  our_credit_offers: "Our Credit Offers"
+  personal_loan: "Personal Loan"
+  travel_loan: "Travel Loan"
+  auto_loan: "Auto Loan"
+  home_loan: "Home Loan"
+  client_space: "Client Area"
+  banking_dashboard: "My Banking Area"
+  branches: "Branches"
+  help: "Help"
+
+# Header User Dropdown  
+user_menu:
+  access_profile: "Access my profile"
+  identity_verification: "Identity verification"
+  access_banking: "Access my bank account"
+  administration: "Administration" 
+  logout: "Logout"
+
+# KYC Status
+kyc_status:
+  pending: "Pending"
+  rejected: "!"
+  required: "Required"
+
+# %company_name% Advantages Section
+bankit_advantages:
+  section_badge: "%company_name% Excellence"
+  section_title: "Why Choose %company_name% for Your Insurance?"
+  section_subtitle: "Our banking expertise serving your protection"
+  
+  coverage:
+    title: "Integrated Banking Coverage"
+    description: "Your insurance directly linked to your bank accounts for simplified management and preferential rates."
+    discount: "-30% on premiums"
+    
+  automatic_payment:
+    title: "Automatic Payment"
+    description: "No more payment worries with automatic debit from your %company_name% account."
+    
+  express_processing:
+    title: "Express Processing"
+    description: "Quote in 24h, immediate subscription and fast compensation thanks to our banking system."
+    
+  dedicated_support:
+    title: "Dedicated Banking Support"
+    description: "Your %company_name% banking advisors also assist you with your insurance."
+    
+  real_time_tracking:
+    title: "Real-Time Tracking"
+    description: "Consult your contracts and claims directly from your online banking area."
+    
+  banking_security:
+    title: "Banking Security"
+    description: "Your data protected by the highest banking security standards."
+
+# Common Buttons
+buttons:
+  learn_more: "Learn More"
+  get_started: "Get Started"
+  contact_us: "Contact Us"
+  sign_up: "Get a Quote"
+  login: "Login"
+  simulate: "Simulate"
+  calculate: "Calculate"
+  apply: "Apply for Loan"
+
+# User Profile
+profile:
+  update_success: "Your profile has been successfully updated."
+  email_change_initiated: "A confirmation email has been sent to %email%. Please click the link to confirm your new email address."
+  notification:
+    update:
+      subject: "Your %company_name% Profile Update"
+
+# KYC Messages
+kyc:
+  already_submitted: "You have already submitted an identity verification request."
+  submission_success: "Your identity verification request has been successfully submitted. Our team will review it as soon as possible."
+  submission_error: "An error occurred while submitting your request. Please try again."
+
+# Email Validation
+email_verification:
+  subject: "Validate Your New Email Address - %company_name%"
+  success: "Your email address has been successfully validated."
+  error: "Validation error: %message%"
+  no_pending_change: "No email address change in progress."
+  cancelled: "The email address change has been cancelled."
+
+# Security
+security:
+  csrf_invalid: "Invalid security token. Please try again."
+  invalid_credentials: "Incorrect email or password"
+  account_locked: "Your account has been temporarily locked"
+  account_disabled: "Your account has been disabled"
+  bad_credentials: "Incorrect email or password"
+
+# Credit Simulation
+credit_simulation:
+  title: "Credit Simulation"
+  subtitle: "Discover your borrowing capacity in a few clicks"
+  form:
+    credit_type: "Credit type"
+    amount: "Desired amount"
+    duration: "Duration"
+    duration_unit: "Duration unit"
+    calculate: "Calculate my simulation"
+  results:
+    monthly_payment: "Monthly payment"
+    total_cost: "Total credit cost"
+    total_interest: "Total interest"
+    interest_rate: "Interest rate"
+  units:
+    months: "Months"
+    years: "Years"
+  validation:
+    amount_required: "Amount is required"
+    amount_min: "Minimum amount is €1,000"
+    amount_max: "Maximum amount is €500,000"
+    duration_required: "Duration is required"
+    duration_min: "Minimum duration is 12 months"
+    duration_max_months: "Maximum duration is 360 months"
+    duration_max_years: "Maximum duration is 30 years"
+  book_appointment: "Book an appointment"
+  call_advisor: "Call an advisor"
+  chat_online: "Online chat"
+
+# Common Labels
+labels:
+  amount: "Amount"
+  duration: "Duration"
+  monthly_payment: "Monthly payment"
+  interest_rate: "Interest rate"
+  example: "Example"
+  from: "From"
+  to: "Up to"
+  per_month: "per month"
+  per_year: "per year"
+  years: "years"
+  months: "months"
+
+# Error Messages
+errors:
+  required_field: "This field is required"
+  invalid_email: "Invalid email address"
+  invalid_phone: "Invalid phone number"
+  invalid_amount: "Invalid amount"
+  min_amount: "Minimum amount is {min}"
+  max_amount: "Maximum amount is {max}"
+
+# Success Messages
+success:
+  form_submitted: "Form successfully submitted"
+  appointment_booked: "Appointment successfully booked"
+  simulation_complete: "Simulation completed"
+
+# Services
+services:
+  # Accounts & Cards
+  accounts_cards:
+    title: "Accounts & Cards"
+    subtitle: "Banking solutions adapted to all your needs"
+    products_title: "Our Products"
+    products_subtitle: "Choose the solution that suits you best"
+    current_account:
+      title: "Current Account"
+      description: "The ideal account to manage your daily life"
+      feature_1: "Free bank card"
+      feature_2: "Unlimited transfers"
+      feature_3: "Mobile app"
+    savings_account:
+      title: "Savings Account"
+      description: "Grow your money safely"
+      feature_1: "Attractive rate"
+      feature_2: "Immediate availability"
+      feature_3: "No fees"
+    credit_card:
+      title: "Credit Card"
+      description: "More flexibility for your purchases"
+      feature_1: "Deferred payment"
+      feature_2: "Insurance included"
+      feature_3: "Loyalty programs"
+    features_title: "Why Choose Us"
+    features_subtitle: "Exclusive benefits for our customers"
+    feature_security:
+      title: "Maximum Security"
+      description: "3D Secure protection and real-time alerts"
+    feature_simple:
+      title: "Easy to Use"
+      description: "Intuitive interface and opening in 5 minutes"
+    feature_fast:
+      title: "Fast Transactions"
+      description: "Instant transfers 24/7"
+    feature_support:
+      title: "Expert Support"
+      description: "Dedicated team available by phone and chat"
+    cta:
+      title: "Ready to Start?"
+      description: "Open your account in minutes and enjoy our exclusive benefits"
+
+  # Savings & Investments
+  savings_investments:
+    title: "Savings & Investments"
+    subtitle: "Optimize your savings with our expert solutions"
+    products_title: "Our Savings Solutions"
+    products_subtitle: "Products adapted to your investor profile"
+    livret_a:
+      title: "Savings Book A"
+      description: "Secure and tax-free savings"
+      feature_1: "Ceiling €22,950"
+      feature_2: "Immediate availability"
+      feature_3: "Tax-free interest"
+    life_insurance:
+      title: "Life Insurance"
+      description: "The essential wealth management tool"
+      feature_1: "Attractive return"
+      feature_2: "Tax benefits"
+      feature_3: "Facilitated transmission"
+    retirement_plan:
+      title: "Retirement Savings Plan"
+      description: "Prepare your retirement while optimizing your taxes"
+      feature_1: "Tax deduction"
+      feature_2: "Managed investment"
+      feature_3: "Annuity or lump sum"
+    calculator_title: "Savings Calculator"
+    calculator_subtitle: "Calculate your savings potential"
+    initial_amount: "Initial amount"
+    monthly_payment: "Monthly payment"
+    duration: "Duration"
+    interest_rate: "Interest rate"
+    projection_results: "Projection over selected period"
+    total_amount: "Total capital"
+    total_invested: "Total invested"
+    total_gains: "Capital gain"
+    benefits_title: "Our Advantages"
+    benefits_subtitle: "Why choose our savings solutions"
+    benefit_security:
+      title: "Guaranteed Security"
+      description: "Guaranteed funds and approved institution"
+    benefit_flexible:
+      title: "Total Flexibility"
+      description: "Deposits and withdrawals according to your needs"
+    benefit_expert:
+      title: "Expert Advice"
+      description: "Personalized support from our advisors"
+    cta:
+      title: "Start Your Savings"
+      description: "Take advantage of our attractive rates and expertise to grow your savings"
+
+  # Insurance
+  insurances:
+    title: "Insurance"
+    subtitle: "Protect what matters most to you"
+    products_title: "Our Insurance"
+    products_subtitle: "Complete protection for all aspects of your life"
+    auto:
+      title: "Auto Insurance"
+      price: "From €29/month"
+      description: "Complete protection for your vehicle"
+      feature_1: "All risks included"
+      feature_2: "24/7 assistance"
+      feature_3: "Replacement vehicle"
+    home:
+      title: "Home Insurance"
+      price: "From €15/month"
+      description: "Your home protected against all risks"
+      feature_1: "Multi-risk home"
+      feature_2: "Civil liability"
+      feature_3: "Legal protection"
+    health:
+      title: "Health Insurance"
+      price: "From €45/month"
+      description: "Your healthcare costs reimbursed"
+      feature_1: "100% reimbursement"
+      feature_2: "Third-party payment"
+      feature_3: "Alternative medicine included"
+    travel:
+      title: "Travel Insurance"
+      price: "From €8/trip"
+      description: "Travel with peace of mind"
+      feature_1: "Cancellation/interruption"
+      feature_2: "Medical expenses abroad"
+      feature_3: "Repatriation included"
+    life:
+      title: "Life Insurance"
+      price: "From €12/month"
+      description: "Financially protect your loved ones"
+      feature_1: "Guaranteed capital"
+      feature_2: "Immediate payment"
+      feature_3: "Tax exemption"
+    professional:
+      title: "Professional Insurance"
+      price: "From €35/month"
+      description: "Your professional activity secured"
+      feature_1: "Professional liability"
+      feature_2: "Legal protection"
+      feature_3: "Multi-risk office"
+    claims_title: "Claims Process"
+    claims_subtitle: "Fast and efficient handling"
+    step_1:
+      title: "Declaration"
+      description: "Report your claim online or by phone"
+    step_2:
+      title: "Assessment"
+      description: "An expert evaluates damages within 48h"
+    step_3:
+      title: "Compensation"
+      description: "Calculation and validation of your compensation"
+    step_4:
+      title: "Reimbursement"
+      description: "Payment within 5 business days maximum"
+    benefits_title: "Our Guarantees"
+    benefits_subtitle: "A service of excellence for your protection"
+    benefit_fast:
+      title: "Fast Processing"
+      description: "Handled in less than 24h"
+    benefit_support:
+      title: "24/7 Assistance"
+      description: "A team at your service permanently"
+    benefit_secure:
+      title: "Solid Guarantees"
+      description: "Clear and complete contracts"
+    cta:
+      title: "Protect Yourself Now"
+      description: "Request your free personalized quote in a few clicks"
+
+# Contact
+contact:
+  phone: "Phone"
+  email: "Email"
+  address: "Address"
+  opening_hours: "Opening Hours"
+  customer_service: "Customer Service"
+  monday_friday: "Monday - Friday"
+  saturday: "Saturday"
+  sunday: "Sunday"
+  closed: "Closed"
+  phone_number: "Phone"
+  email_address: "Email"
+  business_hours: "Mon-Fri 8AM-6PM"
+
+# Legal Notices
+legal:
+  credit_warning: "Credit commits you and must be repaid. Check your repayment capacity before committing."
+  licensed_bank: "Trusted financial services"
+  insurance_broker: "Insurance broker"
+  under_supervision: "Professional financial advice"
+
+# Footer
+footer:
+  rights_reserved: "All rights reserved"
+  privacy_policy: "Privacy Policy"
+  terms_conditions: "Terms & Conditions"
+  cookies: "Cookies"
+  sitemap: "Sitemap"
+  # Main description
+  description: "Your trusted financial partner. Discover our modern and secure banking solutions for all your projects."
+  
+  # Footer sections
+  sections:
+    services_title: "Banking Services"
+    support_title: "Support & Help"
+    legal_title: "Legal Information"
+    contact_title: "Contact Us"
+  
+  # Banking services
+  services:
+    accounts_cards: "Accounts & Cards"
+    savings_investments: "Savings & Investments"
+    credits_loans: "Credits & Loans"
+    insurance: "Insurance"
+    private_banking: "Private Banking"
+    business_banking: "Business Banking"
+  
+  # Support and help
+  support:
+    help_center: "Help Center"
+    contact: "Contact"
+    branches: "Branches"
+    faq: "FAQ"
+    security: "Security"
+    complaints: "Complaints"
+  
+  # Legal information
+  legal_links:
+    legal_notices: "Legal Notices"
+    terms_conditions: "Terms & Conditions"
+    privacy_policy: "Privacy Policy"
+    cookies: "Cookies"
+    pricing: "Pricing"
+    accessibility: "Accessibility"
+  
+  # Contact
+  contact_info:
+    customer_service: "Customer Service"
+    email: "Email"
+    headquarters: "Headquarters"
+    phone_number: "Phone"
+    email_address: "Email"
+    address: "Address"
+  
+  # Footer bottom
+  bottom:
+    rights_reserved: "All rights reserved"
+    licensed_bank: "Your trusted bank"
+    orias_number: ""
+    ssl_secured: "SSL Secured"
+    acpr_approved: ""
+  
+  # Social media (aria-labels)
+  social:
+    facebook: "Facebook"
+    twitter: "Twitter"
+    linkedin: "LinkedIn"
+    instagram: "Instagram"

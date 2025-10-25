@@ -1,0 +1,19 @@
+email_devis_approval:
+  subject: "Votre demande d'assurance a été approuvée !"
+  content:
+    page_title: "Demande d'assurance approuvée"
+    department: "Service Assurances"
+    greeting: "Cher/Chère %prenom% %nom%,"
+    approval_message: "Nous avons le plaisir de vous informer que votre demande d'assurance %typeAssurance% a été approuvée par notre équipe."
+    reference:
+      title: "Numéro de référence"
+    next_steps:
+      title: "Prochaines étapes"
+      step1: "Notre conseiller vous contactera dans les 48h pour finaliser votre contrat"
+      step2: "Préparez vos documents d'identité et pièces justificatives"
+      step3: "Signez votre contrat et profitez de votre couverture"
+    contact:
+      title: "Besoin d'aide ?"
+      phone_service: "Service téléphonique"
+      email_support: "Support par email"
+    closing_message: "Merci de votre confiance. Notre équipe se réjouit de vous accompagner dans cette nouvelle étape."

@@ -1,0 +1,56 @@
+devis_confirmation:
+  title: "Demande envoyée avec succès !"
+  description: "Votre demande de devis a été transmise à notre équipe. Vous recevrez une réponse dans les plus brefs délais."
+  reference_number: "Numéro de référence"
+  summary_title: "Récapitulatif de votre demande"
+  summary:
+    insurance_type: "Type d'assurance"
+    full_name: "Nom complet"
+    email: "Email"
+    phone: "Téléphone"
+    contact_preference: "Préférence de contact"
+    request_date: "Date de demande"
+  next_steps_title: "Prochaines étapes"
+  next_steps:
+    step1: "Notre équipe va analyser votre demande dans les 24h"
+    step2: "Vous recevrez un devis personnalisé par email"
+    step3: "Un conseiller vous contactera selon votre préférence"
+  other_insurances: "Autres assurances"
+  back_to_home: "Retour à l'accueil"
+
+devis_form:
+  personal_info_title: "Vos informations personnelles"
+  insurance_details_title: "Détails de votre assurance"
+  additional_info_title: "Informations complémentaires"
+  additional_info_help: "Décrivez vos besoins spécifiques ou toute information qui pourrait nous aider à personnaliser votre devis"
+  why_choose_title: "Pourquoi choisir notre assurance %type% ?"
+  advantages:
+    optimal_coverage:
+      title: "Couverture optimale"
+      description: "Une protection adaptée à vos besoins spécifiques avec des garanties complètes."
+    competitive_rates:
+      title: "Tarifs compétitifs"
+      description: "Les meilleurs prix du marché grâce à nos partenariats privilégiés."
+    customer_service:
+      title: "Service client 24/7"
+      description: "Une équipe dédiée disponible pour vous accompagner à tout moment."
+    fast_processing:
+      title: "Traitement rapide"
+      description: "Des procédures simplifiées pour un traitement express de vos dossiers."
+  notes:
+    free_quote: "Devis gratuit et sans engagement"
+    data_protection: "Vos données sont protégées et confidentielles"
+    response_time: "Réponse sous 24h ouvrées"
+  
+  validation:
+    lastname_required: "Le nom est obligatoire"
+    lastname_max: "Le nom ne peut pas dépasser {{ limit }} caractères"
+    firstname_required: "Le prénom est obligatoire"
+    firstname_max: "Le prénom ne peut pas dépasser {{ limit }} caractères"
+    email_required: "L'email est obligatoire"
+    email_invalid: "Veuillez saisir un email valide"
+    phone_required: "Le téléphone est obligatoire"
+    phone_invalid: "Veuillez saisir un numéro de téléphone valide"
+    insurance_type_required: "Veuillez sélectionner un type d'assurance"
+    contact_preference_invalid: "Veuillez choisir une préférence de contact valide"
+    comments_max: "Les commentaires ne peuvent pas dépasser {{ limit }} caractères"

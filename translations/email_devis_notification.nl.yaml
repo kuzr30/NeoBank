@@ -1,0 +1,55 @@
+email_devis_notification:
+  title: "Nieuwe offerteaanvraag - %typeAssurance%"
+  
+  content:
+    page_title: "Nieuwe offerteaanvraag ontvangen"
+    
+    priority:
+      title: "Actie vereist - Prioritaire behandeling"
+      message: "Nieuwe offerteaanvraag te behandelen binnen 24u"
+    
+    reference:
+      title: "Referentie van de aanvraag"
+      number: "Offertenummer"
+      insurance_type: "Verzekeringstype"
+    
+    client_info:
+      title: "Klantinformatie"
+      full_name: "Volledige naam"
+      email: "E-mail"
+      contact_email: "Contact e-mail"
+      phone: "Telefoon"
+      contact_preference: "Contactvoorkeur"
+      request_date: "Aanvraagdatum"
+    
+    comments:
+      title: "Opmerkingen van de klant"
+    
+    action_plan:
+      title: "Aanbevolen actieplan"
+      telephone_priority: "1. Telefonisch contact prioritair"
+      telephone_desc: "Klant bellen op %telephone% (aangegeven voorkeur)"
+      email_priority: "1. E-mailcontact prioritair"
+      email_desc: "E-mail sturen naar %email% (aangegeven voorkeur)"
+      appointment_priority: "1. Afspraak voorstellen"
+      appointment_desc: "Afspraak organiseren op kantoor (aangegeven voorkeur)"
+      analysis: "2. Gepersonaliseerde analyse"
+      analysis_desc: "Het profiel en specifieke behoeften van de klant analyseren"
+      offer_prep: "3. Voorbereiding van aanbod"
+      offer_prep_desc: "Een gepersonaliseerd commercieel voorstel opstellen"
+      crm_update: "4. CRM-update"
+      crm_update_desc: "Status en interacties in het systeem bijwerken"
+    
+    specialized_advice:
+      title: "Gespecialiseerd advies"
+      auto_advice: "Autoverzekering: Vraag naar het voertuigmodel, het jaar van inverkeersstelling, het beoogde gebruik en de schadeverleden om het aanbod te personaliseren."
+      habitation_advice: "Woningverzekering: Informeer naar het type woning, de oppervlakte, de waarde van te verzekeren goederen en de locatie om de dekking aan te passen."
+      sante_advice: "Aanvullende zorgverzekering: Evalueer de gezinssituatie, specifieke medische behoeften en beschikbaar budget om de optimale formule voor te stellen."
+      general_advice: "Gepersonaliseerde benadering: Pas uw commerciële methodologie aan volgens het gevraagde verzekeringstype en de specificiteiten van het klantprofiel."
+    
+    footer: "<strong>%company_name% - Offertebeheersysteem</strong><br>Automatische melding van nieuwe aanvraag"
+
+  logs:
+    devis_notification_sent: "Melding van nieuwe offerteaanvraag verzonden naar verkoopteam"
+    devis_notification_failed: "Fout bij het verzenden van offertemelding"
+    quote_request_assigned: "Offerteaanvraag %numeroDevis% toegewezen aan verkoopteam"

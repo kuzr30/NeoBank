@@ -1,0 +1,46 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_card_opposition.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+card_opposition:
+  title: "Bank card opposition"
+  subtitle: "Block your card in case of loss, theft or fraud"
+  emergency_title: "Emergency situation?"
+  emergency_text: "If your card has just been lost or stolen, use our 24/7 emergency opposition service for immediate blocking."
+  emergency_action: "Emergency opposition"
+  warning_title: "Warning - Irreversible action"
+  warning_text: "Once the opposition is made, your card will be permanently blocked and can no longer be used."
+  warning_payment_blocked: "Your current payments will be blocked immediately"
+  warning_new_card_needed: "You will need to request a new card for your future purchases"
+  warning_direct_debits: "Direct debits may be impacted"
+  card_label: "Card to block"
+  card_placeholder: "Select a card"
+  card_help: "Select the bank card you want to oppose"
+  reason_label: "Reason for opposition"
+  reason_lost: "Lost"
+  reason_lost_desc: "Card misplaced"
+  reason_stolen: "Stolen"
+  reason_stolen_desc: "Card stolen"
+  reason_fraud: "Fraud"
+  reason_fraud_desc: "Fraudulent use"
+  reason_other: "Other"
+  reason_other_desc: "Other reason"
+  description_label: "Detailed description"
+  description_placeholder: "Describe the circumstances of the loss, theft or fraud (place, date, context...)"
+  description_help: "Provide as much detail as possible to help us process your request faster"
+  confirm_opposition: "Confirm opposition"
+  confirm_message: "Are you sure you want to permanently block this card?"
+
+emergency:
+  title: "EMERGENCY OPPOSITION"
+  subtitle: "Immediately block your card in case of loss, theft or fraud"
+  select_card: "Select the card to block"
+  reason_label: "Emergency reason"
+  submit_button: "BLOCK IMMEDIATELY"
+  no_active_cards: "No active card found"
+  customer_service: "24/7 customer service"
+  phone_help: "Call immediately if you cannot use this form"
+  normal_opposition: "Normal opposition"
+  my_cards: "My cards"
+  confirm_message: "WARNING! This action will immediately block your card. Do you want to continue?"

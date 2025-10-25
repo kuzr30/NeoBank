@@ -1,0 +1,31 @@
+email_transfer_attention:
+  title: "Votre virement nécessite votre attention"
+  
+  content:
+    page_title: "Action requise pour votre virement"
+    greeting: "Cher(e) %firstName% %lastName%,"
+    
+    attention_required:
+      title: "Attention requise"
+      description: "Votre ordre de virement (réf. %transferReference%) nécessite une validation de sécurité supplémentaire de votre part pour être traité."
+    
+    transfer_details:
+      title: "Détails de votre ordre de virement"
+      amount: "Montant"
+      beneficiary: "Bénéficiaire"
+      iban: "IBAN"
+      reference: "Référence"
+    
+    next_step:
+      title: "Prochaine étape"
+      description: "Veuillez vous connecter à votre espace bancaire sécurisé pour finaliser l'authentification de cette opération."
+      login_button: "Accéder à mon compte"
+      instruction: "Cliquez sur le bouton ci-dessus pour vous connecter en toute sécurité"
+    
+    security_notice:
+      title: "Avis de sécurité"
+      description: "Cette étape de sécurité supplémentaire est mise en place pour protéger vos fonds et garantir que vous êtes bien à l'origine de cette opération bancaire."
+    
+    assistance: "Pour toute question concernant cette opération, notre service clientèle reste à votre disposition via votre espace client sécurisé."
+    
+    footer: "Cet email a été envoyé automatiquement par votre banque. <br><strong>Ne communiquez jamais vos codes de sécurité par email ou téléphone.</strong>"

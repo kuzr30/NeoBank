@@ -1,0 +1,46 @@
+profile_security:
+  page:
+    title: "Seguridad - %company_name%"
+  
+  header:
+    title: "Seguridad de la cuenta"
+  
+  sections:
+    password:
+      title: "Contraseña"
+      configured: "Configurada"
+      current: "Contraseña actual"
+      never_changed: "Contraseña nunca modificada"
+      edit: "Modificar"
+      time_units:
+        minutes: "minuto(s)"
+        hours: "hora(s)"
+        days: "día(s)"
+        last_modified: "Última modificación"
+        ago: "hace"
+        on: "el"
+    
+    two_factor:
+      title: "Autenticación de 2 factores"
+      disabled: "Desactivada"
+      app:
+        title: "Aplicación de autenticación"
+        desc: "Use una app como Google Authenticator"
+        configure: "Configurar"
+      sms:
+        title: "SMS de verificación"
+        desc: "Reciba códigos por SMS"
+        add: "Agregar"
+    
+    activity:
+      title: "Actividad de seguridad reciente"
+      today: "Hoy a las"
+      yesterday: "Ayer a las"
+      none_title: "Ninguna actividad de seguridad reciente"
+      none_desc: "Su cuenta está segura"
+      activities:
+        login_success: "Conexión exitosa"
+        login_failed: "Intento de conexión fallido"
+        password_changed: "Contraseña modificada"
+        profile_updated: "Perfil actualizado"
+        account_locked: "Cuenta bloqueada"

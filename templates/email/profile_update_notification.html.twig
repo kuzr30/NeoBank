@@ -1,0 +1,47 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_profile_update_notification.title', {}, 'email_profile_update_notification') }} - {{ parent() }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('email_profile_update_notification.content.page_title', {}, 'email_profile_update_notification') }}</h2>
+    
+    <p class="content-text">
+        {{ tp('email_profile_update_notification.content.greeting', {firstName: firstName}, 'email_profile_update_notification') }}
+    </p>
+
+    <p class="content-text">
+        {{ tp('email_profile_update_notification.content.notification', {updateDate: updateDate|date('d/m/Y à H:i')}, 'email_profile_update_notification') }}
+    </p>
+
+    {% if changedFields is not empty %}
+        <div class="info-box">
+            <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_profile_update_notification.content.changes_section.title', {}, 'email_profile_update_notification') }}</h3>
+            
+            {% for change in changedFields %}
+                <div style="margin-bottom: 15px; padding: 10px; background: white; border-radius: 4px; border-left: 4px solid #1976d2;">
+                    <div style="font-weight: 600; color: #333; margin-bottom: 5px;">{{ change.label }}</div>
+                    <div style="color: #666; font-size: 14px;">
+                        {% if change.oldValue %}
+                            {{ tp('email_profile_update_notification.content.changes_section.old_value', {oldValue: change.oldValue}, 'email_profile_update_notification') }}
+                        {% endif %}
+                        {% if change.newValue %}
+                            {% if change.oldValue %}<br>{% endif %}
+                            {{ tp('email_profile_update_notification.content.changes_section.new_value', {newValue: change.newValue}, 'email_profile_update_notification') }}
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ tp('email_profile_update_notification.content.security_info.title', {}, 'email_profile_update_notification') }}</h3>
+        <p style="margin-bottom: 0;">
+            {{ tp('email_profile_update_notification.content.security_info.warning', {}, 'email_profile_update_notification') }} 
+        </p>
+    </div>
+
+    <p class="content-text" style="margin-bottom: 0;">
+        {{ tp('email_profile_update_notification.content.footer', {}, 'email_profile_update_notification') }}
+    </p>
+{% endblock %}

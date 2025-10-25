@@ -1,0 +1,106 @@
+home_loan:
+  page:
+    title: "Eigenheimfinanzierung"
+    description: "Werden Sie Eigentümer mit unserer Eigenheimfinanzierung. Finanzieren Sie Ihren Hauptwohnsitz zu besten Konditionen."
+  
+  hero:
+    class: "credit-detail-hero--home-loan"
+    taux: "3,5%"
+    montant: "400 000€"
+    duree: "25 Jahre"
+    title: "Eigenheimfinanzierung"
+    subtitle: "Werden Sie Eigentümer Ihres Hauptwohnsitzes"
+  
+  section_1:
+    title: "Was ist eine Eigenheimfinanzierung?"
+    content:
+      paragraph_1: "Die Eigenheimfinanzierung ermöglicht es Ihnen, Eigentümer Ihres Hauptwohnsitzes zu werden. Sie finanziert den Erwerb einer neuen oder gebrauchten Immobilie, mit oder ohne Renovierungsarbeiten."
+      paragraph_2: "Langfristiger Immobilienkredit mit vorteilhaften Konditionen, begleitet von soliden Garantien und kann je nach Ihrer Situation durch Förderungen ergänzt werden."
+  
+  features:
+    title: "Kreditmerkmale"
+    montant:
+      value: "Bis zu 400 000€"
+      detail: "Je nach Immobilienwert"
+    duree:
+      value: "Bis zu 25 Jahre"
+      detail: "Langfristige Rückzahlung"
+    taux:
+      value: "Ab {rate}% effektiver Jahreszins*"
+      detail: "Vorteilhafter Festzins"
+    garantie:
+      value: "Hypothek"
+      detail: "Auf die finanzierte Immobilie"
+  
+  section_3:
+    title: "Vorteile der Eigenheimfinanzierung"
+    advantages:
+      taux_fixe:
+        title: "Festzins"
+        description: "Sicherheit mit unveränderlichem Zinssatz über die gesamte Laufzeit"
+      duree_longue:
+        title: "Lange Laufzeit"
+        description: "Reduzierte Monatsraten durch Streckung bis zu 25 Jahre"
+      prets_aides:
+        title: "Förderungen"
+        description: "Kombination mit Baukindergeld, KfW-Darlehen möglich..."
+      modulation:
+        title: "Anpassung"
+        description: "Anpassung der Raten je nach Einkommensentwicklung"
+      transfert:
+        title: "Übertragung möglich"
+        description: "Bei Verkauf und Neukauf innerhalb von 2 Jahren"
+  
+  section_4:
+    title: "Voraussetzungen"
+    emprunteur:
+      title: "Darlehensnehmer-Bedingungen"
+      items:
+        premiere_acquisition: "Erstanschaffung oder seit 2 Jahren nicht Eigentümer"
+        revenus: "Stabile und ausreichende Einkommen"
+        apport: "Eigenkapital mindestens 10%"
+        endettement: "Verschuldungsgrad unter 35%"
+    bien:
+      title: "Immobilienbedingungen"
+      items:
+        residence_principale: "Hauptwohnsitz obligatorisch"
+        normes: "Einhaltung der Bauvorschriften"
+        diagnostic: "Günstiger Energieausweis"
+        assurance_habitation: "Wohngebäudeversicherung abgeschlossen"
+  
+  section_5:
+    title: "Erforderliche Dokumente"
+    dossier_personnel:
+      title: "Persönliche Unterlagen"
+      items:
+        identite: "Ausweisdokumente"
+        revenus: "Einkommensnachweise (3 Monate)"
+        impots: "Steuerbescheid"
+        comptes: "Kontoauszüge"
+    projet_immobilier:
+      title: "Immobilienprojekt"
+      items:
+        compromis: "Unterzeichneter Kaufvertrag"
+        financement: "Finanzierungsplan"
+        diagnostics: "Immobiliengutachten"
+        assurance_emprunteur: "Kreditversicherung"
+    apport_garanties:
+      title: "Eigenkapital und Garantien"
+      items:
+        justificatifs_apport: "Eigenkapital-Nachweise"
+        evaluation: "Immobilienbewertung"
+        acte_notarie: "Vorläufige Notarurkunde"
+        conditions_suspensives: "Aufschiebende Bedingungen"
+  
+  legal:
+    details:
+      title: "Wichtige rechtliche Informationen"
+      taeg: "<strong>*Effektiver Jahreszins:</strong> Repräsentatives Beispiel: Für eine Eigenheimfinanzierung von 250 000€ über 20 Jahre mit effektivem Jahreszins von 3,5% zahlen Sie 240 Monatsraten von 1 448€, Gesamtbetrag 347 520€ (Kreditkosten: 97 520€)."
+      garantie: "<strong>Garantie:</strong> Erstranghypothek auf die finanzierte Immobilie, Eintragung im Grundbuch."
+      assurance: "<strong>Versicherung:</strong> Risikotod-Invaliditätsversicherung obligatorisch, Arbeitslosigkeit optional."
+      condition_suspensive: "<strong>Aufschiebende Bedingung:</strong> Finanzierungsvorbehalt im Kaufvertrag obligatorisch."
+      delai_reflexion: "<strong>Bedenkzeit:</strong> Mindestens 10 Tage vor endgültiger Annahme des Kreditangebots."
+  
+  cta:
+    title: "Verwirklichen Sie Ihr Immobilienprojekt"
+    subtitle: "Werden Sie Eigentümer mit unserer vorteilhaften Eigenheimfinanzierung"

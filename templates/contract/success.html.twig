@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature réussie - SEDEF BANK</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            padding: 20px 10px;
+        }
+        
+        .success-icon {
+            font-size: 2rem;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .contract-info {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid #48bb78;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: #4a5568;
+        }
+        
+        .info-value {
+            color: #2d3748;
+            font-weight: 500;
+        }
+        
+        .next-steps {
+            background: #e6fffa;
+            border: 1px solid #9ae6b4;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: left;
+        }
+        
+        .next-steps h3 {
+            color: #22543d;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .steps-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .steps-list li {
+            padding: 8px 0;
+            color: #2d3748;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .step-number {
+            background: #48bb78;
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #5a67d8;
+            transform: translateY(-1px);
+        }
+        
+        .btn-success {
+            background: #48bb78;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background: #38a169;
+            transform: translateY(-1px);
+        }
+        
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        
+        .btn-secondary:hover {
+            background: #cbd5e0;
+        }
+        
+        .timeline {
+            background: #fff5f5;
+            border: 1px solid #fed7d7;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .timeline h3 {
+            color: #c53030;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px 0;
+            border-bottom: 1px solid #fed7d7;
+        }
+        
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+        
+        .timeline-status {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .status-done {
+            background: #48bb78;
+            color: white;
+        }
+        
+        .status-current {
+            background: #ed8936;
+            color: white;
+        }
+        
+        .status-pending {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 12px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="success-icon">✅</span>
+            <h1>Contrat signé avec succès !</h1>
+            <p>Votre signature électronique a été enregistrée</p>
+        </div>
+        
+        <div class="content">
+            <div class="contract-info">
+                <h3>📋 Récapitulatif de votre contrat</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Référence :</span>
+                        <span class="info-value">{{ contract.reference }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Type de carte :</span>
+                        <span class="info-value">{{ contract.cardTypeDisplayName }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Marque :</span>
+                        <span class="info-value">{{ contract.cardBrandDisplayName }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Date de signature :</span>
+                        <span class="info-value">{{ contract.signedAt|date('d/m/Y à H:i') }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Cotisation annuelle :</span>
+                        <span class="info-value">
+                            {% if contract.cardFees > 0 %}
+                                {{ contract.cardFees }}€
+                            {% else %}
+                                <span style="color: green;">Gratuite</span>
+                            {% endif %}
+                        </span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Plafonds :</span>
+                        <span class="info-value">{{ contract.dailyLimit }}€/jour - {{ contract.monthlyLimit }}€/mois</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline">
+                <h3>⏱️ Processus de validation</h3>
+                <div class="timeline-item">
+                    <span class="timeline-status status-done">✓</span>
+                    <span>Demande de souscription envoyée</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-status status-done">✓</span>
+                    <span>Contrat généré et envoyé par email</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-status status-done">✓</span>
+                    <span>Contrat signé électroniquement</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-status status-current">⏳</span>
+                    <span><strong>En attente de validation administrative</strong></span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-status status-pending">•</span>
+                    <span>Production et envoi de votre carte</span>
+                </div>
+            </div>
+            
+            <div class="next-steps">
+                <h3>📝 Prochaines étapes</h3>
+                <ul class="steps-list">
+                    <li>
+                        <span class="step-number">1</span>
+                        <span>Nos équipes vont examiner votre contrat signé dans les <strong>24 à 48 heures ouvrées</strong></span>
+                    </li>
+                    <li>
+                        <span class="step-number">2</span>
+                        <span>Vous recevrez un email de confirmation une fois votre souscription validée</span>
+                    </li>
+                    <li>
+                        <span class="step-number">3</span>
+                        <span>Votre carte sera produite et expédiée sous <strong>5 à 7 jours ouvrés</strong></span>
+                    </li>
+                    <li>
+                        <span class="step-number">4</span>
+                        <span>Vous pourrez suivre l'état de votre demande depuis votre espace client</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="buttons">
+                <a href="{{ path('banking_dashboard') }}" class="btn btn-primary">
+                    🏠 Retour au tableau de bord
+                </a>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

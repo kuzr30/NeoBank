@@ -1,0 +1,28 @@
+email_notification_created_account:
+  title: "Your %company_name% account has been created!"
+  
+  content:
+    page_title: "Congratulations %firstName%!"
+    intro: "Your %company_name% account has been successfully created."
+    
+    account_details:
+      title: "Your account details"
+      account_number: "Account number"
+      iban: "IBAN"
+      country: "Country"
+    
+    access_info:
+      title: "Access to your customer portal"
+      text: "You can now log in to your customer portal to manage your banking services."
+    
+    support_info: "If you have any questions, our support team is available to help you."
+    signature: "The %company_name% team"
+      
+  countries:
+    FR: "France"
+    BE: "Belgium"  
+    NL: "Netherlands"
+    DE: "Germany"
+    IT: "Italy"
+    ES: "Spain"
+    LU: "Luxembourg"

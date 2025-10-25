@@ -1,0 +1,109 @@
+credit_renouvelable:
+  page:
+    title: "Revolving-Kredit"
+    description: "Geldreserve jederzeit verfügbar mit unserem Revolving-Kredit. Flexibilität und Verwendungsfreiheit garantiert."
+  
+  hero:
+    class: "credit-detail-hero--renouvelable"
+    taux: "{rate}%"
+    montant: "15.000€"
+    duree: "Dauerhaft"
+    title: "Revolving-Kredit"
+    subtitle: "Ihre verfügbare Geldreserve"
+  
+  section_1:
+    title: "Was ist ein Revolving-Kredit?"
+    content:
+      paragraph_1: "Der Revolving-Kredit, auch revolvierende Kreditlinie genannt, stellt Ihnen eine Geldreserve zur Verfügung, die Sie jederzeit nach Ihren Bedürfnissen ohne Begründung nutzen können."
+      paragraph_2: "Mit Ihren Rückzahlungen erneuert sich Ihre Reserve automatisch. Sie zahlen nur Zinsen auf die tatsächlich genutzten Beträge."
+  
+  section_2:
+    title: "Kreditmerkmale"
+  
+  features:
+    montant:
+      value: "Von 500€ bis 15.000€"
+      detail: "Modulierbare Reserve"
+    duree:
+      value: "Dauerhaft"
+      detail: "Jährlich erneuerbar"
+    taux:
+      value: "Ab {rate}% effektiver Jahreszins*"
+      detail: "Auf genutzte Beträge"
+    garantie:
+      value: "Ohne Sicherheit"
+      detail: "Nur auf Unterschrift"
+  
+  section_3:
+    title: "Vorteile des Revolving-Kredits"
+    advantages:
+      disponibilite:
+        title: "Sofortige Verfügbarkeit"
+        description: "Mittel 24/7 per Karte oder Überweisung zugänglich"
+      reconstruction:
+        title: "Automatische Erneuerung"
+        description: "Reserve erneuert sich mit Ihren Rückzahlungen"
+      pas_interets:
+        title: "Keine Zinsen bei Nichtnutzung"
+        description: "Keine Kosten, solange Sie die Reserve nicht nutzen"
+      remboursement:
+        title: "Flexible Rückzahlung"
+        description: "Niedrige Mindestrate, vorzeitige Rückzahlung möglich"
+      carte:
+        title: "Kreditkarte"
+        description: "Nutzung über zugehörige Bankkarte"
+  
+  section_4:
+    title: "Bedingungen und Nutzungskriterien"
+    conditions:
+      title: "Bewilligungsbedingungen"
+      items:
+        majeur: "Volljährig sein und in Deutschland wohnen"
+        revenus: "Regelmäßige Einkommen nachweisen"
+        surendettement: "Nicht überschuldet sein"
+        interdiction: "Kein Bankverbot"
+    
+    criteres:
+      title: "Nutzungskriterien"
+      items:
+        usage: "Verantwortungsvolle Nutzung empfohlen"
+        impulsifs: "Impulskäufe vermeiden"
+        plan: "Rückzahlungsplan vorsehen"
+        surveiller: "Saldo regelmäßig überwachen"
+  
+  section_5:
+    title: "Erforderliche Nachweise"
+    identite:
+      title: "Ausweisdokumente"
+      items:
+        carte: "Personalausweis oder Reisepass"
+        domicile: "Aktueller Wohnsitznachweis"
+        rib: "Bankverbindung"
+    
+    revenus:
+      title: "Einkommensnachweise"
+      items:
+        bulletins: "Die letzten 3 Gehaltsabrechnungen"
+        avis: "Letzter Steuerbescheid"
+        attestation: "Arbeitgeberbescheinigung falls erforderlich"
+    
+    bancaires:
+      title: "Bankinformationen"
+      items:
+        releves: "Aktuelle Kontoauszüge"
+        credits: "Nachweise anderer Kredite"
+        patrimoine: "Vermögenserklärung"
+  
+  
+  legal:
+    title: "Wichtige rechtliche Informationen"
+    details:
+      taeg: "Effektiver Jahreszins: Repräsentatives Beispiel: Für eine Kreditreserve von 3.000€, die dauerhaft mit einem effektiven Jahreszins von 6,9% genutzt wird, bei einer Rückzahlung von 90€/Monat beträgt die Rückzahlungsdauer 40 Monate bei Gesamtkosten von 597€."
+      utilisation: "Nutzung: Achtung, verwenden Sie diesen Kredit nicht für wiederkehrende laufende Ausgaben."
+      remboursement: "Rückzahlung: Mindestrückzahlung von 3% des genutzten Kapitals oder mindestens 15€."
+      renouvellement: "Verlängerung: Jährliche Überprüfung Ihrer Situation und Verlängerung unter Bedingungen."
+      resiliation: "Kündigung: Jederzeit möglich, Rückzahlung des geschuldeten Saldos ist obligatorisch."
+  
+  cta:
+    title: "Bauen Sie Ihre Reserve auf"
+    subtitle: "Verfügen Sie über eine flexible Finanzierungslösung mit unserem Revolving-Kredit"

@@ -1,0 +1,44 @@
+email_kyc_submission_admin_notification:
+  title: "Neue KYC-Einreichung zu prüfen - %company_name% Admin"
+  tagline: "%company_name% Administration"
+  
+  content:
+    page_title: "Neue Identitätsprüfungsanfrage"
+    greeting: "Hallo <strong>%firstName%</strong>,"
+    
+    priority:
+      title: "Prüfung erforderlich - Normale Priorität"
+      message: "Eine neue KYC-Prüfungsanfrage (Know Your Customer) wurde von einem Kunden eingereicht und erfordert Ihre Validierung vor der vollständigen Aktivierung der Bankdienstleistungen."
+    
+    client_profile:
+      title: "Kundenprofil"
+      identity: "Identität"
+      email: "E-Mail-Adresse"
+      account_status: "Kontostatus"
+      pending_status: "Warten auf Verifizierung"
+      submission_date: "Einreichungsdatum"
+    
+    documents:
+      title: "Vom Kunden bereitgestellte Dokumente"
+      downloaded_status: "Heruntergeladen"
+    
+    actions:
+      title: "Verfügbare Aktionen"
+      examine_request: "Anfrage prüfen"
+      kyc_dashboard: "KYC-Dashboard"
+      processing_time: "Empfohlene Bearbeitungszeit: <strong>24-48 Stunden</strong>"
+    
+    checklist:
+      title: "Prüf-Checkliste"
+      verify_authenticity: "□ Echtheit der Ausweisdokumente überprüfen"
+      check_consistency: "□ Konsistenz der persönlichen Informationen kontrollieren"
+      regulatory_checks: "□ Regulatorische AML/KYC-Überprüfungen durchführen"
+      document_decision: "□ Entscheidung im Verwaltungssystem dokumentieren"
+    
+    support_info: "Bei Fragen zu diesem Verifizierungsverfahren wenden Sie sich bitte an das Compliance-Team."
+    footer: "<strong>%company_name% - Compliance-Abteilung</strong><br>Automatische Benachrichtigung des KYC-Verwaltungssystems"
+
+  logs:
+    kyc_admin_notification_sent: "KYC-Admin-Benachrichtigung für Einreichung von %firstName% %lastName% gesendet"
+    kyc_admin_notification_failed: "Fehler beim Senden der KYC-Admin-Benachrichtigung"
+    kyc_pending_review: "KYC-Einreichung von %firstName% %lastName% wartet auf Prüfung"

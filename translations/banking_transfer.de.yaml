@@ -1,0 +1,42 @@
+banking_transfer:
+  # Meta tags
+  meta:
+    title: "Neue Überweisung - %company_name%"
+    description: "Führen Sie eine sichere Banküberweisung mit %company_name% durch"
+
+  # Navigation
+  nav:
+    dashboard: "Dashboard"
+    transfers: "Überweisungen"
+    logout: "Abmelden"
+
+  # Process Steps
+  steps:
+    details: "Details"
+    validation: "Validierung"
+    confirmation: "Bestätigung"
+
+  # Form Header
+  form:
+    title: "Neue Überweisung"
+    subtitle: "Geld an ein Empfängerkonto überweisen"
+
+  # Account Info
+  account:
+    available_balance: "Verfügbares Guthaben:"
+
+  # Form Fields
+  fields:
+    destination_account: "Empfängerkonto"
+    amount: "Betrag"
+    amount_placeholder: "0,00"
+    description: "Beschreibung (optional)"
+    description_placeholder: "Verwendungszweck..."
+
+  # Actions
+  actions:
+    cancel: "Abbrechen"
+    continue: "Fortfahren"
+
+  # Currency
+  currency: "€"

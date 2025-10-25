@@ -1,0 +1,3 @@
+contract_controller:
+  errors:
+    contract_not_found: "Der Vertrag existiert nicht oder wurde noch nicht erstellt."

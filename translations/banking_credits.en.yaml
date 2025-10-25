@@ -1,0 +1,152 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_credits.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_credits:
+  # Header section
+  header:
+    title: "My Credits"
+    breadcrumb_home: "Home"
+    breadcrumb_banking: "Banking Services"
+    breadcrumb_current: "My Credits"
+    last_update: "Last update"
+
+  # Credit statistics section
+  statistics:
+    total_credits: "Active credits"
+    total_amount: "Total borrowed amount"
+    total_remaining: "Remaining capital owed"
+    average_rate: "Average rate"
+    available_balance: "Total available balance"
+    monthly_payments: "Total monthly payments"
+
+  # Available credits section  
+  available_credits:
+    title: "Available credits"
+    subtitle: "Released amounts available for use"
+    view_all: "View all available credits"
+    from: "From"
+    rate: "Rate from %"
+    simulate: "Simulate"
+    apply: "Apply"
+    duration: "Over %d months"
+    credit_account: "Credit Account"
+    available: "Available"
+    funds_released: "Funds released"
+    transfer_to_main: "Transfer to my main account"
+
+  # Active credits section
+  active_credits:
+    title: "My active credits"
+    remaining_capital: "Remaining capital"
+    monthly_payment: "Monthly payment"
+    next_payment: "Next payment"
+    progress: "Progress"
+    view_details: "View details"
+    view_amortization: "View amortization"
+    real_estate: "Real estate"
+
+  # Applications section
+  applications:
+    title: "My applications"
+    reference: "Application No."
+    date: "Application date"
+    amount: "Amount"
+    status: "Status"
+    actions: "Actions"
+    view: "View"
+    no_applications: "No credit applications"
+    credit_type: "Credit type"
+
+  # Empty state
+  empty_state:
+    title: "No active credits"
+    message: "You currently have no credits in progress. Discover our credit offers tailored to your needs."
+
+  # Pagination
+  pagination:
+    previous: "Previous"
+    next: "Next"
+    page_info: "Page {{ page }} of {{ total }} ({{ count }} applications)"
+
+  # Labels - Common labels used across sections
+  labels:
+    initial_capital: "Initial capital"
+    duration: "Duration"
+    months: "months"
+    start_date: "Start date"
+    status: "Status"
+    type: "Credit type"
+    reference: "Reference"
+    monthly_payment_short: "Monthly payment"
+    browse_offers: "Browse offers"
+    property: "Real estate"
+    status_fund_disbursed: "Funds disbursed"
+    available: "Available"
+    transfer_to_main: "Transfer to my main account"
+    percent_repaid: "%d%% repaid"
+    
+  # Credit info
+  credit:
+    amount: "Amount"
+    remaining_amount: "Remaining capital"
+    monthly_payment: "Monthly payment"
+    interest_rate: "Interest rate"
+    duration: "Duration"
+    start_date: "Start date"
+    end_date: "End date"
+    next_payment: "Next payment"
+    status: "Status"
+    type: "Credit type"
+    
+  # Credit types
+  types:
+    personal: "Personal credit"
+    mortgage: "Mortgage"
+    auto: "Auto loan"
+    consumer: "Consumer credit"
+    professional: "Business loan"
+    student: "Student loan"
+    revolving: "Revolving credit"
+    
+  # Status
+  status:
+    active: "Active"
+    pending: "Pending"
+    approved: "Approved"
+    rejected: "Rejected"
+    completed: "Completed"
+    suspended: "Suspended"
+    contract_sent: "Contract sent"
+    contract_signed: "Contract signed"
+    funds_disbursed: "Funds disbursed"
+    
+  # Actions
+  actions:
+    view_details: "View details"
+    view_amortization: "View amortization"
+    simulate_credit: "Simulate credit"
+    apply_credit: "Apply for credit"
+    download_contract: "Download contract"
+    make_payment: "Make payment"
+    
+  # Simulation form
+  simulation:
+    amount_label: "Desired amount"
+    duration_label: "Duration in months"
+    purpose_label: "Credit purpose"
+    calculate: "Calculate"
+    results_title: "Simulation results"
+    monthly_payment_result: "Estimated monthly payment"
+    total_cost: "Total credit cost"
+    
+  # Messages
+  messages:
+    no_credits: "No credits in progress"
+    no_applications: "No applications in progress"
+    access_denied: "Access denied to this credit"
+    simulation_success: "Simulation calculated successfully"
+    
+  # Currency
+  currency: "€"

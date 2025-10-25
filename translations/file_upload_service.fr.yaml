@@ -1,0 +1,15 @@
+file_upload_service:
+  exceptions:
+    upload_error: "Erreur lors du téléchargement du fichier: {error}"
+    
+  validation_errors:
+    invalid_file_type: "Type de fichier non autorisé. Seuls les PDF et images (JPG, PNG) sont acceptés."
+    file_too_large: "Le fichier est trop volumineux (max 10MB)."
+    upload_failed: "Erreur lors du téléchargement du fichier."
+    
+  file_sizes:
+    bytes: "B"
+    kilobytes: "KB" 
+    megabytes: "MB"
+    gigabytes: "GB"
+    file_not_found: "0 B"

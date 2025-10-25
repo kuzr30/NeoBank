@@ -1,0 +1,27 @@
+email_email_verification:
+  title: "Validatie van uw nieuwe e-mailadres - %company_name%"
+  content:
+    page_title: "Validatie van uw nieuwe e-mailadres"
+    greeting: "Hallo <strong>{firstName}</strong>,"
+    intro: "U heeft verzocht om het e-mailadres van uw %company_name%-account te wijzigen."
+    new_email:
+      title: "Nieuw e-mailadres"
+      label: "Nieuw adres:"
+      value: "{newEmail}"
+    instruction: "Om deze wijziging te bevestigen en uw nieuwe e-mailadres te valideren, klikt u op de onderstaande knop:"
+    button_text: "Mijn e-mailadres valideren"
+    warning:
+      title: "⏰ Tijdelijke link"
+      description: "<strong>Belangrijk:</strong> Deze validatielink verloopt op <strong>{expirationDate}</strong>. Na deze datum moet u een nieuw wijzigingsverzoek indienen."
+    security:
+      title: "Beveiliging"
+      description: "Als u deze wijziging van e-mailadres niet heeft aangevraagd, negeer dan deze e-mail en log onmiddellijk in op uw account om uw beveiliging te controleren."
+    manual_link: "Als de knop niet werkt, kunt u deze link kopiëren en plakken in uw browser:"
+    signature: "Met vriendelijke groet,<br><strong>Het %company_name% team</strong>"
+  
+  # Log berichten voor de MessageHandler
+  logs:
+    sending: "Versturen van e-mailadres verificatie e-mail"
+    success: "Verificatie e-mail succesvol verzonden"
+    error: "Fout bij het versturen van verificatie e-mail"
+    send_failed: "Fout bij het verzenden van verificatie e-mail"

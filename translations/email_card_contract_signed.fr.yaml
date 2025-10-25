@@ -1,0 +1,19 @@
+email_card_contract_signed:
+  title: "Contrat signé - Votre carte sera bientôt disponible"
+  content:
+    page_title: "Contrat signé avec succès !"
+    greeting: "Bonjour {firstName} {lastName},"
+    success:
+      title: "Félicitations !"
+      description: "Votre contrat de souscription de carte a été signé avec succès. Nous avons bien reçu votre signature électronique."
+    contract_details:
+      title: "Détails de votre contrat"
+      reference: "Référence"
+      card_type: "Type de carte"
+      signed_date: "Date de signature"
+    next_steps:
+      title: "Prochaines étapes"
+      step1: "Notre équipe va maintenant valider votre dossier"
+      step2: "Votre paiement sera traité dans les plus brefs délais"
+      step3: "Votre carte sera produite et expédiée sous 5-7 jours ouvrés"
+    closing: "Nous vous tiendrons informé(e) de l'évolution de votre demande par email. Merci de votre confiance !"

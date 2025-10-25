@@ -1,0 +1,33 @@
+email_card_subscription_approved:
+  title: "Ihr Kartenantrag wurde genehmigt"
+  
+  content:
+    page_title: "Ausgezeichnete Neuigkeiten! Ihre Karte wurde genehmigt"
+    greeting: "Liebe(r) %firstName% %lastName%,"
+    
+    approval:
+      title: "Antrag genehmigt"
+      description: "Herzlichen Glückwunsch! Ihr Antrag für eine %cardType% wurde von unseren Teams genehmigt."
+    
+    card_details:
+      title: "Details Ihrer Karte"
+      type: "Kartentyp"
+      reference: "Referenz"
+      account: "Verknüpftes Konto"
+    
+    contract_required:
+      title: "Vertragsunterzeichnung erforderlich"
+      description: "Um Ihr Abonnement abzuschließen, müssen Sie elektronisch einen Vertrag unterzeichnen, der die Gebühren und Nutzungsbedingungen Ihrer Karte festlegt."
+    
+    next_step:
+      title: "Nächster Schritt"
+      access_button: "Zu meinem Bereich"
+      instruction: "Sie erhalten demnächst den zu unterzeichnenden Vertrag per E-Mail"
+    
+    delivery_info:
+      title: "Lieferinformationen"
+      description: "Ihre physische Karte wird 5-7 Werktage nach Vertragsunterzeichnung und Gebührenvalidierung an Ihre Adresse versendet."
+    
+    assistance: "Unser Team steht Ihnen zur Verfügung, um Sie bei diesem letzten Schritt zu begleiten."
+    
+    footer: "Diese E-Mail wurde automatisch von Ihrer Bank gesendet. <br><strong>Herzlichen Glückwunsch zur Genehmigung Ihres Antrags!</strong>"

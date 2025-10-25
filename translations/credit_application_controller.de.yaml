@@ -1,0 +1,53 @@
+# Übersetzungen für CreditApplicationController
+flash:
+  # Fehlermeldungen
+  complete_previous_steps: "Bitte vervollständigen Sie die vorherigen Schritte, bevor Sie fortfahren."
+  missing_data: "Fehlende Daten in der Sitzung. Bitte beginnen Sie den Antrag erneut."
+  application_not_found: "Der Kreditantrag wurde nicht gefunden."
+  session_expired: "Ihre Sitzung ist abgelaufen. Bitte beginnen Sie Ihren Antrag erneut."
+  invalid_request: "Ungültiger Antrag. Bitte vervollständigen Sie alle Schritte."
+  complete_all_steps: "Bitte vervollständigen Sie alle Schritte, bevor Sie zur Zusammenfassung gehen."
+  invalid_security_token: "Ungültiges Sicherheits-Token. Bitte versuchen Sie es erneut."
+  submission_error: "Bei der Übermittlung Ihres Antrags ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+  
+  # Erfolgsmeldungen
+  step_completed: "Schritt %d erfolgreich abgeschlossen."
+  application_submitted: "Ihr Kreditantrag wurde erfolgreich übermittelt. Sie erhalten bald eine Bestätigung per E-Mail."
+  data_saved: "Ihre Informationen wurden gespeichert."
+  
+  # Informationsmeldungen
+  step_progress: "Sie befinden sich bei Schritt %d von %d."
+  review_information: "Bitte überprüfen Sie Ihre Informationen, bevor Sie Ihren Antrag einreichen."
+  fields_updated: "Die Felder wurden automatisch aktualisiert."
+  
+  # Warnmeldungen
+  unsaved_changes: "Sie haben ungespeicherte Änderungen. Sind Sie sicher, dass Sie die Seite verlassen möchten?"
+
+# Ausnahmen
+exceptions:
+  step_not_found: "Schritt nicht gefunden."
+  invalid_step: "Ungültiger Schritt."
+  credit_application_not_found: "Kreditantrag nicht gefunden."
+
+# API-Nachrichten
+api:
+  invalid_data: "Ungültige Daten bereitgestellt."
+  calculation_error: "Fehler bei der Kreditberechnung."
+
+# Weitere Übersetzungen des Controllers
+step_titles:
+  1: "Kreditdetails"
+  2: "Persönliche Informationen"
+  3: "Finanzielle Situation"
+  unknown: "Unbekannter Schritt"
+
+step_descriptions:
+  1: "Konfigurieren Sie Ihren Kredit und erhalten Sie eine Simulation"
+  2: "Geben Sie Ihre persönlichen Informationen und Ihre Adresse ein"
+  3: "Beschreiben Sie Ihre berufliche und finanzielle Situation"
+
+buttons:
+  continue: "Weiter"
+  previous: "Zurück" 
+  submit: "Antrag einreichen"
+  save_draft: "Entwurf speichern"

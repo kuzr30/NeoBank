@@ -1,0 +1,52 @@
+transfer_manager:
+  exceptions:
+    account_blocked: "Your account is blocked. Contact administration."
+    transfer_expired: "This transfer has expired."
+    transfer_not_cancellable: "This transfer cannot be cancelled."
+    transfer_not_validatable: "This transfer cannot be validated."
+    transfer_not_blockable: "This transfer cannot be blocked."
+    transfer_not_blocked: "This transfer is not blocked."
+    
+  user_messages:
+    account_blocked: "Your account is blocked. Contact administration."
+    transfer_expired: "This transfer has expired."
+    code_expired: "This code can no longer be validated (too many failed attempts)."
+    code_validated_success: "Code validated successfully. Transfer in progress."
+    account_blocked_attempts: "Account blocked after too many failed attempts. Contact administration."
+    no_pending_code: "No pending code. Generate a code first."
+    transfer_completed: "Transfer completed successfully!"
+    next_code_needed: "Code validated. Generate the next code to continue."
+    
+  admin_notes:
+    blocked_after_attempts: "Account blocked after 9 incorrect validation attempts"
+    
+  log_messages:
+    transfer_initiated: "New transfer initiated with immediate debit"
+    code_added: "Code added to transfer"
+    code_validated_success: "Code validated successfully"
+    code_attempt_failed: "Code attempt failed"
+    transfer_executed: "Transfer executed successfully"
+    transfer_execution_failed: "Transfer execution failed"
+    user_unblocked: "User unblocked"
+    code_expired_next_requested: "Code expired - next code requested"
+    cancellation_started: "Transfer cancellation started"
+    amount_recredited: "Amount recredited due to cancellation"
+    transfer_cancelled: "Transfer cancelled successfully"
+    transfer_blocked: "Transfer blocked by transfer service"
+    transfer_unblocked: "Transfer unblocked by admin"
+    admin_validation_simulated: "Validation simulated by administration"
+    
+  transaction_notes:
+    money_debited_on_init: "Money already debited during initiation"
+    money_always_debited_comment: "ALWAYS recredit the amount because money is ALWAYS debited during initiation"
+
+  validation:
+    amount_must_be_positive: "The amount must be a positive number."
+    insufficient_credit_amount: "Insufficient amount in the credit account."
+  
+  errors:
+    sub_account_not_found: "Credit sub-account not found"
+    no_pending_transfer: "No pending transfers."
+    verification_code_expired: "Verification code expired."
+    verification_code_invalid: "Verification code invalid."
+    insufficient_amount: "Insufficient amount"

@@ -1,0 +1,26 @@
+email_funds_disbursed:
+  title: "Fondsen vrijgegeven"
+  content:
+    page_title: "Uw fondsen zijn vrijgegeven!"
+    greeting: "Hallo <strong>%customerName%</strong>,"
+    disbursement_section:
+      title: "Vrijgave bevestigd"
+      message: "Uitstekend nieuws! De fondsen van uw krediet <strong>%contractNumber%</strong> ter waarde van <strong>%loanAmount% €</strong> zijn vrijgegeven en zijn nu beschikbaar op uw rekening."
+    transaction_details:
+      title: "Transactiedetails"
+      contract: "Contractnummer"
+      amount: "Leningbedrag"
+      fees: "Afgetrokken kosten"
+      net_amount: "Netto bijgeschreven bedrag"
+    important_info:
+      title: "Belangrijke informatie"
+      message: "De fondsen zijn onmiddellijk beschikbaar op uw kredietrekening. U kunt vanaf nu overschrijvingen maken vanuit uw klantenruimte."
+    repayment_info:
+      title: "Terugbetalingsherinnering"
+      message: "Vergeet niet dat uw krediet moet worden terugbetaald volgens het overeengekomen schema. Uw eerste maandelijkse aflossing wordt volgende maand afgetrokken. Raadpleeg uw klantenruimte voor meer details."
+    access_account: "Toegang tot mijn account"
+    thanks_message: "Gefeliciteerd en bedankt voor uw vertrouwen!"
+    footer: "Het %company_name% team<br><em>Dit is een automatische e-mail, gelieve niet te antwoorden.</em>"
+  logs:
+    success: "Fondsen vrijgave email succesvol verzonden naar %email% voor contract %contractNumber% (bedrag: %amount% €, locale: %locale%)"
+    error: "Fout bij het verzenden van fondsen vrijgave email voor contract %contractNumber%: %error%"

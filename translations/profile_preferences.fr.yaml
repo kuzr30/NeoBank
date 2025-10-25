@@ -1,0 +1,36 @@
+profile_preferences:
+  page:
+    title: "Préférences - %company_name%"
+  
+  header:
+    title: "Préférences"
+  
+  actions:
+    cancel: Annuler
+    save: Enregistrer les préférences
+  
+  settings:
+    history:
+      title: Historique de navigation
+      description: Enregistrer l'historique de vos actions
+  
+  sections:
+    language:
+      title: "Langue et région"
+      language: "Langue de l'interface"
+      currency: "Devise par défaut"
+      timezone: "Fuseau horaire"
+      date_format: "Format de date"
+    
+    notifications:
+      title: "Notifications"
+      email: "Notifications par email"
+      sms: "Notifications par SMS"
+      push: "Notifications push"
+      marketing: "Offres commerciales"
+    
+    privacy:
+      title: "Confidentialité"
+      profile_visibility: "Visibilité du profil"
+      data_sharing: "Partage de données"
+      activity_tracking: "Suivi d'activité"

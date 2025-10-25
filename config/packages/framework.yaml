@@ -1,0 +1,22 @@
+# see https://symfony.com/doc/current/reference/configuration/framework.html
+framework:
+    secret: '%env(APP_SECRET)%'
+    
+    # Configuration multilingue
+    default_locale: 'fr'
+    enabled_locales: ['fr', 'nl', 'de', 'en', 'es']
+
+    # Note that the session will be started ONLY if you read or write from it.
+    session: true
+    
+    # Protection CSRF
+    csrf_protection: true
+
+    #esi: true
+    #fragments: true
+
+when@test:
+    framework:
+        test: true
+        session:
+            storage_factory_id: session.storage.factory.mock_file

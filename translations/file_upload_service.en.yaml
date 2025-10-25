@@ -1,0 +1,20 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: file_upload_service.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+file_upload_service:
+  exceptions:
+    upload_error: "Error uploading file: {error}"
+    
+  validation_errors:
+    invalid_file_type: "File type not allowed. Only PDF and images (JPG, PNG) are accepted."
+    file_too_large: "File is too large (max 10MB)."
+    upload_failed: "Error uploading file."
+    
+  file_sizes:
+    bytes: "B"
+    kilobytes: "KB" 
+    megabytes: "MB"
+    gigabytes: "GB"
+    file_not_found: "0 B"

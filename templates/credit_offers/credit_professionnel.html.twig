@@ -1,0 +1,343 @@
+{% extends 'credit_offers/credit_page_structure.html.twig' %}
+
+{% set page_title = tp('credit_professionnel.page.title', [], 'credit_professionnel') %}
+{% set page_description = tp('credit_professionnel.page.description', [], 'credit_professionnel') %}
+{% set hero_class = 'credit-detail-hero--professionnel' %}
+
+{% block taux_value %}{{ credit_rate('professionnel') }}%{% endblock %}
+{% block montant_value %}{{ tp('credit_professionnel.hero.values.montant', [], 'credit_professionnel') }}{% endblock %}
+{% block duree_value %}{{ tp('credit_professionnel.hero.values.duree', [], 'credit_professionnel') }}{% endblock %}
+
+{% block hero_title %}{{ tp('credit_professionnel.hero.title', [], 'credit_professionnel') }}{% endblock %}
+{% block hero_subtitle %}{{ tp('credit_professionnel.hero.subtitle', [], 'credit_professionnel') }}{% endblock %}
+
+{% block section_1_title %}{{ tp('credit_professionnel.section_1.title', [], 'credit_professionnel') }}{% endblock %}
+
+{% block section_1_content %}
+<p>{{ tp('credit_professionnel.section_1.content.paragraph_1', [], 'credit_professionnel') }}</p>
+<p>{{ tp('credit_professionnel.section_1.content.paragraph_2', [], 'credit_professionnel') }}</p>
+{% endblock %}
+
+{% block feature_montant %}{{ tp('credit_professionnel.features.montant', [], 'credit_professionnel') }}{% endblock %}
+{% block feature_montant_detail %}{{ tp('credit_professionnel.features.montant_detail', [], 'credit_professionnel') }}{% endblock %}
+{% block feature_duree %}{{ tp('credit_professionnel.features.duree', [], 'credit_professionnel') }}{% endblock %}
+{% block feature_duree_detail %}{{ tp('credit_professionnel.features.duree_detail', [], 'credit_professionnel') }}{% endblock %}
+{% block feature_taux %}{{ tp('credit_professionnel.features.taux', [], 'credit_professionnel')|replace({'{rate}': credit_rate('professionnel')})|raw }}{% endblock %}
+{% block feature_taux_detail %}{{ tp('credit_professionnel.features.taux_detail', [], 'credit_professionnel') }}{% endblock %}
+{% block feature_garantie %}{{ tp('credit_professionnel.features.garantie', [], 'credit_professionnel') }}{% endblock %}
+{% block feature_garantie_detail %}{{ tp('credit_professionnel.features.garantie_detail', [], 'credit_professionnel') }}{% endblock %}
+
+{% block section_3_content %}
+<ul class="credit-detail-advantages">
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_professionnel.advantages.taux_preferentiel.title', [], 'credit_professionnel') }}</strong> {{ tp('credit_professionnel.advantages.taux_preferentiel.text', [], 'credit_professionnel') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_professionnel.advantages.accompagnement.title', [], 'credit_professionnel') }}</strong> {{ tp('credit_professionnel.advantages.accompagnement.text', [], 'credit_professionnel') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_professionnel.advantages.souplesse.title', [], 'credit_professionnel') }}</strong> {{ tp('credit_professionnel.advantages.souplesse.text', [], 'credit_professionnel') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_professionnel.advantages.deblocage_rapide.title', [], 'credit_professionnel') }}</strong> {{ tp('credit_professionnel.advantages.deblocage_rapide.text', [], 'credit_professionnel') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_professionnel.advantages.deductibilite.title', [], 'credit_professionnel') }}</strong> {{ tp('credit_professionnel.advantages.deductibilite.text', [], 'credit_professionnel') }}</span>
+    </li>
+</ul>
+{% endblock %}
+
+{% block section_4_content %}
+<div class="credit-detail-requirements">
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('credit_professionnel.requirements.conditions_activite.title', [], 'credit_professionnel') }}</h3>
+        <ul>
+            <li>{{ tp('credit_professionnel.requirements.conditions_activite.items.creation', [], 'credit_professionnel') }}</li>
+            <li>{{ tp('credit_professionnel.requirements.conditions_activite.items.declaration', [], 'credit_professionnel') }}</li>
+            <li>{{ tp('credit_professionnel.requirements.conditions_activite.items.chiffre_affaires', [], 'credit_professionnel') }}</li>
+            <li>{{ tp('credit_professionnel.requirements.conditions_activite.items.difficultes', [], 'credit_professionnel') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('credit_professionnel.requirements.criteres_financiers.title', [], 'credit_professionnel') }}</h3>
+        <ul>
+            <li>{{ tp('credit_professionnel.requirements.criteres_financiers.items.capacite', [], 'credit_professionnel') }}</li>
+            <li>{{ tp('credit_professionnel.requirements.criteres_financiers.items.fonds_propres', [], 'credit_professionnel') }}</li>
+            <li>{{ tp('credit_professionnel.requirements.criteres_financiers.items.apport', [], 'credit_professionnel') }}</li>
+            <li>{{ tp('credit_professionnel.requirements.criteres_financiers.items.garanties', [], 'credit_professionnel') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block section_5_content %}
+{% block documents %}
+<div class="required-documents">
+    <h3 class="required-documents__title">{{ tp('credit_professionnel.documents.title', [], 'credit_professionnel') }}</h3>
+    <div class="documents-cards">
+        <div class="document-card">
+            <div class="document-card__header">
+                <div class="document-card__icon">
+                    {{ ux_icon('heroicons:building-office-2', {'class': 'document-card__icon-svg'}) }}
+                </div>
+                <h4 class="document-card__title">{{ tp('credit_professionnel.documents.entreprise.title', [], 'credit_professionnel') }}</h4>
+            </div>
+            <div class="document-card__body">
+                <ul class="document-card__list">
+                    <li class="document-card__item">
+                        {{ ux_icon('heroicons:document-text', {'class': 'document-item__icon'}) }}
+                        <span>{{ tp('credit_professionnel.documents.entreprise.kbis', [], 'credit_professionnel') }}</span>
+                    </li>
+                    <li class="document-card__item">
+                        {{ ux_icon('heroicons:document-text', {'class': 'document-item__icon'}) }}
+                        <span>{{ tp('credit_professionnel.documents.entreprise.statuts', [], 'credit_professionnel') }}</span>
+                    </li>
+                    <li class="document-card__item">
+                        {{ ux_icon('heroicons:chart-bar', {'class': 'document-item__icon'}) }}
+                        <span>{{ tp('credit_professionnel.documents.entreprise.bilans', [], 'credit_professionnel') }}</span>
+                    </li>
+                    <li class="document-card__item">
+                        {{ ux_icon('heroicons:calculator', {'class': 'document-item__icon'}) }}
+                        <span>{{ tp('credit_professionnel.documents.entreprise.liasse_fiscale', [], 'credit_professionnel') }}</span>
+                    </li>
+                    <li class="document-card__item">
+                        {{ ux_icon('heroicons:credit-card', {'class': 'document-item__icon'}) }}
+                        <span>{{ tp('credit_professionnel.documents.entreprise.situation_banque', [], 'credit_professionnel') }}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="document-card">
+            <div class="document-card__header">
+                <div class="document-card__icon">
+                    {{ ux_icon('heroicons:user-circle', {'class': 'document-card__icon-svg'}) }}
+                </div>
+                <h4 class="document-card__title">{{ tp('credit_professionnel.documents.dirigeant.title', [], 'credit_professionnel') }}</h4>
+            </div>
+            <div class="document-card__body">
+                <ul class="document-card__list">
+                    <li class="document-card__item">
+                        {{ ux_icon('heroicons:identification', {'class': 'document-item__icon'}) }}
+                        <span>{{ tp('credit_professionnel.documents.dirigeant.identite', [], 'credit_professionnel') }}</span>
+                    </li>
+                    <li class="document-card__item">
+                        {{ ux_icon('heroicons:banknotes', {'class': 'document-item__icon'}) }}
+                        <span>{{ tp('credit_professionnel.documents.dirigeant.revenus', [], 'credit_professionnel') }}</span>
+                    </li>
+                    <li class="document-card__item">
+                        {{ ux_icon('heroicons:home-modern', {'class': 'document-item__icon'}) }}
+                        <span>{{ tp('credit_professionnel.documents.dirigeant.patrimoine', [], 'credit_professionnel') }}</span>
+                    </li>
+                    <li class="document-card__item">
+                        {{ ux_icon('heroicons:document-duplicate', {'class': 'document-item__icon'}) }}
+                        <span>{{ tp('credit_professionnel.documents.dirigeant.releves', [], 'credit_professionnel') }}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="document-card">
+            <div class="document-card__header">
+                <div class="document-card__icon">
+                    {{ ux_icon('heroicons:light-bulb', {'class': 'document-card__icon-svg'}) }}
+                </div>
+                <h4 class="document-card__title">{{ tp('credit_professionnel.documents.projet.title', [], 'credit_professionnel') }}</h4>
+            </div>
+            <div class="document-card__body">
+                <ul class="document-card__list">
+                    <li class="document-card__item">
+                        {{ ux_icon('heroicons:presentation-chart-line', {'class': 'document-item__icon'}) }}
+                        <span>{{ tp('credit_professionnel.documents.projet.plan_financement', [], 'credit_professionnel') }}</span>
+                    </li>
+                    <li class="document-card__item">
+                        {{ ux_icon('heroicons:document-currency-euro', {'class': 'document-item__icon'}) }}
+                        <span>{{ tp('credit_professionnel.documents.projet.devis', [], 'credit_professionnel') }}</span>
+                    </li>
+                    <li class="document-card__item">
+                        {{ ux_icon('heroicons:clipboard-document-list', {'class': 'document-item__icon'}) }}
+                        <span>{{ tp('credit_professionnel.documents.projet.business_plan', [], 'credit_professionnel') }}</span>
+                    </li>
+                    <li class="document-card__item">
+                        {{ ux_icon('heroicons:shield-check', {'class': 'document-item__icon'}) }}
+                        <span>{{ tp('credit_professionnel.documents.projet.garanties', [], 'credit_professionnel') }}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% endblock %}
+
+{% block legal_details %}
+<div class="credit-legal-notice__details">
+    <h4>{{ tp('credit_professionnel.legal.title', [], 'credit_professionnel') }}</h4>
+    <ul>
+        <li><strong>{{ tp('credit_professionnel.legal.taeg.title', [], 'credit_professionnel') }}</strong> {{ tp('credit_professionnel.legal.taeg.text', [], 'credit_professionnel') }}</li>
+        <li><strong>{{ tp('credit_professionnel.legal.garanties.title', [], 'credit_professionnel') }}</strong> {{ tp('credit_professionnel.legal.garanties.text', [], 'credit_professionnel') }}</li>
+        <li><strong>{{ tp('credit_professionnel.legal.assurance.title', [], 'credit_professionnel') }}</strong> {{ tp('credit_professionnel.legal.assurance.text', [], 'credit_professionnel') }}</li>
+        <li><strong>{{ tp('credit_professionnel.legal.fiscalite.title', [], 'credit_professionnel') }}</strong> {{ tp('credit_professionnel.legal.fiscalite.text', [], 'credit_professionnel') }}</li>
+        <li><strong>{{ tp('credit_professionnel.legal.remboursement.title', [], 'credit_professionnel') }}</strong> {{ tp('credit_professionnel.legal.remboursement.text', [], 'credit_professionnel') }}</li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block cta_title %}{{ tp('credit_professionnel.cta.title', [], 'credit_professionnel') }}{% endblock %}
+{% block cta_subtitle %}{{ tp('credit_professionnel.cta.subtitle', [], 'credit_professionnel') }}{% endblock %}
+
+{% block custom_styles %}
+{{ parent() }}
+<style>
+/* Couleur spécifique pour le crédit professionnel */
+.credit-detail-hero--professionnel {
+    background: 
+        linear-gradient(135deg, rgba(5, 150, 105, 0.4) 0%, rgba(4, 120, 87, 0.6) 100%),
+        url('/images/8e7ef9b4a0.jpg') center/cover no-repeat fixed;
+}
+
+.credit-detail-hero--professionnel .credit-highlight__value {
+    color: #6ee7b7;
+}
+
+/* Styles pour les cards de documents */
+.documents-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.document-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(229, 231, 235, 0.8);
+}
+
+.document-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.document-card__header {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    padding: 1.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.document-card__icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.document-card__icon-svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+.document-card__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.document-card__body {
+    padding: 1.5rem;
+}
+
+.document-card__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.document-card__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    transition: background-color 0.2s ease;
+}
+
+.document-card__item:hover {
+    background: #f1f5f9;
+}
+
+.document-item__icon {
+    width: 20px;
+    height: 20px;
+    color: #059669;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.document-card__item span {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #374151;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .documents-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .document-card__header {
+        padding: 1.25rem;
+    }
+    
+    .document-card__body {
+        padding: 1.25rem;
+    }
+    
+    .document-card__title {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .document-card__header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+    
+    .document-card__item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .document-item__icon {
+        align-self: center;
+    }
+}
+</style>
+{% endblock %}

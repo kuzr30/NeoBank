@@ -1,0 +1,46 @@
+profile_security:
+  page:
+    title: "Beveiliging - %company_name%"
+  
+  header:
+    title: "Accountbeveiliging"
+  
+  sections:
+    password:
+      title: "Wachtwoord"
+      configured: "Geconfigureerd"
+      current: "Huidig wachtwoord"
+      never_changed: "Wachtwoord nooit gewijzigd"
+      edit: "Bewerken"
+      time_units:
+        minutes: "minuut/minuten"
+        hours: "uur"
+        days: "dag/dagen"
+        last_modified: "Laatst gewijzigd"
+        ago: "geleden"
+        on: "op"
+    
+    two_factor:
+      title: "Tweefactorauthenticatie"
+      disabled: "Uitgeschakeld"
+      app:
+        title: "Authenticatie-app"
+        desc: "Gebruik een app zoals Google Authenticator"
+        configure: "Configureren"
+      sms:
+        title: "SMS-verificatie"
+        desc: "Ontvang codes via SMS"
+        add: "Toevoegen"
+    
+    activity:
+      title: "Recente beveiligingsactiviteit"
+      today: "Vandaag om"
+      yesterday: "Gisteren om"
+      none_title: "Geen recente beveiligingsactiviteit"
+      none_desc: "Uw account is beveiligd"
+      activities:
+        login_success: "Succesvolle aanmelding"
+        login_failed: "Mislukte aanmeldingspoging"
+        password_changed: "Wachtwoord gewijzigd"
+        profile_updated: "Profiel bijgewerkt"
+        account_locked: "Account vergrendeld"

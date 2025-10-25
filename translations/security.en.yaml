@@ -1,0 +1,21 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: security.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+security:
+  activation_notice:
+    title: "Check Your Email!"
+    message: "We have sent an activation email to your address. Click the link in the email to activate your account and start using %company_name%."
+    info: "The activation link will expire in 24 hours. If you can't find the email, check your spam folder."
+    actions:
+      login: "Go to Login"
+      resend: "Resend Activation Email"
+  
+  resend_activation:
+    title: "Resend Activation"
+    subtitle: "Enter your email address to receive a new account activation link."
+    email_label: "Email Address"
+    email_placeholder: "your@email.com"
+    submit_button: "Resend Activation Email"
+    back_button: "Back"

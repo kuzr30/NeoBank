@@ -1,0 +1,351 @@
+credit_contract:
+  # Titre du document
+  title: "Contrat de Prêt N° %reference_number%"
+  
+  # Header
+  header:
+    repeated_header: "En-tête répété sur chaque page"
+    logo_alt: "%company_name% Logo"
+    contract_number: "Contrat N°%reference_number%"
+    
+  # Footer
+  footer:
+    company_description: "Société de Financement agréée par l'ACPR (Autorité de Contrôle Prudentiel et de Résolution)"
+    headquarters: "Siège Social"
+    country: "France"
+    phone: "Tél"
+    email: "Email"
+    credit_warning: "UN CRÉDIT VOUS ENGAGE ET DOIT ÊTRE REMBOURSÉ. VÉRIFIEZ VOS CAPACITÉS DE REMBOURSEMENT AVANT DE VOUS ENGAGER."
+    confidential_notice: "Document confidentiel - Toute reproduction est strictement interdite sans autorisation écrite"
+    
+  # Main content
+  main:
+    detailed_info_first_page: "Informations détaillées première page"
+    logo_alt: "%company_name% Logo"
+    document_title_comment: "Titre du document"
+    
+  # Contract titles by type
+  contract_titles:
+    immobilier: "CONTRAT DE CRÉDIT IMMOBILIER"
+    auto: "CONTRAT DE CRÉDIT AUTOMOBILE"
+    consommation: "CONTRAT DE CRÉDIT À LA CONSOMMATION"
+    travaux: "CONTRAT DE CRÉDIT TRAVAUX"
+    professionnel: "CONTRAT DE CRÉDIT PROFESSIONNEL"
+    personal: "CONTRAT DE PRÊT PERSONNEL"
+    home_improvement: "CONTRAT DE CRÉDIT AMÉLIORATION HABITAT"
+    debt_consolidation: "CONTRAT DE RACHAT DE CRÉDIT"
+    mortgage: "CONTRAT DE CRÉDIT HYPOTHÉCAIRE"
+    renouvelable: "CONTRAT DE CRÉDIT RENOUVELABLE"
+    etudiant: "CONTRAT DE PRÊT ÉTUDIANT"
+    relais: "CONTRAT DE CRÉDIT RELAIS"
+    microcredit: "CONTRAT DE MICROCRÉDIT"
+    leasing: "CONTRAT DE CRÉDIT-BAIL"
+    voyage: "CONTRAT DE CRÉDIT VOYAGE"
+    default: "CONTRAT DE PRÊT PERSONNEL"
+    
+  # Chapter I - Contracting Parties
+  chapter_one:
+    title: "Chapitre I - Les Parties Contractantes"
+    lender_header: "Le Prêteur"
+    borrower_header: "L'Emprunteur"
+    company_type: "Société de Financement"
+    share_capital: "Capital social : %amount% €"
+    head_office: "Siège Social :"
+    represented_by: "Représentée par son Directeur Général"
+    hereinafter_lender: "Ci-après dénommée \"Le Prêteur\""
+    hereinafter_borrower: "Ci-après dénommé(e) \"L'Emprunteur\""
+    residing_at: "Demeurant :"
+    address_not_provided: "[Adresse non renseignée]"
+    postal_code_city: "[Code Postal] [Ville]"
+    profession: "Profession : %job_title%"
+    born_on: "Né(e) le : %birth_date%"
+    phone: "Téléphone : %phone%"
+    email: "Email : %email%"
+    parties_agreed: "Les parties aux présentes ont convenu et arrêté ce qui suit"
+    
+  # Chapter II - Object and Nature of Contract
+  chapter_two:
+    title: "Chapitre II - Objet et Nature du Contrat"
+    article_1_title: "Article 1 - Objet du Contrat"
+    article_1_intro: "Le Prêteur consent à l'Emprunteur, qui accepte, un"
+    credit_types:
+      immobilier: "crédit immobilier"
+      auto: "crédit automobile"
+      consommation: "crédit à la consommation"
+      travaux: "crédit travaux"
+      professionnel: "crédit professionnel"
+      personal: "prêt personnel"
+      home_improvement: "crédit pour amélioration de l'habitat"
+      debt_consolidation: "crédit de rachat"
+      mortgage: "crédit hypothécaire"
+      renouvelable: "crédit renouvelable"
+      etudiant: "prêt étudiant"
+      relais: "crédit relais"
+      microcredit: "microcrédit"
+      leasing: "crédit-bail"
+      voyage: "crédit voyage"
+      default: "prêt personnel"
+    article_1_suffix: "à intérêt d'un montant fixé ci-après."
+    article_1_regulation: "Le présent prêt est régi par les dispositions du Code civil (articles 1905 à 1914) et du Code de la consommation."
+    article_1_purpose: "Ce prêt est destiné à équilibrer le compte de l'emprunteur dans le cadre d'un projet d'investissement personnel."
+    
+    article_2_title: "Article 2 - Nature Juridique"
+    article_2_nature: "Il s'agit d'un contrat de prêt personnel à durée déterminée, à taux fixe, remboursable par mensualités constantes."
+    article_2_commitment: "Ce contrat constitue un engagement ferme et définitif des deux parties."
+    article_2_funds_purpose: "Destination des fonds :"
+    article_2_funds_restriction: "Les fonds mis à disposition ne peuvent être utilisés à des fins illégales, spéculatives ou contraires à l'ordre public."
+    
+    article_3_title: "Article 3 - Déclarations et Garanties de l'Emprunteur"
+    article_3_intro: "L'Emprunteur déclare et garantit que :"
+    article_3_declaration_1: "Toutes les informations fournies lors de la demande de crédit sont exactes et complètes."
+    article_3_declaration_2: "Il dispose de la capacité juridique nécessaire pour contracter cet engagement."
+    article_3_declaration_3: "Il n'est pas en situation de surendettement ou de procédure collective."
+    article_3_declaration_4: "Il n'existe aucune interdiction bancaire ou fichage à son encontre."
+    article_3_declaration_5: "Sa situation financière lui permet d'honorer les échéances du présent prêt."
+    
+  # Chapter III - Financial Conditions
+  chapter_three:
+    title: "Chapitre III - Conditions Financières du Prêt"
+    table_characteristics: "Caractéristiques"
+    table_values: "Valeurs"
+    table_observations: "Observations"
+    
+    credit_type_label: "Type de crédit"
+    credit_type_observation: "Nature du financement"
+    loan_amount_label: "Montant du capital emprunté"
+    loan_amount_observation: "Capital mis à disposition"
+    loan_duration_label: "Durée du prêt"
+    loan_duration_observation: "Échéances mensuelles"
+    interest_rate_label: "Taux d'intérêt nominal"
+    interest_rate_observation: "Taux fixe"
+    annual_rate: "% l'an"
+    global_rate_label: "Taux Effectif Global (TEG)"
+    global_rate_observation: "Inclut tous les frais obligatoires"
+    insurance_label: "Assurance facultative"
+    insurance_available: "Disponible sur demande"
+    insurance_observation: "Décès/Invalidité/Incapacité"
+    monthly_payment_label: "Montant des mensualités"
+    constant_payments: "échéances constantes"
+    total_cost_label: "Coût total du crédit"
+    total_cost_observation: "Intérêts sur la durée totale"
+    
+    table_credit_types:
+      immobilier: "Crédit Immobilier"
+      auto: "Crédit Automobile"
+      consommation: "Crédit à la Consommation"
+      travaux: "Crédit Travaux"
+      professionnel: "Crédit Professionnel"
+      personal: "Prêt Personnel"
+      home_improvement: "Crédit Amélioration Habitat"
+      debt_consolidation: "Rachat de Crédit"
+      mortgage: "Crédit Hypothécaire"
+      renouvelable: "Crédit Renouvelable"
+      etudiant: "Prêt Étudiant"
+      relais: "Crédit Relais"
+      microcredit: "Microcrédit"
+      leasing: "Crédit-Bail"
+      voyage: "Crédit Voyage"
+      default: "Prêt Personnel"
+      
+    article_3_title: "Article 3 - Conditions Suspensives"
+    article_3_intro: "Le présent contrat est conclu sous les conditions suspensives suivantes :"
+    condition_1: "Vérification et validation de l'identité de l'Emprunteur et de sa capacité juridique."
+    condition_2: "Vérification de la situation financière déclarée par l'Emprunteur (bulletins de salaire, avis d'imposition, relevés bancaires)."
+    condition_3: "Absence d'inscription au FICP (Fichier des Incidents de remboursement des Crédits aux Particuliers)."
+    condition_4: "Absence d'interdiction bancaire ou de mesures de sauvegarde, redressement ou liquidation judiciaire."
+    condition_5: "Constitution des garanties demandées, le cas échéant."
+    condition_6: "Respect du délai de rétractation légal de 14 jours."
+    conditions_important: "Important :"
+    conditions_nullity: "La non-réalisation de l'une de ces conditions entraîne la nullité automatique du contrat sans indemnité de part et d'autre."
+    
+    article_4_title: "Article 4 - Modalités de Mise à Disposition"
+    article_4_intro: "Sous réserve de la réalisation des conditions suspensives ci-dessus, la somme de %amount% € sera créditée sur le compte bancaire de l'Emprunteur dans un délai maximum de 3 jours ouvrés après :"
+    article_4_condition_1: "Signature définitive du présent contrat par les deux parties"
+    article_4_condition_2: "Réception de toutes les pièces justificatives requises"
+    article_4_condition_3: "Constitution effective des garanties demandées"
+    article_4_usage: "L'Emprunteur s'engage à utiliser ces fonds conformément à l'objet déclaré du prêt."
+    payment_methods: "Modalités de prélèvement :"
+    sepa_payment: "Prélèvement SEPA automatique le %day% de chaque mois. En cas d'insuffisance de provision, une commission d'incident de 20 € sera facturée."
+    bank_account_label: "Compte bancaire désigné pour les prélèvements :"
+    bank_establishment: "Établissement bancaire :"
+    iban_label: "IBAN :"
+    iban_placeholder: "FR__ ____ ____ ____ ____ ____ ___ (À compléter lors de la signature)"
+    bank_maintenance: "L'Emprunteur s'engage à maintenir ce compte bancaire actif et suffisamment approvisionné pour permettre les prélèvements aux échéances convenues."
+    lender_right: "Le Prêteur se réserve le droit de refuser la mise à disposition des fonds en cas de non-respect des conditions du contrat."
+    
+    insurance_title: "Article 4 - Assurance Emprunteur"
+    insurance_general_principle: "4.1 - Principe général"
+    insurance_coverage: "L'assurance emprunteur couvre les risques de décès, d'incapacité temporaire totale de travail (ITT), d'invalidité permanente totale (IPT) et d'invalidité permanente partielle (IPP). Cette couverture protège l'Emprunteur et ses ayants droit en cas d'impossibilité de remboursement due à ces événements."
+    insurance_choice: "4.2 - Choix de l'Emprunteur"
+    insurance_question: "Souhaitez-vous souscrire une assurance emprunteur pour garantir le remboursement de votre crédit ?"
+    
+    insurance_decision_title: "VOTRE DÉCISION :"
+    insurance_decision_intro: "En connaissance de cause, après information complète :"
+    insurance_yes: "OUI, je souscris une assurance emprunteur"
+    insurance_no: "NON, je refuse l'assurance en toute connaissance des risques"
+    insurance_legal_info: "Information légale :"
+    insurance_legal_text: "Conformément à la loi Lagarde, vous avez le droit de choisir librement votre assureur. Vous pouvez également changer d'assurance chaque année à la date anniversaire (loi Hamon)."
+    
+  # Chapter IV - Repayment Terms
+  chapter_four:
+    title: "Chapitre IV - Modalités de Remboursement"
+    repayment_schedule: "Échéancier de Remboursement"
+    repayment_item_1: "Le prêt s'amortira au moyen de %duration% mensualités constantes d'un montant de %amount% € chacune."
+    repayment_item_2: "La première échéance sera prélevée le %first_date%."
+    repayment_item_3: "La dernière échéance sera prélevée le %last_date%."
+    repayment_item_4: "Le prélèvement s'effectuera automatiquement sur le compte bancaire désigné par l'Emprunteur via mandat SEPA."
+    repayment_item_5: "En cas de rejet de prélèvement, l'Emprunteur sera informé dans les 48h et devra régulariser sa situation sous 10 jours ouvrés."
+    repayment_item_6: "Une commission d'incident de 20 € sera facturée pour chaque prélèvement rejeté pour insuffisance de provision."
+    
+    early_repayment_title: "Remboursement Anticipé"
+    early_repayment_right: "L'Emprunteur a la faculté de rembourser par anticipation, en totalité ou en partie, le capital restant dû."
+    early_repayment_minimum: "Les remboursements anticipés partiels ne peuvent être inférieurs à %amount% €, sauf s'il s'agit du solde du prêt."
+    early_repayment_indemnity: "Une indemnité de remboursement anticipé pourra être perçue, égale à un trimestre d'intérêts de la somme remboursée, sans pouvoir excéder %rate%% du capital restant dû."
+    
+  # Chapter V - Obligations and Guarantees
+  chapter_five:
+    title: "Chapitre V - Obligations et Garanties"
+    borrower_obligations_title: "Obligations de l'Emprunteur"
+    obligation_1: "Respecter scrupuleusement l'échéancier de remboursement convenu."
+    obligation_2: "Informer immédiatement le Prêteur de tout changement dans sa situation personnelle, professionnelle ou financière."
+    obligation_3: "Maintenir une assurance couvrant les risques de décès et d'invalidité si souscrite."
+    obligation_4: "Ne pas contracter d'autres emprunts sans accord préalable du Prêteur si le montant total dépasse 33% des revenus nets."
+    obligation_5: "Conserver un compte bancaire actif et approvisionné pour les prélèvements automatiques."
+    obligation_6: "Informer par écrit recommandé tout changement d'adresse dans un délai de 30 jours."
+    
+    guarantees_title: "Garanties Demandées"
+    guarantees_intro: "Afin de garantir le bon remboursement du présent prêt, l'Emprunteur pourra être tenu de constituer, selon les conditions définies par le Prêteur :"
+    guarantee_1: "Une caution bancaire ou personnelle d'un montant équivalent à 10% du montant emprunté, soit %amount% €."
+    guarantee_2: "Cette garantie sera délivrée par une institution financière agréée ou par un tiers solvable accepté par le Prêteur."
+    
+  # Chapter VI - Early Demandability and Sanctions
+  chapter_six:
+    title: "Chapitre VI - Cas d'Exigibilité et Sanctions"
+    early_demandability_title: "Exigibilité Anticipée"
+    early_demandability_intro: "Toutes les sommes dues par l'Emprunteur deviendront immédiatement exigibles, sans mise en demeure préalable, dans les cas suivants :"
+    demandability_1: "Non-paiement d'une échéance à son terme;"
+    demandability_2: "Défaut d'exécution de l'une des obligations contractuelles;"
+    demandability_3: "Fausse déclaration ou dissimulation d'informations importantes;"
+    demandability_4: "Procédure collective (redressement, liquidation judiciaire);"
+    demandability_5: "Décès de l'Emprunteur (sauf dispositions contraires);"
+    demandability_6: "Changement significatif de situation sans information préalable."
+    
+    penalties_title: "Pénalités et Indemnités"
+    delay_penalty: "Pénalité de retard : %rate%% par mois de retard sur les sommes dues."
+    recovery_penalty: "Indemnité forfaitaire de recouvrement : 20 € par échéance impayée."
+    early_demandability_penalty: "Indemnité d'exigibilité anticipée : %rate%% du capital restant dû."
+    
+  # Chapter VII - Various Provisions
+  chapter_seven:
+    title: "Chapitre VII - Dispositions Diverses"
+    domicile_title: "Élection de Domicile"
+    domicile_intro: "Pour l'exécution des présentes et leurs suites, les parties font élection de domicile :"
+    lender_domicile: "Le Prêteur :"
+    borrower_domicile: "L'Emprunteur :"
+    address_not_provided: "[Adresse non renseignée]"
+    
+    # Remaining sections and final acknowledgments
+    acknowledgment_title: "J'ai bien pris connaissance de :"
+    acknowledgment_1: "Les modalités de remboursement anticipé"
+    acknowledgment_2: "Les conséquences d'un défaut de paiement"
+    acknowledgment_3: "Les contacts en cas de difficulté financière"
+    acknowledgment_4: "J'accepte l'ensemble des conditions du présent contrat"
+    
+    # Signatures
+    borrower_signature: "L'Emprunteur"
+    lender_signature: "Le Prêteur"
+    general_director: "Le Directeur Général"
+    duly_authorized: "Dûment habilité aux fins des présentes"
+    signature_date: "Date : ____/____/________"
+    signature_mention: "Signature précédée de la mention"
+    signature_approval: "\"Lu et approuvé, bon pour accord\""
+    
+    preteur: "Le Prêteur"
+    emprunteur: "L'Emprunteur"
+    directeur_general: "Le Directeur Général"
+    habilite: "Dûment habilité aux fins des présentes"
+    
+    # Informations bancaires
+    code_bic: "Code BIC :"
+    completer_signature: "(À compléter lors de la signature)"
+    informations_sepa: "Ces informations seront complétées lors de la signature du contrat ou par mandat SEPA séparé."
+    
+    # Frais et droits
+    frais_enregistrement: "Les frais et droits d'enregistrement du présent contrat s'élèvent à %montant% et sont à la charge de l'Emprunteur."
+    frais_recouvrement: "Les frais de recouvrement en cas d'impayés seront également supportés par l'Emprunteur."
+    
+    # Droit et juridiction
+    contrat_droit_francais: "Le présent contrat est soumis au droit français."
+    competence_tribunaux: "En cas de litige, et après épuisement des voies amiables, compétence exclusive est attribuée aux tribunaux de Paris."
+    
+    # Médiation et RGPD
+    mediation_title: "Médiation :"
+    mediation_content: "Avant tout recours judiciaire, les parties s'engagent à rechercher une solution amiable. L'Emprunteur peut saisir le médiateur de l'ACPR ou le médiateur bancaire de l'ASF."
+    rgpd_title: "Protection des Données Personnelles (RGPD)"
+    rgpd_intro: "Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés :"
+    rgpd_donnees_collectees: "Les données collectées sont nécessaires à l'exécution du contrat et aux obligations légales du Prêteur."
+    rgpd_transmission: "Elles peuvent être transmises aux organismes de contrôle (ACPR, Banque de France, FICP, FCC)."
+    rgpd_droits_emprunteur: "L'Emprunteur dispose d'un droit d'accès, de rectification, de suppression et de portabilité de ses données."
+    rgpd_conservation: "Les données sont conservées pendant 10 ans après extinction du contrat."
+    
+    # Droit de rétractation
+    retractation_title: "DROIT DE RÉTRACTATION (Articles L.311-15 à L.311-18 du Code de la consommation)"
+    retractation_important: "IMPORTANT :"
+    retractation_delai: "L'Emprunteur dispose d'un délai de 14 jours calendaires pour exercer son droit de rétractation sans motif ni pénalité."
+    retractation_debut: "Ce délai court à compter de la date de signature du présent contrat."
+    retractation_notification: "La rétractation doit être notifiée par lettre recommandée avec accusé de réception à l'adresse du Prêteur."
+    retractation_restitution: "En cas de rétractation, l'Emprunteur s'engage à restituer les fonds déjà versés dans un délai de 30 jours, majorés des intérêts courus au taux contractuel."
+    
+    # Autres dispositions
+    modification_echeances: "Le montant des échéances (sous réserve d'acceptation du Prêteur)"
+    cession_creance_title: "Cession de créance :"
+    cession_creance_content: "Le Prêteur se réserve le droit de céder tout ou partie de ses créances à un tiers (établissement financier, société de recouvrement, etc.), moyennant information préalable de l'Emprunteur par lettre recommandée avec accusé de réception, au minimum 30 jours avant la cession effective."
+    cession_information: "En cas de cession, l'Emprunteur sera informé des coordonnées du nouveau créancier et des modalités de remboursement qui resteront inchangées sauf accord contraire."
+    frais_modification_title: "Frais de modification :"
+    frais_modification_content: "Tout avenant au présent contrat donnera lieu à des frais de dossier de 50 € à la charge de l'Emprunteur, sauf disposition légale contraire."
+    
+    # Clause finale
+    contrat_effet: "Le présent contrat prend effet dès sa signature par les deux parties. L'Emprunteur dispose d'un délai de rétractation légal et doit prendre connaissance de toutes les conditions avant de s'engager définitivement."
+    
+    # Section réclamation et modification
+    procedure_reclamation: "Procédure de Réclamation"
+    service_clientele_title: "Service Relations Clientèle :"
+    service_clientele_content: "En cas de difficulté, contactez notre service client au %phone% ou par email : %email%"
+    mediation_persistant: "Médiation : En cas de litige persistant, vous pouvez saisir l'Association Française des Sociétés Financières (ASF)"
+    modification_contrat: "Toute modification du présent contrat doit faire l'objet d'un avenant écrit, signé par les deux parties et daté."
+    duree_pret_modification: "La durée du prêt (prolongation ou réduction)"
+    modalites_remboursement: "Les modalités de remboursement"
+    garanties_apportees: "Les garanties apportées"
+    
+    # Chapitre VIII
+    chapitre_huit_title: "Chapitre VIII - Modalités de Signature et Prise d'Effet"
+    conditions_validite_title: "Conditions de validité :"
+    conditions_validite_content: "La signature électronique ou manuscrite vaut acceptation pleine et entière des termes du contrat. Aucune réserve ne pourra être émise après signature."
+    fait_a_paris: "Fait à PARIS, le %date%, en deux (2) exemplaires originaux"
+    delai_retractation_consommation: "Conformément aux dispositions du Code de la consommation, l'Emprunteur dispose d'un délai de rétractation de 14 jours calendaires révolus à compter de la signature du présent contrat."
+    contact_difficultes: "En cas de difficultés financières, ne restez pas isolé. Des solutions existent. Contactez votre conseiller ou la Banque de France (www.banque-france.fr) pour un accompagnement gratuit."
+    apres_connaissance: "Après avoir pris connaissance des conditions générales"
+    remis_chaque_partie: "Dont un remis à chaque partie qui reconnaît l'avoir reçu"
+    et_particulieres: "et particulières du présent contrat"
+    signature_directeur_alt: "Signature Directeur Général"
+    information_surendettement: "INFORMATION SURENDETTEMENT :"
+    current_date: "Date : %date%"
+    
+    # Textes en dur ligne 883
+    contact_dpo: "Contact DPO : %email%"
+    
+    # Textes en dur ligne 859
+    frais_et_droits_title: "Frais et Droits"
+    
+    # Textes en dur ligne 911
+    modifications_portent_sur: "Les modifications peuvent porter notamment sur :"
+    
+    # Textes en dur ligne 940
+    points_accueil_banque_france: "Points d'accueil Banque de France :"
+    numero_banque_france: "0 811 901 801 (prix d'un appel local)"
+    
+    # Textes en dur ligne 867
+    droit_applicable_juridiction_title: "Droit Applicable et Juridiction"
+    
+    # Textes en dur ligne 909
+    modification_contrat_title: "Modification du Contrat"

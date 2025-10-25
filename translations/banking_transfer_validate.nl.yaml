@@ -1,0 +1,32 @@
+banking_transfer_validate:
+  header:
+    title: "Overschrijvingsvalidatie"
+    subtitle: "Voer de beveiligingscodes in om uw overschrijving te valideren"
+    back_button: "Terug"
+  
+  summary:
+    title: "Overschrijving in validatie"
+    amount_label: "Bedrag:"
+    beneficiary_label: "Begunstigde:"
+    description_label: "Beschrijving:"
+    status_label: "Status:"
+  
+  status:
+    pending: "In behandeling"
+    executing: "In uitvoering"
+    completed: "Voltooid"
+    expired: "Verlopen"
+    cancelled: "Geannuleerd"
+    blocked: "Geblokkeerd"
+  
+  validation:
+    form_title: "Overschrijvingsvalidatie"
+    submit_button: "Valideren"
+  
+  alerts:
+    code_expired: "De code \"%code%\" is verlopen."
+    transfer_confirmed: "De overschrijving is bevestigd."
+    transfer_completed: "De overschrijving werd succesvol uitgevoerd op %date%."
+    transfer_expired: "Deze overschrijving is verlopen en kan niet meer worden gevalideerd. U moet een nieuwe overschrijving maken."
+    transfer_cancelled: "Deze overschrijving is geannuleerd."
+    transfer_blocked: "Deze overschrijving werd geblokkeerd na onjuiste validatiepogingen. Neem contact op met de klantenservice om uw account te deblokkeren."

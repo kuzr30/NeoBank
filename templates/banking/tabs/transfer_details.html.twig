@@ -1,0 +1,317 @@
+<style>
+/* Styles spécifiques pour les détails de virement */
+.banking__transfer-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.banking__card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.banking__card-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.banking__card-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.banking__badge--large {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.banking__badge--pending {
+    background-color: #fbbf24;
+    color: #92400e;
+}
+
+.banking__badge--executing {
+    background-color: #60a5fa;
+    color: #1e40af;
+}
+
+.banking__badge--completed {
+    background-color: #34d399;
+    color: #065f46;
+}
+
+.banking__badge--expired {
+    background-color: #f87171;
+    color: #991b1b;
+}
+
+.banking__badge--cancelled {
+    background-color: #9ca3af;
+    color: #374151;
+}
+
+.banking__badge--blocked {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.banking__card-content {
+    padding: 1.5rem;
+}
+
+.banking__details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.banking__detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.banking__detail-item--full {
+    grid-column: 1 / -1;
+}
+
+.banking__detail-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.banking__detail-value {
+    font-size: 1rem;
+    color: #111827;
+    font-weight: 600;
+}
+
+.banking__amount {
+    font-size: 1.25rem;
+    color: #059669;
+    font-weight: 700;
+}
+
+.banking__validation-history {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.banking__codes-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.banking__code-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: #f9fafb;
+}
+
+.banking__code-item--validated {
+    border-color: #10b981;
+    background: #f0fdf4;
+}
+
+.banking__code-item--expired {
+    border-color: #ef4444;
+    background: #fef2f2;
+}
+
+.banking__code-status {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+}
+
+.banking__code-status--validated {
+    background-color: #10b981;
+}
+
+.banking__code-status--pending {
+    background-color: #fbbf24;
+}
+
+.banking__code-status--expired {
+    background-color: #ef4444;
+}
+
+.banking__quick-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.banking__status-message {
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.banking__status-message--success {
+    background-color: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.banking__action-danger {
+    background-color: #ef4444;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.banking__action-danger:hover {
+    background-color: #dc2626;
+    color: white;
+    text-decoration: none;
+}
+
+.banking__action-primary {
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.banking__action-primary:hover {
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+}
+</style>
+
+<!-- Détails du virement -->
+<section class="banking__content">
+    
+    <!-- Header -->
+    <div class="banking__operations-header">
+        <div class="banking__section-info">
+            <h2 class="banking__section-title">{{ tp('banking_transfer_details.header.title', [], 'banking_transfer_details') }}</h2>
+            <div class="banking__section-subtitle">{{ tp('banking_transfer_details.header.subtitle', [], 'banking_transfer_details') }}</div>
+        </div>
+        <div class="banking__section-actions">
+            <a href="{{ path('banking_transfers') }}" class="banking__action-secondary">
+                {{ ux_icon('heroicons:arrow-left', {'class': 'banking__action-icon'}) }}
+                {{ tp('banking_transfer_details.header.back_button', [], 'banking_transfer_details') }}
+            </a>
+        </div>
+    </div>
+
+    <!-- Informations principales -->
+    <div class="banking__transfer-card">
+        <div class="banking__card-header">
+            <h3 class="banking__card-title">
+                {{ ux_icon('heroicons:arrow-right-start-on-rectangle', {'class': 'banking__card-icon'}) }}
+                {{ tp('banking_transfer_details.transfer_card.title', [], 'banking_transfer_details') }}
+            </h3>
+            <span class="banking__badge banking__badge--{{ transfer.status }} banking__badge--large">
+                {% if transfer.status == 'pending' %}{{ tp('banking_transfer_details.status.pending', [], 'banking_transfer_details') }}
+                {% elseif transfer.status == 'executing' %}{{ tp('banking_transfer_details.status.executing', [], 'banking_transfer_details') }}
+                {% elseif transfer.status == 'completed' %}{{ tp('banking_transfer_details.status.completed', [], 'banking_transfer_details') }}
+                {% elseif transfer.status == 'expired' %}{{ tp('banking_transfer_details.status.expired', [], 'banking_transfer_details') }}
+                {% elseif transfer.status == 'cancelled' %}{{ tp('banking_transfer_details.status.cancelled', [], 'banking_transfer_details') }}
+                {% elseif transfer.status == 'blocked' %}{{ tp('banking_transfer_details.status.blocked', [], 'banking_transfer_details') }}
+                {% endif %}
+            </span>
+        </div>
+        
+        <div class="banking__card-content">
+            <div class="banking__details-grid">
+                <div class="banking__detail-item">
+                    <span class="banking__detail-label">{{ tp('banking_transfer_details.details.amount_label', [], 'banking_transfer_details') }}</span>
+                    <span class="banking__detail-value banking__amount">{{ transfer.amount|number_format(2, ',', ' ') }} €</span>
+                </div>
+                
+                <div class="banking__detail-item">
+                    <span class="banking__detail-label">{{ tp('banking_transfer_details.details.beneficiary_account_label', [], 'banking_transfer_details') }}</span>
+                    <span class="banking__detail-value">{{ transfer.destinationAccount.accountName }}</span>
+                </div>
+                
+                <div class="banking__detail-item">
+                    <span class="banking__detail-label">{{ tp('banking_transfer_details.details.beneficiary_iban_label', [], 'banking_transfer_details') }}</span>
+                    <span class="banking__detail-value banking__iban">{{ transfer.destinationAccount.iban }}</span>
+                </div>
+                
+                {% if transfer.description %}
+                <div class="banking__detail-item banking__detail-item--full">
+                    <span class="banking__detail-label">{{ tp('banking_transfer_details.details.description_label', [], 'banking_transfer_details') }}</span>
+                    <span class="banking__detail-value">{{ transfer.description }}</span>
+                </div>
+                {% endif %}
+                
+                <div class="banking__detail-item">
+                    <span class="banking__detail-label">{{ tp('banking_transfer_details.details.creation_date_label', [], 'banking_transfer_details') }}</span>
+                    <span class="banking__detail-value">{{ transfer.createdAt|date('d/m/Y à H:i') }}</span>
+                </div>
+                
+                {% if transfer.executedAt %}
+                <div class="banking__detail-item">
+                    <span class="banking__detail-label">{{ tp('banking_transfer_details.details.execution_date_label', [], 'banking_transfer_details') }}</span>
+                    <span class="banking__detail-value">{{ transfer.executedAt|date('d/m/Y à H:i') }}</span>
+                </div>
+                {% endif %}
+                
+                {% if transfer.transferAttempts|length > 0 %}
+                <div class="banking__detail-item">
+                    <span class="banking__detail-label">{{ tp('banking_transfer_details.details.ip_address_label', [], 'banking_transfer_details') }}</span>
+                    <span class="banking__detail-value">{{ transfer.transferAttempts|last.ipAddress ?? tp('banking_transfer_details.details.ip_not_available', [], 'banking_transfer_details') }}</span>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Codes de validation -->
+
+    <!-- Actions rapides -->
+    <div class="banking__quick-actions">
+        {% if transfer.status == 'pending' or transfer.status == 'executing' %}
+            {% set currentCode = transfer.currentCode %}
+            {% if currentCode and not currentCode.isValidated and not currentCode.isExpired %}
+                <a href="{{ path('banking_transfer_validate', {'id': transfer.id}) }}" class="banking__action-primary">
+                    {{ ux_icon('heroicons:key', {'class': 'banking__action-icon'}) }}
+                    {{ tp('banking_transfer_details.actions.continue_validation', [], 'banking_transfer_details') }}
+                </a>
+            {% endif %}
+        {% endif %}
+        
+        {% if transfer.status == 'completed' %}
+            <div class="banking__status-message banking__status-message--success">
+                {{ ux_icon('heroicons:check-circle', {'class': 'banking__status-icon'}) }}
+                <span>{{ tp('banking_transfer_details.actions.success_message', [], 'banking_transfer_details') }}</span>
+            </div>
+        {% endif %}
+    </div>
+
+</section>

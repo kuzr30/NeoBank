@@ -1,0 +1,91 @@
+banking_bank_account:
+  # Index page
+  index:
+    title: "Mis Cuentas/IBAN"
+    subtitle: "Gestión de sus datos de identidad bancaria"
+    
+    # Empty state
+    empty:
+      title: "Ninguna cuenta registrada"
+      text: "Añada sus cuentas para facilitar sus transferencias y recibir fondos más fácilmente."
+      add_first: "Añadir mi primera cuenta"
+    
+    # Card actions
+    actions:
+      view_details: "Ver los detalles"
+      edit: "Modificar"
+      delete: "Eliminar"
+      confirm_delete: "¿Está seguro de que desea eliminar esta cuenta?"
+    
+    # Card details
+    details:
+      added_on: "Añadido el"
+
+  # New RIB page
+  new:
+    title: "Añadir una nueva cuenta"
+    subtitle: "Registre sus coordenadas bancarias para facilitar sus transferencias y recibir fondos."
+    
+    # Form labels and placeholders
+    form:
+      account_name:
+        label: "Nombre de la cuenta"
+        placeholder: "Ej: Cuenta principal, Cuenta ahorro..."
+        help: "Dé un nombre descriptivo a esta cuenta para reconocerla fácilmente."
+      
+      bank_name:
+        label: "Nombre del banco"
+        placeholder: "Ej: BBVA, Santander..."
+      
+      iban:
+        label: "IBAN"
+        placeholder: "ES76 1234 5678 9012 3456 7890 123"
+        help: "Introduzca su IBAN europeo. Los espacios se eliminarán automáticamente."
+    
+    # Actions
+    actions:
+      cancel: "Cancelar"
+      save: "Guardar la cuenta"
+
+  # Show RIB page
+  show:
+    title: "Detalles de la cuenta"
+    back_to_list: "Volver a la lista"
+    
+    # Sections
+    sections:
+      account_info: "Información de la cuenta"
+      technical_info: "Información técnica"
+    
+    # Details
+    details:
+      account_title: "Título de la cuenta"
+      bank: "Banco"
+      iban: "IBAN"
+      country: "País"
+      added_date: "Fecha de añadido"
+      last_modified: "Última modificación"
+      copy: "Copiar"
+      copied: "¡Copiado!"
+      european: "Europeo"
+      delete_rib: "Eliminar esta cuenta"
+    
+    # Countries
+    countries:
+      FR: "Francia"
+      DE: "Alemania"
+      IT: "Italia"
+      ES: "España"
+      BE: "Bélgica"
+      NL: "Países Bajos"
+      AT: "Austria"
+      CH: "Suiza"
+      LU: "Luxemburgo"
+      PT: "Portugal"
+      IE: "Irlanda"
+      GB: "Reino Unido"
+
+  # Common elements
+  common:
+    page_title_new: "Añadir una cuenta"
+    confirm_delete: "¿Está seguro de que desea eliminar esta cuenta?"

@@ -1,0 +1,31 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_funds_disbursed.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+email_funds_disbursed:
+  title: "Funds disbursed"
+  content:
+    page_title: "Your funds are disbursed!"
+    greeting: "Hello <strong>%customerName%</strong>,"
+    disbursement_section:
+      title: "Disbursement confirmed"
+      message: "Excellent news! The funds from your credit <strong>%contractNumber%</strong> in the amount of <strong>%loanAmount% €</strong> have been disbursed and are now available in your account."
+    transaction_details:
+      title: "Transaction details"
+      contract: "Contract number"
+      amount: "Loan amount"
+      fees: "Fees deducted"
+      net_amount: "Net amount credited"
+    important_info:
+      title: "Important information"
+      message: "The funds are immediately available in your credit account. You can now make transfers from your client area."
+    repayment_info:
+      title: "Repayment reminder"
+      message: "Don't forget that your credit must be repaid according to the agreed schedule. Your first monthly payment will be debited next month. Check your client area for more details."
+    access_account: "Access my account"
+    thanks_message: "Congratulations and thank you for your trust!"
+    footer: "The %company_name% team<br><em>This is an automatic email, please do not reply.</em>"
+  logs:
+    success: "Fund disbursement email sent successfully to %email% for contract %contractNumber% (amount: %amount% €, locale: %locale%)"
+    error: "Error sending fund disbursement email for contract %contractNumber%: %error%"

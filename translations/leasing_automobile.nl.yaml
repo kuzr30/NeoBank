@@ -1,0 +1,106 @@
+leasing_automobile:
+  page:
+    title: "Autoleasing"
+    description: "Rijd in het voertuig van uw dromen met onze autoleasing. Huur met flexibele koopoptie."
+  
+  hero:
+    class: "credit-detail-hero--leasing"
+    taux: "2,9%"
+    montant: "80 000€"
+    duree: "5 jaar"
+    title: "Autoleasing"
+    subtitle: "Uw voertuig in huur met koopoptie"
+  
+  section_1:
+    title: "Wat is autoleasing?"
+    content:
+      paragraph_1: "Autoleasing, of Huur met Koopoptie (LOA), stelt u in staat te rijden in een nieuw voertuig door alleen de waardevermindering te betalen gedurende de contractperiode."
+      paragraph_2: "Bij het einde kunt u het voertuig kopen voor de restwaarde, het terugbrengen, of het vervangen door een nieuwer model."
+  
+  features:
+    title: "Leasingkenmerken"
+    montant:
+      value: "Tot 80 000€"
+      detail: "Alle types voertuigen"
+    duree:
+      value: "Van 2 tot 5 jaar"
+      detail: "Flexibel contract"
+    taux:
+      value: "Vanaf {rate}% JTKS*"
+      detail: "Voordelige financiering"
+    garantie:
+      value: "Voertuig als garantie"
+      detail: "Eigendom tot optieverwerving"
+  
+  section_3:
+    title: "Voordelen van autoleasing"
+    advantages:
+      vehicule_recent:
+        title: "Recent voertuig"
+        description: "Altijd onder fabrieksgarantie"
+      loyers_reduits:
+        title: "Lagere huurprijzen"
+        description: "Lager dan een klassieke autolening"
+      flexibilite:
+        title: "Flexibiliteit"
+        description: "3 opties aan het einde van het contract"
+      entretien:
+        title: "Onderhoud inbegrepen"
+        description: "Onderhoudscontract mogelijk"
+      deductibilite:
+        title: "Aftrekbaarheid"
+        description: "Fiscale voordelen voor professionals"
+  
+  section_4:
+    title: "Contractvoorwaarden"
+    contrat:
+      title: "Contractvoorwaarden"
+      items:
+        vehicule: "Nieuw of recent voertuig (minder dan 2 jaar)"
+        kilometrage: "Vooraf bepaalde jaarkilometers"
+        entretien: "Onderhoud bij erkende dealer"
+        assurance: "All-risk verzekering verplicht"
+    locataire:
+      title: "Huurder voorwaarden"
+      items:
+        permis: "Geldig rijbewijs"
+        revenus: "Bewezen stabiele inkomsten"
+        interdiction: "Geen bankverbod"
+        domicile: "Woonplaats in Frankrijk"
+  
+  section_5:
+    title: "Benodigde documenten"
+    personnels:
+      title: "Persoonlijke documenten"
+      items:
+        permis: "Rijbewijs"
+        identite: "Identiteitspapier"
+        domicile: "Woonplaatsbewijs"
+        rib: "Bankrekeningnummer"
+    financiers:
+      title: "Financiële bewijsstukken"
+      items:
+        salaires: "3 laatste loonstroken"
+        impots: "Belastingaanslag"
+        comptes: "Rekeninguittreksels"
+        contrat: "Arbeidscontract"
+    vehicule:
+      title: "Voertuig"
+      items:
+        commande: "Bestelbon van de dealer"
+        fiche: "Technische fiche van het voertuig"
+        devis_assurance: "All-risk verzekeringofferte"
+        certificat: "Conformiteitscertificaat"
+  
+  legal:
+    details:
+      title: "Belangrijke juridische informatie"
+      taeg: "<strong>*JTKS :</strong> Representatief voorbeeld: voor een voertuig van €25.000 in leasing over 48 maanden tegen een JTKS van 2,9%, 48 huurbetalingen van €315 + koopoptie van €10.000, totale kosten bij aankoop: €25.120."
+      kilometrage: "<strong>Kilometerstand :</strong> Naleving van contractuele kilometrage, boetes bij overschrijding."
+      etat: "<strong>Staat van het voertuig :</strong> Terugbrengen in goede staat, behalve normale slijtage."
+      assurance: "<strong>Verzekering :</strong> All-risk verplicht met diefstal en brand."
+      resiliation: "<strong>Beëindiging :</strong> Vervroegd mogelijk onder voorwaarden, boetes van toepassing."
+  
+  cta:
+    title: "Rijd in uw ideale voertuig"
+    subtitle: "Ontdek de voordelen van autoleasing"

@@ -1,0 +1,21 @@
+email_contract_validated:
+  title: "Contract gevalideerd"
+  content:
+    page_title: "Uw contract is gevalideerd!"
+    greeting: "Hallo <strong>%customerName%</strong>,"
+    validation_section:
+      title: "Validatie bevestigd"
+      message: "Uitstekend nieuws! Uw kredietcontract <strong>%contractNumber%</strong> is gevalideerd door ons team."
+    contract_details:
+      title: "Contractdetails"
+      number: "Contractnummer"
+      amount: "Leningbedrag"
+    next_steps:
+      title: "Volgende stappen"
+      message: "Uw dossier wordt nu afgerond. Onze teams bereiden de vrijgave van fondsen voor. U ontvangt een melding zodra de fondsen beschikbaar zijn op uw rekening."
+    access_account: "Toegang tot mijn account"
+    thanks_message: "Bedankt voor uw vertrouwen!"
+    footer: "Het %company_name% team<br><em>Dit is een automatische e-mail, gelieve niet te antwoorden.</em>"
+  logs:
+    success: "Contract validatie email succesvol verzonden naar %email% voor contract %contractNumber% (locale: %locale%)"
+    error: "Fout bij het verzenden van contract validatie email voor contract %contractNumber%: %error%"

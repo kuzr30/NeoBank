@@ -1,0 +1,152 @@
+banking_credit_transfer:
+  # Header section
+  header:
+    title: "Interne overschrijving"
+    subtitle: "Transfer tussen uw rekeningen"
+    last_update: "Laatste update"
+
+  # Transfer sections
+  sections:
+    from: "Van"
+    to: "Naar"
+    amount: "Bedrag"
+
+  # Account types
+  accounts:
+    credit_account: "Krediet rekening"
+    main_account: "Hoofdrekening"
+    current_account: "Uw lopende rekening"
+    destination: "Bestemming"
+
+  # Form elements
+  form:
+    amount_placeholder: "0,00"
+    amount_currency: "€"
+    amount_help: "Maximaal beschikbaar: %amount% €"
+    amount_help_available: "Maximaal beschikbaar"
+    amount_required: "Het bedrag is verplicht"
+    amount_invalid: "Ongeldig bedrag"
+    hidden_sub_account: "Sub-rekening ID"
+    hidden_token: "CSRF token"
+
+  # Actions
+  actions:
+    cancel: "Annuleren"
+    continue: "Doorgaan"
+    initiate_transfer: "Transfer starten"
+    confirm_transfer: "Transfer bevestigen"
+
+  # Confirmation page
+  confirmation:
+    title: "Bevestiging van transfer"
+    verification_required: "Verificatie vereist"
+    transfer_summary: "Transfer overzicht"
+    amount_label: "Bedrag"
+    verification_code_title: "Verificatiecode"
+    verification_info: "Een verificatiecode is naar uw e-mailadres verzonden."
+    code_placeholder: "000000"
+
+  # Status messages
+  messages:
+    success: "Transfer succesvol gestart"
+    error: "Fout bij transfer"
+    insufficient_funds: "Onvoldoende saldo"
+    
+  # Meta tags
+  meta:
+    title: "Overschrijving vanaf krediet - %company_name%"
+    description: "Voer overschrijvingen uit vanaf uw kredietlijnen met %company_name%"
+
+  # Navigation
+  nav:
+    dashboard: "Dashboard"
+    credit_transfer: "Krediet overschrijving"
+    credit_transfer_form: "Overschrijvingsformulier"
+    back: "Terug"
+
+  # Page headers
+  page:
+    title: "Overschrijving vanaf krediet"
+    subtitle: "Stuur geld vanaf uw kredietlijn"
+    form_title: "Nieuwe overschrijving vanaf krediet"
+    confirmation_title: "Bevestiging overschrijving"
+    
+  # Form fields
+  form_fields:
+    credit_account: "Bron kredietrekening"
+    destination_account: "Bestemmingsrekening"
+    amount: "Te sturen bedrag"
+    amount_placeholder: "0,00"
+    description: "Reden van overschrijving"
+    description_placeholder: "Optionele beschrijving..."
+    available_credit: "Beschikbaar krediet"
+    transfer_fees: "Overschrijvingskosten"
+    
+  # Credit info
+  credit:
+    available_limit: "Beschikbare limiet"
+    used_limit: "Gebruikt krediet"
+    interest_rate: "Rente percentage"
+    minimum_payment: "Minimum maandelijkse betaling"
+    next_payment_date: "Volgende betaling"
+    
+  # Transfer process
+  process:
+    step1: "Bedrag selectie"
+    step2: "Verificatie"
+    step3: "Bevestiging"
+    
+  # Verification
+  verification:
+    title: "Beveiligingsverificatie"
+    code_sent: "Een verificatiecode is verzonden naar uw e-mailadres"
+    enter_code: "Voer de verificatiecode in"
+    code_placeholder: "000000"
+    resend_code: "Code opnieuw verzenden"
+    code_expires: "De code vervalt over"
+    
+  # Confirmation details
+  confirmation_details:
+    transfer_details: "Overschrijvingsdetails"
+    source_account: "Bronrekening"
+    destination_account: "Bestemmingsrekening"
+    amount: "Bedrag"
+    fees: "Kosten"
+    total_debit: "Totaal afgeschreven"
+    
+  # Form Actions
+  form_actions:
+    initiate_transfer: "Overschrijving starten"
+    confirm_transfer: "Overschrijving bevestigen"
+    cancel: "Annuleren"
+    back: "Terug"
+    verify_code: "Code verifiëren"
+    
+  # Validation
+  validation:
+    amount_required: "Bedrag is verplicht"
+    amount_invalid: "Ongeldig bedrag"
+    amount_exceeds_limit: "Bedrag overschrijdt beschikbare limiet"
+    amount_minimum: "Minimum bedrag is €10"
+    code_required: "Verificatiecode is verplicht"
+    code_invalid: "Ongeldige verificatiecode"
+    code_expired: "Verificatiecode verlopen"
+    
+  # Status Messages
+  status_messages:
+    no_credit_accounts: "Geen kredietrekeningen beschikbaar"
+    transfer_initiated: "Overschrijving succesvol gestart"
+    code_sent_success: "Verificatiecode verzonden"
+    transfer_confirmed: "Overschrijving succesvol bevestigd"
+    transfer_failed: "Overschrijving mislukt"
+    insufficient_credit: "Onvoldoende krediet"
+    account_blocked: "Rekening geblokkeerd"
+    access_denied: "Toegang geweigerd tot deze kredietrekening"
+    
+  # Currency
+  currency: "€"
+  
+  # Time
+  time:
+    minutes: "minuten"
+    seconds: "seconden"

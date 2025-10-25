@@ -1,0 +1,33 @@
+banking_credit_application_amortization:
+  header:
+    title: "Tableau d'amortissement"
+    reference: "Demande n° %reference%"
+  
+  navigation:
+    back_to_credits: "Retour aux crédits"
+  
+  loan_info:
+    initial_amount: "Montant initial"
+    interest_rate: "Taux d'intérêt"
+    duration: "Durée"
+    monthly_payment: "Mensualité"
+    months: "mois"
+    years: "années"
+  
+  summary:
+    remaining_capital: "Capital restant"
+    remaining_payments: "Échéances restantes"
+  
+  table:
+    title: "Échéancier détaillé"
+    payment_number: "Échéance"
+    date: "Date"
+    monthly_payment: "Mensualité"
+    principal: "Capital"
+    interest: "Intérêts"
+    remaining_balance: "Capital restant"
+    total: "Total"
+  
+  actions:
+    print: "Imprimer"
+    export_pdf: "Exporter PDF"

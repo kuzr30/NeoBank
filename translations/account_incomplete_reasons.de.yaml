@@ -1,0 +1,18 @@
+# Gründe für unvollständiges Konto
+account_incomplete_reason:
+  missing_personal_info: "Fehlende persönliche Informationen"
+  missing_personal_info_description: "Vorname, Nachname oder Geburtsdatum"
+  missing_address: "Fehlende Adresse"
+  missing_address_description: "Vollständige Adresse erforderlich"
+  missing_phone: "Fehlende Telefonnummer"
+  missing_phone_description: "Gültige Telefonnummer erforderlich"
+  missing_id_document: "Fehlendes Ausweisdokument"
+  missing_id_document_description: "Personalausweis oder Reisepass"
+  missing_proof_of_address: "Fehlender Wohnsitznachweis"
+  missing_proof_of_address_description: "Rechnung oder Kontoauszug jünger als 3 Monate"
+  incomplete_profile: "Unvollständiges Profil"
+  incomplete_profile_description: "Mehrere Informationen fehlen"
+  missing_employment_info: "Fehlende Beschäftigungsinformationen"
+  missing_employment_info_description: "Beruf und Beschäftigungsstatus"
+  missing_tax_info: "Fehlende Steuerinformationen"
+  missing_tax_info_description: "Steuernummer und Land des steuerlichen Wohnsitzes"

@@ -1,0 +1,15 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: account_creation_service.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+account_creation_service:
+  log_messages:
+    creation_started: "Started automatic account creation after KYC validation"
+    user_has_account: "User already has a current account"
+    iban_generated: "IBAN generated according to country"
+    account_created: "Account created successfully"
+    notification_error: "Error sending notification email, but account created"
+    creation_failed: "Error during automatic account creation"
+    account_number_generated: "Account number generated automatically"
+    balance_initialized: "Initial balance set to zero"

@@ -1,0 +1,40 @@
+email_credit_approved:
+  title: "Kredietaanvraag goedgekeurd"
+  content:
+    page_title: "Gefeliciteerd {customerName}!"
+    intro: "We hebben het genoegen u uitstekend nieuws mee te delen!"
+    credit_approved:
+      title: "Uw krediet is goedgekeurd"
+      amount_label: "Goedgekeurd bedrag"
+      financing_note: "Financiering toegekend door onze experts"
+    contract_info:
+      title: "Contractinformatie"
+      contract_number: "Contractnummer"
+      status_label: "Status"
+      status_value: "Goedgekeurd - Wachtend op handtekening"
+      rate_label: "Rentepercentage"
+      duration_label: "Looptijd"
+      monthly_payment_label: "Maandelijkse betaling"
+    next_steps:
+      title: "Volgende stappen"
+      step_1:
+        title: "1. Contract ondertekening"
+        description: "U ontvangt binnenkort het elektronisch te ondertekenen contract"
+      step_2:
+        title: "2. Administratieve validatie"
+        description: "Ons team zal de finale verificaties uitvoeren"
+      step_3:
+        title: "3. Fondsenstorting"
+        description: "Zodra het contract is gevalideerd, worden de fondsen op uw rekening gestort"
+    personalized_support:
+      title: "Gepersonaliseerde begeleiding"
+      description: "Een gedetailleerd contract met alle voorwaarden van uw krediet wordt u binnenkort toegestuurd. Bij vragen staat ons gespecialiseerde team tot uw beschikking voor begeleiding."
+    thanks_message: "We danken u voor uw vertrouwen en zijn blij te kunnen bijdragen aan de realisatie van uw project."
+    footer: "%company_name% - Kredietafdeling<br>Melding van kredietaanvraag goedkeuring"
+  
+  # Log berichten voor de MessageHandler
+  logs:
+    sending: "Verzenden van krediet goedgekeurd notificatie"
+    success: "Krediet goedgekeurd notificatie succesvol verzonden"
+    error: "Fout bij het verzenden van krediet goedgekeurd notificatie"
+    send_failed: "Verzenden van krediet goedgekeurd notificatie mislukt"

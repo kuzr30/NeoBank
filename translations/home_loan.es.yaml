@@ -1,0 +1,106 @@
+home_loan:
+  page:
+    title: "Préstamo Acceso"
+    description: "Conviértase en propietario con nuestro préstamo acceso. Financie su residencia principal en las mejores condiciones."
+  
+  hero:
+    class: "credit-detail-hero--home-loan"
+    taux: "3,5%"
+    montant: "400 000€"
+    duree: "25 años"
+    title: "Préstamo Acceso"
+    subtitle: "Conviértase en propietario de su residencia principal"
+  
+  section_1:
+    title: "¿Qué es un préstamo acceso?"
+    content:
+      paragraph_1: "El préstamo acceso le permite convertirse en propietario de su residencia principal. Financia la adquisición de una vivienda nueva o antigua, con o sin obras de renovación."
+      paragraph_2: "Crédito inmobiliario a largo plazo con condiciones ventajosas, se acompaña de garantías sólidas y puede completarse con préstamos subvencionados según su situación."
+  
+  features:
+    title: "Características del préstamo"
+    montant:
+      value: "Hasta 400 000€"
+      detail: "Según el valor del bien"
+    duree:
+      value: "Hasta 25 años"
+      detail: "Reembolso a largo plazo"
+    taux:
+      value: "A partir del {rate}% TAE*"
+      detail: "Tipo fijo ventajoso"
+    garantie:
+      value: "Hipoteca"
+      detail: "Sobre el bien financiado"
+  
+  section_3:
+    title: "Ventajas del préstamo acceso"
+    advantages:
+      taux_fixe:
+        title: "Tipo fijo"
+        description: "Seguridad con un tipo invariable durante toda la duración"
+      duree_longue:
+        title: "Duración larga"
+        description: "Mensualidades reducidas con un escalonamiento hasta 25 años"
+      prets_aides:
+        title: "Préstamos subvencionados"
+        description: "Acumulación posible con PTZ, préstamo Acción Vivienda..."
+      modulation:
+        title: "Modulación"
+        description: "Adaptación de los vencimientos según la evolución de sus ingresos"
+      transfert:
+        title: "Transferencia posible"
+        description: "En caso de reventa y recompra en los 2 años"
+  
+  section_4:
+    title: "Condiciones de elegibilidad"
+    emprunteur:
+      title: "Condiciones prestatario"
+      items:
+        premiere_acquisition: "Primera adquisición o no propietario desde hace 2 años"
+        revenus: "Ingresos estables y suficientes"
+        apport: "Aporte personal mínimo 10%"
+        endettement: "Tasa de endeudamiento inferior al 35%"
+    bien:
+      title: "Condiciones del bien"
+      items:
+        residence_principale: "Residencia principal obligatoria"
+        normes: "Respeto de las normas de construcción"
+        diagnostic: "Diagnóstico energético favorable"
+        assurance_habitation: "Seguro de hogar suscrito"
+  
+  section_5:
+    title: "Documentos necesarios"
+    dossier_personnel:
+      title: "Expediente personal"
+      items:
+        identite: "Documentos de identidad"
+        revenus: "Justificantes de ingresos (3 meses)"
+        impots: "Declaración de impuestos"
+        comptes: "Extractos de cuentas"
+    projet_immobilier:
+      title: "Proyecto inmobiliario"
+      items:
+        compromis: "Compromiso de venta firmado"
+        financement: "Plan de financiación"
+        diagnostics: "Diagnósticos inmobiliarios"
+        assurance_emprunteur: "Seguro de prestatario"
+    apport_garanties:
+      title: "Aporte y garantías"
+      items:
+        justificatifs_apport: "Justificantes de aporte personal"
+        evaluation: "Evaluación del bien"
+        acte_notarie: "Escritura notarial preliminar"
+        conditions_suspensives: "Condiciones suspensivas"
+  
+  legal:
+    details:
+      title: "Informaciones legales importantes"
+      taeg: "<strong>*TAE:</strong> Ejemplo representativo: para un préstamo acceso de 250 000€ a 20 años al TAE del 3,5%, usted reembolsa 240 mensualidades de 1 448€, es decir un importe total de 347 520€ (coste del crédito: 97 520€)."
+      garantie: "<strong>Garantía:</strong> Hipoteca de 1er rango sobre el bien financiado, inscripción en las hipotecas."
+      assurance: "<strong>Seguro:</strong> Seguro fallecimiento-invalidez obligatorio, desempleo opcional."
+      condition_suspensive: "<strong>Condición suspensiva:</strong> Cláusula de obtención del préstamo en el compromiso de venta obligatorio."
+      delai_reflexion: "<strong>Plazo de reflexión:</strong> 10 días mínimo antes de la aceptación definitiva de la oferta de préstamo."
+  
+  cta:
+    title: "Concrete su proyecto inmobiliario"
+    subtitle: "Conviértase en propietario con nuestro préstamo acceso ventajoso"

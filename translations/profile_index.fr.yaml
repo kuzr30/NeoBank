@@ -1,0 +1,91 @@
+profile_index:
+  page:
+    title: "Mon Profil - %company_name%"
+  
+  header:
+    default_user: "Utilisateur"
+    default_surname: "Inconnu" 
+    default_first_letter: "U"
+    default_surname_letter: "S"
+    account_verified: "Compte vérifié"
+    edit_profile: "Modifier le profil"
+    security: "Sécurité"
+    alt_profile_picture: "Photo de profil"
+  
+  kyc:
+    alerts:
+      not_submitted:
+        title: "Vérification d'identité requise"
+        text: "Pour accéder à tous nos services bancaires, vous devez compléter votre vérification d'identité (KYC)."
+        action: "Commencer la vérification"
+      pending:
+        title: "Vérification en cours"
+        text: "Votre demande de vérification d'identité est en cours d'examen. Vous serez notifié par email dès qu'elle sera traitée."
+        action: "Voir le statut"
+      rejected:
+        title: "Vérification rejetée"
+        text: "Votre demande de vérification d'identité a été rejetée. Veuillez consulter les remarques et soumettre de nouveaux documents."
+        action: "Commencer la vérification"
+  
+  sections:
+    personal_info:
+      title: Informations personnelles
+      edit: Modifier
+      fields:
+        first_name: Prénom
+        last_name: Nom
+        email: Email
+        phone: Téléphone
+        birth_date: Date de naissance
+        not_provided: Non renseigné
+        not_provided_feminine: Non renseignée
+    
+    security:
+      title: Sécurité
+      manage: Gérer
+      fields:
+        password: Mot de passe
+        configured: Configuré
+        two_factor: Authentification à 2 facteurs
+        disabled: Désactivée
+        last_password_change: Dernière modification du mot de passe
+        not_provided: Non renseigné
+    
+    preferences:
+      title: Préférences
+      edit: Modifier
+      fields:
+        language: Langue
+        currency: Devise
+        timezone: Fuseau horaire
+        timezone_default: Europe/Paris (CET)
+        notifications: Notifications
+        notifications_default: Email + SMS
+      languages:
+        french: Français
+        english: English
+        german: Deutsch
+        spanish: Español
+        dutch: Nederlands
+      currencies:
+        eur: Euro (EUR)
+        usd: Dollar américain (USD)
+        gbp: Livre sterling (GBP)
+        chf: Franc suisse (CHF)
+        cad: Dollar canadien (CAD)
+      
+      values:
+        languages:
+          fr: "Français"
+          en: "English"
+          de: "Deutsch"
+          es: "Español"
+          nl: "Nederlands"
+        currencies:
+          EUR: "Euro (EUR)"
+          USD: "Dollar américain (USD)"
+          GBP: "Livre sterling (GBP)"
+          CHF: "Franc suisse (CHF)"
+          CAD: "Dollar canadien (CAD)"
+        default_timezone: "Europe/Paris (CET)"
+        notifications_value: "Email + SMS"

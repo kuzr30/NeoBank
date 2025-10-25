@@ -1,0 +1,31 @@
+email_kyc_approved:
+  title: "Identitätsprüfung genehmigt - %company_name%"
+  
+  content:
+    page_title: "Herzlichen Glückwunsch %firstName%!"
+    
+    success:
+      title: "Identitätsprüfung genehmigt"
+      message: "Ihre Identitätsprüfung (KYC) wurde <strong>erfolgreich genehmigt</strong>."
+    
+    services_intro: "Sie haben jetzt Zugang zu all unseren Bankdienstleistungen:"
+    
+    services_list:
+      - "Verwaltung Ihrer Konten"
+      - "Bestellung von Bankkarten"
+      - "Überweisungen und Transfers"
+      - "Sparprodukte"
+      - "🏠 Kreditanträge"
+      - "Versicherungen"
+    
+    dashboard_button: "Zugang zu meinen Bankdienstleistungen"
+    
+    admin_note:
+      title: "💬 Notiz des Teams"
+    
+    closing: "Vielen Dank für Ihr Vertrauen und willkommen bei %company_name%!<br><strong>Das %company_name%-Team</strong>"
+
+  logs:
+    kyc_approved_sent: "KYC-Genehmigungs-E-Mail erfolgreich an %email% gesendet"
+    kyc_approved_failed: "Fehler beim Senden der KYC-Genehmigung an %email%"
+    kyc_status_updated: "KYC-Status aktualisiert für %firstName% %lastName% - Genehmigt"

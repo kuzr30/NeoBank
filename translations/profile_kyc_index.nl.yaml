@@ -1,0 +1,70 @@
+profile_kyc_index:
+  page:
+    title: "Identiteitsverificatie (KYC) - %company_name%"
+  
+  header:
+    title: "Identiteitsverificatie (KYC)"
+    subtitle: "Bevestig uw identiteit om toegang te krijgen tot al onze diensten"
+  
+  alerts:
+    rejected:
+      title: "Identiteitsverificatie geweigerd"
+      text: "Uw identiteitsverificatieverzoek is geweigerd."
+      reason: "Reden:"
+      action_text: "U kunt nieuwe documenten indienen door op de onderstaande knop te klikken."
+      common_reasons:
+        documents_non_conformes: "Documenten niet conform"
+        documents_illegibles: "Documenten onleesbaar"
+        documents_expires: "Documenten verlopen"
+        quality_insufficient: "Onvoldoende kwaliteit"
+        missing_information: "Ontbrekende informatie"
+    pending:
+      title: "Verificatie in behandeling"
+      text: "Uw identiteitsverificatieverzoek wordt momenteel beoordeeld. U wordt per e-mail op de hoogte gesteld zodra de verwerking is voltooid."
+    approved:
+      title: "Identiteitsverificatie goedgekeurd"
+      text: "Gefeliciteerd! Uw identiteit is succesvol geverifieerd. U hebt nu toegang tot al onze bankdiensten."
+    required:
+      title: "Identiteitsverificatie vereist"
+      text: "Om toegang te krijgen tot onze bankdiensten, moet u eerst uw identiteit verifiëren. Deze stap is verplicht vanwege KYC-regelgeving."
+  
+  documents:
+    title: "Vereiste documenten"
+    subtitle: "Beveilig uw account door uw identiteit te verifiëren. Deze stap is verplicht vanwege KYC-regelgeving."
+    
+    identity_document:
+      title: "Identiteitsbewijs"
+      description: "Geldig officieel document"
+      items:
+        - "Nationale Identiteitskaart"
+        - "Paspoort"
+        - "Rijbewijs"
+    
+    income_document:
+      title: "Inkomensbewijs"
+      description: "Document van minder dan 3 maanden oud"
+      items:
+        - "Loonstrook"
+        - "Belastingaangifte"
+    
+    address_document:
+      title: "Adresbewijs"
+      description: "Document van minder dan 3 maanden oud"
+      items:
+        - "Rekening (elektriciteit, gas, internet)"
+        - "Huurkwitantie"
+    
+    selfie:
+      title: "Selfie"
+      badge: "Optioneel"
+      description: "Foto met uw identiteitsbewijs"
+      items:
+        - "Gezicht goed zichtbaar"
+        - "Identiteitsbewijs leesbaar"
+  
+  actions:
+    access_banking: "Toegang tot mijn bankdiensten"
+    view_status: "Status van mijn aanvraag bekijken"
+    submit_documents: "Mijn documenten indienen"
+    submit_new_documents: "Nieuwe documenten indienen"
+    submission_guide: "Indiengids"

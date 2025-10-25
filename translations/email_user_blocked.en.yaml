@@ -1,0 +1,38 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_user_blocked.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+email_user_blocked:
+  title: "Account temporarily blocked"
+  
+  content:
+    page_title: "Account temporarily blocked"
+    greeting: "Hello {firstName},"
+    
+    account_blocked:
+      title: "Your account has been temporarily blocked"
+      description: "For security reasons, your account has been temporarily blocked following several incorrect validation attempts."
+    
+    transfer_details:
+      title: "Transfer details concerned"
+      reference: "Transfer reference"
+      amount: "Amount"
+      amount_value: "{amount} €"
+      blocked_at: "Blocked on"
+    
+    reason:
+      title: "Reason for blocking"
+      description: "This blocking follows 3 consecutive attempts to enter an incorrect validation code. This security measure protects your account against unauthorized access."
+    
+    next_steps:
+      title: "What to do now?"
+      step1: "1. Contact our customer service to unblock your account"
+      step2: "2. Verify that you have the correct validation code"
+      step3: "3. Once unblocked, you can resume validation of your transfer"
+    
+    security_notice:
+      title: "Security of your account"
+      description: "If you are not the originator of these validation attempts, contact our security service immediately. Your account will remain blocked until intervention by our team."
+    
+    footer: "%company_name% - Security Service<br>This notification was generated automatically following the blocking of your account."

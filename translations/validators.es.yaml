@@ -1,0 +1,88 @@
+register:
+  errors:
+    first_name_required: "El nombre es obligatorio"
+    first_name_min: "El nombre debe tener al menos {{ limit }} caracteres"
+    first_name_max: "El nombre no puede exceder {{ limit }} caracteres"
+    last_name_required: "El apellido es obligatorio"
+    last_name_min: "El apellido debe tener al menos {{ limit }} caracteres"
+    last_name_max: "El apellido no puede exceder {{ limit }} caracteres"
+    email_required: "El email es obligatorio"
+    email_invalid: "El email no es válido"
+    email_exists: "Ya existe una cuenta con este email"
+    password_required: "La contraseña es obligatoria"
+    password_min: "Su contraseña debe contener al menos {{ limit }} caracteres"
+    password_mismatch: "Las contraseñas no coinciden"
+    terms_required: "Debe aceptar nuestras condiciones"
+
+validators:
+  european_iban:
+    message: "El IBAN \"{{ value }}\" no es válido."
+    invalid_format: "El IBAN debe respetar el formato europeo."
+  sufficient_balance:
+    message: "El monto no puede exceder su saldo disponible de {{ balance }} €"
+  devis_form:
+    lastname_required: "El apellido es obligatorio"
+    lastname_max: "El apellido no puede exceder {{ limit }} caracteres"
+    firstname_required: "El nombre es obligatorio"
+    firstname_max: "El nombre no puede exceder {{ limit }} caracteres"
+    email_required: "El email es obligatorio"
+    email_invalid: "Por favor ingrese un email válido"
+    phone_required: "El teléfono es obligatorio"
+    phone_invalid: "Por favor ingrese un número de teléfono válido"
+    insurance_type_required: "Por favor seleccione un tipo de seguro"
+    contact_preference_invalid: "Por favor elija una preferencia de contacto válida"
+    comments_max: "Los comentarios no pueden exceder {{ limit }} caracteres"
+
+# Mensajes de validación para el dominio credit_step_forms
+# Paso 1 - Campos personales
+step1.fields.firstname.errors.required: "El nombre es obligatorio"
+step1.fields.lastname.errors.required: "El apellido es obligatorio"
+step1.fields.email.errors.required: "La dirección de email es obligatoria"
+step1.fields.email.errors.invalid: "Por favor ingrese una dirección de email válida"
+step1.fields.phone.errors.required: "El número de teléfono es obligatorio"
+step1.fields.phone.errors.invalid: "Por favor ingrese un número de teléfono válido"
+step1.fields.birth_date.errors.required: "La fecha de nacimiento es obligatoria"
+step1.fields.birth_date.errors.age_restriction: "Debe ser mayor de edad para hacer una solicitud de crédito"
+step1.fields.nationality.errors.required: "La nacionalidad es obligatoria"
+step1.fields.marital_status.errors.required: "El estado civil es obligatorio"
+step1.fields.marital_status.errors.invalid: "Estado civil inválido"
+step1.fields.dependents.errors.required: "El número de personas a cargo es obligatorio"
+step1.fields.dependents.errors.invalid_range: "El número de personas a cargo debe estar entre 0 y 20"
+
+# Paso 1 - Sección dirección
+step1.address_section.address.errors.required: "La dirección es obligatoria"
+step1.address_section.city.errors.required: "La ciudad es obligatoria"
+step1.address_section.postal_code.errors.required: "El código postal es obligatorio"
+step1.address_section.postal_code.errors.invalid: "El código postal debe contener 5 dígitos"
+step1.address_section.country.errors.required: "El país es obligatorio"
+step1.address_section.housing_type.errors.required: "El tipo de vivienda es obligatorio"
+step1.address_section.housing_type.errors.invalid: "Tipo de vivienda inválido"
+
+# Paso 2 - Situación financiera
+step2.fields.monthly_income.errors.required: "Los ingresos mensuales son obligatorios"
+step2.fields.monthly_income.errors.min_value: "El ingreso mensual mínimo requerido es de 1000€"
+step2.fields.employment_type.errors.required: "El tipo de empleo es obligatorio"
+step2.fields.employment_type.errors.invalid: "Tipo de empleo inválido"
+step2.fields.monthly_expenses.errors.required: "Los gastos mensuales son obligatorios"
+step2.fields.monthly_expenses.errors.min_value: "Los gastos no pueden ser negativos"
+step2.fields.existing_loans.errors.min_value: "El monto no puede ser negativo"
+
+# Paso 3 - Configuración del crédito
+step3.credit_configuration.loan_amount.errors.required: "El monto del crédito es obligatorio"
+step3.credit_configuration.loan_amount.errors.invalid_range: "El monto del crédito debe estar entre 3000€ y 30 000 000€"
+step3.credit_configuration.duration.errors.required: "La duración del crédito es obligatoria"
+step3.credit_configuration.duration.errors.min_value: "La duración debe ser de mínimo 2 meses"
+
+# Paso 3 - Consentimientos
+step3.consent.terms_accepted.errors.required: "Debe aceptar los términos generales"
+step3.consent.data_processing_accepted.errors.required: "Debe aceptar el tratamiento de sus datos personales"
+
+# Validadores IBAN adicionales
+european_iban:
+  invalid_checksum: "El IBAN \"{{ value }}\" tiene una suma de control inválida."
+  non_european: "El IBAN \"{{ value }}\" no pertenece a un país europeo aceptado."
+  
+iban_validator:
+  message: "El IBAN \"{{ value }}\" no es válido."
+  invalid_format: "El IBAN debe estar en formato francés (FR seguido de 25 caracteres)."
+  invalid_checksum: "El IBAN \"{{ value }}\" tiene una suma de control inválida."

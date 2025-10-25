@@ -1,0 +1,93 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block content %}
+    <div style="background-color: #ffffff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 10px 0;">
+        
+        {# Header with amount #}
+        <div style="text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #2c3e50;">
+            <h2 style="color: #2c3e50; margin: 0 0 10px 0; font-size: 24px;">
+                {{ tp('payment_details.title', {}, 'email_templates') }}
+            </h2>
+            <div style="font-size: 32px; font-weight: bold; color: #2c3e50; margin-top: 15px;">
+                {{ amount }} €
+            </div>
+        </div>
+
+        {# Greeting #}
+        <p style="color: #2c3e50; font-size: 16px; margin-bottom: 20px;">
+            {{ tp('payment_details.greeting', {'name': name}, 'email_templates') }}
+        </p>
+
+        {# Intro message #}
+        <p style="color: #2c3e50; line-height: 1.6; margin-bottom: 25px;">
+            {{ tp('payment_details.intro', {}, 'email_templates') }}
+        </p>
+
+        {# Bank details section #}
+        <div style="background-color: #f8f9fa; border: 2px solid #2c3e50; border-radius: 6px; padding: 25px; margin-bottom: 25px;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <td style="padding: 12px 0; border-bottom: 1px solid #d0d0d0; color: #2c3e50; font-weight: 600; width: 35%;">
+                        {{ tp('payment_details.account_holder', {}, 'email_templates') }} :
+                    </td>
+                    <td style="padding: 12px 0; border-bottom: 1px solid #d0d0d0; color: #2c3e50; font-weight: bold;">
+                        {{ paymentAccount.accountName }}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px 0; border-bottom: 1px solid #d0d0d0; color: #2c3e50; font-weight: 600;">
+                        {{ tp('payment_details.iban', {}, 'email_templates') }} :
+                    </td>
+                    <td style="padding: 12px 0; border-bottom: 1px solid #d0d0d0; color: #2c3e50; font-family: monospace; font-size: 15px; font-weight: bold; white-space: nowrap;">
+                        {{ paymentAccount.iban }}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px 0; color: #2c3e50; font-weight: 600;">
+                        {{ tp('payment_details.bic', {}, 'email_templates') }} :
+                    </td>
+                    <td style="padding: 12px 0; color: #2c3e50; font-family: monospace; font-size: 15px; font-weight: bold;">
+                        {{ paymentAccount.bic }}
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        {# Instant transfer requirement #}
+        <div style="background-color: #fff3cd; border-left: 4px solid #ff9800; padding: 20px; margin-bottom: 25px;">
+            <p style="margin: 0 0 10px 0; color: #2c3e50; font-weight: bold; font-size: 15px;">
+                ⚡ {{ tp('payment_details.instant_transfer_title', {}, 'email_templates') }}
+            </p>
+            <p style="margin: 0; color: #2c3e50; line-height: 1.6;">
+                {{ tp('payment_details.instant_transfer_message', {}, 'email_templates') }}
+            </p>
+        </div>
+
+        {# Proof of payment request #}
+        <p style="color: #2c3e50; font-weight: 600; margin-bottom: 10px;">
+            {{ tp('payment_details.proof_title', {}, 'email_templates') }}
+        </p>
+        <p style="color: #2c3e50; line-height: 1.6; margin-bottom: 25px;">
+            {{ tp('payment_details.proof_message', {}, 'email_templates') }}
+        </p>
+
+        {# Custom message if provided #}
+        {% if customMessage %}
+        <div style="background-color: #f8f9fa; padding: 20px; border-radius: 6px; margin-bottom: 25px; border-left: 4px solid #2c3e50;">
+            <p style="margin: 0; color: #2c3e50; line-height: 1.6; font-style: italic;">
+                {{ customMessage }}
+            </p>
+        </div>
+        {% endif %}
+
+        {# Closing message #}
+        <p style="color: #2c3e50; line-height: 1.6; margin-top: 30px; margin-bottom: 10px;">
+            {{ tp('payment_details.support_message', {}, 'email_templates') }}
+        </p>
+
+        <p style="color: #2c3e50; margin-top: 25px;">
+            Cordialement,
+        </p>
+
+    </div>
+{% endblock %}

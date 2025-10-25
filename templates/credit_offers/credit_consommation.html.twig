@@ -1,0 +1,138 @@
+{% extends 'credit_offers/credit_page_structure.html.twig' %}
+
+{% set page_title = tp('credit_consommation.page.title', [], 'credit_consommation') %}
+{% set page_description = tp('credit_consommation.page.description', [], 'credit_consommation') %}
+{% set hero_class = 'credit-detail-hero--consommation' %}
+
+{% block taux_value %}{{ credit_rate('consommation') }}%{% endblock %}
+{% block montant_value %}{{ tp('credit_consommation.hero.values.montant', [], 'credit_consommation') }}{% endblock %}
+{% block duree_value %}{{ tp('credit_consommation.hero.values.duree', [], 'credit_consommation') }}{% endblock %}
+
+{% block hero_title %}{{ tp('credit_consommation.hero.title', [], 'credit_consommation') }}{% endblock %}
+{% block hero_subtitle %}{{ tp('credit_consommation.hero.subtitle', [], 'credit_consommation') }}{% endblock %}
+
+{% block section_1_title %}{{ tp('credit_consommation.section_1.title', [], 'credit_consommation') }}{% endblock %}
+
+{% block section_1_content %}
+<p>{{ tp('credit_consommation.section_1.content.paragraph_1', [], 'credit_consommation') }}</p>
+<p>{{ tp('credit_consommation.section_1.content.paragraph_2', [], 'credit_consommation') }}</p>
+{% endblock %}
+
+{% block feature_montant %}{{ tp('credit_consommation.features.montant', [], 'credit_consommation') }}{% endblock %}
+{% block feature_montant_detail %}{{ tp('credit_consommation.features.montant_detail', [], 'credit_consommation') }}{% endblock %}
+{% block feature_duree %}{{ tp('credit_consommation.features.duree', [], 'credit_consommation') }}{% endblock %}
+{% block feature_duree_detail %}{{ tp('credit_consommation.features.duree_detail', [], 'credit_consommation') }}{% endblock %}
+{% block feature_taux %}{{ tp('credit_consommation.features.taux', [], 'credit_consommation')|replace({'{rate}': credit_rate('consommation')})|raw }}{% endblock %}
+{% block feature_taux_detail %}{{ tp('credit_consommation.features.taux_detail', [], 'credit_consommation') }}{% endblock %}
+{% block feature_garantie %}{{ tp('credit_consommation.features.garantie', [], 'credit_consommation') }}{% endblock %}
+{% block feature_garantie_detail %}{{ tp('credit_consommation.features.garantie_detail', [], 'credit_consommation') }}{% endblock %}
+
+{% block section_3_content %}
+<ul class="credit-detail-advantages">
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_consommation.advantages.liberte_usage.title', [], 'credit_consommation') }}</strong> {{ tp('credit_consommation.advantages.liberte_usage.text', [], 'credit_consommation') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_consommation.advantages.reponse_rapide.title', [], 'credit_consommation') }}</strong> {{ tp('credit_consommation.advantages.reponse_rapide.text', [], 'credit_consommation') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_consommation.advantages.sans_garantie.title', [], 'credit_consommation') }}</strong> {{ tp('credit_consommation.advantages.sans_garantie.text', [], 'credit_consommation') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_consommation.advantages.remboursement_anticipe.title', [], 'credit_consommation') }}</strong> {{ tp('credit_consommation.advantages.remboursement_anticipe.text', [], 'credit_consommation') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_consommation.advantages.mensualites_fixes.title', [], 'credit_consommation') }}</strong> {{ tp('credit_consommation.advantages.mensualites_fixes.text', [], 'credit_consommation') }}</span>
+    </li>
+</ul>
+{% endblock %}
+
+{% block section_4_content %}
+<div class="credit-detail-requirements">
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('credit_consommation.requirements.conditions_octroi.title', [], 'credit_consommation') }}</h3>
+        <ul>
+            <li>{{ tp('credit_consommation.requirements.conditions_octroi.items.majeur', [], 'credit_consommation') }}</li>
+            <li>{{ tp('credit_consommation.requirements.conditions_octroi.items.revenus', [], 'credit_consommation') }}</li>
+            <li>{{ tp('credit_consommation.requirements.conditions_octroi.items.endettement', [], 'credit_consommation') }}</li>
+            <li>{{ tp('credit_consommation.requirements.conditions_octroi.items.incidents', [], 'credit_consommation') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('credit_consommation.requirements.criteres_eligibilite.title', [], 'credit_consommation') }}</h3>
+        <ul>
+            <li>{{ tp('credit_consommation.requirements.criteres_eligibilite.items.contrat', [], 'credit_consommation') }}</li>
+            <li>{{ tp('credit_consommation.requirements.criteres_eligibilite.items.anciennete', [], 'credit_consommation') }}</li>
+            <li>{{ tp('credit_consommation.requirements.criteres_eligibilite.items.capacite', [], 'credit_consommation') }}</li>
+            <li>{{ tp('credit_consommation.requirements.criteres_eligibilite.items.age', [], 'credit_consommation') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block section_5_content %}
+<div class="credit-detail-documents">
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('credit_consommation.documents.pieces_identite.title', [], 'credit_consommation') }}</h3>
+        <ul>
+            <li>{{ tp('credit_consommation.documents.pieces_identite.items.carte', [], 'credit_consommation') }}</li>
+            <li>{{ tp('credit_consommation.documents.pieces_identite.items.domicile', [], 'credit_consommation') }}</li>
+            <li>{{ tp('credit_consommation.documents.pieces_identite.items.livret', [], 'credit_consommation') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('credit_consommation.documents.justificatifs_revenus.title', [], 'credit_consommation') }}</h3>
+        <ul>
+            <li>{{ tp('credit_consommation.documents.justificatifs_revenus.items.bulletins', [], 'credit_consommation') }}</li>
+            <li>{{ tp('credit_consommation.documents.justificatifs_revenus.items.avis', [], 'credit_consommation') }}</li>
+            <li>{{ tp('credit_consommation.documents.justificatifs_revenus.items.contrat', [], 'credit_consommation') }}</li>
+            <li>{{ tp('credit_consommation.documents.justificatifs_revenus.items.attestation', [], 'credit_consommation') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('credit_consommation.documents.informations_bancaires.title', [], 'credit_consommation') }}</h3>
+        <ul>
+            <li>{{ tp('credit_consommation.documents.informations_bancaires.items.releves', [], 'credit_consommation') }}</li>
+            <li>{{ tp('credit_consommation.documents.informations_bancaires.items.rib', [], 'credit_consommation') }}</li>
+            <li>{{ tp('credit_consommation.documents.informations_bancaires.items.tableau', [], 'credit_consommation') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block legal_details %}
+<div class="credit-legal-notice__details">
+    <h4>{{ tp('credit_consommation.legal.title', [], 'credit_consommation') }}</h4>
+    <ul>
+        <li><strong>{{ tp('credit_consommation.legal.taeg.title', [], 'credit_consommation') }}</strong> {{ tp('credit_consommation.legal.taeg.text', [], 'credit_consommation') }}</li>
+        <li><strong>{{ tp('credit_consommation.legal.retractation.title', [], 'credit_consommation') }}</strong> {{ tp('credit_consommation.legal.retractation.text', [], 'credit_consommation') }}</li>
+        <li><strong>{{ tp('credit_consommation.legal.remboursement.title', [], 'credit_consommation') }}</strong> {{ tp('credit_consommation.legal.remboursement.text', [], 'credit_consommation') }}</li>
+        <li><strong>{{ tp('credit_consommation.legal.assurance.title', [], 'credit_consommation') }}</strong> {{ tp('credit_consommation.legal.assurance.text', [], 'credit_consommation') }}</li>
+        <li><strong>{{ tp('credit_consommation.legal.fichage.title', [], 'credit_consommation') }}</strong> {{ tp('credit_consommation.legal.fichage.text', [], 'credit_consommation') }}</li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block cta_title %}{{ tp('credit_consommation.cta.title', [], 'credit_consommation') }}{% endblock %}
+{% block cta_subtitle %}{{ tp('credit_consommation.cta.subtitle', [], 'credit_consommation') }}{% endblock %}
+
+{% block custom_styles %}
+{{ parent() }}
+<style>
+/* Couleur spécifique pour le crédit consommation */
+.credit-detail-hero--consommation {
+    background: 
+        linear-gradient(135deg, rgba(59, 130, 246, 0.4) 0%, rgba(29, 78, 216, 0.6) 100%),
+        url('/images/conso.jpg') center/cover no-repeat;
+}
+
+.credit-detail-hero--consommation .credit-highlight__value {
+    color: #93c5fd;
+}
+</style>
+{% endblock %}

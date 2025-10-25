@@ -1,0 +1,10 @@
+log_messages:
+  success: "E-mail succesvol verzonden"
+  error: "Fout bij het verzenden van de e-mail"
+  exception: "Uitzondering bij het verzenden van de e-mail"
+  verification_sent: "Verificatie-e-mail succesvol verzonden"
+  verification_failed: "Fout bij het verzenden van de verificatie-e-mail"
+  code_sent: "Verificatiecode verzonden"
+  code_failed: "Fout bij het verzenden van de verificatiecode"
+  template_processed: "E-mail template succesvol verwerkt"
+  template_error: "Fout bij het verwerken van het e-mail template"

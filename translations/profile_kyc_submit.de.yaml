@@ -1,0 +1,73 @@
+profile_kyc_submit:
+  page:
+    title: "KYC-Dokumente einreichen - %company_name%"
+  
+  header:
+    title: "Meine KYC-Dokumente einreichen"
+    title_resubmission: "Neue KYC-Dokumente einreichen"
+    subtitle: "Vervollständigen Sie Ihre Unterlagen durch Hochladen der erforderlichen Dokumente"
+    subtitle_resubmission: "Ihre vorherige Einreichung wurde abgelehnt. Bitte korrigieren und reichen Sie Ihre Dokumente erneut ein"
+  
+  rejection:
+    title: "Grund der Ablehnung Ihres vorherigen Antrags"
+  
+  info:
+    title: "Wichtige Information"
+    title_resubmission: "Wichtige Punkte für Ihre neue Einreichung"
+    requirements:
+      resubmit_attention: "Überprüfen Sie, dass Ihre Dokumente den genannten Anforderungen entsprechen"
+      resubmit_readable: "Stellen Sie sicher, dass alle Dokumente gut lesbar sind"
+      readable_color: "Alle Dokumente müssen lesbar und in Farbe sein"
+      formats: "Akzeptierte Formate: PDF, JPG, PNG"
+      max_size: "Maximale Größe: 4 MB pro Datei"
+      date_limit: "Die Dokumente dürfen nicht älter als 3 Monate sein"
+  
+  actions:
+    back: Zurück
+    submit: "Dokumente einreichen"
+    submit_resubmission: "Dokumente erneut einreichen"
+    save_draft: "Entwurf speichern"
+    cancel: "Abbrechen"
+  
+  form:
+    labels:
+      identity_document: "Ausweisdokument (Personalausweis, Reisepass, etc.)"
+      income_document: "Einkommensnachweis (Gehaltsabrechnung, Steuerbescheid, etc.)"
+      address_document: "Wohnsitznachweis (Rechnung, Mietquittung, etc.)"
+      selfie_document: "Selfie mit Ihrem Ausweisdokument (optional)"
+    
+    help:
+      pdf_jpg_png: "Format PDF, JPG oder PNG, max 4MB"
+      jpg_png_only: "Nur Format JPG oder PNG, max 4MB"
+    
+    declaration:
+      title: "Erklärung"
+      text: "Mit der Einreichung dieser Dokumente bestätige ich, dass die bereitgestellten Informationen korrekt und aktuell sind. Ich verstehe, dass falsche Informationen zur Schließung meines Kontos führen können."
+      text_resubmission: "Mit der erneuten Einreichung dieser Dokumente bestätige ich, dass die bereitgestellten Informationen korrekt, aktuell und gemäß den Empfehlungen korrigiert sind. Ich verstehe, dass falsche Informationen zur Schließung meines Kontos führen können."
+    
+    personal_info:
+      title: "Persönliche Informationen"
+      first_name: "Vorname"
+      last_name: "Nachname"
+      birth_date: "Geburtsdatum"
+      nationality: "Staatsangehörigkeit"
+      
+    documents:
+      title: "Ausweisdokumente"
+      identity_document: "Ausweisdokument"
+      identity_document_help: "Laden Sie ein klares Foto Ihres Reisepasses, Personalausweises oder Führerscheins hoch"
+      proof_of_address: "Wohnsitznachweis"
+      proof_of_address_help: "Strom-, Gas- oder Telefonrechnung oder Kontoauszug nicht älter als 3 Monate"
+      selfie: "Selfie-Foto"
+      selfie_help: "Machen Sie ein Foto von sich mit Ihrem Ausweisdokument"
+      
+    file_requirements:
+      title: "Dateianforderungen"
+      formats: "Akzeptierte Formate: JPG, PNG, PDF"
+      max_size: "Maximale Größe: 5MB pro Datei"
+      quality: "Stellen Sie sicher, dass die Dokumente lesbar und von guter Qualität sind"
+    
+  validation:
+    required_field: "Dieses Feld ist erforderlich"
+    invalid_file: "Ungültiges Dateiformat"
+    file_too_large: "Die Datei ist zu groß"

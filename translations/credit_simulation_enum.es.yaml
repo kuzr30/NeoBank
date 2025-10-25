@@ -1,0 +1,31 @@
+credit_types:
+  immobilier:
+    label: "Crédito Inmobiliario"
+  auto:
+    label: "Crédito Auto"
+  consommation:
+    label: "Crédito de Consumo"
+  travaux:
+    label: "Crédito Obras"
+  professionnel:
+    label: "Crédito Profesional"
+  personal:
+    label: "Préstamo Personal"
+  home_improvement:
+    label: "Mejora de la vivienda"
+  debt_consolidation:
+    label: "Reunificación de créditos"
+  mortgage:
+    label: "Hipoteca"
+  renouvelable:
+    label: "Crédito renovable"
+  etudiant:
+    label: "Crédito estudiantil"
+  relais:
+    label: "Crédito puente"
+  microcredit:
+    label: "Microcrédito"
+  leasing:
+    label: "Arrendamiento financiero"
+  voyage:
+    label: "Crédito viaje"

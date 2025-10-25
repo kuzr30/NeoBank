@@ -1,0 +1,49 @@
+email_card_contract:
+  title: "Kartenabonnement-Vertrag zu unterzeichnen"
+  
+  content:
+    page_title: "Ihr Kartenvertrag ist bereit zur Unterzeichnung"
+    greeting: "Liebe(r) %firstName% %lastName%,"
+    
+    approval:
+      title: "Antrag genehmigt!"
+      description: "Ausgezeichnete Neuigkeiten! Ihr Kartenantrag wurde von unserem Verwaltungsteam genehmigt."
+    
+    card_details:
+      title: "Details Ihrer Karte"
+      type: "Kartentyp"
+      reference: "Referenz"
+      request_date: "Antragsdatum"
+    
+    fees:
+      title: "Gebühren und Limits"
+      activation: "Aktivierungsgebühr"
+      monthly: "Monatliche Gebühren"
+      daily_limit: "Tageslimit"
+      monthly_limit: "Monatslimit"
+      day: "Tag"
+      month: "Monat"
+    
+    signature_required:
+      title: "Elektronische Unterschrift erforderlich"
+      description: "Sie müssen diesen Vertrag elektronisch unterzeichnen, um Ihre Zustimmung zu den Gebühren und Bedingungen zu bestätigen. Ihre Karte wird nur nach der Unterzeichnung erstellt."
+    
+    next_steps:
+      title: "Nächste Schritte"
+      step1: "Klicken Sie auf die Schaltfläche unten, um auf den Vertrag zuzugreifen"
+      step2: "Lesen Sie die Allgemeinen Geschäftsbedingungen sorgfältig"
+      step3: "Unterzeichnen Sie elektronisch, wenn Sie die Gebühren akzeptieren"
+      step4: "Ihre Karte wird erstellt und in 3-5 Werktagen versendet"
+    
+    action:
+      title: "Erforderliche Maßnahme"
+      sign_button: "Vertrag jetzt unterzeichnen"
+    
+    contract_info:
+      title: "Vertragsinformationen"
+      reference: "Vertragsreferenz"
+      expires: "Läuft ab am"
+    
+    assistance: "Bei Fragen zu diesem Vertrag steht Ihnen unser Kundendienst zur Verfügung."
+    
+    footer: "Diese E-Mail wurde automatisch von Ihrer Bank gesendet. <br><strong>Bewahren Sie diese Vertragsreferenz für Ihre Unterlagen auf.</strong>"

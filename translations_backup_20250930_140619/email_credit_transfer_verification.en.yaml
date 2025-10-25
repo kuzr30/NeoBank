@@ -1,0 +1,40 @@
+email_credit_transfer_verification:
+  title: "Verification Code - Credit Transfer"
+  content:
+    page_title: "Transfer validation required"
+    greeting: "Hello <strong>{userName}</strong>,"
+    detection_section:
+      title: "Transfer request detected"
+      message: "You have requested a transfer from your credit account. To secure this operation, please validate with the verification code below."
+    verification_section:
+      title: "Secure verification code"
+      code_label: "Validation code"
+      expiry: "Expires in 10 minutes"
+    transaction_details:
+      title: "Transaction details"
+      source_account: "Source account"
+      destination_account: "Destination account"
+      principal_account: "Main Account"
+      amount_label: "Amount to transfer"
+    security_section:
+      title: "Security"
+      validity: "This code is valid for 10 minutes only"
+      confidentiality: "Absolute confidentiality"
+      confidentiality_description: "Never share this code with anyone"
+      unauthorized_transaction: "Unauthorized transaction"
+      warning: "If you did not initiate this request, contact our customer service immediately."
+      phone: "Phone: 01 23 45 67 89"
+      urgency: "Available 24/7 for emergencies"
+    support_text: "For any questions regarding this transfer operation, our security service remains at your disposal."
+    instructions_section:
+      title: "Instructions"
+      step_1: "Enter this code on the validation page"
+      step_2: "The transfer will be processed immediately after validation"
+      step_3: "A confirmation email will be sent to you"
+    footer: "Automatic security email <br>Transfer service - Validation required"
+  
+  logs:
+    sending: "Sending transfer verification code"
+    success: "Transfer verification code sent successfully"
+    error: "Error sending transfer verification code"
+    send_failed: "Failed to send transfer verification code"

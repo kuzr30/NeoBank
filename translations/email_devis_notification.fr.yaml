@@ -1,0 +1,54 @@
+email_devis_notification:
+  title: "Nouvelle demande de devis - %typeAssurance%"
+  
+  content:
+    page_title: "Nouvelle demande de devis reçue"
+    
+    priority:
+      title: "Action requise - Traitement prioritaire"
+      message: "Nouvelle demande de devis à traiter sous 24h"
+    
+    reference:
+      title: "Référence de la demande"
+      number: "Numéro de devis"
+      insurance_type: "Type d'assurance"
+    
+    client_info:
+      title: "Informations du client"
+      full_name: "Nom complet"
+      contact_email: "Email de contact"
+      phone: "Téléphone"
+      contact_preference: "Préférence contact"
+      request_date: "Date de demande"
+    
+    comments:
+      title: "Commentaires du client"
+    
+    action_plan:
+      title: "Plan d'action recommandé"
+      telephone_priority: "1. Contact téléphonique prioritaire"
+      telephone_desc: "Appeler le client au %telephone% (préférence déclarée)"
+      email_priority: "1. Contact par email prioritaire"
+      email_desc: "Envoyer un email à %email% (préférence déclarée)"
+      appointment_priority: "1. Proposer un rendez-vous"
+      appointment_desc: "Organiser un rendez-vous en agence (préférence déclarée)"
+      analysis: "2. Analyse personnalisée"
+      analysis_desc: "Analyser le profil et les besoins spécifiques du client"
+      offer_prep: "3. Préparation d'offre"
+      offer_prep_desc: "Établir une proposition commerciale personnalisée"
+      crm_update: "4. Mise à jour CRM"
+      crm_update_desc: "Actualiser le statut et les interactions dans le système"
+    
+    specialized_advice:
+      title: "Conseils spécialisés"
+      auto_advice: "Assurance automobile : Demander le modèle du véhicule, l'année de mise en circulation, l'usage prévu, et l'historique des sinistres pour personnaliser l'offre."
+      habitation_advice: "Assurance habitation : S'informer sur le type de logement, la surface, la valeur des biens à assurer, et la localisation pour adapter la couverture."
+      sante_advice: "Complémentaire santé : Évaluer la situation familiale, les besoins médicaux spécifiques, et le budget disponible pour proposer la formule optimale."
+      general_advice: "Approche personnalisée : Adapter votre méthodologie commerciale selon le type d'assurance demandé et les spécificités du profil client."
+    
+    footer: "<strong>%company_name% - Système de gestion des devis</strong><br>Notification automatique de nouvelle demande"
+
+  logs:
+    devis_notification_sent: "Notification de nouvelle demande de devis envoyée à l'équipe commerciale"
+    devis_notification_failed: "Erreur lors de l'envoi de la notification de devis"
+    quote_request_assigned: "Demande de devis %numeroDevis% assignée à l'équipe commerciale"

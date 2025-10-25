@@ -1,0 +1,56 @@
+help_center:
+  page:
+    title: "Centre d'Aide - %company_name%"
+    meta:
+      description: "Trouvez rapidement les réponses à vos questions sur nos services bancaires"
+  
+  hero:
+    title: "Centre d'Aide"
+    subtitle: "Trouvez rapidement les réponses à vos questions sur nos services bancaires"
+    search:
+      placeholder: "Rechercher dans l'aide..."
+  
+  sections:
+    main_title: "Comment pouvons-nous vous aider ?"
+    
+    accounts_cards:
+      title: "Comptes et Cartes"
+      description: "Gestion de vos comptes, cartes bancaires, virements et paiements"
+      links:
+        balance: "Consulter mon solde"
+        transfers: "Faire un virement"
+    
+    security:
+      title: "Sécurité"
+      description: "Protection de vos données et conseils de sécurité bancaire"
+      links:
+        authentication: "Authentification forte"
+        fraud: "Signaler une fraude"
+    
+    contact:
+      title: "Contact"
+      description: "Différents moyens de nous contacter selon vos besoins"
+      links:
+        chat: "Chat en ligne"
+        appointment: "Prendre rendez-vous"
+    
+    services:
+      title: "Services en Ligne"
+      description: "Aide pour utiliser notre plateforme bancaire en ligne"
+      links:
+        login: "Se connecter"
+        settings: "Paramètres compte"
+    
+    credits_savings:
+      title: "Crédits et Épargne"
+      description: "Informations sur nos produits de crédit et d'épargne"
+      links:
+        simulation: "Simuler un crédit"
+        savings: "Produits d'épargne"
+    
+    documents:
+      title: "Documents"
+      description: "Accès et gestion de vos documents bancaires"
+      links:
+        rib: "Télécharger un RIB"
+        statements: "Mes relevés"

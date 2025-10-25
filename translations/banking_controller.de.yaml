@@ -1,0 +1,5 @@
+banking_controller:
+  flash:
+    kyc_required: "Sie müssen Ihre Identitätsprüfung (KYC) abschließen, um auf die Bankdienstleistungen zugreifen zu können."
+  transactions:
+    transfer_outgoing: "Ausgehende Überweisung"

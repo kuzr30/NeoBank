@@ -1,0 +1,76 @@
+auto_loan:
+  page_title: "Autolening"
+  page_description: "Financier de aankoop van uw nieuwe of tweedehands voertuig met onze autolening tegen voordelige voorwaarden."
+  
+  hero:
+    rate_value: "2,9%"
+    amount_value: "€75.000"
+    duration_value: "7 jaar"
+  
+  section_1:
+    title: "Wat is een autolening?"
+    paragraph_1: "De autolening is een doelgebonden lening speciaal ontworpen voor de financiering van de aankoop van een nieuw of tweedehands voertuig. Het kan ook bijkomende kosten dekken zoals verzekering, inschrijving of uitrusting."
+    paragraph_2: "Met preferentiële tarieven en een duur aangepast aan uw budget, stelt onze autolening u in staat om snel te rijden terwijl u uw liquiditeit behoudt."
+  
+  features:
+    amount: "Tot €75.000"
+    amount_detail: "Volgens de waarde van het voertuig"
+    duration: "Van 12 maanden tot 7 jaar"
+    duration_detail: "Geoptimaliseerde duur"
+    rate: "Vanaf {rate}% JTKS*"
+    rate_detail: "Auto preferentieel tarief"
+    guarantee: "Voertuig als waarborg"
+    guarantee_detail: "Pand op het voertuig"
+  
+  advantages:
+    advantage_1: "<strong>Voordelige tarieven:</strong> Preferentiële voorwaarden voor automobiel"
+    advantage_2: "<strong>Volledige financiering:</strong> Tot 100% van de waarde van het voertuig"
+    advantage_3: "<strong>Nieuw en occasion:</strong> Voertuigen van minder dan 8 jaar geaccepteerd"
+    advantage_4: "<strong>Snelle uitbetaling:</strong> Fondsen beschikbaar binnen 48u na goedkeuring"
+    advantage_5: "<strong>Bescherming:</strong> Werkloosheidsverzekering beschikbaar"
+  
+  requirements:
+    borrower:
+      title: "Lenervoorwaarden"
+      item_1: "Meerderjarig zijn en wonen in Frankrijk"
+      item_2: "Stabiele inkomsten aantonen"
+      item_3: "Voldoende terugbetalingscapaciteit"
+      item_4: "Geen bankverbod"
+    vehicle:
+      title: "Voertuigvoorwaarden"
+      item_1: "Voertuig van minder dan 8 jaar"
+      item_2: "Inschrijving in Frankrijk verplicht"
+      item_3: "Allrisk verzekering vereist"
+      item_4: "Expertise indien tweedehands voertuig"
+  
+  documents:
+    personal:
+      title: "Persoonlijke documenten"
+      item_1: "Geldige identiteitskaart"
+      item_2: "Recent woonplaatsbewijs"
+      item_3: "3 laatste loonstroken"
+      item_4: "Belastingaangifte N-1"
+    vehicle:
+      title: "Voertuigdocumenten"
+      item_1: "Bestelbon of proforma factuur"
+      item_2: "Kentekenbewijs (indien occasion)"
+      item_3: "Overdrachtsverklaring (indien occasion)"
+      item_4: "Offerte allrisk verzekering"
+    banking:
+      title: "Bankdocumenten"
+      item_1: "RIB van hoofdrekening"
+      item_2: "3 laatste rekeningafschriften"
+      item_3: "Attest andere lopende kredieten"
+      item_4: "Bewijsstukken eigen inbreng"
+  
+  legal:
+    title: "Belangrijke juridische informatie"
+    taeg: "<strong>*JTKS:</strong> Representatief voorbeeld: voor een autolening van €25.000 over 5 jaar tegen een JTKS van 2,9%, betaalt u 60 maandelijkse termijnen van €449, dus een totaalbedrag van €26.940 (kostprijs van het krediet: €1.940)."
+    guarantee: "<strong>Waarborg:</strong> Het gefinancierde voertuig dient als waarborg tot volledige terugbetaling."
+    insurance: "<strong>Verzekering:</strong> Allrisk verzekering verplicht gedurende de hele duur van de lening."
+    resale: "<strong>Verkoop:</strong> Vervroegde terugbetaling verplicht bij verkoop van het voertuig."
+    fees: "<strong>Kosten:</strong> Dossierkosten van 1% van het geleende bedrag (minimum €150)."
+  
+  cta:
+    title: "Uw nieuwe voertuig wacht op u"
+    subtitle: "Financier uw auto tegen de beste voorwaarden"

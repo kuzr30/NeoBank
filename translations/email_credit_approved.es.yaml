@@ -1,0 +1,40 @@
+email_credit_approved:
+  title: "Solicitud de crédito aprobada"
+  content:
+    page_title: "¡Felicitaciones {customerName}!"
+    intro: "¡Tenemos el placer de anunciarle una excelente noticia!"
+    credit_approved:
+      title: "Su crédito ha sido aprobado"
+      amount_label: "Monto aprobado"
+      financing_note: "Financiamiento otorgado por nuestros expertos"
+    contract_info:
+      title: "Información contractual"
+      contract_number: "Número de contrato"
+      status_label: "Estado"
+      status_value: "Aprobado - En espera de firma"
+      rate_label: "Tasa de interés"
+      duration_label: "Duración"
+      monthly_payment_label: "Cuota mensual"
+    next_steps:
+      title: "Próximos pasos"
+      step_1:
+        title: "1. Firma del contrato"
+        description: "Recibirá pronto el contrato para firmar electrónicamente"
+      step_2:
+        title: "2. Validación administrativa"
+        description: "Nuestro equipo procederá a las verificaciones finales"
+      step_3:
+        title: "3. Desembolso de fondos"
+        description: "Una vez validado el contrato, los fondos serán transferidos a su cuenta"
+    personalized_support:
+      title: "Acompañamiento personalizado"
+      description: "Un contrato detallado con todas las condiciones de su crédito le será transmitido en breve. Si tiene preguntas, nuestro equipo especializado está a su disposición para acompañarle."
+    thanks_message: "Le agradecemos su confianza y estamos felices de poder contribuir a la realización de su proyecto."
+    footer: "%company_name% - Departamento Créditos<br>Notificación de aprobación de solicitud de crédito"
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Enviando notificación de crédito aprobado"
+    success: "Notificación de crédito aprobado enviada con éxito"
+    error: "Error al enviar notificación de crédito aprobado"
+    send_failed: "Fallo en el envío de notificación de crédito aprobado"

@@ -1,0 +1,42 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{% if translationService is defined %}{{ translationService.tp('email_kyc_approved.title', {}, 'email_kyc_approved') }}{% else %}{{ tp('email_kyc_approved.title', {}, 'email_kyc_approved') }}{% endif %}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{% if translationService is defined %}{{ translationService.tp('email_kyc_approved.content.page_title', {firstName: user.firstName}, 'email_kyc_approved') }}{% else %}{{ tp('email_kyc_approved.content.page_title', {firstName: user.firstName}, 'email_kyc_approved') }}{% endif %}</h2>
+    
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #2e7d32;">{% if translationService is defined %}{{ translationService.tp('email_kyc_approved.content.success.title', {}, 'email_kyc_approved') }}{% else %}{{ tp('email_kyc_approved.content.success.title', {}, 'email_kyc_approved') }}{% endif %}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {% if translationService is defined %}{{ translationService.tp('email_kyc_approved.content.success.message', {}, 'email_kyc_approved')|raw }}{% else %}{{ tp('email_kyc_approved.content.success.message', {}, 'email_kyc_approved')|raw }}{% endif %}
+        </p>
+    </div>
+
+    <p class="content-text">
+        {% if translationService is defined %}{{ translationService.tp('email_kyc_approved.content.services_intro', {}, 'email_kyc_approved') }}{% else %}{{ tp('email_kyc_approved.content.services_intro', {}, 'email_kyc_approved') }}{% endif %}
+    </p>
+    
+    <ul style="color: #000000; font-size: 18px; line-height: 1.7; padding-left: 30px; margin: 0 0 30px 0;">
+        {% set services = translationService is defined ? translationService.tp('email_kyc_approved.content.services_list', {}, 'email_kyc_approved') : tp('email_kyc_approved.content.services_list', {}, 'email_kyc_approved') %}
+        {% for service in services %}
+            <li style="margin: 0 0 12px 0;">{{ service }}</li>
+        {% endfor %}
+    </ul>
+
+    <div class="btn-container" style="text-align:center;margin:50px 0;">
+        <a href="{{ url('banking_dashboard') }}" class="btn" style="display:inline-block;margin:0;padding:22px 45px;background:#2c3e50;color:#ffffff!important;font-size:20px;font-weight:700;line-height:1;text-decoration:none;text-align:center;border-radius:50px;border:none;cursor:pointer;box-shadow:0 15px 35px rgba(44,62,80,0.4);text-transform:uppercase;letter-spacing:1px;transition:all 0.3s ease;">{% if translationService is defined %}{{ translationService.tp('email_kyc_approved.content.dashboard_button', {}, 'email_kyc_approved') }}{% else %}{{ tp('email_kyc_approved.content.dashboard_button', {}, 'email_kyc_approved') }}{% endif %}</a>
+    </div>
+            
+    {% if submission.adminNotes %}
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{% if translationService is defined %}{{ translationService.tp('email_kyc_approved.content.admin_note.title', {}, 'email_kyc_approved') }}{% else %}{{ tp('email_kyc_approved.content.admin_note.title', {}, 'email_kyc_approved') }}{% endif %}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {{ submission.adminNotes }}
+        </p>
+    </div>
+    {% endif %}
+    
+    <p class="content-text" style="margin-bottom: 0;">
+        {% if translationService is defined %}{{ translationService.tp('email_kyc_approved.content.closing', {}, 'email_kyc_approved')|raw }}{% else %}{{ tp('email_kyc_approved.content.closing', {}, 'email_kyc_approved')|raw }}{% endif %}
+    </p>
+{% endblock %}

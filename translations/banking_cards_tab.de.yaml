@@ -1,0 +1,92 @@
+banking_cards_tab:
+  # Section principale
+  main:
+    title: "Bankkarte beantragen"
+    subtitle: "Die beste Karte für Ihre täglichen Bedürfnisse"
+
+  # Section carte utilisateur
+  user_card:
+    my_card: "Meine Karte"
+    daily_limit: "Tageslimit"
+    undefined: "Nicht definiert"
+    
+    # Statuts de carte
+    status:
+      active: "Aktiv"
+      blocked: "Gesperrt"
+      expired: "Abgelaufen"
+      pending: "Ausstehend"
+    
+    # Actions de carte
+    actions:
+      block_temporarily: "Vorübergehend sperren"
+      report_lost: "Sperrung veranlassen"
+
+  # Section souscription en attente
+  subscription_pending:
+    title: "Laufender Antrag"
+    request_date: "Antrag gestellt am"
+    
+    # Badges de statut
+    status:
+      contract_pending: "Vertrag in Vorbereitung"
+      contract_sent: "Vertrag gesendet - Unterschrift erforderlich"
+      admin_validation: "Warten auf administrative Validierung"
+      contract_expired: "Vertrag abgelaufen"
+      pending: "Warten auf Validierung"
+    
+    # Détails de souscription
+    details:
+      card_type: "Kartentyp"
+      brand: "Marke"
+      contract: "Vertrag"
+      signed_on: "Unterzeichnet am"
+    
+    # Actions
+    actions:
+      sign_contract: "Vertrag unterzeichnen"
+      download_contract: "Vertrag als PDF herunterladen"
+    
+    # Messages
+    messages:
+      contract_expires: "Ihr Vertrag läuft ab am"
+      contract_expired_text: "Ihr Vertrag ist abgelaufen. Ein neuer Antrag wird erforderlich sein."
+
+  # Types de cartes
+  card_types:
+    classic:
+      name: "Classic-Karte"
+      badge: "Ideal für den Einstieg"
+      price: "Kostenlos"
+      period: "im ersten Jahr"
+    
+    gold:
+      name: "Gold-Karte"
+      badge: "Am beliebtesten"
+      price: "5€"
+      period: "pro Monat"
+    
+    platinum:
+      name: "Platinum-Karte"
+      badge: "Premium"
+      price: "15€"
+      period: "pro Monat"
+
+  # Informations supplémentaires
+  info:
+    security:
+      title: "Garantierte Sicherheit"
+      text: "Alle unsere Karten sind mit den neuesten Sicherheitstechnologien ausgestattet und gegen Betrug geschützt."
+    
+    delivery:
+      title: "Schnelle Lieferung"
+      text: "Erhalten Sie Ihre neue Karte in 3 bis 5 Werktagen direkt zu Ihnen nach Hause."
+    
+    support:
+      title: "24/7 Support"
+      text: "Unser Team ist 24/7 verfügbar, um Ihnen bei Problemen mit Ihrer Karte zu helfen."
+
+  # Statuts supplémentaires
+  status:
+    cancelled: "Storniert"
+    account_label: "Konto"

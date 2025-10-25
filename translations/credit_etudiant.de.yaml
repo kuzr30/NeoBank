@@ -1,0 +1,105 @@
+credit_etudiant:
+  page:
+    title: "Studentenkredit"
+    description: "Finanzieren Sie Ihr Hochschulstudium mit unserem Studentenkredit. Vorzugsbedingungen und aufgeschobene Rückzahlung."
+
+  hero:
+    title: "Studentenkredit"
+    subtitle: "Investieren Sie in Ihre Zukunft"
+    values:
+      taux: "{rate}% effektiver Jahreszins*"
+      montant: "50.000€"
+      duree: "15 Jahre"
+
+  section_1:
+    title: "Was ist ein Studentenkredit?"
+    content:
+      paragraph_1: "Der Studentenkredit ist darauf ausgelegt, Ihr Hochschulstudium zu finanzieren: Studiengebühren, Studentenwohnung, Lehrmaterial, Auslandsaufenthalte und laufende Lebenshaltungskosten."
+      paragraph_2: "Mit Vorzugsbedingungen und der Möglichkeit, die Rückzahlung aufzuschieben, begleitet Sie dieser Kredit während Ihres gesamten akademischen Weges."
+
+  features:
+    montant: "Bis zu 50.000€"
+    montant_detail: "Für die gesamte Studiendauer"
+    duree: "Bis zu 15 Jahre"
+    duree_detail: "Mit möglichem Aufschub"
+    taux: "Ab {rate}% effektiver Jahreszins*"
+    taux_detail: "Vorzugszinssatz für Studenten"
+    garantie: "Elternbürgschaft"
+    garantie_detail: "Oder Staatsgarantie"
+
+  advantages:
+    taux_preferentiel:
+      title: "Vorzugszinssatz:"
+      text: "Vorteilhafte Bedingungen nur für Studenten"
+    differe_remboursement:
+      title: "Aufgeschobene Rückzahlung:"
+      text: "Bis zum Studienende + 2 Jahre"
+    deblocage_progressif:
+      title: "Schrittweise Freigabe:"
+      text: "Mittel nach Bedarf verfügbar"
+    garantie_etat:
+      title: "Staatsgarantie:"
+      text: "Möglich mit staatlicher Förderung"
+    pas_frais:
+      title: "Keine Bearbeitungsgebühren:"
+      text: "Keine zusätzlichen Kosten"
+
+  requirements:
+    conditions_etudiant:
+      title: "Studentenbedingungen"
+      items:
+        inscription: "In einer Hochschule eingeschrieben sein"
+        age: "Zwischen 18 und 28 Jahre alt sein"
+        nationalite: "Deutsche oder EU-Staatsangehörigkeit"
+        residence: "Wohnsitz in Deutschland"
+    garanties_requises:
+      title: "Erforderliche Garantien"
+      items:
+        caution: "Solidarische Elternbürgschaft"
+        garantie_etat: "Oder Staatsgarantie (falls berechtigt)"
+        justificatifs: "Einkommensnachweise der Bürgen"
+        engagement: "Unterschriebene Rückzahlungsverpflichtung"
+
+  documents:
+    dossier_etudiant:
+      title: "Studentenakte"
+      items:
+        certificat: "Studienbescheinigung"
+        carte: "Personalausweis oder Reisepass"
+        domicile: "Wohnsitznachweis"
+        devis: "Kostenvoranschläge oder Rechnungen der zu finanzierenden Kosten"
+    dossier_garants:
+      title: "Bürgenakte"
+      items:
+        identites: "Ausweisdokumente der Bürgen"
+        bulletins: "Die letzten 3 Gehaltsabrechnungen"
+        avis: "Steuerbescheid"
+        patrimoine: "Vermögensnachweise"
+    informations_bancaires:
+      title: "Bankinformationen"
+      items:
+        rib: "Kontoverbindung des Studentenkontos"
+        releves: "Kontoauszüge"
+        attestation: "Bankbescheinigung"
+
+  legal:
+    title: "Wichtige rechtliche Informationen"
+    taeg:
+      title: "*Effektiver Jahreszins:"
+      text: "Repräsentatives Beispiel: Für einen Studentenkredit von 20.000€ über 10 Jahre mit einem effektiven Jahreszins von 1,9% zahlen Sie 120 Monatsraten von 184€, also einen Gesamtbetrag von 22.080€ (Kreditkosten: 2.080€)."
+    differe:
+      title: "Aufschub:"
+      text: "Möglichkeit, die Kapitalrückzahlung während des Studiums aufzuschieben."
+    garantie_etat:
+      title: "Staatsgarantie:"
+      text: "Unter Berechtigungsbedingungen, ohne Elternbürgschaft."
+    modulation:
+      title: "Modulation:"
+      text: "Anpassung der Monatsraten je nach Entwicklung der Situation."
+    assurance:
+      title: "Versicherung:"
+      text: "Todesfall-Invaliditäts-Versicherung inbegriffen, Arbeitslosigkeit optional."
+
+  cta:
+    title: "Verwirklichen Sie Ihre Ambitionen"
+    subtitle: "Finanzieren Sie Ihr Studium mit unserem vorteilhaften Studentenkredit"

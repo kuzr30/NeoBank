@@ -1,0 +1,113 @@
+# ENGLISH TRANSLATION - Translated from French
+# Revolving credit translation file
+# Domain: credit_renouvelable
+# Language: English (en)
+
+credit_renouvelable:
+  page:
+    title: "Revolving Credit"
+    description: "Money reserve available at any time with our revolving credit. Flexibility and freedom of use guaranteed."
+  
+  hero:
+    class: "credit-detail-hero--renouvelable"
+    taux: "{rate}%"
+    montant: "15,000€"
+    duree: "Permanent"
+    title: "Revolving Credit"
+    subtitle: "Your available money reserve"
+  
+  section_1:
+    title: "What is revolving credit?"
+    content:
+      paragraph_1: "Revolving credit, also called revolving credit, puts at your disposal a money reserve that you can use at any time, according to your needs, without justification."
+      paragraph_2: "As you repay, your reserve is automatically replenished. You only pay interest on the amounts actually used."
+  
+  section_2:
+    title: "Credit characteristics"
+  
+  features:
+    montant:
+      value: "From 500€ to 15,000€"
+      detail: "Adjustable reserve"
+    duree:
+      value: "Permanent duration"
+      detail: "Renewable each year"
+    taux:
+      value: "From {rate}% APR*"
+      detail: "On amounts used"
+    garantie:
+      value: "No guarantee"
+      detail: "On signature only"
+  
+  section_3:
+    title: "Revolving credit advantages"
+    advantages:
+      disponibilite:
+        title: "Immediate availability"
+        description: "Funds accessible 24/7 by card or transfer"
+      reconstruction:
+        title: "Automatic replenishment"
+        description: "Reserve that replenishes with your repayments"
+      pas_interets:
+        title: "No interest if unused"
+        description: "No cost as long as you don't use the reserve"
+      remboursement:
+        title: "Flexible repayment"
+        description: "Low minimum amount, possibility of early repayment"
+      carte:
+        title: "Credit card"
+        description: "Use via associated bank card"
+  
+  section_4:
+    title: "Conditions and usage criteria"
+    conditions:
+      title: "Eligibility conditions"
+      items:
+        majeur: "Be of legal age and reside in France"
+        revenus: "Justify regular income"
+        surendettement: "Not be in a situation of over-indebtedness"
+        interdiction: "No banking prohibition"
+    
+    criteres:
+      title: "Usage criteria"
+      items:
+        usage: "Responsible use recommended"
+        impulsifs: "Avoid impulse purchases"
+        plan: "Plan a repayment schedule"
+        surveiller: "Regularly monitor the balance"
+  
+  section_5:
+    title: "Required supporting documents"
+    identite:
+      title: "Identity documents"
+      items:
+        carte: "Identity card or passport"
+        domicile: "Recent proof of residence"
+        rib: "Bank account details"
+    
+    revenus:
+      title: "Income documents"
+      items:
+        bulletins: "Last 3 pay slips"
+        avis: "Latest tax notice"
+        attestation: "Employer certificate if necessary"
+    
+    bancaires:
+      title: "Banking information"
+      items:
+        releves: "Recent bank statements"
+        credits: "Documents for other credits"
+        patrimoine: "Asset declaration"
+  
+  legal:
+    title: "Important legal information"
+    details:
+      taeg: "APR: Representative example: for a reserve of €3,000 used permanently at an APR of 6.9%, with a repayment of €90/month, the repayment period is 40 months for a total cost of €597."
+      utilisation: "Usage: Be careful not to use this credit for recurring current expenses."
+      remboursement: "Repayment: Minimum monthly payment of 3% of capital used or €15 minimum."
+      renouvellement: "Renewal: Annual review of your situation and renewal subject to conditions."
+      resiliation: "Termination: Possible at any time, repayment of outstanding balance required."
+  
+  cta:
+    title: "Build your reserve"
+    subtitle: "Have a flexible financing solution with our revolving credit"

@@ -1,0 +1,33 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: transfer_notification_service.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+transfer_notification_service:
+  email_subjects:
+    transfer_created: "Transfer Created - Awaiting Validation"
+    code_added: "New Validation Code Available"
+    code_validated: "Validation Code Confirmed"
+    ready_for_execution: "Transfer Ready for Execution"
+    transfer_executed: "Transfer Successfully Executed"
+    transfer_rejected: "Transfer Rejected"
+    transfer_expired: "Transfer Expired"
+    transfer_cancelled: "Transfer Cancelled"
+    user_blocked: "Account Temporarily Blocked"
+    code_expired: "Validation Code Expired"
+    
+  from_name: "%company_name% - Transfer Service"
+    
+  log_messages:
+    transfer_creation_sent: "Transfer creation notification sent"
+    transfer_creation_failed: "Failed to send transfer creation notification"
+    code_added_sent: "Code added notification sent"
+    code_added_failed: "Failed to send code added notification"
+    transfer_executed_sent: "Transfer execution notification sent"
+    transfer_executed_failed: "Failed to send transfer execution notification"
+    transfer_rejected_sent: "Transfer rejection notification sent"
+    transfer_rejected_failed: "Failed to send transfer rejection notification"
+    transfer_expired_sent: "Transfer expiration notification sent"
+    transfer_expired_failed: "Failed to send transfer expiration notification"
+    transfer_cancelled_sent: "Transfer cancellation notification sent"
+    transfer_cancelled_failed: "Failed to send transfer cancellation notification"

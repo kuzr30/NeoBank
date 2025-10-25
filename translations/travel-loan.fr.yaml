@@ -1,0 +1,91 @@
+travel_loan:
+  page_title: "Crédit voyage"
+  page_description: "Financez vos rêves de voyage en toute sérénité."
+  
+  advantages:
+    -
+      title: "Épargne préservée :"
+      description: "Gardez votre épargne pour les imprévus"
+    -
+      title: "Déblocage immédiat :"
+      description: "Fonds disponibles rapidement pour réserver"
+    -
+      title: "Tous voyages :"
+      description: "Vacances, lune de miel, voyage d'affaires personnel"
+    -
+      title: "Liberté d'usage :"
+      description: "Transport, hébergement, activités, équipement"
+    -
+      title: "Assurance voyage :"
+      description: "Possibilité de couverture annulation/interruption"
+  conditions:
+    octroi:
+      title: "Conditions d'octroi"
+      items:
+        - "Être majeur et résider en France"
+        - "Justifier de revenus réguliers"
+        - "Situation financière saine"
+        - "Projet de voyage défini"
+    utilisation:
+      title: "Utilisation recommandée"
+      items:
+        - "Voyage exceptionnel ou important"
+        - "Préservation de l'épargne de précaution"
+        - "Budget voyage bien défini"
+        - "Capacité de remboursement assurée"
+  cta:
+    subtitle: Financez vos rêves de voyage avec notre crédit dédié
+    title: Partez découvrir le monde
+  documents:
+    financiere:
+      title: "Situation financière"
+      items:
+        - "3 derniers bulletins de salaire"
+        - "Dernier avis d'imposition"
+        - "Relevés de comptes"
+        - "Justificatifs d'autres revenus"
+    identite:
+      title: "Identité et domicile"
+      items:
+        - "Carte d'identité ou passeport"
+        - "Justificatif de domicile récent"
+        - "Livret de famille si applicable"
+    projet:
+      title: "Projet voyage"
+      items:
+        - "Devis agence de voyage"
+        - "Réservations préliminaires"
+        - "Descriptif du voyage"
+        - "Budget détaillé"
+  features:
+    montant: "Jusqu'à 25 000€"
+    montant_detail: "Pour tous vos projets voyage"
+    duree: "De 12 mois à 7 ans"
+    duree_detail: "Remboursement confortable"
+    taux: "À partir de {rate}% TAEG*"
+    taux_detail: "Taux compétitif voyage"
+    garantie: "Sans garantie"
+    garantie_detail: "Financement sur signature"
+  hero:
+    subtitle: Concrétisez vos rêves d'évasion
+    title: Crédit Voyage
+  legal:
+    title: "Informations légales importantes"
+    details:
+      - "*TAEG : Exemple représentatif : pour un crédit voyage de 8 000€ sur 48 mois au TAEG de 5,2%, vous remboursez 48 mensualités de 185€, soit un montant total de 8 880€ (coût du crédit : 880€)."
+      - "Utilisation : Fonds destinés exclusivement au financement du voyage déclaré."
+      - "Assurance voyage : Souscription recommandée pour couvrir les risques d'annulation."
+      - "Remboursement anticipé : Possible sans pénalité au-delà de 10 000€."
+      - "Délai de rétractation : 14 jours pour renoncer au crédit sans justification."
+  meta:
+    description: Financez vos vacances et voyages de rêve avec notre crédit voyage. Partez sereinement avec des conditions adaptées.
+    title: Crédit Voyage
+  section_1:
+    content:
+    - Le crédit voyage vous permet de financer vos vacances, voyages de noces, tours du monde ou escapades exceptionnelles sans puiser dans votre épargne de précaution.
+    - Solution de financement dédiée aux loisirs et au bien-être, il vous offre la possibilité de vivre des expériences uniques tout en préservant votre équilibre financier.
+    title: Qu'est-ce qu'un crédit voyage ?
+  values:
+    duree: 7 ans
+    montant: 25 000€
+    taux: 5,2%

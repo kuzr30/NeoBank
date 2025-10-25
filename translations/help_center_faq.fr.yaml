@@ -1,0 +1,108 @@
+help_center_faq:
+  page:
+    title: "Questions Fréquemment Posées - Centre d'Aide %company_name%"
+    
+  hero:
+    title: "Questions Fréquemment Posées"
+    subtitle: "Trouvez rapidement les réponses aux questions les plus courantes"
+    search:
+      placeholder: "Rechercher dans les FAQ..."
+      
+  sections:
+    main_title: "Categories de Questions"
+    
+    banking:
+      title: "Banque et Comptes"
+      questions:
+        account_creation:
+          question: "Comment ouvrir un compte chez %company_name% ?"
+          answer: "Vous pouvez ouvrir un compte en ligne en quelques minutes. Il vous suffit de fournir une pièce d'identité valide et un justificatif de domicile."
+        account_types:
+          question: "Quels types de comptes proposez-vous ?"
+          answer: "Nous proposons des comptes courants, des comptes d'épargne, des comptes professionnels et des comptes jeunes avec des avantages spécifiques."
+        fees:
+          question: "Quels sont vos frais bancaires ?"
+          answer: "Nos frais sont transparents et compétitifs. Consultez notre grille tarifaire détaillée sur notre site ou contactez un conseiller."
+        mobile_app:
+          question: "Comment télécharger l'application mobile ?"
+          answer: "L'application %company_name% est disponible gratuitement sur l'App Store et Google Play. Recherchez '%company_name%' et téléchargez l'application officielle."
+          
+    transfers:
+      title: "Virements et Paiements"
+      questions:
+        domestic_transfer:
+          question: "Comment effectuer un virement national ?"
+          answer: "Connectez-vous à votre espace client ou utilisez l'application mobile. Sélectionnez 'Virements' et suivez les étapes guidées."
+        international_transfer:
+          question: "Puis-je faire des virements internationaux ?"
+          answer: "Oui, nous proposons des virements SEPA et internationaux avec des frais préférentiels pour nos clients premium."
+        transfer_limits:
+          question: "Quelles sont les limites de virement ?"
+          answer: "Les limites varient selon votre type de compte. Par défaut : 3000€/jour pour les virements en ligne, personnalisables selon vos besoins."
+        payment_cards:
+          question: "Comment commander une nouvelle carte ?"
+          answer: "Rendez-vous dans votre espace client, section 'Mes cartes', et cliquez sur 'Commander une carte'. La livraison prend 5-7 jours ouvrés."
+          
+    security:
+      title: "Sécurité et Authentification"
+      questions:
+        two_factor:
+          question: "Comment activer l'authentification à deux facteurs ?"
+          answer: "Dans vos paramètres de sécurité, activez l'option '2FA'. Vous pouvez utiliser une application d'authentification ou SMS."
+        password_reset:
+          question: "J'ai oublié mon mot de passe, que faire ?"
+          answer: "Cliquez sur 'Mot de passe oublié' sur la page de connexion. Vous recevrez un email pour réinitialiser votre mot de passe."
+        account_blocked:
+          question: "Mon compte est bloqué, comment le débloquer ?"
+          answer: "Contactez immédiatement notre service client au Téléphone ou via le chat en ligne pour débloquer votre compte rapidement."
+        fraud_prevention:
+          question: "Comment vous protégez-vous contre la fraude ?"
+          answer: "Nous utilisons des systèmes de détection avancés, chiffrement SSL, et surveillance 24/7 pour protéger vos transactions."
+          
+    credits:
+      title: "Crédits et Financements"
+      questions:
+        credit_application:
+          question: "Comment faire une demande de crédit ?"
+          answer: "Utilisez notre simulateur en ligne pour estimer votre capacité d'emprunt, puis soumettez votre demande avec les documents requis."
+        credit_types:
+          question: "Quels types de crédits proposez-vous ?"
+          answer: "Crédit personnel, crédit auto, crédit immobilier, crédit travaux, et solutions de financement professionnel."
+        approval_time:
+          question: "Combien de temps pour une réponse de crédit ?"
+          answer: "Réponse de principe sous 48h pour les crédits personnels, 7-15 jours pour l'immobilier selon la complexité du dossier."
+        early_repayment:
+          question: "Puis-je rembourser mon crédit par anticipation ?"
+          answer: "Oui, le remboursement anticipé est possible avec des conditions préférentielles détaillées dans votre contrat de crédit."
+          
+    technical:
+      title: "Support Technique"
+      questions:
+        app_issues:
+          question: "L'application ne fonctionne pas, que faire ?"
+          answer: "Vérifiez votre connexion internet, redémarrez l'app, ou mettez-la à jour. Si le problème persiste, contactez le support."
+        browser_compatibility:
+          question: "Quels navigateurs sont compatibles ?"
+          answer: "Chrome, Firefox, Safari, Edge dans leurs versions récentes. Évitez Internet Explorer pour une expérience optimale."
+        data_security:
+          question: "Mes données sont-elles sécurisées ?"
+          answer: "Absolument. Nous respectons le RGPD, chiffrons toutes les données, et ne partageons jamais vos informations personnelles."
+        maintenance:
+          question: "Quand ont lieu les maintenances ?"
+          answer: "Les maintenances programmées ont lieu généralement le dimanche entre 2h et 6h du matin, avec notification préalable."
+          
+    contact:
+      title: "Contact et Agences"
+      questions:
+        customer_service:
+          question: "Comment contacter le service client ?"
+          answer: "Téléphone : Téléphone (7j/7, 8h-20h), Chat en ligne sur le site, Email : Email"
+        branch_appointment:
+          question: "Comment prendre rendez-vous en agence ?"
+          answer: "Réservez en ligne via votre espace client, par téléphone, ou directement en agence selon vos disponibilités."
+        complaint:
+          question: "Comment déposer une réclamation ?"
+          answer: "Formulaire de réclamation dans votre espace client, par courrier, ou auprès de votre conseiller habituel."
+        opening_hours:
+          question: "Quels sont les horaires d'ouverture ?"
+          answer: "Lun-Ven : 9h-17h, Sam : 9h-12h. Horaires étendus pour certaines agences. Vérifiez les horaires spécifiques sur notre site."

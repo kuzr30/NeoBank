@@ -1,0 +1,93 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ page_title }} | SEDEF BANK{% endblock %}
+
+{% block meta_description %}{{ meta_description }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/insurance.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="confirmation-page">
+    <div class="container">
+        <div class="confirmation-card">
+            <div class="confirmation-icon">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+            </div>
+            
+            <h1>{{ tp('devis_confirmation.title', [], 'devis') }}</h1>
+            
+            <p>{{ tp('devis_confirmation.description', {'insurance_type': tp(demande.typeAssurance.getLabel(), [], 'enums')}, 'devis') }}</p>
+            
+           
+            
+            <div style="background: #f8fafc; padding: 2rem; border-radius: 1rem; margin: 2rem 0; text-align: left;">
+                <h3 style="color: #1e293b; margin-bottom: 1rem;">{{ tp('devis_confirmation.summary_title', [], 'devis') }}</h3>
+                <div style="display: grid; gap: 1rem;">
+                    <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #e2e8f0;">
+                        <span style="font-weight: 600;">{{ tp('devis_confirmation.summary.insurance_type', [], 'devis') }} :</span>
+                        <span>{{ tp(demande.typeAssurance.getLabel(), [], 'enums') }}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #e2e8f0;">
+                        <span style="font-weight: 600;">{{ tp('devis_confirmation.summary.full_name', [], 'devis') }} :</span>
+                        <span>{{ demande.nomComplet }}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #e2e8f0;">
+                        <span style="font-weight: 600;">{{ tp('devis_confirmation.summary.email', [], 'devis') }} :</span>
+                        <span>{{ demande.email }}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #e2e8f0;">
+                        <span style="font-weight: 600;">{{ tp('devis_confirmation.summary.phone', [], 'devis') }} :</span>
+                        <span>{{ demande.telephone }}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #e2e8f0;">
+                        <span style="font-weight: 600;">{{ tp('devis_confirmation.summary.contact_preference', [], 'devis') }} :</span>
+                        <span>{{ demande.preferenceContactLabel }}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 0.5rem 0;">
+                        <span style="font-weight: 600;">{{ tp('devis_confirmation.summary.request_date', [], 'devis') }} :</span>
+                        <span>{{ demande.createdAt|date('d/m/Y') }}</span>
+                    </div>
+                </div>
+            </div>
+            
+                        <div style="background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%); padding: 1.5rem; border-radius: 1rem; margin: 2rem 0; color: white; text-align: center;">
+                <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">{{ tp('devis_confirmation.next_steps_title', [], 'devis') }}</h3>
+                <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+                    <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                        <span style="background: rgba(255,255,255,0.2); width: 2rem; height: 2rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold;">1</span>
+                        {{ tp('devis_confirmation.next_steps.step1', [], 'devis') }}
+                    </li>
+                    <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                        <span style="background: rgba(255,255,255,0.2); width: 2rem; height: 2rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold;">2</span>
+                        {{ tp('devis_confirmation.next_steps.step2', [], 'devis') }}
+                    </li>
+                    <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                        <span style="background: rgba(255,255,255,0.2); width: 2rem; height: 2rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold;">3</span>
+                        {{ tp('devis_confirmation.next_steps.step3', [], 'devis') }}
+                    </li>
+                </ul>
+            </div>
+            
+            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                <a href="{{ path('services_insurances') }}" class="btn btn-secondary">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                    {{ tp('devis_confirmation.other_insurances', [], 'devis') }}
+                </a>
+                <a href="{{ path('home_index') }}" class="btn btn-primary">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                    </svg>
+                    {{ tp('devis_confirmation.back_to_home', [], 'devis') }}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

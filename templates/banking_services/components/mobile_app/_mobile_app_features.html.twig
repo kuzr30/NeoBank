@@ -1,0 +1,292 @@
+<!-- Features Section -->
+<section class="features" id="features">
+    <div class="features__container">
+        <div class="features__header">
+            <h2 class="features__title">{{ tp('mobile_app.features.title', [], 'mobile_app') }}</h2>
+            <p class="features__subtitle">
+                {{ tp('mobile_app.features.subtitle', [], 'mobile_app') }}
+            </p>
+        </div>
+        
+        <div class="features__grid">
+            <div class="features__item">
+                <div class="features__item-icon">
+                    {{ ux_icon('heroicons:banknotes', {'class': 'features__icon'}) }}
+                </div>
+                <h3 class="features__item-title">{{ tp('mobile_app.features.items.instant_transfers.title', [], 'mobile_app') }}</h3>
+                <p class="features__item-desc">
+                    {{ tp('mobile_app.features.items.instant_transfers.description', [], 'mobile_app') }}
+                </p>
+            </div>
+            
+            <div class="features__item">
+                <div class="features__item-icon">
+                    {{ ux_icon('heroicons:chart-pie', {'class': 'features__icon'}) }}
+                </div>
+                <h3 class="features__item-title">{{ tp('mobile_app.features.items.expense_analysis.title', [], 'mobile_app') }}</h3>
+                <p class="features__item-desc">
+                    {{ tp('mobile_app.features.items.expense_analysis.description', [], 'mobile_app') }}
+                </p>
+            </div>
+            
+            <div class="features__item">
+                <div class="features__item-icon">
+                    {{ ux_icon('heroicons:bell-alert', {'class': 'features__icon'}) }}
+                </div>
+                <h3 class="features__item-title">{{ tp('mobile_app.features.items.smart_notifications.title', [], 'mobile_app') }}</h3>
+                <p class="features__item-desc">
+                    {{ tp('mobile_app.features.items.smart_notifications.description', [], 'mobile_app') }}
+                </p>
+            </div>
+            
+            <div class="features__item">
+                <div class="features__item-icon">
+                    {{ ux_icon('heroicons:credit-card', {'class': 'features__icon'}) }}
+                </div>
+                <h3 class="features__item-title">{{ tp('mobile_app.features.items.virtual_cards.title', [], 'mobile_app') }}</h3>
+                <p class="features__item-desc">
+                    {{ tp('mobile_app.features.items.virtual_cards.description', [], 'mobile_app') }}
+                </p>
+            </div>
+            
+            <div class="features__item">
+                <div class="features__item-icon">
+                    {{ ux_icon('heroicons:building-library', {'class': 'features__icon'}) }}
+                </div>
+                <h3 class="features__item-title">{{ tp('mobile_app.features.items.automatic_savings.title', [], 'mobile_app') }}</h3>
+                <p class="features__item-desc">
+                    {{ tp('mobile_app.features.items.automatic_savings.description', [], 'mobile_app') }}
+                </p>
+            </div>
+            
+            <div class="features__item">
+                <div class="features__item-icon">
+                    {{ ux_icon('heroicons:globe-europe-africa', {'class': 'features__icon'}) }}
+                </div>
+                <h3 class="features__item-title">{{ tp('mobile_app.features.items.multi_currency.title', [], 'mobile_app') }}</h3>
+                <p class="features__item-desc">
+                    {{ tp('mobile_app.features.items.multi_currency.description', [], 'mobile_app') }}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* =================================================================
+   MOBILE APP - FEATURES SECTION
+   ================================================================= */
+
+/* Block: features */
+.features {
+    padding: 6rem 0;
+    background: var(--color-background);
+    position: relative;
+}
+
+.features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    opacity: 0.5;
+}
+
+/* Element: features__container */
+.features__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Element: features__header */
+.features__header {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Element: features__title */
+.features__title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+/* Element: features__subtitle */
+.features__subtitle {
+    font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* Element: features__grid */
+.features__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+/* Element: features__item */
+.features__item {
+    background: white;
+    border-radius: 1.25rem;
+    padding: 2.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.features__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #e55a2b 0%, #fbbf24 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.features__item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+}
+
+.features__item:hover::before {
+    transform: scaleX(1);
+}
+
+/* Element: features__item-icon */
+.features__item-icon {
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.features__item-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 3rem;
+    height: 3rem;
+    background: radial-gradient(circle, #e55a2b 0%, transparent 70%);
+    opacity: 0.2;
+    border-radius: 50%;
+}
+
+/* Element: features__icon */
+.features__icon {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+/* Element: features__item-title */
+.features__item-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+/* Element: features__item-desc */
+.features__item-desc {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .features {
+        padding: 4rem 0;
+    }
+    
+    .features__grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    
+    .features__item {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .features {
+        padding: 3rem 0;
+    }
+    
+    .features__container {
+        padding: 0 1.5rem;
+    }
+    
+    .features__header {
+        margin-bottom: 3rem;
+    }
+    
+    .features__grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .features__item {
+        padding: 1.5rem;
+    }
+    
+    .features__item-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    
+    .features__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .features__container {
+        padding: 0 1rem;
+    }
+    
+    .features__item {
+        padding: 1.25rem;
+    }
+    
+    .features__item-title {
+        font-size: 1.25rem;
+    }
+    
+    .features__item-desc {
+        font-size: 0.9375rem;
+    }
+}
+</style>

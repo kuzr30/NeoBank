@@ -1,0 +1,20 @@
+credit_workflow_service:
+  admin_notes:
+    approved: "Antrag genehmigt am {date}"
+    rejected: "Antrag abgelehnt am {date}"
+    contract_generated: "Vertrag erstellt und gesendet am {date}"
+    contract_signed: "Vertrag vom Kunden unterzeichnet am {date}"
+    contract_admin_signed: "Vertrag vom Administrator als unterzeichnet markiert am {date}"
+    contract_validated: "Vertrag vom Administrator validiert am {date}"
+    funds_released: "Mittel freigegeben am {date}"
+    
+  exceptions:
+    contract_not_validated: "Der Vertrag muss validiert werden, bevor die Mittel freigegeben werden können."
+    user_not_found: "Benutzer nicht gefunden für E-Mail: {email}"
+    main_account_not_found: "Hauptkonto nicht gefunden für Benutzer: {email}"
+    
+  transaction_descriptions:
+    credit_release: "Kreditfreigabe - Vertrag {contractNumber}"
+    
+  log_messages:
+    contract_generation_error: "Fehler bei Vertragserstellung für Antrag #{id}: {error}"

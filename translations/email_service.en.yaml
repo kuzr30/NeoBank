@@ -1,0 +1,15 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_service.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+log_messages:
+  success: "Email envoyé avec succès"
+  error: "Erreur lors de l'envoi de l'email"
+  exception: "Exception lors de l'envoi de l'email"
+  verification_sent: "Email de vérification envoyé avec succès"
+  verification_failed: "Erreur lors de l'envoi de l'email de vérification"
+  code_sent: "Code de vérification envoyé"
+  code_failed: "Erreur lors de l'envoi du code de vérification"
+  template_processed: "Template d'email traité avec succès"
+  template_error: "Erreur lors du traitement du template d'email"

@@ -1,0 +1,27 @@
+email_email_verification:
+  title: "Validierung Ihrer neuen E-Mail-Adresse - %company_name%"
+  content:
+    page_title: "Validierung Ihrer neuen E-Mail-Adresse"
+    greeting: "Hallo <strong>{firstName}</strong>,"
+    intro: "Sie haben beantragt, die E-Mail-Adresse Ihres %company_name%-Kontos zu ändern."
+    new_email:
+      title: "Neue E-Mail-Adresse"
+      label: "Neue Adresse:"
+      value: "{newEmail}"
+    instruction: "Um diese Änderung zu bestätigen und Ihre neue E-Mail-Adresse zu validieren, klicken Sie auf die Schaltfläche unten:"
+    button_text: "Meine E-Mail-Adresse validieren"
+    warning:
+      title: "⏰ Temporärer Link"
+      description: "<strong>Wichtig:</strong> Dieser Validierungslink läuft am <strong>{expirationDate}</strong> ab. Nach diesem Datum müssen Sie eine neue Änderungsanfrage stellen."
+    security:
+      title: "Sicherheit"
+      description: "Falls Sie diese E-Mail-Adressänderung nicht beantragt haben, ignorieren Sie diese E-Mail und loggen Sie sich sofort in Ihr Konto ein, um Ihre Sicherheit zu überprüfen."
+    manual_link: "Falls die Schaltfläche nicht funktioniert, können Sie diesen Link kopieren und in Ihren Browser einfügen:"
+    signature: "Mit freundlichen Grüßen,<br><strong>Das %company_name%-Team</strong>"
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Versendung der E-Mail-Adress-Verifizierungs-E-Mail"
+    success: "Verifizierungs-E-Mail erfolgreich versendet"
+    error: "Fehler beim Versenden der Verifizierungs-E-Mail"
+    send_failed: "Versenden der Verifizierungs-E-Mail fehlgeschlagen"

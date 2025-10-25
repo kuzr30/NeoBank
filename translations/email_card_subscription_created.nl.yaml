@@ -1,0 +1,31 @@
+email_card_subscription_created:
+  title: "Kaartaanvraag geregistreerd"
+  
+  content:
+    page_title: "Uw kaartaanvraag is geregistreerd"
+    greeting: "Beste %firstName% %lastName%,"
+    
+    confirmation:
+      title: "Aanvraag succesvol geregistreerd"
+      description: "We hebben uw kaartaanvraag ontvangen. Deze wordt momenteel onderzocht door onze teams."
+    
+    card_details:
+      title: "Details van uw aanvraag"
+      type: "Kaarttype"
+      reference: "Aanvraagreferentie"
+      request_date: "Aanvraagdatum"
+    
+    next_steps:
+      title: "Volgende stappen"
+      step1: "Onderzoek van uw dossier door onze teams (2-3 werkdagen)"
+      step2: "Administratieve validatie en verificatie van voorwaarden"
+      step3: "E-mailnotificatie van het onderzoeksresultaat"
+    
+    timeline:
+      title: "Volg uw aanvraag"
+      access_button: "Naar mijn ruimte"
+      processing_time: "Gebruikelijke verwerkingstijd: 2 tot 3 werkdagen"
+    
+    assistance: "Onze klantenservice blijft ter beschikking voor alle vragen betreffende uw aanvraag."
+    
+    footer: "Deze e-mail werd automatisch verzonden door uw bank. <br><strong>Dank u voor uw vertrouwen.</strong>"

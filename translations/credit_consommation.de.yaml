@@ -1,0 +1,104 @@
+credit_consommation:
+  page:
+    title: "Verbraucherkredit"
+    description: "Finanzieren Sie Ihre persönlichen Projekte mit unserem Verbraucherkredit. Günstige Zinsen und flexible Rückzahlung."
+
+  hero:
+    title: "Verbraucherkredit"
+    subtitle: "Verwirklichen Sie alle Ihre persönlichen Projekte"
+    values:
+      taux: "{rate}% effektiver Jahreszins*"
+      montant: "75.000€"
+      duree: "10 Jahre"
+
+  section_1:
+    title: "Was ist ein Verbraucherkredit?"
+    content:
+      paragraph_1: "Der Verbraucherkredit ermöglicht es Ihnen, alle Ihre persönlichen Projekte zu finanzieren: Autokauf, Hausausstattung, Reise, Hochzeit oder jede andere wichtige Ausgabe."
+      paragraph_2: "Als flexible und schnelle Lösung gibt Ihnen dieser zweckfreie Kredit die Freiheit, die Mittel nach Ihren Wünschen zu verwenden, ohne deren Verwendung rechtfertigen zu müssen."
+
+  features:
+    montant: "Von 2.000€ bis 75.000€"
+    montant_detail: "Je nach Ihren Bedürfnissen"
+    duree: "Von 12 Monaten bis 10 Jahre"
+    duree_detail: "Angepasste Rückzahlung"
+    taux: "Ab {rate}% effektiver Jahreszins*"
+    taux_detail: "Garantiert wettbewerbsfähiger Zinssatz"
+    garantie: "Ohne Sicherheit"
+    garantie_detail: "Nur auf Unterschrift"
+
+  advantages:
+    liberte_usage:
+      title: "Verwendungsfreiheit:"
+      text: "Keine Rechtfertigung der Mittelverwendung"
+    reponse_rapide:
+      title: "Schnelle Antwort:"
+      text: "Entscheidung binnen 48h und sofortige Freigabe"
+    sans_garantie:
+      title: "Ohne Sicherheit:"
+      text: "Finanzierung nur auf Unterschrift"
+    remboursement_anticipe:
+      title: "Vorzeitige Rückzahlung:"
+      text: "Jederzeit ohne Strafen möglich"
+    mensualites_fixes:
+      title: "Feste Monatsraten:"
+      text: "Budget über die gesamte Laufzeit kontrolliert"
+
+  requirements:
+    conditions_octroi:
+      title: "Bewilligungsbedingungen"
+      items:
+        majeur: "Volljährig sein und in Deutschland wohnen"
+        revenus: "Regelmäßige Einkommen nachweisen"
+        endettement: "Verschuldungsquote unter 35%"
+        incidents: "Keine Zahlungsvorfälle"
+    criteres_eligibilite:
+      title: "Berechtigungskriterien"
+      items:
+        contrat: "Unbefristeter Vertrag, befristeter Vertrag oder freiberuflich"
+        anciennete: "Mindestens 6 Monate Berufserfahrung"
+        capacite: "Nachgewiesene Rückzahlungsfähigkeit"
+        age: "Höchstalter 75 Jahre bei Kreditende"
+
+  documents:
+    pieces_identite:
+      title: "Ausweisdokumente"
+      items:
+        carte: "Personalausweis oder Reisepass"
+        domicile: "Aktueller Wohnsitznachweis"
+        livret: "Familienbuch falls verheiratet"
+    justificatifs_revenus:
+      title: "Einkommensnachweise"
+      items:
+        bulletins: "Die letzten 3 Gehaltsabrechnungen"
+        avis: "Letzter Steuerbescheid"
+        contrat: "Arbeitsvertrag"
+        attestation: "Arbeitgeberbescheinigung"
+    informations_bancaires:
+      title: "Bankinformationen"
+      items:
+        releves: "Die letzten 3 Kontoauszüge"
+        rib: "Kontoverbindung des Domizilkontos"
+        tableau: "Tilgungsplan laufender Kredite"
+
+  legal:
+    title: "Wichtige rechtliche Informationen"
+    taeg:
+      title: "*Effektiver Jahreszins:"
+      text: "Repräsentatives Beispiel: Für einen Verbraucherkredit von 15.000€ über 60 Monate mit einem effektiven Jahreszins von 4,5% zahlen Sie 60 Monatsraten von 279€, also einen Gesamtbetrag von 16.740€ (Kreditkosten: 1.740€)."
+    retractation:
+      title: "Widerrufsfrist:"
+      text: "Sie haben 14 Tage Zeit, um von Ihrem Kredit zurückzutreten."
+    remboursement:
+      title: "Vorzeitige Rückzahlung:"
+      text: "Jederzeit möglich, Gebühren gesetzlich begrenzt."
+    assurance:
+      title: "Versicherung:"
+      text: "Optional, aber empfohlen zur Absicherung Ihrer Rückzahlungen."
+    fichage:
+      title: "Registrierung:"
+      text: "Bei Zahlungsausfall riskieren Sie eine Eintragung in die Dateien der Deutschen Bundesbank."
+
+  cta:
+    title: "Verwirklichen Sie Ihre Projekte"
+    subtitle: "Erhalten Sie Ihren Verbraucherkredit schnell und einfach"

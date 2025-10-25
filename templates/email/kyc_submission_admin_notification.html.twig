@@ -1,0 +1,118 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_kyc_submission_admin_notification.title', {}, 'email_kyc_submission_admin_notification') }}{% endblock %}
+
+{% block tagline %}{{ tp('email_kyc_submission_admin_notification.tagline', {}, 'email_kyc_submission_admin_notification') }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('email_kyc_submission_admin_notification.content.page_title', {}, 'email_kyc_submission_admin_notification') }}</h2>
+    
+    <p class="content-text">
+        {{ tp('email_kyc_submission_admin_notification.content.greeting', {firstName: admin.firstName}, 'email_kyc_submission_admin_notification')|raw }}
+    </p>
+
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ tp('email_kyc_submission_admin_notification.content.priority.title', {}, 'email_kyc_submission_admin_notification') }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {{ tp('email_kyc_submission_admin_notification.content.priority.message', {}, 'email_kyc_submission_admin_notification') }}
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_kyc_submission_admin_notification.content.client_profile.title', {}, 'email_kyc_submission_admin_notification') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 12px 16px; background: #f8f9fa; font-weight: 600; color: #495057; width: 35%; border-right: 1px solid #e9ecef;">{{ tp('email_kyc_submission_admin_notification.content.client_profile.identity', {}, 'email_kyc_submission_admin_notification') }}</td>
+                <td style="padding: 12px 16px; font-weight: 500;">{{ user.firstName }} {{ user.lastName }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px 16px; background: #f8f9fa; font-weight: 600; color: #495057; border-right: 1px solid #e9ecef;">{{ tp('email_kyc_submission_admin_notification.content.client_profile.email', {}, 'email_kyc_submission_admin_notification') }}</td>
+                <td style="padding: 12px 16px;">{{ user.email }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px 16px; background: #f8f9fa; font-weight: 600; color: #495057; border-right: 1px solid #e9ecef;">{{ tp('email_kyc_submission_admin_notification.content.client_profile.account_status', {}, 'email_kyc_submission_admin_notification') }}</td>
+                <td style="padding: 12px 16px;">
+                    <span style="background: #fff3cd; color: #856404; padding: 4px 8px; border-radius: 12px; font-size: 13px; font-weight: 600;">{{ tp('email_kyc_submission_admin_notification.content.client_profile.pending_status', {}, 'email_kyc_submission_admin_notification') }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 12px 16px; background: #f8f9fa; font-weight: 600; color: #495057; border-right: 1px solid #e9ecef;">{{ tp('email_kyc_submission_admin_notification.content.client_profile.submission_date', {}, 'email_kyc_submission_admin_notification') }}</td>
+                <td style="padding: 12px 16px; color: #1976d2; font-weight: 600;">{{ submission.submittedAt|date('d/m/Y à H:i') }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #2e7d32;">{{ tp('email_kyc_submission_admin_notification.content.documents.title', {}, 'email_kyc_submission_admin_notification') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            {% for document in submission.documents %}
+            <tr>
+                <td style="padding: 10px 16px; border-bottom: 1px solid #e8f5e8; font-weight: 500;">
+                    <span style="display: inline-block; width: 8px; height: 8px; background: #2e7d32; border-radius: 50%; margin-right: 10px;"></span>
+                    {{ document|kyc_document_type_label }}
+                </td>
+                <td style="padding: 10px 16px; border-bottom: 1px solid #e8f5e8; text-align: right; color: #2e7d32; font-weight: 500;">
+                    {{ tp('email_kyc_submission_admin_notification.content.documents.downloaded_status', {}, 'email_kyc_submission_admin_notification') }}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_kyc_submission_admin_notification.content.actions.title', {}, 'email_kyc_submission_admin_notification') }}</h3>
+        <table style="width: 100%; border-spacing: 12px 0;">
+            <tr>
+                <td style="width: 50%; padding: 0;">
+                    <a href="{{ url('admin_kyc_submissions') }}" 
+                       style="display: block; background: linear-gradient(135deg, #2e7d32 0%, #388e3c 100%); color: white; text-decoration: none; padding: 14px 20px; border-radius: 8px; font-weight: 600; text-align: center; box-shadow: 0 2px 4px rgba(46, 125, 50, 0.3);">
+                        {{ tp('email_kyc_submission_admin_notification.content.actions.examine_request', {}, 'email_kyc_submission_admin_notification') }}
+                    </a>
+                </td>
+                <td style="width: 50%; padding: 0;">
+                    <a href="{{ url('admin_kyc_submissions') }}" 
+                       style="display: block; background: linear-gradient(135deg, #1976d2 0%, #2196f3 100%); color: white; text-decoration: none; padding: 14px 20px; border-radius: 8px; font-weight: 600; text-align: center; box-shadow: 0 2px 4px rgba(25, 118, 210, 0.3);">
+                        {{ tp('email_kyc_submission_admin_notification.content.actions.kyc_dashboard', {}, 'email_kyc_submission_admin_notification') }}
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <p style="margin: 15px 0 0; font-size: 14px; color: #666; text-align: center;">
+            {{ tp('email_kyc_submission_admin_notification.content.actions.processing_time', {}, 'email_kyc_submission_admin_notification')|raw }}
+        </p>
+    </div>
+
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ tp('email_kyc_submission_admin_notification.content.checklist.title', {}, 'email_kyc_submission_admin_notification') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 10px 16px; background: #fff8e1; border-left: 4px solid #f57c00; border-bottom: 1px solid #ffcc02;">
+                    <strong>{{ tp('email_kyc_submission_admin_notification.content.checklist.verify_authenticity', {}, 'email_kyc_submission_admin_notification') }}</strong>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 16px; background: #f9f9f9; border-left: 4px solid #f57c00; border-bottom: 1px solid #ffcc02;">
+                    <strong>{{ tp('email_kyc_submission_admin_notification.content.checklist.check_consistency', {}, 'email_kyc_submission_admin_notification') }}</strong>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 16px; background: #fff8e1; border-left: 4px solid #f57c00; border-bottom: 1px solid #ffcc02;">
+                    <strong>{{ tp('email_kyc_submission_admin_notification.content.checklist.regulatory_checks', {}, 'email_kyc_submission_admin_notification') }}</strong>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 16px; background: #f9f9f9; border-left: 4px solid #f57c00;">
+                    <strong>{{ tp('email_kyc_submission_admin_notification.content.checklist.document_decision', {}, 'email_kyc_submission_admin_notification') }}</strong>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p class="content-text">
+        {{ tp('email_kyc_submission_admin_notification.content.support_info', {}, 'email_kyc_submission_admin_notification') }}
+    </p>
+
+    <p class="footer-text">
+        {{ tp('email_kyc_submission_admin_notification.content.footer', {}, 'email_kyc_submission_admin_notification')|raw }}
+    </p>
+{% endblock %}

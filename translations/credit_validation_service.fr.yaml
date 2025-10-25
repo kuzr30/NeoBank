@@ -1,0 +1,23 @@
+credit_validation_service:
+  validation_errors:
+    amount_min: "Le montant minimum est de %s €"
+    amount_max: "Le montant maximum est de %s €"
+    duration_min: "La durée minimum est de %d mois"
+    duration_max: "La durée maximum est de %d mois (%d ans)"
+    
+  credit_type_errors:
+    immobilier:
+      amount_min: "Le montant minimum pour un crédit immobilier est de 10 000 €"
+      duration_max: "La durée maximum pour un crédit immobilier est de 25 ans"
+    auto:
+      amount_max: "Le montant maximum pour un crédit auto est de 80 000 €"
+      duration_max: "La durée maximum pour un crédit auto est de 7 ans"
+    consommation:
+      amount_max: "Le montant maximum pour un crédit à la consommation est de 75 000 €"
+      duration_max: "La durée maximum pour un crédit à la consommation est de 7 ans"
+    travaux:
+      amount_max: "Le montant maximum pour un crédit travaux est de 150 000 €"
+      duration_max: "La durée maximum pour un crédit travaux est de 10 ans"
+    professionnel:
+      amount_min: "Le montant minimum pour un crédit professionnel est de 5 000 €"
+      duration_max: "La durée maximum pour un crédit professionnel est de 15 ans"

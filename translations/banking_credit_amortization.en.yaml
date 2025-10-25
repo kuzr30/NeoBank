@@ -1,0 +1,36 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_credit_amortization.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_credit_amortization:
+  header:
+    title: "Amortization schedule"
+  
+  navigation:
+    back_to_credits: "Back to credits"
+  
+  loan_info:
+    initial_amount: "Initial amount"
+    interest_rate: "Interest rate"
+    duration: "Duration"
+    monthly_payment: "Monthly payment"
+    months: "months"
+  
+  summary:
+    remaining_capital: "Remaining capital"
+    remaining_payments: "Remaining payments"
+  
+  table:
+    title: "Detailed schedule"
+    payment_number: "Payment"
+    date: "Date"
+    monthly_payment: "Monthly payment"
+    principal: "Principal"
+    interest: "Interest"
+    remaining_balance: "Remaining balance"
+    total: "Total"
+  
+  actions:
+    print: "Print"
+    export_pdf: "Export PDF"

@@ -1,0 +1,21 @@
+card_opposition:
+  # Page d'urgence
+  emergency:
+    title: "Opposition d'urgence"
+    subtitle: "Bloquez votre carte immédiatement"
+    select_card: "Sélectionnez votre carte :"
+    reason_label: "Motif :"
+    submit_button: "BLOQUER LA CARTE IMMÉDIATEMENT"
+    
+  # Création d'opposition
+  create:
+    title: "Déclaration d'opposition"
+    form_subtitle: "Formulaire de déclaration d'opposition sur carte bancaire"
+    
+  # Index
+  index:
+    title: "Gestion des oppositions"
+    active_cards: "Cartes actives"
+    opposition_history: "Historique des oppositions"
+    no_active_cards: "Aucune carte active"
+    no_opposition_history: "Aucun historique d'opposition"

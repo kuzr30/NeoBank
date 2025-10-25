@@ -1,0 +1,52 @@
+profile_kyc_status:
+  page:
+    title: "Status van mijn identiteitsverificatie"
+  
+  header:
+    title: "Detail van mijn KYC-aanvraag"
+  
+  info:
+    request_status: "Status van de aanvraag"
+    submitted_on: "Ingediend op"
+  
+  status_badges:
+    pending: "Wachtend op validatie"
+    approved: "Goedgekeurd"
+    rejected: "Afgewezen"
+  
+  timeline:
+    title: "Opvolging van de aanvraag"
+    documents_submitted: "Documenten ingediend"
+    under_review: "In behandeling"
+    under_review_message: "Ons team bekijkt uw documenten..."
+    approved: "Aanvraag goedgekeurd"
+    rejected: "Aanvraag afgewezen"
+    processed_by: "Door"
+  
+  documents:
+    title: "Ingediende documenten"
+    sent_on: "Verstuurd op"
+  
+  admin_notes:
+    title: "Opmerkingen van ons team"
+  
+  actions:
+    back: "Terug"
+    resubmit_documents: "Nieuwe documenten indienen"
+    access_banking: "Toegang tot mijn bankdiensten"
+  
+  status:
+    pending:
+      title: "Verificatie in behandeling"
+      message: "Uw aanvraag wordt momenteel beoordeeld door ons team. U wordt per e-mail op de hoogte gesteld zodra de verificatie is voltooid."
+      estimated_time: "Geschatte wachttijd: 24-48 uur"
+    
+    approved:
+      title: "Verificatie goedgekeurd"
+      message: "Gefeliciteerd! Uw identiteit is succesvol geverifieerd. U hebt nu toegang tot al onze diensten."
+      completion_date: "Goedkeuringsdatum"
+    
+    rejected:
+      title: "Verificatie afgewezen"
+      message: "Uw verificatieverzoek is afgewezen. Bekijk de opmerkingen hieronder en dien nieuwe documenten in."
+      reason: "Reden voor afwijzing"

@@ -1,0 +1,318 @@
+title: "Contrat d'Assurance N° %contract_number%"
+contract_title: "CONTRAT D'ASSURANCE"
+
+# En-tête
+header:
+  logo_alt: "Logo %company_name%"
+  contract_number: "CONTRAT N° %contract_number%"
+
+# Section principale
+main:
+  logo_alt: "Logo %company_name%"
+
+# Informations entreprise
+company_info:
+  title: "Informations entreprise et référence contrat"
+  establishment: "Établissement Financier - Assurances"
+  contract_number: "CONTRAT N° %number%"
+  establishment_date: "Date d'établissement : %date%"
+  signature_date: "Date de signature : %date%"
+activation_date: "Date d'activation : %date%"
+expiration_date: "Date d'expiration : %date%"
+
+# Chapitre I - Les Parties Contractantes
+chapter_1:
+  title: "Chapitre I - Les Parties Contractantes"
+  insurer:
+    title: "L'Assureur"
+    establishment: "Établissement Financier"
+    capital: "Capital social : %capital% €"
+    headquarters: "Siège Social : %address%"
+    siren: "SIREN : %siren%"
+    ape: "Code APE : %ape%"
+    represented: "Représentée par son Directeur Général"
+    designation: "Ci-après dénommée \"L'Assureur\""
+  insured:
+    title: "L'Assuré"
+    residing: "Demeurant :"
+    address_placeholder: "[Adresse à compléter]"
+    born: "Né(e) le : %date%"
+    phone: "Téléphone : %phone%"
+    email: "Email : %email%"
+    quote_number: "N° de devis : %number%"
+    designation: "Ci-après dénommé(e) \"L'Assuré\""
+  agreement: "Les parties aux présentes ont convenu et arrêté ce qui suit"
+
+# Chapitre II - Objet et Garanties
+chapter_2:
+  title: "Chapitre II - Objet et Garanties"
+  article_1:
+    title: "Article 1 - Objet du Contrat"
+    paragraph_1: "Le présent contrat d'assurance a pour objet de garantir à l'Assuré, moyennant le paiement des primes et contributions convenues, la prise en charge des conséquences pécuniaires résultant de la réalisation des risques définis aux présentes conditions générales et particulières."
+    paragraph_2: "L'Assureur s'engage, dans les limites des garanties souscrites et des plafonds convenus, à indemniser l'Assuré ou ses ayants droit des préjudices subis du fait de la survenance d'un sinistre entrant dans le champ d'application du présent contrat d'assurance %insurance_type%."
+    paragraph_3: "Les garanties sont accordées selon les modalités, conditions, limites, exclusions et franchises définies aux présentes, sous réserve du paiement effectif des primes aux échéances convenues et du respect par l'Assuré de ses obligations contractuelles."
+  article_2:
+    title: "Article 2 - Durée et Prise d'Effet"
+    duration_label: "Durée du contrat :"
+    duration_text: "Le présent contrat d'assurance est souscrit pour une durée de %duration% mois, prenant effet le %start_date% à zéro heure et expirant le %end_date% à vingt-quatre heures, sauf résiliation anticipée dans les conditions prévues aux présentes."
+    renewal_label: "Reconduction :"
+    renewal_text: "Sauf dénonciation par l'une des parties moyennant un préavis de deux mois avant l'échéance, le contrat se renouvelle tacitement pour des périodes successives d'une année, aux conditions en vigueur à la date de renouvellement."
+    effective_label: "Prise d'effet des garanties :"
+    effective_text: "Les garanties prennent effet à la date indiquée ci-dessus, sous réserve du paiement effectif de la première prime ou fraction de prime et des frais de dossier éventuels. En cas de défaut de paiement, les garanties sont suspendues de plein droit."
+    territory_label: "Territoire de garantie :"
+    territory_text: "Les garanties s'exercent dans les limites géographiques de l'Union Européenne, sauf dispositions contraires expressément prévues aux conditions particulières."
+  article_3:
+    title: "Article 3 - Garanties Accordées"
+    definition_label: "Définition des garanties :"
+    definition_text: "L'Assureur accorde à l'Assuré les garanties ci-après définies, dans les limites des plafonds, franchises et conditions stipulées aux présentes conditions générales et particulières."
+    coverage_label: "Étendue des couvertures :"
+    coverage_text: "Les garanties sont valables pour les sinistres survenus pendant la période de validité du contrat, déclarés dans les délais prescrits et résultant d'événements non exclus des présentes conditions."
+  guarantees:
+    auto:
+      civil_liability: "Responsabilité Civile obligatoire"
+      defense_recourse: "Défense et Recours"
+      all_accidents: "Dommages tous accidents"
+      theft_fire: "Vol et incendie"
+      glass_breakage: "Bris de glaces"
+      assistance: "Assistance 24h/24"
+    home:
+      fire_explosion: "Incendie et explosions"
+      water_damage: "Dégâts des eaux"
+      theft_vandalism: "Vol et vandalisme"
+      civil_liability: "Responsabilité Civile vie privée"
+      glass_breakage: "Bris de glaces"
+      natural_disasters: "Catastrophes naturelles"
+    health:
+      medical_pharma: "Frais médicaux et pharmaceutiques"
+      hospitalization: "Hospitalisation"
+      dental_care: "Soins dentaires"
+      optical: "Optique"
+      alternative_medicine: "Médecines douces"
+      repatriation_assistance: "Assistance rapatriement"
+    life:
+      death_all_causes: "Décès toutes causes"
+      permanent_disability: "Invalidité permanente totale"
+      temporary_incapacity: "Incapacité temporaire de travail"
+      education_pension: "Rente éducation"
+      funeral_capital: "Capital obsèques"
+      legal_assistance: "Assistance juridique"
+    default:
+      main_coverage: "Couverture principale selon les risques définis"
+      civil_liability: "Responsabilité Civile"
+      assistance_advice: "Assistance et conseils"
+      defense_recourse: "Défense et recours"
+  table:
+    guarantee: "Garantie"
+    coverage_amount: "Montant de Couverture"
+    deductible: "Franchise"
+    variable_deductible: "Variable selon garantie"
+
+# Chapitre III - Conditions Financières
+chapter_3:
+  title: "Chapitre III - Conditions Financières"
+  article_4:
+    title: "Article 4 - Prime et Frais"
+    calculation_label: "Calcul de la prime :"
+    calculation_text: "La prime d'assurance a été calculée en fonction des éléments de risque déclarés par l'Assuré et des garanties souscrites. Toute modification de ces éléments peut entraîner une révision de la prime."
+    payment_schedule_label: "Échéances de paiement :"
+    payment_schedule_text: "La prime est payable mensuellement, à terme échu, au plus tard le dernier jour de chaque mois. Le premier paiement est exigible à la souscription."
+    amounts_detail_label: "Détail des montants :"
+    amounts_detail_text: "Le tableau ci-dessous détaille la composition de la prime mensuelle ainsi que les frais associés au contrat, incluant les frais d'assurance et les frais de dossier, le cas échéant."
+  article_5:
+    title: "Article 5 - Modalités de Paiement et Obligations"
+    payment_method_label: "Mode de paiement :"
+    payment_method_text: "La prime est payable mensuellement par prélèvement automatique sur le compte bancaire désigné par l'Assuré. Le premier prélèvement intervient à la date d'activation du contrat."
+    payment_default_label: "Défaut de paiement :"
+    payment_default_text: "En cas de défaut de paiement d'une prime à son échéance, l'Assureur adresse à l'Assuré une mise en demeure par lettre recommandée. Si cette mise en demeure reste sans effet pendant dix jours, les garanties sont suspendues de plein droit."
+    processing_fees_label: "Frais de dossier :"
+    processing_fees_text: "Les frais de dossier et d'assurance sont prélevés lors de la souscription du contrat et ne sont pas remboursables, sauf en cas de renonciation dans les 14 jours suivant la signature."
+    indexation_label: "Indexation :"
+    indexation_text: "La prime peut être révisée annuellement en fonction de l'évolution de l'indice des prix à la consommation publié par l'INSEE."
+  table:
+    element: "Élément"
+    amount: "Montant"
+    frequency: "Périodicité"
+    description: "Description"
+    monthly_premium: "Prime mensuelle"
+    monthly: "Mensuelle"
+    main_premium: "Prime d'assurance principale"
+    insurance_fees: "Frais d'assurance"
+    one_time_payment: "Paiement unique"
+    additional_fees: "Frais supplémentaires liés à l'assurance"
+    processing_fees: "Frais de dossier"
+    administrative_fees: "Frais administratifs de traitement du dossier"
+    monthly_total: "Total mensuel"
+    monthly_deduction: "Montant à prélever chaque mois"
+  payment_obligation:
+    title: "OBLIGATION DE PAIEMENT :"
+    text: "Le paiement de la prime mensuelle, des frais d'assurance et des frais de dossier est obligatoire pour maintenir la validité du contrat. Tout défaut de paiement entraîne la suspension immédiate des garanties après mise en demeure restée sans effet pendant 10 jours."
+
+# Chapitre IV - Obligations et Exclusions
+chapter_4:
+  title: "Chapitre IV - Obligations et Exclusions"
+  article_6:
+    title: "Article 6 - Obligations de l'Assuré"
+    risk_declaration_label: "Déclaration du risque :"
+    risk_declaration_text: "L'Assuré s'engage à déclarer sincèrement et complètement, lors de la souscription et en cours de contrat, toutes les circonstances connues de lui qui sont de nature à faire apprécier par l'Assureur les risques qu'il prend en charge."
+    claim_declaration_label: "Déclaration de sinistre :"
+    claim_declaration_text: "En cas de sinistre, l'Assuré doit en faire la déclaration par écrit à l'Assureur dans les cinq jours ouvrés suivant le jour où il en a eu connaissance, sauf cas fortuit ou de force majeure."
+    safeguard_measures_label: "Mesures de sauvegarde :"
+    safeguard_measures_text: "L'Assuré doit prendre toutes les mesures raisonnables pour limiter l'étendue du sinistre et préserver les recours contre les tiers responsables."
+    investigation_assistance_label: "Assistance à l'enquête :"
+    investigation_assistance_text: "L'Assuré s'engage à fournir à l'Assureur tous les documents, renseignements et justificatifs nécessaires à l'instruction du dossier de sinistre."
+  article_7:
+    title: "Article 7 - Exclusions Générales"
+    never_covered: "Ne sont jamais garantis :"
+    exclusion_1: "Les dommages causés intentionnellement par l'Assuré ou avec sa complicité"
+    exclusion_2: "Les conséquences de guerre civile ou étrangère, d'émeutes, de mouvements populaires"
+    exclusion_3: "Les effets directs ou indirects d'explosion, de dégagement de chaleur ou de radiation nucléaire"
+    exclusion_4: "Les dommages résultant de fautes intentionnelles ou dolosives de l'Assuré"
+    exclusion_5: "Les sinistres survenus avant la prise d'effet du contrat ou après son expiration"
+    exclusion_6: "Les amendes, pénalités et sanctions pécuniaires de toute nature"
+
+# Chapitre V - Sinistres et Indemnisation
+chapter_5:
+  title: "Chapitre V - Sinistres et Indemnisation"
+  article_8:
+    title: "Article 8 - Procédure de Déclaration"
+    declaration_deadline_label: "Délai de déclaration :"
+    declaration_deadline_text: "Tout sinistre doit être déclaré dans les cinq jours ouvrés suivant sa survenance ou la connaissance que peut en avoir l'Assuré. Pour les sinistres de vol, ce délai est réduit à deux jours ouvrés."
+    declaration_methods_label: "Modalités de déclaration :"
+    declaration_methods_text: "La déclaration doit être adressée par lettre recommandée avec accusé de réception ou par tout moyen permettant d'en attester la réception à l'adresse du siège social de l'Assureur."
+    declaration_content_label: "Contenu de la déclaration :"
+    declaration_content_text: "La déclaration doit préciser les circonstances, la date, le lieu du sinistre, ses causes probables, la nature et l'estimation approximative des dommages."
+  article_9:
+    title: "Article 9 - Expertise et Règlement"
+    expertise_label: "Expertise :"
+    expertise_text: "L'Assureur se réserve le droit de faire procéder à une expertise des dommages par un expert de son choix. L'Assuré peut désigner son propre expert en cas de désaccord."
+    settlement_label: "Règlement des indemnités :"
+    settlement_text: "L'indemnité est versée dans le mois qui suit l'accord des parties ou la décision judiciaire définitive, déduction faite des franchises éventuelles."
+    subrogation_label: "Subrogation :"
+    subrogation_text: "L'Assureur est subrogé dans les droits et actions de l'Assuré contre les tiers responsables, à concurrence de l'indemnité versée."
+
+# Chapitre VI - Résiliation et Modification
+chapter_6:
+  title: "Chapitre VI - Résiliation et Modification"
+  article_10:
+    title: "Article 10 - Résiliation du Contrat"
+    termination_maturity_label: "Résiliation à l'échéance :"
+    termination_maturity_text: "Chaque partie peut résilier le contrat à son échéance annuelle moyennant un préavis de deux mois, donné par lettre recommandée."
+    termination_during_label: "Résiliation en cours de contrat :"
+    termination_during_text: "Le contrat peut être résilié en cours de période en cas de modification du risque, de sinistre, de défaut de paiement ou dans les autres cas prévus par le Code des assurances."
+    termination_nonpayment_label: "Résiliation pour non-paiement :"
+    termination_nonpayment_text: "En cas de non-paiement d'une prime, l'Assureur peut résilier le contrat dix jours après une mise en demeure restée sans effet."
+  article_11:
+    title: "Article 11 - Modification du Contrat"
+    risk_aggravation_label: "Aggravation du risque :"
+    risk_aggravation_text: "L'Assuré doit déclarer à l'Assureur toute modification susceptible d'aggraver les risques ou d'en créer de nouveaux. Cette déclaration peut entraîner une révision de la prime."
+    risk_reduction_label: "Diminution du risque :"
+    risk_reduction_text: "Si le risque diminue de façon notable, l'Assuré peut demander une réduction de prime correspondante."
+
+# Chapitre VII - Récapitulatif des Frais Obligatoires
+chapter_7:
+  title: "Chapitre VII - Récapitulatif des Frais Obligatoires"
+  article_12:
+    title: "Article 12 - Détail des Montants à Régler"
+  mandatory_amounts_title: "MONTANTS OBLIGATOIRES À RÉGLER"
+  insurance_fees_label: "Frais d'assurance (paiement unique) :"
+  processing_fees_label: "Frais de dossier (paiement unique) :"
+  mandatory_payment: "PAIEMENT OBLIGATOIRE"
+  deducted_subscription: "Prélevé à la souscription"
+  administrative_fees_non_refundable: "Frais administratifs non remboursables"
+  attention_mandatory: "ATTENTION : Le paiement de ces frais est OBLIGATOIRE et constitue une condition sine qua non pour la validité et la prise d'effet du présent contrat d'assurance."
+  automatic_deduction_note: "Ces montants sont prélevés automatiquement lors de la souscription et ne peuvent faire l'objet d'aucun remboursement, sauf exercice du droit de renonciation dans les 14 jours."
+
+# Chapitre VIII - Dispositions Finales
+chapter_8:
+  title: "Chapitre VIII - Dispositions Finales"
+  article_13:
+    title: "Article 13 - Droit Applicable et Juridiction"
+    applicable_law_label: "Droit applicable :"
+    applicable_law_text: "Le présent contrat est régi par le droit français et notamment par les dispositions du Code des assurances."
+    jurisdiction_label: "Juridiction compétente :"
+    jurisdiction_text: "En cas de litige, les tribunaux français sont seuls compétents. Toutefois, l'Assuré peut saisir le tribunal du lieu de son domicile."
+    mediation_label: "Médiation :"
+    mediation_text: "En cas de désaccord, l'Assuré peut saisir le médiateur de l'assurance dont les coordonnées sont disponibles sur le site de la Fédération Française de l'Assurance."
+  article_14:
+    title: "Article 14 - Protection des Données"
+    data_processing_label: "Traitement des données :"
+    data_processing_text: "Les données personnelles collectées sont nécessaires à la gestion du contrat et aux obligations légales de l'Assureur. Elles font l'objet d'un traitement informatisé conforme au RGPD."
+    insured_rights_label: "Droits de l'Assuré :"
+    insured_rights_text: "L'Assuré dispose d'un droit d'accès, de rectification, d'effacement et de portabilité de ses données personnelles, ainsi que du droit de s'opposer à leur traitement."
+  article_15:
+    title: "Article 15 - Dispositions Diverses"
+    partial_nullity_label: "Nullité partielle :"
+    partial_nullity_text: "Si une clause du présent contrat était déclarée nulle, cette nullité n'affecterait pas la validité des autres clauses."
+    contract_language_label: "Langue du contrat :"
+    contract_language_text: "En cas de traduction du présent contrat, seule la version française fait foi."
+    prescription_label: "Prescription :"
+    prescription_text: "Toutes actions dérivant du présent contrat sont prescrites par deux ans à compter de l'événement qui y donne naissance."
+
+# Chapitres IX-XII
+chapter_9:
+  title: "Chapitre IX - Obligations et Exclusions"
+  insured_obligations: "Obligations de l'Assuré"
+  insured_obligations_text: "L'Assuré s'engage à déclarer fidèlement tous les éléments de nature à permettre l'appréciation du risque et à signaler toute modification en cours de contrat."
+  claim_declaration: "Déclaration de Sinistre"
+  claim_declaration_text: "L'Assuré doit déclarer tout sinistre dans les 5 jours ouvrés à compter du moment où il en a eu connaissance, sauf cas fortuit ou de force majeure."
+  general_exclusions: "Exclusions Générales"
+  general_exclusions_text: "Sont exclus de la garantie : les faits de guerre, les catastrophes nucléaires, les faits intentionnels de l'assuré, et les sinistres survenus en état d'ébriété."
+  prevention: "Prévention"
+  prevention_text: "L'Assuré s'engage à prendre toutes les mesures de prévention raisonnables pour éviter la survenance d'un sinistre."
+
+chapter_10:
+  title: "Chapitre X - Sinistres et Indemnisation"
+  article_5:
+    title: "Article 5 - Procédure de Déclaration"
+    item_1: "Déclarer le sinistre dans les délais légaux."
+    item_2: "Fournir tous les justificatifs demandés."
+    item_3: "Faciliter l'expertise si nécessaire."
+    item_4: "Ne pas reconnaître sa responsabilité sans accord de l'Assureur."
+  article_6:
+    title: "Article 6 - Règlement des Sinistres"
+    item_1: "L'Assureur dispose de 30 jours pour faire son offre d'indemnisation."
+    item_2: "Le règlement intervient dans les 15 jours suivant l'accord."
+    item_3: "En cas de désaccord, recours à l'expertise contradictoire."
+    item_4: "Prescription des actions en 2 ans à compter du fait générateur."
+
+chapter_11:
+  title: "Chapitre XI - Durée et Résiliation"
+  article_7:
+    title: "Article 7 - Durée du Contrat"
+    duration_with_expiration: "Le présent contrat prend effet le %start_date% à 0h00 et expire le %end_date%, date correspondant au dernier prélèvement du crédit associé. Le contrat n'est pas renouvelable automatiquement."
+    duration_renewable: "Le présent contrat prend effet le %start_date% à 0h00 pour une durée d'un an. Il se renouvelle par tacite reconduction sauf dénonciation par l'une des parties."
+  article_8:
+    title: "Article 8 - Résiliation"
+    item_1: "Résiliation annuelle : préavis de 2 mois avant l'échéance."
+    item_2: "Résiliation pour non-paiement après mise en demeure."
+    item_3: "Résiliation pour aggravation du risque."
+    item_4: "Droit de rétractation de 14 jours pour les nouveaux contrats."
+
+chapter_12:
+  title: "Chapitre XII - Dispositions Générales"
+  article_9:
+    title: "Article 9 - Droit Applicable et Juridiction"
+    text: "Le présent contrat est soumis au droit français et au Code des Assurances. En cas de litige, compétence exclusive des tribunaux français."
+  article_10:
+    title: "Article 10 - Réclamations"
+    text: "Toute réclamation doit être adressée au Service Clientèle de %company_name%. En cas de désaccord persistant, saisine du Médiateur de l'Assurance."
+  article_11:
+    title: "Article 11 - Protection des Données"
+    text: "L'Assureur s'engage à traiter les données personnelles conformément au RGPD et à la loi Informatique et Libertés. Durée de conservation : 5 ans après résiliation."
+
+# Conditions particulières
+special_conditions:
+  title: "Conditions Particulières"
+
+# Signatures
+signatures:
+  title: "Signatures"
+  insured: "L'Assuré"
+  insurer: "L'Assureur"
+  assureur: "L'Assureur"
+  date_and_signature: "Date et signature"
+  read_and_approved: "Lu et approuvé"
+  represented_by_ceo: "Représenté par le Directeur Général"
+  directeur_general: "Directeur Général"
+  habilite: "Habilité à engager la société"
+  company_stamp: "Cachet de l'entreprise"

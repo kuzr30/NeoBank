@@ -1,0 +1,90 @@
+<div class="credit-form__section">
+    <h2 class="credit-form__section-title">{{ tp('step3.section_title', {}, 'credit_step_forms') }}</h2>
+    
+    <!-- Champs sur la même ligne -->
+    <div class="credit-form__group credit-form__group--inline">
+        <div class="credit-form__field">
+            {{ form_label(form.loanAmount, tp('step3.credit_configuration.loan_amount.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.loanAmount, {'attr': {'placeholder': tp('step3.credit_configuration.loan_amount.placeholder', {}, 'credit_step_forms')}}) }}
+            {{ form_help(form.loanAmount) }}
+            <span style="color: red;">{{ form_errors(form.loanAmount) }}</span>
+        </div>
+        
+        <div class="credit-form__field">
+            {{ form_label(form.duration, tp('step3.credit_configuration.duration.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.duration, {'attr': {'placeholder': tp('step3.credit_configuration.duration.placeholder', {}, 'credit_step_forms')}}) }}
+            {{ form_help(form.duration) }}
+            <span style="color: red;">{{ form_errors(form.duration) }}</span>
+        </div>
+    </div>
+
+    <div class="credit-form__group">
+        {{ form_label(form.creditType, tp('step3.credit_configuration.credit_type.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+        {{ form_widget(form.creditType) }}
+        <span style="color: red;">{{ form_errors(form.creditType) }}</span>
+
+        <!-- Credit type description -->
+        <div class="credit-form__type-description" data-credit-application-target="creditDescription" style="display: none;">
+            <div class="credit-form__type-info">
+                <span class="credit-form__type-rate">{{ tp('step3.summary.taeg', {}, 'credit_step_forms') }} : <span data-credit-application-target="rateDisplay">-</span>%</span>
+                <span class="credit-form__type-desc" data-credit-application-target="descriptionDisplay">-</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Carte de simulation moderne et créative -->
+<div class="simulation-moderne" data-credit-application-target="simulationResults" style="display: none;">
+    <div class="credit-preview">
+        <div class="credit-preview__header">
+            <h3 class="credit-preview__title">{{ tp('step3.simulation_section.title', {}, 'credit_step_forms') }}</h3>
+            <p class="credit-preview__subtitle">{{ tp('step3.simulation_section.subtitle', {}, 'credit_step_forms') }}</p>
+        </div>
+        
+        <div class="credit-preview__main">
+            <div class="mensualite-display">
+                <span class="mensualite-display__label">{{ tp('step3.simulation_section.monthly_payment.label', {}, 'credit_step_forms') }}</span>
+                <div class="mensualite-display__amount">
+                    <span class="mensualite-display__value" data-credit-application-target="monthlyPaymentDisplay">0</span>
+                    <span class="mensualite-display__currency">{{ tp('step3.simulation_section.monthly_payment.suffix', {}, 'credit_step_forms') }}</span>
+                </div>
+            </div>
+            
+            <div class="credit-resume">
+                <div class="credit-item">
+                    <div class="credit-item__info">
+                        <span class="credit-item__label">{{ tp('step3.summary.loan_amount_requested', {}, 'credit_step_forms') }}</span>
+                        <span class="credit-item__value" data-credit-application-target="loanAmountDisplay">0 {{ tp('common.currency_symbol', {}, 'credit_step_forms') }}</span>
+                    </div>
+                     <div class="credit-item__info">
+                        <span class="credit-item__label">{{ tp('step3.summary.taeg', {}, 'credit_step_forms') }}</span>
+                        <span class="credit-item__value" data-credit-application-target="payoffDateDisplay">%</span>
+                    </div>
+                    <div class="credit-item__info">
+                        <span class="credit-item__label">{{ tp('step3.summary.total_interests', {}, 'credit_step_forms') }}</span>
+                        <span class="credit-item__value" data-credit-application-target="totalInterestsDisplay">0 {{ tp('common.currency_symbol', {}, 'credit_step_forms') }}</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="credit-preview__footer">
+            <div class="guarantee-badge">
+                <span class="guarantee-badge__icon">✓</span>
+                <span class="guarantee-badge__text">{{ tp('step3.footer.guarantee_text', {}, 'credit_step_forms') }}</span>
+            </div>
+            <div class="guarantee-alert ">
+                     <span class="guarantee-badge__text">
+                    {{ tp('step3.footer.legal_notice', {}, 'credit_step_forms') }}
+                     </span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Champs cachés pour les valeurs de formulaire -->
+    <div style="display: none;">
+        {{ form_widget(form.monthlyPayment, {'attr': {'readonly': true}}) }}
+        {{ form_widget(form.totalCost, {'attr': {'readonly': true}}) }}
+    </div>
+</div>

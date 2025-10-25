@@ -1,0 +1,1562 @@
+{# Main template for card display - CONTENT ONLY #}
+
+<style>
+/* Specific styles for cards */
+.card-section {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.card-section__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: .2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.card-section__title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.card-section__icon {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+}
+
+.card-section__subtitle {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.user-card-section__title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 1.5rem 0;
+}
+
+.bank-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 450px;
+}
+
+.bank-card {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(30, 58, 138, 0.3);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bank-card--visa {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    box-shadow: 0 4px 20px rgba(30, 58, 138, 0.3);
+}
+
+.bank-card--mastercard {
+    background: linear-gradient(135deg, #eb1c26 0%, #f79e1b 100%);
+    box-shadow: 0 4px 20px rgba(235, 28, 38, 0.3);
+}
+
+.bank-card--blocked {
+    background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
+    box-shadow: 0 4px 20px rgba(107, 114, 128, 0.3);
+}
+
+.bank-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.brand-logo {
+    width: 60px !important;
+    height: auto !important;
+    display: block;
+}
+
+.brand-logo svg {
+    width: 100%;
+    height: auto;
+    max-width: 60px;
+}
+
+/* Styles for brand logos in text */
+.brand-logo-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.brand-logo-text--visa {
+    background: #1a1f71;
+    color: white;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.brand-logo-text--mastercard {
+    background: #eb1c26;
+    color: white;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjustments for logos in cards */
+.card-type__card-logo .brand-logo-text {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+}
+
+/* Classes to control icon sizes */
+.icon-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+.icon-md {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.icon-lg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.icon-xl {
+    width: 2rem;
+    height: 2rem;
+}
+
+.brand-logo-container {
+    position: relative;
+}
+
+.brand-logo-svg {
+    width: 60px;
+    height: auto;
+    max-width: 80px;
+    display: block;
+}
+
+.brand-text {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.brand-text--visa {
+    color: #1a1f71;
+    background: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(26, 31, 113, 0.2);
+    font-family: 'Arial Black', Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.brand-text--mastercard {
+    width: 60px;
+    height: 36px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Mastercard logo with two circles */
+.brand-text--mastercard::before,
+.brand-text--mastercard::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    top: 6px;
+}
+
+.brand-text--mastercard::before {
+    background: #eb001b;
+    left: 8px;
+    z-index: 1;
+}
+
+.brand-text--mastercard::after {
+    background: #ff5f00;
+    left: 20px;
+    z-index: 2;
+}
+
+/* Overlap zone */
+.brand-text--mastercard {
+    background: linear-gradient(90deg, 
+        transparent 8px, 
+        #eb001b 8px, 
+        #eb001b 20px, 
+        #ff5f00 20px, 
+        #ff5f00 32px, 
+        transparent 32px
+    );
+    -webkit-mask: radial-gradient(circle at 20px 18px, transparent 12px, black 12px),
+                  radial-gradient(circle at 32px 18px, transparent 12px, black 12px);
+    mask: radial-gradient(circle at 20px 18px, transparent 12px, black 12px),
+          radial-gradient(circle at 32px 18px, transparent 12px, black 12px);
+}
+
+.bank-card__status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.bank-card__status svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.bank-card__chip {
+    width: 30px;
+    height: 22px;
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    margin: 1rem 0;
+}
+
+.bank-card__number {
+    font-family: 'Courier New', monospace;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.bank-card__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.bank-card__label {
+    font-size: 0.6rem;
+    opacity: 0.8;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.05em;
+}
+
+.bank-card__name,
+.bank-card__date {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.bank-card__info {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bank-card__info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    color: #374151;
+    font-size: 0.85rem;
+}
+
+.bank-card__info-item:not(:last-child) {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.bank-card__info-item svg {
+    color: #6b7280;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.card-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.card-action {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.card-action:hover {
+    background: var(--primary-50);
+    border-color: var(--primary-200);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-action__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--primary-100);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-600);
+}
+
+.card-action__content h4 {
+    margin: 0 0 0.25rem 0;
+    font-weight: 600;
+}
+
+.card-action__content p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.subscription-section {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.subscription-card {
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    background: var(--bg-white);
+}
+
+.subscription-card--premium {
+    border-color: var(--primary-200);
+    background: linear-gradient(135deg, var(--primary-50) 0%, var(--bg-white) 100%);
+}
+
+.subscription-card:hover {
+    border-color: var(--primary-300);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.subscription-icon {
+    width: 3rem;
+    height: 3rem;
+    background: var(--primary-100);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-600);
+}
+
+.subscription-info h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.subscription-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-600);
+    margin-bottom: 1.5rem;
+}
+
+.subscription-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.subscription-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+}
+
+.subscription-features li::before {
+    content: "✓";
+    color: var(--success-color);
+    font-weight: bold;
+    width: 1rem;
+}
+
+.subscription-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscription-btn:hover {
+    background: var(--primary-700);
+}
+
+.subscription-btn--outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.subscription-btn--outline:hover {
+    background: var(--primary-color);
+    color: white;
+}
+</style>
+
+<div class="card-section">
+    {% if userCardOrSubscription.type == 'card' %}
+        {# User has an active card #}
+        {% set card = userCardOrSubscription.entity %}
+        <div class="user-card-section">
+            <h3 class="user-card-section__title">
+                {{ ux_icon('heroicons:wallet', {class: 'icon-lg'}) }} {{ tp('card_account_user.user_card.title', {}, 'card_account_user') }}
+            </h3>
+            
+            <div class="bank-card-container">
+                {% set cardBrand = card.cardNumber starts with '4' ? 'visa' : 'mastercard' %}
+                <div class="bank-card bank-card--{{ cardBrand }}{% if card.status != 'active' %} bank-card--blocked{% endif %}">
+                    <div class="bank-card__top">
+                        <div class="bank-card__brand">
+                            {% set cardBrand = card.cardNumber starts with '4' ? 'visa' : 'mastercard' %}
+                            {% if cardBrand == 'visa' %}
+                                {{ ux_icon('logos:visa', {class: 'icon-xl'}) }}
+                            {% else %}
+                                {{ ux_icon('logos:mastercard', {class: 'icon-xl'}) }}
+                            {% endif %}
+                        </div>
+                        <div class="bank-card__status">
+                            {% if card.status == 'active' %}
+                                {{ ux_icon('heroicons:check-circle', {class: 'icon-sm'}) }} {{ tp('card_account_user.user_card.status.active', {}, 'card_account_user') }}
+                            {% elseif card.status == 'blocked' %}
+                                {{ ux_icon('heroicons:no-symbol', {class: 'icon-sm'}) }} {{ tp('card_account_user.user_card.status.blocked', {}, 'card_account_user') }}
+                            {% elseif card.status == 'expired' %}
+                                {{ ux_icon('heroicons:clock', {class: 'icon-sm'}) }} {{ tp('card_account_user.user_card.status.expired', {}, 'card_account_user') }}
+                            {% else %}
+                                {{ card.status|title }}
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="bank-card__chip"></div>
+
+                    <div class="bank-card__number">
+                        •••• •••• •••• {{ card.cardNumber|slice(-4) }}
+                    </div>
+
+                    <div class="bank-card__bottom">
+                        <div class="bank-card__holder">
+                            <div class="bank-card__label">{{ tp('card_account_user.user_card.card_info.holder_label', {}, 'card_account_user') }}</div>
+                            <div class="bank-card__name">{{ card.cardholderName|upper }}</div>
+                        </div>
+                        <div class="bank-card__expiry">
+                            <div class="bank-card__label">{{ tp('card_account_user.user_card.card_info.expiry_label', {}, 'card_account_user') }}</div>
+                            <div class="bank-card__date">{{ card.expiryDate|date('m/y') }}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bank-card__info">
+                    <div class="bank-card__info-item">
+                        {{ ux_icon('heroicons:building-library', {class: 'icon-md'}) }}
+                        <span>{{ tp('card_account_user.user_card.card_info.account_label', {}, 'card_account_user') }} : {{ card.account.accountNumber }}</span>
+                    </div>
+                    <div class="bank-card__info-item">
+                        {{ ux_icon('heroicons:credit-card', {class: 'icon-md'}) }}
+                        <span>{{ tp('card_account_user.user_card.card_info.daily_limit_label', {}, 'card_account_user') }} : {{ card.dailyLimit ? (card.dailyLimit ~ ' €') : tp('card_account_user.user_card.card_info.daily_limit_undefined', {}, 'card_account_user') }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {% elseif userCardOrSubscription.type == 'subscription' %}
+        {# User has a pending subscription #}
+        {% set subscription = userCardOrSubscription.entity %}
+        {% set contract = subscription.contract %}
+        
+        <div class="card-section__header">
+            <h2 class="card-section__title">
+                {{ ux_icon('heroicons:clock', {class: 'icon-md'}) }}
+                {{ tp('card_account_user.subscription.title', {}, 'card_account_user') }}
+            </h2>
+            <p class="card-section__subtitle">
+                {{ tp('card_account_user.subscription.subtitle', {'cardType': subscription.cardType|title, 'cardBrand': subscription.cardBrand|title}, 'card_account_user') }}
+            </p>
+        </div>
+        
+        <div class="subscription-pending-section">
+           
+            <div class="subscription-status">
+                <div class="subscription-status__header">
+                    {% if contract %}
+                        {% if contract.status == 'generated' %}
+                            <div class="subscription-status__badge subscription-status__badge--contract-pending">
+                                {{ ux_icon('heroicons:document-text', {class: 'icon-sm'}) }}
+                                {{ tp('card_account_user.subscription.status.contract_pending', {}, 'card_account_user') }}
+                            </div>
+                        {% elseif contract.status == 'sent' %}
+                            <div class="subscription-status__badge subscription-status__badge--contract-sent">
+                                {{ ux_icon('heroicons:envelope', {class: 'icon-sm'}) }}
+                                {{ tp('card_account_user.subscription.status.contract_sent', {}, 'card_account_user') }}
+                            </div>
+                        {% elseif contract.status == 'signed' %}
+                            <div class="subscription-status__badge subscription-status__badge--admin-validation">
+                                {{ ux_icon('heroicons:user', {class: 'icon-sm'}) }}
+                                {{ tp('card_account_user.subscription.status.admin_validation', {}, 'card_account_user') }}
+                            </div>
+                        {% elseif contract.status == 'expired' %}
+                            <div class="subscription-status__badge subscription-status__badge--expired">
+                                {{ ux_icon('heroicons:clock', {class: 'icon-sm'}) }}
+                                {{ tp('card_account_user.subscription.status.contract_expired', {}, 'card_account_user') }}
+                            </div>
+                        {% endif %}
+                    {% else %}
+                        <div class="subscription-status__badge subscription-status__badge--pending">
+                            {{ ux_icon('heroicons:clock', {class: 'icon-sm'}) }}
+                            {{ tp('card_account_user.subscription.status.pending', {}, 'card_account_user') }}
+                        </div>
+                    {% endif %}
+                    
+                    <div class="subscription-status__date">
+                        {{ tp('card_account_user.subscription.request_date', {'date': subscription.createdAt|date('d/m/Y')}, 'card_account_user') }}
+                    </div>
+                </div>
+
+                <div class="subscription-status__details">
+                    <div class="subscription-status__info">
+                        <div class="subscription-status__item">
+                            <span class="subscription-status__label">{{ tp('card_account_user.subscription.details.card_type_label', {}, 'card_account_user') }}</span>
+                            <span class="subscription-status__value">{{ subscription.cardType|title }}</span>
+                        </div>
+                        <div class="subscription-status__item">
+                            <span class="subscription-status__label">{{ tp('card_account_user.subscription.details.brand_label', {}, 'card_account_user') }}</span>
+                            <span class="subscription-status__value">{{ subscription.cardBrand|title }}</span>
+                        </div>
+
+                        {% if contract %}
+                            <div class="subscription-status__item">
+                                <span class="subscription-status__label">{{ tp('card_account_user.subscription.details.contract_label', {}, 'card_account_user') }}</span>
+                                <span class="subscription-status__value">{{ contract.reference }}</span>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    {% if contract %}
+                        {% if contract.status == 'sent' %}
+                            <div class="subscription-status__action">
+                                <a href="{{ path('contract_signature', {reference: contract.reference}) }}" 
+                                   class="btn btn--primary btn--with-icon">
+                                    {{ ux_icon('heroicons:pencil', {class: 'icon-sm'}) }}
+                                    {{ tp('card_account_user.subscription.actions.sign_contract', {}, 'card_account_user') }}
+                                </a>
+                                <p class="subscription-status__note">
+                                    {{ tp('card_account_user.subscription.actions.sign_deadline', {}, 'card_account_user') }}
+                                </p>
+                            </div>
+                        {% elseif contract.status == 'expired' %}
+                            <div class="subscription-status__message subscription-status__message--error">
+                                {{ ux_icon('heroicons:exclamation-circle', {class: 'icon-md'}) }}
+                                {{ tp('card_account_user.subscription.messages.contract_expired_message', {}, 'card_account_user') }}
+                            </div>
+                        {% endif %}
+                    {% endif %}
+
+                    {% if not contract or (contract and contract.status != 'expired') %}
+                        <div class="subscription-status__message">
+                            {{ ux_icon('heroicons:information-circle', {class: 'icon-md'}) }}
+                            {% if contract and contract.status == 'sent' %}
+                                {{ tp('card_account_user.subscription.messages.contract_signature_required', {}, 'card_account_user') }}
+                            {% elseif contract and contract.status == 'signed' %}
+                                {{ tp('card_account_user.subscription.messages.contract_signed_processing', {}, 'card_account_user') }}
+                            {% else %}
+                                {{ tp('card_account_user.subscription.messages.default_processing', {}, 'card_account_user') }}
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    {% else %}
+        {# User has neither card nor subscription - display subscription options #}
+        <div class="card-section__header">
+            <h2 class="card-section__title">
+                {{ ux_icon('heroicons:credit-card', {class: 'icon-md'}) }}
+                {{ tp('card_account_user.card_selection.title', {}, 'card_account_user') }}
+            </h2>
+            <p class="card-section__subtitle">
+                {{ tp('card_account_user.card_selection.subtitle', {}, 'card_account_user') }}
+            </p>
+        </div>
+        
+        <div class="card-types-section">
+            {# Visa Cards Section #}
+            <h4 class="card-brand-section__title">
+                <span class="brand-logo-text brand-logo-text--visa">VISA</span> {{ tp('card_account_user.card_selection.brands.visa_title', {}, 'card_account_user') }}
+            </h4>
+            <div class="card-types-grid">
+                {# Classic Visa Card #}
+                <div class="card-type card-type--classic">
+                    <div class="card-type__badge">{{ tp('card_account_user.card_selection.card_types.classic.badge', {}, 'card_account_user') }}</div>
+                    <div class="card-type__preview">
+                        <div class="card-type__card card-type__card--classic">
+                            <div class="card-type__card-header">
+                                <div class="card-type__card-logo">
+                                    <span class="brand-logo-text brand-logo-text--visa">VISA</span>
+                                </div>
+                                <div class="card-type__card-type">CLASSIC</div>
+                            </div>
+                            <div class="card-type__card-chip">
+                                <div class="card-type__chip"></div>
+                            </div>
+                            <div class="card-type__card-number">•••• •••• •••• 1234</div>
+                        </div>
+                    </div>
+                    <div class="card-type__content">
+                        <h4 class="card-type__name">{{ tp('card_account_user.card_selection.card_types.classic.name', {}, 'card_account_user') }}</h4>
+                        <div class="card-type__price">
+                            <span class="card-type__amount">{{ tp('card_account_user.card_selection.card_types.classic.visa_price', {}, 'card_account_user') }}</span>
+                            <span class="card-type__period">{{ tp('card_account_user.card_selection.card_types.classic.visa_period', {}, 'card_account_user') }}</span>
+                        </div>
+                        <a href="{{ path('app_banking_card_subscription_classic') }}?brand=visa" class="card-type__cta">
+                            {{ ux_icon('heroicons:arrow-right', {class: 'icon-sm'}) }}
+                            {{ tp('card_account_user.card_selection.subscribe_action', {}, 'card_account_user') }}
+                        </a>
+                    </div>
+                </div>
+
+                {# Gold Visa Card #}
+                <div class="card-type card-type--gold card-type--featured">
+                    <div class="card-type__badge card-type__badge--popular">{{ tp('card_account_user.card_selection.card_types.gold.badge', {}, 'card_account_user') }}</div>
+                    <div class="card-type__preview">
+                        <div class="card-type__card card-type__card--gold">
+                            <div class="card-type__card-header">
+                                <div class="card-type__card-logo">
+                                    <span class="brand-logo-text brand-logo-text--visa">VISA</span>
+                                </div>
+                                <div class="card-type__card-type">GOLD</div>
+                            </div>
+                            <div class="card-type__card-chip">
+                                <div class="card-type__chip"></div>
+                            </div>
+                            <div class="card-type__card-number">•••• •••• •••• 5678</div>
+                        </div>
+                    </div>
+                    <div class="card-type__content">
+                        <h4 class="card-type__name">{{ tp('card_account_user.card_selection.card_types.gold.name', {}, 'card_account_user') }}</h4>
+                        <div class="card-type__price">
+                            <span class="card-type__amount">{{ tp('card_account_user.card_selection.card_types.gold.visa_price', {}, 'card_account_user') }}</span>
+                            <span class="card-type__period">{{ tp('card_account_user.card_selection.card_types.gold.period', {}, 'card_account_user') }}</span>
+                        </div>
+                        <a href="{{ path('app_banking_card_subscription_gold') }}?brand=visa" class="card-type__cta card-type__cta--featured">
+                            {{ ux_icon('heroicons:arrow-right', {class: 'icon-sm'}) }}
+                            {{ tp('card_account_user.card_selection.subscribe_action', {}, 'card_account_user') }}
+                        </a>
+                    </div>
+                </div>
+
+                {# Platinum Visa Card #}
+                <div class="card-type card-type--platinum">
+                    <div class="card-type__badge">{{ tp('card_account_user.card_selection.card_types.platinum.badge', {}, 'card_account_user') }}</div>
+                    <div class="card-type__preview">
+                        <div class="card-type__card card-type__card--platinum">
+                            <div class="card-type__card-header">
+                                <div class="card-type__card-logo">
+                                    <span class="brand-logo-text brand-logo-text--visa">VISA</span>
+                                </div>
+                                <div class="card-type__card-type">PLATINUM</div>
+                            </div>
+                            <div class="card-type__card-chip">
+                                <div class="card-type__chip"></div>
+                            </div>
+                            <div class="card-type__card-number">•••• •••• •••• 9012</div>
+                        </div>
+                    </div>
+                    <div class="card-type__content">
+                        <h4 class="card-type__name">{{ tp('card_account_user.card_selection.card_types.platinum.name', {}, 'card_account_user') }}</h4>
+                        <div class="card-type__price">
+                            <span class="card-type__amount">{{ tp('card_account_user.card_selection.card_types.platinum.visa_price', {}, 'card_account_user') }}</span>
+                            <span class="card-type__period">{{ tp('card_account_user.card_selection.card_types.platinum.period', {}, 'card_account_user') }}</span>
+                        </div>
+                        <a href="{{ path('app_banking_card_subscription_platinum') }}?brand=visa" class="card-type__cta">
+                            {{ ux_icon('heroicons:arrow-right', {class: 'icon-sm'}) }}
+                            {{ tp('card_account_user.card_selection.subscribe_action', {}, 'card_account_user') }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            {# Mastercard Cards Section #}
+            <h4 class="card-brand-section__title">
+                <span class="brand-logo-text brand-logo-text--mastercard">mastercard</span> {{ tp('card_account_user.card_selection.brands.mastercard_title', {}, 'card_account_user') }}
+            </h4>
+            <div class="card-types-grid">
+                {# Classic Mastercard Card #}
+                <div class="card-type card-type--classic">
+                    <div class="card-type__badge">{{ tp('card_account_user.card_selection.card_types.classic.badge', {}, 'card_account_user') }}</div>
+                    <div class="card-type__preview">
+                        <div class="card-type__card card-type__card--classic-mastercard">
+                            <div class="card-type__card-header">
+                                <div class="card-type__card-logo">
+                                    <span class="brand-logo-text brand-logo-text--mastercard">mastercard</span>
+                                </div>
+                                <div class="card-type__card-type">CLASSIC</div>
+                            </div>
+                            <div class="card-type__card-chip">
+                                <div class="card-type__chip"></div>
+                            </div>
+                            <div class="card-type__card-number">•••• •••• •••• 4321</div>
+                        </div>
+                    </div>
+                    <div class="card-type__content">
+                        <h4 class="card-type__name">{{ tp('card_account_user.card_selection.card_types.classic.name', {}, 'card_account_user') }}</h4>
+                        <div class="card-type__price">
+                            <span class="card-type__amount">{{ tp('card_account_user.card_selection.card_types.classic.mastercard_price', {}, 'card_account_user') }}</span>
+                            <span class="card-type__period">{{ tp('card_account_user.card_selection.card_types.classic.mastercard_period', {}, 'card_account_user') }}</span>
+                        </div>
+                        <a href="{{ path('app_banking_card_subscription_classic') }}?brand=mastercard" class="card-type__cta">
+                            {{ ux_icon('heroicons:arrow-right', {class: 'icon-sm'}) }}
+                            {{ tp('card_account_user.card_selection.subscribe_action', {}, 'card_account_user') }}
+                        </a>
+                    </div>
+                </div>
+
+                {# Gold Mastercard Card #}
+                <div class="card-type card-type--gold">
+                    <div class="card-type__badge">{{ tp('card_account_user.card_selection.card_types.gold.badge_alt', {}, 'card_account_user') }}</div>
+                    <div class="card-type__preview">
+                        <div class="card-type__card card-type__card--gold-mastercard">
+                            <div class="card-type__card-header">
+                                <div class="card-type__card-logo">
+                                    <span class="brand-logo-text brand-logo-text--mastercard">mastercard</span>
+                                </div>
+                                <div class="card-type__card-type">GOLD</div>
+                            </div>
+                            <div class="card-type__card-chip">
+                                <div class="card-type__chip"></div>
+                            </div>
+                            <div class="card-type__card-number">•••• •••• •••• 8765</div>
+                        </div>
+                    </div>
+                    <div class="card-type__content">
+                        <h4 class="card-type__name">{{ tp('card_account_user.card_selection.card_types.gold.name', {}, 'card_account_user') }}</h4>
+                        <div class="card-type__price">
+                            <span class="card-type__amount">{{ tp('card_account_user.card_selection.card_types.gold.mastercard_price', {}, 'card_account_user') }}</span>
+                            <span class="card-type__period">{{ tp('card_account_user.card_selection.card_types.gold.period', {}, 'card_account_user') }}</span>
+                        </div>
+                        <a href="{{ path('app_banking_card_subscription_gold') }}?brand=mastercard" class="card-type__cta">
+                            {{ ux_icon('heroicons:arrow-right', {class: 'icon-sm'}) }}
+                            {{ tp('card_account_user.card_selection.subscribe_action', {}, 'card_account_user') }}
+                        </a>
+                    </div>
+                </div>
+
+                {# Platinum Mastercard Card #}
+                <div class="card-type card-type--platinum">
+                    <div class="card-type__badge">{{ tp('card_account_user.card_selection.card_types.platinum.badge', {}, 'card_account_user') }}</div>
+                    <div class="card-type__preview">
+                        <div class="card-type__card card-type__card--platinum-mastercard">
+                            <div class="card-type__card-header">
+                                <div class="card-type__card-logo">
+                                    <span class="brand-logo-text brand-logo-text--mastercard">mastercard</span>
+                                </div>
+                                <div class="card-type__card-type">PLATINUM</div>
+                            </div>
+                            <div class="card-type__card-chip">
+                                <div class="card-type__chip"></div>
+                            </div>
+                            <div class="card-type__card-number">•••• •••• •••• 2109</div>
+                        </div>
+                    </div>
+                    <div class="card-type__content">
+                        <h4 class="card-type__name">{{ tp('card_account_user.card_selection.card_types.platinum.name', {}, 'card_account_user') }}</h4>
+                        <div class="card-type__price">
+                            <span class="card-type__amount">{{ tp('card_account_user.card_selection.card_types.platinum.mastercard_price', {}, 'card_account_user') }}</span>
+                            <span class="card-type__period">{{ tp('card_account_user.card_selection.card_types.platinum.period', {}, 'card_account_user') }}</span>
+                        </div>
+                        <a href="{{ path('app_banking_card_subscription_platinum') }}?brand=mastercard" class="card-type__cta">
+                            {{ ux_icon('heroicons:arrow-right', {class: 'icon-sm'}) }}
+                            {{ tp('card_account_user.card_selection.subscribe_action', {}, 'card_account_user') }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+</section>
+
+<style>
+/* CSS variables for cards */
+:root {
+    --card-visa-gradient: linear-gradient(135deg, #1a1f36 0%, #0d47a1 100%);
+    --card-mastercard-gradient: linear-gradient(135deg, #ff5722 0%, #d32f2f 100%);
+    --color-primary: #667eea;
+    --color-secondary: #6b7280;
+    --color-success: #10b981;
+    --color-danger: #ef4444;
+    --color-warning: #f59e0b;
+    --color-info: #06b6d4;
+    --shadow-card: 0 10px 25px rgba(0, 0, 0, 0.15);
+    --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.2);
+    --radius: 0.75rem;
+    --transition: all 0.3s ease;
+}
+
+/* Main card section */
+.card-section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-section__header {
+    text-align: center;
+    margin-bottom: .3rem;
+}
+
+.card-section__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: .1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.card-section__icon {
+    color: var(--color-primary);
+}
+
+.card-section__subtitle {
+    font-size: 1.125rem;
+    color: var(--color-secondary);
+    margin: 0;
+}
+
+/* User card section */
+.user-card-section {
+    margin-bottom: 3rem;
+}
+
+.user-card-section__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Bank card */
+.bank-card {
+    width: 425px;
+    height: 250px;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 2rem;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+    background: var(--card-visa-gradient);
+}
+
+.bank-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.bank-card--blocked {
+    filter: grayscale(1);
+    opacity: 0.7;
+}
+
+.bank-card--mastercard {
+    background: var(--card-mastercard-gradient);
+}
+
+.bank-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.bank-card__brand svg {
+    width: 60px;
+    height: auto;
+}
+
+.bank-card__status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.bank-card__status--active {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+}
+
+.bank-card__status--blocked {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+.bank-card__number {
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 1.5rem;
+}
+
+.bank-card__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.bank-card__holder {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.bank-card__expiry {
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+}
+
+.bank-card__footer {
+    position: absolute;
+    bottom: 1rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.bank-card__account {
+    margin-bottom: 0.25rem;
+}
+
+/* Card actions */
+.card-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Pending subscription section */
+.subscription-pending-section {
+    background: #f8fafc;
+    border-radius: var(--radius);
+    padding: .2rem;
+    margin-bottom: .3rem;
+}
+
+.subscription-pending-section__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.subscription-status {
+    background: white;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-status__header {
+    margin-bottom: 1.5rem;
+}
+
+.subscription-status__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.subscription-status__badge--contract-pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.subscription-status__badge--contract-sent {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.subscription-status__badge--admin-validation {
+    background: #f3e8ff;
+    color: #7c3aed;
+}
+
+.subscription-status__badge--expired {
+    background: #fecaca;
+    color: #dc2626;
+}
+
+.subscription-status__badge--pending {
+    background: #2a0957ff;
+    color: #ffffffff;
+}
+
+.subscription-status__date {
+    font-size: 0.875rem;
+    color: var(--color-secondary);
+}
+
+.subscription-status__details {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1.5rem;
+}
+
+.subscription-status__info {
+    margin-bottom: 1.5rem;
+}
+
+.subscription-status__item {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.subscription-status__label {
+    font-weight: 600;
+    color: #374151;
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.subscription-status__value {
+    color: #1f2937;
+}
+
+.subscription-status__action {
+    margin-bottom: 1rem;
+}
+
+.subscription-status__note {
+    font-size: 0.875rem;
+    color: var(--color-secondary);
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.subscription-status__message {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: #f0f9ff;
+    border: 1px solid #e0f2fe;
+    color: #0c4a6e;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.subscription-status__message--error {
+    background: #fef2f2;
+    border-color: #fecaca;
+    color: #dc2626;
+}
+
+.subscription-status__message svg {
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+}
+
+/* Card types section */
+.card-types-section {
+    margin-bottom: 3rem;
+}
+
+.card-types-section__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.card-types-section__subtitle {
+    font-size: 1.125rem;
+    color: var(--color-secondary);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.card-brand-section__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 2rem 0 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-types-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Responsive for grid */
+@media (max-width: 1200px) {
+    .card-types-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-types-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* Card types */
+.card-type {
+    background: white;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-type:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card);
+}
+
+.card-type--featured {
+    border: 2px solid var(--color-warning);
+    transform: scale(1.05);
+}
+
+.card-type__badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--color-info);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-type__badge--popular {
+    background: var(--color-warning);
+}
+
+.card-type__preview {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card-type__card {
+    width: 240px;
+    height: 150px;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    color: white;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-type__card--classic {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+.card-type__card--gold {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.card-type__card--platinum {
+    background: linear-gradient(135deg, #6b7280, #374151);
+}
+
+.card-type__card--classic-mastercard {
+    background: linear-gradient(135deg, #dc2626, #991b1b);
+}
+
+.card-type__card--gold-mastercard {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.card-type__card--platinum-mastercard {
+    background: linear-gradient(135deg, #1f2937, #111827);
+}
+
+.card-type__card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-type__card-logo svg {
+    width: 40px;
+    height: auto;
+}
+
+.card-type__card-type {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.card-type__card-chip {
+    margin-bottom: 1rem;
+}
+
+.card-type__chip {
+    width: 20px;
+    height: 15px;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    border-radius: 3px;
+    position: relative;
+}
+
+.card-type__chip::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    background: linear-gradient(135deg, #fcd34d, #fbbf24);
+    border-radius: 2px;
+}
+
+.card-type__card-number {
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+}
+
+.card-type__content {
+    text-align: center;
+}
+
+.card-type__name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.card-type__price {
+    margin-bottom: 1.5rem;
+}
+
+.card-type__amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.card-type__period {
+    font-size: 0.875rem;
+    color: var(--color-secondary);
+    margin-left: 0.25rem;
+}
+
+.card-type__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2rem;
+    background: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.card-type__cta:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    color: white;
+}
+
+.card-type__cta--featured {
+    background: var(--color-warning);
+}
+
+.card-type__cta--featured:hover {
+    background: #d97706;
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+}
+
+/* Generic buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.875rem;
+}
+
+.btn--primary {
+    background: var(--color-primary);
+    color: white;
+}
+
+.btn--primary:hover {
+    background: #5a67d8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    color: white;
+}
+
+.btn--secondary {
+    background: var(--color-secondary);
+    color: white;
+}
+
+.btn--secondary:hover {
+    background: #4b5563;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
+    color: white;
+}
+
+.btn--danger {
+    background: var(--color-danger);
+    color: white;
+}
+
+.btn--danger:hover {
+    background: #dc2626;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+    color: white;
+}
+
+.btn--with-icon svg {
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .card-types-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .card-type--featured {
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-section {
+        padding: 1rem;
+    }
+    
+    .card-section__title {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .card-types-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .bank-card {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .card-actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .subscription-status__item {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    
+    .subscription-status__label {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-section__title {
+        font-size: 1.75rem;
+    }
+    
+    .card-type__card {
+        width: 200px;
+        height: 125px;
+        padding: 0.75rem;
+    }
+    
+    .card-type__card-logo svg {
+        width: 30px;
+    }
+    
+    .card-type__card-type {
+        font-size: 0.625rem;
+    }
+    
+    .card-type__card-number {
+        font-size: 0.75rem;
+    }
+}
+
+/* Fade in animation */
+.bank-card,
+.card-type,
+.subscription-status {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation au scroll */
+.card-type:nth-child(1) { animation-delay: 0.1s; }
+.card-type:nth-child(2) { animation-delay: 0.2s; }
+.card-type:nth-child(3) { animation-delay: 0.3s; }
+</style>

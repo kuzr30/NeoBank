@@ -1,0 +1,35 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_transfer_details.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_transfer_details:
+  header:
+    title: "Transfer details"
+    subtitle: "Complete information about your transfer"
+    back_button: "Back to list"
+  
+  transfer_card:
+    title: "Transfer"
+  
+  status:
+    pending: "Pending"
+    executing: "Executing"
+    completed: "Completed"
+    expired: "Expired"
+    cancelled: "Cancelled"
+    blocked: "Blocked"
+  
+  details:
+    amount_label: "Amount"
+    beneficiary_account_label: "Beneficiary account"
+    beneficiary_iban_label: "Beneficiary IBAN"
+    description_label: "Description"
+    creation_date_label: "Creation date"
+    execution_date_label: "Execution date"
+    ip_address_label: "IP address"
+    ip_not_available: "Not available"
+  
+  actions:
+    continue_validation: "Continue validation"
+    success_message: "This transfer has been executed successfully"

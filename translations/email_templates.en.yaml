@@ -1,0 +1,124 @@
+# KYC rejected email
+kyc_rejected:
+  title: "Identity Verification - Action Required"
+  greeting: "Hello %name%,"
+  intro: "We have reviewed the documents you submitted for your identity verification (KYC). Unfortunately, we cannot validate your account for the following reasons:"
+  reasons_title: "Rejection reasons:"
+  action_title: "Required Action"
+  action_required: "To complete the opening of your account, please log in and resubmit the required documents taking into account the above remarks."
+  custom_message_title: "IMPORTANT:"
+  login_button: "Log in to my account"
+  closing: "We remain at your disposal for any questions."
+  signature: "Best regards,<br>The team"
+
+# Incomplete account email
+incomplete_account:
+  title: "Complete Your Profile"
+  greeting: "Hello %name%,"
+  intro: "We noticed that your profile is not yet complete. To fully enjoy all our banking services, we invite you to complete the missing information."
+  reasons_title: "Items to correct:"
+  warning_title: "Attention"
+  warning: "A complete profile allows you to access all our services and ensures the security of your account."
+  action_title: "Required Action"
+  action_required: "Please log in to complete your profile."
+  custom_message_title: "IMPORTANT:"
+  login_button: "Complete my profile"
+  closing: "Thank you for your trust."
+  signature: "Best regards,<br>The team"
+
+# Fees inquiry email
+fees_inquiry:
+  title: "Information About Banking Fees"
+  greeting: "Hello %name%,"
+  intro: "We are contacting you regarding fees related to your bank account."
+  info_title: "Important Information"
+  info: "For more details about these fees, please log in to your customer area."
+  custom_message_title: "Additional information:"
+  login_button: "Access my account"
+  closing: "Our customer service remains at your disposal for any questions."
+  signature: "Best regards,<br>The team"
+
+# Account activation reminder email
+account_activation_reminder:
+  title: "Reminder - Activate Your Account"
+  greeting: "Hello %name%,"
+  intro: "We notice that you have not yet activated your bank account."
+  warning_title: "Important Reminder"
+  warning: "Activating your account is necessary to access all our services."
+  action_title: "Required Action"
+  action_required: "Please log in to finalize the activation of your account."
+  custom_message_title: "IMPORTANT:"
+  login_button: "Activate my account"
+  closing: "We look forward to counting you among our active customers."
+  signature: "Best regards,<br>The team"
+
+# Incomplete credit application email
+credit_application_incomplete:
+  title: "Your Credit Application - Missing Information"
+  greeting: "Hello %name%,"
+  intro: "We have received your credit application. However, some information is missing to continue processing your file."
+  reasons_title: "Missing items:"
+  warning_title: "Attention"
+  warning: "To process your application quickly, we need you to complete the missing information."
+  action_title: "Required Action"
+  action_required: "Please log in to complete your credit application."
+  custom_message_title: "Required information:"
+  login_button: "Complete my application"
+  closing: "We will review your file as soon as we receive the complete information."
+  signature: "Best regards,<br>The team"
+
+# Account creation follow-up and KYC validation email
+account_creation_follow_up:
+  title: "Application Follow-up - Action Required"
+  greeting: "Hello %name%,"
+  intro: "We confirm receipt of your application. It is currently being processed by our teams."
+  
+  status_title: "Application Status"
+  status_description: "Your application has been received and a response has been sent. To view this response and track your application progress, please create your secure customer account."
+  
+  action_required_title: "Required Action to View Your Response"
+  action_required_intro: "To access your customer area and view the response to your application, please follow these steps:"
+  step_1: "Create your online account on our secure platform"
+  step_2: "Complete your profile with your personal information"
+  step_3: "Validate your identity through the KYC verification process"
+  
+  kyc_title: "Why is Identity Verification (KYC) Mandatory?"
+  kyc_intro: "KYC (Know Your Customer) verification is a mandatory regulatory procedure in the banking and financial sector. This process is required by law and aims to protect all our customers."
+  kyc_why: "Regulatory and Security Reasons:"
+  kyc_reason_1: "Compliance with European anti-money laundering directives (AML-CFT)"
+  kyc_reason_2: "Prevention of fraud and identity theft"
+  kyc_reason_3: "Protection of your personal data and assets"
+  kyc_reason_4: "Compliance with legal obligations imposed on financial institutions"
+  
+  documents_title: "Required Documents for Verification"
+  documents_intro: "To complete your identity verification, you will need to provide:"
+  document_1: "A valid ID document (ID card, passport, or residence permit)"
+  document_2: "Recent proof of address (less than 3 months old)"
+  document_3: "A selfie with your ID document for biometric authentication"
+  
+  custom_message_title: "Important Message from Our Team"
+  
+  create_account_button: "Create My Account and Verify Identity"
+  
+  processing_time_title: "Processing Time"
+  processing_time_text: "Once your identity is validated, you can immediately view the response to your application. KYC verification is typically processed within 24 to 48 business hours."
+  
+  closing: "We remain at your complete disposal for any additional information or assistance with this process."
+  signature: "Best regards,<br>Customer Service<br>%company_name%"
+  
+  legal_notice: "This message and attachments are confidential and intended exclusively for their recipients. Any unauthorized use or distribution is prohibited. Identity verification is mandatory in accordance with Directive (EU) 2015/849 on the prevention of the use of the financial system for money laundering and terrorist financing."
+
+# Email bank details for payment
+payment_details:
+  greeting: "Dear %name%,"
+  title: "Bank Details for Your Payment"
+  intro: "We hereby provide you with the bank details necessary to make the payment of the amount indicated above. Please find below the account information:"
+  bank_details_title: "Bank Account Information"
+  account_holder: "Account Holder"
+  iban: "IBAN"
+  bic: "BIC"
+  instant_transfer_title: "REAL-TIME TRANSFER MANDATORY"
+  instant_transfer_message: "It is MANDATORY that this payment be made by REAL-TIME transfer (or instant transfer). We insist on the absolute necessity of using this instant transfer option to ensure immediate receipt of funds."
+  proof_title: "Transfer Confirmation"
+  proof_message: "Upon execution of the transfer, please send us a copy of the transfer slip for confirmation."
+  support_message: "We thank you for your diligence and promptness."

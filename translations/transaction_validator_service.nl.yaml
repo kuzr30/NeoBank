@@ -1,0 +1,12 @@
+transaction_validator_service:
+  exceptions:
+    positive_amount_required: "Het transactiebedrag moet positief zijn."
+    
+  user_messages:
+    empty_account_debit: "Uw rekening heeft een saldo van €0. Vul uw rekening aan voordat u deze bewerking uitvoert."
+    insufficient_funds: "Onvoldoende saldo. Uw huidige saldo is {currentBalance} € en u probeert {amount} € af te schrijven."
+    
+  log_messages:
+    empty_account_attempt: "Poging tot debitering op lege rekening"
+    negative_balance_attempt: "Poging tot debitering die een negatief saldo zou creëren"
+    debit_validation_success: "Debitering validatie succesvol"

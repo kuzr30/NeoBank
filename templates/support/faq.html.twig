@@ -1,0 +1,589 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tp('help_center_faq.page.title', {}, 'help_center_faq') }} - {{ companySettings.companyName }}{% endblock %}
+
+{% block body %}
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title">{{ tp('help_center_faq.hero.title', {}, 'help_center_faq') }}</h1>
+                <p class="hero__subtitle">{{ tp('help_center_faq.hero.subtitle', {}, 'help_center_faq') }}</p>
+                
+                <div class="hero__search">
+                    <div class="search-box">
+                        <input type="text" class="search-box__input" placeholder="{{ tp('help_center_faq.hero.search.placeholder', {}, 'help_center_faq') }}">
+                        <button class="search-box__button">
+                            <twig:ux:icon name="heroicons:magnifying-glass" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section FAQ -->
+    <section class="faq-details">
+        <div class="faq-details__container">
+            <h2 class="faq-details__title">{{ tp('help_center_faq.sections.main_title', {}, 'help_center_faq') }}</h2>
+            
+            <div class="faq-grid">
+                <!-- Banking Section -->
+                <div class="faq-category">
+                    <div class="faq-category__header">
+                        <div class="faq-category__icon">
+                            <twig:ux:icon name="heroicons:credit-card" />
+                        </div>
+                        <h3 class="faq-category__title">{{ tp('help_center_faq.sections.banking.title', {}, 'help_center_faq') }}</h3>
+                    </div>
+                    
+                    <div class="faq-category__items">
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.banking.questions.account_creation.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.banking.questions.account_creation.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.banking.questions.account_types.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.banking.questions.account_types.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.banking.questions.fees.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.banking.questions.fees.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.banking.questions.mobile_app.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.banking.questions.mobile_app.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transfers Section -->
+                <div class="faq-category">
+                    <div class="faq-category__header">
+                        <div class="faq-category__icon">
+                            <twig:ux:icon name="heroicons:arrow-path" />
+                        </div>
+                        <h3 class="faq-category__title">{{ tp('help_center_faq.sections.transfers.title', {}, 'help_center_faq') }}</h3>
+                    </div>
+                    
+                    <div class="faq-category__items">
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.transfers.questions.domestic_transfer.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.transfers.questions.domestic_transfer.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.transfers.questions.international_transfer.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.transfers.questions.international_transfer.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.transfers.questions.transfer_limits.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.transfers.questions.transfer_limits.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.transfers.questions.payment_cards.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.transfers.questions.payment_cards.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Section -->
+                <div class="faq-category">
+                    <div class="faq-category__header">
+                        <div class="faq-category__icon">
+                            <twig:ux:icon name="heroicons:shield-check" />
+                        </div>
+                        <h3 class="faq-category__title">{{ tp('help_center_faq.sections.security.title', {}, 'help_center_faq') }}</h3>
+                    </div>
+                    
+                    <div class="faq-category__items">
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.security.questions.two_factor.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.security.questions.two_factor.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.security.questions.password_reset.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.security.questions.password_reset.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.security.questions.account_blocked.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.security.questions.account_blocked.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.security.questions.fraud_prevention.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.security.questions.fraud_prevention.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Credits Section -->
+                <div class="faq-category">
+                    <div class="faq-category__header">
+                        <div class="faq-category__icon">
+                            <twig:ux:icon name="heroicons:currency-euro" />
+                        </div>
+                        <h3 class="faq-category__title">{{ tp('help_center_faq.sections.credits.title', {}, 'help_center_faq') }}</h3>
+                    </div>
+                    
+                    <div class="faq-category__items">
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.credits.questions.credit_application.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.credits.questions.credit_application.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.credits.questions.credit_types.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.credits.questions.credit_types.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.credits.questions.approval_time.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.credits.questions.approval_time.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.credits.questions.early_repayment.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.credits.questions.early_repayment.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Section -->
+                <div class="faq-category">
+                    <div class="faq-category__header">
+                        <div class="faq-category__icon">
+                            <twig:ux:icon name="heroicons:cog-6-tooth" />
+                        </div>
+                        <h3 class="faq-category__title">{{ tp('help_center_faq.sections.technical.title', {}, 'help_center_faq') }}</h3>
+                    </div>
+                    
+                    <div class="faq-category__items">
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.technical.questions.app_issues.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.technical.questions.app_issues.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.technical.questions.browser_compatibility.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.technical.questions.browser_compatibility.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.technical.questions.data_security.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.technical.questions.data_security.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.technical.questions.maintenance.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.technical.questions.maintenance.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="faq-category">
+                    <div class="faq-category__header">
+                        <div class="faq-category__icon">
+                            <twig:ux:icon name="heroicons:phone" />
+                        </div>
+                        <h3 class="faq-category__title">{{ tp('help_center_faq.sections.contact.title', {}, 'help_center_faq') }}</h3>
+                    </div>
+                    
+                    <div class="faq-category__items">
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.contact.questions.customer_service.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.contact.questions.customer_service.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.contact.questions.branch_appointment.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.contact.questions.branch_appointment.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.contact.questions.complaint.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.contact.questions.complaint.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                {{ tp('help_center_faq.sections.contact.questions.opening_hours.question', {}, 'help_center_faq') }}
+                                <twig:ux:icon name="heroicons:chevron-down" class="faq-chevron" />
+                            </button>
+                            <div class="faq-answer">
+                                <p>{{ tp('help_center_faq.sections.contact.questions.opening_hours.answer', {}, 'help_center_faq') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+function toggleFaq(button) {
+    const answer = button.nextElementSibling;
+    const chevron = button.querySelector('.faq-chevron');
+    const isOpen = answer.classList.contains('active');
+    
+    // Close all other FAQ items
+    document.querySelectorAll('.faq-answer').forEach(item => {
+        item.style.maxHeight = null;
+        item.classList.remove('active');
+    });
+    
+    document.querySelectorAll('.faq-chevron').forEach(icon => {
+        icon.classList.remove('rotated');
+    });
+    
+    // Toggle current item
+    if (!isOpen) {
+        answer.classList.add('active');
+        // Calculate full height including padding
+        const fullHeight = answer.scrollHeight + 48; // 1.5rem top + 1.5rem bottom padding
+        answer.style.maxHeight = fullHeight + "px";
+        chevron.classList.add('rotated');
+    }
+}
+</script>
+
+<style>
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.hero__title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero__search {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-box {
+    display: flex;
+    background: white;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.search-box__input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    color: #374151;
+}
+
+.search-box__button {
+    padding: 1rem 1.5rem;
+    background: #1e40af;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box__button:hover {
+    background: #1d4ed8;
+}
+
+/* FAQ Section */
+.faq-details {
+    padding: 4rem 0;
+    background: #f8fafc;
+}
+
+.faq-details__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.faq-details__title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 3rem;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+}
+
+.faq-category {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.faq-category__header {
+    background: linear-gradient(135deg, #1e40af, #3b82f6);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.faq-category__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-category__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.faq-category__items {
+    padding: 0;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1.5rem;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1f2937;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.faq-question:hover {
+    background: #f8fafc;
+}
+
+.faq-chevron {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-chevron.rotated {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background: #f8fafc;
+}
+
+.faq-answer.active {
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.faq-answer p {
+    margin: 0;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero__title {
+        font-size: 2rem;
+    }
+    
+    .hero__subtitle {
+        font-size: 1rem;
+    }
+    
+    .faq-details__title {
+        font-size: 2rem;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .faq-category__header {
+        padding: 1rem;
+    }
+    
+    .faq-question {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .faq-answer.active {
+        padding: 0 1rem 1rem 1rem;
+    }
+}
+</style>
+{% endblock %}

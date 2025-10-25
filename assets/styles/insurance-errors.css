@@ -1,0 +1,26 @@
+/* Erreurs de formulaire - respecter la logique d'affichage du template */
+.devis-form.was-validated .form-error, 
+.devis-form.was-validated .form-errors, 
+.devis-form.was-validated .form-error-wrapper, 
+.devis-form.was-validated .form-group .form-errors, 
+.devis-form.was-validated .form-group .form-error {
+  color: #dc2626;
+  font-size: 0.95em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  display: block;
+}
+
+.devis-form .form-errors {
+  display: none; /* Masquer par défaut */
+}
+
+.devis-form.was-validated .form-group .form-errors {
+  list-style: none;
+  padding-left: 0;
+  display: block;
+}
+
+.devis-form.was-validated .form-group .form-errors li {
+  margin-bottom: 0.15em;
+}

@@ -1,0 +1,140 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ 'email_card_contract.title'|trans({}, 'email_card_contract', _locale) }} - {{ parent() }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ 'email_card_contract.content.page_title'|trans({}, 'email_card_contract', _locale) }}</h2>
+    
+    <p class="content-text">
+        {{ 'email_card_contract.content.greeting'|trans({firstName: user.firstName, lastName: user.lastName}, 'email_card_contract', _locale) }}
+    </p>
+
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #2e7d32;">{{ 'email_card_contract.content.approval.title'|trans({}, 'email_card_contract', _locale) }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {{ 'email_card_contract.content.approval.description'|trans({}, 'email_card_contract', _locale) }}
+        </p>
+    </div>
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ 'email_card_contract.content.card_details.title'|trans({}, 'email_card_contract', _locale) }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #f8f9fa; border-radius: 6px;">
+                    <div style="margin-bottom: 12px;">
+                        <strong style="color: #1976d2;">{{ 'email_card_contract.content.card_details.type'|trans({}, 'email_card_contract', _locale) }}</strong><br>
+                        <span style="color: #424242;">{{ cardSubscription.cardBrand|title }} {{ cardSubscription.cardType|title }}</span>
+                    </div>
+                    <div style="margin-bottom: 12px;">
+                        <strong style="color: #1976d2;">{{ 'email_card_contract.content.card_details.reference'|trans({}, 'email_card_contract', _locale) }}</strong><br>
+                        <span style="color: #424242; font-family: monospace;">{{ contract.reference }}</span>
+                    </div>
+                    <div>
+                        <strong style="color: #1976d2;">{{ 'email_card_contract.content.card_details.request_date'|trans({}, 'email_card_contract', _locale) }}</strong><br>
+                        <span style="color: #424242;">{{ cardSubscription.createdAt|date('d/m/Y à H:i') }}</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ 'email_card_contract.content.fees.title'|trans({}, 'email_card_contract', _locale) }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #fff8e1; border-radius: 6px;">
+                    <table style="width: 100%; border-spacing: 8px;">
+                        <tr>
+                            <td style="padding: 8px; background: white; border-radius: 4px;">
+                                <strong style="color: #f57c00;">{{ 'email_card_contract.content.fees.activation'|trans({}, 'email_card_contract', _locale) }}</strong><br>
+                                <span style="color: #e65100; font-size: 16px; font-weight: 600;">{{ cardSubscription.activationFee ? cardSubscription.activationFee ~ '€' : 'N/A' }}</span>
+                            </td>
+                            <td style="padding: 8px; background: white; border-radius: 4px;">
+                                <strong style="color: #f57c00;">{{ 'email_card_contract.content.fees.monthly'|trans({}, 'email_card_contract', _locale) }}</strong><br>
+                                <span style="color: #424242;">{{ cardSubscription.monthlyFee ? cardSubscription.monthlyFee ~ '€/' ~ 'email_card_contract.content.fees.month'|trans({}, 'email_card_contract', _locale) : 'N/A' }}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; background: white; border-radius: 4px;">
+                                <strong style="color: #f57c00;">{{ 'email_card_contract.content.fees.daily_limit'|trans({}, 'email_card_contract', _locale) }}</strong><br>
+                                <span style="color: #424242;">{{ cardSubscription.dailyLimit ? cardSubscription.dailyLimit ~ '€/' ~ 'email_card_contract.content.fees.day'|trans({}, 'email_card_contract', _locale) : 'N/A' }}</span>
+                            </td>
+                            <td style="padding: 8px; background: white; border-radius: 4px;">
+                                <strong style="color: #f57c00;">{{ 'email_card_contract.content.fees.monthly_limit'|trans({}, 'email_card_contract', _locale) }}</strong><br>
+                                <span style="color: #424242;">{{ cardSubscription.monthlyLimit ? cardSubscription.monthlyLimit ~ '€/' ~ 'email_card_contract.content.fees.month'|trans({}, 'email_card_contract', _locale) : 'N/A' }}</span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="error-box">
+        <h3 style="margin-top: 0; color: #d32f2f;">{{ 'email_card_contract.content.signature_required.title'|trans({}, 'email_card_contract', _locale) }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #ffebee; border-left: 4px solid #d32f2f; border-radius: 6px;">
+                    <p style="margin: 0; color: #000000;">
+                        {{ 'email_card_contract.content.signature_required.description'|trans({expiresAt: expiresAt|date('d/m/Y à H:i')}, 'email_card_contract', _locale) }}
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ 'email_card_contract.content.next_steps.title'|trans({}, 'email_card_contract', _locale) }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #f8f9fa; border-radius: 6px;">
+                    <ol style="margin: 0; padding-left: 20px; color: #000000;">
+                        <li style="margin-bottom: 8px;">{{ 'email_card_contract.content.next_steps.step1'|trans({}, 'email_card_contract', _locale) }}</li>
+                        <li style="margin-bottom: 8px;">{{ 'email_card_contract.content.next_steps.step2'|trans({}, 'email_card_contract', _locale) }}</li>
+                        <li style="margin-bottom: 8px;">{{ 'email_card_contract.content.next_steps.step3'|trans({}, 'email_card_contract', _locale) }}</li>
+                        <li style="margin-bottom: 0;">{{ 'email_card_contract.content.next_steps.step4'|trans({}, 'email_card_contract', _locale) }}</li>
+                    </ol>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ 'email_card_contract.content.action.title'|trans({}, 'email_card_contract', _locale) }}</h3>
+        <table style="width: 100%; border-spacing: 12px 0;">
+            <tr>
+                <td style="padding: 0; text-align: center;">
+                    <a href="{{ signatureUrl }}" 
+                       style="display: block; background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; text-decoration: none; padding: 18px 32px; border-radius: 8px; font-weight: 600; text-align: center; box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3); font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px;">
+                        {{ 'email_card_contract.content.action.sign_button'|trans({}, 'email_card_contract', _locale) }}
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ 'email_card_contract.content.contract_info.title'|trans({}, 'email_card_contract', _locale) }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #fff8e1; border-radius: 6px;">
+                    <div style="margin-bottom: 12px;">
+                        <strong style="color: #f57c00;">{{ 'email_card_contract.content.contract_info.reference'|trans({}, 'email_card_contract', _locale) }}</strong><br>
+                        <span style="color: #424242; font-family: monospace;">{{ contract.reference }}</span>
+                    </div>
+                    <div>
+                        <strong style="color: #f57c00;">{{ 'email_card_contract.content.contract_info.expires'|trans({}, 'email_card_contract', _locale) }}</strong><br>
+                        <span style="color: #d32f2f; font-weight: 600;">{{ expiresAt|date('d/m/Y à H:i') }}</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p class="content-text">
+        {{ 'email_card_contract.content.assistance'|trans({}, 'email_card_contract', _locale) }}
+    </p>
+
+    <p class="footer-text">
+        {{ 'email_card_contract.content.footer'|trans({}, 'email_card_contract', _locale)|raw }}
+    </p>
+{% endblock %}

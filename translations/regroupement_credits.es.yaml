@@ -1,0 +1,106 @@
+regroupement_credits:
+  page:
+    title: "Agrupación de Créditos"
+    description: "Simplifique sus finanzas con nuestra agrupación de créditos. Una sola mensualidad para todos sus préstamos."
+  
+  hero:
+    class: "credit-detail-hero--regroupement"
+    taux: "{rate}%"
+    montant: "200 000€"
+    duree: "25 años"
+    title: "Agrupación de Créditos"
+    subtitle: "Simplifique la gestión de sus créditos"
+  
+  section_1:
+    title: "¿Qué es una agrupación de créditos?"
+    content:
+      paragraph_1: "La agrupación de créditos consiste en reunir varios préstamos en curso (inmobiliario, consumo, tarjetas de crédito) en un solo crédito con una mensualidad única, generalmente más baja."
+      paragraph_2: "Esta operación de reestructuración financiera permite simplificar la gestión de su presupuesto, reducir sus mensualidades y recuperar la serenidad en sus finanzas personales."
+  
+  features:
+    title: "Características de la agrupación"
+    montant:
+      value: "Hasta 200 000€"
+      detail: "Monto de los créditos agrupados"
+    duree:
+      value: "Hasta 25 años"
+      detail: "Extensión posible"
+    taux:
+      value: "A partir de {rate}% TAE*"
+      detail: "Tasa única optimizada"
+    garantie:
+      value: "Hipoteca"
+      detail: "Si el monto es importante"
+  
+  section_3:
+    title: "Ventajas de la agrupación"
+    advantages:
+      mensualite_unique:
+        title: "Mensualidad única"
+        description: "Solo un débito que gestionar"
+      baisse_echeances:
+        title: "Reducción de cuotas"
+        description: "Reducción hasta 50% de las mensualidades totales"
+      tresorerie_liberee:
+        title: "Tesorería liberada"
+        description: "Poder adquisitivo restaurado"
+      gestion_simplifiee:
+        title: "Gestión simplificada"
+        description: "Un solo interlocutor para todos sus créditos"
+      tresorerie_supplementaire:
+        title: "Tesorería adicional"
+        description: "Posibilidad de obtener fondos complementarios"
+  
+  section_4:
+    title: "Condiciones de elegibilidad"
+    conditions:
+      title: "Condiciones generales"
+      items:
+        revenus: "Ingresos regulares y suficientes"
+        credits_existants: "Al menos 2 créditos en curso"
+        montant_minimum: "Monto total mínimo de 20 000€"
+        capacite_remboursement: "Tasa de endeudamiento aceptable"
+    dossier:
+      title: "Constitución del expediente"
+      items:
+        tableaux: "Tablas de amortización de los créditos existentes"
+        assurances: "Contratos de seguro en curso"
+        justificatifs: "Justificantes de ingresos recientes"
+        situation: "Situación patrimonial completa"
+  
+  section_5:
+    title: "Documentos necesarios"
+    personnels:
+      title: "Documentos personales"
+      items:
+        identite: "Documento de identidad"
+        domicile: "Justificante de domicilio"
+        familiale: "Situación familiar"
+        rib: "IBAN de la cuenta principal"
+    financiers:
+      title: "Justificantes financieros"
+      items:
+        revenus: "3 últimas nóminas"
+        impots: "Último certificado de ingresos"
+        comptes: "Estados de cuentas de 3 meses"
+        patrimoine: "Declaración de patrimonio"
+    credits:
+      title: "Créditos existentes"
+      items:
+        contrats: "Contratos de préstamos en curso"
+        echeanciers: "Calendarios de pagos de los créditos"
+        assurances_contrats: "Contratos de seguro de prestatario"
+        releves: "Últimos estados de las cuentas acreditadas"
+  
+  legal:
+    details:
+      title: "Información legal importante"
+      taeg: "<strong>*TAE:</strong> Ejemplo representativo: agrupación de 3 créditos por un total de 80 000€, nuevo crédito de 90 000€ en 180 meses al TAE de 4,8%, 180 mensualidades de 500€, coste total: 90 000€."
+      duree: "<strong>Duración:</strong> La extensión de la duración aumenta el coste total del crédito."
+      garantie: "<strong>Garantía:</strong> Hipoteca posible según monto y situación."
+      assurance: "<strong>Seguro:</strong> Fallecimiento invalidez obligatorio, pérdida de empleo recomendado."
+      reflexion: "<strong>Plazo de reflexión:</strong> 14 días de plazo de retractación legal."
+  
+  cta:
+    title: "Simplifique sus finanzas"
+    subtitle: "Recupere la serenidad con una agrupación de créditos"

@@ -1,0 +1,70 @@
+profile_kyc_index:
+  page:
+    title: "Vérification d'identité (KYC) - %company_name%"
+  
+  header:
+    title: "Vérification d'identité (KYC)"
+    subtitle: "Confirmer votre identité pour accéder à tous nos services"
+  
+  alerts:
+    rejected:
+      title: "Vérification d'identité refusée"
+      text: "Votre demande de vérification d'identité a été refusée."
+      reason: "Raison :"
+      action_text: "Vous pouvez soumettre de nouveaux documents en cliquant sur le bouton ci-dessous."
+      common_reasons:
+        documents_non_conformes: "Documents non conformes"
+        documents_illegibles: "Documents illisibles"
+        documents_expires: "Documents expirés"
+        quality_insufficient: "Qualité insuffisante"
+        missing_information: "Informations manquantes"
+    pending:
+      title: "Vérification en cours"
+      text: "Votre demande de vérification d'identité est en cours d'examen. Vous serez notifié par email dès que le traitement sera terminé."
+    approved:
+      title: "Vérification d'identité approuvée"
+      text: "Félicitations ! Votre identité a été vérifiée avec succès. Vous avez maintenant accès à tous nos services bancaires."
+    required:
+      title: "Vérification d'identité requise"
+      text: "Pour accéder à nos services bancaires, vous devez d'abord vérifier votre identité. Cette étape est obligatoire en raison des réglementations KYC."
+  
+  documents:
+    title: "Documents requis"
+    subtitle: "Sécurisez votre compte en vérifiant votre identité. Cette étape est obligatoire en raison des réglementations KYC."
+    
+    identity_document:
+      title: "Pièce d'identité"
+      description: "Document officiel en cours de validité"
+      items:
+        - "Carte Nationale d'Identité"
+        - "Passeport"
+        - "Permis de conduire"
+    
+    income_document:
+      title: "Justificatif de revenus"
+      description: "Document de moins de 3 mois"
+      items:
+        - "Fiche de paie"
+        - "Avis d'imposition"
+    
+    address_document:
+      title: "Justificatif de domicile"
+      description: "Document de moins de 3 mois"
+      items:
+        - "Facture (électricité, gaz, internet)"
+        - "Quittance de loyer"
+    
+    selfie:
+      title: "Selfie"
+      badge: "Optionnel"
+      description: "Photo avec votre pièce d'identité"
+      items:
+        - "Visage bien visible"
+        - "Pièce d'identité lisible"
+  
+  actions:
+    access_banking: "Accéder à mes services bancaires"
+    view_status: "Voir le statut de ma demande"
+    submit_documents: "Soumettre mes documents"
+    submit_new_documents: "Soumettre de nouveaux documents"
+    submission_guide: "Guide de soumission"

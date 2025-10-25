@@ -1,0 +1,20 @@
+custom_email:
+  title: "Message personnalisé"
+  content:
+    attachments:
+      title: "Pièces jointes"
+      count_single: "Ce message contient {count} pièce jointe."
+      count_plural: "Ce message contient {count} pièces jointes."
+    footer:
+      sent_by: "Cet email vous a été envoyé par l'équipe {company_name}."
+      sender: "Expéditeur : {sender_name}"
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Envoi de l'email personnalisé"
+    success: "Email personnalisé envoyé avec succès"
+    error: "Erreur lors de l'envoi de l'email personnalisé"
+    not_found: "Email personnalisé non trouvé"
+    already_sent: "Email personnalisé déjà envoyé"
+    attachment_not_found: "Fichier de pièce jointe introuvable"
+    send_failed: "Échec de l'envoi de l'email personnalisé"

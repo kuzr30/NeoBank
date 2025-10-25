@@ -1,0 +1,31 @@
+email_kyc_approved:
+  title: "Identiteitsverificatie goedgekeurd - %company_name%"
+  
+  content:
+    page_title: "Gefeliciteerd %firstName%!"
+    
+    success:
+      title: "Identiteitsverificatie goedgekeurd"
+      message: "Uw identiteitsverificatie (KYC) is <strong>succesvol goedgekeurd</strong>."
+    
+    services_intro: "U heeft nu toegang tot al onze bankdiensten:"
+    
+    services_list:
+      - "Beheer van uw rekeningen"
+      - "Bestelling van bankkaarten"
+      - "Overboekingen en transfers"
+      - "Spaarproducten"
+      - "🏠 Kredietaanvragen"
+      - "Verzekeringen"
+    
+    dashboard_button: "Toegang tot mijn bankdiensten"
+    
+    admin_note:
+      title: "💬 Opmerking van het team"
+    
+    closing: "Dank u voor uw vertrouwen en welkom bij %company_name%!<br><strong>Het %company_name% team</strong>"
+
+  logs:
+    kyc_approved_sent: "KYC-goedkeurings-e-mail succesvol verzonden naar %email%"
+    kyc_approved_failed: "Fout bij het verzenden van KYC-goedkeuring naar %email%"
+    kyc_status_updated: "KYC-status bijgewerkt voor %firstName% %lastName% - Goedgekeurd"

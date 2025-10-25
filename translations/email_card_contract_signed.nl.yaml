@@ -1,0 +1,19 @@
+email_card_contract_signed:
+  title: "Contract ondertekend - Uw kaart is binnenkort beschikbaar"
+  content:
+    page_title: "Contract succesvol ondertekend!"
+    greeting: "Beste {firstName} {lastName},"
+    success:
+      title: "Gefeliciteerd!"
+      description: "Uw kaartabonnement contract is succesvol ondertekend. We hebben uw elektronische handtekening goed ontvangen."
+    contract_details:
+      title: "Details van uw contract"
+      reference: "Referentie"
+      card_type: "Kaarttype"
+      signed_date: "Datum ondertekening"
+    next_steps:
+      title: "Volgende stappen"
+      step1: "Ons team zal nu uw dossier valideren"
+      step2: "Uw betaling wordt zo spoedig mogelijk verwerkt"
+      step3: "Uw kaart wordt geproduceerd en verzonden binnen 5-7 werkdagen"
+    closing: "We houden u per e-mail op de hoogte van de voortgang van uw aanvraag. Bedankt voor uw vertrouwen!"

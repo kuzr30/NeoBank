@@ -1,0 +1,656 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tp('profile_preferences.page.title', {}, 'profile_preferences') }}{% endblock %}
+
+{% block body %}
+
+<style>
+/* Preferences Page Specific Styles */
+.preferences__container {
+    max-width: 900px !important;
+    margin: 0 auto !important;
+    padding: 24px !important;
+    background: #f8f9fa !important;
+    min-height: 100vh !important;
+}
+
+.preferences__header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+    margin-bottom: 24px !important;
+}
+
+.preferences__back {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 8px !important;
+    background: #ffffff !important;
+    border: 1px solid #e1e8ed !important;
+    color: #0066cc !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.preferences__back:hover {
+    background: #f8f9fa !important;
+    border-color: #0066cc !important;
+    color: #0066cc !important;
+}
+
+.preferences__back-icon {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.preferences__title {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    margin: 0 !important;
+}
+
+.preferences__section {
+    background: #ffffff !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    margin-bottom: 24px !important;
+}
+
+.preferences__section-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 20px !important;
+}
+
+.preferences__section-title {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.preferences__section-icon {
+    width: 20px !important;
+    height: 20px !important;
+    color: #0066cc !important;
+}
+
+.preferences__setting {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 16px 0 !important;
+    border-bottom: 1px solid #f1f3f4 !important;
+}
+
+.preferences__setting:last-child {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+.preferences__setting-info {
+    flex: 1 !important;
+    margin-right: 16px !important;
+}
+
+.preferences__setting-title {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 2px !important;
+}
+
+.preferences__setting-desc {
+    font-size: 12px !important;
+    color: #7f8c8d !important;
+}
+
+.preferences__setting-control {
+    flex-shrink: 0 !important;
+}
+
+.preferences__select {
+    padding: 8px 12px !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    background: #ffffff !important;
+    min-width: 150px !important;
+    appearance: none !important;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 8px center !important;
+    background-size: 16px !important;
+    padding-right: 32px !important;
+    transition: all 0.2s ease !important;
+}
+
+.preferences__select:focus {
+    outline: none !important;
+    border-color: #0066cc !important;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1) !important;
+}
+
+.preferences__toggle {
+    position: relative !important;
+    display: inline-block !important;
+    width: 44px !important;
+    height: 24px !important;
+}
+
+.preferences__toggle-input {
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.preferences__toggle-slider {
+    position: absolute !important;
+    cursor: pointer !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background-color: #ccc !important;
+    transition: 0.3s !important;
+    border-radius: 24px !important;
+}
+
+.preferences__toggle-slider:before {
+    position: absolute !important;
+    content: "" !important;
+    height: 18px !important;
+    width: 18px !important;
+    left: 3px !important;
+    bottom: 3px !important;
+    background-color: white !important;
+    transition: 0.3s !important;
+    border-radius: 50% !important;
+}
+
+.preferences__toggle-input:checked + .preferences__toggle-slider {
+    background-color: #0066cc !important;
+}
+
+.preferences__toggle-input:checked + .preferences__toggle-slider:before {
+    transform: translateX(20px) !important;
+}
+
+.preferences__input {
+    padding: 8px 12px !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    background: #ffffff !important;
+    min-width: 150px !important;
+    transition: all 0.2s ease !important;
+}
+
+.preferences__input:focus {
+    outline: none !important;
+    border-color: #0066cc !important;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1) !important;
+}
+
+.preferences__color-picker {
+    width: 60px !important;
+    height: 32px !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    background: #ffffff !important;
+    transition: all 0.2s ease !important;
+}
+
+.preferences__color-picker:focus {
+    outline: none !important;
+    border-color: #0066cc !important;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1) !important;
+}
+
+.preferences__actions {
+    display: flex !important;
+    gap: 12px !important;
+    justify-content: flex-end !important;
+    margin-top: 24px !important;
+    padding-top: 24px !important;
+    border-top: 1px solid #e1e8ed !important;
+}
+
+.preferences__btn {
+    padding: 12px 24px !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    text-decoration: none !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    border: none !important;
+}
+
+.preferences__btn--cancel {
+    background: #f8f9fa !important;
+    color: #7f8c8d !important;
+    border: 1px solid #e1e8ed !important;
+}
+
+.preferences__btn--cancel:hover {
+    background: #f1f5f9 !important;
+    color: #6c757d !important;
+}
+
+.preferences__btn--save {
+    background: #0066cc !important;
+    color: white !important;
+}
+
+.preferences__btn--save:hover {
+    background: #0052a3 !important;
+}
+
+.preferences__btn-icon {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.preferences__notification-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 12px 0 !important;
+    border-bottom: 1px solid #f1f3f4 !important;
+}
+
+.preferences__notification-item:last-child {
+    border-bottom: none !important;
+}
+
+.preferences__notification-info {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    flex: 1 !important;
+}
+
+.preferences__notification-icon {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+}
+
+.preferences__notification-icon--email {
+    background: #e3f2fd !important;
+}
+
+.preferences__notification-icon--sms {
+    background: #e8f5e8 !important;
+}
+
+.preferences__notification-icon--push {
+    background: #fff3e0 !important;
+}
+
+.preferences__notification-icon-svg {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.preferences__notification-icon--email .preferences__notification-icon-svg {
+    color: #1976d2 !important;
+}
+
+.preferences__notification-icon--sms .preferences__notification-icon-svg {
+    color: #388e3c !important;
+}
+
+.preferences__notification-icon--push .preferences__notification-icon-svg {
+    color: #f57c00 !important;
+}
+
+.preferences__notification-text {
+    flex: 1 !important;
+}
+
+.preferences__notification-title {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 2px !important;
+}
+
+.preferences__notification-desc {
+    font-size: 12px !important;
+    color: #7f8c8d !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .preferences__setting {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+    }
+    
+    .preferences__setting-info {
+        margin-right: 0 !important;
+    }
+    
+    .preferences__setting-control {
+        width: 100% !important;
+    }
+    
+    .preferences__select,
+    .preferences__input {
+        width: 100% !important;
+        min-width: auto !important;
+    }
+    
+    .preferences__actions {
+        flex-direction: column-reverse !important;
+    }
+    
+    .preferences__btn {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+}
+</style>
+
+<div class="preferences__container">
+    <!-- Header -->
+    <div class="preferences__header">
+        <a href="{{ path('profile_index') }}" class="preferences__back">
+            {{ ux_icon('heroicons:arrow-left', {'class': 'preferences__back-icon'}) }}
+        </a>
+        <h1 class="preferences__title">Préférences</h1>
+    </div>
+
+    <form method="post">
+        <!-- General Settings -->
+        <div class="preferences__section">
+            <div class="preferences__section-header">
+                <h2 class="preferences__section-title">
+                    {{ ux_icon('heroicons:cog-6-tooth', {'class': 'preferences__section-icon'}) }}
+                    Paramètres généraux
+                </h2>
+            </div>
+            
+            <div class="preferences__setting">
+                <div class="preferences__setting-info">
+                    <div class="preferences__setting-title">Langue de l'interface</div>
+                    <div class="preferences__setting-desc">Choisissez la langue d'affichage de l'application</div>
+                </div>
+                <div class="preferences__setting-control">
+                    <select name="language" class="preferences__select">
+                        <option value="fr" selected>Français</option>
+                        <option value="en">English</option>
+                        <option value="de">Deutsch</option>
+                        <option value="es">Español</option>
+                        <option value="nl">Nederlands</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="preferences__setting">
+                <div class="preferences__setting-info">
+                    <div class="preferences__setting-title">Devise par défaut</div>
+                    <div class="preferences__setting-desc">Devise utilisée pour l'affichage des montants</div>
+                </div>
+                <div class="preferences__setting-control">
+                    <select name="currency" class="preferences__select">
+                        <option value="EUR" selected>Euro (EUR)</option>
+                        <option value="USD">Dollar américain (USD)</option>
+                        <option value="GBP">Livre sterling (GBP)</option>
+                        <option value="CHF">Franc suisse (CHF)</option>
+                        <option value="CAD">Dollar canadien (CAD)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="preferences__setting">
+                <div class="preferences__setting-info">
+                    <div class="preferences__setting-title">Fuseau horaire</div>
+                    <div class="preferences__setting-desc">Définit l'affichage des dates et heures</div>
+                </div>
+                <div class="preferences__setting-control">
+                    <select name="timezone" class="preferences__select">
+                        <option value="Europe/Paris" selected>Europe/Paris (CET)</option>
+                        <option value="Europe/London">Europe/London (GMT)</option>
+                        <option value="America/New_York">America/New_York (EST)</option>
+                        <option value="America/Toronto">America/Toronto (EST)</option>
+                        <option value="Europe/Zurich">Europe/Zurich (CET)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="preferences__setting">
+                <div class="preferences__setting-info">
+                    <div class="preferences__setting-title">Format de date</div>
+                    <div class="preferences__setting-desc">Format d'affichage des dates</div>
+                </div>
+                <div class="preferences__setting-control">
+                    <select name="dateFormat" class="preferences__select">
+                        <option value="dd/mm/yyyy" selected>DD/MM/YYYY</option>
+                        <option value="mm/dd/yyyy">MM/DD/YYYY</option>
+                        <option value="yyyy-mm-dd">YYYY-MM-DD</option>
+                        <option value="dd-mm-yyyy">DD-MM-YYYY</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Display Settings -->
+        <div class="preferences__section">
+            <div class="preferences__section-header">
+                <h2 class="preferences__section-title">
+                    {{ ux_icon('heroicons:eye', {'class': 'preferences__section-icon'}) }}
+                    Affichage
+                </h2>
+            </div>
+            
+            <div class="preferences__setting">
+                <div class="preferences__setting-info">
+                    <div class="preferences__setting-title">Thème</div>
+                    <div class="preferences__setting-desc">Apparence de l'interface utilisateur</div>
+                </div>
+                <div class="preferences__setting-control">
+                    <select name="theme" class="preferences__select">
+                        <option value="light" selected>Clair</option>
+                        <option value="dark">Sombre</option>
+                        <option value="auto">Automatique</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="preferences__setting">
+                <div class="preferences__setting-info">
+                    <div class="preferences__setting-title">Couleur d'accent</div>
+                    <div class="preferences__setting-desc">Couleur principale de l'interface</div>
+                </div>
+                <div class="preferences__setting-control">
+                    <input type="color" name="accentColor" value="#0066cc" class="preferences__color-picker">
+                </div>
+            </div>
+            
+            <div class="preferences__setting">
+                <div class="preferences__setting-info">
+                    <div class="preferences__setting-title">Affichage des soldes</div>
+                    <div class="preferences__setting-desc">Masquer les montants sur la page d'accueil</div>
+                </div>
+                <div class="preferences__setting-control">
+                    <label class="preferences__toggle">
+                        <input type="checkbox" name="hideBalances" class="preferences__toggle-input">
+                        <span class="preferences__toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="preferences__setting">
+                <div class="preferences__setting-info">
+                    <div class="preferences__setting-title">Animations</div>
+                    <div class="preferences__setting-desc">Activer les animations de l'interface</div>
+                </div>
+                <div class="preferences__setting-control">
+                    <label class="preferences__toggle">
+                        <input type="checkbox" name="animations" checked class="preferences__toggle-input">
+                        <span class="preferences__toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="preferences__setting">
+                <div class="preferences__setting-info">
+                    <div class="preferences__setting-title">Nombre d'éléments par page</div>
+                    <div class="preferences__setting-desc">Nombre de transactions affichées par page</div>
+                </div>
+                <div class="preferences__setting-control">
+                    <select name="itemsPerPage" class="preferences__select">
+                        <option value="10">10</option>
+                        <option value="25" selected>25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notification Settings -->
+        <div class="preferences__section">
+            <div class="preferences__section-header">
+                <h2 class="preferences__section-title">
+                    {{ ux_icon('heroicons:bell', {'class': 'preferences__section-icon'}) }}
+                    Notifications
+                </h2>
+            </div>
+            
+            <div class="preferences__notification-item">
+                <div class="preferences__notification-info">
+                    <div class="preferences__notification-icon preferences__notification-icon--email">
+                        {{ ux_icon('heroicons:envelope', {'class': 'preferences__notification-icon-svg'}) }}
+                    </div>
+                    <div class="preferences__notification-text">
+                        <div class="preferences__notification-title">Notifications par email</div>
+                        <div class="preferences__notification-desc">Recevez des alertes importantes par email</div>
+                    </div>
+                </div>
+                <label class="preferences__toggle">
+                    <input type="checkbox" name="emailNotifications" checked class="preferences__toggle-input">
+                    <span class="preferences__toggle-slider"></span>
+                </label>
+            </div>
+            
+            <div class="preferences__notification-item">
+                <div class="preferences__notification-info">
+                    <div class="preferences__notification-icon preferences__notification-icon--sms">
+                        {{ ux_icon('heroicons:device-phone-mobile', {'class': 'preferences__notification-icon-svg'}) }}
+                    </div>
+                    <div class="preferences__notification-text">
+                        <div class="preferences__notification-title">Notifications SMS</div>
+                        <div class="preferences__notification-desc">Alertes de sécurité et transactions importantes</div>
+                    </div>
+                </div>
+                <label class="preferences__toggle">
+                    <input type="checkbox" name="smsNotifications" class="preferences__toggle-input">
+                    <span class="preferences__toggle-slider"></span>
+                </label>
+            </div>
+            
+            <div class="preferences__notification-item">
+                <div class="preferences__notification-info">
+                    <div class="preferences__notification-icon preferences__notification-icon--push">
+                        {{ ux_icon('heroicons:bell', {'class': 'preferences__notification-icon-svg'}) }}
+                    </div>
+                    <div class="preferences__notification-text">
+                        <div class="preferences__notification-title">Notifications push</div>
+                        <div class="preferences__notification-desc">Alertes en temps réel dans le navigateur</div>
+                    </div>
+                </div>
+                <label class="preferences__toggle">
+                    <input type="checkbox" name="pushNotifications" checked class="preferences__toggle-input">
+                    <span class="preferences__toggle-slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Privacy Settings -->
+        <div class="preferences__section">
+            <div class="preferences__section-header">
+                <h2 class="preferences__section-title">
+                    {{ ux_icon('heroicons:lock-closed', {'class': 'preferences__section-icon'}) }}
+                    Confidentialité
+                </h2>
+            </div>
+            
+            <div class="preferences__setting">
+                <div class="preferences__setting-info">
+                    <div class="preferences__setting-title">Déconnexion automatique</div>
+                    <div class="preferences__setting-desc">Durée d'inactivité avant déconnexion automatique</div>
+                </div>
+                <div class="preferences__setting-control">
+                    <select name="autoLogout" class="preferences__select">
+                        <option value="15">15 minutes</option>
+                        <option value="30" selected>30 minutes</option>
+                        <option value="60">1 heure</option>
+                        <option value="120">2 heures</option>
+                        <option value="0">Jamais</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="preferences__setting">
+                <div class="preferences__setting-info">
+                    <div class="preferences__setting-title">{{ tp('profile_preferences.settings.history.title', {}, 'profile_preferences') }}</div>
+                    <div class="preferences__setting-desc">{{ tp('profile_preferences.settings.history.description', {}, 'profile_preferences') }}</div>
+                </div>
+                <div class="preferences__setting-control">
+                    <label class="preferences__toggle">
+                        <input type="checkbox" name="saveHistory" checked class="preferences__toggle-input">
+                        <span class="preferences__toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="preferences__setting">
+                <div class="preferences__setting-info">
+                    <div class="preferences__setting-title">Cookies analytiques</div>
+                    <div class="preferences__setting-desc">Autoriser les cookies pour améliorer l'expérience</div>
+                </div>
+                <div class="preferences__setting-control">
+                    <label class="preferences__toggle">
+                        <input type="checkbox" name="analyticsCookies" class="preferences__toggle-input">
+                        <span class="preferences__toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="preferences__actions">
+            <a href="{{ path('profile_index') }}" class="preferences__btn preferences__btn--cancel">
+                {{ ux_icon('heroicons:x-mark', {'class': 'preferences__btn-icon'}) }}
+                {{ tp('profile_preferences.actions.cancel', {}, 'profile_preferences') }}
+            </a>
+            <button type="submit" class="preferences__btn preferences__btn--save">
+                {{ ux_icon('heroicons:check', {'class': 'preferences__btn-icon'}) }}
+                {{ tp('profile_preferences.actions.save', {}, 'profile_preferences') }}
+            </button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

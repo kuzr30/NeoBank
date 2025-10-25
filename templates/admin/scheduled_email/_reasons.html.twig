@@ -1,0 +1,24 @@
+{% if reasons is not empty %}
+    <div class="form-group">
+        <label class="form-label">Raisons</label>
+        <small class="form-text text-muted mb-2 d-block">Sélectionnez les raisons pertinentes pour ce type d'email</small>
+        
+        {% for reason in reasons %}
+            <div class="form-check">
+                <input 
+                    class="form-check-input" 
+                    type="checkbox" 
+                    name="reasons[]" 
+                    value="{{ reason.value }}" 
+                    id="reason_{{ reason.value }}"
+                >
+                <label class="form-check-label" for="reason_{{ reason.value }}">
+                    <strong>{{ reason.label }}</strong>
+                    {% if reason.description %}
+                        <br><small class="text-muted">{{ reason.description }}</small>
+                    {% endif %}
+                </label>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

@@ -1,0 +1,50 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: legal_notices.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+legal_notices:
+  page_title: "Legal Notices"
+  page_description: "Legal information and regulatory obligations of %company_name%"
+
+  company_info:
+    title: "Company information"
+    content: |
+      <strong>Company name:</strong> %company_name%<br>
+      <strong>Address:</strong> %company_address%<br>
+      <strong>Phone:</strong> %company_phone%<br>
+      <strong>Email:</strong> %company_email%<br>
+      <strong>SIRET:</strong> %company_siret%<br>
+      <strong>Website:</strong> %company_website%
+
+  hosting:
+    title: "Hosting"
+    content: |
+      This site is hosted by <strong>%hosting_provider%</strong><br>
+      Address: %hosting_address%<br>
+      Website: %hosting_website%
+
+  intellectual_property:
+    title: "Intellectual property"
+    content: |
+      This entire site falls under French and international copyright and intellectual property law.
+      All reproduction rights are reserved, including for downloadable documents and iconographic and photographic representations.
+
+  liability:
+    title: "Liability"
+    content: |
+      The information contained on this site is as accurate as possible and the site is updated at different times of the year.
+      However, errors or omissions may occur. Internet users should therefore verify the accuracy of information with %company_name%,
+      and report any modifications to the site they deem useful.
+
+  gdpr:
+    title: "Personal data protection"
+    content: |
+      In application of law n°78-17 of January 6, 1978 relating to information technology, files and freedoms (GDPR),
+      users have a right of access, rectification, deletion and opposition of their personal data.
+      This right is exercised with %company_name% at the address %company_email%.
+
+  contact:
+    title: "Contact"
+    content: |
+      For any questions regarding these legal notices, you can contact us at %email%.

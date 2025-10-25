@@ -1,0 +1,576 @@
+{# Template pour l'affichage des cartes avec logique une carte par utilisateur #}
+
+<style>
+/* Styles spécifiques pour les cartes dans l'onglet */
+.card-section {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.card-section__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.card-section__title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.card-section__icon {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+}
+
+.card-section__subtitle {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.user-card-section__title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 1.5rem 0;
+}
+
+.bank-card {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+}
+
+.bank-card--mastercard {
+    background: linear-gradient(135deg, #eb1c26 0%, #f79e1b 100%);
+}
+
+.bank-card--blocked {
+    background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
+}
+
+.bank-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.bank-card__status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.bank-card__number {
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+}
+
+.bank-card__holder {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    margin-bottom: 0.25rem;
+}
+
+.bank-card__name {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.card-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.card-action {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.card-action:hover {
+    background: var(--primary-50);
+    border-color: var(--primary-200);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-action__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--primary-100);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-600);
+}
+
+.card-action__content h4 {
+    margin: 0 0 0.25rem 0;
+    font-weight: 600;
+}
+
+.card-action__content p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.subscription-section {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.subscription-card {
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    background: var(--bg-white);
+}
+
+.subscription-card--premium {
+    border-color: var(--primary-200);
+    background: linear-gradient(135deg, var(--primary-50) 0%, var(--bg-white) 100%);
+}
+
+.subscription-card:hover {
+    border-color: var(--primary-300);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.subscription-icon {
+    width: 3rem;
+    height: 3rem;
+    background: var(--primary-100);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-600);
+}
+
+.subscription-info h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.subscription-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-600);
+    margin-bottom: 1.5rem;
+}
+
+.subscription-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.subscription-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+}
+
+.subscription-features li::before {
+    content: "✓";
+    color: var(--success-color);
+    font-weight: bold;
+    width: 1rem;
+}
+
+.subscription-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscription-btn:hover {
+    background: var(--primary-700);
+}
+
+.subscription-btn--outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.subscription-btn--outline:hover {
+    background: var(--primary-color);
+    color: white;
+}
+</style>
+
+<div class="card-section">
+    <div class="card-section__header">
+        <h2 class="card-section__title">
+            <i class="card-section__icon fas fa-credit-card"></i>
+             {{ tp('banking_cards_tab.main.title', [], 'banking_cards_tab') }}
+        </h2>
+            <p class="card-section__subtitle">
+                {{ tp('banking_cards_tab.main.subtitle', [], 'banking_cards_tab') }}
+            </p>
+    </div>
+
+    {% if userCardOrSubscription.type == 'card' %}
+        {# L'utilisateur a une carte active #}
+        {% set card = userCardOrSubscription.entity %}
+        <div class="user-card-section">
+            <h3 class="user-card-section__title">
+                <i class="fas fa-wallet"></i> {{ tp('banking_cards_tab.user_card.my_card', [], 'banking_cards_tab') }}
+            </h3>
+            
+            <div class="bank-card bank-card--{{ card.category|default('visa') }}{% if card.status != 'active' %} bank-card--blocked{% endif %}">
+                <div class="bank-card__header">
+                    <div class="bank-card__brand">
+                        {% if card.category == 'visa' or card.category is null %}
+                            {{ ux_icon('logos:visa') }}
+                        {% elseif card.category == 'mastercard' %}
+                            {{ ux_icon('logos:mastercard') }}
+                        {% endif %}
+                    </div>
+                    <div class="bank-card__status bank-card__status--{{ card.status }}">
+                        {% if card.status == 'active' %}
+                            <i class="fas fa-check-circle"></i> {{ tp('banking_cards_tab.user_card.status.active', [], 'banking_cards_tab') }}
+                        {% elseif card.status == 'blocked' %}
+                            <i class="fas fa-ban"></i> {{ tp('banking_cards_tab.user_card.status.blocked', [], 'banking_cards_tab') }}
+                        {% elseif card.status == 'expired' %}
+                            <i class="fas fa-clock"></i> {{ tp('banking_cards_tab.user_card.status.expired', [], 'banking_cards_tab') }}
+                        {% elseif card.status == 'cancelled' %}
+                            <i class="fas fa-times-circle"></i> {{ tp('banking_cards_tab.status.cancelled', [], 'banking_cards_tab') }}
+                        {% else %}
+                            {{ card.status|title }}
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="bank-card__number">
+                    •••• •••• •••• {{ card.cardNumber|slice(-4) }}
+                </div>
+
+                <div class="bank-card__details">
+                    <div class="bank-card__holder">
+                        {{ card.cardholderName }}
+                    </div>
+                    <div class="bank-card__expiry">
+                        {{ card.expiryDate|date('m/y') }}
+                    </div>
+                </div>
+
+                <div class="bank-card__footer">
+                    <div class="bank-card__account">
+                        {{ tp('banking_cards_tab.status.account_label', [], 'banking_cards_tab') }} : {{ card.account.accountNumber }}
+                    </div>
+                    <div class="bank-card__limits">
+                        {{ tp('banking_cards_tab.user_card.daily_limit', [], 'banking_cards_tab') }} : {{ card.dailyLimit ? (card.dailyLimit ~ ' €') : tp('banking_cards_tab.user_card.undefined', [], 'banking_cards_tab') }}
+                    </div>
+                </div>
+            </div>
+
+            {% if card.status == 'active' %}
+                <div class="card-actions">
+                    <button type="button" class="btn btn--secondary btn--with-icon">
+                        <i class="fas fa-ban"></i>
+                        {{ tp('banking_cards_tab.user_card.actions.block_temporarily', [], 'banking_cards_tab') }}
+                    </button>
+                    <button type="button" class="btn btn--danger btn--with-icon">
+                        <i class="fas fa-times"></i>
+                        {{ tp('banking_cards_tab.user_card.actions.report_lost', [], 'banking_cards_tab') }}
+                    </button>
+                </div>
+            {% endif %}
+        </div>
+
+    {% elseif userCardOrSubscription.type == 'subscription' %}
+        {# L'utilisateur a une souscription en attente #}
+        {% set subscription = userCardOrSubscription.entity %}
+        {% set contract = subscription.contract %}
+        
+        <div class="subscription-pending-section">
+            <h3 class="subscription-pending-section__title">
+                <i class="fas fa-clock"></i> {{ tp('banking_cards_tab.subscription_pending.title', [], 'banking_cards_tab') }}
+            </h3>
+            
+            <div class="subscription-status">
+                <div class="subscription-status__header">
+                    {% if contract %}
+                        {% if contract.status == 'generated' %}
+                            <div class="subscription-status__badge subscription-status__badge--contract-pending">
+                                <i class="fas fa-file-contract"></i>
+                                {{ tp('banking_cards_tab.subscription_pending.status.contract_pending', [], 'banking_cards_tab') }}
+                            </div>
+                        {% elseif contract.status == 'sent' %}
+                            <div class="subscription-status__badge subscription-status__badge--contract-sent">
+                                <i class="fas fa-envelope"></i>
+                                {{ tp('banking_cards_tab.subscription_pending.status.contract_sent', [], 'banking_cards_tab') }}
+                            </div>
+                        {% elseif contract.status == 'signed' %}
+                            <div class="subscription-status__badge subscription-status__badge--admin-validation">
+                                <i class="fas fa-user-tie"></i>
+                                {{ tp('banking_cards_tab.subscription_pending.status.admin_validation', [], 'banking_cards_tab') }}
+                            </div>
+                        {% elseif contract.status == 'expired' %}
+                            <div class="subscription-status__badge subscription-status__badge--expired">
+                                <i class="fas fa-clock"></i>
+                                {{ tp('banking_cards_tab.subscription_pending.status.contract_expired', [], 'banking_cards_tab') }}
+                            </div>
+                        {% endif %}
+                    {% else %}
+                        <div class="subscription-status__badge subscription-status__badge--pending">
+                            <i class="fas fa-hourglass-half"></i>
+                            {{ tp('banking_cards_tab.subscription_pending.status.pending', [], 'banking_cards_tab') }}
+                        </div>
+                    {% endif %}
+                    
+                    <div class="subscription-status__date">
+                        {{ tp('banking_cards_tab.subscription_pending.request_date', [], 'banking_cards_tab') }} {{ subscription.createdAt|date('d/m/Y') }}
+                    </div>
+                </div>
+
+                <div class="subscription-status__details">
+                    <div class="subscription-status__info">
+                        <div class="subscription-status__item">
+                            <span class="subscription-status__label">{{ tp('banking_cards_tab.subscription_pending.details.card_type', [], 'banking_cards_tab') }} :</span>
+                            <span class="subscription-status__value">{{ subscription.cardType|title }}</span>
+                        </div>
+                        <div class="subscription-status__item">
+                            <span class="subscription-status__label">{{ tp('banking_cards_tab.subscription_pending.details.brand', [], 'banking_cards_tab') }} :</span>
+                            <span class="subscription-status__value">{{ subscription.cardBrand|title }}</span>
+                        </div>
+                        {% if contract %}
+                            <div class="subscription-status__item">
+                                <span class="subscription-status__label">{{ tp('banking_cards_tab.subscription_pending.details.contract', [], 'banking_cards_tab') }} :</span>
+                                <span class="subscription-status__value">{{ contract.reference }}</span>
+                            </div>
+                            {% if contract.status == 'signed' and contract.signedAt %}
+                                <div class="subscription-status__item">
+                                    <span class="subscription-status__label">{{ tp('banking_cards_tab.subscription_pending.details.signed_on', [], 'banking_cards_tab') }} :</span>
+                                    <span class="subscription-status__value">{{ contract.signedAt|date('d/m/Y à H:i') }}</span>
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+
+                    {% if contract %}
+                        {% if contract.status == 'sent' %}
+                            <div class="subscription-status__action">
+                                <a href="{{ path('contract_signature', {reference: contract.reference}) }}" 
+                                   class="subscription-status__button subscription-status__button--primary">
+                                    <i class="fas fa-pen"></i>
+                                    {{ tp('banking_cards_tab.subscription_pending.actions.sign_contract', [], 'banking_cards_tab') }}
+                                </a>
+                                <p class="subscription-status__note">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    {{ tp('banking_cards_tab.subscription_pending.messages.contract_expires', [], 'banking_cards_tab') }} {{ contract.expiresAt|date('d/m/Y à H:i') }}
+                                </p>
+                            </div>
+                        {% elseif contract.status == 'signed' %}
+                            <div class="subscription-status__action">
+                                <a href="{{ path('card_contract_download', {reference: contract.reference}) }}" 
+                                   class="subscription-status__button subscription-status__button--secondary" target="_blank">
+                                    <i class="fas fa-download"></i>
+                                    {{ tp('banking_cards_tab.subscription_pending.actions.download_contract', [], 'banking_cards_tab') }}
+                                </a>
+                            </div>
+                        {% elseif contract.status == 'expired' %}
+                            <div class="subscription-status__message subscription-status__message--error">
+                                <i class="fas fa-exclamation-circle"></i>
+                                {{ tp('banking_cards_tab.subscription_pending.messages.contract_expired_text', [], 'banking_cards_tab') }}
+                            </div>
+                        {% endif %}
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+
+    {% else %}
+        {# L'utilisateur n'a ni carte ni souscription - affichage du formulaire #}
+        <div class="card-subscription-section">
+            {# Section de choix des types de cartes disponibles #}
+            <div class="card-types-grid">
+                {# Carte Classic #}
+                <div class="card-type card-type--classic">
+                    <div class="card-type__badge">{{ tp('banking_cards_tab.card_types.classic.badge', [], 'banking_cards_tab') }}</div>
+                    <div class="card-type__preview">
+                        <div class="card-type__card card-type__card--classic">
+                            <div class="card-type__card-header">
+                                <div class="card-type__card-logo">
+                                    <i class="fas fa-university"></i>
+                                    <span>SEDEF BANK</span>
+                                </div>
+                                <div class="card-type__card-type">CLASSIC</div>
+                            </div>
+                            <div class="card-type__card-chip">
+                                <div class="card-type__chip"></div>
+                            </div>
+                            <div class="card-type__card-number">•••• •••• •••• 1234</div>
+                        </div>
+                    </div>
+                    <div class="card-type__content">
+                        <h4 class="card-type__name">{{ tp('banking_cards_tab.card_types.classic.name', [], 'banking_cards_tab') }}</h4>
+                        <div class="card-type__price">
+                            <span class="card-type__amount">{{ tp('banking_cards_tab.card_types.classic.price', [], 'banking_cards_tab') }}</span>
+                            <span class="card-type__period">{{ tp('banking_cards_tab.card_types.classic.period', [], 'banking_cards_tab') }}</span>
+                        </div>
+        
+                    </div>
+                </div>
+
+                {# Carte Gold #}
+                <div class="card-type card-type--gold card-type--featured">
+                    <div class="card-type__badge card-type__badge--popular">{{ tp('banking_cards_tab.card_types.gold.badge', [], 'banking_cards_tab') }}</div>
+                    <div class="card-type__preview">
+                        <div class="card-type__card card-type__card--gold">
+                            <div class="card-type__card-header">
+                                <div class="card-type__card-logo">
+                                    <i class="fas fa-university"></i>
+                                    <span>SEDEF BANK</span>
+                                </div>
+                                <div class="card-type__card-type">GOLD</div>
+                            </div>
+                            <div class="card-type__card-chip">
+                                <div class="card-type__chip"></div>
+                            </div>
+                            <div class="card-type__card-number">•••• •••• •••• 5678</div>
+                        </div>
+                    </div>
+                    <div class="card-type__content">
+                        <h4 class="card-type__name">{{ tp('banking_cards_tab.card_types.gold.name', [], 'banking_cards_tab') }}</h4>
+                        <div class="card-type__price">
+                            <span class="card-type__amount">{{ tp('banking_cards_tab.card_types.gold.price', [], 'banking_cards_tab') }}</span>
+                            <span class="card-type__period">{{ tp('banking_cards_tab.card_types.gold.period', [], 'banking_cards_tab') }}</span>
+                        </div>
+                       
+                    </div>
+                </div>
+
+                {# Carte Platinum #}
+                <div class="card-type card-type--platinum">
+                    <div class="card-type__badge">{{ tp('banking_cards_tab.card_types.platinum.badge', [], 'banking_cards_tab') }}</div>
+                    <div class="card-type__preview">
+                        <div class="card-type__card card-type__card--platinum">
+                            <div class="card-type__card-header">
+                                <div class="card-type__card-logo">
+                                    <i class="fas fa-university"></i>
+                                    <span>SEDEF BANK</span>
+                                </div>
+                                <div class="card-type__card-type">PLATINUM</div>
+                            </div>
+                            <div class="card-type__card-chip">
+                                <div class="card-type__chip"></div>
+                            </div>
+                            <div class="card-type__card-number">•••• •••• •••• 9012</div>
+                        </div>
+                    </div>
+                    <div class="card-type__content">
+                        <h4 class="card-type__name">{{ tp('banking_cards_tab.card_types.platinum.name', [], 'banking_cards_tab') }}</h4>
+                        <div class="card-type__price">
+                            <span class="card-type__amount">{{ tp('banking_cards_tab.card_types.platinum.price', [], 'banking_cards_tab') }}</span>
+                            <span class="card-type__period">{{ tp('banking_cards_tab.card_types.platinum.period', [], 'banking_cards_tab') }}</span>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+
+            {# Formulaire de souscription #}
+            {% include 'banking/tabs/card-subscription.html.twig' with {
+                'selectedCardType': 'classic',
+                'accounts': accounts,
+                'user': user
+            } %}
+            
+            {# Informations supplémentaires #}
+            <div class="card-info">
+                <div class="card-info__item">
+                    <i class="card-info__icon fas fa-shield-alt"></i>
+                    <h4 class="card-info__title">{{ tp('banking_cards_tab.info.security.title', [], 'banking_cards_tab') }}</h4>
+                    <p class="card-info__text">
+                        {{ tp('banking_cards_tab.info.security.text', [], 'banking_cards_tab') }}
+                    </p>
+                </div>
+                <div class="card-info__item">
+                    <i class="card-info__icon fas fa-clock"></i>
+                    <h4 class="card-info__title">{{ tp('banking_cards_tab.info.delivery.title', [], 'banking_cards_tab') }}</h4>
+                    <p class="card-info__text">
+                        {{ tp('banking_cards_tab.info.delivery.text', [], 'banking_cards_tab') }}
+                    </p>
+                </div>
+                <div class="card-info__item">
+                    <i class="card-info__icon fas fa-headset"></i>
+                    <h4 class="card-info__title">{{ tp('banking_cards_tab.info.support.title', [], 'banking_cards_tab') }}</h4>
+                    <p class="card-info__text">
+                        {{ tp('banking_cards_tab.info.support.text', [], 'banking_cards_tab') }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>

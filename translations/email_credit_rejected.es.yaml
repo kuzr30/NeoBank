@@ -1,0 +1,40 @@
+email_credit_rejected:
+  title: "Respuesta a su solicitud de crédito"
+  content:
+    page_title: "Respuesta a su solicitud de financiamiento"
+    greeting: "Hola <strong>{customerName}</strong>,"
+    decision_section:
+      title: "Decisión sobre su solicitud"
+      message: "Después de un estudio profundo de su expediente de crédito, lamentamos informarle que no estamos en condiciones de aceptar su solicitud de financiamiento de <strong style=\"color: #d32f2f;\">{loanAmount} €</strong> en esta fecha."
+    context_section:
+      title: "Contexto de esta decisión"
+      explanation: "Esta decisión no cuestiona la calidad de su perfil de cliente y puede estar relacionada con diferentes criterios de evaluación internos, la coyuntura económica o las políticas de riesgo actuales de nuestro establecimiento."
+    alternatives_section:
+      title: "Soluciones alternativas disponibles"
+      revised_request:
+        title: "💼 Solicitud revisada"
+        description: "Presente una nueva solicitud con un monto o condiciones diferentes"
+      personalized_advice:
+        title: "🎯 Consejo personalizado"
+        description: "Contacte a nuestros asesores para estudiar otras opciones de financiamiento adaptadas"
+      profile_improvement:
+        title: "📈 Mejora del perfil"
+        description: "Nuestro equipo puede acompañarle para optimizar su expediente financiero"
+    contact_section:
+      title: "Contacto y acompañamiento"
+      description: "Nuestro servicio al cliente permanece a su entera disposición para responder a sus preguntas y acompañarle en sus proyectos futuros."
+      button_text: "Contactar a un asesor"
+      phone: "Teléfono: %company_phone%"
+      email: "Email: hello@sedef.fr"
+      hours: "Disponible de lunes a viernes de 9h a 18h"
+    future_section:
+      title: "Nuevas oportunidades"
+      message: "Esta decisión no es definitiva. Sus situaciones personal y financiera evolucionan, y estaremos encantados de reestudiar una nueva solicitud en el futuro."
+    thanks_message: "Le agradecemos la confianza que nos ha otorgado y esperamos poder acompañarle próximamente en sus proyectos."
+    footer: "%company_name% - Servicio Crédito<br>Respuesta automática a su solicitud de financiamiento"
+  
+  logs:
+    sending: "Enviando notificación de crédito rechazado"
+    success: "Notificación de crédito rechazado enviada con éxito"
+    error: "Error al enviar notificación de crédito rechazado"
+    send_failed: "Fallo en el envío de notificación de crédito rechazado"

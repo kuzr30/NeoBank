@@ -1,0 +1,7 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_credit_controller.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+flash:
+  kyc_verification_required: "You must complete your identity verification (KYC) to access banking services."

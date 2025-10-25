@@ -1,0 +1,49 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_kyc_submission_admin_notification.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+email_kyc_submission_admin_notification:
+  title: "Nouvelle soumission KYC à examiner - %company_name% Admin"
+  tagline: "Administration %company_name%"
+  
+  content:
+    page_title: "Nouvelle demande de vérification d'identité"
+    greeting: "Bonjour <strong>%firstName%</strong>,"
+    
+    priority:
+      title: "Examen requis - Priorité normale"
+      message: "Une nouvelle demande de vérification KYC (Know Your Customer) a été soumise par un client et nécessite votre validation avant activation complète des services bancaires."
+    
+    client_profile:
+      title: "Profil client"
+      identity: "Identité"
+      email: "Adresse email"
+      account_status: "Statut compte"
+      pending_status: "En attente de vérification"
+      submission_date: "Date de soumission"
+    
+    documents:
+      title: "Documents fournis par le client"
+      downloaded_status: "Téléchargé"
+    
+    actions:
+      title: "Actions disponibles"
+      examine_request: "Examiner la demande"
+      kyc_dashboard: "Tableau de bord KYC"
+      processing_time: "Délai de traitement recommandé : <strong>24-48 heures</strong>"
+    
+    checklist:
+      title: "Check-list de vérification"
+      verify_authenticity: "□ Vérifier l'authenticité des documents d'identité"
+      check_consistency: "□ Contrôler la cohérence des informations personnelles"
+      regulatory_checks: "□ Effectuer les vérifications réglementaires AML/KYC"
+      document_decision: "□ Documenter la décision dans le système de gestion"
+    
+    support_info: "Pour toute question concernant cette procédure de vérification, veuillez contacter l'équipe de conformité."
+    footer: "<strong>%company_name% - Département Conformité</strong><br>Notification automatique du système de gestion KYC"
+
+  logs:
+    kyc_admin_notification_sent: "Notification admin KYC envoyée pour la soumission de %firstName% %lastName%"
+    kyc_admin_notification_failed: "Erreur lors de l'envoi de la notification admin KYC"
+    kyc_pending_review: "Soumission KYC de %firstName% %lastName% en attente d'examen"

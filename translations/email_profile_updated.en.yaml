@@ -1,0 +1,27 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_profile_updated.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+email_profile_updated:
+  title: "Profile update"
+  content:
+    page_title: "Profile update"
+    greeting: "Hello {firstName} {lastName},"
+    notification: "We inform you that your %company_name% profile has been successfully updated."
+    changes_section:
+      title: "Changes made"
+    security_info:
+      title: "Security information"
+      warning: "If you are not the originator of these changes, contact our customer service immediately. Your security is our priority."
+    help_text: "If you have questions about these changes, please do not hesitate to contact us."
+    view_profile_button: "View my profile"
+    modification_date: "Modification date: {updateDate}"
+    footer: "This email was sent automatically by Company Name.<br>For any questions, contact us at Email"
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Sending profile update confirmation"
+    success: "Profile update confirmation sent successfully"
+    error: "Error sending profile update confirmation"
+    send_failed: "Failed to send profile update confirmation"

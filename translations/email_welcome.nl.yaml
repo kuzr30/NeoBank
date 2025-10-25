@@ -1,0 +1,29 @@
+email_welcome:
+  title: "Welkom bij %company_name%"
+  content:
+    page_title: "Welkom {firstName}!"
+    intro: "We zijn verheugd u te verwelkomen bij <strong>%company_name%</strong>, uw nieuwe digitale bankpartner."
+    account_created:
+      title: "Uw account is succesvol aangemaakt!"
+      description: "U kunt nu toegang krijgen tot al onze online bankdiensten."
+    services_intro: "Met uw %company_name% account kunt u:"
+    services:
+      item_1: "Uw rekeningen in real-time raadplegen"
+      item_2: "Directe overschrijvingen uitvoeren"
+      item_3: "Uw bankkaarten beheren"
+      item_4: "Online een krediet aanvragen"
+      item_5: "Uw investeringen volgen"
+      item_6: "24/7 klantenondersteuning benutten"
+    access_button: "Toegang tot mijn account"
+    security_section:
+      title: "Verbeterde beveiliging"
+      description: "Uw veiligheid is onze prioriteit. We gebruiken de nieuwste encryptie- en authenticatietechnologieën om uw gegevens te beschermen."
+    support_text: "Als u vragen heeft of hulp nodig heeft, staat ons supportteam 24/7 voor u klaar."
+    signature: "Nogmaals dank voor uw vertrouwen,<br><strong>Het %company_name% team</strong>"
+  
+  # Log berichten voor de MessageHandler
+  logs:
+    sending: "Verzenden van welkomst email"
+    success: "Welkomst email succesvol verzonden"
+    error: "Fout bij het verzenden van welkomst email"
+    send_failed: "Verzenden van welkomst email mislukt"

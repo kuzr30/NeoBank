@@ -1,0 +1,27 @@
+account_activation:
+  flash:
+    invalid_token: "Ongeldige activatietoken."
+    expired_token: "De activatietoken is verlopen. Registreer u opnieuw."
+    account_activated: "Uw account is succesvol geactiveerd! U kunt nu inloggen."
+    activation_email_sent: "Een nieuwe activatie-e-mail is verzonden."
+    activation_email_sent_if_exists: "Als uw account bestaat en niet geactiveerd is, is er een e-mail verzonden."
+    email_send_error: "Fout bij het verzenden van de e-mail. Probeer het later opnieuw."
+
+email_account_activation:
+  title: "Activatie van uw %company_name% account"
+  content:
+    greeting: "Hallo {firstName},"
+    intro: "Welkom bij %company_name%! We zijn verheugd u als onze klant te mogen verwelkomen."
+    activation_required:
+      title: "🔐 Activatie vereist"
+      description: "Om uw account te beveiligen en toegang te krijgen tot al onze bankdiensten, activeert u uw account door op de onderstaande knop te klikken."
+    button_text: "Mijn account activeren"
+    warning:
+      title: "⚠️ Belangrijk"
+      description: "Deze activatielink vervalt over {expirationTime}. Als de link is verlopen, kunt u een nieuwe link aanvragen vanaf de inlogpagina."
+    manual_link: "Als de knop niet werkt, kopieer en plak deze link in uw browser:"
+    success:
+      title: "✅ Volgende stappen"
+      description: "Zodra uw account is geactiveerd, heeft u toegang tot uw beveiligde klantomgeving en kunt u profiteren van al onze bankdiensten."
+    security_notice: "🛡️ Om veiligheidsredenen, als u geen account bij %company_name% heeft aangemaakt, negeer deze e-mail."
+    signature: "Het %company_name% team<br><strong>Uw betrouwbare bankpartner</strong>"

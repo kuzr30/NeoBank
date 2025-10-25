@@ -1,0 +1,1075 @@
+<!-- Credit Card Access Section -->
+<section class="card-access">
+    <div class="card-access__container">
+        <div class="card-access__grid">
+            <div class="card-access__main-section">
+                <div class="card-access__header">
+                    <h2 class="card-access__title">{{ tp('banking_cards.application.title', [], 'banking_cards') }}</h2>
+                    <p class="card-access__subtitle">
+                        {{ tp('banking_cards.application.subtitle', [], 'banking_cards') }}
+                    </p>
+                </div>
+                
+                <div class="card-access__features">
+                    <div class="card-access__feature-grid">
+                        <div class="card-access__feature">
+                            <div class="card-access__feature-icon">
+                                {{ ux_icon('heroicons:credit-card', {'class': 'card-access__icon'}) }}
+                            </div>
+                            <h3 class="card-access__feature-title">{{ tp('banking_cards.application.features.new_card.title', [], 'banking_cards') }}</h3>
+                            <p class="card-access__feature-desc">
+                                {{ tp('banking_cards.application.features.new_card.description', [], 'banking_cards') }}
+                            </p>
+                        </div>
+                        
+                        <div class="card-access__feature">
+                            <div class="card-access__feature-icon">
+                                {{ ux_icon('heroicons:cog-6-tooth', {'class': 'card-access__icon'}) }}
+                            </div>
+                            <h3 class="card-access__feature-title">{{ tp('banking_cards.application.features.manage_cards.title', [], 'banking_cards') }}</h3>
+                            <p class="card-access__feature-desc">
+                                {{ tp('banking_cards.application.features.manage_cards.description', [], 'banking_cards') }}
+                            </p>
+                        </div>
+                        
+                        <div class="card-access__feature">
+                            <div class="card-access__feature-icon">
+                                {{ ux_icon('heroicons:chart-bar', {'class': 'card-access__icon'}) }}
+                            </div>
+                            <h3 class="card-access__feature-title">{{ tp('banking_cards.application.features.track_expenses.title', [], 'banking_cards') }}</h3>
+                            <p class="card-access__feature-desc">
+                                {{ tp('banking_cards.application.features.track_expenses.description', [], 'banking_cards') }}
+                            </p>
+                        </div>
+                        
+                        <div class="card-access__feature">
+                            <div class="card-access__feature-icon">
+                                {{ ux_icon('heroicons:bell', {'class': 'card-access__icon'}) }}
+                            </div>
+                            <h3 class="card-access__feature-title">{{ tp('banking_cards.application.features.notifications.title', [], 'banking_cards') }}</h3>
+                            <p class="card-access__feature-desc">
+                                {{ tp('banking_cards.application.features.notifications.description', [], 'banking_cards') }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-access__actions">
+                    <a href="{{ path('app_login') }}" class="card-access__btn card-access__btn--primary">
+                        <span class="card-access__btn-text">{{ tp('banking_cards.application.actions.login', [], 'banking_cards') }}</span>
+                        {{ ux_icon('heroicons:arrow-right', {'class': 'card-access__btn-icon'}) }}
+                    </a>
+                    <a href="{{ path('app_register') }}" class="card-access__btn card-access__btn--secondary">
+                        <span class="card-access__btn-text">{{ tp('banking_cards.application.actions.register', [], 'banking_cards') }}</span>
+                        {{ ux_icon('heroicons:user-plus', {'class': 'card-access__btn-icon'}) }}
+                    </a>
+                </div>
+            </div>
+            
+            <div class="card-access__info-section">
+                <div class="card-access__demo">
+                    <div class="card-access__demo-header">
+                        <h3 class="card-access__demo-title">{{ tp('banking_cards.application.demo.title', [], 'banking_cards') }}</h3>
+                        <p class="card-access__demo-subtitle">
+                            {{ tp('banking_cards.application.demo.subtitle', [], 'banking_cards') }}
+                        </p>
+                    </div>
+                    
+                    <div class="card-access__demo-screens">
+                        <div class="card-access__screen card-access__screen--main">
+                            <div class="card-access__screen-header">
+                                <div class="card-access__screen-nav">
+                                    <span class="card-access__nav-item card-access__nav-item--active">{{ tp('banking_cards.application.demo.nav.my_cards', [], 'banking_cards') }}</span>
+                                    <span class="card-access__nav-item">{{ tp('banking_cards.application.demo.nav.transactions', [], 'banking_cards') }}</span>
+                                    <span class="card-access__nav-item">{{ tp('banking_cards.application.demo.nav.settings', [], 'banking_cards') }}</span>
+                                </div>
+                            </div>
+                            <div class="card-access__screen-content">
+                                <div class="card-access__card-preview">
+                                    <div class="card-access__card-mini card-access__card-mini--platinum">
+                                        <div class="card-access__card-mini-header">
+                                            <span class="card-access__card-mini-type">Platinum</span>
+                                            <span class="card-access__card-mini-status">{{ tp('banking_cards.application.demo.card_status.active', [], 'banking_cards') }}</span>
+                                        </div>
+                                        <div class="card-access__card-mini-number">•••• 8742</div>
+                                    </div>
+                                    <div class="card-access__card-actions">
+                                        <button class="card-access__card-action">{{ tp('banking_cards.application.demo.card_actions.block', [], 'banking_cards') }}</button>
+                                        <button class="card-access__card-action">{{ tp('banking_cards.application.demo.card_actions.limits', [], 'banking_cards') }}</button>
+                                        <button class="card-access__card-action">{{ tp('banking_cards.application.demo.card_actions.details', [], 'banking_cards') }}</button>
+                                    </div>
+                                </div>
+                                <div class="card-access__quick-stats">
+                                    <div class="card-access__stat">
+                                        <span class="card-access__stat-label">{{ tp('banking_cards.application.demo.stats.monthly_spending', [], 'banking_cards') }}</span>
+                                        <span class="card-access__stat-value">{{ tp('banking_cards.application.demo.stats.monthly_spending_value', [], 'banking_cards') }}</span>
+                                    </div>
+                                    <div class="card-access__stat">
+                                        <span class="card-access__stat-label">{{ tp('banking_cards.application.demo.stats.cashback_earned', [], 'banking_cards') }}</span>
+                                        <span class="card-access__stat-value">{{ tp('banking_cards.application.demo.stats.cashback_earned_value', [], 'banking_cards') }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-access__help">
+                    <div class="card-access__help-card">
+                        <div class="card-access__help-header">
+                            <div class="card-access__help-icon">
+                                {{ ux_icon('heroicons:question-mark-circle', {'class': 'card-access__help-icon-svg'}) }}
+                            </div>
+                            <h4 class="card-access__help-title">{{ tp('banking_cards.application.help.title', [], 'banking_cards') }}</h4>
+                        </div>
+                        <p class="card-access__help-desc">
+                            {{ tp('banking_cards.application.help.description', [], 'banking_cards') }}
+                        </p>
+                        <div class="card-access__help-contact">
+                            <div class="card-access__help-item">
+                                <span class="card-access__help-label">{{ tp('banking_cards.application.help.contact.chat_label', [], 'banking_cards') }}</span>
+                                <span class="card-access__help-hours">{{ tp('banking_cards.application.help.contact.chat_hours', [], 'banking_cards') }}</span>
+                            </div>
+                            <div class="card-access__help-item">
+                                <span class="card-access__help-label">{{ tp('banking_cards.application.help.contact.phone_label', [], 'banking_cards') }}</span>
+                                <span class="card-access__help-hours">{{ tp('banking_cards.application.help.contact.phone_number', [], 'banking_cards') }}</span>
+                            </div>
+                        </div>
+                        <a href="{{ path('support_contact') }}" class="card-access__help-link">
+                            {{ tp('banking_cards.application.help.help_center', [], 'banking_cards') }}
+                            {{ ux_icon('heroicons:arrow-top-right-on-square', {'class': 'card-access__help-link-icon'}) }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-access__security">
+            <div class="card-access__security-content">
+                <h3 class="card-access__security-title">{{ tp('banking_cards.application.security.title', [], 'banking_cards') }}</h3>
+                <div class="card-access__security-features">
+                    <div class="card-access__security-feature">
+                        {{ ux_icon('heroicons:shield-check', {'class': 'card-access__security-icon'}) }}
+                        <span class="card-access__security-text">{{ tp('banking_cards.application.security.features.ssl', [], 'banking_cards') }}</span>
+                    </div>
+                    <div class="card-access__security-feature">
+                        {{ ux_icon('heroicons:device-phone-mobile', {'class': 'card-access__security-icon'}) }}
+                        <span class="card-access__security-text">{{ tp('banking_cards.application.security.features.two_factor', [], 'banking_cards') }}</span>
+                    </div>
+                    <div class="card-access__security-feature">
+                        {{ ux_icon('heroicons:eye', {'class': 'card-access__security-icon'}) }}
+                        <span class="card-access__security-text">{{ tp('banking_cards.application.security.features.monitoring', [], 'banking_cards') }}</span>
+                    </div>
+                    <div class="card-access__security-feature">
+                        {{ ux_icon('heroicons:lock-closed', {'class': 'card-access__security-icon'}) }}
+                        <span class="card-access__security-text">{{ tp('banking_cards.application.security.features.gdpr', [], 'banking_cards') }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* =================================================================
+   CREDIT CARD - ACCESS SECTION
+   ================================================================= */
+
+/* Block: card-access */
+.card-access {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    position: relative;
+}
+
+.card-access::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.5;
+}
+
+/* Element: card-access__container */
+.card-access__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Element: card-access__grid */
+.card-access__grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 4rem;
+    align-items: start;
+    margin-bottom: 4rem;
+}
+
+/* Element: card-access__main-section */
+.card-access__main-section {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border-radius: 1.5rem;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Element: card-access__header */
+.card-access__header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Element: card-access__title */
+.card-access__title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+/* Element: card-access__subtitle */
+.card-access__subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Element: card-access__features */
+.card-access__features {
+    margin-bottom: 3rem;
+}
+
+/* Element: card-access__feature-grid */
+.card-access__feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* Element: card-access__feature */
+.card-access__feature {
+    text-align: center;
+    padding: 2rem;
+    background: #f8fafc;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-access__feature:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Element: card-access__feature-icon */
+.card-access__feature-icon {
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 8px 16px rgba(229, 90, 43, 0.3);
+}
+
+/* Element: card-access__icon */
+.card-access__icon {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+}
+
+/* Element: card-access__feature-title */
+.card-access__feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+/* Element: card-access__feature-desc */
+.card-access__feature-desc {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+/* Element: card-access__actions */
+.card-access__actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Element: card-access__btn */
+.card-access__btn {
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.025em;
+    min-width: 180px;
+    justify-content: center;
+}
+
+/* Modifier: card-access__btn--primary */
+.card-access__btn--primary {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: white;
+    border: 2px solid transparent;
+}
+
+.card-access__btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(229, 90, 43, 0.3);
+}
+
+/* Modifier: card-access__btn--secondary */
+.card-access__btn--secondary {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.card-access__btn--secondary:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(229, 90, 43, 0.2);
+}
+
+/* Element: card-access__btn-text */
+.card-access__btn-text {
+    /* Pas de styles spécifiques */
+}
+
+/* Element: card-access__btn-icon */
+.card-access__btn-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.card-access__btn:hover .card-access__btn-icon {
+    transform: translateX(4px);
+}
+
+/* Element: card-access__info-section */
+.card-access__info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Element: card-access__demo */
+.card-access__demo {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 1.25rem;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Element: card-access__demo-header */
+.card-access__demo-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Element: card-access__demo-title */
+.card-access__demo-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+}
+
+/* Element: card-access__demo-subtitle */
+.card-access__demo-subtitle {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+/* Element: card-access__demo-screens */
+.card-access__demo-screens {
+    display: flex;
+    justify-content: center;
+}
+
+/* Element: card-access__screen */
+.card-access__screen {
+    background: #f8fafc;
+    border-radius: 0.75rem;
+    border: 2px solid #e2e8f0;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Element: card-access__screen-header */
+.card-access__screen-header {
+    background: white;
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Element: card-access__screen-nav */
+.card-access__screen-nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Element: card-access__nav-item */
+.card-access__nav-item {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    color: var(--color-text-muted);
+    background: #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+/* Modifier: card-access__nav-item--active */
+.card-access__nav-item--active {
+    background: var(--color-primary);
+    color: white;
+}
+
+/* Element: card-access__screen-content */
+.card-access__screen-content {
+    padding: 1.5rem;
+}
+
+/* Element: card-access__card-preview */
+.card-access__card-preview {
+    margin-bottom: 1.5rem;
+}
+
+/* Element: card-access__card-mini */
+.card-access__card-mini {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: white;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-access__card-mini::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, rgba(229, 90, 43, 0.2) 0%, rgba(251, 191, 36, 0.1) 100%);
+    border-radius: 50%;
+    transform: translate(30px, -30px);
+}
+
+/* Element: card-access__card-mini-header */
+.card-access__card-mini-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Element: card-access__card-mini-type */
+.card-access__card-mini-type {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Element: card-access__card-mini-status */
+.card-access__card-mini-status {
+    font-size: 0.625rem;
+    background: #10b981;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+}
+
+/* Element: card-access__card-mini-number */
+.card-access__card-mini-number {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+/* Element: card-access__card-actions */
+.card-access__card-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Element: card-access__card-action */
+.card-access__card-action {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    background: #e2e8f0;
+    color: var(--color-text);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    text-align: center;
+}
+
+.card-access__card-action:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+/* Element: card-access__quick-stats */
+.card-access__quick-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Element: card-access__stat */
+.card-access__stat {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+/* Element: card-access__stat-label */
+.card-access__stat-label {
+    display: block;
+    font-size: 0.625rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Element: card-access__stat-value */
+.card-access__stat-value {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+/* Element: card-access__help */
+.card-access__help {
+    /* Pas de styles spécifiques */
+}
+
+/* Element: card-access__help-card */
+.card-access__help-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 1.25rem;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Element: card-access__help-header */
+.card-access__help-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Element: card-access__help-icon */
+.card-access__help-icon {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Element: card-access__help-icon-svg */
+.card-access__help-icon-svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
+}
+
+/* Element: card-access__help-title */
+.card-access__help-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.3;
+}
+
+/* Element: card-access__help-desc */
+.card-access__help-desc {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Element: card-access__help-contact */
+.card-access__help-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Element: card-access__help-item */
+.card-access__help-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: rgba(229, 90, 43, 0.05);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(229, 90, 43, 0.1);
+}
+
+/* Element: card-access__help-label */
+.card-access__help-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+/* Element: card-access__help-hours */
+.card-access__help-hours {
+    font-size: 0.875rem;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* Element: card-access__help-link */
+.card-access__help-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.card-access__help-link:hover {
+    color: var(--color-primary-dark);
+}
+
+/* Element: card-access__help-link-icon */
+.card-access__help-link-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Element: card-access__security */
+.card-access__security {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border-radius: 1.25rem;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Element: card-access__security-content */
+.card-access__security-content {
+    text-align: center;
+}
+
+/* Element: card-access__security-title */
+.card-access__security-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+}
+
+/* Element: card-access__security-features */
+.card-access__security-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Element: card-access__security-feature */
+.card-access__security-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(229, 90, 43, 0.05);
+    border-radius: 0.75rem;
+    border: 1px solid rgba(229, 90, 43, 0.1);
+}
+
+/* Element: card-access__security-icon */
+.card-access__security-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+/* Element: card-access__security-text */
+.card-access__security-text {
+    font-size: 0.875rem;
+    color: var(--color-text);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .card-access__container {
+        padding: 0 1.5rem;
+    }
+    
+    .card-access__grid {
+        gap: 3rem;
+    }
+    
+    .card-access__main-section {
+        padding: 2.75rem;
+    }
+    
+    .card-access__demo,
+    .card-access__help-card,
+    .card-access__security {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .card-access {
+        padding: 4rem 0;
+    }
+    
+    .card-access__grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .card-access__main-section {
+        padding: 2.5rem;
+        order: 1;
+    }
+    
+    .card-access__info-section {
+        order: 2;
+    }
+    
+    .card-access__feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .card-access__actions {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .card-access__btn {
+        flex: 1;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 900px) {
+    .card-access {
+        padding: 3.5rem 0;
+    }
+    
+    .card-access__feature-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    
+    .card-access__security-features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+    
+    .card-access__actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+    
+    .card-access__btn {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-access {
+        padding: 3rem 0;
+    }
+    
+    .card-access__container {
+        padding: 0 1.5rem;
+    }
+    
+    .card-access__main-section {
+        padding: 2rem;
+    }
+    
+    .card-access__demo,
+    .card-access__help-card,
+    .card-access__security {
+        padding: 1.75rem;
+    }
+    
+    .card-access__security-features {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .card-access__feature {
+        padding: 1.75rem;
+    }
+    
+    .card-access__feature-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .card-access__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+    
+    .card-access__feature-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.875rem;
+    }
+    
+    .card-access__feature-desc {
+        font-size: 0.95rem;
+    }
+    
+    .card-access__btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .card-access__title {
+        font-size: clamp(2rem, 4vw, 2.5rem);
+    }
+    
+    .card-access__subtitle {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .card-access {
+        padding: 2.5rem 0;
+    }
+    
+    .card-access__container {
+        padding: 0 1.25rem;
+    }
+    
+    .card-access__grid {
+        gap: 2.5rem;
+    }
+    
+    .card-access__main-section {
+        padding: 1.75rem;
+    }
+    
+    .card-access__demo,
+    .card-access__help-card,
+    .card-access__security {
+        padding: 1.5rem;
+    }
+    
+    .card-access__feature {
+        padding: 1.5rem;
+    }
+    
+    .card-access__feature-icon {
+        width: 3.25rem;
+        height: 3.25rem;
+        margin-bottom: 1rem;
+    }
+    
+    .card-access__icon {
+        width: 1.625rem;
+        height: 1.625rem;
+    }
+    
+    .card-access__help-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+    
+    .card-access__help-title {
+        font-size: 1.375rem;
+    }
+    
+    .card-access__demo-title {
+        font-size: 1.375rem;
+    }
+    
+    .card-access__security-title {
+        font-size: 1.375rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-access__container {
+        padding: 0 1rem;
+    }
+    
+    .card-access__main-section {
+        padding: 1.5rem;
+    }
+    
+    .card-access__demo,
+    .card-access__help-card,
+    .card-access__security {
+        padding: 1.25rem;
+    }
+    
+    .card-access__feature {
+        padding: 1.25rem;
+    }
+    
+    .card-access__feature-icon {
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 0.875rem;
+    }
+    
+    .card-access__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+    .card-access__feature-title {
+        font-size: 1.125rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .card-access__feature-desc {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .card-access__btn {
+        padding: 0.8rem 1.25rem;
+        font-size: 0.875rem;
+    }
+    
+    .card-access__btn-icon {
+        width: 1rem;
+        height: 1rem;
+    }
+    
+    .card-access__title {
+        font-size: 1.875rem;
+        margin-bottom: 1rem;
+    }
+    
+    .card-access__subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .card-access__help-title,
+    .card-access__demo-title,
+    .card-access__security-title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+    
+    .card-access__help-desc,
+    .card-access__demo-desc,
+    .card-access__security-desc {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .card-access__demo-steps {
+        gap: 1rem;
+    }
+    
+    .card-access__demo-step {
+        padding: 1rem;
+    }
+    
+    .card-access__step-number {
+        width: 1.75rem;
+        height: 1.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .card-access__step-title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .card-access__step-desc {
+        font-size: 0.85rem;
+    }
+    
+    .card-access__security-feature {
+        padding: 1rem;
+    }
+    
+    .card-access__security-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .card-access__security-feature-title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .card-access__security-feature-desc {
+        font-size: 0.85rem;
+    }
+}
+</style>

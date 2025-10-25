@@ -1,0 +1,24 @@
+# Vertalingen voor Banking/TransferController
+flash:
+  # Foutmeldingen
+  account_blocked_transfers: "Uw account is geblokkeerd voor overboekingen. Neem contact op met de administratie."
+  account_blocked: "Uw account is geblokkeerd. Neem contact op met de administratie."
+  no_source_account: "Geen bronaccount beschikbaar om een overboeking uit te voeren."
+  invalid_security_token: "Ongeldig beveiligingstoken."
+  transfer_cannot_be_cancelled: "Deze overboeking kan niet meer worden geannuleerd."
+  validation_error: "Fout bij validatie: %error%."
+  cancellation_error: "Fout bij annulering: %error%."
+  invalid_validation_code: "De ingevoerde validatiecode is onjuist."
+  
+  # Waarschuwingen
+  register_beneficiary_first: "U moet eerst een begunstigdenrekening (RIB) registreren om een overboeking uit te voeren."
+  kyc_required_transfers: "U moet uw identiteitsverificatie (KYC) voltooien om toegang te krijgen tot overboekingen."
+  
+  # Informatie berichten
+  transfer_no_longer_pending: "Deze overboeking is niet langer in afwachting van validatie."
+  transfer_in_progress: "Uw overboeking wordt uitgevoerd."
+  
+  # Succesboodschappen
+  transfer_cancelled_success: "Overboeking succesvol geannuleerd."
+  transfer_created_success: "Overboeking succesvol aangemaakt en wacht op validatie."
+  transfer_validation_success: "Code succesvol gevalideerd."

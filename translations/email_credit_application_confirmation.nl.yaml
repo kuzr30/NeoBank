@@ -1,0 +1,41 @@
+email_credit_application_confirmation:
+  title: "Bevestiging van uw kredietaanvraag"
+  
+  content:
+    page_title: "Kredietaanvraag bevestigd"
+    subtitle: "Uw aanvraag is ontvangen en wordt behandeld"
+    
+    greeting: "Hallo %customerName%,"
+    introduction: "We hebben uw kredietaanvraag ontvangen en danken u voor uw vertrouwen. Uw dossier wordt nu onderzocht door onze gespecialiseerde adviseurs."
+    
+    summary:
+      title: "Samenvatting van uw aanvraag"
+      request_number: "Aanvragnummer:"
+      amount_requested: "Aangevraagd bedrag:"
+      request_date: "Aanvraagdatum:"
+      status: "Status:"
+      status_value: "In onderzoek"
+    
+    next_steps:
+      title: "Volgende stappen"
+      step1: "Onderzoek van uw dossier door onze adviseurs (24-48u)"
+      step2: "Verificatie van informatie en documenten"
+      step3: "Financieringsbeslissing binnen 3-5 werkdagen"
+      step4: "Melding per e-mail en/of telefoon"
+    
+    track_button: "Mijn aanvraag bekijken"
+    
+    help_section:
+      title: "Hulp nodig?"
+      intro: "Ons team van adviseurs staat tot uw beschikking voor vragen:"
+      phone: "<strong>Telefoon:</strong> %company_phone% (Ma-Vr 9u-18u)"
+      email: "<strong>E-mail:</strong> credit@sedef.fr"
+      chat: "<strong>Online chat:</strong> Beschikbaar op onze website"
+    
+    important_note: "<strong>Belangrijk:</strong> Bewaar deze e-mail als bewijs van uw aanvraag. U kunt de voortgang van uw dossier op elk moment volgen door op de bovenstaande link te klikken."
+    disclaimer: "Deze e-mail is automatisch verzonden, gelieve er niet rechtstreeks op te antwoorden."
+
+  logs:
+    credit_application_confirmed: "Kredietaanvraagbevestiging verzonden naar %email%"
+    credit_application_failed: "Fout bij het verzenden van kredietbevestiging naar %email%"
+    credit_application_submitted: "Kredietaanvraag #%applicationId% ingediend door %customerName%"

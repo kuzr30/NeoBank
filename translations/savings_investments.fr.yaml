@@ -1,0 +1,154 @@
+savings_investments:
+  # Meta tags
+  meta:
+    title: "Épargne & Placements Intelligents - %company_name%"
+    description: "Découvrez nos solutions d'épargne et de placement pour faire fructifier votre argent intelligemment avec %company_name%."
+
+  # Hero Section
+  hero:
+    title: "Épargne & Placements Intelligents"
+    subtitle: "Faites fructifier votre argent avec nos solutions d'épargne et d'investissement sur mesure, adaptées à tous vos objectifs financiers."
+    stats:
+      average_rate:
+        value: "4.2%"
+        label: "Taux moyen"
+      savers:
+        value: "500K+"
+        label: "Épargnants"
+      total_savings:
+        value: "2.8M€"
+        label: "Épargne totale"
+      products:
+        value: "15+"
+        label: "Produits"
+    cta: "Découvrir nos solutions"
+    
+  # Phone mockup content
+  phone:
+    header:
+      time: "14:32"
+    balance:
+      label: "Épargne totale"
+      amount: "45 680€"
+      change: "+2.8% ce mois"
+    investments:
+      livret:
+        name: "Livret %company_name%"
+        return: "+3.2%"
+      pea:
+        name: "PEA Actions"
+        return: "+8.7%"
+      life_insurance:
+        name: "Assurance Vie"
+        return: "+5.4%"
+
+  # Solutions Section
+  solutions:
+    header:
+      title: "Solutions Personnalisées"
+      subtitle: "Des produits d'épargne et de placement adaptés à chaque profil d'investisseur, du plus prudent au plus dynamique"
+    secure_savings:
+      title: "Épargne Sécurisée"
+      description: "Constituez votre épargne de précaution avec nos livrets réglementés et nos comptes à terme garantis. Des solutions sans risque pour protéger et faire fructifier vos économies."
+      features:
+        - "Livret A et LDDS aux taux réglementés"
+        - "Livret %company_name% jusqu'à 4.5% brut"
+        - "Comptes à terme de 6 mois à 5 ans"
+        - "Capital 100% garanti"
+        - "Disponibilité immédiate"
+      cta: "En savoir plus"
+    dashboard:
+      title: "Épargne Sécurisée"
+      date: "Août 2025"
+      metrics:
+        total:
+          value: "25 890€"
+          label: "Total épargne"
+        rate:
+          value: "3.8%"
+          label: "Taux moyen"
+        gains:
+          value: "+156€"
+          label: "Gains/mois"
+
+  # Products Section
+  products:
+    header:
+      title: "Nos Produits Phares"
+      subtitle: "Une gamme complète d'outils d'épargne et d'investissement pour tous vos projets"
+    mobile_app:
+      title: "Mes Placements"
+      menu_icon: "☰"
+      summary:
+        label: "Épargne totale"
+        amount: "67 240€"
+        growth: "+12.4% cette année"
+      products:
+        pea:
+          name: "PEA Actions"
+          rate: "+15.2%"
+          amount: "28 450€"
+        life_insurance:
+          name: "Assurance Vie"
+          rate: "+6.8%"
+          amount: "22 890€"
+        livret:
+          name: "Livret %company_name%"
+          rate: "+4.5%"
+          amount: "15 900€"
+    info:
+      title: "Application Mobile Intuitive"
+      description: "Gérez tous vos placements depuis votre smartphone avec notre application mobile de nouvelle génération. Suivez vos performances en temps réel et prenez les meilleures décisions d'investissement."
+      benefits:
+        interface:
+          title: "Interface Intuitive"
+          description: "Design moderne et ergonomique"
+        realtime:
+          title: "Données Temps Réel"
+          description: "Cours et performances actualisés"
+        alerts:
+          title: "Alertes Personnalisées"
+          description: "Notifications sur-mesure"
+        goals:
+          title: "Objectifs Intelligents"
+          description: "Planification automatisée"
+      cta: "Télécharger l'app"
+
+  # Tools Section
+  tools:
+    header:
+      title: "Outils de Simulation"
+      subtitle: "Planifiez votre avenir financier avec nos calculateurs intelligents et nos outils de simulation avancés"
+    calculator:
+      title: "Simulateur d'Épargne"
+      subtitle: "Calculez votre épargne future"
+      form:
+        monthly_payment:
+          label: "Versement mensuel"
+          value: "300"
+        duration:
+          label: "Durée (années)"
+        interest_rate:
+          label: "Taux d'intérêt annuel"
+      result:
+        label: "Épargne constituée"
+        amount: "89 420€"
+    content:
+      title: "Planification Intelligente"
+      description: "Utilisez nos outils de simulation pour définir votre stratégie d'épargne et d'investissement. Visualisez l'impact de vos décisions financières sur le long terme."
+      features:
+        - "Simulateur d'épargne mensuelle"
+        - "Calculateur de retraite"
+        - "Optimiseur fiscal"
+        - "Analyse de portefeuille"
+        - "Projections personnalisées"
+        - "Comparateur de produits"
+      cta: "Essayer les simulateurs"
+
+  # CTA Section
+  cta:
+    title: "Commencez à Épargner Dès Aujourd'hui"
+    subtitle: "Rejoignez plus de 500 000 épargnants qui nous font confiance pour faire fructifier leur patrimoine. Ouvrez votre compte en quelques minutes."
+    buttons:
+      primary: "Ouvrir un compte"
+      secondary: "Parler à un conseiller"

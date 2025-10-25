@@ -1,0 +1,10 @@
+account_creation_service:
+  log_messages:
+    creation_started: "Beginn automatische Kontoerstellung nach KYC-Validierung"
+    user_has_account: "Benutzer hat bereits ein Girokonto"
+    iban_generated: "IBAN entsprechend dem Land generiert"
+    account_created: "Konto erfolgreich erstellt"
+    notification_error: "Fehler beim Versenden der Benachrichtigungs-E-Mail, aber Konto erstellt"
+    creation_failed: "Fehler bei der automatischen Kontoerstellung"
+    account_number_generated: "Kontonummer automatisch generiert"
+    balance_initialized: "Anfangssaldo auf Null gesetzt"

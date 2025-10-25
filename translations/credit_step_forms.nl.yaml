@@ -1,0 +1,570 @@
+# Professionele vertaalbestand voor aanvraagstappen voor krediet
+# Domein: credit_step_forms
+# Compatibel met bestaande %company_name% projectarchitectuur
+
+# === METADATA EN CONFIGURATIE ===
+meta:
+  version: "1.0.0"
+  description: "Vertalingen voor multi-stap kredietaanvraagformulieren"
+  last_updated: "2025-09-09"
+  compatibility: "Symfony 7+ met ProfessionalTranslationService"
+
+# === JAVASCRIPT VALIDATIE ===
+js:
+  validation:
+    required: "Dit veld is verplicht"
+    email: "Ongeldig e-mailadres"
+    phone: "Ongeldig telefoonnummer"
+    postal: "Ongeldige postcode"
+    min: "Minimumwaarde: %value%"
+    max: "Maximumwaarde: %value%"
+
+# === STAP 1: PERSOONLIJKE INFORMATIE ===
+step1:
+  title: "Persoonlijke informatie"
+  subtitle: "Vul uw persoonlijke gegevens in"
+  description: "Deze informatie stelt ons in staat uw kredietaanvraag te behandelen"
+  section_title: "Uw persoonlijke informatie"
+  
+  fields:
+    # Basisinformatie
+    firstname:
+      label: "Voornaam"
+      placeholder: "Uw voornaam"
+      help: "Voer uw voornaam in zoals deze op uw officiële documenten verschijnt"
+      errors:
+        required: "Voornaam is verplicht"
+        min_length: "Voornaam moet minimaal 2 karakters bevatten"
+        max_length: "Voornaam mag niet meer dan 50 karakters bevatten"
+        invalid_format: "Voornaam mag alleen letters, spaties, streepjes en apostroffen bevatten"
+    
+    lastname:
+      label: "Achternaam"
+      placeholder: "Uw achternaam"
+      help: "Voer uw achternaam in zoals deze op uw officiële documenten verschijnt"
+      errors:
+        required: "Achternaam is verplicht"
+        min_length: "Achternaam moet minimaal 2 karakters bevatten"
+        max_length: "Achternaam mag niet meer dan 50 karakters bevatten"
+        invalid_format: "Achternaam mag alleen letters, spaties, streepjes en apostroffen bevatten"
+    
+    email:
+      label: "E-mailadres"
+      placeholder: "uw.email@voorbeeld.com"
+      help: "Gebruik een geldig e-mailadres waar we u kunnen bereiken"
+      errors:
+        required: "E-mailadres is verplicht"
+        invalid: "Voer een geldig e-mailadres in"
+    
+    phone:
+      label: "Telefoonnummer"
+      placeholder: "+31 6 12 34 56 78"
+      help: "Voer uw mobiele of vaste telefoonnummer in"
+      errors:
+        required: "Telefoonnummer is verplicht"
+        invalid: "Voer een geldig telefoonnummer in"
+    
+    birth_date:
+      label: "Geboortedatum"
+      placeholder: "dd/mm/jjjj"
+      help: "U moet meerderjarig zijn om een kredietaanvraag in te dienen"
+      errors:
+        required: "Geboortedatum is verplicht"
+        invalid: "Voer een geldige datum in"
+        age_restriction: "U moet meerderjarig zijn om een kredietaanvraag in te dienen"
+    
+    nationality:
+      label: "Nationaliteit"
+      placeholder: "Selecteer uw nationaliteit"
+      help: "Uw huidige nationaliteit"
+      errors:
+        required: "Nationaliteit is verplicht"
+      choices:
+        french: "Franse"
+        eu: "Europese (EU)"
+        non_eu: "Buiten EU"
+    
+    marital_status:
+      label: "Burgerlijke staat"
+      placeholder: "Selecteer uw situatie"
+      help: "Uw huidige burgerlijke staat"
+      errors:
+        required: "Burgerlijke staat is verplicht"
+        invalid: "Ongeldige burgerlijke staat"
+      choices:
+        single: "Alleenstaand"
+        married: "Getrouwd"
+        divorced: "Gescheiden"
+        widowed: "Weduwe/Weduwnaar"
+        cohabiting: "Samenwonend"
+        pacs: "Geregistreerd partnerschap"
+    
+    dependents:
+      label: "Aantal financieel afhankelijke personen"
+      placeholder: "Selecteer het aantal"
+      help: "Kinderen of andere personen die financieel van u afhankelijk zijn"
+      errors:
+        required: "Aantal afhankelijke personen is verplicht"
+        invalid_range: "Het aantal afhankelijke personen moet tussen 0 en 20 zijn"
+      choices:
+        none: "Geen"
+        one: "1"
+        two: "2" 
+        three: "3"
+        four: "4"
+        five_plus: "5 of meer"
+
+  # Adres
+  address_section:
+    title: "Uw woonadres"
+    
+    address:
+      label: "Volledig adres"
+      placeholder: "123 Vredesstraat"
+      help: "Uw hoofdverblijfadres"
+      errors:
+        required: "Het adres is verplicht"
+        min_length: "Het adres moet minstens 5 tekens bevatten"
+        max_length: "Het adres kan niet langer zijn dan 255 tekens"
+    
+    city:
+      label: "Stad"
+      placeholder: "Brussel"
+      help: "Uw woonplaats"
+      errors:
+        required: "De stad is verplicht"
+        min_length: "De stadsnaam moet minstens 2 tekens bevatten"
+        max_length: "De stadsnaam kan niet langer zijn dan 100 tekens"
+    
+    postal_code:
+      label: "Postcode"
+      placeholder: "1000"
+      help: "Belgische postcode (4 cijfers)"
+      errors:
+        required: "De postcode is verplicht"
+        invalid: "De postcode moet 4 cijfers bevatten"
+    
+    country:
+      label: "Land"
+      placeholder: "Selecteer uw land"
+      help: "Land van verblijf"
+      errors:
+        required: "Het land is verplicht"
+    
+    housing_type:
+      label: "Type woning"
+      placeholder: "Selecteer uw woonsituatie"
+      help: "Uw huidige woonsituatie"
+      errors:
+        required: "Het type woning is verplicht"
+        invalid: "Ongeldig type woning"
+      choices:
+        owner: "Eigenaar"
+        tenant: "Huurder"
+        family: "Bij familie"
+        social: "Sociale woning"
+        other: "Anders"
+
+# === STAP 2: FINANCIËLE SITUATIE ===
+step2:
+  title: "Financiële situatie"
+  subtitle: "Vul uw professionele en financiële situatie in"
+  description: "Deze informatie helpt ons uw terugbetalingscapaciteit te beoordelen"
+  section_title: "Uw financiële situatie"
+  
+  # Werkgelegenheid sectie
+  employment_section:
+    title: "Uw professionele situatie"
+    
+    monthly_income:
+      label: "Netto maandinkomen"
+      placeholder: "Bedrag in €"
+      help: "Uw netto maandinkomen (na sociale bijdragen en belastingen)"
+      errors:
+        required: "Maandelijks inkomen is verplicht"
+        min_value: "Het minimaal vereiste maandinkomen is €1000"
+        invalid: "Voer een geldig bedrag in"
+    
+    employment_type:
+      label: "Type werk"
+      placeholder: "Selecteer uw professionele status"
+      help: "Uw huidige professionele status"
+      errors:
+        required: "Het type werk is verplicht"
+        invalid: "Ongeldig type werk"
+      choices:
+        employee: "Werknemer vast contract"
+        employee_cdd: "Werknemer tijdelijk contract"
+        civil_servant: "Ambtenaar"
+        freelancer: "Zelfstandige"
+        entrepreneur: "Ondernemer"
+        retired: "Gepensioneerd"
+        unemployed: "Werkloos"
+        student: "Student"
+    
+    employer:
+      label: "Naam van de werkgever"
+      placeholder: "Naam van uw bedrijf"
+      help: "De naam van uw werkgever of bedrijf"
+      errors:
+        max_length: "De naam van de werkgever kan niet langer zijn dan 255 tekens"
+    
+    job_title:
+      label: "Functietitel"
+      placeholder: "Uw functie"
+      help: "Uw titel of functie in het bedrijf"
+      errors:
+        max_length: "De functietitel kan niet langer zijn dan 255 tekens"
+    
+    employment_start_date:
+      label: "Startdatum werk"
+      placeholder: "dd/mm/jjjj"
+      help: "Startdatum van uw huidige werk"
+      errors:
+        invalid: "Voer een geldige datum in"
+
+  # Financiële sectie
+  financial_section:
+    title: "Uw lasten en verplichtingen"
+    
+    monthly_expenses:
+      label: "Maandelijkse lasten"
+      placeholder: "Bedrag in €"
+      help: "Uw maandelijkse lasten (huur, rekeningen, voeding, enz.)"
+      errors:
+        required: "Maandelijkse lasten zijn verplicht"
+        min_value: "Lasten kunnen niet negatief zijn"
+        invalid: "Voer een geldig bedrag in"
+    
+    existing_loans:
+      label: "Lopende kredieten"
+      placeholder: "Totaal maandbedrag in €"
+      help: "Totaal maandbedrag van uw lopende kredieten (optioneel)"
+      errors:
+        min_value: "Het bedrag kan niet negatief zijn"
+        invalid: "Voer een geldig bedrag in"
+
+  fields:
+    # Professionele situatie (oude structuur - behouden voor compatibiliteit)
+    monthly_income:
+      label: "Netto maandinkomen"
+      placeholder: "Bedrag in €"
+      help: "Uw netto maandinkomen (na sociale bijdragen en belastingen)"
+      errors:
+        required: "Maandelijks inkomen is verplicht"
+        min_value: "Het minimaal vereiste maandinkomen is €1000"
+        invalid: "Voer een geldig bedrag in"
+    
+    employment_type:
+      label: "Type werk"
+      placeholder: "Selecteer uw professionele status"
+      help: "Uw huidige professionele status"
+      errors:
+        required: "Het type werk is verplicht"
+        invalid: "Ongeldig type werk"
+      choices:
+        employee: "Werknemer vast contract"
+        employee_cdd: "Werknemer tijdelijk contract"
+        civil_servant: "Ambtenaar"
+        freelancer: "Zelfstandige"
+        entrepreneur: "Ondernemer"
+        retired: "Gepensioneerd"
+        unemployed: "Werkloos"
+        student: "Student"
+    
+    employer:
+      label: "Naam van de werkgever"
+      placeholder: "Naam van uw bedrijf"
+      help: "De naam van uw werkgever of bedrijf"
+      errors:
+        max_length: "De naam van de werkgever kan niet langer zijn dan 255 tekens"
+    
+    job_title:
+      label: "Functietitel"
+      placeholder: "Uw functie"
+      help: "Uw titel of functie in het bedrijf"
+      errors:
+        max_length: "De functietitel kan niet langer zijn dan 255 tekens"
+    
+    employment_start_date:
+      label: "Startdatum werk"
+      placeholder: "dd/mm/jjjj"
+      help: "Startdatum van uw huidige werk"
+      errors:
+        invalid: "Voer een geldige datum in"
+
+    # Lasten en verplichtingen
+    monthly_expenses:
+      label: "Maandelijkse lasten"
+      placeholder: "Bedrag in €"
+      help: "Uw maandelijkse lasten (huur, rekeningen, voeding, enz.)"
+      errors:
+        required: "Maandelijkse lasten zijn verplicht"
+        min_value: "Lasten kunnen niet negatief zijn"
+        invalid: "Voer een geldig bedrag in"
+    
+    existing_loans:
+      label: "Lopende kredieten"
+      placeholder: "Totaal maandbedrag in €"
+      help: "Totaal maandbedrag van uw lopende kredieten (optioneel)"
+      errors:
+        min_value: "Het bedrag kan niet negatief zijn"
+        invalid: "Voer een geldig bedrag in"
+
+# === STAP 3: KREDIETCONFIGURATIE ===
+step3:
+  title: "Kredietconfiguratie"
+  subtitle: "Stel de parameters van uw krediet in"
+  description: "Configureer uw krediet volgens uw behoeften en bekijk de simulatie"
+  section_title: "Parameters van uw krediet"
+  
+  # Kredietconfiguratie
+  credit_configuration:
+    title: "Kredietparameters"
+    
+    loan_amount:
+      label: "Gewenst kredietbedrag"
+      placeholder: "Minimaal €3000"
+      help: "Het bedrag dat u wilt lenen"
+      errors:
+        required: "Kredietbedrag is verplicht"
+        min_value: "Het minimumbedrag is €3000"
+        max_value: "Het maximumbedrag is €30.000.000"
+        invalid_range: "Het kredietbedrag moet tussen €3000 en €30.000.000 liggen"
+        invalid: "Voer een geldig bedrag in"
+    
+    credit_type:
+      label: "Type krediet"
+      placeholder: "Selecteer het type krediet"
+      help: "Het type krediet dat bij uw project past"
+      errors:
+        required: "Type krediet is verplicht"
+      choices:
+        immobilier: "Hypotheek"
+        auto: "Autolening"
+        consommation: "Consumentenkrediet"
+        travaux: "Verbouwingslening"
+        professionnel: "Zakelijk krediet"
+        personal: "Persoonlijke lening"
+    
+    duration:
+      label: "Kredietduur in maanden"
+      placeholder: "Minimum 2 maanden"
+      help: "De gewenste terugbetalingsduur"
+      errors:
+        required: "Kredietduur is verplicht"
+        min_value: "De minimumduur is 2 maanden"
+        max_value: "De maximumduur is 360 maanden (30 jaar)"
+        invalid: "Voer een geldige duur in"
+
+  # Simulatieresultaten
+  simulation_section:
+    title: "Uw gepersonaliseerde simulatie"
+    subtitle: "Berekend in real-time"
+    
+    monthly_payment:
+      label: "Geschatte maandtermijn"
+      placeholder: "€0"
+      help: "Automatisch berekende maandtermijn"
+      suffix: "€/maand"
+    
+    total_cost:
+      label: "Totale kosten van het krediet"
+      placeholder: "€0"
+      help: "Totale kosten inclusief rente"
+      suffix: "€"
+
+  # Samenvatting voor simulatie
+  summary:
+    loan_amount_requested: "Gevraagd kapitaal"
+    taeg: "JKP" # Jaarlijks Kostenpercentage
+    total_interests: "Totale rente"
+    payoff_date: "Einddatum terugbetaling"
+
+  # Voettekst stap 3
+  footer:
+    guarantee_text: "Gratis simulatie zonder verplichtingen."
+    legal_notice: "Een krediet verplicht u en moet worden terugbetaald. Controleer uw terugbetalingscapaciteit voordat u zich verbindt."
+
+# === DEFINITIEVE TOESTEMMINGEN ===
+consents:
+  title: "Toestemmingen en validatie"
+  section_title: "Acceptatie van voorwaarden"
+  
+  terms_accepted:
+    label: "Ik accepteer de algemene voorwaarden"
+    text: "Ik verklaar de algemene gebruiks- en verkoopvoorwaarden te hebben gelezen en geaccepteerd"
+    link_text: "Lees de algemene voorwaarden"
+    errors:
+      required: "U moet de algemene voorwaarden accepteren om door te gaan"
+  
+  data_processing_accepted:
+    label: "Ik accepteer de verwerking van mijn persoonlijke gegevens"
+    text: "Ik accepteer dat mijn persoonlijke gegevens worden verwerkt in het kader van mijn kredietaanvraag"
+    link_text: "Privacybeleid"
+    errors:
+      required: "U moet de verwerking van uw persoonlijke gegevens accepteren"
+  
+  marketing_accepted:
+    label: "Ik accepteer commerciële aanbiedingen (optioneel)"
+    text: "Ik accepteer informatie over producten en diensten van de bank te ontvangen"
+    help: "U kunt zich op elk moment uitschrijven"
+
+# === SAMENVATTING ===
+summary:
+  title: "Overzicht van uw aanvraag"
+  subtitle: "Controleer de informatie voordat u uw aanvraag indient"
+  page_title: "Overzicht - Kredietaanvraag"
+  
+  # Uitgelichte sectie
+  highlight:
+    title: "Uw krediet"
+    monthly_payment_text: "Maandtermijn van"
+    duration_text: "over {duration} maanden"
+  
+  # Secties
+  personal_info:
+    title: "Persoonlijke informatie"
+    full_name: "Volledige naam"
+    email: "E-mail"
+    phone: "Telefoon"
+    age: "Leeftijd"
+    age_suffix: "jaar"
+    address: "Adres"
+  
+  financial_info:
+    title: "Financiële situatie"
+    monthly_income: "Maandelijkse inkomsten"
+    monthly_expenses: "Maandelijkse lasten"
+    existing_loans: "Lopende kredieten"
+    remaining_income: "Resterend inkomen"
+  
+  credit_details:
+    title: "Kredietgegevens"
+    credit_type: "Type krediet"
+    interest_rate: "Rentetarief"
+    duration: "Looptijd"
+    duration_months: "{duration} maanden"
+    total_cost: "Totale kosten van het krediet"
+    total_amount: "Totaal terug te betalen bedrag"
+  
+  # Acties
+  actions:
+    modify: "← Mijn aanvraag wijzigen"
+    confirm: "✓ Mijn aanvraag bevestigen"
+  
+  # Juridische kennisgeving
+  legal_notice: "Deze simulatie is indicatief. De definitieve voorwaarden worden vastgesteld na bestudering van uw dossier. Een krediet verplicht u en moet worden terugbetaald. Controleer uw terugbetalingscapaciteit voordat u zich verbindt."
+  important: "Belangrijk:"
+
+# === NAVIGATIE EN ACTIES ===
+navigation:
+  previous: "Vorige stap"
+  next: "Volgende stap"
+  submit: "Mijn aanvraag indienen"
+  back_to_step: "Terug naar stap {step}"
+  step_progress: "Stap {current} van {total}"
+  continue: "Doorgaan"
+  save_draft: "Concept opslaan"
+
+# === SYSTEEMBERICHTEN ===
+messages:
+  step_completed: "Stap succesvol voltooid"
+  step_validation_failed: "Corrigeer de fouten voordat u doorgaat"
+  form_errors: "Corrigeer {count} fout{count, plural, =1 {} other {en}} in het formulier"
+  loading: "Laden..."
+  calculation_in_progress: "Uw simulatie wordt berekend..."
+  data_saved: "Uw gegevens zijn opgeslagen"
+  technical_error: "Er is een technische fout opgetreden. Probeer het opnieuw."
+
+# === HULPTEKSTEN EN INFORMATIE ===
+help:
+  why_personal_info: "Waarom hebben we deze informatie nodig?"
+  personal_info_explanation: "Deze informatie is noodzakelijk voor de beoordeling van uw dossier en wordt beschermd volgens AVG-regelgeving."
+  
+  why_financial_info: "Waarom deze financiële informatie?"
+  financial_info_explanation: "Deze gegevens stellen ons in staat uw terugbetalingscapaciteit te beoordelen en u een aangepast krediet voor te stellen."
+  
+  simulation_accuracy: "Nauwkeurigheid van de simulatie"
+  simulation_explanation: "Deze simulatie is indicatief. De definitieve voorwaarden worden bevestigd na volledige beoordeling van uw dossier."
+
+# === VALIDATIE EN FOUTEN ===
+validation:
+  step_incomplete: "Deze stap is niet volledig"
+  required_field: "Dit veld is verplicht"
+  invalid_format: "Het ingevoerde formaat is niet geldig"
+  value_too_low: "De ingevoerde waarde is te laag"
+  value_too_high: "De ingevoerde waarde is te hoog"
+  
+# === HULPMIDDELEN ===
+common:
+  optional: "(optioneel)"
+  required: "(verplicht)"
+  currency_symbol: "€"
+  months_suffix: "maanden"
+  per_month: "/maand"
+  total: "Totaal"
+  estimated: "Geschat"
+
+# === KREDIETTYPEN ===
+credit_types:
+  immobilier:
+    label: "Hypotheeklening"
+    description: "Financiering voor aankoop van onroerend goed (hoofdverblijf, tweede woning of huurinvestering)"
+  auto:
+    label: "Autokrediet"
+    description: "Financiering voor aankoop van een nieuw of gebruikt voertuig"
+  consommation:
+    label: "Consumentenkrediet"
+    description: "Krediet voor financiering van uw persoonlijke projecten (vakanties, huishoudelijke apparaten, etc.)"
+  travaux:
+    label: "Verbouwingskrediet"
+    description: "Financiering voor uw renovatie- en woningverbeteringsprojecten"
+  professionnel:
+    label: "Zakelijk Krediet"
+    description: "Financiering voor uw zakelijke behoeften en bedrijfsinvesteringen"
+  personal:
+    label: "Persoonlijk Krediet"
+    description: "Krediet zonder bewijs van gebruik voor al uw persoonlijke projecten"
+  home_improvement:
+    label: "Verbouwings-/Renovatiekrediet"
+    description: "Gespecialiseerde financiering voor verbetering en renovatie van uw woning"
+  debt_consolidation:
+    label: "Kredietconsolidatie"
+    description: "Samenvoeging van uw bestaande kredieten in één voordeligere maandtermijn"
+  mortgage:
+    label: "Hypotheeklening"
+    description: "Hypothecaire lening voor aankoop van uw hoofd- of tweede woning"
+  renouvelable:
+    label: "Hernieuwbaar Krediet"
+    description: "Geldreserve beschikbaar en hernieuwbaar volgens uw behoeften"
+  etudiant:
+    label: "Studentenkrediet"
+    description: "Financiering voor uw studies met preferentiële voorwaarden"
+  relais:
+    label: "Overbruggingskrediet"
+    description: "Tijdelijke oplossing in afwachting van verkoop van uw huidige onroerend goed"
+  microcredit:
+    label: "Microkrediet"
+    description: "Klein krediet voor financiering van uw projecten met laag bedrag"
+  leasing:
+    label: "Leasing"
+    description: "Huur met aankoopoptie voor voertuigen en uitrusting"
+  voyage:
+    label: "Reiskrediet"
+    description: "Financiering voor uw droomvakanties en reizen"
+
+  # Toestemmingssectie voor stap 3
+  consent:
+    terms_accepted:
+      label: "Ik accepteer de algemene voorwaarden"
+      errors:
+        required: "U moet de algemene voorwaarden accepteren om door te gaan"
+    
+    data_processing_accepted:
+      label: "Ik accepteer de verwerking van mijn persoonlijke gegevens"
+      errors:
+        required: "U moet de verwerking van uw persoonlijke gegevens accepteren om door te gaan"
+    
+    marketing_accepted:
+      label: "Ik accepteer marketingcommunicatie te ontvangen (optioneel)"

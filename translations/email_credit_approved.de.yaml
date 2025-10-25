@@ -1,0 +1,40 @@
+email_credit_approved:
+  title: "Kreditantrag genehmigt"
+  content:
+    page_title: "Herzlichen Glückwunsch {customerName}!"
+    intro: "Wir freuen uns, Ihnen ausgezeichnete Nachrichten mitteilen zu können!"
+    credit_approved:
+      title: "Ihr Kredit wurde genehmigt"
+      amount_label: "Genehmigter Betrag"
+      financing_note: "Finanzierung von unseren Experten gewährt"
+    contract_info:
+      title: "Vertragsinformationen"
+      contract_number: "Vertragsnummer"
+      status_label: "Status"
+      status_value: "Genehmigt - Warten auf Unterschrift"
+      rate_label: "Zinssatz"
+      duration_label: "Laufzeit"
+      monthly_payment_label: "Monatliche Rate"
+    next_steps:
+      title: "Nächste Schritte"
+      step_1:
+        title: "1. Vertragsunterzeichnung"
+        description: "Sie erhalten bald den elektronisch zu unterzeichnenden Vertrag"
+      step_2:
+        title: "2. Administrative Validierung"
+        description: "Unser Team führt die finalen Überprüfungen durch"
+      step_3:
+        title: "3. Auszahlung der Mittel"
+        description: "Nach Vertragsvalidierung werden die Mittel auf Ihr Konto überwiesen"
+    personalized_support:
+      title: "Personalisierte Begleitung"
+      description: "Ein detaillierter Vertrag mit allen Bedingungen Ihres Kredits wird Ihnen in Kürze übermittelt. Bei Fragen steht Ihnen unser spezialisiertes Team zur Verfügung."
+    thanks_message: "Wir danken Ihnen für Ihr Vertrauen und freuen uns, zur Verwirklichung Ihres Projekts beitragen zu können."
+    footer: "%company_name% - Kreditabteilung<br>Benachrichtigung über Kreditantrags-Genehmigung"
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Versendung der Kreditgenehmigungs-Benachrichtigung"
+    success: "Kreditgenehmigungs-Benachrichtigung erfolgreich versendet"
+    error: "Fehler beim Versenden der Kreditgenehmigungs-Benachrichtigung"
+    send_failed: "Versenden der Kreditgenehmigungs-Benachrichtigung fehlgeschlagen"

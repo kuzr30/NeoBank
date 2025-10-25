@@ -1,0 +1,133 @@
+banking_credit_transfer:
+  # Header section
+  header:
+    title: "Interne Überweisung"
+    subtitle: "Übertrag zwischen Ihren Konten"
+    last_update: "Letzte Aktualisierung"
+
+  # Transfer sections
+  sections:
+    from: "Von"
+    to: "Nach"
+    amount: "Betrag"
+
+  # Account types
+  accounts:
+    credit_account: "Kreditkonto"
+    main_account: "Hauptkonto"
+    current_account: "Ihr Girokonto"
+    destination: "Ziel"
+
+  # Form elements
+  form:
+    amount_placeholder: "0,00"
+    amount_currency: "€"
+    amount_help: "Maximum verfügbar: %amount% €"
+    amount_help_available: "Maximum verfügbar"
+    amount_required: "Der Betrag ist erforderlich"
+    amount_invalid: "Ungültiger Betrag"
+    hidden_sub_account: "Unterkonto-ID"
+    hidden_token: "CSRF-Token"
+
+  # Actions
+  actions:
+    cancel: "Abbrechen"
+    continue: "Fortfahren"
+    initiate_transfer: "Überweisung initiieren"
+    confirm_transfer: "Überweisung bestätigen"
+
+  # Confirmation page
+  confirmation:
+    title: "Überweisungsbestätigung"
+    verification_required: "Verifikation erforderlich"
+    transfer_summary: "Überweisungszusammenfassung"
+    amount_label: "Betrag"
+    verification_code_title: "Verifikationscode"
+    verification_info: "Ein Verifikationscode wurde an Ihre E-Mail-Adresse gesendet."
+    code_placeholder: "000000"
+
+  # Status messages
+  messages:
+    success: "Überweisung erfolgreich initiiert"
+    error: "Fehler bei der Überweisung"
+    insufficient_funds: "Unzureichendes Guthaben"
+    
+  # Form fields
+  form_fields:
+    credit_account: "Quell-Kreditkonto"
+    destination_account: "Zielkonto"
+    amount: "Zu überweisender Betrag"
+    amount_placeholder: "0,00"
+    description: "Verwendungszweck"
+    description_placeholder: "Optionale Beschreibung..."
+    available_credit: "Verfügbarer Kredit"
+    transfer_fees: "Überweisungsgebühren"
+    
+  # Credit info
+  credit:
+    available_limit: "Verfügbares Limit"
+    used_limit: "Genutzter Kredit"
+    interest_rate: "Zinssatz"
+    minimum_payment: "Monatliche Mindestzahlung"
+    next_payment_date: "Nächste Fälligkeit"
+    
+  # Transfer process
+  process:
+    step1: "Betragswahl"
+    step2: "Verifikation"
+    step3: "Bestätigung"
+    
+  # Verification
+  verification:
+    title: "Sicherheitsverifikation"
+    code_sent: "Ein Verifikationscode wurde an Ihre E-Mail-Adresse gesendet"
+    enter_code: "Geben Sie den Verifikationscode ein"
+    code_placeholder: "000000"
+    resend_code: "Code erneut senden"
+    code_expires: "Der Code läuft ab in"
+    
+  # Confirmation details
+  confirmation_details:
+    transfer_details: "Überweisungsdetails"
+    source_account: "Quellkonto"
+    destination_account: "Zielkonto"
+    amount: "Betrag"
+    fees: "Gebühren"
+    total_debit: "Gesamtbelastung"
+    
+  # Form Actions
+  form_actions:
+    initiate_transfer: "Überweisung initiieren"
+    confirm_transfer: "Überweisung bestätigen"
+    cancel: "Abbrechen"
+    back: "Zurück"
+    verify_code: "Code verifizieren"
+    
+  # Validation
+  validation:
+    amount_required: "Der Betrag ist erforderlich"
+    amount_invalid: "Ungültiger Betrag"
+    amount_exceeds_limit: "Der Betrag überschreitet das verfügbare Limit"
+    amount_minimum: "Der Mindestbetrag beträgt 10€"
+    code_required: "Der Verifikationscode ist erforderlich"
+    code_invalid: "Ungültiger Verifikationscode"
+    code_expired: "Verifikationscode ist abgelaufen"
+    
+  # Status Messages
+  status_messages:
+    no_credit_accounts: "Keine Kreditkonten verfügbar"
+    transfer_initiated: "Überweisung erfolgreich initiiert"
+    code_sent_success: "Verifikationscode gesendet"
+    transfer_confirmed: "Überweisung erfolgreich bestätigt"
+    transfer_failed: "Überweisung fehlgeschlagen"
+    insufficient_credit: "Unzureichender Kredit"
+    account_blocked: "Konto gesperrt"
+    access_denied: "Zugriff auf dieses Kreditkonto verweigert"
+    
+  # Currency
+  currency: "€"
+  
+  # Time
+  time:
+    minutes: "Minuten"
+    seconds: "Sekunden"

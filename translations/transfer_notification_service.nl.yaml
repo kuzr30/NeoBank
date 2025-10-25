@@ -1,0 +1,28 @@
+transfer_notification_service:
+  email_subjects:
+    transfer_created: "Overboeking aangemaakt - Wachtend op validatie"
+    code_added: "Nieuwe validatiecode beschikbaar"
+    code_validated: "Validatiecode bevestigd"
+    ready_for_execution: "Overboeking klaar voor uitvoering"
+    transfer_executed: "Overboeking succesvol uitgevoerd"
+    transfer_rejected: "Overboeking geweigerd"
+    transfer_expired: "Overboeking verlopen"
+    transfer_cancelled: "Overboeking geannuleerd"
+    user_blocked: "Account tijdelijk geblokkeerd"
+    code_expired: "Validatiecode verlopen"
+    
+  from_name: "%company_name% - Overboekingsservice"
+    
+  log_messages:
+    transfer_creation_sent: "Overboekingsaanmaak notificatie verzonden"
+    transfer_creation_failed: "Fout bij verzenden overboekingsaanmaak notificatie"
+    code_added_sent: "Code toegevoegd notificatie verzonden"
+    code_added_failed: "Fout bij verzenden code toegevoegd notificatie"
+    transfer_executed_sent: "Overboekingsuitvoering notificatie verzonden"
+    transfer_executed_failed: "Fout bij verzenden uitvoering notificatie"
+    transfer_rejected_sent: "Overboekingsweigering notificatie verzonden"
+    transfer_rejected_failed: "Fout bij verzenden weigering notificatie"
+    transfer_expired_sent: "Overboekingsverlopen notificatie verzonden"
+    transfer_expired_failed: "Fout bij verzenden verlopen notificatie"
+    transfer_cancelled_sent: "Overboekingsannulering notificatie verzonden"
+    transfer_cancelled_failed: "Fout bij verzenden annulering notificatie"

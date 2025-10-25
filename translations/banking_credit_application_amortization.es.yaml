@@ -1,0 +1,33 @@
+banking_credit_application_amortization:
+  header:
+    title: "Cuadro de amortización"
+    reference: "Solicitud n° %reference%"
+  
+  navigation:
+    back_to_credits: "Volver a los créditos"
+  
+  loan_info:
+    initial_amount: "Importe inicial"
+    interest_rate: "Tipo de interés"
+    duration: "Duración"
+    monthly_payment: "Mensualidad"
+    months: "meses"
+    years: "años"
+  
+  summary:
+    remaining_capital: "Capital pendiente"
+    remaining_payments: "Cuotas restantes"
+  
+  table:
+    title: "Calendario detallado"
+    payment_number: "Cuota"
+    date: "Fecha"
+    monthly_payment: "Mensualidad"
+    principal: "Capital"
+    interest: "Intereses"
+    remaining_balance: "Capital pendiente"
+    total: "Total"
+  
+  actions:
+    print: "Imprimir"
+    export_pdf: "Exportar PDF"

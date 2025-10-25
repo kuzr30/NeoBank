@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="{{ _locale }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ 'card_contract.title'|trans({'%reference%': contract.reference}, 'card_contract', _locale) }}</title>
+    <style>
+        .header {
+            position: running(header);
+            padding: 10px 0;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #f8fafe 0%, #e8f2ff 100%);
+            overflow: hidden;
+        }
+        
+        .header-logo {
+            float: left;
+            width: 200px;
+        }
+        
+        .header-logo-image {
+            height: 30px;
+            width: auto;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        
+        .header-logo-text {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1a237e;
+            vertical-align: middle;
+        }
+        
+        .header-info {
+            float: right;
+            font-size: 12px;
+            color: #1a237e;
+            text-align: right;
+        }
+        
+        .footer {
+            position: running(footer);
+            border-top: 2px solid #1a237e;
+            padding: 8px 0;
+            font-size: 7px;
+            color: #333;
+            text-align: center;
+            background: #f8fafe;
+            line-height: 1.2;
+        }
+        
+        .footer-logo {
+            height: 20px;
+            width: auto;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 11px;
+            line-height: 1.5;
+            color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        
+        /* Filigrane centré et toujours visible */
+        body::before {
+            content: "{{ company_name()|default('SEDEF BANK') }}";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 180px;
+            font-weight: bold;
+            color: #1a237e;
+            opacity: 0.15;
+            z-index: 1000;
+            pointer-events: none;
+            white-space: nowrap;
+            letter-spacing: 12px;
+        }
+        
+        .company-logo {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .logo-box {
+            display: inline-block;
+            background: linear-gradient(135deg, #f8fafe 0%, #e8f2ff 100%);
+            padding: 5px 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(26,35,126,0.2);
+            vertical-align: middle;
+        }
+        
+        .logo-image {
+            height: 35px;
+            width: auto;
+            vertical-align: middle;
+            margin-right: 12px;
+        }
+        
+        .logo-text {
+            display: inline-block;
+            color: #1a237e;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            vertical-align: middle;
+        }
+        
+        .info-section {
+            overflow: hidden;
+            margin-top: 15px;
+        }
+        
+        .company-details {
+            float: left;
+            width: 48%;
+            padding-right: 20px;
+        }
+        
+        .contract-ref {
+            float: right;
+            width: 48%;
+            text-align: right;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .document-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #1a237e;
+            margin: 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 10px 0;
+            background: linear-gradient(135deg, #f8fafe 0%, #e8f2ff 100%);
+        }
+        
+        .chapter {
+            margin: 15px 0;
+            border-left: 4px solid #1a237e;
+            background: linear-gradient(135deg, #fafbff 0%, #f0f4ff 100%);
+            padding: 15px;
+            border-radius: 6px;
+        }
+        
+        .chapter-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #1a237e;
+            padding-bottom: 6px;
+        }
+        
+        .section {
+            margin: 10px 0;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        .section-title {
+            font-size: 11px;
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 8px;
+            padding: 4px 0;
+            border-bottom: 1px solid #ccd9ff;
+        }
+        
+        .parties-section {
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        
+        .party-column {
+            float: left;
+            width: 48%;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 6px;
+            margin-right: 4%;
+            font-size: 10px;
+        }
+        
+        .party-column:last-child {
+            margin-right: 0;
+        }
+        
+        .party-header {
+            font-size: 12px;
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            background: #e8f2ff;
+            padding: 8px;
+            border-radius: 4px;
+        }
+        
+        .terms-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            border: 2px solid #1a237e;
+            border-radius: 4px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 10px;
+        }
+        
+        .terms-table th {
+            background: #e8f2ff;
+            color: #1a237e;
+            font-weight: bold;
+            font-size: 10px;
+            padding: 8px;
+            text-align: center;
+            border-right: 1px solid #ccd9ff;
+        }
+        
+        .terms-table td {
+            padding: 6px 8px;
+            border-bottom: 1px solid #e8f2ff;
+            border-right: 1px solid #e8f2ff;
+            vertical-align: middle;
+            font-size: 10px;
+        }
+        
+        .terms-table tr:nth-child(even) {
+            background: rgba(248, 250, 254, 0.8);
+        }
+        
+        .terms-label {
+            font-weight: bold;
+            color: #1a237e;
+        }
+        
+        .amount-emphasis {
+            color: #1a237e;
+            padding: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .article-list {
+            counter-reset: article-counter;
+        }
+        
+        .article-item {
+            counter-increment: article-counter;
+            margin: 10px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .article-item::before {
+            content: "Article " counter(article-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #1a237e;
+            color: white;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-size: 8px;
+            font-weight: bold;
+        }
+        
+        .subsection-list {
+            counter-reset: subsection-counter;
+            margin-left: 10px;
+        }
+        
+        .subsection-item {
+            counter-increment: subsection-counter;
+            margin: 6px 0;
+            position: relative;
+            font-size: 10px;
+            padding-left: 20px;
+        }
+        
+        .subsection-item::before {
+            content: counter(subsection-counter) ".";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #1a237e;
+            font-weight: bold;
+        }
+        
+        .emphasis-box {
+            background: #e8f2ff;
+            border: 2px solid #1a237e;
+            padding: 12px;
+            margin: 15px 0;
+            text-align: center;
+            font-weight: bold;
+            color: #1a237e;
+            border-radius: 8px;
+        }
+        
+        .signature-section {
+            margin-top: 30px;
+            overflow: hidden;
+        }
+        
+        .signature-column {
+            float: left;
+            width: 48%;
+            text-align: center;
+            padding: 20px 0;
+            border: 1px solid #1a237e;
+            border-radius: 6px;
+            margin-right: 4%;
+            background: rgba(248, 250, 254, 0.5);
+        }
+        
+        .signature-column:last-child {
+            margin-right: 0;
+        }
+        
+        .signature-line {
+            border-bottom: 1px solid #333;
+            width: 200px;
+            margin: 20px auto 10px;
+        }
+        
+        .clearfix {
+            clear: both;
+        }
+        
+        .page-break {
+            page-break-before: always;
+        }
+        
+        .card-visual {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: linear-gradient(135deg, #f8fafe 0%, #e8f2ff 100%);
+            border-radius: 8px;
+        }
+        
+        .card-mockup {
+            display: inline-block;
+            width: 200px;
+            height: 125px;
+            background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+            border-radius: 12px;
+            position: relative;
+            color: white;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(26,35,126,0.3);
+        }
+        
+        .card-chip {
+            width: 25px;
+            height: 20px;
+            background: #ffd700;
+            border-radius: 3px;
+            margin-bottom: 10px;
+        }
+        
+        .card-number {
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            margin: 10px 0;
+            letter-spacing: 2px;
+        }
+        
+        .card-name {
+            font-size: 10px;
+            text-transform: uppercase;
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+        }
+        
+        .card-brand {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête du document -->
+    <div class="company-logo">
+        <div class="logo-box">
+            {% if company.logo_base64 %}
+                <img src="data:image/svg+xml;base64,{{ company.logo_base64 }}" class="logo-image" alt="{{ company.name|default('SEDEF BANK') }} Logo">
+            {% endif %}
+            <span class="logo-text">{{ company.name|default('SEDEF BANK') }}</span>
+        </div>
+    </div>
+
+    <!-- Informations entreprise et référence contrat -->
+    <div class="info-section">
+        <div class="company-details">
+            <strong>{{ company.name|default('SEDEF BANK') }}</strong><br>
+            {{ 'card_contract.company.payment_institution'|trans({}, 'card_contract', _locale) }}<br>
+            {{ company.address|default('123 Avenue des Finances') }}<br>
+            {{ company.postal_code|default('75001') }} {{ company.city|default('Paris') }}
+        </div>
+        <div class="contract-ref">
+            <strong>{{ 'card_contract.contract.number'|trans({'%reference%': contract.reference}, 'card_contract', _locale) }}</strong><br>
+            {{ 'card_contract.contract.establishment_date'|trans({'%date%': contract.createdAt|date('d/m/Y')}, 'card_contract', _locale) }}<br>
+            {% if contract.signedAt %}
+                {{ 'card_contract.contract.signature_date'|trans({'%date%': contract.signedAt|date('d/m/Y à H:i')}, 'card_contract', _locale) }}
+            {% endif %}
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <!-- Titre du document -->
+    <h1 class="document-title">
+        {{ 'card_contract.main.title'|trans({}, 'card_contract', _locale) }}<br>
+        <span style="font-size: 16px;">
+            {{ 'card_contract.main.card_subtitle'|trans({'%card_type%': subscription.cardType|upper, '%card_brand%': subscription.cardBrand|upper}, 'card_contract', _locale) }}
+        </span>
+    </h1>
+
+    <!-- Chapitre I - Les Parties Contractantes -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'card_contract.chapter_one.title'|trans({}, 'card_contract', _locale) }}</h2>
+        
+        <div class="parties-section">
+            <div class="party-column">
+                <div class="party-header">{{ 'card_contract.chapter_one.issuing_institution'|trans({}, 'card_contract', _locale) }}</div>
+                <strong>{{ company.name|default('SEDEF BANK') }}</strong><br>
+                {{ 'card_contract.company.payment_institution'|trans({}, 'card_contract', _locale) }}<br>
+                {{ 'card_contract.company.share_capital'|trans({'%amount%': company.capital|default('1 000 000')}, 'card_contract', _locale) }}<br>
+                {{ 'card_contract.company.head_office'|trans({'%address%': company.address|default('123 Avenue des Finances')}, 'card_contract', _locale) }}<br>
+                {{ company.postal_code|default('75001') }} {{ company.city|default('Paris')|upper }}<br>
+                {{ 'card_contract.company.siren'|trans({'%number%': company.siren|default('123 456 789')}, 'card_contract', _locale) }}<br>
+                {{ 'card_contract.company.ape_code'|trans({'%code%': company.ape|default('6419Z')}, 'card_contract', _locale) }}<br>
+                {{ 'card_contract.company.represented_by'|trans({}, 'card_contract', _locale) }}<br>
+                <em>{{ 'card_contract.chapter_one.hereinafter_institution'|trans({}, 'card_contract', _locale) }}</em>
+            </div>
+            
+            <div class="party-column">
+                <div class="party-header">{{ 'card_contract.chapter_one.cardholder'|trans({}, 'card_contract', _locale) }}</div>
+                <strong>{{ user.firstName }} {{ user.lastName }}</strong><br>
+                {{ 'card_contract.chapter_one.residing_at'|trans({}, 'card_contract', _locale) }}<br>
+                {% if user.address %}
+                    {{ user.address }}<br>
+                    {% if user.city %}
+                        {{ user.postalCode }} {{ user.city|upper }}<br>
+                    {% endif %}
+                {% else %}
+                    {{ 'card_contract.chapter_one.address_not_provided'|trans({}, 'card_contract', _locale) }}<br>
+                    {{ 'card_contract.chapter_one.postal_code_city'|trans({}, 'card_contract', _locale) }}<br>
+                {% endif %}
+                {% if user.birthDate %}
+                    {{ 'card_contract.chapter_one.born_on'|trans({'%birth_date%': user.birthDate|date('d/m/Y')}, 'card_contract', _locale) }}<br>
+                {% endif %}
+                {{ 'card_contract.chapter_one.phone'|trans({'%phone%': user.phone|default('card_contract.chapter_one.phone_not_provided'|trans({}, 'card_contract', _locale))}, 'card_contract', _locale) }}<br>
+                {{ 'card_contract.chapter_one.email'|trans({'%email%': user.email}, 'card_contract', _locale) }}<br>
+                <em>{{ 'card_contract.chapter_one.hereinafter_cardholder'|trans({}, 'card_contract', _locale) }}</em>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        
+        <div class="emphasis-box">
+            {{ 'card_contract.chapter_one.parties_agreed'|trans({}, 'card_contract', _locale) }}
+        </div>
+    </div>
+
+    <!-- Chapitre II - Objet et Caractéristiques de la Carte -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'card_contract.chapter_two.title'|trans({}, 'card_contract', _locale) }}</h2>
+        
+        <div class="section">
+            <div class="section-title">{{ 'card_contract.chapter_two.article_1_title'|trans({}, 'card_contract', _locale) }}</div>
+            <p>{{ 'card_contract.chapter_two.article_1_content'|trans({'%card_type%': subscription.cardType|title, '%card_brand%': subscription.cardBrand|title}, 'card_contract', _locale) }}</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">{{ 'card_contract.chapter_two.article_2_title'|trans({}, 'card_contract', _locale) }}</div>
+            <table class="terms-table">
+                <tr>
+                    <td class="terms-label">{{ 'card_contract.chapter_two.table_card_type'|trans({}, 'card_contract', _locale) }}</td>
+                    <td class="amount-emphasis">{{ subscription.cardType|title }}</td>
+                </tr>
+                <tr>
+                    <td class="terms-label">{{ 'card_contract.chapter_two.table_brand'|trans({}, 'card_contract', _locale) }}</td>
+                    <td>{{ subscription.cardBrand|title }}</td>
+                </tr>
+                <tr>
+                    <td class="terms-label">{{ 'card_contract.chapter_two.table_technology'|trans({}, 'card_contract', _locale) }}</td>
+                    <td>{{ 'card_contract.chapter_two.table_technology_value'|trans({}, 'card_contract', _locale) }}</td>
+                </tr>
+                <tr>
+                    <td class="terms-label">{{ 'card_contract.chapter_two.table_validity'|trans({}, 'card_contract', _locale) }}</td>
+                    <td>{{ 'card_contract.chapter_two.table_validity_value'|trans({}, 'card_contract', _locale) }}</td>
+                </tr>
+                <tr>
+                    <td class="terms-label">{{ 'card_contract.chapter_two.table_usage_zone'|trans({}, 'card_contract', _locale) }}</td>
+                    <td>{{ 'card_contract.chapter_two.table_usage_zone_value'|trans({}, 'card_contract', _locale) }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Chapitre III - Conditions Financières -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'card_contract.chapter_three.title'|trans({}, 'card_contract', _locale) }}</h2>
+        
+        <div class="section">
+            <div class="section-title">{{ 'card_contract.chapter_three.article_3_title'|trans({}, 'card_contract', _locale) }}</div>
+            <table class="terms-table">
+                <thead>
+                    <tr>
+                        <th>{{ 'card_contract.chapter_three.table_designation'|trans({}, 'card_contract', _locale) }}</th>
+                        <th>{{ 'card_contract.chapter_three.table_amount'|trans({}, 'card_contract', _locale) }}</th>
+                        <th>{{ 'card_contract.chapter_three.table_frequency'|trans({}, 'card_contract', _locale) }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if subscription.activationFee and subscription.activationFee > 0 %}
+                    <tr style="font-weight: bold; color: #f61212ff;">
+                        <td class="terms-label">{{ 'card_contract.chapter_three.activation_fees'|trans({}, 'card_contract', _locale) }}</td>
+                        <td class="amount-emphasis">{{ subscription.activationFee|number_format(2, ',', ' ') }} €</td>
+                        <td>{{ 'card_contract.chapter_three.frequency_unique'|trans({}, 'card_contract', _locale) }}</td>
+                    </tr>
+                    {% endif %}
+                    <tr>
+                        <td class="terms-label">{{ 'card_contract.chapter_three.annual_fees'|trans({}, 'card_contract', _locale) }}</td>
+                        <td class="amount-emphasis">{{ contract.cardFees|number_format(2, ',', ' ') }} €</td>
+                        <td>{{ 'card_contract.chapter_three.frequency_annual'|trans({}, 'card_contract', _locale) }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ 'card_contract.chapter_three.opposition_fees'|trans({}, 'card_contract', _locale) }}</td>
+                        <td>15,00 €</td>
+                        <td>{{ 'card_contract.chapter_three.frequency_per_incident'|trans({}, 'card_contract', _locale) }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ 'card_contract.chapter_three.card_renewal'|trans({}, 'card_contract', _locale) }}</td>
+                        <td>{{ 'card_contract.chapter_three.free'|trans({}, 'card_contract', _locale) }}</td>
+                        <td>{{ 'card_contract.chapter_three.frequency_at_expiry'|trans({}, 'card_contract', _locale) }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ 'card_contract.chapter_three.replacement_fees'|trans({}, 'card_contract', _locale) }}</td>
+                        <td>20,00 €</td>
+                        <td>{{ 'card_contract.chapter_three.frequency_per_replacement'|trans({}, 'card_contract', _locale) }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <div class="section-title">{{ 'card_contract.chapter_three.article_4_title'|trans({}, 'card_contract', _locale) }}</div>
+            <table class="terms-table">
+                <tr>
+                    <td class="terms-label">{{ 'card_contract.chapter_three.daily_withdrawal_limit'|trans({}, 'card_contract', _locale) }}</td>
+                    <td class="amount-emphasis">{{ contract.dailyLimit|number_format(0, ',', ' ') }} €</td>
+                </tr>
+                <tr>
+                    <td class="terms-label">{{ 'card_contract.chapter_three.monthly_payment_limit'|trans({}, 'card_contract', _locale) }}</td>
+                    <td class="amount-emphasis">{{ contract.monthlyLimit|number_format(0, ',', ' ') }} €</td>
+                </tr>
+                <tr>
+                    <td class="terms-label">{{ 'card_contract.chapter_three.contactless_payment'|trans({}, 'card_contract', _locale) }}</td>
+                    <td>{{ 'card_contract.chapter_three.contactless_amount'|trans({}, 'card_contract', _locale) }}</td>
+                </tr>
+            </table>
+            <p style="font-size: 9px; margin-top: 10px; font-style: italic;">
+                {{ 'card_contract.chapter_three.limits_modification_note'|trans({}, 'card_contract', _locale) }}
+            </p>
+        </div>
+    </div>
+
+    <!-- Chapitre IV - Conditions d'Utilisation -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'card_contract.chapter_four.title'|trans({}, 'card_contract', _locale) }}</h2>
+        
+        <div class="article-list">
+            <div class="article-item">
+            <br>
+                <strong>{{ 'card_contract.chapter_four.security_code_title'|trans({}, 'card_contract', _locale) }}</strong><br>
+                {{ 'card_contract.chapter_four.security_code_content'|trans({}, 'card_contract', _locale) }}
+            </div>
+            
+            <div class="article-item">
+            <br>
+                <strong>{{ 'card_contract.chapter_four.authorized_use_title'|trans({}, 'card_contract', _locale) }}</strong><br>
+                {{ 'card_contract.chapter_four.authorized_use_content'|trans({}, 'card_contract', _locale) }}
+            </div>
+            
+            <div class="article-item">
+            <br>
+                <strong>{{ 'card_contract.chapter_four.card_conservation_title'|trans({}, 'card_contract', _locale) }}</strong><br>
+                {{ 'card_contract.chapter_four.card_conservation_content'|trans({}, 'card_contract', _locale) }}
+            </div>
+            
+            <div class="article-item">
+            <br>
+                <strong>{{ 'card_contract.chapter_four.opposition_title'|trans({}, 'card_contract', _locale) }}</strong><br>
+                {{ 'card_contract.chapter_four.opposition_content'|trans({}, 'card_contract', _locale) }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Chapitre V - Responsabilités -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'card_contract.chapter_five.title'|trans({}, 'card_contract', _locale) }}</h2>
+        
+        <div class="section">
+            <div class="section-title">{{ 'card_contract.chapter_five.article_5_title'|trans({}, 'card_contract', _locale) }}</div>
+            <div class="subsection-list">
+                <div class="subsection-item">{{ 'card_contract.chapter_five.cardholder_responsibility_1'|trans({}, 'card_contract', _locale) }}</div>
+                <div class="subsection-item">{{ 'card_contract.chapter_five.cardholder_responsibility_2'|trans({}, 'card_contract', _locale) }}</div>
+                <div class="subsection-item">{{ 'card_contract.chapter_five.cardholder_responsibility_3'|trans({}, 'card_contract', _locale) }}</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">{{ 'card_contract.chapter_five.article_6_title'|trans({}, 'card_contract', _locale) }}</div>
+            <div class="subsection-list">
+                <div class="subsection-item">{{ 'card_contract.chapter_five.institution_responsibility_1'|trans({}, 'card_contract', _locale) }}</div>
+                <div class="subsection-item">{{ 'card_contract.chapter_five.institution_responsibility_2'|trans({}, 'card_contract', _locale) }}</div>
+                <div class="subsection-item">{{ 'card_contract.chapter_five.institution_responsibility_3'|trans({}, 'card_contract', _locale) }}</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chapitre VI - Durée et Résiliation -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'card_contract.chapter_six.title'|trans({}, 'card_contract', _locale) }}</h2>
+        
+        <div class="section">
+            <div class="section-title">{{ 'card_contract.chapter_six.article_7_title'|trans({}, 'card_contract', _locale) }}</div>
+            <p>{{ 'card_contract.chapter_six.contract_duration'|trans({}, 'card_contract', _locale) }}</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">{{ 'card_contract.chapter_six.article_8_title'|trans({}, 'card_contract', _locale) }}</div>
+            <div class="subsection-list">
+                <div class="subsection-item">{{ 'card_contract.chapter_six.termination_1'|trans({}, 'card_contract', _locale) }}</div>
+                <div class="subsection-item">{{ 'card_contract.chapter_six.termination_2'|trans({}, 'card_contract', _locale) }}</div>
+                <div class="subsection-item">{{ 'card_contract.chapter_six.termination_3'|trans({}, 'card_contract', _locale) }}</div>
+                <div class="subsection-item">{{ 'card_contract.chapter_six.termination_4'|trans({}, 'card_contract', _locale) }}</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chapitre VII - Dispositions Générales -->
+    <div class="chapter">
+        <h2 class="chapter-title">{{ 'card_contract.chapter_seven.title'|trans({}, 'card_contract', _locale) }}</h2>
+        
+        <div class="section">
+            <div class="section-title">{{ 'card_contract.chapter_seven.article_9_title'|trans({}, 'card_contract', _locale) }}</div>
+            <p>{{ 'card_contract.chapter_seven.applicable_law'|trans({}, 'card_contract', _locale) }}</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">{{ 'card_contract.chapter_seven.article_10_title'|trans({}, 'card_contract', _locale) }}</div>
+            <p>{{ 'card_contract.chapter_seven.contract_modification'|trans({}, 'card_contract', _locale) }}</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">{{ 'card_contract.chapter_seven.article_11_title'|trans({}, 'card_contract', _locale) }}</div>
+            <p>{{ 'card_contract.chapter_seven.data_protection'|trans({}, 'card_contract', _locale) }}</p>
+        </div>
+    </div>
+
+    <!-- Signatures -->
+    <div class="signature-section">
+        <div class="signature-column">
+            <strong>{{ 'card_contract.signatures.cardholder_signature'|trans({}, 'card_contract', _locale) }}</strong><br>
+            {{ user.firstName }} {{ user.lastName }}<br>
+            <div class="signature-line" style="padding: 60px 0; "></div>
+            {{ 'card_contract.signatures.date_signature'|trans({}, 'card_contract', _locale) }}<br>
+
+
+
+            {% if contract.signedAt %}
+                <em>{{ 'card_contract.signatures.signed_electronically'|trans({'%date%': contract.signedAt|date('d/m/Y à H:i')}, 'card_contract', _locale) }}</em>
+            {% endif %}
+        </div>
+        
+        <div class="signature-column">
+            <strong>{{ 'card_contract.signatures.institution_signature'|trans({}, 'card_contract', _locale) }}</strong><br>
+            {{ company.name|default('SEDEF BANK') }}<br>
+            {{ 'card_contract.signatures.general_director'|trans({}, 'card_contract', _locale) }}<br>
+                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iMTI4MC4wMDAwMDBwdCIgaGVpZ2h0PSIxMjU5LjAwMDAwMHB0IiB2aWV3Qm94PSIwIDAgMTI4MC4wMDAwMDAgMTI1OS4wMDAwMDAiCiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0Ij4KPG1ldGFkYXRhPgpDcmVhdGVkIGJ5IHBvdHJhY2UgMS4xNSwgd3JpdHRlbiBieSBQZXRlciBTZWxpbmdlciAyMDAxLTIwMTcKPC9tZXRhZGF0YT4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsMTI1OS4wMDAwMDApIHNjYWxlKDAuMTAwMDAwLC0wLjEwMDAwMCkiCmZpbGw9IiMwMDAwMDAiIHN0cm9rZT0ibm9uZSI+CjxwYXRoIGQ9Ik0yNDQxIDEyNDUzIGMtMzEgLTYwIC0xNzUgLTc0NyAtNDg1IC0yMzI4IC03MSAtMzYwIC0yMTAgLTEwOTcgLTI1NgotMTM1MCAtMTE3IC02NTggLTE1MSAtODM3IC0yNTYgLTEzODAgLTI0OSAtMTI4MyAtNDg4IC0yNDQ4IC01MjYgLTI1NjAgLTQ4Ci0xNDEgLTEwOSAtMjI1IC0xNjIgLTIyNSAtMTA0IDAgLTI0OSAzMDEgLTMwMSA2MjMgLTggNDkgLTM2IDUwIC04MSAyIC03MQotNzYgLTE2MCAtNDYyIC0yNDAgLTEwMzggLTE2IC0xMTkgLTE2IC0xMjkgLTEgLTE0NSAzNCAtMzQgNDYgMSA4MiAyNDkgNDAKMjcxIDc2IDQ3MCAxMTEgNjE5IDI4IDEyMSA2MyAyMzAgNzIgMjMwIDQgMCAxNyAtNDQgMzAgLTk4IDQ3IC0yMDEgMTU5IC00MjMKMjQyIC00NzkgMTEzIC03NCAyMTQgLTkgMjg5IDE4NSAzNiA5MyAxMDEgMzg2IDI1MCAxMTE3IDE5OSA5ODIgNDAzIDIwMzUgNTAyCjI1OTAgMzMgMTg3IDYxIDM0NSA2MyAzNTAgMSA2IDYgLTE1MCA5IC0zNDUgMTkgLTExMzggMjg5IC0yODk5IDU1OCAtMzY0MiA2NwotMTg2IDExOCAtMzM4IDExMyAtMzM4IC0zIDAgLTE0IDUgLTI2IDExIC0zNyAyMCAtNjYgMyAtOTYgLTU4IC00NCAtOTAgLTEwNwotMTIxIC0yMDYgLTEwMiAtMTAzIDE5IC0xMzEgNjQgLTE3NSAyODMgLTMwIDE0OCAtNDYgMTg2IC04MSAxODYgLTQyIDAgLTU1Ci0zOCAtMTA5IC0zMjAgLTE2IC04NiAtNDEgLTE5MCAtNTQgLTIzMyAtMjIgLTY4IC0yMyAtNzkgLTEwIC05MiAyOSAtMzAgNDMKLTE2IDcyIDc1IDE5IDU3IDY3IDI3NyA4NiAzOTggNCAyMyAxMCA0MiAxMyA0MiA0IDAgMTcgLTUwIDI5IC0xMTEgMTMgLTY4IDMzCi0xMzYgNTIgLTE3NCAyOCAtNTcgMzggLTY3IDg5IC05MiAxMjUgLTYxIDI2MCAtMzMgMzI5IDY5IDE3IDI2IDMzIDUzIDM1IDYwCjMgOCAxOSAyIDQ4IC0xOCAzNCAtMjMgNDcgLTM5IDU4IC03NCA3IC0yNSA4MCAtMjc5IDE2MyAtNTY1IDI5NiAtMTAyOCA0MzgKLTEzODIgNzMyIC0xODI1IDIyMCAtMzMyIDQwOCAtNTExIDU1MSAtNTI3IDEyMCAtMTQgMjE2IDEwNyAyMzMgMjkzIDcgODEgLTE1CjE0NyAtNjAgMTc0IC01NSAzNCAtOTMgLTEwIC00MSAtNDcgMzIgLTI0IDQ0IC03NSAzMiAtMTQ5IC0xMSAtNzYgLTYwIC0xNzYKLTkzIC0xOTQgLTExNCAtNjEgLTMyMCAxMTQgLTU2NCA0NzggLTI5MSA0MzUgLTQzOCA4MDIgLTcxNiAxNzc3IC01MiAxODIKLTExMCAzODQgLTEzMCA0NTAgLTE5IDY2IC0zNSAxMjIgLTM1IDEyNiAwIDEzIDk5IC0yOCAxMzAgLTU1IDY0IC01MyAxMDIgLTY2CjIwMCAtNjYgMTIyIDAgMTY0IDI0IDIyMiAxMjcgbDI0IDQxIC00IC0yNTYgYy00IC0yODcgMCAtMzE1IDQ1IC0zMTAgMjYgMyAzMQoxMiA3NCAxMzMgOTggMjc2IDI0MSA2MTUgMjU5IDYxNSAxNCAwIDI3IC0yNSA2OSAtMTMyIDcxIC0xNzcgMTE3IC0yMzEgMjIwCi0yNTggODAgLTIxIDIwOCA2IDI4OCA2MSAyMyAxNiA0NSAyOSA0OCAyOSA0IDAgMjUgLTE2IDQ4IC0zNSA1MCAtNDMgMTA1IC02MgoxMzUgLTQ2IDExIDYgMjMgMTEgMjUgMTEgMiAwIDcgLTE4MyAxMCAtNDA3IDggLTU5NCA0NiAtOTQwIDE0MyAtMTMxMiAxMjEKLTQ2NiAzMzggLTc4MyA1OTggLTg3MyA3MyAtMjUgMTY1IC0yMyAyMjQgNCAxNzYgODIgMzg1IDQzOSA1NjMgOTYzIDMxIDk0IDYwCjE2MyA2MyAxNTUgMTMgLTM5IDMxIC01NzUgMzAgLTkyNSAwIC00MjggLTkgLTU0NCAtNjUgLTg3OCAtNzcgLTQ1OSAtMTc1Ci03MDcgLTI4OSAtNzMyIC0yNSAtNSAtMzcgLTIgLTU1IDE1IC00NyA0NCAtNTUgMTY1IC0zNCA1MjUgMTUgMjM4IDggMzAwIC0zMQozMDAgLTI1IDAgLTI1IC0xIC0yNyAtOTAgLTEgLTQ5IC03IC0xOTQgLTE0IC0zMjAgLTggLTE3NCAtOCAtMjQ5IDAgLTMwNSAyMgotMTQyIDY5IC0xOTcgMTU4IC0xODcgMTYzIDE4IDI2NSAyNDUgMzU3IDc5NyA1NyAzNDAgNjEgNDAwIDYxIDkxNSAwIDM0NiAtNQo1NTIgLTE5IDc4MSBsLTE5IDMxMSA2MSAyMzQgYzg1IDMyMyAyMDggODkwIDI0NCAxMTIzIDIgMTUgMjUgMjYgOTggNDggMjkyCjkwIDUzOCAyMDcgNzM0IDM1MSA2NiA0OSA2OSA1MCA4MiAzMiA4IC0xMSAxNyAtMzYgMjAgLTU2IDEwIC01OSAxNiAtNjQgNjAKLTQwIDcyIDM4IDk4IDY5IDEzMCAxNTMgbDIzIDYzIDEgLTQwIGMxIC02NCAyOCAtMTc1IDU2IC0yMzQgMzcgLTc1IDEwMiAtMTQxCjE0MCAtMTQxIDM3IDEgNTkgMTkgMTIzIDEwOCA2MCA4MiA4NCAxMDAgMTA4IDgwIDkgLTcgNTQgLTY0IDk5IC0xMjUgMTE1Ci0xNTYgMTg1IC0yMDMgMjgwIC0xODggNTEgNyAxMDEgNDYgMTM1IDEwMyAyOSA0OSA2MCA4MiA3NSA4MiA3IDAgNTUgLTg0IDEwOAotMTg3IDE0NCAtMjgyIDIyMyAtMzczIDMyMyAtMzczIDE1OSAwIDI2NiAxNTkgNDA4IDYwMyAxMTcgMzcwIDI0OCA4NTkgNjQwCjIzODcgMjY3IDEwNDIgMzIwIDEyNTkgMzg5IDE1OTUgMzYgMTcxIDY1IDMwMyA2NSAyOTUgMSAtOCAtMTAgLTExMiAtMjMgLTIzMAotNDEgLTM2MCAtNDkgLTU1MCAtNDMgLTk2MCAzIC0yMDYgMTEgLTQ0MiAxNiAtNTI1IDg4IC0xMjc5IDI2MCAtMjIwNSA1NTcKLTMwMDMgMTg1IC00OTYgMzcwIC04NjIgNTc2IC0xMTM2IDE3MSAtMjI4IDMxNSAtMzY5IDQ1NyAtNDQ0IDk4IC01MyAxNzQgLTcyCjI4MSAtNzIgMTA4IDAgMTgxIDE4IDI5NSA3NCAxMDkgNTQgMTU5IDk0IDE1MCAxMTggLTEwIDI2IC00MSAyMiAtOTEgLTEzCi0xMDYgLTczIC0yNDQgLTExOSAtMzU0IC0xMTkgLTIxNyAxIC00MDggMTM2IC02NzcgNDgwIC0yNjQgMzM5IC01NzQgMTAzMwotNzY3IDE3MjEgLTE3OCA2MzIgLTMxMyAxNTUxIC0zNjcgMjUwNCAtMTkgMzE5IC0xNiA4OTEgNCAxMTE1IDMzIDM1NiA5MyA4MTAKMTg4IDE0MjcgMTIgNzggMTkgMTQ5IDE2IDE1NyAtNCA5IC0xOCAxNiAtMzEgMTYgLTMyIDAgLTI2IDIxIC0xMzEgLTQ5NSAtNDgKLTIzMSAtMTExIC01NDEgLTE0MSAtNjkwIC0xMDEgLTQ5NyAtMTI1IC01OTcgLTMwNSAtMTMwNSAtNzI2IC0yODQxIC04MzcKLTMyMTcgLTEwMDAgLTMzODIgLTc2IC03NyAtMTMyIC03NCAtMjEwIDkgLTQ5IDUxIC03MSA4OCAtMTc0IDI5MSAtNTAgOTkgLTk4CjE4MSAtMTEzIDE5MyAtNDMgMzMgLTEwMyA5IC0xNTAgLTYzIC0xNSAtMjMgLTQxIC01NiAtNTggLTc0IC0yNyAtMjkgLTM5IC0zNAotNzYgLTM0IC02NCAwIC0xMTAgMzggLTIwMiAxNjQgLTkyIDEyNSAtMTI1IDE1NiAtMTcwIDE1NiAtNDIgMCAtNzUgLTI2IC0xMzAKLTEwNCAtMjUgLTM0IC01MyAtNzAgLTY0IC03OSAtMTkgLTE3IC0yMSAtMTcgLTQ3IDE1IC03MSA4NCAtMTA1IDIxNSAtMTA1CjQwNSAwIDQ2IC01IDkxIC0xMSAxMDEgLTggMTQgLTIgMzEgMzAgODcgMTk0IDMzMSAzMjUgMTA4OSAyOTIgMTY4MiAtMjEgMzUzCi02MiA1ODAgLTE1NyA4NjMgLTEwMyAzMDcgLTIxOSA1MTUgLTM2NyA2NTcgLTY4IDY1IC0xMDQgOTEgLTE3OSAxMjcgLTUxIDI1Ci0xMTAgNDggLTEzMCA1MiAtMzMgNSAtMzggMTAgLTM4IDM1IDAgMzUgNjcgNjY1IDEyMCAxMTI0IDEwMyA4OTQgMTIxIDEwODQKMTIzIDEzMDAgMSAyMjIgLTI2IDMyMCAtOTkgMzY1IC03MSA0NCAtMjA5IDE1IC0zNDIgLTczIC00NzEgLTMxNCAtNzg0IC0xMzg3Ci05MTIgLTMxMjIgLTUgLTc3IC0xMCAtMTQ3IC0xMCAtMTU1IDAgLTkgLTQ1IC02NSAtMTAxIC0xMjUgLTMxOSAtMzQ3IC02MDkKLTc3NCAtODEwIC0xMTkwIC0yOTIgLTYwNSAtNDgwIC0xMzM4IC01NDUgLTIxMTYgLTIzIC0yODcgLTU0IC0zMzYgLTE1NyAtMjUwCi03MCA1OCAtNzggNTkgLTE1NiAxMiAtODIgLTUwIC0xMTcgLTYxIC0xOTQgLTYxIC0xMDggMCAtMTYyIDQ2IC0yMTIgMTgzIC01MgoxNDEgLTg0IDE5NyAtMTIyIDIxNSBsLTM1IDE3IC0zMyAtMzggYy0zNyAtNDMgLTEyMSAtMjMwIC0yMDUgLTQ1NCAtMzEgLTg0Ci02MCAtMTU2IC02NSAtMTYxIC05IC04IDEgMjkyIDE2IDQ4OCA4IDEwNCAyMCAxNjcgNTAgMjc1IDc2IDI2OCAxODEgNzg0IDQxOAoyMDU1IDk4IDUyNiAxMDcgNjIxIDU4IDY1MiAtMjEgMTQgLTY0IDggLTgwIC0xMCAtNzQgLTgyIC0xOTggLTU5MiAtMzE2Ci0xMzA3IC03NyAtNDY2IC0xMzYgLTkzNCAtMTgwIC0xNDM1IC0xMyAtMTUwIC04NyAtMzQ1IC0xNTQgLTQwOCAtMzUgLTMzCi0xNjMgLTQwIC0yMTYgLTEyIC02NyAzNiAtNjcgMzYgLTQ2IDYwIDI5IDMyIDMzIDE1MiA3IDIwMCAtMjcgNDkgLTYzIDY1Ci0xMDAgNDYgLTQ0IC0yMyAtNjYgLTc3IC01OSAtMTQ4IGw1IC01OSAtMzEgMjAgYy0xOCAxMSAtMzUgMjYgLTM5IDMzIC0yNiA0NgotMjExIDU5NCAtMjUyIDc0OCAtMjYxIDk3MyAtNTAzIDI5NTIgLTQ0NyAzNjQwIDM0IDQwNSAxNzAgMTE1NCA1MjYgMjg4NSAxMDEKNDkyIDEzOSA3MTIgMTI5IDczOSAtOCAyMSAtNTEgMjAgLTYzIC0xeiBtNDY1MSAtMTIwOCBjNDMgLTQzIDUzIC0xMDEgNTMKLTMxMCAtMSAtMjI1IC0zIC0yNTYgLTEwNSAtMTE2MCAtNDQgLTM4NSAtOTEgLTgxMCAtMTA1IC05NDUgLTE0IC0xMzUgLTI3Ci0yNjMgLTMwIC0yODYgbC02IC00MSAtODcgLTYgYy0yNDggLTE3IC00OTcgLTE0NCAtNzk5IC00MDcgLTg0IC03MyAtOTMgLTc5Ci05MyAtNTYgMCAxMyA3IDEwOSAxNSAyMTMgMTM1IDE2ODUgNDYxIDI3MjYgOTMwIDI5NzAgMTEyIDU4IDE4OCA2OCAyMjcgMjh6Cm0tMjAyIC0yODMyIGMwIC00MSAtNzYgLTc4MiAtMTA1IC0xMDMzIC01NSAtNDY1IC0xMDAgLTc0MyAtMjI1IC0xNDAwIC05NwotNTA5IC0xMzQgLTcxMSAtMjA1IC0xMTM1IC02OCAtNDA2IC04MSAtNDc1IC05MiAtNDg1IC0xMCAtMTAgLTIyMiAtNTcgLTI5NQotNjYgbC01NCAtNiAtMTIgMTYyIGMtMzAgMzkxIC0zNiA2ODUgLTM3IDE2MTUgMCA5MjIgNSAxMTUzIDM2IDE2NzAgbDEwIDE3MAo3MiA3MCBjMjg5IDI4MSA2MTYgNDU3IDg2NSA0NjQgNDAgMSA0MiAtMSA0MiAtMjZ6IG0xNzcgLTE1IGMxMTcgLTQzIDI1MAotMTYxIDM0NiAtMzA2IDEzOCAtMjA3IDI4MCAtNjE1IDMyNiAtOTQwIDg1IC01ODggMzUgLTEyMjQgLTEzNiAtMTc1NyAtNjUKLTIwMiAtMTQyIC0zMzMgLTI4MiAtNDc4IC03OSAtODIgLTg2IC04NyAtMTE3IC04MSAtNDEgNyAtNTMgMSAtMTc4IC0xMDEKLTEwMyAtODMgLTE2MyAtMTI1IC0xODAgLTEyNSAtMTMgMCAtMiA2NiAyOSAxNjQgMjQgNzcgMjYgOTAgMTMgMTAyIC0yNiAyNgotNDcgNSAtNzIgLTc1IC0zOCAtMTIxIC01MSAtMTk4IC0zNyAtMjI3IDYgLTE0IDExIC0yNiAxMSAtMjggMCAtMTcgLTQzMwotMTc3IC00NDQgLTE2NSAtOCA5IDE2MSA5NzUgMjczIDE1NjQgMTYzIDg1NSAyMTMgMTIwNSAyOTYgMjA1MCA0NSA0NjYgNDAKNDM2IDczIDQyOSAxNSAtNCA1MSAtMTUgNzkgLTI2eiBtLTEyMzYgLTc3NSBjLTI3IC00ODUgLTM1IC04MjcgLTM1IC0xNTMzIDAKLTc2MiAxMyAtMTI2NyA0MCAtMTYxNCA4IC0xMDQgMTIgLTE5MSA5IC0xOTUgLTE0IC0xMyAtMTkyIC00IC0yNTAgMTMgLTUzIDE2Ci03MCAyOCAtMTYxIDEyMSAtMTEzIDExMyAtMTY0IDE0MyAtMjI4IDEzMSAtNTcgLTExIC04OCAtNjAgLTE0NiAtMjI5IC0yOAotODIgLTYwIC0xNjMgLTcxIC0xNzggLTMwIC00MyAtNzMgLTM5IC0xODYgMTYgLTEwNCA1MSAtMTk0IDEyOCAtMjcwIDIzMSAtMjYKMzUgLTU1IDY2IC02NSA3MCAtMTYgNSAtMTggMTMgLTE0IDQ3IDMgMjMgOCA3NCAxMSAxMTIgMzAgMzU5IDEyMyA4NDcgMjMwCjEyMTAgMjIwIDc0MyA1MzggMTMyMiAxMDQ0IDE4OTggNTEgNTkgOTYgMTA1IDk4IDEwMyAzIC0yIDAgLTk0IC02IC0yMDN6Cm0tMjExNCAtMzA3IGMtNCAtNDYgLTI1IC0xODQgLTQ3IC0zMDcgLTczIC00MDIgLTI5OSAtMTU4MCAtMzQwIC0xNzY5IC0yMgotMTAxIC00MCAtMTg5IC00MCAtMTk0IDAgLTUgLTMgLTcgLTYgLTQgLTggOSAzMSAzNTMgNzcgNjczIDEwMSA3MDcgMjI5IDEzNDkKMzIwIDE1OTggMTcgNDggMzMgODcgMzYgODcgMyAwIDMgLTM4IDAgLTg0eiBtMzY4OCAtMjQ0OCBjLTEyIC03MSAtNjEgLTE2OAotODUgLTE2OCAtNCAwIC0xNCAxOCAtMjMgNDEgbC0xNiA0MCA2MiA2MyBjMzQgMzUgNjQgNjQgNjUgNjUgMiAwIDEgLTE4IC0zCi00MXogbS00Njg2IC0zNTkgYzE1IC00MyAxNCAtOTEgLTIgLTExMyAtMTMgLTE3IC0xNSAtMTYgLTMwIDE3IC0yMCA0MSAtMjEKNjcgLTUgMTAyIDE1IDMzIDI0IDMyIDM3IC02eiBtMjU3MyAtNTIgYzIwIC0xMiA2NiAtNTUgMTAzIC05NSAzNyAtNDAgODYgLTg0CjEwOSAtOTcgNjAgLTM1IDE2NSAtNTcgMjY1IC01NCBsODYgMiAyMiAtMjg5IGMxMiAtMTU5IDM0IC00NDcgNDggLTY0MCBsMjUKLTM1MiAtMzkgLTEyOCBjLTkzIC0zMDAgLTE3MCAtNTA0IC0yNzEgLTcwOSAtMTQ0IC0yOTUgLTI4NiAtNDU0IC00MDcgLTQ1NQotNDcgMCAtMTQ3IDM0IC0yMDMgNzAgLTcyIDQ2IC0xOTggMTg0IC0yNTMgMjc5IC0yMDEgMzQwIC0zMDYgODMxIC0zMzkgMTU5MQotMTIgMjgwIC0zIDc2OSAxNSA3ODcgNSA0IDE4IC02IDMwIC0yMiA0MiAtNTkgMTQzIC0xNTggMjAyIC0xOTggNzAgLTQ4IDIwNwotMTA3IDI1MCAtMTA3IDQzIDAgOTAgMzIgMTE5IDgyIDEzIDI0IDQzIDk5IDY1IDE2OCA2NCAxOTcgODggMjIwIDE3MyAxNjd6Cm05MzIgLTM0OSBjLTY5IC0zNTcgLTIxMCAtOTc2IC0yMjAgLTk2NSAtNSA1IC04NSAxMDcwIC04MCAxMDc0IDEgMiA0MyAxMCA5MgoxOCA0OSA5IDExNCAyMiAxNDQgMjkgMTA3IDI3IDEwMiA0MSA2NCAtMTU2eiIvPgo8L2c+Cjwvc3ZnPgo=" style="width: 120px; height: auto; margin: 10px 0;" alt="Signature Directeur Général">
+                <div class="signature-date">
+                    {{ 'card_contract.signatures.date_label'|trans({}, 'card_contract', _locale) }} {{ "now"|date("d/m/Y") }}<br>
+                </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+ 
+</body>
+</html>

@@ -1,0 +1,30 @@
+banking_transfer_details:
+  header:
+    title: "Détails du virement"
+    subtitle: "Informations complètes sur votre virement"
+    back_button: "Retour à la liste"
+  
+  transfer_card:
+    title: "Virement"
+  
+  status:
+    pending: "En attente"
+    executing: "En cours d'exécution"
+    completed: "Terminé"
+    expired: "Expiré"
+    cancelled: "Annulé"
+    blocked: "Bloqué"
+  
+  details:
+    amount_label: "Montant"
+    beneficiary_account_label: "Compte bénéficiaire"
+    beneficiary_iban_label: "IBAN bénéficiaire"
+    description_label: "Description"
+    creation_date_label: "Date de création"
+    execution_date_label: "Date d'exécution"
+    ip_address_label: "Adresse IP"
+    ip_not_available: "Non disponible"
+  
+  actions:
+    continue_validation: "Continuer la validation"
+    success_message: "Ce virement a été exécuté avec succès"

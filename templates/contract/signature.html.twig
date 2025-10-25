@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature de contrat - SEDEF BANK</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 800px;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .contract-info {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid #667eea;
+        }
+        
+        .contract-info h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: #4a5568;
+        }
+        
+        .info-value {
+            color: #2d3748;
+            font-weight: 500;
+        }
+        
+        .conditions-section {
+            margin: 30px 0;
+        }
+        
+        .conditions-box {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            background: #fafafa;
+            white-space: pre-line;
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+        
+        .signature-section {
+            background: #f7fafc;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px dashed #cbd5e0;
+        }
+        
+        .signature-pad {
+            width: 100%;
+            height: 200px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            background: white;
+            cursor: crosshair;
+            margin: 15px 0;
+        }
+        
+        .signature-controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #5a67d8;
+            transform: translateY(-1px);
+        }
+        
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        
+        .btn-secondary:hover {
+            background: #cbd5e0;
+        }
+        
+        .btn-danger {
+            background: #fed7d7;
+            color: #c53030;
+        }
+        
+        .btn-danger:hover {
+            background: #feb2b2;
+        }
+        
+        .terms-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin: 25px 0;
+            padding: 20px;
+            background: #fff5f5;
+            border: 1px solid #fed7d7;
+            border-radius: 8px;
+        }
+        
+        .terms-checkbox input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 3px;
+        }
+        
+        .terms-text {
+            flex: 1;
+            line-height: 1.5;
+            color: #2d3748;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        
+        .expires-info {
+            background: #e6fffa;
+            border: 1px solid #9ae6b4;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            text-align: center;
+            color: #22543d;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .alert {
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .alert-success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        
+        .alert-error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 12px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .signature-controls {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏦 SEDEF BANK</h1>
+            <h2>Signature de contrat</h2>
+            <p>Carte {{ contract.cardTypeDisplayName }} {{ contract.cardBrandDisplayName }}</p>
+        </div>
+        
+        <div class="content">
+            <div class="expires-info">
+                ⏰ <strong>Ce contrat expire le {{ contract.expiresAt|date('d/m/Y à H:i') }}</strong>
+            </div>
+            
+            <div class="contract-info">
+                <h3>📋 Informations du contrat</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Référence :</span>
+                        <span class="info-value">{{ contract.reference }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Type de carte :</span>
+                        <span class="info-value">{{ contract.cardTypeDisplayName }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Marque :</span>
+                        <span class="info-value">{{ contract.cardBrandDisplayName }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Cotisation annuelle :</span>
+                        <span class="info-value">
+                            {% if contract.cardFees > 0 %}
+                                {{ contract.cardFees }}€
+                            {% else %}
+                                <span style="color: green;">Gratuite</span>
+                            {% endif %}
+                        </span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Plafond quotidien :</span>
+                        <span class="info-value">{{ contract.dailyLimit }}€</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Plafond mensuel :</span>
+                        <span class="info-value">{{ contract.monthlyLimit }}€</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="conditions-section">
+                <h3>📄 Conditions générales</h3>
+                <div class="conditions-box">{{ contract.generalConditions }}</div>
+            </div>
+            
+            <div class="conditions-section">
+                <h3>📄 Conditions particulières</h3>
+                <div class="conditions-box">{{ contract.specificConditions }}</div>
+            </div>
+            
+            <div class="warning">
+                <span style="font-size: 1.5rem;">⚠️</span>
+                <div>
+                    <strong>Important :</strong> En signant ce contrat, vous acceptez toutes les conditions générales et particulières mentionnées ci-dessus. Cette signature électronique a la même valeur juridique qu'une signature manuscrite.
+                </div>
+            </div>
+            
+            <form id="signatureForm">
+                {{ csrf_token('sign_contract_' ~ contract.reference) }}
+                <input type="hidden" name="_token" value="{{ csrf_token('sign_contract_' ~ contract.reference) }}">
+                
+                <div class="signature-section">
+                    <h3>✍️ Votre signature électronique</h3>
+                    <p style="margin-bottom: 15px; color: #666;">Dessinez votre signature dans le cadre ci-dessous :</p>
+                    
+                    <canvas id="signaturePad" class="signature-pad" width="750" height="200"></canvas>
+                    <input type="hidden" name="signature" id="signatureData">
+                    
+                    <div class="signature-controls">
+                        <button type="button" id="clearSignature" class="btn btn-secondary">
+                            🗑️ Effacer
+                        </button>
+                        <a href="{{ path('card_contract_download', {reference: contract.reference}) }}" class="btn btn-secondary" target="_blank">
+                            📄 Télécharger le PDF
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="terms-checkbox">
+                    <input type="checkbox" id="acceptTerms" name="accept_terms" value="1" required>
+                    <label for="acceptTerms" class="terms-text">
+                        <strong>J'ai lu et j'accepte</strong> les conditions générales et particulières de ce contrat de souscription de carte. Je comprends que cette signature électronique engage ma responsabilité et a la même valeur qu'une signature manuscrite.
+                    </label>
+                </div>
+                
+                <div class="alert alert-success" id="successAlert"></div>
+                <div class="alert alert-error" id="errorAlert"></div>
+                
+                <div class="loading" id="loadingDiv">
+                    <div class="spinner"></div>
+                    <p>Traitement de votre signature en cours...</p>
+                </div>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <button type="submit" class="btn btn-primary" id="signButton" disabled>
+                        ✍️ Signer le contrat
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Gestion du canvas de signature
+        const canvas = document.getElementById('signaturePad');
+        const ctx = canvas.getContext('2d');
+        let isDrawing = false;
+        let hasSignature = false;
+
+        // Configuration du canvas
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mouseout', stopDrawing);
+
+        // Support tactile
+        canvas.addEventListener('touchstart', handleTouch);
+        canvas.addEventListener('touchmove', handleTouch);
+        canvas.addEventListener('touchend', stopDrawing);
+
+        function startDrawing(e) {
+            isDrawing = true;
+            draw(e);
+        }
+
+        function draw(e) {
+            if (!isDrawing) return;
+
+            ctx.lineWidth = 2;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = '#2d3748';
+
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            ctx.lineTo(x, y);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            
+            hasSignature = true;
+            checkFormValidity();
+        }
+
+        function stopDrawing() {
+            if (isDrawing) {
+                ctx.beginPath();
+                isDrawing = false;
+            }
+        }
+
+        function handleTouch(e) {
+            e.preventDefault();
+            const touch = e.touches[0];
+            const mouseEvent = new MouseEvent(e.type === 'touchstart' ? 'mousedown' : 
+                                           e.type === 'touchmove' ? 'mousemove' : 'mouseup', {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            canvas.dispatchEvent(mouseEvent);
+        }
+
+        // Effacer la signature
+        document.getElementById('clearSignature').addEventListener('click', function() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            hasSignature = false;
+            checkFormValidity();
+        });
+
+        // Vérification de la validité du formulaire
+        const acceptTermsCheckbox = document.getElementById('acceptTerms');
+        const signButton = document.getElementById('signButton');
+
+        acceptTermsCheckbox.addEventListener('change', checkFormValidity);
+
+        function checkFormValidity() {
+            const isValid = hasSignature && acceptTermsCheckbox.checked;
+            signButton.disabled = !isValid;
+        }
+
+        // Soumission du formulaire
+        document.getElementById('signatureForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            if (!hasSignature) {
+                showError('Veuillez dessiner votre signature');
+                return;
+            }
+
+            if (!acceptTermsCheckbox.checked) {
+                showError('Veuillez accepter les conditions');
+                return;
+            }
+
+            // Récupérer les données de signature
+            const signatureDataURL = canvas.toDataURL();
+            document.getElementById('signatureData').value = signatureDataURL;
+
+            // Afficher le loading
+            document.getElementById('loadingDiv').style.display = 'block';
+            signButton.disabled = true;
+
+            try {
+                const formData = new FormData(this);
+                const response = await fetch('{{ path("contract_sign_process", {reference: contract.reference}) }}', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    showSuccess(result.message);
+                    setTimeout(() => {
+                        window.location.href = result.redirectUrl;
+                    }, 2000);
+                } else {
+                    showError(result.message);
+                }
+            } catch (error) {
+                showError('Erreur de connexion. Veuillez réessayer.');
+            } finally {
+                document.getElementById('loadingDiv').style.display = 'none';
+                signButton.disabled = false;
+            }
+        });
+
+        function showSuccess(message) {
+            const alert = document.getElementById('successAlert');
+            alert.textContent = message;
+            alert.style.display = 'block';
+            hideError();
+        }
+
+        function showError(message) {
+            const alert = document.getElementById('errorAlert');
+            alert.textContent = message;
+            alert.style.display = 'block';
+            hideSuccess();
+        }
+
+        function hideSuccess() {
+            document.getElementById('successAlert').style.display = 'none';
+        }
+
+        function hideError() {
+            document.getElementById('errorAlert').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

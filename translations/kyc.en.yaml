@@ -1,0 +1,33 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: kyc.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+# KYC (Know Your Customer) translations
+kyc:
+  title: "Identity Verification (KYC)"
+  required_for_banking: "Identity verification required to access banking services"
+  already_submitted: "You have already submitted an identity verification request."
+  submission_success: "Your identity verification request has been successfully submitted. Our team will review it as soon as possible."
+  submission_error: "An error occurred while submitting your request. Please try again."
+  
+  status:
+    not_submitted: "Not submitted"
+    pending: "Pending validation"
+    approved: "Approved"
+    rejected: "Rejected - Documents to correct"
+    incomplete: "Incomplete"
+    
+  documents:
+    identity: "Identity document"
+    income_proof: "Proof of income"
+    address_proof: "Proof of address"
+    selfie: "Selfie with identity document"
+  navigation:
+    index: "KYC Status"
+    submit: "Submit my documents"
+    status: "My request details"
+  messages:
+    access_denied: "You must complete your identity verification (KYC) to access banking services."
+    approved_notification: "Congratulations! Your identity verification has been approved. You now have access to all our banking services."
+    rejected_notification: "Your verification request requires corrections. Please review the comments and submit new documents."

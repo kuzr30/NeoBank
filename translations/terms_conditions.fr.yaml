@@ -1,0 +1,54 @@
+terms_conditions:
+  page_title: "Conditions Générales d'Utilisation"
+  page_description: "Conditions d'utilisation des services bancaires de %company_name%"
+
+  scope:
+    title: "Objet"
+    content: |
+      Les présentes Conditions Générales d'Utilisation (CGU) définissent les modalités et conditions d'utilisation
+      des services bancaires proposés par <strong>%company_name%</strong> sur ce site internet.
+
+  acceptance:
+    title: "Acceptation des conditions"
+    content: |
+      L'utilisation de nos services implique l'acceptation pleine et entière des présentes CGU.
+      Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser nos services.
+
+  services:
+    title: "Description des services"
+    content: |
+      %company_name% propose une gamme complète de services bancaires incluant :
+      <ul>
+        <li>Comptes bancaires particuliers et professionnels</li>
+        <li>Services de crédit et de financement</li>
+        <li>Produits d'épargne et d'investissement</li>
+        <li>Services de paiement et de change</li>
+      </ul>
+
+  obligations:
+    title: "Obligations du client"
+    content: |
+      Le client s'engage à :
+      <ul>
+        <li>Fournir des informations exactes et à jour</li>
+        <li>Respecter les conditions d'utilisation des services</li>
+        <li>Protéger ses identifiants de connexion</li>
+        <li>Signaler tout incident de sécurité</li>
+      </ul>
+
+  liability:
+    title: "Responsabilité"
+    content: |
+      %company_name% s'engage à fournir ses services avec diligence et professionnalisme.
+      Notre responsabilité est limitée conformément à la réglementation bancaire en vigueur.
+
+  modification:
+    title: "Modification des conditions"
+    content: |
+      %company_name% se réserve le droit de modifier les présentes CGU à tout moment.
+      Les modifications prennent effet dès leur publication sur le site.
+
+  contact:
+    title: "Contact"
+    content: |
+      Pour toute question relative aux présentes CGU, contactez-nous à l'adresse %email%.

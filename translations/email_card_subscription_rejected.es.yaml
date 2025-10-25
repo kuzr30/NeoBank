@@ -1,0 +1,31 @@
+email_card_subscription_rejected:
+  title: "Su solicitud de tarjeta bancaria"
+  
+  content:
+    page_title: "Respecto a su solicitud de tarjeta bancaria"
+    greeting: "Estimado(a) %firstName% %lastName%,"
+    
+    rejection:
+      title: "Decisión respecto a su solicitud"
+      description: "Después del examen de su expediente, no podemos dar curso favorable a su solicitud de tarjeta %cardType%."
+    
+    details:
+      title: "Detalles de la solicitud"
+      reference: "Referencia de la solicitud"
+      reason: "Motivo de la decisión"
+      reason_not_specified: "No especificado - Contacte nuestro servicio al cliente"
+    
+    next_steps:
+      title: "Sus opciones"
+      option1: "Contactar nuestro servicio al cliente para más información"
+      option2: "Enviar una nueva solicitud después de mejorar su situación"
+      option3: "Solicitar una cita con un asesor bancario"
+    
+    support:
+      title: "¿Necesita ayuda?"
+      contact_button: "Contactar el servicio al cliente"
+      instruction: "Nuestro equipo está disponible para explicarle esta decisión"
+    
+    apologize: "Lamentamos no poder responder favorablemente a su solicitud y permanecemos a su disposición."
+    
+    footer: "Este email ha sido enviado automáticamente por su banco. <br><strong>Nuestro servicio al cliente permanece a su disposición.</strong>"

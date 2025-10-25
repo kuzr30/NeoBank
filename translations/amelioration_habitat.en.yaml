@@ -1,0 +1,111 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: amelioration_habitat.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+amelioration_habitat:
+  page:
+    title: "Home Improvement Loan"
+    description: "Finance all your home improvement projects with our dedicated loan. Competitive rates and progressive disbursement."
+
+  hero:
+    title: "Home Improvement Loan"
+    subtitle: "Transform your home according to your desires"
+    values:
+      taux: "{rate}% APR*"
+      montant: "120,000€"
+      duree: "20 years"
+
+  section_1:
+    title: "What is a home improvement loan?"
+    content:
+      paragraph_1: "The home improvement loan allows you to finance all your home beautification and modernization projects. Whether it's for renovating, extending, or improving the comfort of your home."
+      paragraph_2: "This flexible solution adapts to all your needs: from simple room renovation to major extension work or energy efficiency upgrades."
+
+  features:
+    montant: "From €2,000 to €120,000"
+    montant_detail: "According to the scope of your work"
+    duree: "From 1 year to 20 years"
+    duree_detail: "Duration adapted to your budget"
+    taux: "From {rate}% APR*"
+    taux_detail: "Preferential home rate"
+    garantie: "Mortgage or guarantee"
+    garantie_detail: "Depending on the borrowed amount"
+
+  advantages:
+    taux_avantageux:
+      title: "Competitive rates:"
+      text: "Preferential conditions for home improvement"
+    usage_specialise:
+      title: "Specialized use:"
+      text: "Financing dedicated to improvement work"
+    deblocage_progressif:
+      title: "Progressive disbursement:"
+      text: "Funds released as work progresses"
+    accompagnement:
+      title: "Support:"
+      text: "Personalized advice for your projects"
+    plus_value:
+      title: "Added value:"
+      text: "Enhancement of your real estate assets"
+
+  requirements:
+    conditions_emprunteur:
+      title: "Borrower conditions"
+      items:
+        proprietaire: "Be the owner of the property to be improved"
+        revenus: "Prove stable income"
+        endettement: "Debt ratio below 35%"
+        incidents: "No registration in incident files"
+    conditions_projet:
+      title: "Project conditions"
+      items:
+        travaux: "Work on main or secondary residence"
+        devis: "Detailed quotes from companies"
+        normes: "Compliance with current standards"
+        professionnels: "Work carried out by professionals"
+
+  documents:
+    dossier_personnel:
+      title: "Personal file"
+      items:
+        piece: "Valid identity document"
+        domicile: "Recent proof of address"
+        bulletins: "Last 3 pay slips"
+        avis: "Income tax notice"
+    justificatifs_patrimoniaux:
+      title: "Asset documentation"
+      items:
+        titre: "Property title deed"
+        taxe: "Current year property tax"
+        releves: "Bank account statements"
+        tableau: "Amortization schedule of current loans"
+    documents_travaux:
+      title: "Work documents"
+      items:
+        devis: "Detailed quotes from companies"
+        permis: "Building permit if necessary"
+        plans: "Plans and work descriptions"
+        attestations: "Company insurance certificates"
+
+  legal:
+    title: "Important legal information"
+    taeg:
+      title: "*APR:"
+      text: "Representative example: for a €60,000 home improvement loan over 15 years at 3.1% APR, you repay 180 monthly payments of €416, for a total amount of €74,880 (cost of credit: €14,880)."
+    deblocage:
+      title: "Disbursement:"
+      text: "Funds are disbursed progressively according to work progress upon presentation of invoices."
+    travaux:
+      title: "Work:"
+      text: "Obligation to carry out the declared work within 2 years."
+    garanties:
+      title: "Guarantees:"
+      text: "Mortgage or guarantee depending on the amount and duration of the loan."
+    retractation:
+      title: "Cooling-off period:"
+      text: "You have 14 days to withdraw from your credit after accepting the offer."
+
+  cta:
+    title: "Transform your home"
+    subtitle: "Finance your improvement projects with our dedicated loan"

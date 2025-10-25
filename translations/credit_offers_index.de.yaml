@@ -1,0 +1,373 @@
+credit_offers_index:
+  # Allgemeine Labels für Krediteigenschaften
+  labels:
+    amount: "Finanzierungsbetrag"
+    amount_available: "Verfügbarer Betrag"
+    amount_eco: "Umweltverantwortlicher Betrag"
+    amount_important: "Große Finanzierung"
+    amount_vehicle: "Fahrzeugfinanzierung"
+    amount_work: "Arbeitsfinanzierung"
+    amount_without_justification: "Kredit ohne Nachweis"
+    amount_equipment: "Ausrüstungsfinanzierung"
+    amount_travel: "Reisefinanzierung"
+    amount_consolidation: "Optimale Konsolidierung"
+    amount_reserve: "Verfügbare Reserve"
+    amount_company: "Unternehmensfinanzierung"
+    amount_studies: "Studienfinanzierung"
+    amount_small: "Kleine Beträge"
+    amount_leasing: "Miete mit Kaufoption"
+    
+    duration: "Rückzahlungsdauer"
+    duration_flexible: "Flexible Dauer"
+    duration_adaptable: "Anpassbare Dauer"
+    duration_temporary: "Temporäre Lösung"
+    duration_adapted: "Angepasste Dauer"
+    duration_contract: "Flexibler Vertrag"
+    duration_flexible_repayment: "Flexible Rückzahlung"
+    duration_modular: "Modulare Dauer"
+    duration_extended: "Gestaffelte Rückzahlung"
+    duration_long: "Verlängerte Dauer"
+    duration_business: "Geschäftsdauer"
+    duration_short: "Kurze Dauer"
+    
+    contribution: "Eigenkapital"
+    contribution_none: "Ohne Eigenkapital"
+    
+    insurance: "Kreditversicherung"
+    insurance_travel: "Reiseversicherung inklusive"
+    
+    guarantee: "Hypothekengarantie"
+    guarantee_none: "Keine Garantie"
+    guarantee_sold_property: "Garantie auf verkauftes Gut"
+    guarantee_parental: "Elternbürgschaft"
+    
+    usage: "Freie Verwendung"
+    usage_specialized: "Spezialisierte Verwendung"
+    usage_versatile: "Vielseitige Verwendung"
+    
+    release: "Progressive Freigabe"
+    
+    eco: "Öko-PTZ kompatibel"
+    tax: "Steuervorteile"
+    
+    repayment: "Endfällige Rückzahlung"
+    
+    financing: "Vollfinanzierung"
+    vehicles: "Neue und gebrauchte Fahrzeuge"
+    
+    option: "Doppelte Schlussoption"
+    
+    justification: "Kein Nachweis erforderlich"
+    speed: "Schnelle Freigabe"
+    
+    partners: "Partnernetzwerk"
+    partnerships: "Agenturpartnerschaften"
+    
+    savings: "Wichtige Einsparungen"
+    additional: "Zusätzliche Liquidität"
+    
+    renewal: "Automatische Wiederherstellung"
+    freedom: "Völlig freie Nutzung"
+    access: "Mehrfachzugang"
+    
+    sectors: "Alle Tätigkeitsbereiche"
+    
+    deferment: "Aufgeschobene Rückzahlung"
+    
+    conditions: "Vereinfachte Bedingungen"
+    inclusion: "Finanzielle Inklusion"
+
+  hero:
+    badge: "Finanzierungslösungen"
+    stats:
+      taux_min: "Mindestzinssatz"
+      reponse: "Antwort" 
+      types: "Kreditarten"
+    actions:
+      simuler: "Simulieren"
+      demander: "Beantragen"
+
+  categories:
+    header:
+      title: "Unsere Finanzierungslösungen"
+      subtitle: "Wettbewerbsfähige Zinssätze für alle Ihre Projekte"
+    
+    immobilier_habitat:
+      title: "Immobilien & Wohnen"
+      subtitle: "Finanzieren Sie Ihr Immobilienvermögen"
+      
+      credit_immobilier:
+        title: "Immobilienkredit"
+        description: "Hauptwohnsitz und Kapitalanlage. Finanzieren Sie bis zu 100% Ihres Immobilienprojekts mit Vorzugskonditionen."
+        rate: "{rate}%"
+        rate_label: "Effektiver Jahreszins*"
+        features:
+          amount: "Von 50.000€ bis 1.000.000€ zur Finanzierung Ihres Hauptwohnsitzes oder Ihrer Kapitalanlage."
+          duration: "Staffeln Sie Ihre Rückzahlungen über 5 bis 30 Jahre je nach Ihrer finanziellen Leistungsfähigkeit und Ihrem Immobilienprojekt."
+          contribution: "Ein Mindestbeitrag von 10% ist erforderlich, einschließlich Notarkosten und Bankgarantien."
+          insurance: "Vollständiger Schutz inklusive für Tod, Invalidität und Arbeitsunfähigkeit."
+        actions:
+          learn_more: "Mehr erfahren"
+          apply: "Meinen Antrag stellen"
+      
+      pret_hypothecaire:
+        title: "Hypothekendarlehen"
+        description: "Garantie auf Ihre bestehende Immobilie. Flexible Lösung für alle Ihre Projekte mit einer Immobilie als Sicherheit."
+        rate: "{rate}%"
+        rate_label: "Effektiver Jahreszins*"
+        features:
+          amount: "Zwischen 20.000€ und 500.000€ unter Verwendung Ihrer Immobilie als Hypothekengarantie."
+          duration: "Rückzahlung über 5 bis 25 Jahre angepasst an Ihre finanzielle Situation und Ihre Ziele."
+          guarantee: "Ihre Immobilie dient als Garantie und ermöglicht Vorzugszinssätze."
+          usage: "Kein Verwendungsnachweis erforderlich - Investition, Arbeiten, Schuldenkonsolidierung."
+        actions:
+          learn_more: "Mehr erfahren"
+          apply: "Meinen Antrag stellen"
+      
+      credit_travaux:
+        title: "Renovierungskredit"
+        description: "Renovierung und Wohnraumverbesserung. Verwandeln Sie Ihre Wohnung nach Ihren Wünschen mit einer angepassten Finanzierung."
+        rate: "{rate}%"
+        rate_label: "Effektiver Jahreszins*"
+        features:
+          amount: "Von 1.000€ bis 150.000€ für alle Ihre Renovierungs- und Wohnraumverbesserungsprojekte."
+          duration: "Flexible Rückzahlung von 6 Monaten bis 15 Jahren je nach Umfang Ihrer Arbeiten."
+          guarantee: "Kredit ohne Hypothek oder Bürgschaft, basierend nur auf Ihrer Rückzahlungsfähigkeit."
+          release: "Die Mittel werden entsprechend dem Fortschritt Ihrer Arbeiten freigegeben."
+        actions:
+          learn_more: "Mehr erfahren"
+          apply: "Meinen Antrag stellen"
+      
+      amelioration_habitat:
+        title: "Wohnraumverbesserung"
+        description: "Modernisierung und Ausstattung. Verbessern Sie den Komfort und die Energieeffizienz Ihrer Wohnung."
+        rate: "{rate}%"
+        rate_label: "Effektiver Jahreszins*"
+        features:
+          amount: "Zwischen 500€ und 75.000€ zur Modernisierung und Verbesserung der Energieeffizienz Ihrer Wohnung."
+          duration: "Staffeln Sie Ihre Zahlungen über 6 Monate bis 10 Jahre je nach Ihrem Budget und der Art der Verbesserungen."
+          eco: "Kombinierbar mit dem zinslosen Öko-Darlehen zur Maximierung Ihrer Finanzierung."
+          tax: "Profitieren Sie von verfügbaren Steuergutschriften für die Energiewende Ihrer Wohnung."
+        actions:
+          learn_more: "Mehr erfahren"
+          apply: "Meinen Antrag stellen"
+      
+      credit_relais:
+        title: "Überbrückungskredit"
+        description: "Übergang zwischen Kauf und Verkauf. Kaufen Sie Ihre neue Wohnung, bevor Sie die alte verkauft haben, mit völliger Ruhe."
+        rate: "{rate}%"
+        rate_label: "Effektiver Jahreszins*"
+        features:
+          amount: "Von 50.000€ bis 2.000.000€ zur Erleichterung des Kaufs Ihrer neuen Immobilie vor dem Verkauf der alten."
+          duration: "Übergangskredit von 6 bis 24 Monaten bis zur Finalisierung des Verkaufs Ihrer aktuellen Immobilie."
+          repayment: "Sie zahlen nur die Zinsen während der Laufzeit, das Kapital wird beim Verkauf zurückgezahlt."
+          guarantee: "Ihre aktuelle Wohnung dient als Garantie zur Absicherung der Überbrückungsfinanzierung."
+        actions:
+          learn_more: "Mehr erfahren"
+          apply: "Meinen Antrag stellen"
+    
+    automobile_mobilite:
+      title: "Automobil & Mobilität"
+      subtitle: "Finanzieren Sie Ihr Fahrzeug und Ihre Mobilität"
+      
+      credit_auto:
+        title: "Autokredit"
+        description: "Neue und gebrauchte Fahrzeuge. Finanzieren Sie Ihre Mobilität mit Vorzugskonditionen und umfassendem Service."
+        rate: "{rate}%"
+        rate_label: "Effektiver Jahreszins*"
+        features:
+          amount: "Von 5.000€ bis 100.000€ für den Kauf Ihres neuen oder gebrauchten Autos mit den besten Konditionen."
+          duration: "Rückzahlung über 12 bis 96 Monate je nach Ihrem Budget und dem Wert des gewählten Fahrzeugs."
+          financing: "Möglichkeit der Finanzierung bis zu 100% des Kaufpreises, Zubehör und Versicherungen inklusive."
+          vehicles: "Komplettlösung für alle Fahrzeugtypen mit Inzahlungnahme-Service inklusive."
+        actions:
+          learn_more: "Mehr erfahren"
+          apply: "Meinen Antrag stellen"
+      
+      leasing_automobile:
+        title: "Fahrzeug-Leasing"
+        description: "Miete mit Kaufoption. Fahren Sie ein neues Fahrzeug mit reduzierten monatlichen Raten und einer Kaufoption."
+        rate: "{rate}%"
+        rate_label: "Effektiver Jahreszins*"
+        features:
+          amount: "Von 10.000€ bis 80.000€ um ein neues Fahrzeug ohne anfängliche Kaufverpflichtung zu fahren."
+          duration: "Laufzeit von 24 bis 60 Monaten mit reduzierten monatlichen Raten im Vergleich zu einem klassischen Kredit."
+          contribution: "Möglichkeit, Ihr Leasing mit 0€ Eigenkapital zu starten, je nach Ihrem Profil und dem gewählten Fahrzeug."
+          option: "Am Ende des Vertrags wählen Sie, das Fahrzeug zu kaufen oder es in perfektem Zustand zurückzugeben."
+        actions:
+          learn_more: "Mehr erfahren"
+          apply: "Meinen Antrag stellen"
+    
+    personnel_consommation:
+      title: "Privat & Konsum"
+      subtitle: "Verwirklichen Sie alle Ihre persönlichen Projekte"
+      
+      credit_personnel:
+        title: "Privatkredit"
+        description: "Persönliche Projekte ohne Nachweis. Freie Verwendung Ihres Kredits für alle Ihre Lebensprojekte."
+        rate: "{rate}%"
+        rate_label: "Effektiver Jahreszins*"
+        features:
+          amount: "Von 1.000€ bis 75.000€ zur Finanzierung aller Ihrer persönlichen Projekte, ohne die Verwendung der Mittel nachweisen zu müssen."
+          duration: "Staffeln Sie Ihre Zahlungen über 12 bis 84 Monate je nach Ihrer finanziellen Leistungsfähigkeit und Ihren Präferenzen."
+          justification: "Maximale Einfachheit - nur Ihre Rückzahlungsfähigkeit wird bewertet."
+          speed: "Antwort in 24h und sofortige Bereitstellung der Mittel nach Annahme des Dossiers."
+        actions:
+          learn_more: "Mehr erfahren"
+          apply: "Meinen Antrag stellen"
+      
+      credit_consommation:
+        title: "Verbraucherkredit"
+        description: "Ausrüstung und Konsumgüter. Finanzieren Sie Ihre täglichen Käufe mit vorteilhaften Konditionen."
+        rate: "{rate}%"
+        rate_label: "Effektiver Jahreszins*"
+        features:
+          amount: "Von 500€ bis 35.000€ für den Kauf von Ausrüstungsgegenständen und alltäglichen Konsumprodukten."
+          duration: "Rückzahlung über 6 bis 60 Monate angepasst an die Art des Kaufs und Ihr monatliches Budget."
+          usage: "Kredit für Haushaltsausstattung, Elektrogeräte, Informatik und Möbel."
+          partners: "Über 500 Partnergeschäfte für exklusive Angebote und Zahlungskomfort."
+        actions:
+          learn_more: "Mehr erfahren"
+          apply: "Meinen Antrag stellen"
+      
+      credit_voyage:
+        title: "Reisekredit"
+        description: "Finanzieren Sie Ihre Reisen und Ausflüge. Verwirklichen Sie Ihre Träume mit einem speziell für Reisen konzipierten Kredit."
+        rate: "{rate}%"
+        rate_label: "Effektiver Jahreszins*"
+        features:
+          amount: "Von 500€ bis 25.000€ um alle Ihre Projekte für Ausflüge und Entdeckungen auf der ganzen Welt zu verwirklichen."
+          duration: "Genießen Sie Ihren Urlaub und zahlen Sie ruhig über 6 bis 60 Monate je nach Ihren Möglichkeiten zurück."
+          insurance: "Vollständiger Schutz mit Stornoversicherung, Rückholung und 24h/7-Tage-Assistance."
+          partnerships: "Profitieren Sie von Vorzugsangeboten bei unseren Partner-Reiseagenturen weltweit."
+        actions:
+          learn_more: "Mehr erfahren"
+          apply: "Meinen Antrag stellen"
+      
+      regroupement_credits:
+        title: "Kreditumschuldung"
+        description: "Konsolidieren Sie Ihre bestehenden Kredite. Vereinfachen Sie Ihre Verwaltung und reduzieren Sie Ihre monatlichen Raten in einem einzigen Kredit."
+        rate: "{rate}%"
+        rate_label: "Effektiver Jahreszins*"
+        features:
+          amount: "Von 3.000€ bis 200.000€ um alle Ihre laufenden Kredite in einer einzigen vereinfachten monatlichen Rate zusammenzufassen."
+          duration: "Staffeln Sie Ihre Rückzahlungen über 12 bis 180 Monate um Ihre monatlichen Belastungen erheblich zu reduzieren."
+          savings: "Mögliche Reduzierung Ihrer monatlichen Raten um bis zu 60% durch Neuverhandlung und Verlängerung."
+          additional: "Möglichkeit, zusätzliche Liquidität für die Finanzierung neuer Projekte hinzuzufügen."
+        actions:
+          learn_more: "Mehr erfahren"
+          apply: "Meinen Antrag stellen"
+      
+      credit_renouvelable:
+        title: "Revolving-Kredit"
+        description: "Verfügbare Geldreserve. Eine flexible Lösung, die sich entsprechend Ihren Rückzahlungen erneuert."
+        rate: "{rate}%"
+        rate_label: "Effektiver Jahreszins*"
+        features:
+          amount: "Von 500€ bis 6.000€ permanente Liquidität, die sich automatisch mit Ihren Rückzahlungen regeneriert."
+          renewal: "Je mehr Sie zurückzahlen, desto mehr erneuert sich Ihr Kredit für neue Käufe oder unvorhergesehene Ausgaben."
+          freedom: "Keine Kaufrechtfertigung, nutzen Sie Ihre Reserve wann Sie wollen, wie Sie wollen."
+          access: "Verfügbar per Kreditkarte oder Banküberweisung für maximale Flexibilität im Alltag."
+        actions:
+          learn_more: "Mehr erfahren"
+          apply: "Meinen Antrag stellen"
+    
+    professionnel_specialise:
+      title: "Beruflich & Spezialisiert"
+      subtitle: "Lösungen für spezifische Bedürfnisse"
+      
+      credit_professionnel:
+        title: "Geschäftskredit"
+        description: "Finanzierung für Berufstätige. Entwickeln Sie Ihre Tätigkeit mit an Unternehmen angepassten Finanzierungslösungen."
+        rate: "{rate}%"
+        rate_label: "Effektiver Jahreszins*"
+        features:
+          amount: "Von 5.000€ bis 500.000€ zur Begleitung der Entwicklung Ihrer beruflichen Tätigkeit und Ihrer Investitionen."
+          duration: "Rückzahlung über 12 bis 84 Monate angepasst an Wirtschaftszyklen und die Rentabilität Ihres Unternehmens."
+          usage: "Finanzierung von Berufsausrüstung, Nutzfahrzeugen, Betriebskapital und Liquiditätsbedarf."
+          sectors: "Lösungen angepasst an Handwerker, Geschäftsleute, freie Berufe und KMU aller Bereiche."
+        actions:
+          learn_more: "Mehr erfahren"
+          apply: "Meinen Antrag stellen"
+      
+      credit_etudiant:
+        title: "Studienkredit"
+        description: "Finanzierung des Hochschulstudiums. Investieren Sie in Ihre Zukunft mit Vorzugskonditionen."
+        rate: "{rate}%"
+        rate_label: "Effektiver Jahreszins*"
+        features:
+          amount: "Von 1.000€ bis 60.000€ zur Finanzierung Ihres Hochschulstudiums, Studiengebühren und Studentenlebenskosten."
+          duration: "Laufzeit von 12 Monaten bis 10 Jahren um sich an Ihre zukünftige berufliche Situation und Einkommen anzupassen."
+          deferment: "Möglichkeit der Rückzahlungsverschiebung bis zu 7 Jahre während der Dauer Ihres Studiums."
+          guarantee: "Kreditsicherung durch Bürgschaft der Eltern oder gesetzlichen Vormünder für die besten Konditionen."
+        actions:
+          learn_more: "Mehr erfahren"
+          apply: "Meinen Antrag stellen"
+      
+      microcredit:
+        title: "Mikrokredit"
+        description: "Kleine Beträge für spezifische Projekte. Finanzielle Inklusionslösung für alle Ihre kleinen Projekte."
+        rate: "{rate}%"
+        rate_label: "Effektiver Jahreszins*"
+        features:
+          amount: "Von 100€ bis 5.000€ zur Finanzierung Ihrer lokalen Projekte und täglichen Grundbedürfnisse."
+          duration: "Schnelle Rückzahlung über 6 bis 48 Monate um langfristige Verschuldung zu vermeiden und schnell Ihre Autonomie wiederzuerlangen."
+          conditions: "Erleichtertes Verfahren und an besondere Situationen und bescheidene Einkommen angepasste Annahmekriterien."
+          inclusion: "Lösung für alle Profile zugänglich, auch in prekären Situationen oder bei Bankausschluss."
+        actions:
+          learn_more: "Mehr erfahren"
+          apply: "Meinen Antrag stellen"
+
+  advantages:
+    header:
+      title: "Warum %company_name% wählen?"
+      subtitle: "Die Expertise und das Vertrauen von mehr als 2 Millionen Kunden"
+    
+    items:
+      competitive_rates:
+        number: "01"
+        title: "Wettbewerbsfähige Zinssätze"
+        description: "Unsere Zinssätze werden direkt mit unseren Bankpartnern verhandelt, um Ihnen die besten Marktkonditionen zu bieten."
+      
+      express_response:
+        number: "02"
+        title: "Express-Antwort"
+        description: "Grundsätzliche Zusage innerhalb von 24h dank unserem automatisierten Analysesystem und unserem Partnernetzwerk."
+      
+      expert_support:
+        number: "03"
+        title: "Expertenbegleitung"
+        description: "Unsere spezialisierten Berater begleiten Sie von der Simulation bis zur Unterzeichnung beim Notar."
+      
+      custom_solutions:
+        number: "04"
+        title: "Maßgeschneiderte Lösungen"
+        description: "15 Kreditarten angepasst an alle Ihre Projekte, von Immobilien bis zu beruflichen Bedürfnissen."
+    
+    stats:
+      clients:
+        number: "2M+"
+        label: "Kunden"
+      
+      years:
+        number: "15+"
+        label: "Jahre"
+      
+      satisfaction:
+        number: "98%"
+        label: "Zufriedenheit"
+      
+      response_time:
+        number: "24h"
+        label: "Antwort"
+
+  cta:
+    title: "Bereit, Ihr Projekt zu verwirklichen?"
+    subtitle: "Simulieren Sie Ihren Kredit in 2 Minuten und erhalten Sie eine sofortige Antwort"
+    
+    actions:
+      simulate:
+        text: "Meinen Kredit simulieren"
+      
+      apply:
+        text: "Meinen Antrag stellen"

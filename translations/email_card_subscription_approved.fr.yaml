@@ -1,0 +1,33 @@
+email_card_subscription_approved:
+  title: "Votre demande de carte bancaire a été approuvée"
+  
+  content:
+    page_title: "Excellente nouvelle ! Votre carte a été approuvée"
+    greeting: "Cher(e) %firstName% %lastName%,"
+    
+    approval:
+      title: "Demande approuvée"
+      description: "Félicitations ! Votre demande de carte %cardType% a été approuvée par nos équipes."
+    
+    card_details:
+      title: "Détails de votre carte"
+      type: "Type de carte"
+      reference: "Référence"
+      account: "Compte associé"
+    
+    contract_required:
+      title: "Signature de contrat requise"
+      description: "Pour finaliser votre souscription, vous devrez signer électroniquement un contrat précisant les frais et conditions d'utilisation de votre carte."
+    
+    next_step:
+      title: "Prochaine étape"
+      access_button: "Accéder à mon espace"
+      instruction: "Vous recevrez prochainement le contrat à signer par email"
+    
+    delivery_info:
+      title: "Informations de livraison"
+      description: "Votre carte physique sera expédiée à votre adresse sous 5-7 jours ouvrés après signature du contrat et validation des frais."
+    
+    assistance: "Notre équipe reste à votre disposition pour vous accompagner dans cette dernière étape."
+    
+    footer: "Cet email a été envoyé automatiquement par votre banque. <br><strong>Félicitations pour l'approbation de votre demande !</strong>"

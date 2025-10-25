@@ -1,0 +1,313 @@
+{# Contenu de l'onglet RIB/IBAN dans le dashboard #}
+
+{# Inclure les notifications pour les requêtes AJAX #}
+{% include 'partials/_notifications.html.twig' %}
+
+<style>
+/* RIB/IBAN Management Styles */
+.banking__alert {
+    padding: 16px;
+    border-radius: 6px;
+    margin: 16px 24px;
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.banking__alert--success {
+    background: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.banking__alert--danger {
+    background: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.banking__alert-close {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.banking__alert-close:hover {
+    opacity: 1;
+}
+
+/* Empty State */
+.banking__rib-empty {
+    padding: 60px 24px;
+    text-align: center;
+    background: #ffffff;
+}
+
+.banking__rib-empty-icon {
+    width: 64px;
+    height: 64px;
+    color: #bdc3c7;
+    margin: 0 auto 24px;
+}
+
+.banking__rib-empty-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+.banking__rib-empty-text {
+    font-size: 14px;
+    color: #7f8c8d;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banking__rib-empty .banking__action-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    text-decoration: none;
+}
+
+/* RIB Grid */
+.banking__rib-grid {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+/* RIB Cards */
+.banking__rib-card {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.banking__rib-card:hover {
+    border-color: #0066cc;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.1);
+}
+
+.banking__rib-card-header {
+    padding: 20px 20px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #f1f3f4;
+}
+
+.banking__rib-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+    flex: 1;
+}
+
+.banking__rib-card-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.banking__rib-card-action {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    border-radius: 6px;
+    color: #7f8c8d;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.banking__rib-card-action:hover {
+    background: #e9ecef;
+    color: #0066cc;
+}
+
+.banking__rib-card-action svg {
+    width: 16px;
+    height: 16px;
+}
+
+.banking__rib-card-body {
+    padding: 16px 20px;
+}
+
+.banking__rib-detail {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+.banking__rib-detail:last-child {
+    margin-bottom: 0;
+}
+
+.banking__rib-detail-icon {
+    width: 16px;
+    height: 16px;
+    color: #7f8c8d;
+    flex-shrink: 0;
+}
+
+.banking__rib-iban-display {
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.banking__rib-card-footer {
+    padding: 16px 20px;
+    background: #f8f9fa;
+    border-top: 1px solid #f1f3f4;
+}
+
+.banking__rib-delete-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: transparent;
+    border: 1px solid #e74c3c;
+    border-radius: 6px;
+    color: #e74c3c;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    justify-content: center;
+}
+
+.banking__rib-delete-btn:hover {
+    background: #e74c3c;
+    color: white;
+}
+
+.banking__rib-delete-icon {
+    width: 14px;
+    height: 14px;
+}
+
+/* Responsive Design for RIB */
+@media (max-width: 768px) {
+    .banking__rib-grid {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+    
+    .banking__rib-card-header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+    
+    .banking__rib-card-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .banking__rib-empty {
+        padding: 40px 16px;
+    }
+    
+    .banking__rib-card-header,
+    .banking__rib-card-body,
+    .banking__rib-card-footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+</style>
+
+<div class="banking__content">
+    <div class="banking__operations-header">
+        <div>
+            <h2 class="banking__account-title">{{ tp('banking_ribs.header.title', [], 'banking_ribs') }}</h2>
+            <div class="banking__account-details">
+                <span>{{ tp('banking_ribs.header.subtitle', [], 'banking_ribs') }}</span>
+            </div>
+        </div>
+        <div>
+            <button class="banking__action-primary" onclick="window.location.href='{{ path('banking_rib_new') }}'">
+                {{ ux_icon('heroicons:plus', {'class': 'banking__nav-icon'}) }}
+                {{ tp('banking_ribs.header.add_button', [], 'banking_ribs') }}
+            </button>
+        </div>
+    </div>
+
+    {% if bank_accounts is empty %}
+        <div class="banking__rib-empty">
+            {{ ux_icon('heroicons:document-text', {'class': 'banking__rib-empty-icon'}) }}
+            <h3 class="banking__rib-empty-title">{{ tp('banking_ribs.empty_state.title', [], 'banking_ribs') }}</h3>
+            <p class="banking__rib-empty-text">
+                {{ tp('banking_ribs.empty_state.description', [], 'banking_ribs') }}
+            </p>
+            <a href="{{ path('banking_rib_new') }}" class="banking__action-primary">
+                {{ ux_icon('heroicons:plus', {'class': 'banking__nav-icon'}) }}
+                {{ tp('banking_ribs.empty_state.add_first_button', [], 'banking_ribs') }}
+            </a>
+        </div>
+    {% else %}
+        <div class="banking__rib-grid">
+            {% for bank_account in bank_accounts %}
+                <div class="banking__rib-card">
+                    <div class="banking__rib-card-header">
+                        <h3 class="banking__rib-card-title">{{ bank_account.accountName }}</h3>
+                        <div class="banking__rib-card-actions">
+                            <a href="{{ path('banking_rib_show', {'id': bank_account.id}) }}" class="banking__rib-card-action" title="{{ tp('banking_ribs.card_actions.view_details', [], 'banking_ribs') }}">
+                                {{ ux_icon('heroicons:eye') }}
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="banking__rib-card-body">
+                        <div class="banking__rib-detail">
+                            {{ ux_icon('heroicons:building-library', {'class': 'banking__rib-detail-icon'}) }}
+                            <span>{{ bank_account.bankName }}</span>
+                        </div>
+                        
+                        <div class="banking__rib-detail">
+                            {{ ux_icon('heroicons:credit-card', {'class': 'banking__rib-detail-icon'}) }}
+                            <span class="banking__rib-iban-display">{{ bank_account.maskedIban }}</span>
+                        </div>
+
+                    </div>
+
+                    <div class="banking__rib-card-footer">
+                        <form method="post" action="{{ path('banking_rib_delete', {'id': bank_account.id}) }}" 
+                              onsubmit="return confirm('{{ tp('banking_ribs.card_actions.delete_confirm', [], 'banking_ribs') }}');">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ bank_account.id) }}">
+                            <button type="submit" class="banking__rib-delete-btn">
+                                {{ ux_icon('heroicons:trash', {'class': 'banking__rib-delete-icon'}) }}
+                                {{ tp('banking_ribs.card_actions.delete_button', [], 'banking_ribs') }}
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>

@@ -1,0 +1,104 @@
+credit_consommation:
+  page:
+    title: "Consumptiekrediet"
+    description: "Financier uw persoonlijke projecten met ons consumptiekrediet. Voordelige tarieven en flexibele terugbetaling."
+
+  hero:
+    title: "Consumptiekrediet"
+    subtitle: "Realiseer al uw persoonlijke projecten"
+    values:
+      taux: "{rate}% JKP*"
+      montant: "75 000€"
+      duree: "10 jaar"
+
+  section_1:
+    title: "Wat is een consumptiekrediet?"
+    content:
+      paragraph_1: "Het consumptiekrediet stelt u in staat al uw persoonlijke projecten te financieren: aankoop van een auto, uitrusting van het huis, vakantie, huwelijk of elke andere belangrijke uitgave."
+      paragraph_2: "Flexibele en snelle oplossing, dit vrije krediet geeft u de vrijheid om de fondsen te gebruiken zoals u wilt, zonder het gebruik ervan te hoeven rechtvaardigen."
+
+  features:
+    montant: "Van 2 000€ tot 75 000€"
+    montant_detail: "Volgens uw behoeften"
+    duree: "Van 12 maanden tot 10 jaar"
+    duree_detail: "Aangepaste terugbetaling"
+    taux: "Vanaf {rate}% JKP*"
+    taux_detail: "Gegarandeerd competitief tarief"
+    garantie: "Zonder waarborg"
+    garantie_detail: "Alleen op handtekening"
+
+  advantages:
+    liberte_usage:
+      title: "Gebruiksvrijheid:"
+      text: "Geen rechtvaardiging van het gebruik van fondsen"
+    reponse_rapide:
+      title: "Snelle reactie:"
+      text: "Beslissing binnen 48u en onmiddellijke vrijgave"
+    sans_garantie:
+      title: "Zonder waarborg:"
+      text: "Financiering alleen op handtekening"
+    remboursement_anticipe:
+      title: "Vervroegde terugbetaling:"
+      text: "Mogelijk op elk moment zonder boetes"
+    mensualites_fixes:
+      title: "Vaste maandlasten:"
+      text: "Budget beheerst gedurende de hele looptijd"
+
+  requirements:
+    conditions_octroi:
+      title: "Toekenningsvoorwaarden"
+      items:
+        majeur: "Meerderjarig zijn en wonen in Frankrijk"
+        revenus: "Regelmatige inkomsten aantonen"
+        endettement: "Schuldgraad minder dan 35%"
+        incidents: "Geen betalingsincidenten"
+    criteres_eligibilite:
+      title: "Geschiktheidscriteria"
+      items:
+        contrat: "Vast contract, tijdelijk contract of vrij beroep"
+        anciennete: "Minimum 6 maanden professionele anciënniteit"
+        capacite: "Geverifieerde terugbetalingscapaciteit"
+        age: "Maximumleeftijd 75 jaar aan het einde van de lening"
+
+  documents:
+    pieces_identite:
+      title: "Identiteitsstukken"
+      items:
+        carte: "Identiteitskaart of paspoort"
+        domicile: "Recent bewijs van woonplaats"
+        livret: "Familieboekje indien getrouwd"
+    justificatifs_revenus:
+      title: "Inkomensbewijzen"
+      items:
+        bulletins: "3 laatste loonstroken"
+        avis: "Laatste belastingaangifte"
+        contrat: "Arbeidscontract"
+        attestation: "Werkgeversattest"
+    informations_bancaires:
+      title: "Bankinformatie"
+      items:
+        releves: "3 laatste rekeninguittreksels"
+        rib: "RIB van de domiciliatierekening"
+        tableau: "Aflossingschema van lopende kredieten"
+
+  legal:
+    title: "Belangrijke juridische informatie"
+    taeg:
+      title: "*JKP:"
+      text: "Representatief voorbeeld: voor een consumptiekrediet van 15 000€ over 60 maanden tegen een JKP van 4,5%, betaalt u 60 maandlasten van 279€ terug, ofwel een totaalbedrag van 16 740€ (kosten van het krediet: 1 740€)."
+    retractation:
+      title: "Herroepingstermijn:"
+      text: "U heeft 14 dagen de tijd om uw krediet op te zeggen."
+    remboursement:
+      title: "Vervroegde terugbetaling:"
+      text: "Mogelijk op elk moment, kosten beperkt door de wet."
+    assurance:
+      title: "Verzekering:"
+      text: "Facultatief maar aanbevolen om uw terugbetalingen te beveiligen."
+    fichage:
+      title: "Registratie:"
+      text: "Bij wanbetaling riskeert u ingeschreven te worden in de bestanden van de Banque de France."
+
+  cta:
+    title: "Realiseer uw projecten"
+    subtitle: "Verkrijg snel en eenvoudig uw consumptiekrediet"

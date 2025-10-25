@@ -1,0 +1,109 @@
+travaux:
+  page:
+    title: "Crédito Obras"
+    description: "Renueve y acondicione su vivienda con nuestro crédito obras. Financie todos sus proyectos de mejora."
+  
+  hero:
+    class: "credit-detail-hero--travaux"
+    taux: "3,2%"
+    montant: "100 000€"
+    duree: "15 años"
+    title: "Crédito Obras"
+    subtitle: "Transforme su hábitat"
+  
+  section_1:
+    title: "¿Qué es un crédito obras?"
+    content:
+      paragraph_1: "El crédito obras financia todos sus proyectos de acondicionamiento, renovación y mejora de su vivienda: cocina, baño, aislamiento, calefacción, extensión, piscina..."
+      paragraph_2: "Solución especialmente diseñada para el hábitat, se beneficia de condiciones preferenciales y puede adaptarse al ritmo de sus obras con un desbloqueo progresivo de fondos."
+  
+  features:
+    title: "Características del crédito obras"
+    montant:
+      value: "Hasta 100 000€"
+      detail: "Según la magnitud de las obras"
+    duree:
+      value: "De 1 a 15 años"
+      detail: "Duración adaptada al proyecto"
+    taux:
+      value: "A partir de 3,2% TAE*"
+      detail: "Tasa preferencial obras"
+    garantie:
+      value: "Según monto"
+      detail: "Hipoteca si es necesario"
+  
+  section_3:
+    title: "Ventajas del crédito obras"
+    advantage_1:
+      title: "Tasas ventajosas"
+      content: "Condiciones preferenciales para trabajos de mejora"
+    advantage_2:
+      title: "Desbloqueo adaptado"
+      content: "Fondos liberados según el avance de las obras"
+    advantage_3:
+      title: "Todos los proyectos"
+      content: "Renovación, extensión, acondicionamiento, equipamiento"
+    advantage_4:
+      title: "Plusvalía"
+      content: "Valorización significativa de su patrimonio"
+    advantage_5:
+      title: "Acompañamiento"
+      content: "Consejo para optimizar su proyecto"
+  
+  section_4:
+    title: "Condiciones de elegibilidad"
+    conditions:
+      title: "Condiciones del proyecto"
+      condition_1: "Obras en residencia principal o secundaria"
+      condition_2: "Presupuestos detallados de empresas calificadas"
+      condition_3: "Respeto de las normas de construcción"
+      condition_4: "Autorizaciones administrativas si es necesario"
+    documents:
+      title: "Documentos justificativos"
+      document_1: "Facturas o presupuestos de profesionales"
+      document_2: "Justificantes de ingresos recientes"
+      document_3: "Título de propiedad o contrato de alquiler"
+      document_4: "Estados bancarios de los 3 últimos meses"
+  
+  section_5:
+    title: "Documentos necesarios"
+    personal:
+      title: "Documentos personales"
+      document_1: "Justificantes de identidad y domicilio"
+      document_2: "3 últimas nóminas"
+      document_3: "Certificado de ingresos"
+      document_4: "Estados de cuentas"
+    property:
+      title: "Bien inmobiliario"
+      document_1: "Título de propiedad"
+      document_2: "Impuesto territorial"
+      document_3: "Seguro de vivienda"
+      document_4: "Planos de la vivienda"
+    project:
+      title: "Proyecto obras"
+      document_1: "Presupuestos detallados firmados"
+      document_2: "Descripción de las obras"
+      document_3: "Autorizaciones administrativas"
+      document_4: "Cronograma provisional"
+  
+  legal:
+    title: "Información legal importante"
+    taeg:
+      title: "*TAE"
+      content: "Ejemplo representativo: para un crédito obras de 40 000€ en 10 años al TAE de 3,2%, usted reembolsa 120 mensualidades de 387€, es decir un monto total de 46 440€ (coste del crédito: 6 440€)."
+    deblocage:
+      title: "Desbloqueo"
+      content: "Fondos liberados progresivamente al presentar las facturas pagadas."
+    travaux:
+      title: "Obras"
+      content: "Obligación de realizar las obras conforme a los presupuestos."
+    garanties:
+      title: "Garantías"
+      content: "Hipoteca posible según el monto, privilegio de prestamista de dinero."
+    assurance:
+      title: "Seguro"
+      content: "Seguro fallecimiento-invalidez recomendado."
+  
+  cta:
+    title: "Dé vida a sus proyectos de obras"
+    subtitle: "Renueve y mejore su vivienda con nuestro crédito dedicado"

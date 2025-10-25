@@ -1,0 +1,143 @@
+banking_ribs:
+  # Meta tags
+  meta:
+    title: "Meine Empfänger - %company_name%"
+    description: "Verwalten Sie Ihre Empfängerkonten mit %company_name%"
+
+  # Navigation
+  nav:
+    dashboard: "Dashboard"
+    beneficiaries: "Empfänger"
+    rib_new: "Neuer Empfänger"
+    rib_detail: "Empfängerdetails"
+    back: "Zurück"
+
+  # Page headers
+  page:
+    title: "Meine Empfänger"
+    subtitle: "Verwalten Sie die Konten Ihrer Empfänger für Ihre Überweisungen"
+    new_rib_title: "Empfänger hinzufügen"
+    rib_detail_title: "Empfängerdetails"
+    
+  # Header section (for ribs.html.twig)
+  header:
+    title: "Meine IBAN"
+    subtitle: "Verwaltung Ihrer Bankverbindungen"
+    add_button: "IBAN hinzufügen"
+  
+  # Empty state
+  empty_state:
+    title: "Keine IBAN registriert"
+    description: "Fügen Sie Ihre IBAN hinzu, um Überweisungen zu erleichtern und Geld einfacher zu erhalten."
+    add_first_button: "Meine erste IBAN hinzufügen"
+    
+  # RIB detail page (rib_show.html.twig)
+  detail_page:
+    title: "IBAN-Details"
+    subtitle: "Detaillierte Informationen Ihrer Bankverbindung"
+    back_to_list: "Zurück zur Liste"
+    
+  # Detail fields
+  detail_fields:
+    account_name: "Kontoname:"
+    bank_name: "Bankname:"
+    full_iban: "Vollständige IBAN:"
+    copy_button: "Kopieren"
+    creation_date: "Hinzufügungsdatum:"
+    last_modification: "Letzte Änderung:"
+    
+  # Actions
+  detail_actions:
+    delete_this_rib: "Diese IBAN löschen"
+    
+  # JavaScript messages
+  js_messages:
+    iban_copied: "IBAN in die Zwischenablage kopiert"
+    
+  # New RIB form (rib_new.html.twig)
+  new_form:
+    title: "Neue IBAN hinzufügen"
+    subtitle: "Registrieren Sie Ihre Bankverbindungen, um Überweisungen zu erleichtern und Geld zu erhalten."
+    
+  # Form fields and labels
+  form_fields:
+    account_name_label: "Kontoname"
+    account_name_placeholder: "z.B.: Hauptkonto, Sparkonto..."
+    account_name_help: "Geben Sie diesem Konto einen beschreibenden Namen, um es leicht zu erkennen."
+    bank_name_label: "Bankname"
+    bank_name_placeholder: "z.B.: Deutsche Bank, Commerzbank..."
+    iban_label: "IBAN"
+    iban_placeholder: "DE89 3704 0044 0532 0130 00"
+    iban_help: "Geben Sie Ihre europäische IBAN ein. Leerzeichen werden automatisch hinzugefügt."
+    
+  # Form actions
+  form_actions:
+    back_button: "Zurück"
+    save_button: "IBAN speichern"
+    
+  # Form fields
+  form:
+    bank_name: "Bankname"
+    bank_name_placeholder: "Geben Sie den Banknamen ein"
+    account_holder: "Kontoinhaber"
+    account_holder_placeholder: "Name des Kontoinhabers"
+    iban: "IBAN"
+    iban_placeholder: "DE89 3704 0044 0532 0130 00"
+    swift: "SWIFT/BIC-Code"
+    swift_placeholder: "DEUTDEFFXXX"
+    nickname: "Spitzname (optional)"
+    nickname_placeholder: "z.B.: Mein Sparkonto"
+    address: "Bankadresse"
+    address_placeholder: "Vollständige Adresse der Bank"
+    
+  # RIB info
+  rib:
+    bank_name: "Bank"
+    account_holder: "Kontoinhaber"
+    iban: "IBAN"
+    swift: "SWIFT/BIC"
+    nickname: "Spitzname"
+    created_date: "Hinzufügungsdatum"
+    last_used: "Zuletzt verwendet"
+    usage_count: "Anzahl der Verwendungen"
+    
+  # Actions
+  actions:
+    add_rib: "Empfänger hinzufügen"
+    save: "Speichern"
+    cancel: "Abbrechen"
+    edit: "Bearbeiten"
+    delete: "Löschen"
+    view_details: "Details anzeigen"
+    use_for_transfer: "Für Überweisung verwenden"
+    
+  # Validation messages
+  validation:
+    iban_required: "Die IBAN ist erforderlich"
+    iban_invalid: "Ungültiges IBAN-Format"
+    iban_exists: "Diese IBAN existiert bereits in Ihren Empfängern"
+    account_holder_required: "Der Name des Kontoinhabers ist erforderlich"
+    bank_name_required: "Der Bankname ist erforderlich"
+    swift_invalid: "Ungültiges SWIFT/BIC-Format"
+    
+  # Messages
+  messages:
+    no_ribs: "Kein Empfänger registriert"
+    rib_added_success: "Empfänger erfolgreich hinzugefügt"
+    rib_updated_success: "Empfänger erfolgreich bearbeitet"
+    rib_deleted_success: "Empfänger erfolgreich gelöscht"
+    confirm_delete: "Sind Sie sicher, dass Sie diesen Empfänger löschen möchten?"
+    access_denied: "Zugriff auf diesen Empfänger verweigert"
+    
+  # Card actions  
+  card_actions:
+    view_details: "Details anzeigen"
+    delete_button: "Löschen"
+    delete_confirm: "Sind Sie sicher, dass Sie diese IBAN löschen möchten?"
+    
+  # Status
+  status:
+    active: "Aktiv"
+    inactive: "Inaktiv"
+    verified: "Verifiziert"
+    pending: "Warten auf Verifizierung"

@@ -1,0 +1,41 @@
+email_credit_application_confirmation:
+  title: "Confirmación de su solicitud de crédito"
+  
+  content:
+    page_title: "Solicitud de crédito confirmada"
+    subtitle: "Su solicitud ha sido recibida y está en proceso"
+    
+    greeting: "Hola %customerName%,"
+    introduction: "Hemos recibido correctamente su solicitud de crédito y le agradecemos por haber confiado en nosotros. Su expediente está ahora en proceso de examen por nuestros asesores especializados."
+    
+    summary:
+      title: "Resumen de su solicitud"
+      request_number: "Número de solicitud:"
+      amount_requested: "Monto solicitado:"
+      request_date: "Fecha de solicitud:"
+      status: "Estado:"
+      status_value: "En proceso de examen"
+    
+    next_steps:
+      title: "Próximos pasos"
+      step1: "Examen de su expediente por nuestros asesores (24-48h)"
+      step2: "Verificación de la información y documentos"
+      step3: "Decisión de financiamiento en 3-5 días hábiles"
+      step4: "Notificación por correo electrónico y/o teléfono"
+    
+    track_button: "Consultar mi solicitud"
+    
+    help_section:
+      title: "¿Necesita ayuda?"
+      intro: "Nuestro equipo de asesores está a su disposición para cualquier pregunta:"
+      phone: "<strong>Teléfono:</strong> %company_phone% (Lun-Vie 9h-18h)"
+      email: "<strong>Email:</strong> credit@sedef.fr"
+      chat: "<strong>Chat en línea:</strong> Disponible en nuestro sitio web"
+    
+    important_note: "<strong>Importante:</strong> Conserve este correo como prueba de su solicitud. Puede seguir el progreso de su expediente en cualquier momento haciendo clic en el enlace de arriba."
+    disclaimer: "Este correo fue enviado automáticamente, por favor no responda directamente."
+
+  logs:
+    credit_application_confirmed: "Confirmación de solicitud de crédito enviada a %email%"
+    credit_application_failed: "Error al enviar confirmación de crédito a %email%"
+    credit_application_submitted: "Solicitud de crédito #%applicationId% presentada por %customerName%"

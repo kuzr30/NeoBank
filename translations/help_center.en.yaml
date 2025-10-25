@@ -1,0 +1,61 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: help_center.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+help_center:
+  page:
+    title: "Help Center - %company_name%"
+    meta:
+      description: "Quickly find answers to your questions about our banking services"
+  
+  hero:
+    title: "Help Center"
+    subtitle: "Quickly find answers to your questions about our banking services"
+    search:
+      placeholder: "Search in help..."
+  
+  sections:
+    main_title: "How can we help you?"
+    
+    accounts_cards:
+      title: "Accounts and Cards"
+      description: "Management of your accounts, bank cards, transfers and payments"
+      links:
+        balance: "Check my balance"
+        transfers: "Make a transfer"
+    
+    security:
+      title: "Security"
+      description: "Protection of your data and banking security tips"
+      links:
+        authentication: "Strong authentication"
+        fraud: "Report fraud"
+    
+    contact:
+      title: "Contact"
+      description: "Different ways to contact us according to your needs"
+      links:
+        chat: "Online chat"
+        appointment: "Make an appointment"
+    
+    services:
+      title: "Online Services"
+      description: "Help using our online banking platform"
+      links:
+        login: "Log in"
+        settings: "Account settings"
+    
+    credits_savings:
+      title: "Loans and Savings"
+      description: "Information about our loan and savings products"
+      links:
+        simulation: "Simulate a loan"
+        savings: "Savings products"
+    
+    documents:
+      title: "Documents"
+      description: "Access and management of your banking documents"
+      links:
+        rib: "Download a RIB"
+        statements: "My statements"

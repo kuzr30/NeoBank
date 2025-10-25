@@ -1,0 +1,4 @@
+# Traductions pour RegistrationController
+flash:
+  account_created_success: "Votre compte a été créé ! Vérifiez votre email pour l'activer."
+  account_created_email_failed: "Votre compte a été créé mais l'email d'activation n'a pas pu être envoyé. Contactez le support."

@@ -1,0 +1,90 @@
+hypothecaire:
+  page_title: "Hypothekarkredit"
+  page_description: "Finanzieren Sie Ihre Großprojekte mit unserem Hypothekarkredit. Hohe Beträge mit Immobiliensicherheit."
+  
+  hero:
+    title: "Hypothekarkredit"
+    subtitle: "Finanzieren Sie Ihre Großprojekte mit unserem Hypothekarkredit. Hohe Beträge mit Immobiliensicherheit."
+    rate_value: "3,1%"
+    amount_value: "500 000€"
+    duration_value: "25 Jahre"
+  
+  section_1:
+    title: "Was ist ein Hypothekarkredit?"
+    paragraph_1: "Der Hypothekarkredit ist ein durch eine Immobilienhypothek gesichertes Darlehen. Er ermöglicht die Finanzierung hoher Beträge für Ihre Großprojekte: Bauarbeiten, Investitionen, Kreditumschuldung oder Liquiditätsbedarf."
+    paragraph_2: "Dank dieser Immobiliensicherheit profitieren Sie von Vorzugskonditionen und verlängerten Rückzahlungsfristen, angepasst an hohe Beträge."
+  
+  features:
+    amount: "Bis zu 500 000€"
+    amount_detail: "Je nach Immobilienwert"
+    duration: "Von 5 bis 25 Jahren"
+    duration_detail: "Verlängerte Laufzeiten"
+    rate: "Ab {rate}% effektiver Jahreszins*"
+    rate_detail: "Garantierter Vorzugszins"
+    guarantee: "Hypothek"
+    guarantee_detail: "Auf Immobilie"
+  
+  advantages:
+    advantage_1: "<strong>Hohe Beträge:</strong> Bis zu 70% des Immobilienwerts als Sicherheit"
+    advantage_2: "<strong>Vorteilhafte Zinsen:</strong> Vorzugskonditionen dank Hypothek"
+    advantage_3: "<strong>Lange Laufzeiten:</strong> Bis zu 25 Jahre für reduzierte Monatsraten"
+    advantage_4: "<strong>Freie Verwendung:</strong> Keine Verwendungsnachweis erforderlich"
+    advantage_5: "<strong>Steuerliche Absetzbarkeit:</strong> Zinsen je nach Situation absetzbar"
+  
+  requirements:
+    borrower:
+      title: "Darlehensnehmer-Bedingungen"
+      item_1: "Eigentümer der beliehenen Immobilie"
+      item_2: "Regelmäßige und ausreichende Einkommen"
+      item_3: "Verfügbare Verschuldungskapazität"
+      item_4: "Höchstalter 70 Jahre bei Kreditende"
+    property:
+      title: "Immobilienbedingungen"
+      item_1: "Lastenfreie Immobilie"
+      item_2: "Mindestwert 150 000€"
+      item_3: "Immobiliengutachten obligatorisch"
+      item_4: "Wohngebäudeversicherung erforderlich"
+  
+  documents:
+    personal:
+      title: "Persönliche Dokumente"
+      item_1: "Ausweisdokumente der Mitdarlehensnehmer"
+      item_2: "Wohnsitznachweise"
+      item_3: "3 letzte Gehaltsabrechnungen"
+      item_4: "2 letzte Steuerbescheide"
+    property:
+      title: "Immobiliendokumente"
+      item_1: "Eigentumsnachweis oder Notarurkunde"
+      item_2: "Baubescheinigung"
+      item_3: "Aktueller Grundbuchauszug"
+      item_4: "Grundsteuer letztes Jahr"
+    financial:
+      title: "Finanzielle Dokumente"
+      item_1: "3 letzte Kontoauszüge"
+      item_2: "Tilgungsplan laufender Kredite"
+      item_3: "Vermögensnachweise"
+      item_4: "Nachweise Mieteinnahmen"
+  
+  legal:
+    title: "Wichtige rechtliche Informationen"
+    taeg: "<strong>*Effektiver Jahreszins:</strong> Repräsentatives Beispiel: Für einen Hypothekarkredit von 100 000€ über 15 Jahre mit effektivem Jahreszins von 3,1% zahlen Sie 180 Monatsraten von 694€, Gesamtbetrag 124 920€ (Kreditkosten: 24 920€)."
+    mortgage: "<strong>Hypothek:</strong> Eintragung einer Verkehrshypothek auf die Immobilie."
+    fees: "<strong>Kosten:</strong> Notar- und Hypothekeneintragungskosten zu Ihren Lasten."
+    expertise: "<strong>Gutachten:</strong> Immobilienbewertung durch zugelassenen Sachverständigen obligatorisch."
+    discharge: "<strong>Löschung:</strong> Automatische Löschung der Hypothek nach Rückzahlung."
+  
+  cta:
+    title: "Nutzen Sie Ihr Vermögen"
+    subtitle: "Erhalten Sie die Mittel, die Sie benötigen, dank Ihrer Immobilie"
+  
+  sidebar:
+    evaluation_title: "Immobilienbewertung"
+    step_1:
+      title: "Gutachten"
+      time: "5 Tage"
+    step_2:
+      title: "Dossierprüfung"
+      time: "15 Tage"
+    step_3:
+      title: "Notartermin"
+      time: "10 Tage"

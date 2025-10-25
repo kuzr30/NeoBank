@@ -1,0 +1,44 @@
+email_transfer_created:
+  title: "Virement créé avec succès"
+  
+  content:
+    page_title: "Virement bancaire initié"
+    greeting: "Bonjour {firstName} {lastName},"
+    
+    transfer_created:
+      title: "Demande de virement créée"
+      description: "Votre demande de virement a été créée avec succès et est maintenant en cours de traitement sécurisé. Le processus de validation multi-étapes va débuter."
+    
+    transaction_details:
+      title: "Détails de la transaction"
+      reference: "Référence virement"
+      amount: "Montant à transférer"
+      amount_value: "{amount} €"
+      beneficiary_account: "Compte bénéficiaire"
+      transfer_reason: "Motif du virement"
+      creation_date: "Date de création"
+      created_at: "{createdAt}"
+    
+    validation_process:
+      title: "Processus de validation sécurisé"
+      step1: "1. L'administration génère des codes de validation successifs"
+      step2: "2. Notification email pour chaque nouveau code disponible"
+      step3: "3. Validation requise dans un délai maximum de 6 heures"
+      step4: "4. Exécution automatique après validation complète"
+    
+    tracking:
+      title: "Suivi de votre virement"
+      view_details_button: "📊 Consulter les détails du virement"
+      access_instruction: "Accédez à votre espace bancaire pour suivre l'avancement en temps réel"
+    
+    security_info:
+      title: "Sécurité et traçabilité"
+      description: "Toutes les étapes de validation sont enregistrées et sécurisées. Vous recevrez une confirmation finale par email une fois le virement exécuté avec succès."
+    
+    supervision_note: "Notre équipe de sécurité bancaire supervise le processus pour garantir la conformité de votre transaction."
+    
+    footer: "<strong>%company_name% - Service Virements</strong><br>Notification automatique de création de virement"
+  
+  log:
+    transfer_created: "Virement créé {transferId} pour un montant de {amount}€"
+    email_sent: "E-mail de création de virement envoyé à {userEmail}"

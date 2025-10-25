@@ -1,0 +1,269 @@
+credit_application:
+  messages:
+    step_completed: "Étape terminée"
+    complete_previous_steps: "Veuillez compléter les étapes précédentes"
+    complete_all_steps: "Toutes les étapes doivent être complétées"
+    form_errors: "Veuillez corriger {count} erreur{plural} dans le formulaire."
+    application_submitted: "Votre demande a été soumise avec succès"
+    confirmation_not_found: "Confirmation introuvable"
+    technical_error: "Une erreur technique est survenue. Veuillez réessayer."
+
+  steps:
+    step1:
+      title: "Informations personnelles"
+      subtitle: "Renseignez vos données personnelles"
+      description: "Ces informations nous permettront de traiter votre demande de crédit"
+      personal_info:
+        title: "Informations de base"
+        first_name:
+          label: "Prénom"
+          placeholder: "Votre prénom"
+          help: "Saisissez votre prénom tel qu'il apparaît sur vos documents officiels"
+          errors:
+            required: "Le prénom est obligatoire"
+            min_length: "Le prénom doit contenir au moins 2 caractères"
+            max_length: "Le prénom ne peut pas dépasser 50 caractères"
+            invalid_format: "Le prénom ne peut contenir que des lettres, espaces, tirets et apostrophes"
+        last_name:
+          label: "Nom de famille"
+          placeholder: "Votre nom de famille"
+          help: "Saisissez votre nom de famille tel qu'il apparaît sur vos documents officiels"
+          errors:
+            required: "Le nom de famille est obligatoire"
+            min_length: "Le nom de famille doit contenir au moins 2 caractères"
+            max_length: "Le nom de famille ne peut pas dépasser 50 caractères"
+            invalid_format: "Le nom de famille ne peut contenir que des lettres, espaces, tirets et apostrophes"
+        email:
+          label: "Adresse e-mail"
+          placeholder: "votre.email@exemple.com"
+          help: "Utilisez une adresse e-mail valide où nous pourrons vous contacter"
+          errors:
+            required: "L'adresse e-mail est obligatoire"
+            invalid: "Veuillez saisir une adresse e-mail valide"
+        phone_number:
+          label: "Numéro de téléphone"
+          placeholder: "%company_phone%"
+          help: "Saisissez votre numéro de téléphone portable ou fixe"
+          errors:
+            required: "Le numéro de téléphone est obligatoire"
+            invalid: "Veuillez saisir un numéro de téléphone valide"
+        birth_date:
+          label: "Date de naissance"
+          help: "Sélectionnez votre date de naissance (vous devez être majeur)"
+          errors:
+            required: "La date de naissance est obligatoire"
+            underage: "Vous devez être majeur pour faire une demande de crédit"
+        nationality:
+          label: "Nationalité"
+          placeholder: "Sélectionnez votre nationalité"
+          help: "Indiquez votre nationalité actuelle"
+          choices:
+            french: "Française"
+            eu: "Union Européenne"
+            non_eu: "Hors Union Européenne"
+          errors:
+            required: "La nationalité est obligatoire"
+        birth_country:
+          label: "Pays de naissance"
+          placeholder: "France"
+          help: "Indiquez le pays où vous êtes né(e)"
+          errors:
+            required: "Le pays de naissance est obligatoire"
+        birth_city:
+          label: "Ville de naissance"
+          placeholder: "Paris"
+          help: "Indiquez la ville où vous êtes né(e)"
+          errors:
+            required: "La ville de naissance est obligatoire"
+
+    step2:
+      title: "Adresse et résidence"
+      subtitle: "Informations sur votre lieu de résidence"
+      description: "Nous avons besoin de connaître votre adresse actuelle"
+      address_info:
+        address:
+          label: "Adresse"
+          placeholder: "123 Rue de la République"
+          help: "Saisissez votre adresse complète de résidence"
+          errors:
+            required: "L'adresse est obligatoire"
+            min_length: "L'adresse doit contenir au moins 5 caractères"
+        postal_code:
+          label: "Code postal"
+          placeholder: "75001"
+          help: "Saisissez le code postal de votre ville de résidence"
+          errors:
+            required: "Le code postal est obligatoire"
+            invalid_format: "Le code postal doit être au format français (5 chiffres)"
+        city:
+          label: "Ville"
+          placeholder: "Paris"
+          help: "Indiquez la ville où vous résidez actuellement"
+          errors:
+            required: "La ville est obligatoire"
+        country:
+          label: "Pays"
+          placeholder: "France"
+          errors:
+            required: "Le pays est obligatoire"
+
+    step3:
+      title: "Situation professionnelle"
+      subtitle: "Informations sur votre emploi et revenus"
+      description: "Ces informations nous aident à évaluer votre capacité de remboursement"
+      professional_info:
+        employment_status:
+          label: "Statut professionnel"
+          choices:
+            employee: "Salarié(e)"
+            self_employed: "Indépendant(e)"
+            retired: "Retraité(e)"
+            unemployed: "Sans emploi"
+            student: "Étudiant(e)"
+          errors:
+            required: "Le statut professionnel est obligatoire"
+        company_name:
+          label: "Nom de l'employeur"
+          placeholder: "Nom de votre entreprise"
+          errors:
+            required: "Le nom de l'employeur est obligatoire"
+        monthly_income:
+          label: "Revenus mensuels nets"
+          placeholder: "3000"
+          help: "Indiquez vos revenus mensuels nets en euros"
+          errors:
+            required: "Les revenus mensuels sont obligatoires"
+            min_value: "Le montant doit être supérieur à 0"
+
+    step4:
+      title: "Informations bancaires"
+      subtitle: "Votre banque actuelle"
+      description: "Informations sur votre compte bancaire principal"
+      banking_info:
+        current_bank:
+          label: "Banque actuelle"
+          placeholder: "Nom de votre banque"
+          errors:
+            required: "Le nom de la banque est obligatoire"
+        account_duration:
+          label: "Ancienneté du compte"
+          choices:
+            less_than_1_year: "Moins d'un an"
+            between_1_and_3_years: "Entre 1 et 3 ans"
+            more_than_3_years: "Plus de 3 ans"
+          errors:
+            required: "L'ancienneté du compte est obligatoire"
+
+    credit_details:
+      title: "Détails du crédit"
+      subtitle: "Informations sur votre demande"
+      description: "Précisez les caractéristiques du crédit souhaité"
+      credit_amount:
+        label: "Montant souhaité"
+        placeholder: "50000"
+        help: "Montant en euros"
+        errors:
+          required: "Le montant du crédit est obligatoire"
+          min_value: "Le montant minimum est de 1 000 €"
+          max_value: "Le montant maximum est de 200 000 €"
+      credit_duration:
+        label: "Durée souhaitée"
+        choices:
+          12_months: "12 mois"
+          24_months: "24 mois"
+          36_months: "36 mois"
+          60_months: "60 mois"
+          120_months: "120 mois"
+        errors:
+          required: "La durée du crédit est obligatoire"
+
+  navigation:
+    back: "Retour"
+    next: "Suivant"
+    previous: "Précédent"
+    submit: "Soumettre la demande"
+    title: "Demande de crédit"
+    step_progress: "Étape {current} sur {total}"
+    continue: "Continuer"
+
+  summary:
+    title: "Récapitulatif de votre demande"
+    sections:
+      personal: "Informations personnelles"
+      address: "Adresse"
+      professional: "Situation professionnelle"
+      banking: "Informations bancaires"
+      credit: "Détails du crédit"
+
+  common:
+    months: "mois"
+
+  confirmation:
+    title: "Demande soumise avec succès"
+    subtitle: "Nous avons bien reçu votre demande de crédit"
+    reference: "Référence de votre demande"
+    reference_text: "Conservez précieusement ce numéro de référence : {reference}"
+    summary:
+      title: "Résumé de votre demande"
+      amount: "Montant demandé : {amount} €"
+      duration: "Durée : {duration} mois"
+      monthly_payment: "Mensualité estimée : {payment} €"
+    next_steps:
+      title: "Prochaines étapes"
+      step1:
+        title: "Demande reçue"
+        description: "Votre demande a été enregistrée et est en cours de traitement"
+        time: "Maintenant"
+      step2:
+        title: "Étude de votre dossier"
+        description: "Nos experts analysent votre demande"
+        time: "Sous 24h"
+      step3:
+        title: "Prise de contact"
+        description: "Un conseiller vous contactera pour finaliser votre dossier"
+        time: "Sous 48h"
+      step4:
+        title: "Finalisation du contrat"
+        description: "Signature et mise en place de votre crédit"
+        time: "Sous 7 jours"
+
+  actions:
+    new_simulation: "Nouvelle simulation"
+    print: "Imprimer"
+
+  forms:
+    personal_info:
+      title: "Informations personnelles"
+    address_info:
+      title: "Adresse"
+    professional_info:
+      title: "Situation professionnelle"
+    banking_info:
+      title: "Informations bancaires"
+    bank_validation:
+      title: "Validation bancaire"
+    consents:
+      title: "Consentements"
+
+navigation:
+  home: "Accueil"
+  simulation: "Simulation"
+  application: "Demande"
+  about: "À propos"
+  contact: "Contact"
+  language: "Français"
+
+buttons:
+  next: "Suivant"
+  previous: "Précédent"
+  submit: "Soumettre"
+  cancel: "Annuler"
+  back_home: "Retour à l'accueil"
+  start_application: "Commencer la demande"
+
+general:
+  loading: "Chargement..."
+  optional: "Facultatif"
+  required: "Obligatoire"
+  "True": "Oui"
+  "False": "Non"

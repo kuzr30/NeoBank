@@ -1,0 +1,105 @@
+credit_etudiant:
+  page:
+    title: "Studentenkrediet"
+    description: "Financier uw hogere studies met ons studentenkrediet. Preferentiële voorwaarden en uitgestelde terugbetaling."
+
+  hero:
+    title: "Studentenkrediet"
+    subtitle: "Investeer in uw toekomst"
+    values:
+      taux: "{rate}% JKP*"
+      montant: "50 000€"
+      duree: "15 jaar"
+
+  section_1:
+    title: "Wat is een studentenkrediet?"
+    content:
+      paragraph_1: "Het studentenkrediet is ontworpen om uw hogere studies te financieren: schoolgeld, studentenhuisvesting, onderwijsmateriaal, buitenlandse verblijven en dagelijkse levenskosten."
+      paragraph_2: "Met preferentiële voorwaarden en de mogelijkheid om de terugbetaling uit te stellen, begeleidt dit krediet u gedurende uw hele academische traject."
+
+  features:
+    montant: "Tot 50 000€"
+    montant_detail: "Voor de hele studieduur"
+    duree: "Tot 15 jaar"
+    duree_detail: "Met uitstel mogelijk"
+    taux: "Vanaf {rate}% JKP*"
+    taux_detail: "Preferentieel studentestarief"
+    garantie: "Ouderlijke waarborg"
+    garantie_detail: "Of staatsgarantie"
+
+  advantages:
+    taux_preferentiel:
+      title: "Preferentieel tarief:"
+      text: "Voordelige voorwaarden gereserveerd voor studenten"
+    differe_remboursement:
+      title: "Uitgestelde terugbetaling:"
+      text: "Tot het einde van de studie + 2 jaar"
+    deblocage_progressif:
+      title: "Geleidelijke vrijgave:"
+      text: "Fondsen beschikbaar volgens behoeften"
+    garantie_etat:
+      title: "Staatsgarantie:"
+      text: "Mogelijk met publieke regeling"
+    pas_frais:
+      title: "Geen dossierkosten:"
+      text: "Geen extra kosten"
+
+  requirements:
+    conditions_etudiant:
+      title: "Studentenvoorwaarden"
+      items:
+        inscription: "Ingeschreven zijn in een instelling voor hoger onderwijs"
+        age: "Tussen 18 en 28 jaar oud zijn"
+        nationalite: "Franse of EU-nationaliteit"
+        residence: "Wonen in Frankrijk"
+    garanties_requises:
+      title: "Vereiste garanties"
+      items:
+        caution: "Solidaire ouderlijke waarborg"
+        garantie_etat: "Of staatsgarantie (indien geschikt)"
+        justificatifs: "Inkomensbewijzen van waarborgen"
+        engagement: "Ondertekende terugbetalingsverplichting"
+
+  documents:
+    dossier_etudiant:
+      title: "Studentendossier"
+      items:
+        certificat: "Schoolcertificaat"
+        carte: "Identiteitskaart of paspoort"
+        domicile: "Bewijs van woonplaats"
+        devis: "Offertes of facturen van te financieren kosten"
+    dossier_garants:
+      title: "Waarborgen dossier"
+      items:
+        identites: "Identiteitsstukken van waarborgen"
+        bulletins: "3 laatste loonstroken"
+        avis: "Belastingaangifte"
+        patrimoine: "Vermogensbewijzen"
+    informations_bancaires:
+      title: "Bankinformatie"
+      items:
+        rib: "RIB van de studentenrekening"
+        releves: "Rekeninguittreksels"
+        attestation: "Bankattest"
+
+  legal:
+    title: "Belangrijke juridische informatie"
+    taeg:
+      title: "*JKP:"
+      text: "Representatief voorbeeld: voor een studentenkrediet van 20 000€ over 10 jaar tegen een JKP van 1,9%, betaalt u 120 maandlasten van 184€ terug, ofwel een totaalbedrag van 22 080€ (kosten van het krediet: 2 080€)."
+    differe:
+      title: "Uitstel:"
+      text: "Mogelijkheid om de terugbetaling van het kapitaal uit te stellen tijdens de studie."
+    garantie_etat:
+      title: "Staatsgarantie:"
+      text: "Onder geschiktheidsvoorwaarden, zonder ouderlijke waarborg."
+    modulation:
+      title: "Modulatie:"
+      text: "Aanpassing van maandlasten volgens evolutie van de situatie."
+    assurance:
+      title: "Verzekering:"
+      text: "Overlijden-invaliditeit inbegrepen, werkloosheid als optie."
+
+  cta:
+    title: "Geef leven aan uw ambities"
+    subtitle: "Financier uw studies met ons voordelige studentenkrediet"

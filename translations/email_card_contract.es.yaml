@@ -1,0 +1,49 @@
+email_card_contract:
+  title: "Contrato de suscripción de tarjeta bancaria para firmar"
+  
+  content:
+    page_title: "Su contrato de tarjeta está listo para firmar"
+    greeting: "Estimado/a %firstName% %lastName%,"
+    
+    approval:
+      title: "¡Solicitud aprobada!"
+      description: "¡Excelente noticia! Su solicitud de tarjeta bancaria ha sido aprobada por nuestro equipo administrativo."
+    
+    card_details:
+      title: "Detalles de su tarjeta"
+      type: "Tipo de tarjeta"
+      reference: "Referencia"
+      request_date: "Fecha de solicitud"
+    
+    fees:
+      title: "Tarifas y límites"
+      activation: "Tarifa de activación"
+      monthly: "Tarifa mensual"
+      daily_limit: "Límite diario"
+      monthly_limit: "Límite mensual"
+      day: "día"
+      month: "mes"
+    
+    signature_required:
+      title: "Firma electrónica requerida"
+      description: "Debe firmar electrónicamente este contrato para confirmar su aceptación de las tarifas y condiciones. Su tarjeta será creada únicamente después de la firma."
+    
+    next_steps:
+      title: "Próximos pasos"
+      step1: "Haga clic en el botón de abajo para acceder al contrato"
+      step2: "Lea atentamente las condiciones generales"
+      step3: "Firme electrónicamente si acepta las tarifas"
+      step4: "Su tarjeta será creada y enviada en 3-5 días hábiles"
+    
+    action:
+      title: "Acción requerida"
+      sign_button: "Firmar el contrato ahora"
+    
+    contract_info:
+      title: "Información del contrato"
+      reference: "Referencia del contrato"
+      expires: "Vence el"
+    
+    assistance: "Para cualquier pregunta relacionada con este contrato, nuestro servicio al cliente permanece a su disposición."
+    
+    footer: "Este correo ha sido enviado automáticamente por su banco. <br><strong>Conserve esta referencia de contrato para sus archivos.</strong>"

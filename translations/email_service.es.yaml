@@ -1,0 +1,10 @@
+log_messages:
+  success: "Correo enviado con éxito"
+  error: "Error al enviar el correo"
+  exception: "Excepción al enviar el correo"
+  verification_sent: "Correo de verificación enviado con éxito"
+  verification_failed: "Error al enviar el correo de verificación"
+  code_sent: "Código de verificación enviado"
+  code_failed: "Error al enviar el código de verificación"
+  template_processed: "Plantilla de correo procesada con éxito"
+  template_error: "Error al procesar la plantilla de correo"

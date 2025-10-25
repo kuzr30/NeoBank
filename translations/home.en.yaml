@@ -1,0 +1,427 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: home.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+# Home page - English
+page_title: "Banking - Your trusted digital bank"
+# Hero Section
+hero:
+  title: "Your financial partner"
+  subtitle: "for every stage of your life"
+  description: "Discover a bank that adapts to your needs. From daily transactions to major projects, we're here to support you."
+  cards:
+    payments: "Payments"
+    savings: "Savings"
+    investments: "Investments"
+    savings_plus: "Savings+"
+    premium_card: "Premium Card"
+    balance: "Balance"
+  stats:
+    clients: "Satisfied customers"
+    satisfaction: "Satisfaction rating"
+    support: "Customer support"
+# Services Section
+services:
+  badge: "Our Banking Solutions"
+  title: "Tailored services"
+  title_accent: "for all your projects"
+  subtitle: "A complete offer for all your financial needs"
+  description: "Discover our full range of banking products and services, designed to meet all your financial needs with the security and expertise of a licensed bank."
+  
+  account:
+    title: "Accounts & Cards"
+    description: "Checking account, savings account, premium bank card. Solutions tailored to your profile with transparent fees."
+    features:
+      foreign_fees: "Card with no foreign fees"
+      overdraft: "Authorized overdraft up to €1000"
+      mobile_app: "Intuitive mobile app"
+    cta: "Learn more"
+    regulatory: "Subject to acceptance of your application. See conditions at branch."
+  savings:
+    title: "Savings & Investments"
+    description: "Grow your money with our secure and high-performing savings and investment solutions."
+    badge: "Most popular"
+    features:
+      savings_accounts: "Livret A, LDDS, PEL"
+      life_insurance: "Life insurance up to 3.2% net"
+      pea: "PEA with reduced fees"
+    cta: "Simulate my savings"
+    regulatory: "Past performance does not predict future performance. Capital not guaranteed."
+  credit:
+    title: "Loans & Mortgages"
+    description: "Realize your projects with our advantageous financing solutions: real estate, auto, renovation, personal."
+    features:
+      mortgage: "Mortgage from 1.2% APR"
+      auto_loan: "Auto loan up to €75,000"
+      quick_response: "Response within 48h"
+    cta: "Run a simulation"
+    regulatory: "A loan commits you and must be repaid. Check your repayment capacity before committing."
+  insurance:
+    title: "Insurance"
+    description: "Protect what matters most to you with our home, auto, health and welfare insurance."
+    features:
+      home_insurance: "Home insurance from €8/month"
+      auto_bonus: "Auto: bonus-malus retained"
+      assistance: "24/7 assistance included"
+    cta: "Get a quote"
+    regulatory: "ORIAS no. 12 345 678. See general conditions. Indicative rates."
+  professional:
+    title: "Professional Services"
+    description: "Banking solutions dedicated to entrepreneurs, liberal professions and businesses. Personalized support for your activity."
+    features:
+      business_account: "Business account without maintenance fees"
+      payment_terminal: "Free payment terminal"
+      dedicated_advisor: "Dedicated business advisor"
+    cta: "Discover the Pro offer"
+    regulatory: "Offer reserved for professionals. Eligibility criteria at branch."
+  private:
+    title: "Private Banking"
+    description: "Exceptional service for a demanding clientele. Personalized wealth advice and private management."
+    badge: "Premium"
+    features:
+      dedicated_advisor: "Dedicated wealth management advisor"
+      vip_access: "Access to VIP airport lounges"
+      concierge: "24/7 premium concierge service"
+    cta: "Make an appointment"
+    regulatory: "Service reserved for assets over €500,000. Special conditions."
+compliance:
+  credit_institution: "Credit institution licensed by ACPR"
+  bank_control: "Supervised by Banque de France - APE Code 6419Z"
+  insurance_intermediary: "Insurance intermediary"
+  orias_registration: "Registered with ORIAS under no. 12 345 678 - www.orias.fr"
+
+# Credit Section
+credit:
+  badge: "Financing Solutions"
+  title: "Realize your projects with our"
+  title_accent: "credit solutions"
+  description: "From the dream of a house to buying a car, including your personal projects, we support you with tailor-made financing solutions."
+  features:
+    response_48h: "Response within 48h"
+    response_48h_desc: "Review of your application and response in principle within 48 business hours"
+    attractive_rates: "Attractive rates"
+    attractive_rates_desc: "Benefit from our best rates negotiated according to your profile"
+    expert_support: "Expert support"
+    expert_support_desc: "Our specialized advisors guide you every step of the way"
+  cta:
+    simulate: "Simulate my loan"
+    contact_advisor: "Speak to an advisor"
+  types:
+    mortgage:
+      title: "Mortgage"
+      amount: "From €50,000 to €1,500,000"
+      rate_from: "APR from"
+      rate: "1.45%"
+      features:
+        - "Main/secondary residence purchase"
+        - "Rental investment"
+        - "Loan buyback"
+        - "Improvement works"
+    
+    auto:
+      title: "Auto Loan"
+      amount: "From €3,000 to €100,000"
+      rate_from: "APR from"
+      rate: "2.9%"
+      features:
+        - "New or used vehicle"
+        - "Motorcycle, motorhome"
+        - "100% financing"
+        - "Optional insurance"
+    personal:
+      title: "Personal Loan"
+      amount: "From €3,000 to €75,000"
+      rate_from: "APR from"
+      rate: "4.5%"
+      features:
+        - "Personal projects"
+        - "Renovation works"
+        - "Wedding, travel"
+        - "No supporting documents"
+    works:
+      title: "Home Improvement Loan"
+      amount: "From €5,000 to €75,000"
+      rate_from: "APR from"
+      rate: "3.2%"
+      features:
+        - "Energy renovation"
+        - "Extension, conversion"
+        - "Pool, garden"
+        - "Eco-loan available"
+  process:
+    title: "Your loan in 4 simple steps"
+    steps:
+      simulation:
+        title: "Simulation"
+        description: "Estimate your borrowing capacity and monthly payments online"
+      application:
+        title: "Application"
+        description: "Build your file with the help of our advisors"
+      study:
+        title: "Review"
+        description: "Our committee reviews your request within 48 business hours"
+      disbursement:
+        title: "Disbursement"
+        description: "Signing and quick release of funds"
+  button: "Simulate"
+  legal:
+    main: "A loan commits you and must be repaid. Check your repayment capacity before committing."
+    details:
+      - "APR examples for information only - Pricing conditions in effect on 01/01/2025"
+      - "Subject to acceptance of your application by our services"
+      - "Offers subject to general conditions available at branch"
+# Offers Section
+offers:
+  badge: "Our exclusive offers"
+  title: "Choose the offer that"
+  title_accent: "suits you"
+  description: "Banking solutions adapted to your lifestyle, with benefits designed to simplify your daily financial life."
+  essential:
+    title: "Banking Essential"
+    subtitle: "Your everyday bank"
+    price: "Free"
+    period: "/ month"
+    features:
+      feature1: "Free checking account"
+      feature2: "Standard bank card"
+      feature3: "Complete mobile app"
+      feature4: "Unlimited SEPA transfers"
+      feature5: "Online customer service"
+    cta: "Open an account"
+  premium:
+    title: "Banking Premium"
+    subtitle: "Privileges & benefits"
+    price: "€9.90"
+    period: "/ month"
+    badge: "POPULAR"
+    features:
+      feature1: "Everything from Essential offer"
+      feature2: "Premium card with insurance"
+      feature3: "Authorized overdraft €1500"
+      feature4: "Dedicated advisor"
+      feature5: "Access to VIP airport lounges"
+    cta: "Go Premium"
+  private:
+    title: "Banking Private"
+    subtitle: "Excellence & tailor-made"
+    price: "On quote"
+    period: ""
+    features:
+      feature1: "Wealth management"
+      feature2: "Dedicated private advisor"
+      feature3: "Exclusive investment products"
+      feature4: "24/7 concierge services"
+      feature5: "Preferential rates"
+    cta: "Contact us"
+  comparison:
+    title: "Detailed comparison of our offers"
+    table:
+      headers:
+        services: "Services"
+        essential: "Essential"
+        premium: "Premium"
+        private: "Private"
+      rows:
+        account_fees:
+          label: "Account fees"
+          essential: "Free"
+          premium: "€9.90/month"
+          private: "€29.90/month"
+        bank_card:
+          label: "Bank card"
+          essential: "Visa Classic"
+          premium: "Visa Premier"
+          private: "World Elite"
+        overdraft:
+          label: "Authorized overdraft"
+          essential: "€500"
+          premium: "€1,500"
+          private: "€5,000"
+        savings_rate:
+          label: "Savings rate"
+          essential: "0.5%"
+          premium: "2.5%"
+          private: "3.5%"
+        support:
+          label: "Customer support"
+          essential: "Online"
+          premium: "Dedicated advisor"
+          private: "Private manager"
+        insurance:
+          label: "Included insurance"
+          essential: "-"
+          premium: "Travel & Purchase"
+          private: "Premium & Family"
+# Digital Banking Section (Trust)
+digital:
+  badge: "100% Mobile Banking"
+  title: "Manage your money"
+  title_accent: "wherever you are"
+  description: "Our mobile app puts all essential banking services in your pocket. Transfers, account checking, savings: everything becomes simple and instant."
+  features:
+    contactless_payment: "Contactless payment"
+    contactless_payment_desc: "Apple Pay, Google Pay and Samsung Pay integrated for your daily purchases"
+    instant_transfers: "Instant transfers"
+    instant_transfers_desc: "Send money in seconds, 24/7"
+    smart_analysis: "Smart analysis"
+    smart_analysis_desc: "Track your expenses by category with detailed charts"
+  app_stores:
+    title: "Download the app"
+    app_store: "App Store"
+    google_play: "Google Play"
+    available_on: "Available on"
+    download_on: "Download on"
+  phone:
+    balance: "Available balance"
+    amount: "€2,847.32"
+    transfer: "Transfer"
+    top_up: "Top up"
+    pay: "Pay"
+  floating_cards:
+    virtual_card: "Virtual card"
+    real_time_alerts: "Real-time alerts"
+  transactions:
+    example_1:
+      name: "Organic Supermarket"
+      date: "Today"
+      amount: "-€42.50"
+    example_2:
+      name: "Central Cafe"
+      date: "Yesterday"
+      amount: "-€4.80"
+# Engagement Section
+engagement:
+  badge: "Commitment & Responsibility"
+  title: "A bank that commits"
+  title_accent: "to a sustainable future"
+  description: "At %company_name%, we commit every day to a more sustainable world. Our actions for the environment, solidarity and innovation are at the heart of our values and our promise to future generations."
+  # Environmental Card
+  environment:
+    title: "Environment & Ecology"
+    description: "We finance the ecological transition and support green projects to fight climate change."
+    stats:
+      green_financing: "€2.8M"
+      green_financing_label: "Green financing"
+      co2_reduction: "-35%"
+      co2_reduction_label: "CO2 emissions"
+    actions:
+      action1: "🌱 100% green energy for our offices"
+      action2: "🚗 Electric vehicle fleet for our teams"
+      action3: "📄 Paperless documents"
+      action4: "♻️ Recycling and waste reduction"
+  # Social Card
+  social:
+    title: "Solidarity & Society"
+    description: "We support the social and solidarity economy and promote financial inclusion for all."
+    stats:
+      ess_companies: "450"
+      ess_companies_label: "SSE companies financed"
+      microcredit_beneficiaries: "15K"
+      microcredit_beneficiaries_label: "Microcredit beneficiaries"
+    actions:
+      action1: "🤝 Support for local associations"
+      action2: "💡 Financial education for youth"
+      action3: "🏠 Affordable housing programs"
+      action4: "🌍 Support for international NGOs"
+  # Innovation Card
+  innovation:
+    title: "Innovation & Technology"
+    description: "We invest in new technologies to offer you better banking services and an improved customer experience."
+    stats:
+      accessibility_satisfaction: "98%"
+      accessibility_satisfaction_label: "Accessibility satisfaction"
+      digital_investment: "€12M"
+      digital_investment_label: "Digital investment"
+    actions:
+      action1: "📱 Innovative mobile app"
+      action2: "🔒 Enhanced security and cybersecurity"
+      action3: "🤖 Artificial intelligence for advice"
+      action4: "♿ Services accessible to people with disabilities"
+  # Partnerships Section
+  partnerships:
+    title: "Our Partnerships for Impact"
+    partners:
+      wwf:
+        name: "WWF France"
+        description: "Biodiversity protection"
+      unicef:
+        name: "UNICEF"
+        description: "Education and child protection"
+      habitat_humanisme:
+        name: "Habitat & Humanisme"
+        description: "Social housing and integration"
+      france_active:
+        name: "France Active"
+        description: "Solidarity financing and entrepreneurship"
+  # International Banks Section
+  international_banks:
+    title: "Our International Partners"
+    subtitle: "Trusted by leading global banks"
+  # CTA Section
+  cta:
+    title: "Join our responsible approach"
+    description: "Discover how %company_name% supports you in your sustainable projects"
+    buttons:
+      csr_report: "CSR Report 2024"
+      green_products: "Green Products"
+# Simulation Section (CTA)
+simulation:
+  badge: "Online Simulation"
+  title: "Realize your project"
+  title_accent: "in a few clicks"
+  description: "Estimate your borrowing capacity, simulate your monthly payments or calculate your investments. Our tools guide you in all your financial projects."
+  # Mortgage Card
+  mortgage:
+    title: "Mortgage"
+    description: "Simulate your mortgage and discover your borrowing capacity"
+    features:
+      personalized_rate: "Personalized rate"
+      immediate_response: "Immediate response"
+      no_commitment: "No commitment"
+    button: "Simulate my loan"
+  # Consumer Credit Card
+  consumer:
+    title: "Consumer Credit"
+    description: "Finance your personal projects with advantageous conditions"
+    features:
+      amount_range: "From €1,000 to €75,000"
+      flexible_repayment: "Flexible repayment"
+      quick_disbursement: "Quick disbursement"
+    button: "Calculate my monthly payments"
+  # Savings Card
+  savings:
+    title: "Savings & Investments"
+    description: "Optimize your investments according to your profile and objectives"
+    features:
+      personalized_advice: "Personalized advice"
+      automatic_diversification: "Automatic diversification"
+      optimized_taxation: "Optimized taxation"
+    button: "Optimize my savings"
+  # Bottom CTA
+  cta:
+    title: "Need personalized support?"
+    description: "Our advisors are here to guide you through your most important projects"
+    buttons:
+      appointment: "Make an appointment"
+      chat: "Online chat"
+    contact_info:
+      customer_service:
+        title: "Customer service"
+        phone: "09 69 39 30 00 (free call)"
+      hours:
+        title: "Hours"
+        schedule: "Mon-Fri 8 AM-8 PM, Sat 9 AM-5 PM"
+  # Legal Disclaimer
+  legal:
+    title: "Important information:"
+    disclaimer: "The simulations presented are for information purposes only and have no contractual value. They are based on rates in effect at the date of simulation. Credit approval is subject to review of your application by the bank."
+    mortgage_credit:
+      title: "Mortgage:"
+      details: "APR from 1.45% over 20 years. Credit cost: €1,000,000 for a €250,000 loan. Total cost of credit: €322,500."
+    consumer_credit:
+      title: "Consumer credit:"
+      details: "Fixed APR from 1.9% to 2.9% depending on profile. A loan commits you and must be repaid. Check your repayment capacity before committing."
+    investments:
+      title: "Investments:"
+      details: "Past performance does not predict future performance. Investments may carry a risk of capital loss."

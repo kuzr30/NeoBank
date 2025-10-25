@@ -1,0 +1,103 @@
+credit_relais:
+  page:
+    title: "Overbruggingskrediet"
+    description: "Financier uw nieuwe woning voordat u de oude verkoopt met ons overbruggingskrediet. Flexibele tijdelijke oplossing."
+    
+  hero:
+    title: "Overbruggingskrediet"
+    subtitle: "De ideale tussenstap voor uw vastgoedproject"
+    taux: "{rate}%"
+    montant: "80%"
+    duree: "24 maanden"
+    
+  section_1:
+    title: "Wat is een overbruggingskrediet?"
+    content_1: "Het overbruggingskrediet is een tijdelijke financieringsoplossing waarmee u een nieuwe woning kunt kopen voordat u de oude heeft verkocht. Het vermijdt de tijdsdruk tussen aankoop en verkoop."
+    content_2: "Kortlopend krediet dat doorgaans in één keer wordt terugbetaald bij de verkoop van uw huidige eigendom, het biedt de nodige flexibiliteit om goede vastgoedkansen te grijpen."
+    
+  features:
+    montant:
+      value: "Tot 80%"
+      detail: "Van de waarde van het te verkopen goed"
+    duree:
+      value: "12 tot 24 maanden"
+      detail: "Gemiddelde duur 18 maanden"
+    taux:
+      value: "Vanaf {rate}% JKP*"
+      detail: "Vaste korte termijn rente"
+    garantie:
+      value: "Hypotheek"
+      detail: "Op het te verkopen goed"
+      
+  advantages:
+    chainag:
+      title: "Geen koppeling:"
+      text: "Koop zonder te wachten op de verkoop van uw eigendom"
+    negociation:
+      title: "Versterkte onderhandeling:"
+      text: "Positie van vrije en geloofwaardige koper"
+    flexibilite:
+      title: "Flexibiliteit:"
+      text: "Terugbetaling bij verkoop, zonder vaste termijnen"
+    cumul:
+      title: "Combinatie mogelijk:"
+      text: "Combineerbaar met een klassiek vastgoedkrediet"
+    serenite:
+      title: "Gemoedsrust:"
+      text: "Georganiseerde verhuizing zonder tijdsdruk"
+      
+  requirements:
+    bien_vendre:
+      title: "Voorwaarden te verkopen goed"
+      proprietaire: "Eigenaar zijn sinds meer dan 2 jaar"
+      libre: "Goed vrij van bewoning"
+      estimation: "Recente vastgoedschatting"
+      commercialisation: "Effectieve commercialisering van het goed"
+    emprunteur:
+      title: "Lener voorwaarden"
+      revenus: "Regelmatige en voldoende inkomsten"
+      capacite: "Vermogen om tijdelijk 2 lasten te dragen"
+      apport: "Eigen inbreng voor aankoopkosten"
+      difficultes: "Geen financiële moeilijkheden"
+      
+  documents:
+    bien_vendre:
+      title: "Te verkopen goed"
+      titre: "Eigendomstitel"
+      estimation: "Vastgoedschatting"
+      mandat: "Ondertekend verkoopmandat"
+      diagnostics: "Vastgoeddiagnostiek"
+    bien_acquerir:
+      title: "Te verwerven goed"
+      compromis: "Ondertekend voorkoopcontract"
+      plan: "Financieringsplan"
+      descriptif: "Beschrijving van het goed"
+      conditions: "Opschortende voorwaarden"
+    dossier:
+      title: "Financieel dossier"
+      revenus: "Inkomstenbewijzen"
+      comptes: "Rekeninguittreksels"
+      charges: "Overzicht huidige lasten"
+      patrimoine: "Vermogenssituatie"
+      
+  legal:
+    title: "Belangrijke juridische informatie"
+    taeg:
+      title: "*JKP:"
+      text: "Representatief voorbeeld: voor een overbruggingskrediet van €200.000 over 18 maanden aan een JKP van 4,2%, betaalt u €412.700 terug bij vervaldatum (kredietkosten: €12.700 inclusief rente en kosten)."
+    remboursement:
+      title: "Terugbetaling:"
+      text: "In één keer bij verkoop van het goed, mogelijkheid tot maandelijkse rentebetalingen."
+    garantie:
+      title: "Garantie:"
+      text: "Eerste rang hypotheek op het te verkopen goed."
+    assurance:
+      title: "Verzekering:"
+      text: "Overlijdens-invaliditeitsverzekering verplicht."
+    prolongation:
+      title: "Verlenging:"
+      text: "Mogelijk bij vertraagde verkoop, onder voorwaarden."
+      
+  cta:
+    title: "Bevrijd u van tijdsdruk"
+    subtitle: "Realiseer uw vastgoedproject met ons overbruggingskrediet"

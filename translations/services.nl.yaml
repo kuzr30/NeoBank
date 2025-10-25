@@ -1,0 +1,300 @@
+services:
+  # Rekeningen & Kaarten
+  accounts_cards:
+    page:
+      title: "Rekeningen & Kaarten"
+      description: "Ontdek onze bankrekeningen en kredietkaarten aangepast aan uw behoeften."
+    
+    hero:
+      title: "Rekeningen & Kaarten"
+      subtitle: "Bankoplossingen aangepast aan al uw behoeften"
+      cta: "Meer weten"
+    
+    products:
+      title: "Onze Producten"
+      subtitle: "Kies de oplossing die het beste bij u past"
+      
+      current_account:
+        title: "Zichtrekening"
+        description: "De ideale rekening om uw dagelijkse leven te beheren"
+        features:
+          - "Gratis bankkaart"
+          - "Onbeperkte overschrijvingen"
+          - "Mobiele applicatie"
+        cta: "Beginnen"
+      
+      savings_account:
+        title: "Spaarrekening"
+        description: "Laat uw geld veilig groeien"
+        features:
+          - "Aantrekkelijk tarief"
+          - "Onmiddellijke beschikbaarheid"
+          - "Geen kosten"
+        cta: "Beginnen"
+      
+      credit_card:
+        title: "Kredietkaart"
+        description: "Meer flexibiliteit voor uw aankopen"
+        features:
+          - "Uitgestelde betaling"
+          - "Verzekering inbegrepen"
+          - "Loyaliteitsprogramma's"
+        cta: "Beginnen"
+    
+    features:
+      title: "Waarom Voor Ons Kiezen"
+      subtitle: "Exclusieve voordelen voor onze klanten"
+      
+      security:
+        title: "Maximale Beveiliging"
+        description: "3D Secure bescherming en real-time waarschuwingen"
+      
+      simple:
+        title: "Eenvoudig te Gebruiken"
+        description: "Intuïtieve interface en opening in 5 minuten"
+      
+      fast:
+        title: "Snelle Transacties"
+        description: "Onmiddellijke overschrijvingen 24u/24 7d/7"
+      
+      support:
+        title: "Expert Ondersteuning"
+        description: "Toegewijd team beschikbaar per telefoon en chat"
+    
+    comparison:
+      title: "Waarom %company_name% Kiezen?"
+      subtitle: "Vergelijk onze voordelen met de concurrentie en ontdek waarom meer dan 500.000 klanten ons vertrouwen"
+      table_title: "Vergelijking Bankdiensten"
+      table_subtitle: "Gedetailleerde analyse van %company_name% voordelen vs traditionele concurrenten"
+      
+      features:
+        - "Functionaliteiten"
+        - "Gratis bankkaart"
+        - "Onmiddellijke overschrijvingen"
+        - "Geavanceerde mobiele app"
+        - "24u/24 klantenservice"
+        - "Gratis geautoriseerd rood staan"
+        - "Spaartarief"
+      
+      bankit: "%company_name%"
+      competitor_a: "Bank A"
+      competitor_b: "Bank B"
+      
+      values:
+        card_free: "Gratis"
+        transfers_free: "Gratis"
+        app_advanced: "Geavanceerd"
+        support_24h: "24u/24"
+        overdraft: "Tot 500€"
+        savings_rate: "3,2%"
+      
+      competitor_values:
+        a:
+          card_fee: "5€/maand"
+          transfers_fee: "1€/overboeking"
+          app_quality: "Basis"
+          support_hours: "9u-17u"
+          overdraft_limit: "200€"
+          savings_rate: "1,8%"
+        b:
+          card_fee: "8€/maand"
+          transfers_fee: "✗"
+          app_quality: "Basis"
+          support_hours: "9u-18u"
+          overdraft_limit: "150€"
+          savings_rate: "2,1%"
+    
+    process:
+      title: "Vereenvoudigde Rekeningopening"
+      subtitle: "Een 100% digitaal, veilig en ultrasnelle proces. Uw rekening is operationeel in minder dan 10 minuten."
+      time: "⚡ Opening in maximaal 10 minuten"
+      
+      steps:
+        step1:
+          title: "Uw Informatie"
+          description: "Vul uw persoonlijke en professionele gegevens veilig in op ons gecodeerde platform"
+          time: "2 minuten"
+        
+        step2:
+          title: "Identiteitsverificatie"
+          description: "Onmiddellijke validatie van uw identiteit via onze gezichtsherkenning en documentscan technologie"
+          time: "3 minuten"
+        
+        step3:
+          title: "Validatie & Activatie"
+          description: "Automatische bevestiging en onmiddellijke activatie van uw rekening met alle inbegrepen diensten"
+          time: "2 minuten"
+        
+        step4:
+          title: "Kaart & RIB"
+          description: "Ontvangst van uw bankkaart binnen 48u en RIB onmiddellijk beschikbaar voor uw overschrijvingen"
+          time: "Onmiddellijk"
+    
+    services:
+      title: "Premium Bankdiensten"
+      subtitle: "Een complete reeks moderne bankdiensten om uw dagelijkse financiële beheer te vereenvoudigen"
+      
+      items:
+        payment_management:
+          title: "Betaalingenbeheer"
+          description: "Al uw betaalmethoden gecentraliseerd in een intuïtieve en veilige interface"
+          features:
+            - "Gratis directe SEPA-overboekingen"
+            - "Automatische incasso's"
+            - "Mobiele betalingen Apple Pay / Google Pay"
+            - "Tijdelijke virtuele kaarten"
+            - "Realtime meldingen"
+        
+        financial_analysis:
+          title: "Financiële Analyse"
+          description: "Geavanceerde analysehulpmiddelen om uw persoonlijke financiële beheer te optimaliseren"
+          features:
+            - "Automatische categorisering van uitgaven"
+            - "Gedetailleerde grafieken en rapporten"
+            - "Gepersonaliseerde budgetwaarschuwingen"
+            - "Intelligente spaardoelen"
+            - "Kasstroomprognoses"
+        
+        personalized_advice:
+          title: "Gepersonaliseerd Advies"
+          description: "Op maat gemaakte begeleiding voor al uw financiële projecten en investeringen"
+          features:
+            - "Toegewijde adviseur beschikbaar 24/7"
+            - "Realtime kredietsimulaties"
+            - "Gepersonaliseerd beleggingsadvies"
+            - "Ondersteuning voor uw vastgoedprojecten"
+            - "Belastingoptimalisatie"
+      
+      payments:
+        title: "Betalingsbeheer"
+        description: "Al uw betaalmiddelen gecentraliseerd in een intuïtieve en veilige interface"
+        features:
+          - "Gratis onmiddellijke SEPA-overschrijvingen"
+          - "Automatische afschrijvingen"
+          - "Mobiele betalingen Apple Pay / Google Pay"
+          - "Tijdelijke virtuele kaarten"
+          - "Real-time notificaties"
+      
+      analysis:
+        title: "Financiële Analyse"
+        description: "Geavanceerde analysetools om uw persoonlijke financiële beheer te optimaliseren"
+        features:
+          - "Automatische categorisering van uitgaven"
+          - "Gedetailleerde grafieken en rapporten"
+          - "Gepersonaliseerde budgetwaarschuwingen"
+          - "Intelligente spaardoelen"
+          - "Liquiditeitsvooruitzichten"
+      
+      advice:
+        title: "Gepersonaliseerd Advies"
+        description: "Op maat gemaakte begeleiding voor al uw financiële projecten en investeringen"
+        features:
+          - "Toegewezen adviseur beschikbaar 24u/24"
+          - "Real-time kredietsimulaties"
+          - "Gepersonaliseerd beleggingsadvies"
+          - "Ondersteuning voor uw vastgoedprojecten"
+          - "Fiscale optimalisatie"
+    
+    benefits:
+      title: "Exclusieve %company_name% Voordelen"
+      subtitle: "Profiteer van unieke voordelen en bevoorrechte aanbiedingen gereserveerd voor onze trouwe klanten"
+      
+      items:
+        instant_transactions:
+          title: "Directe Transacties"
+          description: "Overboekingen en betalingen verwerkt in minder dan 3 seconden, 24/7"
+          value: "< 3 seconden"
+        
+        cashback:
+          title: "Gegarandeerde Cashback"
+          description: "Krijg tot 2% cashback terug op al uw dagelijkse aankopen zonder voorwaarden"
+          value: "Tot 2%"
+        
+        insurance:
+          title: "Inbegrepen Verzekeringen"
+          description: "Volledige bescherming met reisverzekering, aankoopverzekering en 24/7 assistentie inbegrepen"
+          value: "Inbegrepen"
+        
+        global_access:
+          title: "Wereldwijde Toegang"
+          description: "Gebruik uw kaart in meer dan 210 landen zonder verborgen kosten of commissies"
+          value: "210+ landen"
+        
+        loyalty_program:
+          title: "Loyaliteitsprogramma"
+          description: "Loyaliteitspunten inwisselbaar voor voordelen en exclusieve partneraanbiedingen"
+          value: "VIP Punten"
+        
+        automatic_savings:
+          title: "Automatisch Sparen"
+          description: "Automatische afrondingen en geprogrammeerde overboekingen om moeiteloos te sparen"
+          value: "Automatisch"
+    
+    support:
+      title: "Uitstekende Klantenservice"
+      subtitle: "Een team van experts toegewijd aan uw service om al uw vragen te beantwoorden, 24/7"
+      
+      channels:
+        live_chat:
+          title: "Live Chat"
+          description: "Onmiddellijke ondersteuning via onze geïntegreerde chat met direct beschikbare expert agenten"
+          availability: "24/7"
+          response_time: "Reactie < 30 seconden"
+        
+        phone_hotline:
+          title: "Telefonische Hotline"
+          description: "Premium telefonische dienst met gespecialiseerde adviseurs voor al uw complexe vragen"
+          availability: "24/7"
+          response_time: "Gratis vanuit Frankrijk"
+        
+        email_form:
+          title: "Email & Formulier"
+          description: "Gedetailleerde e-mailondersteuning met gepersonaliseerde antwoorden van onze bankexperts"
+          availability: "Gegarandeerd antwoord"
+          response_time: "Binnen 2 uur"
+        
+        interactive_faq:
+          title: "Interactieve FAQ"
+          description: "Complete kennisbank met intelligente zoekopdracht en stap-voor-stap gidsen"
+          availability: "Vrije toegang"
+          response_time: "Onmiddellijke antwoorden"
+    
+    cta:
+      title: "Klaar om te Beginnen?"
+      description: "Open uw rekening in enkele minuten en profiteer van onze exclusieve voordelen"
+      primary_button: "Beginnen"
+      secondary_button: "Contact opnemen"
+
+  # Sparen & Beleggingen
+  savings_investments:
+    page:
+      title: "Sparen & Beleggingen"
+      description: "Optimaliseer uw spaargeld met onze veilige en rendabele beleggingsoplossingen."
+
+  # Verzekeringen
+  insurances:
+    page:
+      title: "Verzekeringen"
+      description: "Bescherm uw bezittingen en familie met onze complete verzekeringsoplossingen."
+
+  # Offerte
+  devis:
+    page:
+      title: "Offerte-aanvraag - %type%"
+      description: "Vraag uw offerte voor %type% online aan. %description%"
+    
+    confirmation:
+      page:
+        title: "Bevestiging - Offerte %numero%"
+        description: "Uw offerte-aanvraag werd succesvol geregistreerd."
+    
+    success:
+      message: "Uw offerte-aanvraag %numero% werd geregistreerd. U ontvangt een bevestiging per e-mail."
+    
+    error:
+      type_not_found: "Type verzekering niet gevonden"
+      save_failed: "Er is een fout opgetreden bij het registreren van uw aanvraag. Probeer opnieuw."
+      detailed: "Gedetailleerde fout: %message%"
+      validation_failed: "Het formulier bevat fouten. Controleer uw gegevens."
+      validation_error: "Fout: %message%"
+      not_found: "Offerte-aanvraag niet gevonden"

@@ -1,0 +1,26 @@
+email_contract_signed_customer:
+  title: "Confirmación de firma de contrato"
+  subject: "Confirmación de firma de contrato - %referenceNumber%"
+  content:
+    confirmation:
+      title: "¡Su contrato ha sido firmado con éxito!"
+      description: "Estimado/a %customerName%, confirmamos que su contrato de crédito ha sido firmado y recibido por nuestros servicios."
+    contract_details:
+      title: "Detalles de su contrato"
+      reference_number: "Número de referencia"
+      loan_amount: "Importe del préstamo"
+      status_label: "Estado"
+      status_value: "Firmado"
+    next_steps:
+      title: "Próximos pasos"
+      description: "Su expediente ahora sigue el proceso de validación administrativa:"
+      validation: "Verificación y validación de su contrato por nuestros equipos"
+      processing: "Procesamiento administrativo y finalización"
+      disbursement: "Desembolso de fondos en su cuenta"
+    important_info:
+      title: "Información importante"
+      description: "El desembolso de fondos tendrá lugar en 24-48h hábiles después de la validación administrativa."
+    cta:
+      button_text: "Consultar mi expediente"
+    footer:
+      regards: "Cordialmente,"

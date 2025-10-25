@@ -1,0 +1,330 @@
+services:
+  # Comptes & Cartes
+  accounts_cards:
+    page:
+      title: "Comptes & Cartes"
+      description: "Découvrez nos comptes bancaires et cartes de crédit adaptés à vos besoins."
+    
+    hero:
+      title: "Comptes & Cartes"
+      subtitle: "Des solutions bancaires adaptées à tous vos besoins"
+      cta: "En savoir plus"
+    
+    products:
+      title: "Nos Produits"
+      subtitle: "Choisissez la solution qui vous convient le mieux"
+      
+      current_account:
+        title: "Compte Courant"
+        description: "Le compte idéal pour gérer votre quotidien"
+        features:
+          - "Carte bancaire gratuite"
+          - "Virements illimités"
+          - "Application mobile"
+        cta: "Commencer"
+      
+      savings_account:
+        title: "Compte Épargne"
+        description: "Faites fructifier votre argent en toute sécurité"
+        features:
+          - "Taux attractif"
+          - "Disponibilité immédiate"
+          - "Pas de frais"
+        cta: "Commencer"
+      
+      credit_card:
+        title: "Carte de Crédit"
+        description: "Plus de flexibilité pour vos achats"
+        features:
+          - "Paiement différé"
+          - "Assurance incluse"
+          - "Programmes de fidélité"
+        cta: "Commencer"
+    
+    features:
+      title: "Pourquoi Nous Choisir"
+      subtitle: "Des avantages exclusifs pour nos clients"
+      
+      security:
+        title: "Sécurité Maximale"
+        description: "Protection 3D Secure et alertes en temps réel"
+      
+      simple:
+        title: "Simple à Utiliser"
+        description: "Interface intuitive et ouverture en 5 minutes"
+      
+      fast:
+        title: "Transactions Rapides"
+        description: "Virements instantanés 24h/24 7j/7"
+      
+      support:
+        title: "Support Expert"
+        description: "Équipe dédiée disponible par téléphone et chat"
+    
+    comparison:
+      title: "Pourquoi Choisir %company_name% ?"
+      subtitle: "Comparez nos avantages avec la concurrence et découvrez pourquoi plus de 500 000 clients nous font confiance"
+      table_title: "Comparatif des Services Bancaires"
+      table_subtitle: "Analyse détaillée des avantages %company_name% vs concurrents traditionnels"
+      
+      features:
+        - "Fonctionnalités"
+        - "Carte bancaire gratuite"
+        - "Virements instantanés"
+        - "Application mobile avancée"
+        - "Support client 24h/24"
+        - "Découvert autorisé gratuit"
+        - "Taux épargne"
+      
+      bankit: "%company_name%"
+      competitor_a: "Banque A"
+      competitor_b: "Banque B"
+      
+      values:
+        card_free: "Gratuite"
+        transfers_free: "Gratuits"
+        app_advanced: "Avancée"
+        support_24h: "24h/24"
+        overdraft: "Jusqu'à 500€"
+        savings_rate: "3.2%"
+      
+      competitor_values:
+        a:
+          card_fee: "5€/mois"
+          transfers_fee: "1€/virement"
+          app_quality: "Basique"
+          support_hours: "9h-17h"
+          overdraft_limit: "200€"
+          savings_rate: "1.8%"
+        b:
+          card_fee: "8€/mois"
+          transfers_fee: "✗"
+          app_quality: "Basique"
+          support_hours: "9h-18h"
+          overdraft_limit: "150€"
+          savings_rate: "2.1%"
+    
+    process:
+      title: "Ouverture de Compte Simplifiée"
+      subtitle: "Un processus 100% digital, sécurisé et ultra-rapide. Votre compte est opérationnel en moins de 10 minutes."
+      time: "⚡ Ouverture en 10 minutes maximum"
+      
+      steps:
+        step1:
+          title: "Vos Informations"
+          description: "Renseignez vos données personnelles et professionnelles en toute sécurité sur notre plateforme cryptée"
+          time: "2 minutes"
+        
+        step2:
+          title: "Vérification d'Identité"
+          description: "Validation instantanée de votre identité via notre technologie de reconnaissance faciale et scan de documents"
+          time: "3 minutes"
+        
+        step3:
+          title: "Validation & Activation"
+          description: "Confirmation automatique et activation immédiate de votre compte avec tous les services inclus"
+          time: "2 minutes"
+        
+        step4:
+          title: "Carte & RIB"
+          description: "Réception de votre carte bancaire sous 48h et RIB disponible immédiatement pour vos virements"
+          time: "Instantané"
+    
+    services:
+      title: "Services Bancaires Premium"
+      subtitle: "Une gamme complète de services bancaires modernes pour simplifier votre gestion financière quotidienne"
+      
+      items:
+        payment_management:
+          title: "Gestion des Paiements"
+          description: "Tous vos moyens de paiement centralisés dans une interface intuitive et sécurisée"
+          features:
+            - "Virements SEPA instantanés gratuits"
+            - "Prélèvements automatiques"
+            - "Paiements mobiles Apple Pay / Google Pay"
+            - "Cartes virtuelles temporaires"
+            - "Notifications en temps réel"
+        
+        financial_analysis:
+          title: "Analyse Financière"
+          description: "Des outils d'analyse avancés pour optimiser votre gestion financière personnelle"
+          features:
+            - "Catégorisation automatique des dépenses"
+            - "Graphiques et rapports détaillés"
+            - "Alertes budgétaires personnalisées"
+            - "Objectifs d'épargne intelligents"
+            - "Prévisions de trésorerie"
+        
+        personalized_advice:
+          title: "Conseils Personnalisés"
+          description: "Un accompagnement sur-mesure pour tous vos projets financiers et investissements"
+          features:
+            - "Conseiller dédié disponible 24h/24"
+            - "Simulations de crédit en temps réel"
+            - "Conseils en placement personnalisés"
+            - "Assistance pour vos projets immobiliers"
+            - "Optimisation fiscale"
+      
+      payments:
+        title: "Gestion des Paiements"
+        description: "Tous vos moyens de paiement centralisés dans une interface intuitive et sécurisée"
+        features:
+          - "Virements SEPA instantanés gratuits"
+          - "Prélèvements automatiques"
+          - "Paiements mobiles Apple Pay / Google Pay"
+          - "Cartes virtuelles temporaires"
+          - "Notifications en temps réel"
+      
+      analysis:
+        title: "Analyse Financière"
+        description: "Des outils d'analyse avancés pour optimiser votre gestion financière personnelle"
+        features:
+          - "Catégorisation automatique des dépenses"
+          - "Graphiques et rapports détaillés"
+          - "Alertes budgétaires personnalisées"
+          - "Objectifs d'épargne intelligents"
+          - "Prévisions de trésorerie"
+      
+      advice:
+        title: "Conseils Personnalisés"
+        description: "Un accompagnement sur-mesure pour tous vos projets financiers et investissements"
+        features:
+          - "Conseiller dédié disponible 24h/24"
+          - "Simulations de crédit en temps réel"
+          - "Conseils en placement personnalisés"
+          - "Assistance pour vos projets immobiliers"
+          - "Optimisation fiscale"
+    
+    benefits:
+      title: "Avantages Exclusifs %company_name%"
+      subtitle: "Profitez d'avantages uniques et d'offres privilégiées réservées à nos clients fidèles"
+      
+      items:
+        instant_transactions:
+          title: "Transactions Instantanées"
+          description: "Virements et paiements traités en moins de 3 secondes, 24h/24 et 7j/7"
+          value: "< 3 secondes"
+        
+        cashback:
+          title: "Cashback Garanti"
+          description: "Récupérez jusqu'à 2% de cashback sur tous vos achats quotidiens sans condition"
+          value: "Jusqu'à 2%"
+        
+        insurance:
+          title: "Assurances Incluses"
+          description: "Protection complète avec assurance voyage, achat et assistance 24h/24 incluse"
+          value: "Incluses"
+        
+        global_access:
+          title: "Accès Mondial"
+          description: "Utilisez votre carte dans plus de 210 pays sans frais cachés ni commissions"
+          value: "210+ pays"
+        
+        loyalty_program:
+          title: "Programme Fidélité"
+          description: "Points de fidélité convertibles en avantages et offres partenaires exclusives"
+          value: "Points VIP"
+        
+        automatic_savings:
+          title: "Épargne Automatique"
+          description: "Arrondis automatiques et virements programmés pour épargner sans effort"
+          value: "Automatique"
+      
+      instant:
+        title: "Transactions Instantanées"
+        description: "Virements et paiements traités en moins de 3 secondes, 24h/24 et 7j/7"
+        value: "< 3 secondes"
+      
+      cashback:
+        title: "Cashback Garanti"
+        description: "Récupérez jusqu'à 2% de cashback sur tous vos achats quotidiens sans condition"
+        value: "Jusqu'à 2%"
+      
+      insurance:
+        title: "Assurances Incluses"
+        description: "Protection complète avec assurance voyage, achat et assistance 24h/24 incluse"
+        value: "Incluses"
+      
+      worldwide:
+        title: "Accès Mondial"
+        description: "Utilisez votre carte dans plus de 210 pays sans frais cachés ni commissions"
+        value: "210+ pays"
+      
+      loyalty:
+        title: "Programme Fidélité"
+        description: "Points de fidélité convertibles en avantages et offres partenaires exclusives"
+        value: "Points VIP"
+      
+      savings:
+        title: "Épargne Automatique"
+        description: "Arrondis automatiques et virements programmés pour épargner sans effort"
+        value: "Automatique"
+    
+    support:
+      title: "Support Client d'Excellence"
+      subtitle: "Une équipe d'experts dédiée à votre service pour répondre à toutes vos questions, 24h/24 et 7j/7"
+      
+      channels:
+        live_chat:
+          title: "Chat en Direct"
+          description: "Assistance instantanée via notre chat intégré avec des agents experts disponibles immédiatement"
+          availability: "24h/24 - 7j/7"
+          response_time: "Réponse < 30 secondes"
+        
+        phone_hotline:
+          title: "Hotline Téléphonique"
+          description: "Service téléphonique premium avec conseillers spécialisés pour toutes vos questions complexes"
+          availability: "24h/24 - 7j/7"
+          response_time: "Gratuit depuis la France"
+        
+        email_form:
+          title: "Email & Formulaire"
+          description: "Support détaillé par email avec réponses personnalisées de nos experts bancaires"
+          availability: "Réponse garantie"
+          response_time: "Sous 2 heures"
+        
+        interactive_faq:
+          title: "FAQ Interactive"
+          description: "Base de connaissances complète avec recherche intelligente et guides pas-à-pas"
+          availability: "Accès libre"
+          response_time: "Réponses instantanées"
+    
+    cta:
+      title: "Prêt à Commencer ?"
+      description: "Ouvrez votre compte en quelques minutes et profitez de nos avantages exclusifs"
+      primary_button: "Commencer"
+      secondary_button: "Nous contacter"
+  
+  # Épargne & Placements
+  savings_investments:
+    page:
+      title: "Épargne & Placements"
+      description: "Optimisez votre épargne avec nos solutions de placement sécurisées et rentables."
+  
+  # Assurances
+  insurances:
+    page:
+      title: "Assurances"
+      description: "Protégez vos biens et votre famille avec nos solutions d'assurance complètes."
+  
+  # Devis
+  devis:
+    page:
+      title: "Demande de devis - %type%"
+      description: "Demandez votre devis pour %type% en ligne. %description%"
+    
+    confirmation:
+      page:
+        title: "Confirmation - Devis %numero%"
+        description: "Votre demande de devis a été enregistrée avec succès."
+    
+    success:
+      message: "Votre demande de devis %numero% a été enregistrée. Vous recevrez une confirmation par email."
+    
+    error:
+      type_not_found: "Type d'assurance non trouvé"
+      save_failed: "Une erreur est survenue lors de l'enregistrement de votre demande. Veuillez réessayer."
+      detailed: "Erreur détaillée: %message%"
+      validation_failed: "Le formulaire contient des erreurs. Veuillez vérifier vos données."
+      validation_error: "Erreur: %message%"
+      not_found: "Demande de devis non trouvée"

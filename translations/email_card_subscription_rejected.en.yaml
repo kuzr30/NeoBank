@@ -1,0 +1,36 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_card_subscription_rejected.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+email_card_subscription_rejected:
+  title: "Votre demande de carte bancaire"
+  
+  content:
+    page_title: "Concernant votre demande de carte bancaire"
+    greeting: "Cher(e) %firstName% %lastName%,"
+    
+    rejection:
+      title: "Décision concernant votre demande"
+      description: "Après examen de votre dossier, nous ne pouvons pas donner suite favorablement à votre demande de carte %cardType%."
+    
+    details:
+      title: "Détails de la demande"
+      reference: "Référence de la demande"
+      reason: "Motif de la décision"
+      reason_not_specified: "Non spécifié - Contactez notre service clientèle"
+    
+    next_steps:
+      title: "Vos options"
+      option1: "Contacter notre service clientèle pour plus d'informations"
+      option2: "Soumettre une nouvelle demande après amélioration de votre situation"
+      option3: "Demander un rendez-vous avec un conseiller bancaire"
+    
+    support:
+      title: "Besoin d'aide ?"
+      contact_button: "Contacter le service client"
+      instruction: "Notre équipe est disponible pour vous expliquer cette décision"
+    
+    apologize: "Nous regrettons de ne pas pouvoir répondre favorablement à votre demande et restons à votre disposition."
+    
+    footer: "Cet email a été envoyé automatiquement par votre banque. <br><strong>Notre service clientèle reste à votre écoute.</strong>"

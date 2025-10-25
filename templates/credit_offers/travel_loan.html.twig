@@ -1,0 +1,141 @@
+
+{% extends 'credit_offers/credit_page_structure.html.twig' %}
+
+{% set page_title = tp('travel_loan.meta.title', [], 'travel-loan') %}
+{% set page_description = tp('travel_loan.meta.description', [], 'travel-loan') %}
+{% set hero_class = 'credit-detail-hero--voyage' %}
+
+{% block taux_value %}{{ credit_rate('voyage') }}%{% endblock %}
+{% block montant_value %}{{ tp('travel_loan.values.montant', [], 'travel-loan') }}{% endblock %}
+{% block duree_value %}{{ tp('travel_loan.values.duree', [], 'travel-loan') }}{% endblock %}
+
+{% block hero_title %}{{ tp('travel_loan.hero.title', [], 'travel-loan') }}{% endblock %}
+{% block hero_subtitle %}{{ tp('travel_loan.hero.subtitle', [], 'travel-loan') }}{% endblock %}
+
+{% block section_1_title %}{{ tp('travel_loan.section_1.title', [], 'travel-loan') }}{% endblock %}
+
+{% block section_1_content %}
+<p>{{ tp('travel_loan.section_1.content.0', [], 'travel-loan') }}</p>
+<p>{{ tp('travel_loan.section_1.content.1', [], 'travel-loan') }}</p>
+{% endblock %}
+
+{% block feature_montant %}{{ tp('travel_loan.features.montant', [], 'travel-loan') }}{% endblock %}
+{% block feature_montant_detail %}{{ tp('travel_loan.features.montant_detail', [], 'travel-loan') }}{% endblock %}
+{% block feature_duree %}{{ tp('travel_loan.features.duree', [], 'travel-loan') }}{% endblock %}
+{% block feature_duree_detail %}{{ tp('travel_loan.features.duree_detail', [], 'travel-loan') }}{% endblock %}
+{% block feature_taux %}{{ tp('travel_loan.features.taux', [], 'travel-loan')|replace({'{rate}': credit_rate('voyage')})|raw }}{% endblock %}
+{% block feature_taux_detail %}{{ tp('travel_loan.features.taux_detail', [], 'travel-loan') }}{% endblock %}
+{% block feature_garantie %}{{ tp('travel_loan.features.garantie', [], 'travel-loan') }}{% endblock %}
+{% block feature_garantie_detail %}{{ tp('travel_loan.features.garantie_detail', [], 'travel-loan') }}{% endblock %}
+
+{% block section_3_content %}
+<ul class="credit-detail-advantages">
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('travel_loan.advantages.0.title', [], 'travel-loan') }}</strong> {{ tp('travel_loan.advantages.0.description', [], 'travel-loan') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('travel_loan.advantages.1.title', [], 'travel-loan') }}</strong> {{ tp('travel_loan.advantages.1.description', [], 'travel-loan') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('travel_loan.advantages.2.title', [], 'travel-loan') }}</strong> {{ tp('travel_loan.advantages.2.description', [], 'travel-loan') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('travel_loan.advantages.3.title', [], 'travel-loan') }}</strong> {{ tp('travel_loan.advantages.3.description', [], 'travel-loan') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('travel_loan.advantages.4.title', [], 'travel-loan') }}</strong> {{ tp('travel_loan.advantages.4.description', [], 'travel-loan') }}</span>
+    </li>
+</ul>
+{% endblock %}
+
+{% block section_4_content %}
+<div class="credit-detail-requirements">
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('travel_loan.conditions.octroi.title', [], 'travel-loan') }}</h3>
+        <ul>
+            <li>{{ tp('travel_loan.conditions.octroi.items.0', [], 'travel-loan') }}</li>
+            <li>{{ tp('travel_loan.conditions.octroi.items.1', [], 'travel-loan') }}</li>
+            <li>{{ tp('travel_loan.conditions.octroi.items.2', [], 'travel-loan') }}</li>
+            <li>{{ tp('travel_loan.conditions.octroi.items.3', [], 'travel-loan') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('travel_loan.conditions.utilisation.title', [], 'travel-loan') }}</h3>
+        <ul>
+            <li>{{ tp('travel_loan.conditions.utilisation.items.0', [], 'travel-loan') }}</li>
+            <li>{{ tp('travel_loan.conditions.utilisation.items.1', [], 'travel-loan') }}</li>
+            <li>{{ tp('travel_loan.conditions.utilisation.items.2', [], 'travel-loan') }}</li>
+            <li>{{ tp('travel_loan.conditions.utilisation.items.3', [], 'travel-loan') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block section_5_content %}
+<div class="credit-detail-documents">
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('travel_loan.documents.identite.title', [], 'travel-loan') }}</h3>
+        <ul>
+            <li>{{ tp('travel_loan.documents.identite.items.0', [], 'travel-loan') }}</li>
+            <li>{{ tp('travel_loan.documents.identite.items.1', [], 'travel-loan') }}</li>
+            <li>{{ tp('travel_loan.documents.identite.items.2', [], 'travel-loan') }}</li>
+            <li>{{ tp('travel_loan.documents.identite.items.3', [], 'travel-loan') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('travel_loan.documents.financiere.title', [], 'travel-loan') }}</h3>
+        <ul>
+            <li>{{ tp('travel_loan.documents.financiere.items.0', [], 'travel-loan') }}</li>
+            <li>{{ tp('travel_loan.documents.financiere.items.1', [], 'travel-loan') }}</li>
+            <li>{{ tp('travel_loan.documents.financiere.items.2', [], 'travel-loan') }}</li>
+            <li>{{ tp('travel_loan.documents.financiere.items.3', [], 'travel-loan') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('travel_loan.documents.projet.title', [], 'travel-loan') }}</h3>
+        <ul>
+            <li>{{ tp('travel_loan.documents.projet.items.0', [], 'travel-loan') }}</li>
+            <li>{{ tp('travel_loan.documents.projet.items.1', [], 'travel-loan') }}</li>
+            <li>{{ tp('travel_loan.documents.projet.items.2', [], 'travel-loan') }}</li>
+            <li>{{ tp('travel_loan.documents.projet.items.3', [], 'travel-loan') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block legal_details %}
+<div class="credit-legal-notice__details">
+    <h4>{{ tp('travel_loan.legal.title', [], 'travel-loan') }}</h4>
+    <ul>
+        <li>{{ tp('travel_loan.legal.details.0', [], 'travel-loan') }}</li>
+        <li>{{ tp('travel_loan.legal.details.1', [], 'travel-loan') }}</li>
+        <li>{{ tp('travel_loan.legal.details.2', [], 'travel-loan') }}</li>
+        <li>{{ tp('travel_loan.legal.details.3', [], 'travel-loan') }}</li>
+        <li>{{ tp('travel_loan.legal.details.4', [], 'travel-loan') }}</li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block cta_title %}{{ tp('travel_loan.cta.title', [], 'travel-loan') }}{% endblock %}
+{% block cta_subtitle %}{{ tp('travel_loan.cta.subtitle', [], 'travel-loan') }}{% endblock %}
+
+{% block custom_styles %}
+{{ parent() }}
+<style>
+/* Couleur spécifique pour le crédit voyage */
+.credit-detail-hero--voyage {
+    background: 
+        linear-gradient(135deg, rgba(14, 165, 233, 0.4) 0%, rgba(2, 132, 199, 0.6) 100%),
+        url('/images/tra.jpg') center/cover no-repeat;
+}
+
+.credit-detail-hero--voyage .credit-highlight__value {
+    color: #7dd3fc;
+}
+</style>
+{% endblock %}

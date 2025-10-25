@@ -1,0 +1,12 @@
+profile_controller:
+  flash:
+    password_changed: "Uw wachtwoord is succesvol gewijzigd."
+    profile_updated: "Uw profiel is succesvol bijgewerkt."
+    email_change_initiated: "Een bevestigingsmail is verzonden naar {email}. Klik op de link om uw nieuwe e-mailadres te bevestigen."
+    
+  security_activities:
+    login_success: "Succesvolle aanmelding"
+    login_failed: "Mislukte aanmeldingspoging"
+    password_changed: "Wachtwoord gewijzigd"
+    profile_updated: "Profiel bijgewerkt"
+    account_locked: "Account vergrendeld"

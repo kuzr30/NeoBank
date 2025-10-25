@@ -1,0 +1,129 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block content_title %}
+    <h1 class="title">Envoyer un email</h1>
+{% endblock %}
+
+{% block main %}
+    <form action="{{ path('admin_submit_scheduled_email') }}" method="post" id="emailForm">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="templateType" class="form-label required">Type de template</label>
+                    <select name="templateType" id="templateType" class="form-control" required>
+                        <option value="">-- Sélectionnez un type --</option>
+                        {% for type in templateTypes %}
+                            <option value="{{ type.value }}" {% if templateType and templateType == type %}selected{% endif %}>
+                                {{ type.getLabel() }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="locale" class="form-label required">Langue</label>
+                    <select name="locale" id="locale" class="form-control" required>
+                        <option value="fr" selected>Français</option>
+                        <option value="en">English</option>
+                        <option value="nl">Nederlands</option>
+                        <option value="de">Deutsch</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="recipientSearch" class="form-label required">Destinataire</label>
+            <input type="text" id="recipientSearch" class="form-control" placeholder="Recherchez par nom ou email..." list="usersList" autocomplete="off" required>
+            <datalist id="usersList">
+                {% for user in users %}
+                    <option value="{{ user.firstname ?? '' }} {{ user.lastname ?? '' }} ({{ user.email }})" data-id="{{ user.id }}">
+                {% endfor %}
+            </datalist>
+            <input type="hidden" name="recipient" id="recipient" required>
+            <small class="form-text text-muted">Tapez pour rechercher un utilisateur</small>
+        </div>
+
+        <div id="reasonsContainer" style="display: none;"></div>
+
+        <div id="amountContainer" class="form-group" style="display: none;">
+            <label for="amount" class="form-label required">Montant (€)</label>
+            <input type="number" name="amount" id="amount" class="form-control" step="0.01" min="0" placeholder="286.00">
+            <small class="form-text text-muted">Montant à afficher dans l'email de paiement</small>
+        </div>
+
+        <div class="form-group">
+            <label for="customMessage" class="form-label">Message personnalisé</label>
+            <textarea name="customMessage" id="customMessage" class="form-control" rows="5"></textarea>
+            <small class="form-text text-muted">Message additionnel qui sera affiché dans l'email</small>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Envoyer l'email</button>
+            <a href="{{ ea_url().setController('App\\Controller\\Admin\\ScheduledEmailCrudController').setAction('index') }}" class="btn btn-secondary"><i class="fa fa-times"></i> Annuler</a>
+        </div>
+    </form>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const userMap = new Map();
+        {% for user in users %}
+        userMap.set('{{ user.firstname ?? '' }} {{ user.lastname ?? '' }} ({{ user.email }})', '{{ user.id }}');
+        {% endfor %}
+
+        const recipientSearch = document.getElementById('recipientSearch');
+        const recipientHidden = document.getElementById('recipient');
+
+        recipientSearch.addEventListener('input', function() {
+            const selectedValue = this.value;
+            const userId = userMap.get(selectedValue);
+            if (userId) {
+                recipientHidden.value = userId;
+            } else {
+                recipientHidden.value = '';
+            }
+        });
+
+        document.getElementById('templateType').addEventListener('change', function() {
+            const templateType = this.value;
+            const reasonsContainer = document.getElementById('reasonsContainer');
+            const amountContainer = document.getElementById('amountContainer');
+            const amountInput = document.getElementById('amount');
+            
+            // Show/hide amount field for PAYMENT_DETAILS template
+            if (templateType === 'payment_details') {
+                amountContainer.style.display = 'block';
+                amountInput.required = true;
+            } else {
+                amountContainer.style.display = 'none';
+                amountInput.required = false;
+                amountInput.value = '';
+            }
+            
+            // Load reasons if applicable
+            if (!templateType){
+                reasonsContainer.style.display = 'none';
+                reasonsContainer.innerHTML = '';
+                return;
+            }
+            fetch('{{ path('admin_get_reasons', {templateType: '__TEMPLATE_TYPE__'}) }}'.replace('__TEMPLATE_TYPE__', templateType))
+                .then(response => response.text())
+                .then(html => {
+                    reasonsContainer.innerHTML = html;
+                    reasonsContainer.style.display = html.trim() ? 'block' : 'none';
+                })
+                .catch(error => {
+                    console.error('Error loading reasons:', error);
+                    reasonsContainer.style.display = 'none';
+                });
+        });
+
+        if (document.getElementById('templateType').value) {
+            document.getElementById('templateType').dispatchEvent(new Event('change'));
+        }
+    });
+    </script>
+{% endblock %}

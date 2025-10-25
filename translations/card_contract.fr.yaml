@@ -1,0 +1,151 @@
+card_contract:
+  # Titre du document
+  title: "Contrat de Carte Bancaire N° %reference%"
+  
+  # Header et meta
+  header:
+    document_lang: "fr"
+    watermark: "%company_name%"
+    
+  # Titre principal
+  main:
+    title: "CONTRAT DE SOUSCRIPTION DE CARTE BANCAIRE"
+    card_subtitle: "CARTE %card_type% %card_brand%"
+    
+  # Company info
+  company:
+    payment_institution: "Établissement de Paiement"
+    share_capital: "Capital social : %amount% €"
+    head_office: "Siège Social : %address%"
+    siren: "SIREN : %number%"
+    ape_code: "Code APE : %code%"
+    represented_by: "Représentée par son Directeur Général"
+    
+  # Contract info
+  contract:
+    number: "CONTRAT N° %reference%"
+    establishment_date: "Date d'établissement : %date%"
+    signature_date: "Date de signature : %date%"
+    
+  # Chapter I - Contracting Parties
+  chapter_one:
+    title: "Chapitre I - Les Parties Contractantes"
+    issuing_institution: "L'Établissement Émetteur"
+    cardholder: "Le Titulaire"
+    hereinafter_institution: "Ci-après dénommée \"L'Établissement\""
+    hereinafter_cardholder: "Ci-après dénommé(e) \"Le Titulaire\""
+    residing_at: "Demeurant :"
+    address_not_provided: "[Adresse non renseignée]"
+    postal_code_city: "[Code Postal] [Ville]"
+    born_on: "Né(e) le : %birth_date%"
+    phone: "Téléphone : %phone%"
+    phone_not_provided: "[Non renseigné]"
+    email: "Email : %email%"
+    parties_agreed: "Les parties aux présentes ont convenu et arrêté ce qui suit"
+    
+  # Chapter II - Object and Characteristics
+  chapter_two:
+    title: "Chapitre II - Objet et Caractéristiques de la Carte"
+    article_1_title: "Article 1 - Objet du Contrat"
+    article_1_content: "L'Établissement consent au Titulaire, qui accepte, la mise à disposition d'une carte bancaire de type %card_type% %card_brand% permettant d'effectuer des opérations de paiement et de retrait selon les conditions définies ci-après."
+    
+    article_2_title: "Article 2 - Caractéristiques Techniques"
+    table_card_type: "Type de carte"
+    table_brand: "Marque"
+    table_technology: "Technologie"
+    table_technology_value: "Puce et sans contact"
+    table_validity: "Validité"
+    table_validity_value: "3 ans renouvelable"
+    table_usage_zone: "Zone d'utilisation"
+    table_usage_zone_value: "Mondiale"
+    
+  # Chapter III - Financial Conditions
+  chapter_three:
+    title: "Chapitre III - Conditions Financières"
+    article_3_title: "Article 3 - Frais et Cotisations"
+    table_designation: "Désignation"
+    table_amount: "Montant"
+    table_frequency: "Périodicité"
+    
+    activation_fees: "Frais d'activation"
+    annual_fees: "Cotisation annuelle"
+    opposition_fees: "Frais d'opposition"
+    card_renewal: "Renouvellement de carte"
+    replacement_fees: "Frais de remplacement"
+    
+    frequency_unique: "Unique à l'ouverture"
+    frequency_annual: "Annuelle"
+    frequency_per_incident: "Par incident"
+    frequency_at_expiry: "À échéance"
+    frequency_per_replacement: "Par remplacement"
+    
+    free: "Gratuit"
+    
+    article_4_title: "Article 4 - Limites d'Utilisation"
+    daily_withdrawal_limit: "Plafond de retrait quotidien"
+    monthly_payment_limit: "Plafond de paiement mensuel"
+    contactless_payment: "Paiement sans contact"
+    contactless_amount: "50 € par transaction"
+    limits_modification_note: "Ces limites peuvent être modifiées sur demande du Titulaire, sous réserve d'acceptation par l'Établissement."
+    
+  # Chapter IV - Usage Conditions
+  chapter_four:
+    title: "Chapitre IV - Conditions d'Utilisation"
+    security_code_title: "Sécurité et Code Confidentiel"
+    security_code_content: "Le Titulaire s'engage à conserver secret son code confidentiel et à ne jamais le noter ni le communiquer à quiconque. Le code ne doit jamais être conservé avec la carte."
+    
+    authorized_use_title: "Utilisation Autorisée"
+    authorized_use_content: "La carte est strictement personnelle et ne peut être utilisée que par le Titulaire. Toute utilisation par un tiers non autorisé engage la responsabilité du Titulaire."
+    
+    card_conservation_title: "Conservation de la Carte"
+    card_conservation_content: "Le Titulaire doit conserver sa carte avec soin et la protéger contre toute utilisation frauduleuse, vol, perte ou détérioration."
+    
+    opposition_title: "Opposition"
+    opposition_content: "En cas de perte, vol ou utilisation frauduleuse, le Titulaire doit faire opposition immédiatement en contactant le service client 24h/24 au numéro indiqué au verso de la carte."
+    
+  # Chapter V - Responsibilities
+  chapter_five:
+    title: "Chapitre V - Responsabilités et Garanties"
+    article_5_title: "Article 5 - Responsabilité du Titulaire"
+    cardholder_responsibility_1: "Le Titulaire est responsable de toutes les opérations effectuées avec sa carte jusqu'à la date et l'heure de l'opposition."
+    cardholder_responsibility_2: "En cas d'utilisation frauduleuse avant opposition, la responsabilité du Titulaire est limitée à 50 € sauf négligence grave."
+    cardholder_responsibility_3: "Le Titulaire garantit l'exactitude des informations fournies lors de la souscription."
+    
+    article_6_title: "Article 6 - Responsabilité de l'Établissement"
+    institution_responsibility_1: "L'Établissement s'engage à mettre à disposition une carte fonctionnelle et sécurisée."
+    institution_responsibility_2: "L'Établissement garantit le traitement des oppositions 24h/24 et 7j/7."
+    institution_responsibility_3: "L'Établissement assure la disponibilité de son réseau dans les meilleures conditions techniques."
+    
+  # Chapter VI - Duration and Termination
+  chapter_six:
+    title: "Chapitre VI - Durée et Résiliation"
+    article_7_title: "Article 7 - Durée du Contrat"
+    contract_duration: "Le présent contrat est conclu pour une durée de 3 ans à compter de la date de signature. Il se renouvelle tacitement par périodes d'un an sauf dénonciation par l'une des parties."
+    
+    article_8_title: "Article 8 - Résiliation"
+    termination_1: "Chaque partie peut résilier le contrat à tout moment moyennant un préavis de 2 mois."
+    termination_2: "La résiliation doit être notifiée par lettre recommandée avec accusé de réception."
+    termination_3: "En cas de résiliation, la carte doit être restituée ou détruite par le Titulaire."
+    termination_4: "Les frais déjà prélevés ne sont pas remboursés sauf résiliation dans les 14 jours (droit de rétractation)."
+    
+  # Chapter VII - General Provisions
+  chapter_seven:
+    title: "Chapitre VII - Dispositions Générales"
+    article_9_title: "Article 9 - Droit Applicable et Juridiction"
+    applicable_law: "Le présent contrat est soumis au droit français. En cas de litige, les tribunaux français seront seuls compétents."
+    
+    article_10_title: "Article 10 - Modification du Contrat"
+    contract_modification: "Toute modification du présent contrat doit faire l'objet d'un avenant signé par les deux parties ou d'une notification 2 mois avant son entrée en vigueur."
+    
+    article_11_title: "Article 11 - Protection des Données"
+    data_protection: "L'Établissement s'engage à traiter les données personnelles du Titulaire conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés."
+    
+  # Signatures
+  signatures:
+    cardholder_signature: "Le Titulaire"
+    institution_signature: "L'Établissement"
+    general_director: "Représenté par le Directeur Général"
+    date_signature: "Date et signature"
+    date_label: "Date :"
+    signed_electronically: "Signé électroniquement le %date%"
+    current_date: "Date : %date%"

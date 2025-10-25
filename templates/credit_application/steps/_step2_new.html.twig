@@ -1,0 +1,91 @@
+<div class="credit-form__section">
+    <h2 class="credit-form__section-title">Informations personnelles</h2>
+    
+    <div class="credit-form__group credit-form__group--half">
+        <div>
+            {{ form_label(form.firstName, null, {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.firstName) }}
+            {{ form_errors(form.firstName) }}
+        </div>
+        <div>
+            {{ form_label(form.lastName, null, {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.lastName) }}
+            {{ form_errors(form.lastName) }}
+        </div>
+    </div>
+
+    <div class="credit-form__group credit-form__group--half">
+        <div>
+            {{ form_label(form.email, null, {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.email) }}
+            {{ form_errors(form.email) }}
+        </div>
+        <div>
+            {{ form_label(form.phone, null, {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.phone) }}
+            {{ form_errors(form.phone) }}
+        </div>
+    </div>
+
+    <div class="credit-form__group credit-form__group--half">
+        <div>
+            {{ form_label(form.birthDate, null, {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.birthDate) }}
+            {{ form_errors(form.birthDate) }}
+        </div>
+        <div>
+            {{ form_label(form.nationality, null, {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.nationality) }}
+            {{ form_errors(form.nationality) }}
+        </div>
+    </div>
+
+    <div class="credit-form__group credit-form__group--half">
+        <div>
+            {{ form_label(form.maritalStatus, null, {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.maritalStatus) }}
+            {{ form_errors(form.maritalStatus) }}
+        </div>
+        <div>
+            {{ form_label(form.dependents, null, {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.dependents) }}
+            {{ form_errors(form.dependents) }}
+        </div>
+    </div>
+</div>
+
+<div class="credit-form__section">
+    <h2 class="credit-form__section-title">Adresse</h2>
+    
+    <div class="credit-form__group">
+        {{ form_label(form.address, null, {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+        {{ form_widget(form.address) }}
+        {{ form_errors(form.address) }}
+    </div>
+
+    <div class="credit-form__group credit-form__group--half">
+        <div>
+            {{ form_label(form.city, null, {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.city) }}
+            {{ form_errors(form.city) }}
+        </div>
+        <div>
+            {{ form_label(form.postalCode, null, {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.postalCode) }}
+            {{ form_errors(form.postalCode) }}
+        </div>
+    </div>
+
+    <div class="credit-form__group credit-form__group--half">
+        <div>
+            {{ form_label(form.country, null, {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.country) }}
+            {{ form_errors(form.country) }}
+        </div>
+        <div>
+            {{ form_label(form.housingType, null, {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.housingType) }}
+            {{ form_errors(form.housingType) }}
+        </div>
+    </div>
+</div>

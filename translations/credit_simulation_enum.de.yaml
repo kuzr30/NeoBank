@@ -1,0 +1,31 @@
+credit_types:
+  immobilier:
+    label: "Immobilienkredit"
+  auto:
+    label: "Autokredit"
+  consommation:
+    label: "Verbraucherkredit"
+  travaux:
+    label: "Renovierungskredit"
+  professionnel:
+    label: "Geschäftskredit"
+  personal:
+    label: "Privatkredit"
+  home_improvement:
+    label: "Wohnungsverbesserung"
+  debt_consolidation:
+    label: "Kreditumschuldung"
+  mortgage:
+    label: "Hypothek"
+  renouvelable:
+    label: "Erneuerbarer Kredit"
+  etudiant:
+    label: "Studentenkredit"
+  relais:
+    label: "Überbrückungskredit"
+  microcredit:
+    label: "Mikrokredit"
+  leasing:
+    label: "Leasing"
+  voyage:
+    label: "Reisekredit"

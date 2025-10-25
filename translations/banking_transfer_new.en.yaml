@@ -1,0 +1,32 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_transfer_new.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_transfer_new:
+  header:
+    title: "New transfer"
+    subtitle: "Transfer money to a beneficiary account"
+    back_button: "Back"
+  
+  process_steps:
+    step1: "Information"
+    step2: "Validation"
+    step3: "Confirmation"
+  
+  source_account:
+    title: "Source account"
+    main_account: "Main Account"
+    available_balance: "Available balance:"
+    no_account_warning: "No source account available. Contact your advisor."
+  
+  destination_account:
+    title: "Beneficiary account"
+    help_text: "Select the account to which you want to make the transfer"
+  
+  transfer_details:
+    title: "Transfer details"
+    description_help: "Describe the reason for this transfer (optional)"
+  
+  actions:
+    cancel: "Cancel"

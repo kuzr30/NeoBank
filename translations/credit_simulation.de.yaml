@@ -1,0 +1,98 @@
+credit_simulation:
+  # Credit types section
+  credit_types:
+    immobilier:
+      label: "Immobilienkredit"
+      description: "Finanzierung für den Kauf Ihres Haupt- oder Zweitwohnsitzes"
+    auto:
+      label: "Autokredit" 
+      description: "Finanzierung für den Kauf eines neuen oder gebrauchten Fahrzeugs"
+    consommation:
+      label: "Verbraucherkredit"
+      description: "Kredit zur Finanzierung Ihrer persönlichen Projekte"
+    travaux:
+      label: "Renovierungskredit"
+      description: "Finanzierung für Ihre Renovierungs- und Verbesserungsarbeiten"
+    professionnel:
+      label: "Geschäftskredit"
+      description: "Finanzierung für Ihre beruflichen Projekte"
+    personal:
+      label: "Privatkredit" 
+      description: "Privatkredit ohne Verwendungsnachweis"
+    home_improvement:
+      label: "Renovierungs-/Umbaukredit"
+      description: "Spezialisierter Kredit für Ihre Wohnraumverbesserungen"
+    debt_consolidation:
+      label: "Kreditumschuldung"
+      description: "Zusammenfassung Ihrer laufenden Kredite"
+    mortgage:
+      label: "Immobilienkredit"
+      description: "Immobiliendarlehen für den Erwerb Ihrer Immobilie"
+    renouvelable:
+      label: "Revolving-Kredit"
+      description: "Geldreserve dauerhaft verfügbar"
+    etudiant:
+      label: "Studienkredit"
+      description: "Finanzierung für Ihr Hochschulstudium"
+    relais:
+      label: "Überbrückungskredit"
+      description: "Temporäre Finanzierungslösung bei Kauf-Verkauf"
+    microcredit:
+      label: "Mikrokredit"
+      description: "Kleine Beträge zur Finanzierung Ihrer Projekte"
+    leasing:
+      label: "Leasing"
+      description: "Miete mit Kaufoption"
+    voyage:
+      label: "Reisekredit"
+      description: "Finanzierung für Ihre Reisen und Urlaube"
+
+  # Duration options
+  durations:
+    twelve_months: "12 Monate"
+    twenty_four_months: "24 Monate"
+    thirty_six_months: "36 Monate"
+    forty_eight_months: "48 Monate"
+    sixty_months: "60 Monate"
+    seventy_two_months: "72 Monate"
+    eighty_four_months: "84 Monate"
+    ninety_six_months: "96 Monate"
+    one_hundred_twenty_months: "120 Monate"
+    one_hundred_eighty_months: "180 Monate"
+    two_hundred_forty_months: "240 Monate"
+    three_hundred_months: "300 Monate"
+
+  # Duration units
+  duration_units:
+    months: "Monate"
+    years: "Jahre"
+    immobilier:
+      label: "Immobilienkredit"
+      description: "Finanzierung für den Kauf einer Immobilie"
+    auto:
+      label: "Autokredit"
+      description: "Finanzierung für den Kauf eines Fahrzeugs"
+    consommation:
+      label: "Verbraucherkredit"
+      description: "Kredit für Ihre persönlichen Projekte"
+    travaux:
+      label: "Renovierungskredit"
+      description: "Finanzierung für Ihre Renovierungsarbeiten"
+    professionnel:
+      label: "Geschäftskredit"
+      description: "Kredit für Ihre beruflichen Projekte"
+    personal:
+      label: "Privatkredit"
+      description: "Kredit ohne Verwendungsnachweis"
+    debt_consolidation:
+      label: "Kreditumschuldung"
+      description: "Zusammenfassung Ihrer bestehenden Kredite"
+    mortgage:
+      label: "Immobilienkredit"
+      description: "Finanzierung für den Kauf einer Immobilie"
+    renouvelable:
+      label: "Revolving-Kredit"
+      description: "Geldreserve beliebig wiederverwendbar"
+    microcredit:
+      label: "Privater Mikrokredit"
+      description: "Kleine Beträge für Personen ohne Zugang zu klassischen Bankkrediten"

@@ -1,0 +1,124 @@
+# Fichier de traduction pour l'interface des cartes bancaires utilisateur
+# Domaine: card_account_user  
+# Langue: Français (fr)
+
+card_account_user:
+  # Section principale
+  title: "Mes cartes bancaires"
+  subtitle: "Gérez vos cartes et découvrez nos offres"
+  
+  # Section carte existante
+  user_card:
+    title: "Ma carte"
+    status:
+      active: "Active"
+      blocked: "Bloquée" 
+      expired: "Expirée"
+      pending: "En attente"
+    
+    # Informations de la carte
+    card_info:
+      holder_label: "TITULAIRE"
+      expiry_label: "EXPIRE FIN"
+      account_label: "Compte"
+      daily_limit_label: "Plafond quotidien"
+      daily_limit_undefined: "Non défini"
+      
+  # Section souscription en cours
+  subscription:
+    title: "Votre demande de carte est en cours"
+    subtitle: "Votre carte {cardType} {cardBrand} est en cours de traitement"
+    request_date: "Demande effectuée le {date}"
+    
+    # Statuts de souscription
+    status:
+      contract_pending: "Contrat en préparation"
+      contract_sent: "Contrat envoyé - Signature requise"
+      admin_validation: "En attente de validation administrative"
+      contract_expired: "Contrat expiré"
+      pending: "En attente de validation"
+    
+    # Détails de la souscription
+    details:
+      card_type_label: "Type de carte :"
+      brand_label: "Marque :"
+      contract_label: "Contrat :"
+    
+    # Actions
+    actions:
+      sign_contract: "Signer le contrat"
+      sign_deadline: "Vous devez signer votre contrat dans les 7 jours pour valider votre demande."
+    
+    # Messages informatifs
+    messages:
+      contract_signature_required: "Veuillez signer votre contrat pour que votre demande puisse être traitée par nos équipes."
+      contract_signed_processing: "Votre contrat est signé. Nos équipes examinent votre demande et vous contacteront sous 48h ouvrées."
+      contract_expired_message: "Votre contrat a expiré. Une nouvelle demande de souscription sera nécessaire."
+      default_processing: "Votre demande est en cours de traitement par nos équipes. Vous recevrez un email dès que votre carte sera validée et prête à être utilisée."
+  
+  # Section choix de cartes (nouvelles souscriptions)
+  card_selection:
+    title: "Choisissez votre carte"
+    subtitle: "Découvrez nos différentes cartes et leurs avantages"
+    
+    # Marques
+    brands:
+      visa_title: "Cartes Visa"
+      mastercard_title: "Cartes Mastercard"
+    
+    # Types de cartes
+    card_types:
+      classic:
+        name: "Carte Classic"
+        badge: "Idéal pour débuter"
+        visa_price: "Gratuite"
+        visa_period: "la première année"
+        mastercard_price: "2€"
+        mastercard_period: "par mois"
+        
+      gold:
+        name: "Carte Gold"
+        badge: "Le plus populaire"
+        badge_alt: "Populaire"
+        visa_price: "5€"
+        mastercard_price: "8€"
+        period: "par mois"
+        
+      platinum:
+        name: "Carte Platinum"
+        badge: "Premium"
+        visa_price: "15€"
+        mastercard_price: "20€"
+        period: "par mois"
+    
+    # Action de souscription
+    subscribe_action: "Souscrire"
+  
+  # Messages généraux
+  common:
+    loading: "Chargement..."
+    error: "Une erreur est survenue"
+    retry: "Réessayer"
+    
+  # Navigation et actions
+  navigation:
+    back: "Retour"
+    continue: "Continuer"
+    close: "Fermer"
+    
+  # Formulaires
+  forms:
+    required: "Obligatoire"
+    optional: "Facultatif"
+    select_placeholder: "Sélectionner..."
+    
+  # Sécurité et validations
+  security:
+    card_blocked_warning: "Cette carte a été bloquée pour des raisons de sécurité"
+    card_expired_warning: "Cette carte a expiré et doit être renouvelée"
+    
+  # Assistance
+  help:
+    need_help: "Besoin d'aide ?"
+    contact_support: "Contacter le support"
+    faq: "Questions fréquentes"

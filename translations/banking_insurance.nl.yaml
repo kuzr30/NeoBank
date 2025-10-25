@@ -1,0 +1,110 @@
+# Nederlandse vertalingen voor de bancaire verzekeringsmodule
+banking_insurance:
+  header:
+    title: "Mijn Verzekeringen"
+    subtitle: "Beheer van uw verzekeringscontracten"
+    last_update: "Laatste update"
+    new_quote: "Offerte aanvragen"
+
+  statistics:
+    active_contracts: "Actieve contracten"
+    monthly_premium: "Totale maandelijkse premie"
+    insurance_types: "Verzekeringstypes"
+    expiring_contracts: "Aflopende contracten"
+
+  contracts:
+    title: "Mijn Verzekeringscontracten"
+    contract_number: "Contract nr."
+    active_status: "Actief"
+    suspended_status: "Opgeschort"
+    expired_status: "Verlopen"
+    cancelled_status: "Geannuleerd"
+
+  coverage:
+    monthly_premium: "Maandelijkse premie"
+    coverage_amount: "Dekkingsbedrag"
+
+  details:
+    activation_date: "Activeringsdatum"
+    expiration_date: "Vervaldatum"
+    duration: "Looptijd"
+    months: "maanden"
+    next_premium: "Volgende vervaldatum"
+
+  actions:
+    manage: "Beheren"
+    certificate: "Certificaat"
+    reactivate: "Heractiveren"
+    details: "Details"
+
+  empty_state:
+    no_contracts_title: "Geen verzekeringscontracten"
+    no_contracts_description: "U heeft momenteel geen actieve verzekeringscontracten. Ontdek onze gepersonaliseerde aanbiedingen om te beschermen wat het belangrijkst voor u is."
+    request_quote: "Offerte aanvragen"
+    learn_more: "Meer informatie"
+
+  pending_quotes:
+    title: "Wachtende offertes"
+    subtitle: "Uw offerte-aanvragen in behandeling"
+    quote_number: "Offerte nr."
+    type: "Type"
+    date: "Datum"
+    status: "Status"
+    actions: "Acties"
+    view: "Bekijken"
+    
+    mobile_insurance:
+      title: "Mobiele Verzekering"
+      description: "Bescherm uw smartphone tegen schade, diefstal en oxidatie"
+      price: "Vanaf 8,90 €/maand"
+      features:
+        - "Accidentele schade"
+        - "Diefstal en agressie"
+        - "Oxidatie"
+    
+    travel_insurance:
+      title: "Reisverzekering"
+      description: "Reis met vertrouwen met onze internationale dekking"
+      price: "Vanaf 25 €/reis"
+      features:
+        - "Medische kosten"
+        - "Repatriëring"
+        - "Reisannulering"
+    
+    school_insurance:
+      title: "Schoolverzekering"
+      description: "Volledige bescherming van uw kinderen op school en bij activiteiten"
+      price: "Vanaf 12 €/jaar"
+      features:
+        - "Schoolongeval"
+        - "Burgerlijke aansprakelijkheid"
+        - "Pesten"
+
+  # Claims section
+  claims:
+    title: "Recente claims"
+    declaration_date: "Aangiftedatum"
+    contract: "Contract"
+    claim_type: "Type claim"
+    claimed_amount: "Geclaimd bedrag"
+    compensation: "Vergoeding"
+    status: "Status"
+    actions: "Acties"
+    
+    types:
+      glass_breakage: "Glasbreuk"
+      water_damage: "Waterschade"
+    
+    claim_status:
+      in_progress: "Lopend"
+      compensated: "Vergoed"
+
+  # General actions
+  general_actions:
+    subscribe: "Inschrijven"
+
+  # Pagination
+  pagination:
+    previous: "Vorige"
+    next: "Volgende"
+    page_info: "Pagina %d van %d (%d claims)"

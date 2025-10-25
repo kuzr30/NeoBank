@@ -1,0 +1,73 @@
+<section class="insurance-contact-cta">
+    <div class="insurance-contact-cta__container">
+        <div class="insurance-contact-cta__info">
+            <h2 class="insurance-contact-cta__title">{{ tp('insurance.contact_cta.title', [], 'insurance') }}</h2>
+            <p class="insurance-contact-cta__desc">{{ tp('insurance.contact_cta.description', [], 'insurance') }}</p>
+            <a href="#" class="insurance-contact-cta__btn">{{ tp('insurance.contact_cta.button', [], 'insurance') }}</a>
+        </div>
+       
+    </div>
+    <style>
+        .insurance-contact-cta {
+            background: linear-gradient(90deg, var(--color-primary, #6366f1) 0%, var(--color-secondary, #a21caf) 100%);
+            padding: 3rem 0 2rem 0;
+            color: #fff;
+        }
+        .insurance-contact-cta__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: 0 auto;
+            gap: 2.5rem;
+        }
+        .insurance-contact-cta__info {
+            flex: 1 1 0;
+        }
+        .insurance-contact-cta__title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .insurance-contact-cta__desc {
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+        }
+        .insurance-contact-cta__btn {
+            display: inline-block;
+            background: #fff;
+            color: var(--color-primary, #6366f1);
+            font-weight: 700;
+            padding: 0.9rem 2.2rem;
+            border-radius: 2rem;
+            font-size: 1.1rem;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(30,41,59,0.10);
+            transition: background 0.2s, color 0.2s;
+        }
+        .insurance-contact-cta__btn:hover {
+            background: var(--color-primary, #6366f1);
+            color: #fff;
+        }
+        .insurance-contact-cta__img {
+            flex: 1 1 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .insurance-contact-cta__img img {
+            max-width: 320px;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 24px rgba(30,41,59,0.18);
+        }
+        @media (max-width: 900px) {
+            .insurance-contact-cta__container {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            .insurance-contact-cta__img img {
+                max-width: 220px;
+            }
+        }
+    </style>
+</section>

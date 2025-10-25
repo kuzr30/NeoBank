@@ -1,0 +1,126 @@
+<div class="credit-form__section">
+    <h2 class="credit-form__section-title">{{ tp('step2.employment_section.title', {}, 'credit_step_forms') }}</h2>
+    
+    <div class="credit-form__group credit-form__group--half">
+        <div>
+            {{ form_label(form.monthlyIncome, tp('step2.employment_section.monthly_income.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.monthlyIncome, {'attr': {'placeholder': tp('step2.employment_section.monthly_income.placeholder', {}, 'credit_step_forms')}}) }}
+            {{ form_help(form.monthlyIncome) }}
+            <span class="credit-form__error">{{ form_errors(form.monthlyIncome) }}</span>
+        </div>
+        <div>
+            {{ form_label(form.employmentType, tp('step2.employment_section.employment_type.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.employmentType, {'attr': {'placeholder': tp('step2.employment_section.employment_type.placeholder', {}, 'credit_step_forms')}}) }}
+            <span class="credit-form__error">{{ form_errors(form.employmentType) }}</span>
+        </div>
+    </div>
+
+    <div class="credit-form__group credit-form__group--half" 
+         data-target="employment-details" 
+         style="display: none;">
+        <div>
+            {{ form_label(form.employer, tp('step2.employment_section.employer.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label'}}) }}
+            {{ form_widget(form.employer, {'attr': {'placeholder': tp('step2.employment_section.employer.placeholder', {}, 'credit_step_forms')}}) }}
+            <span class="credit-form__error">{{ form_errors(form.employer) }}</span>
+        </div>
+        <div>
+            {{ form_label(form.jobTitle, tp('step2.employment_section.job_title.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label'}}) }}
+            {{ form_widget(form.jobTitle, {'attr': {'placeholder': tp('step2.employment_section.job_title.placeholder', {}, 'credit_step_forms')}}) }}
+            <span class="credit-form__error">{{ form_errors(form.jobTitle) }}</span>
+        </div>
+    </div>
+
+    <div class="credit-form__group" data-target="employment-details" style="display: none;">
+        {{ form_label(form.employmentStartDate, tp('step2.employment_section.employment_start_date.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label'}}) }}
+        {{ form_widget(form.employmentStartDate, {'attr': {'placeholder': tp('step2.employment_section.employment_start_date.placeholder', {}, 'credit_step_forms')}}) }}
+        <span class="credit-form__error">{{ form_errors(form.employmentStartDate) }}</span>
+    </div>
+</div>
+
+<div class="credit-form__section">
+    <h2 class="credit-form__section-title">{{ tp('step2.financial_section.title', {}, 'credit_step_forms') }}</h2>
+    
+    <div class="credit-form__group credit-form__group--half">
+        <div>
+            {{ form_label(form.monthlyExpenses, tp('step2.financial_section.monthly_expenses.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label credit-form__label--required'}}) }}
+            {{ form_widget(form.monthlyExpenses, {'attr': {'placeholder': tp('step2.financial_section.monthly_expenses.placeholder', {}, 'credit_step_forms')}}) }}
+            <span class="credit-form__error">{{ form_errors(form.monthlyExpenses) }}</span>
+        </div>
+        <div>
+            {{ form_label(form.existingLoans, tp('step2.financial_section.existing_loans.label', {}, 'credit_step_forms'), {'label_attr': {'class': 'credit-form__label'}}) }}
+            {{ form_widget(form.existingLoans, {'attr': {'placeholder': tp('step2.financial_section.existing_loans.placeholder', {}, 'credit_step_forms')}}) }}
+            {{ form_help(form.existingLoans) }}
+            <span class="credit-form__error">{{ form_errors(form.existingLoans) }}</span>
+        </div>
+    </div>
+
+    <!-- Capacity calculation display -->
+    <div class="credit-form__capacity-display" data-target="capacity-info" style="display: none;">
+        <h3>{{ tp('capacity_analysis.title', {}, 'credit_step_forms') }}</h3>
+        
+        <div class="credit-form__capacity-item">
+            <span class="credit-form__capacity-label">{{ tp('capacity_analysis.income_label', {}, 'credit_step_forms') }} :</span>
+            <span class="credit-form__capacity-value" data-capacity="income">0{{ tp('common.currency_symbol', {}, 'credit_step_forms') }}</span>
+        </div>
+        
+        <div class="credit-form__capacity-item">
+            <span class="credit-form__capacity-label">{{ tp('capacity_analysis.total_expenses_label', {}, 'credit_step_forms') }} :</span>
+            <span class="credit-form__capacity-value" data-capacity="total-expenses">0{{ tp('common.currency_symbol', {}, 'credit_step_forms') }}</span>
+        </div>
+        
+        <div class="credit-form__capacity-item">
+            <span class="credit-form__capacity-label">{{ tp('capacity_analysis.remaining_income_label', {}, 'credit_step_forms') }} :</span>
+            <span class="credit-form__capacity-value" data-capacity="remaining">0{{ tp('common.currency_symbol', {}, 'credit_step_forms') }}</span>
+        </div>
+        
+        <div class="credit-form__capacity-item">
+            <span class="credit-form__capacity-label">{{ tp('capacity_analysis.debt_ratio_label', {}, 'credit_step_forms') }} :</span>
+            <span class="credit-form__capacity-value" data-capacity="debt-ratio">0%</span>
+        </div>
+        
+        <div class="credit-form__capacity-item">
+            <span class="credit-form__capacity-label">{{ tp('capacity_analysis.max_payment_label', {}, 'credit_step_forms') }} :</span>
+            <span class="credit-form__capacity-value" data-capacity="max-payment">0{{ tp('common.currency_symbol', {}, 'credit_step_forms') }}{{ tp('common.per_month', {}, 'credit_step_forms') }}</span>
+        </div>
+    </div>
+</div>
+
+<style>
+    .credit-form__capacity-display {
+        background: #f0f9ff;
+        border: 1px solid #bae6fd;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    .credit-form__capacity-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .credit-form__capacity-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .credit-form__capacity-label {
+        font-weight: 500;
+        color: #0c4a6e;
+    }
+
+    .credit-form__capacity-value {
+        font-weight: 600;
+        color: #0369a1;
+        font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+    }
+
+    @media (max-width: 768px) {
+        .credit-form__capacity-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.25rem;
+        }
+    }
+</style>

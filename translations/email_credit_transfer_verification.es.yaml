@@ -1,0 +1,40 @@
+email_credit_transfer_verification:
+  title: "Código de verificación - Transferencia de crédito"
+  content:
+    page_title: "Validación de transferencia requerida"
+    greeting: "Hola <strong>{userName}</strong>,"
+    detection_section:
+      title: "Solicitud de transferencia detectada"
+      message: "Ha solicitado una transferencia desde su cuenta de crédito. Para asegurar esta operación, valide con el código de verificación de abajo."
+    verification_section:
+      title: "Código de verificación seguro"
+      code_label: "Código de validación"
+      expiry: "Expira en 10 minutos"
+    transaction_details:
+      title: "Detalles de la transacción"
+      source_account: "Cuenta origen"
+      destination_account: "Cuenta destino"
+      principal_account: "Cuenta Principal"
+      amount_label: "Monto a transferir"
+    security_section:
+      title: "Seguridad"
+      validity: "Este código es válido durante 10 minutos únicamente"
+      confidentiality: "Confidencialidad absoluta"
+      confidentiality_description: "Nunca comparta este código con nadie"
+      unauthorized_transaction: "Transacción no autorizada"
+      warning: "Si usted no es el origen de esta solicitud, contacte inmediatamente a nuestro servicio al cliente."
+      phone: "Teléfono: %company_phone%"
+      urgency: "Disponible 24h/24 para urgencias"
+    support_text: "Para cualquier pregunta relacionada con esta operación de transferencia, nuestro servicio de seguridad permanece a su disposición."
+    instructions_section:
+      title: "Instrucciones"
+      step_1: "Ingrese este código en la página de validación"
+      step_2: "La transferencia se procesará inmediatamente después de la validación"
+      step_3: "Se le enviará un correo de confirmación"
+    footer: "Correo automático de seguridad <br>Servicio de Transferencias - Validación requerida"
+  
+  logs:
+    sending: "Enviando código de verificación de transferencia"
+    success: "Código de verificación de transferencia enviado con éxito"
+    error: "Error al enviar código de verificación de transferencia"
+    send_failed: "Fallo en el envío de código de verificación de transferencia"

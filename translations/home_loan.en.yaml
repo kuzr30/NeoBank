@@ -1,0 +1,111 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: home_loan.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+home_loan:
+  page:
+    title: "Home Ownership Loan"
+    description: "Become a homeowner with our home ownership loan. Finance your main residence under the best conditions."
+  
+  hero:
+    class: "credit-detail-hero--home-loan"
+    taux: "3.5%"
+    montant: "€400,000"
+    duree: "25 years"
+    title: "Home Ownership Loan"
+    subtitle: "Become the owner of your main residence"
+  
+  section_1:
+    title: "What is a home ownership loan?"
+    content:
+      paragraph_1: "The home ownership loan allows you to become the owner of your main residence. It finances the acquisition of a new or old property, with or without renovation work."
+      paragraph_2: "Long-term mortgage with advantageous conditions, it comes with solid guarantees and can be complemented by subsidized loans depending on your situation."
+  
+  features:
+    title: "Loan characteristics"
+    montant:
+      value: "Up to €400,000"
+      detail: "According to property value"
+    duree:
+      value: "Up to 25 years"
+      detail: "Long-term repayment"
+    taux:
+      value: "From {rate}% APR*"
+      detail: "Advantageous fixed rate"
+    garantie:
+      value: "Mortgage"
+      detail: "On the financed property"
+  
+  section_3:
+    title: "Benefits of home ownership loan"
+    advantages:
+      taux_fixe:
+        title: "Fixed rate"
+        description: "Security with an invariable rate throughout the duration"
+      duree_longue:
+        title: "Long duration"
+        description: "Reduced monthly payments with spreading up to 25 years"
+      prets_aides:
+        title: "Subsidized loans"
+        description: "Possible combination with PTZ, Action Logement loan..."
+      modulation:
+        title: "Modulation"
+        description: "Adaptation of installments according to your income changes"
+      transfert:
+        title: "Possible transfer"
+        description: "In case of resale and repurchase within 2 years"
+  
+  section_4:
+    title: "Eligibility conditions"
+    emprunteur:
+      title: "Borrower conditions"
+      items:
+        premiere_acquisition: "First acquisition or non-owner for 2 years"
+        revenus: "Stable and sufficient income"
+        apport: "Minimum 10% personal contribution"
+        endettement: "Debt ratio below 35%"
+    bien:
+      title: "Property conditions"
+      items:
+        residence_principale: "Main residence required"
+        normes: "Compliance with construction standards"
+        diagnostic: "Favorable energy diagnosis"
+        assurance_habitation: "Home insurance subscribed"
+  
+  section_5:
+    title: "Required documents"
+    dossier_personnel:
+      title: "Personal file"
+      items:
+        identite: "Identity documents"
+        revenus: "Proof of income (3 months)"
+        impots: "Tax notice"
+        comptes: "Account statements"
+    projet_immobilier:
+      title: "Real estate project"
+      items:
+        compromis: "Signed sales agreement"
+        financement: "Financing plan"
+        diagnostics: "Property diagnostics"
+        assurance_emprunteur: "Borrower insurance"
+    apport_garanties:
+      title: "Contribution and guarantees"
+      items:
+        justificatifs_apport: "Proof of personal contribution"
+        evaluation: "Property valuation"
+        acte_notarie: "Preliminary notarial deed"
+        conditions_suspensives: "Suspensive conditions"
+  
+  legal:
+    details:
+      title: "Important legal information"
+      taeg: "<strong>*APR:</strong> Representative example: for a home ownership loan of €250,000 over 20 years at 3.5% APR, you repay 240 monthly installments of €1,448, i.e. a total amount of €347,520 (cost of credit: €97,520)."
+      garantie: "<strong>Guarantee:</strong> First-rank mortgage on the financed property, mortgage registration."
+      assurance: "<strong>Insurance:</strong> Mandatory death-disability insurance, optional unemployment."
+      condition_suspensive: "<strong>Suspensive condition:</strong> Mandatory loan approval clause in the sales agreement."
+      delai_reflexion: "<strong>Cooling-off period:</strong> Minimum 10 days before final acceptance of the loan offer."
+  
+  cta:
+    title: "Make your real estate project a reality"
+    subtitle: "Become a homeowner with our advantageous home ownership loan"

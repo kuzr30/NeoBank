@@ -1,0 +1,114 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: travaux.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+travaux:
+  page:
+    title: "Home Improvement Loan"
+    description: "Renovate and improve your home with our home improvement loan. Finance all your improvement projects."
+  
+  hero:
+    class: "credit-detail-hero--travaux"
+    taux: "3.2%"
+    montant: "100,000€"
+    duree: "15 years"
+    title: "Home Improvement Loan"
+    subtitle: "Transform your home"
+  
+  section_1:
+    title: "What is a home improvement loan?"
+    content:
+      paragraph_1: "The home improvement loan finances all your home development, renovation and improvement projects: kitchen, bathroom, insulation, heating, extension, pool..."
+      paragraph_2: "A solution specially designed for housing, it benefits from preferential conditions and can be adapted to the pace of your work with progressive release of funds."
+  
+  features:
+    title: "Home improvement loan features"
+    montant:
+      value: "Up to €100,000"
+      detail: "Depending on the scope of work"
+    duree:
+      value: "From 1 to 15 years"
+      detail: "Duration adapted to the project"
+    taux:
+      value: "From 3.2% APR*"
+      detail: "Preferential home improvement rate"
+    garantie:
+      value: "Depending on amount"
+      detail: "Mortgage if necessary"
+  
+  section_3:
+    title: "Benefits of home improvement loan"
+    advantage_1:
+      title: "Advantageous rates"
+      content: "Preferential conditions for improvement work"
+    advantage_2:
+      title: "Adapted release"
+      content: "Funds released according to work progress"
+    advantage_3:
+      title: "All projects"
+      content: "Renovation, extension, development, equipment"
+    advantage_4:
+      title: "Added value"
+      content: "Significant increase in your property value"
+    advantage_5:
+      title: "Support"
+      content: "Advice to optimize your project"
+  
+  section_4:
+    title: "Eligibility conditions"
+    conditions:
+      title: "Project conditions"
+      condition_1: "Work on primary or secondary residence"
+      condition_2: "Detailed quotes from qualified companies"
+      condition_3: "Compliance with building standards"
+      condition_4: "Administrative authorizations if necessary"
+    documents:
+      title: "Supporting documents"
+      document_1: "Invoices or quotes from professionals"
+      document_2: "Recent proof of income"
+      document_3: "Property title or rental agreement"
+      document_4: "Bank statements for the last 3 months"
+  
+  section_5:
+    title: "Required documents"
+    personal:
+      title: "Personal documents"
+      document_1: "Proof of identity and residence"
+      document_2: "Last 3 pay slips"
+      document_3: "Tax notice"
+      document_4: "Account statements"
+    property:
+      title: "Real estate property"
+      document_1: "Property title"
+      document_2: "Property tax"
+      document_3: "Home insurance"
+      document_4: "Housing plans"
+    project:
+      title: "Work project"
+      document_1: "Detailed signed quotes"
+      document_2: "Description of work"
+      document_3: "Administrative authorizations"
+      document_4: "Provisional schedule"
+  
+  legal:
+    title: "Important legal information"
+    taeg:
+      title: "*APR"
+      content: "Representative example: for a home improvement loan of €40,000 over 10 years at APR of 3.2%, you repay 120 monthly payments of €387, i.e. a total amount of €46,440 (cost of credit: €6,440)."
+    deblocage:
+      title: "Release"
+      content: "Funds released progressively upon presentation of paid invoices."
+    travaux:
+      title: "Work"
+      content: "Obligation to carry out the work in accordance with quotes."
+    garanties:
+      title: "Guarantees"
+      content: "Mortgage possible depending on amount, lender's privilege."
+    assurance:
+      title: "Insurance"
+      content: "Death and disability insurance recommended."
+  
+  cta:
+    title: "Bring Your Home Improvement Projects to Life"
+    subtitle: "Renovate and improve your home with our dedicated loan"

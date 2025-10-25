@@ -1,0 +1,58 @@
+email_credit_application_folder_customer_confirmation:
+  title: "Confirmación de su solicitud de crédito - %company_name%"
+  
+  content:
+    page_title: "Confirmación de su solicitud de crédito"
+    greeting: "Hola {firstName} {lastName},"
+    received_message: "Hemos recibido correctamente su solicitud de crédito. Aquí tiene un resumen de su solicitud:"
+    
+    reference_section:
+      title: "Referencia de su solicitud"
+      reference_number: "{referenceNumber}"
+    
+    request_details:
+      title: "Detalles de su solicitud"
+      requested_amount: "Monto solicitado"
+      amount_value: "{amount} €"
+      credit_type: "Tipo de crédito"
+      duration: "Duración"
+      duration_months: "{duration} meses"
+      estimated_monthly: "Cuota mensual estimada"
+      monthly_value: "{monthlyPayment} €"
+      total_cost: "Costo total"
+      total_cost_value: "{totalCost} €"
+    
+    your_information:
+      title: "Su información"
+      email: "Correo electrónico"
+      phone: "Teléfono"
+      address: "Dirección"
+      address_format: "{address}, {postalCode} {city}"
+    
+    next_steps:
+      title: "Próximos pasos"
+      step1: "Estamos estudiando actualmente su solicitud"
+      step2: "Recibirá una respuesta en 48h hábiles"
+      step3: "En caso de aceptación, le contactaremos para finalizar su expediente"
+    
+    account_section:
+      title: "Seguir su solicitud"
+      login_info: "Para seguir el progreso de su solicitud de crédito en tiempo real:"
+      existing_account: "• Si ya tiene una cuenta %company_name%: <strong>Conéctese</strong> a su espacio cliente"
+      new_account: "• Si aún no tiene cuenta: <strong>Cree su cuenta</strong> con la dirección de correo de esta solicitud"
+      benefits: "Con su espacio cliente, podrá:"
+      benefit1: "• Consultar el estado de su solicitud en tiempo real"
+      benefit2: "• Descargar los documentos necesarios"
+      benefit3: "• Comunicarse directamente con su asesor"
+      login_button: "Conectarse"
+      register_button: "Crear una cuenta"
+    
+    questions_section:
+      title: "Preguntas"
+      contact_info: "Si tiene preguntas, no dude en contactarnos mencionando su referencia {referenceNumber}."
+    
+    signature: "Cordialmente,<br><strong>El equipo %company_name%</strong><br><em>Su socio financiero de confianza</em>"
+  
+  log:
+    customer_confirmation_sent: "Confirmación enviada al cliente para la solicitud {referenceNumber}"
+    email_sent: "Correo electrónico de confirmación enviado a {customerEmail}"

@@ -1,0 +1,6 @@
+flash:
+  invalid_security_token: "Ongeldig beveiligingstoken."
+  sub_account_not_found: "Subrekening niet gevonden of toegang geweigerd."
+  verification_code_sent: "Verificatiecode verzonden naar uw e-mailadres."
+  transfer_success: "Overschrijving succesvol uitgevoerd!"
+  transfer_error: "Fout bij overschrijving: "

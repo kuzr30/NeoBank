@@ -1,0 +1,88 @@
+register:
+  errors:
+    first_name_required: "Der Vorname ist erforderlich"
+    first_name_min: "Der Vorname muss mindestens {{ limit }} Zeichen lang sein"
+    first_name_max: "Der Vorname darf nicht mehr als {{ limit }} Zeichen haben"
+    last_name_required: "Der Nachname ist erforderlich"
+    last_name_min: "Der Nachname muss mindestens {{ limit }} Zeichen lang sein"
+    last_name_max: "Der Nachname darf nicht mehr als {{ limit }} Zeichen haben"
+    email_required: "Die E-Mail ist erforderlich"
+    email_invalid: "Die E-Mail ist nicht gültig"
+    email_exists: "Es gibt bereits ein Konto mit dieser E-Mail"
+    password_required: "Das Passwort ist erforderlich"
+    password_min: "Ihr Passwort muss mindestens {{ limit }} Zeichen enthalten"
+    password_mismatch: "Die Passwörter stimmen nicht überein"
+    terms_required: "Sie müssen unsere Bedingungen akzeptieren"
+
+validators:
+  european_iban:
+    message: "Die IBAN \"{{ value }}\" ist nicht gültig."
+    invalid_format: "Die IBAN muss dem europäischen Format entsprechen."
+  sufficient_balance:
+    message: "Der Betrag kann Ihr verfügbares Guthaben von {{ balance }} € nicht überschreiten"
+  devis_form:
+    lastname_required: "Der Nachname ist erforderlich"
+    lastname_max: "Der Nachname darf nicht mehr als {{ limit }} Zeichen enthalten"
+    firstname_required: "Der Vorname ist erforderlich"
+    firstname_max: "Der Vorname darf nicht mehr als {{ limit }} Zeichen enthalten"
+    email_required: "Die E-Mail ist erforderlich"
+    email_invalid: "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+    phone_required: "Die Telefonnummer ist erforderlich"
+    phone_invalid: "Bitte geben Sie eine gültige Telefonnummer ein"
+    insurance_type_required: "Bitte wählen Sie einen Versicherungstyp aus"
+    contact_preference_invalid: "Bitte wählen Sie eine gültige Kontaktpräferenz aus"
+    comments_max: "Die Kommentare dürfen nicht mehr als {{ limit }} Zeichen enthalten"
+
+# Messages de validation pour le domaine credit_step_forms
+# Étape 1 - Champs personnels
+step1.fields.firstname.errors.required: "Der Vorname ist erforderlich"
+step1.fields.lastname.errors.required: "Der Nachname ist erforderlich"
+step1.fields.email.errors.required: "Die E-Mail-Adresse ist erforderlich"
+step1.fields.email.errors.invalid: "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+step1.fields.phone.errors.required: "Die Telefonnummer ist erforderlich"
+step1.fields.phone.errors.invalid: "Bitte geben Sie eine gültige Telefonnummer ein"
+step1.fields.birth_date.errors.required: "Das Geburtsdatum ist erforderlich"
+step1.fields.birth_date.errors.age_restriction: "Sie müssen volljährig sein, um einen Kreditantrag zu stellen"
+step1.fields.nationality.errors.required: "Die Staatsangehörigkeit ist erforderlich"
+step1.fields.marital_status.errors.required: "Der Familienstand ist erforderlich"
+step1.fields.marital_status.errors.invalid: "Ungültiger Familienstand"
+step1.fields.dependents.errors.required: "Die Anzahl der Unterhaltsberechtigten ist erforderlich"
+step1.fields.dependents.errors.invalid_range: "Die Anzahl der Unterhaltsberechtigten muss zwischen 0 und 20 liegen"
+
+# Étape 1 - Section adresse
+step1.address_section.address.errors.required: "Die Adresse ist erforderlich"
+step1.address_section.city.errors.required: "Die Stadt ist erforderlich"
+step1.address_section.postal_code.errors.required: "Die Postleitzahl ist erforderlich"
+step1.address_section.postal_code.errors.invalid: "Die Postleitzahl muss 5 Ziffern enthalten"
+step1.address_section.country.errors.required: "Das Land ist erforderlich"
+step1.address_section.housing_type.errors.required: "Der Wohnungstyp ist erforderlich"
+step1.address_section.housing_type.errors.invalid: "Ungültiger Wohnungstyp"
+
+# Étape 2 - Situation financière
+step2.fields.monthly_income.errors.required: "Das monatliche Einkommen ist erforderlich"
+step2.fields.monthly_income.errors.min_value: "Das erforderliche monatliche Mindesteinkommen beträgt 1000€"
+step2.fields.employment_type.errors.required: "Der Beschäftigungstyp ist erforderlich"
+step2.fields.employment_type.errors.invalid: "Ungültiger Beschäftigungstyp"
+step2.fields.monthly_expenses.errors.required: "Die monatlichen Ausgaben sind erforderlich"
+step2.fields.monthly_expenses.errors.min_value: "Die Ausgaben können nicht negativ sein"
+step2.fields.existing_loans.errors.min_value: "Der Betrag kann nicht negativ sein"
+
+# Schritt 3 - Kreditkonfiguration
+step3.credit_configuration.loan_amount.errors.required: "Der Kreditbetrag ist erforderlich"
+step3.credit_configuration.loan_amount.errors.invalid_range: "Der Kreditbetrag muss zwischen 3000€ und 30.000.000€ liegen"
+step3.credit_configuration.duration.errors.required: "Die Kreditlaufzeit ist erforderlich"
+step3.credit_configuration.duration.errors.min_value: "Die Laufzeit muss mindestens 2 Monate betragen"
+
+# Schritt 3 - Einverständnisse
+step3.consent.terms_accepted.errors.required: "Sie müssen die allgemeinen Geschäftsbedingungen akzeptieren"
+step3.consent.data_processing_accepted.errors.required: "Sie müssen der Verarbeitung Ihrer persönlichen Daten zustimmen"
+
+# Validateurs IBAN supplémentaires
+european_iban:
+  invalid_checksum: "Die IBAN \"{{ value }}\" hat eine ungültige Prüfsumme."
+  non_european: "Die IBAN \"{{ value }}\" gehört nicht zu einem akzeptierten europäischen Land."
+  
+iban_validator:
+  message: "Die IBAN \"{{ value }}\" ist nicht gültig."
+  invalid_format: "Die IBAN muss im französischen Format sein (FR gefolgt von 25 Zeichen)."
+  invalid_checksum: "Die IBAN \"{{ value }}\" hat eine ungültige Prüfsumme."

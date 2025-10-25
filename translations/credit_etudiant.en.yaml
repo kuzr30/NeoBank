@@ -1,0 +1,110 @@
+# ENGLISH TRANSLATION - Translated from French
+# Student credit translation file
+# Domain: credit_etudiant
+# Language: English (en)
+
+credit_etudiant:
+  page:
+    title: "Student Credit"
+    description: "Finance your higher education with our student credit. Preferential conditions and deferred repayment."
+
+  hero:
+    title: "Student Credit"
+    subtitle: "Invest in your future"
+    values:
+      taux: "{rate}% APR*"
+      montant: "50,000€"
+      duree: "15 years"
+
+  section_1:
+    title: "What is student credit?"
+    content:
+      paragraph_1: "Student credit is designed to finance your higher education: tuition fees, student housing, educational materials, study abroad and living expenses."
+      paragraph_2: "With preferential conditions and the possibility of deferring repayment, this credit accompanies you throughout your academic journey."
+
+  features:
+    montant: "Up to 50,000€"
+    montant_detail: "For the entire duration of studies"
+    duree: "Up to 15 years"
+    duree_detail: "With possible deferral"
+    taux: "From {rate}% APR*"
+    taux_detail: "Preferential student rate"
+    garantie: "Parental guarantee"
+    garantie_detail: "Or state guarantee"
+
+  advantages:
+    taux_preferentiel:
+      title: "Preferential rate:"
+      text: "Advantageous conditions reserved for students"
+    differe_remboursement:
+      title: "Deferred repayment:"
+      text: "Until the end of studies + 2 years"
+    deblocage_progressif:
+      title: "Progressive release:"
+      text: "Funds available according to needs"
+    garantie_etat:
+      title: "State guarantee:"
+      text: "Possible with the public scheme"
+    pas_frais:
+      title: "No processing fees:"
+      text: "No additional cost"
+
+  requirements:
+    conditions_etudiant:
+      title: "Student conditions"
+      items:
+        inscription: "Be enrolled in a higher education institution"
+        age: "Be between 18 and 28 years old"
+        nationalite: "French or EU nationality"
+        residence: "Reside in France"
+    garanties_requises:
+      title: "Required guarantees"
+      items:
+        caution: "Joint parental guarantee"
+        garantie_etat: "Or state guarantee (if eligible)"
+        justificatifs: "Income proof from guarantors"
+        engagement: "Signed repayment commitment"
+
+  documents:
+    dossier_etudiant:
+      title: "Student file"
+      items:
+        certificat: "School certificate"
+        carte: "Identity card or passport"
+        domicile: "Proof of residence"
+        devis: "Quotes or invoices for expenses to be financed"
+    dossier_garants:
+      title: "Guarantors file"
+      items:
+        identites: "Identity documents of guarantors"
+        bulletins: "Last 3 pay slips"
+        avis: "Tax notice"
+        patrimoine: "Proof of assets"
+    informations_bancaires:
+      title: "Banking information"
+      items:
+        rib: "Student account bank details"
+        releves: "Account statements"
+        attestation: "Bank certificate"
+
+  legal:
+    title: "Important legal information"
+    taeg:
+      title: "*APR:"
+      text: "Representative example: for a student credit of 20,000€ over 10 years at APR of 1.9%, you repay 120 monthly payments of 184€, for a total amount of 22,080€ (credit cost: 2,080€)."
+    differe:
+      title: "Deferral:"
+      text: "Possibility to defer capital repayment during studies."
+    garantie_etat:
+      title: "State guarantee:"
+      text: "Subject to eligibility conditions, without parental guarantee."
+    modulation:
+      title: "Modulation:"
+      text: "Adaptation of monthly payments according to situation evolution."
+    assurance:
+      title: "Insurance:"
+      text: "Death-disability included, unemployment optional."
+
+  cta:
+    title: "Give life to your ambitions"
+    subtitle: "Finance your studies with our advantageous student credit"

@@ -1,0 +1,13 @@
+exceptions:
+  submission_already_exists: "Een KYC-indiening is al in behandeling of goedgekeurd voor deze gebruiker."
+  invalid_status: "Ongeldige KYC-indiening status"
+  user_not_found: "Gebruiker niet gevonden"
+  documents_required: "Documenten zijn vereist voor KYC-indiening"
+
+log_messages:
+  submission_created: "KYC-indiening aangemaakt"
+  submission_approved: "KYC-indiening goedgekeurd"
+  submission_rejected: "KYC-indiening afgekeurd"
+  document_uploaded: "KYC-document succesvol geüpload"
+  validation_completed: "KYC-validatie voltooid"
+  status_updated: "KYC-status bijgewerkt"

@@ -1,0 +1,147 @@
+banking_credits:
+  # Header section
+  header:
+    title: "Meine Kredite"
+    breadcrumb_home: "Startseite"
+    breadcrumb_banking: "Bankdienstleistungen"
+    breadcrumb_current: "Meine Kredite"
+    last_update: "Letzte Aktualisierung"
+
+  # Credit statistics section
+  statistics:
+    total_credits: "Aktive Kredite"
+    total_amount: "Gesamter geliehener Betrag"
+    total_remaining: "Verbleibendes Kapital"
+    average_rate: "Durchschnittszinssatz"
+    available_balance: "Verfügbarer Gesamtsaldo"
+    monthly_payments: "Gesamte Monatsraten"
+
+  # Available credits section  
+  available_credits:
+    title: "Verfügbare Kredite"
+    subtitle: "Freigegebene und zur Nutzung verfügbare Beträge"
+    view_all: "Alle verfügbaren Kredite anzeigen"
+    from: "Ab"
+    rate: "Zinssatz ab %"
+    simulate: "Simulieren"
+    apply: "Beantragen"
+    duration: "Über %d Monate"
+    credit_account: "Kreditkonto"
+    available: "Verfügbar"
+    funds_released: "Freigegebene Mittel"
+    transfer_to_main: "Auf mein Hauptkonto überweisen"
+
+  # Active credits section
+  active_credits:
+    title: "Meine aktiven Kredite"
+    remaining_capital: "Verbleibendes Kapital"
+    monthly_payment: "Monatsrate"
+    next_payment: "Nächste Fälligkeit"
+    progress: "Fortschritt"
+    view_details: "Details anzeigen"
+    view_amortization: "Tilgung anzeigen"
+    real_estate: "Immobilie"
+
+  # Applications section
+  applications:
+    title: "Meine Anträge"
+    reference: "Antrag Nr."
+    date: "Antragsdatum"
+    amount: "Betrag"
+    status: "Status"
+    actions: "Aktionen"
+    view: "Anzeigen"
+    no_applications: "Keine Kreditanträge"
+    credit_type: "Kreditart"
+
+  # Empty state
+  empty_state:
+    title: "Keine aktiven Kredite"
+    message: "Sie haben derzeit keine laufenden Kredite. Entdecken Sie unsere Kreditangebote, die auf Ihre Bedürfnisse zugeschnitten sind."
+
+  # Pagination
+  pagination:
+    previous: "Zurück"
+    next: "Weiter"
+    page_info: "Seite {{ page }} von {{ total }} ({{ count }} Anträge)"
+
+  # Labels - Common labels used across sections
+  labels:
+    initial_capital: "Anfangskapital"
+    duration: "Laufzeit"
+    months: "Monate"
+    start_date: "Startdatum"
+    status: "Status"
+    type: "Kreditart"
+    reference: "Referenz"
+    monthly_payment_short: "Monatsrate"
+    browse_offers: "Angebote durchsuchen"
+    property: "Immobilie"
+    status_fund_disbursed: "Mittel freigegeben"
+    available: "Verfügbar"
+    transfer_to_main: "Auf mein Hauptkonto überweisen"
+    percent_repaid: "%d%% zurückgezahlt"
+    
+  # Credit info
+  credit:
+    amount: "Betrag"
+    remaining_amount: "Verbleibendes Kapital"
+    monthly_payment: "Monatsrate"
+    interest_rate: "Zinssatz"
+    duration: "Laufzeit"
+    start_date: "Startdatum"
+    end_date: "Enddatum"
+    next_payment: "Nächste Fälligkeit"
+    status: "Status"
+    type: "Kreditart"
+    
+  # Credit types
+  types:
+    personal: "Privatkredit"
+    mortgage: "Immobilienkredit"
+    auto: "Autokredit"
+    consumer: "Verbraucherkredit"
+    professional: "Geschäftskredit"
+    student: "Studienkredit"
+    revolving: "Revolvierender Kredit"
+    
+  # Status
+  status:
+    active: "Aktiv"
+    pending: "Ausstehend"
+    approved: "Genehmigt"
+    rejected: "Abgelehnt"
+    completed: "Abgeschlossen"
+    suspended: "Ausgesetzt"
+    contract_sent: "Vertrag versendet"
+    contract_signed: "Vertrag unterzeichnet"
+    funds_disbursed: "Mittel freigegeben"
+    
+  # Actions
+  actions:
+    view_details: "Details anzeigen"
+    view_amortization: "Tilgung anzeigen"
+    simulate_credit: "Kredit simulieren"
+    apply_credit: "Kredit beantragen"
+    download_contract: "Vertrag herunterladen"
+    make_payment: "Zahlung tätigen"
+    
+  # Simulation form
+  simulation:
+    amount_label: "Gewünschter Betrag"
+    duration_label: "Laufzeit in Monaten"
+    purpose_label: "Verwendungszweck"
+    calculate: "Berechnen"
+    results_title: "Simulationsergebnisse"
+    monthly_payment_result: "Geschätzte Monatsrate"
+    total_cost: "Gesamtkosten des Kredits"
+    
+  # Messages
+  messages:
+    no_credits: "Keine laufenden Kredite"
+    no_applications: "Keine laufenden Anträge"
+    access_denied: "Zugriff auf diesen Kredit verweigert"
+    simulation_success: "Simulation erfolgreich berechnet"
+    
+  # Currency
+  currency: "€"

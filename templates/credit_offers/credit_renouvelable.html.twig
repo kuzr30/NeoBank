@@ -1,0 +1,143 @@
+{% extends 'credit_offers/credit_page_structure.html.twig' %}
+
+{% set page_title = tp('credit_renouvelable.page.title', [], 'credit_renouvelable') %}
+{% set page_description = tp('credit_renouvelable.page.description', [], 'credit_renouvelable') %}
+{% set hero_class = 'credit-detail-hero--renouvelable' %}
+
+{% block taux_value %}{{ credit_rate('renouvelable') }}%{% endblock %}
+{% block montant_value %}{{ tp('credit_renouvelable.hero.montant', [], 'credit_renouvelable') }}{% endblock %}
+{% block duree_value %}{{ tp('credit_renouvelable.hero.duree', [], 'credit_renouvelable') }}{% endblock %}
+
+{% block hero_title %}{{ tp('credit_renouvelable.hero.title', [], 'credit_renouvelable') }}{% endblock %}
+{% block hero_subtitle %}{{ tp('credit_renouvelable.hero.subtitle', [], 'credit_renouvelable') }}{% endblock %}
+
+{% block section_1_title %}{{ tp('credit_renouvelable.section_1.title', [], 'credit_renouvelable') }}{% endblock %}
+
+{% block section_2_title %}{{ tp('credit_renouvelable.section_2.title', [], 'credit_renouvelable') }}{% endblock %}
+
+{% block section_3_title %}{{ tp('credit_renouvelable.section_3.title', [], 'credit_renouvelable') }}{% endblock %}
+{% block section_4_title %}{{ tp('credit_renouvelable.section_4.title', [], 'credit_renouvelable') }}{% endblock %}
+{% block section_5_title %}{{ tp('credit_renouvelable.section_5.title', [], 'credit_renouvelable') }}{% endblock %}
+
+{% block section_1_content %}
+<p>{{ tp('credit_renouvelable.section_1.content.paragraph_1', [], 'credit_renouvelable') }}</p>
+<p>{{ tp('credit_renouvelable.section_1.content.paragraph_2', [], 'credit_renouvelable') }}</p>
+{% endblock %}
+
+{% block feature_montant %}{{ tp('credit_renouvelable.features.montant.value', [], 'credit_renouvelable') }}{% endblock %}
+{% block feature_montant_detail %}{{ tp('credit_renouvelable.features.montant.detail', [], 'credit_renouvelable') }}{% endblock %}
+{% block feature_duree %}{{ tp('credit_renouvelable.features.duree.value', [], 'credit_renouvelable') }}{% endblock %}
+{% block feature_duree_detail %}{{ tp('credit_renouvelable.features.duree.detail', [], 'credit_renouvelable') }}{% endblock %}
+{% block feature_taux %}{{ tp('credit_renouvelable.features.taux.value', [], 'credit_renouvelable')|replace({'{rate}': credit_rate('renouvelable')})|raw }}{% endblock %}
+{% block feature_taux_detail %}{{ tp('credit_renouvelable.features.taux.detail', [], 'credit_renouvelable') }}{% endblock %}
+{% block feature_garantie %}{{ tp('credit_renouvelable.features.garantie.value', [], 'credit_renouvelable') }}{% endblock %}
+{% block feature_garantie_detail %}{{ tp('credit_renouvelable.features.garantie.detail', [], 'credit_renouvelable') }}{% endblock %}
+
+{% block section_3_content %}
+<ul class="credit-detail-advantages">
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_renouvelable.section_3.advantages.disponibilite.title', [], 'credit_renouvelable') }} :</strong> {{ tp('credit_renouvelable.section_3.advantages.disponibilite.description', [], 'credit_renouvelable') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_renouvelable.section_3.advantages.reconstruction.title', [], 'credit_renouvelable') }} :</strong> {{ tp('credit_renouvelable.section_3.advantages.reconstruction.description', [], 'credit_renouvelable') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_renouvelable.section_3.advantages.pas_interets.title', [], 'credit_renouvelable') }} :</strong> {{ tp('credit_renouvelable.section_3.advantages.pas_interets.description', [], 'credit_renouvelable') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_renouvelable.section_3.advantages.remboursement.title', [], 'credit_renouvelable') }} :</strong> {{ tp('credit_renouvelable.section_3.advantages.remboursement.description', [], 'credit_renouvelable') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('credit_renouvelable.section_3.advantages.carte.title', [], 'credit_renouvelable') }} :</strong> {{ tp('credit_renouvelable.section_3.advantages.carte.description', [], 'credit_renouvelable') }}</span>
+    </li>
+</ul>
+{% endblock %}
+
+{% block section_4_content %}
+<div class="credit-detail-requirements">
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('credit_renouvelable.section_4.conditions.title', [], 'credit_renouvelable') }}</h3>
+        <ul>
+            <li>{{ tp('credit_renouvelable.section_4.conditions.items.majeur', [], 'credit_renouvelable') }}</li>
+            <li>{{ tp('credit_renouvelable.section_4.conditions.items.revenus', [], 'credit_renouvelable') }}</li>
+            <li>{{ tp('credit_renouvelable.section_4.conditions.items.surendettement', [], 'credit_renouvelable') }}</li>
+            <li>{{ tp('credit_renouvelable.section_4.conditions.items.interdiction', [], 'credit_renouvelable') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('credit_renouvelable.section_4.criteres.title', [], 'credit_renouvelable') }}</h3>
+        <ul>
+            <li>{{ tp('credit_renouvelable.section_4.criteres.items.usage', [], 'credit_renouvelable') }}</li>
+            <li>{{ tp('credit_renouvelable.section_4.criteres.items.impulsifs', [], 'credit_renouvelable') }}</li>
+            <li>{{ tp('credit_renouvelable.section_4.criteres.items.plan', [], 'credit_renouvelable') }}</li>
+            <li>{{ tp('credit_renouvelable.section_4.criteres.items.surveiller', [], 'credit_renouvelable') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block section_5_content %}
+<div class="credit-detail-documents">
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('credit_renouvelable.section_5.identite.title', [], 'credit_renouvelable') }}</h3>
+        <ul>
+            <li>{{ tp('credit_renouvelable.section_5.identite.items.carte', [], 'credit_renouvelable') }}</li>
+            <li>{{ tp('credit_renouvelable.section_5.identite.items.domicile', [], 'credit_renouvelable') }}</li>
+            <li>{{ tp('credit_renouvelable.section_5.identite.items.rib', [], 'credit_renouvelable') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('credit_renouvelable.section_5.revenus.title', [], 'credit_renouvelable') }}</h3>
+        <ul>
+            <li>{{ tp('credit_renouvelable.section_5.revenus.items.bulletins', [], 'credit_renouvelable') }}</li>
+            <li>{{ tp('credit_renouvelable.section_5.revenus.items.avis', [], 'credit_renouvelable') }}</li>
+            <li>{{ tp('credit_renouvelable.section_5.revenus.items.attestation', [], 'credit_renouvelable') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('credit_renouvelable.section_5.bancaires.title', [], 'credit_renouvelable') }}</h3>
+        <ul>
+            <li>{{ tp('credit_renouvelable.section_5.bancaires.items.releves', [], 'credit_renouvelable') }}</li>
+            <li>{{ tp('credit_renouvelable.section_5.bancaires.items.credits', [], 'credit_renouvelable') }}</li>
+            <li>{{ tp('credit_renouvelable.section_5.bancaires.items.patrimoine', [], 'credit_renouvelable') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block legal_details %}
+<div class="credit-legal-notice__details">
+    <h4>{{ tp('credit_renouvelable.legal.title', [], 'credit_renouvelable') }}</h4>
+    <ul>
+        <li><strong>*{{ tp('credit_renouvelable.legal.details.taeg', [], 'credit_renouvelable') }}</strong></li>
+        <li><strong>{{ tp('credit_renouvelable.legal.details.utilisation', [], 'credit_renouvelable') }}</strong></li>
+        <li><strong>{{ tp('credit_renouvelable.legal.details.remboursement', [], 'credit_renouvelable') }}</strong></li>
+        <li><strong>{{ tp('credit_renouvelable.legal.details.renouvellement', [], 'credit_renouvelable') }}</strong></li>
+        <li><strong>{{ tp('credit_renouvelable.legal.details.resiliation', [], 'credit_renouvelable') }}</strong></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block cta_title %}{{ tp('credit_renouvelable.cta.title', [], 'credit_renouvelable') }}{% endblock %}
+{% block cta_subtitle %}{{ tp('credit_renouvelable.cta.subtitle', [], 'credit_renouvelable') }}{% endblock %}
+
+{% block custom_styles %}
+{{ parent() }}
+<style>
+/* Couleur spécifique pour le crédit renouvelable */
+.credit-detail-hero--renouvelable {
+    background: 
+        linear-gradient(135deg, rgba(220, 38, 38, 0.4) 0%, rgba(185, 28, 28, 0.6) 100%),
+        url('/images/revol.jpg') center/cover no-repeat fixed;
+}
+
+.credit-detail-hero--renouvelable .credit-highlight__value {
+    color: #fca5a5;
+}
+</style>
+{% endblock %}

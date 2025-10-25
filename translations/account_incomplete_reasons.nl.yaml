@@ -1,0 +1,18 @@
+# Redenen voor onvolledig account
+account_incomplete_reason:
+  missing_personal_info: "Ontbrekende persoonlijke informatie"
+  missing_personal_info_description: "Voornaam, achternaam of geboortedatum"
+  missing_address: "Ontbrekend adres"
+  missing_address_description: "Volledig adres vereist"
+  missing_phone: "Ontbrekend telefoonnummer"
+  missing_phone_description: "Geldig telefoonnummer vereist"
+  missing_id_document: "Ontbrekend identiteitsbewijs"
+  missing_id_document_description: "Identiteitskaart of paspoort"
+  missing_proof_of_address: "Ontbrekend adresbewijs"
+  missing_proof_of_address_description: "Rekening of afschrift minder dan 3 maanden oud"
+  incomplete_profile: "Onvolledig profiel"
+  incomplete_profile_description: "Meerdere gegevens ontbreken"
+  missing_employment_info: "Ontbrekende werkgelegenheidsinformatie"
+  missing_employment_info_description: "Beroep en arbeidssituatie"
+  missing_tax_info: "Ontbrekende belastinginformatie"
+  missing_tax_info_description: "Belastingnummer en land van fiscale woonplaats"

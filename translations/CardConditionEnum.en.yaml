@@ -1,0 +1,120 @@
+# ENGLISH TRANSLATION - Translated from French
+# Card condition enumeration translation file
+# Domain: CardConditionEnum
+# Language: English (en)
+
+CardConditionEnum:
+  # Card types - Labels
+  labels:
+    classic: "Classic Card"
+    gold: "Gold Card"
+    platinum: "Platinum Card"
+  
+  # Card types - Marketing descriptions
+  descriptions:
+    classic: "Ideal card to start with essential services"
+    gold: "Premium card with insurance and cashback included"
+    platinum: "Prestige card with exclusive services and concierge"
+  
+  # General information
+  info:
+    title: "Bank card ranges"
+    subtitle: "Services adapted to each profile"
+    
+  # Annual fees
+  annual_fees:
+    classic: "Free"
+    gold: "60€/year"
+    platinum: "180€/year"
+    
+  # Detailed conditions
+  conditions:
+    classic:
+      title: "SPECIFIC CONDITIONS - CLASSIC CARD"
+      pricing:
+        title: "PRICING"
+        annual_fee: "Annual fee: Free first year, then 24€/year"
+        withdrawal_eurozone: "Eurozone withdrawal: Free (3 per month), then 1€"
+        foreign_payment: "Foreign currency payment: 2% commission"
+      limits:
+        title: "LIMITS"
+        daily_withdrawal: "Daily withdrawal: 500€"
+        monthly_payment: "Monthly payment: 2,000€"
+      services:
+        title: "INCLUDED SERVICES"
+        insurance: "Purchase insurance: 500€"
+        support: "24/7 phone assistance"
+        
+    gold:
+      title: "SPECIFIC CONDITIONS - GOLD CARD"
+      pricing:
+        title: "PRICING"
+        annual_fee: "Annual fee: 60€"
+        withdrawal_worldwide: "Free withdrawals worldwide"
+        payment_eurozone: "Payments without commission in eurozone"
+      limits:
+        title: "LIMITS"
+        daily_withdrawal: "Daily withdrawal: 1,000€"
+        monthly_payment: "Monthly payment: 5,000€"
+        revolving_credit: "Revolving credit: 2,000€"
+      services:
+        title: "INCLUDED SERVICES"
+        travel_insurance: "International travel insurance"
+        cashback: "1% cashback on all purchases"
+        concierge: "Phone concierge service"
+        purchase_insurance: "Purchase insurance: 2,000€"
+        
+    platinum:
+      title: "SPECIFIC CONDITIONS - PLATINUM CARD"
+      pricing:
+        title: "PRICING"
+        annual_fee: "Annual fee: 180€"
+        global_services: "All services free worldwide"
+        exchange_rates: "Preferential exchange rates"
+      limits:
+        title: "LIMITS"
+        daily_withdrawal: "Daily withdrawal: 2,500€"
+        monthly_payment: "Monthly payment: 10,000€"
+        revolving_credit: "Revolving credit: 5,000€"
+      services:
+        title: "PREMIUM SERVICES"
+        premium_travel: "Premium travel insurance + family"
+        premium_cashback: "2% cashback on all purchases"
+        vip_access: "VIP airport lounge access"
+        premium_concierge: "Premium 24/7 concierge service"
+        premium_insurance: "Purchase insurance: 5,000€"
+        ticket_service: "Airline ticket buyback service"
+  
+  # Limites par type
+  limits:
+    classic:
+      daily: "500€"
+      monthly: "2 000€"
+    gold:
+      daily: "1 000€"
+      monthly: "5 000€"
+      credit: "2 000€"
+    platinum:
+      daily: "2 500€"
+      monthly: "10 000€"
+      credit: "5 000€"
+      
+  # Form messages
+  form:
+    placeholder: "Choose your card range"
+    help: "The range determines your card's services and limits"
+    
+  # Key benefits
+  key_benefits:
+    classic:
+      - "Free card first year"
+      - "Essential banking services"
+      - "24/7 assistance"
+    gold:
+      - "Free withdrawals worldwide"
+      - "Cashback on your purchases"
+      - "Travel insurance included"
+    platinum:
+      - "Exclusive premium services"
+      - "Dedicated concierge"
+      - "VIP lounge access"

@@ -1,0 +1,156 @@
+mobile_app:
+  # Meta tags
+  meta:
+    mobile_app:
+      title: "%company_name% Mobiele App"
+      description: "Ontdek onze %company_name% mobiele app: accountbeheer, overmakingen, en nog veel meer vanaf uw smartphone."
+  
+  hero:
+    subtitle: "Revolutioneer uw bankbeheer met de mobiele app van %company_name%. Een nieuwe generatie bankervaring, eenvoudig, veilig en volledig gratis."
+    features:
+      security:
+        title: "Militaire bankbeveiliging"
+        description: "AES-256 versleuteling en biometrische authenticatie voor maximale bescherming van uw gegevens"
+      transfers:
+        title: "Onmiddellijke SEPA-overboekingen"
+        description: "Stuur geld in realtime, 24/7, naar alle Europese rekeningen"
+      analysis:
+        title: "Intelligente financiële analyse"
+        description: "Geavanceerde AI om uw gewoonten te analyseren en uw budget automatisch te optimaliseren"
+    actions:
+      discover: "Ontdek de applicatie"
+      download: "Gratis downloaden"
+    preview:
+      balance_card:
+        available_balance: "Beschikbaar saldo"
+        amount: "12.847,50 €"
+        growth: "+2.8% deze maand"
+      quick_actions:
+        transfer: "Overboeking"
+        cards: "Kaarten"
+        savings: "Sparen"
+
+  features:
+    title: "Geavanceerde functionaliteiten"
+    subtitle: "Ontdek alle functionaliteiten die %company_name% tot de meest complete bank-app op de markt maken."
+    items:
+      instant_transfers:
+        title: "Onmiddellijke overboekingen"
+        description: "Voer SEPA-overboekingen uit in realtime, 24/7, naar alle Europese rekeningen."
+      expense_analysis:
+        title: "Uitgavenanalyse"
+        description: "Kunstmatige intelligentie om uw gewoonten te analyseren en uw budget automatisch te optimaliseren."
+      smart_notifications:
+        title: "Intelligente meldingen"
+        description: "Gepersonaliseerde waarschuwingen voor elke transactie, uitgavenlimiet en spaarmogelijkheid."
+      virtual_cards:
+        title: "Virtuele kaarten"
+        description: "Maak tijdelijke virtuele kaarten voor uw online aankopen in alle veiligheid."
+      automatic_savings:
+        title: "Automatisch sparen"
+        description: "Spaar moeiteloos dankzij onze algoritmes die uw aankopen automatisch afronden."
+      multi_currency:
+        title: "Multi-valuta"
+        description: "Beheer meer dan 25 valuta's met realtime wisselkoersen en zonder commissie."
+
+  security:
+    badge: "Bankbeveiliging van militair niveau"
+    title: "Uw veiligheid is onze absolute prioriteit"
+    subtitle: "%company_name% gebruikt de meest geavanceerde beveiligingstechnologieën om uw gegevens en transacties te beschermen. Onze systemen voldoen aan de strengste bankstandaarden."
+    features:
+      encryption:
+        title: "AES-256 versleuteling"
+        description: "Uw gegevens zijn beschermd door hetzelfde versleutelingsniveau als centrale banken"
+      biometric:
+        title: "Biometrische authenticatie"
+        description: "Veilige verbinding met gezichtsherkenning, vingerafdruk of Face ID"
+      monitoring:
+        title: "24/7 bewaking"
+        description: "Automatische fraudedetectie en onmiddellijke waarschuwingen bij verdachte activiteit"
+    certifications:
+      title: "Certificeringen en compliance"
+      items:
+        pci_dss: "PCI DSS Niveau 1"
+        iso: "ISO 27001:2013"
+        gdpr: "AVG-conform"
+        psd2: "PSD2-richtlijn"
+
+  support:
+    title: "24/7 klantenservice"
+    subtitle: "Ons team van experts is altijd beschikbaar om u te begeleiden in uw bankervaring."
+    channels:
+      live_chat:
+        title: "Live chat"
+        description: "Onmiddellijke reactie via onze in de app geïntegreerde chat"
+        availability: "24/7 beschikbaar"
+      phone:
+        title: "Telefonische ondersteuning"
+        description: "Gepersonaliseerde hulp met onze bankadviseurs"
+        availability: "Maandag tot zondag"
+      priority_email:
+        title: "Prioritaire e-mail"
+        description: "Gegarandeerde reactie binnen 2 werkuren"
+        availability: "hello@sedef.fr"
+    stats:
+      satisfaction:
+        value: "98.5%"
+        label: "klanttevredenheid"
+      resolution_time:
+        value: "4.2 min"
+        label: "gemiddelde oplossingstijd"
+      response_time:
+        value: "< 30 sec"
+        label: "chat reactietijd"
+    faq:
+      title: "Veelgestelde vragen"
+      items:
+        account_opening:
+          question: "Hoe open ik een rekening?"
+          answer: "Het openen van een rekening duurt 5 minuten via de applicatie. U heeft alleen uw identiteitsbewijs en een adresverklaring nodig."
+        is_free:
+          question: "Is de applicatie gratis?"
+          answer: "Ja, %company_name% is 100% gratis: downloaden, rekening beheren, SEPA-overboekingen en virtuele kaart zonder kosten."
+        data_security:
+          question: "Zijn mijn gegevens veilig?"
+          answer: "Absoluut. Wij gebruiken AES-256 bankversleuteling en zijn gecertificeerd PCI DSS niveau 1 en ISO 27001."
+        international:
+          question: "Kan ik %company_name% in het buitenland gebruiken?"
+          answer: "Ja, %company_name% werkt in meer dan 50 landen met multi-valuta ondersteuning en gratis internationale overboekingen."
+    contact:
+      title: "Een specifieke vraag?"
+      description: "Ons team van experts staat klaar om u te helpen. Neem direct contact met ons op via uw favoriete kanaal."
+      actions:
+        start_chat: "Start een chat"
+        phone_number: "%company_phone%"
+      agent:
+        name: "Sophie Martin"
+        role: "Senior bankadviseur"
+        status: "Nu online"
+
+  download:
+    title: "Download %company_name% nu"
+    subtitle: "Sluit u aan bij meer dan 2 miljoen gebruikers die %company_name% vertrouwen om hun financiën te beheren. Gratis app, zonder reclame en zonder verborgen kosten."
+    stats:
+      rating:
+        value: "4.9"
+        label: "Gemiddelde beoordeling"
+      users:
+        value: "2M+"
+        label: "Actieve gebruikers"
+      countries:
+        value: "50+"
+        label: "Beschikbare landen"
+    buttons:
+      ios:
+        label: "Downloaden op"
+        store: "App Store"
+      android:
+        label: "Beschikbaar op"
+        store: "Google Play"
+    features:
+      - "Gratis en veilige installatie"
+      - "Geen downloadkosten"
+      - "Compatibel iOS 13+ en Android 8+"
+    app:
+      name: "%company_name%"
+      description: "Digitale bank"

@@ -1,0 +1,42 @@
+banking_transfer:
+  # Meta tags
+  meta:
+    title: "Nieuwe overschrijving - %company_name%"
+    description: "Voer veilig een bankoverschrijving uit met %company_name%"
+
+  # Navigation
+  nav:
+    dashboard: "Dashboard"
+    transfers: "Overschrijvingen"
+    logout: "Uitloggen"
+
+  # Process Steps
+  steps:
+    details: "Details"
+    validation: "Validatie"
+    confirmation: "Bevestiging"
+
+  # Form Header
+  form:
+    title: "Nieuwe overschrijving"
+    subtitle: "Stuur geld naar een begunstigde rekening"
+
+  # Account Info
+  account:
+    available_balance: "Beschikbaar saldo:"
+
+  # Form Fields
+  fields:
+    destination_account: "Begunstigde rekening"
+    amount: "Bedrag"
+    amount_placeholder: "0,00"
+    description: "Beschrijving (optioneel)"
+    description_placeholder: "Reden van overschrijving..."
+
+  # Actions
+  actions:
+    cancel: "Annuleren"
+    continue: "Doorgaan"
+
+  # Currency
+  currency: "€"

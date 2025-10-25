@@ -1,0 +1,41 @@
+email_transfer_code_added:
+  title: "Nieuwe validatiecode"
+  
+  content:
+    page_title: "Validatiecode gegenereerd"
+    greeting: "Hallo {firstName},"
+    
+    new_code_section:
+      title: "Nieuwe code beschikbaar"
+      description: "Een nieuwe validatiecode is toegevoegd voor uw overschrijving #{transferId}. Deze code is onderdeel van het beveiligingsproces van uw transactie."
+    
+    transfer_summary:
+      title: "Samenvatting van uw overschrijving"
+      amount_destination: "{amount} € naar {destination}"
+    
+    validation_code:
+      code_name: "{codeName}"
+      code_number: "Code {codeOrder}"
+      created_date: "Aangemaakt op {createdAt}"
+    
+    validation_rules:
+      title: "Belangrijke validatieregels"
+      attempts_limit: "Beperkte pogingen"
+      attempts_description: "U heeft maximaal 3 pogingen om de juiste code in te voeren"
+      expiration: "Vervaltermijn"
+      expiration_description: "De code vervalt 6 uur na de eerste validatie"
+      security: "Verhoogde beveiliging"
+      security_description: "Bij herhaalde fouten wordt uw account tijdelijk geblokkeerd"
+    
+    action_required:
+      title: "Actie vereist"
+      validate_button: "Code nu valideren"
+      instruction: "Voer deze code in in uw beveiligde bankruimte"
+    
+    security_warning: "Als u deze aanvraag niet hebt gedaan, neem dan onmiddellijk contact op met onze klantenservice."
+    
+    footer: "<strong>%company_name% - Beveiligingsdienst</strong><br>Automatische melding validatiecode"
+  
+  log:
+    code_added: "Validatiecode toegevoegd voor overschrijving {transferId}"
+    email_sent: "E-mail validatiecode verzonden naar {userEmail}"

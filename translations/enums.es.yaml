@@ -1,0 +1,140 @@
+enums:
+  # Credit Application Status
+  credit_application_status:
+    pending: "En espera"
+    approved: "Aprobado"
+    rejected: "Rechazado"
+    in_progress: "En proceso de tratamiento"
+    in_review: "En curso de estudio"
+    contract_sent: "Contrato enviado"
+    contract_signed: "Contrato firmado"
+    contract_validated: "Contrato validado"
+    funds_disbursed: "Fondos desembolsados"
+    requires_documents: "Documentos requeridos"
+    cancelled: "Cancelado"
+
+  # Account Status
+  account_status:
+    active: "Activo"
+    suspended: "Suspendido"
+    closed: "Cerrado"
+    pending: "En espera"
+
+  # Account Type
+  account_type:
+    checking: "Cuenta Corriente"
+    savings: "Cuenta de Ahorro"
+    credit: "Cuenta de Crédito"
+    business: "Cuenta Profesional"
+    loan: "Cuenta de Préstamo"
+
+  # Transaction Status
+  transaction_status:
+    pending: "En espera"
+    completed: "Terminado"
+    failed: "Fallido"
+    cancelled: "Cancelado"
+
+  # Transaction Type
+  transaction_type:
+    debit: "Débito"
+    credit: "Crédito"
+    deposit: "Depósito"
+    withdrawal: "Retiro"
+    transfer: "Transferencia"
+    payment: "Pago"
+    fee: "Tarifas"
+    interest: "Intereses"
+
+  # Transaction Category
+  transaction_category:
+    transfer: "Transferencia"
+    deposit: "Depósito"
+    withdrawal: "Retiro"
+    payment: "Pago"
+    fee: "Tarifas"
+    interest: "Intereses"
+    loan_payment: "Reembolso de préstamo"
+    card_payment: "Pago con tarjeta"
+    direct_debit: "Débito automático"
+    check: "Cheque"
+    cash: "Efectivo"
+    online_payment: "Pago en línea"
+    refund: "Reembolso"
+    salary: "Salario"
+    rent: "Alquiler"
+    groceries: "Alimentación"
+    transport: "Transporte"
+    entertainment: "Ocio"
+    healthcare: "Salud"
+    education: "Educación"
+    utilities: "Facturas"
+    shopping: "Compras"
+    other: "Otros"
+
+  # Duration Unit
+  duration_unit:
+    days: "días"
+    weeks: "semanas"
+    months: "meses"
+    years: "años"
+
+  # Duration
+  duration:
+    short: "Corto plazo"
+    medium: "Medio plazo"
+    long: "Largo plazo"
+
+  # Assurance Type
+  assurance_type:
+    auto:
+      label: "Seguro de Auto"
+      description: "Protección completa para su vehículo con asistencia 24h/24"
+    habitation:
+      label: "Seguro de Vivienda"
+      description: "Multirriesgos vivienda para propietarios e inquilinos"
+    sante:
+      label: "Complementario de Salud"
+      description: "Complementario de salud con reembolsos optimizados"
+    vie:
+      label: "Seguro de Vida"
+      description: "Ahorro y transmisión optimizados fiscalmente"
+    pret:
+      label: "Seguro de Prestatario"
+      description: "Asegure su crédito inmobiliario"
+    voyage:
+      label: "Seguro de Viaje"
+      description: "Viaje con tranquilidad con una cobertura mundial"
+    pro:
+      label: "Seguro Profesional"
+      description: "Protección completa para su actividad profesional"
+    cyber:
+      label: "Ciber-seguro"
+      description: "Protección contra ciberataques y violaciones de datos"
+    decennale:
+      label: "Responsabilidad Decenal"
+      description: "Obligatorio para los profesionales de la construcción"
+    rc:
+      label: "Responsabilidad Civil"
+      description: "Protección contra daños causados a terceros"
+    flotte:
+      label: "Seguro de Flota"
+      description: "Seguro para parque de vehículos de empresa"
+    garage:
+      label: "Seguro de Taller"
+      description: "Protección para los profesionales del automóvil"
+
+  # Contrat Assurance Status
+  contrat_assurance_status:
+    actif:
+      label: "Activo"
+      description: "Contrato en curso y operacional"
+    suspendu:
+      label: "Suspendido"
+      description: "Contrato temporalmente suspendido"
+    resilie:
+      label: "Rescindido"
+      description: "Contrato definitivamente rescindido"
+    expire:
+      label: "Expirado"
+      description: "Contrato llegado a vencimiento"

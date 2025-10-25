@@ -1,0 +1,53 @@
+# Traductions pour CreditApplicationController
+flash:
+  # Messages d'erreur
+  complete_previous_steps: "Veuillez compléter les étapes précédentes avant de continuer."
+  missing_data: "Données manquantes dans la session. Veuillez recommencer la demande."
+  application_not_found: "La demande de crédit n'a pas été trouvée."
+  session_expired: "Votre session a expiré. Veuillez recommencer votre demande."
+  invalid_request: "Demande invalide. Veuillez compléter toutes les étapes."
+  complete_all_steps: "Veuillez compléter toutes les étapes avant de procéder au récapitulatif."
+  invalid_security_token: "Token de sécurité invalide. Veuillez réessayer."
+  submission_error: "Une erreur est survenue lors de la soumission de votre demande. Veuillez réessayer."
+  
+  # Messages de succès
+  step_completed: "Étape %d complétée avec succès."
+  application_submitted: "Votre demande de crédit a été soumise avec succès. Vous recevrez bientôt une confirmation par email."
+  data_saved: "Vos informations ont été sauvegardées."
+  
+  # Messages d'information
+  step_progress: "Vous êtes à l'étape %d sur %d."
+  review_information: "Veuillez vérifier vos informations avant de soumettre votre demande."
+  fields_updated: "Les champs ont été mis à jour automatiquement."
+  
+  # Messages d'avertissement
+  unsaved_changes: "Vous avez des modifications non sauvegardées. Êtes-vous sûr de vouloir quitter ?"
+
+# Exceptions
+exceptions:
+  step_not_found: "Étape introuvable."
+  invalid_step: "Étape invalide."
+  credit_application_not_found: "Demande de crédit introuvable."
+
+# Messages API
+api:
+  invalid_data: "Données invalides fournies."
+  calculation_error: "Erreur lors du calcul du crédit."
+
+# Autres traductions du contrôleur
+step_titles:
+  1: "Détails du crédit"
+  2: "Informations personnelles"
+  3: "Situation financière"
+  unknown: "Étape inconnue"
+
+step_descriptions:
+  1: "Configurez votre crédit et obtenez une simulation"
+  2: "Renseignez vos informations personnelles et votre adresse"
+  3: "Décrivez votre situation professionnelle et financière"
+
+buttons:
+  continue: "Continuer"
+  previous: "Précédent" 
+  submit: "Soumettre la demande"
+  save_draft: "Sauvegarder le brouillon"

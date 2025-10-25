@@ -1,0 +1,68 @@
+# Fichier de traduction pour les pages de confirmation de crédit
+# Domaine: credit_confirmation
+# Compatible avec l'architecture existante du projet %company_name%
+
+# === PAGE DE CONFIRMATION ===
+confirmation:
+  title: "Demande confirmée !"
+  subtitle: "Votre demande de crédit a été soumise avec succès"
+  icon_success: "✓"
+  
+  reference:
+    label: "Numéro de référence"
+    
+  details:
+    loan_amount_label: "Montant demandé"
+    duration_label: "Durée"
+    monthly_payment_label: "Mensualité estimée"
+    credit_type_label: "Type de crédit"
+    email_label: "Email de contact"
+    
+  timeline:
+    title: "Prochaines étapes"
+    steps:
+      confirmation_sent: "Confirmation envoyée par email"
+      review_process: "Étude de votre dossier (24-48h)"
+      decision_notification: "Notification de décision"
+      contract_signing: "Signature du contrat"
+      funds_disbursement: "Déblocage des fonds"
+      
+  actions:
+    back_to_home: "Retour à l'accueil"
+    new_application: "Nouvelle demande"
+    
+  notices:
+    title: "Informations importantes :"
+    email_sent: "Un email de confirmation a été envoyé à {email}"
+    keep_reference: "Conservez votre numéro de référence pour suivre votre demande"
+    contact_info: "Notre équipe vous contactera sous 48h pour la suite de votre dossier"
+    no_fees: "Aucun frais ne sera prélevé avant l'acceptation définitive de votre dossier"
+
+# === STATUT DU CONTRAT ===
+contract_status:
+  title: "Statut du contrat"
+  contract_number: "Contrat : {number}"
+  amount_info: "Montant : {amount} €"
+  duration_info: "Durée : {duration} {unit}"
+  current_status: "Statut actuel :"
+  
+  timeline:
+    approved: "Demande approuvée"
+    approved_desc: "Votre demande de crédit a été étudiée et approuvée."
+    contract_sent: "Contrat généré et envoyé"
+    contract_sent_desc: "Le contrat de crédit a été généré et envoyé par email."
+    contract_signed: "Signature du contrat"
+    contract_signed_pending: "En attente de votre signature."
+    contract_signed_completed: "Contrat signé et reçu."
+    contract_validated: "Validation administrative"
+    contract_validated_pending: "En cours de validation par notre équipe (24-48h)."
+    contract_validated_completed: "Contrat validé par l'équipe administrative."
+    contract_validated_waiting: "En attente de la signature du contrat."
+    funds_disbursed: "Déblocage des fonds"
+    funds_disbursed_completed: "Les fonds ont été versés sur votre compte."
+    funds_disbursed_pending: "Déblocage en cours..."
+    funds_disbursed_waiting: "En attente de la validation du contrat."
+    
+  actions:
+    download_contract: "Télécharger le contrat signé"
+    back_to_dashboard: "Retour au tableau de bord"

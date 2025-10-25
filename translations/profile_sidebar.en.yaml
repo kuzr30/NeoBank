@@ -1,0 +1,32 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: profile_sidebar.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+profile_sidebar:
+  nav:
+    profile: "My Profile"
+    edit_profile: "Edit profile"
+    kyc_verification: "Identity verification"
+    security: "Security"
+    preferences: "Preferences"
+    
+  kyc_status:
+    pending: "Pending"
+    rejected: "!"
+    required: "Required"
+  
+  menu:
+    profile: "Profile"
+    edit: "Edit profile"
+    security: "Security"
+    preferences: "Preferences"
+    kyc: "Identity verification"
+    kyc_status: "KYC status"
+    
+  user_info:
+    member_since: "Member since"
+    last_login: "Last login"
+    account_type: "Account type"
+    account_verified: "Verified account"
+    account_unverified: "Unverified account"

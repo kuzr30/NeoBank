@@ -1,0 +1,111 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: microcredit.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+microcredit:
+  page:
+    title: "Microcredit"
+    description: "Accessible financing solution with our microcredit. Amounts tailored to small personal or professional projects."
+  
+  hero:
+    class: "credit-detail-hero--microcredit"
+    taux: "{rate}%"
+    montant: "€5,000"
+    duree: "5 years"
+    title: "Microcredit"
+    subtitle: "Accessible financing for your small projects"
+  
+  section_1:
+    title: "What is microcredit?"
+    content:
+      paragraph_1: "Microcredit is a financing solution for people who do not have access to traditional bank credit. It finances small-amount personal or professional projects."
+      paragraph_2: "Accompanied by an advisory and monitoring system, microcredit promotes financial inclusion and enables the realization of essential projects such as purchasing a vehicle for employment or creating a micro-business."
+  
+  features:
+    title: "Microcredit features"
+    montant:
+      value: "From €300 to €5,000"
+      detail: "Amounts tailored to needs"
+    duree:
+      value: "From 6 months to 5 years"
+      detail: "Flexible duration"
+    taux:
+      value: "From {rate}% APR*"
+      detail: "Advantageous social rate"
+    garantie:
+      value: "Guarantee fund"
+      detail: "Or joint surety"
+  
+  section_3:
+    title: "Microcredit advantages"
+    advantages:
+      accessibilite:
+        title: "Accessibility"
+        description: "Open to those excluded from traditional credit"
+      accompagnement:
+        title: "Support"
+        description: "Personalized project advice and monitoring"
+      taux_modere:
+        title: "Moderate rate"
+        description: "Preferential social conditions"
+      projets_varies:
+        title: "Varied projects"
+        description: "Personal, professional or integration"
+      pas_frais:
+        title: "No fees"
+        description: "No processing fees or penalties"
+  
+  section_4:
+    title: "Conditions and eligible projects"
+    conditions:
+      title: "Eligibility conditions"
+      items:
+        exclusion: "Exclusion from traditional bank credit"
+        projet: "Viable and coherent project"
+        situation: "Precarious social situation"
+        accompagnement: "Accepted support"
+    projets:
+      title: "Project types"
+      items:
+        vehicule: "Vehicle purchase for employment"
+        entreprise: "Micro-business creation"
+        formation: "Professional training"
+        equipement: "Essential household equipment"
+  
+  section_5:
+    title: "Required documents"
+    personnelle:
+      title: "Personal situation"
+      items:
+        identite: "Identity document"
+        domicile: "Proof of address"
+        ressources: "Proof of income"
+        attestations: "Situation certificates"
+    projet:
+      title: "Project to finance"
+      items:
+        descriptif: "Detailed project description"
+        devis: "Quotes or pro forma invoices"
+        financement: "Financing plan"
+        echeancier: "Projected schedule"
+    accompagnement:
+      title: "Support"
+      items:
+        avis: "Social worker's opinion"
+        dossier: "Presentation file"
+        engagement: "Monitoring commitment"
+        references: "Project references"
+  
+  legal:
+    details:
+      title: "Important legal information"
+      taeg: "<strong>*APR:</strong> Representative example: for a microcredit of €2,000 over 36 months at 7.5% APR, you repay 36 monthly payments of €63, for a total amount of €2,268 (credit cost: €268)."
+      eligibilite: "<strong>Eligibility:</strong> Reserved for people in precarious situations or banking exclusion."
+      accompagnement: "<strong>Support:</strong> Mandatory monitoring by a social worker or association."
+      garantie: "<strong>Guarantee:</strong> Solidarity guarantee fund, no personal surety required."
+      finalite: "<strong>Purpose:</strong> Use strictly in accordance with the declared project."
+  
+  cta:
+    title: "Realize your project"
+    subtitle: "Benefit from accessible financing with our microcredit"

@@ -1,0 +1,47 @@
+card_subscription:
+  # Abonnementspagina
+  subscribe:
+    title: "Aanvragen van een bankkaart"
+    subtitle: "Vul het formulier in om uw nieuwe bankkaart te ontvangen"
+    
+    # Stappen
+    steps:
+      account: "Stap 1: Selecteer uw rekening"
+      brand: "Stap 2: Kies het merk"
+      service_level: "Stap 3: Kies het serviceniveau"
+    
+    # Merken
+    brands:
+      visa:
+        title: "VISA"
+        description: "Wereldwijd geaccepteerd"
+      mastercard:
+        title: "MASTERCARD"
+        description: "Premium internationaal netwerk"
+    
+    # Kaarttypes
+    card_types:
+      classic:
+        title: "CLASSIC"
+        features:
+          - "Contactloos betalen"
+          - "Gratis opnames"
+          - "Basis aankoopverzekering"
+        price: "Gratis"
+      gold:
+        title: "GOLD"
+        features:
+          - "Alle Classic voordelen"
+          - "Reisverzekering"
+          - "Cashback 1%"
+          - "24/7 hulp"
+        price: "€5/maand"
+      platinum:
+        title: "PLATINUM"
+        features:
+          - "Alle Gold voordelen"
+          - "Privé conciërge"
+          - "Cashback 2%"
+          - "Premium verzekering"
+          - "Luchthaven lounges"
+        price: "€15/maand"

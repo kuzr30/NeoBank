@@ -1,0 +1,137 @@
+{% extends 'credit_offers/credit_page_structure.html.twig' %}
+
+{% set page_title = tp('auto_loan.page_title', [], 'auto_loan') %}
+{% set page_description = tp('auto_loan.page_description', [], 'auto_loan') %}
+{% set hero_class = 'credit-detail-hero--auto' %}
+
+{% block taux_value %}{{ credit_rate('auto') }}%{% endblock %}
+{% block montant_value %}{{ tp('auto_loan.hero.amount_value', [], 'auto_loan') }}{% endblock %}
+{% block duree_value %}{{ tp('auto_loan.hero.duration_value', [], 'auto_loan') }}{% endblock %}
+
+{% block section_1_title %}{{ tp('auto_loan.section_1.title', [], 'auto_loan') }}{% endblock %}
+
+{% block section_1_content %}
+<p>{{ tp('auto_loan.section_1.paragraph_1', [], 'auto_loan') }}</p>
+<p>{{ tp('auto_loan.section_1.paragraph_2', [], 'auto_loan') }}</p>
+{% endblock %}
+
+{% block feature_montant %}{{ tp('auto_loan.features.amount', [], 'auto_loan') }}{% endblock %}
+{% block feature_montant_detail %}{{ tp('auto_loan.features.amount_detail', [], 'auto_loan') }}{% endblock %}
+{% block feature_duree %}{{ tp('auto_loan.features.duration', [], 'auto_loan') }}{% endblock %}
+{% block feature_duree_detail %}{{ tp('auto_loan.features.duration_detail', [], 'auto_loan') }}{% endblock %}
+{% block feature_taux %}{{ tp('auto_loan.features.rate', [], 'auto_loan')|replace({'{rate}': credit_rate('auto')})|raw }}{% endblock %}
+{% block feature_taux_detail %}{{ tp('auto_loan.features.rate_detail', [], 'auto_loan') }}{% endblock %}
+{% block feature_garantie %}{{ tp('auto_loan.features.guarantee', [], 'auto_loan') }}{% endblock %}
+{% block feature_garantie_detail %}{{ tp('auto_loan.features.guarantee_detail', [], 'auto_loan') }}{% endblock %}
+
+{% block section_3_content %}
+<ul class="credit-detail-advantages">
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text">{{ tp('auto_loan.advantages.advantage_1', [], 'auto_loan')|raw }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text">{{ tp('auto_loan.advantages.advantage_2', [], 'auto_loan')|raw }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text">{{ tp('auto_loan.advantages.advantage_3', [], 'auto_loan')|raw }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text">{{ tp('auto_loan.advantages.advantage_4', [], 'auto_loan')|raw }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text">{{ tp('auto_loan.advantages.advantage_5', [], 'auto_loan')|raw }}</span>
+    </li>
+</ul>
+{% endblock %}
+
+{% block section_4_content %}
+<div class="credit-detail-requirements">
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('auto_loan.requirements.borrower.title', [], 'auto_loan') }}</h3>
+        <ul>
+            <li>{{ tp('auto_loan.requirements.borrower.item_1', [], 'auto_loan') }}</li>
+            <li>{{ tp('auto_loan.requirements.borrower.item_2', [], 'auto_loan') }}</li>
+            <li>{{ tp('auto_loan.requirements.borrower.item_3', [], 'auto_loan') }}</li>
+            <li>{{ tp('auto_loan.requirements.borrower.item_4', [], 'auto_loan') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('auto_loan.requirements.vehicle.title', [], 'auto_loan') }}</h3>
+        <ul>
+            <li>{{ tp('auto_loan.requirements.vehicle.item_1', [], 'auto_loan') }}</li>
+            <li>{{ tp('auto_loan.requirements.vehicle.item_2', [], 'auto_loan') }}</li>
+            <li>{{ tp('auto_loan.requirements.vehicle.item_3', [], 'auto_loan') }}</li>
+            <li>{{ tp('auto_loan.requirements.vehicle.item_4', [], 'auto_loan') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block section_5_content %}
+<div class="credit-detail-documents">
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('auto_loan.documents.personal.title', [], 'auto_loan') }}</h3>
+        <ul>
+            <li>{{ tp('auto_loan.documents.personal.item_1', [], 'auto_loan') }}</li>
+            <li>{{ tp('auto_loan.documents.personal.item_2', [], 'auto_loan') }}</li>
+            <li>{{ tp('auto_loan.documents.personal.item_3', [], 'auto_loan') }}</li>
+            <li>{{ tp('auto_loan.documents.personal.item_4', [], 'auto_loan') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('auto_loan.documents.vehicle.title', [], 'auto_loan') }}</h3>
+        <ul>
+            <li>{{ tp('auto_loan.documents.vehicle.item_1', [], 'auto_loan') }}</li>
+            <li>{{ tp('auto_loan.documents.vehicle.item_2', [], 'auto_loan') }}</li>
+            <li>{{ tp('auto_loan.documents.vehicle.item_3', [], 'auto_loan') }}</li>
+            <li>{{ tp('auto_loan.documents.vehicle.item_4', [], 'auto_loan') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('auto_loan.documents.banking.title', [], 'auto_loan') }}</h3>
+        <ul>
+            <li>{{ tp('auto_loan.documents.banking.item_1', [], 'auto_loan') }}</li>
+            <li>{{ tp('auto_loan.documents.banking.item_2', [], 'auto_loan') }}</li>
+            <li>{{ tp('auto_loan.documents.banking.item_3', [], 'auto_loan') }}</li>
+            <li>{{ tp('auto_loan.documents.banking.item_4', [], 'auto_loan') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block legal_details %}
+<div class="credit-legal-notice__details">
+    <h4>{{ tp('auto_loan.legal.title', [], 'auto_loan') }}</h4>
+    <ul>
+        <li>{{ tp('auto_loan.legal.taeg', [], 'auto_loan')|raw }}</li>
+        <li>{{ tp('auto_loan.legal.guarantee', [], 'auto_loan')|raw }}</li>
+        <li>{{ tp('auto_loan.legal.insurance', [], 'auto_loan')|raw }}</li>
+        <li>{{ tp('auto_loan.legal.resale', [], 'auto_loan')|raw }}</li>
+        <li>{{ tp('auto_loan.legal.fees', [], 'auto_loan')|raw }}</li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block cta_title %}{{ tp('auto_loan.cta.title', [], 'auto_loan') }}{% endblock %}
+{% block cta_subtitle %}{{ tp('auto_loan.cta.subtitle', [], 'auto_loan') }}{% endblock %}
+
+{% block custom_styles %}
+{{ parent() }}
+<style>
+/* Couleur spécifique pour le crédit auto */
+.credit-detail-hero--auto {
+    background: 
+        linear-gradient(135deg, rgba(220, 38, 38, 0.4) 0%, rgba(185, 28, 28, 0.6) 100%),
+        url('/images/5d1e85a4d2.jpg') center/cover no-repeat fixed;
+}
+
+.credit-detail-hero--auto .credit-highlight__value {
+    color: #fca5a5;
+}
+</style>
+{% endblock %}

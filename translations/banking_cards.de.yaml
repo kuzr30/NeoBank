@@ -1,0 +1,357 @@
+banking_cards:
+  # Management section
+  management:
+    # Header section
+    header:
+      title: "Meine Bankkarten"
+      subtitle: "Verwaltung Ihrer Karten"
+      last_update: "Letzte Aktualisierung"
+      request_card: "Karte beantragen"
+
+    # Card details
+    cards:
+      card_active: "Aktive Karte"
+      checking_account: "Girokonto"
+      visa_classic: "Visa Classic Karte"
+      mastercard_gold: "Mastercard Gold"
+
+    # Card actions
+    actions:
+      view_details: "Details anzeigen"
+      settings: "Einstellungen"
+      block_card: "Sperrung"
+
+    # Recent transactions
+    transactions:
+      title: "Letzte Kartentransaktionen"
+      all_cards: "Alle Karten"
+      
+    # Transaction table
+    table:
+      date: "Datum"
+      card: "Karte"
+      merchant: "Händler"
+      amount: "Betrag"
+      status: "Status"
+      actions: "Aktionen"
+
+    # Transaction details
+    merchant:
+      online_purchase: "Online-Kauf"
+
+    # Status
+    status:
+      validated: "Bestätigt"
+      pending: "Ausstehend"
+      cancelled: "Storniert"
+
+    # Pagination
+    pagination:
+      previous: "Zurück"
+      next: "Weiter"
+      page_info: "Seite %d von %d (%d Transaktionen)"
+
+  # Meta tags
+  meta:
+    credit_card:
+      title: "%company_name% Kreditkarte"
+      description: "Profitieren Sie von unseren Kreditkarten mit exklusiven Vorteilen, Treueprogrammen und inkludierten Versicherungen."
+  
+  # Section Hero
+  hero:
+    title: "Kreditkarte"
+    subtitle: "Entdecken Sie unsere Premium-Kreditkarten mit exklusiven Vorteilen. Cashback bis zu 5%, kostenlose Reisen, inkludierte Versicherungen und vieles mehr."
+    
+    features:
+      cashback:
+        title: "Cashback bis zu 5%"
+      insurance:
+        title: "Reiseversicherungen inkludiert"
+      worldwide:
+        title: "Weltweit akzeptiert"
+    
+    actions:
+      choose_card: "Meine Karte wählen"
+      apply: "Antrag stellen"
+    
+    card:
+      type: "PLATINUM"
+      number: "**** **** **** 8742"
+      holder_label: "INHABER"
+      holder_name: "MARIE DUBOIS"
+      expiry_label: "GÜLT."
+      expiry_date: "12/28"
+    
+    stats:
+      clients: "500K+"
+      clients_label: "Zufriedene Kunden"
+      rating: "4.9★"
+      rating_label: "Durchschnittsbewertung"
+      fees: "0€"
+      fees_label: "Gebühren erstes Jahr"
+
+  # Section Types de cartes
+  card_types:
+    title: "Wählen Sie die Karte, die zu Ihnen passt"
+    subtitle: "Drei Kartenstufen, die auf Ihren Lebensstil und Ihre finanziellen Bedürfnisse zugeschnitten sind. Jede Karte bietet exklusive Vorteile."
+    
+    classic:
+      badge: "Ideal für Einsteiger"
+      name: "%company_name% Classic"
+      price: "0€"
+      period: "pro Monat"
+      card_type: "Classic"
+      card_number: "•••• •••• •••• 1234"
+      features:
+        - "1% Cashback auf alle Ihre Einkäufe"
+        - "Einkaufsversicherung inklusive"
+        - "Kontaktlose Zahlungen"
+        - "Verwaltung über die mobile App"
+      cta: "Diese Karte beantragen"
+    
+    gold:
+      badge: "Am beliebtesten"
+      name: "%company_name% Gold"
+      price: "4€"
+      period: "pro Monat"
+      card_type: "Gold"
+      card_number: "•••• •••• •••• 5678"
+      features:
+        - "3% Cashback auf alle Ihre Einkäufe"
+        - "Internationale Reiseversicherung"
+        - "Zugang zu VIP-Lounges an Flughäfen"
+        - "24/7 Concierge-Service"
+        - "Kostenlose Abhebungen weltweit"
+      cta: "Diese Karte beantragen"
+    
+    platinum:
+      badge: "Exklusives Premium"
+      name: "%company_name% Platinum"
+      price: "15€"
+      period: "pro Monat"
+      card_type: "Platinum"
+      card_number: "•••• •••• •••• 9012"
+      features:
+        - "5% Cashback auf alle Ihre Einkäufe"
+        - "Premium-Weltversicherung"
+        - "Unbegrenzter Zugang zu VIP-Lounges"
+        - "Premium 24/7 Concierge-Service"
+        - "Dedizierter Kundenberater"
+        - "Unbegrenztes Limit"
+      cta: "Diese Karte beantragen"
+    
+    comparison:
+      title: "Vergleichstabelle"
+      
+      table:
+        headers:
+          features: "Vorteile"
+          classic: "Classic"
+          gold: "Gold"
+          platinum: "Platinum"
+        
+        rows:
+          cashback_rate:
+            label: "Cashback-Rate"
+            classic: "1%"
+            gold: "3%"
+            platinum: "5%"
+          
+          travel_insurance:
+            label: "Reiseversicherung"
+            gold: true
+            platinum: true
+          
+          vip_lounges:
+            label: "VIP-Lounges"
+            gold: "2 Zugang/Jahr"
+            platinum: "Unbegrenzt"
+          
+          concierge:
+            label: "Concierge-Service"
+            gold: true
+            platinum: "Premium"
+          
+          monthly_limit:
+            label: "Monatslimit"
+            classic: "5.000€"
+            gold: "15.000€"
+            platinum: "Unbegrenzt"
+
+  # Section Avantages
+  benefits:
+    title: "Exklusive Vorteile und Services"
+    subtitle: "Profitieren Sie von außergewöhnlichen Vorteilen, die Ihren Alltag bereichern und Sie bei all Ihren Projekten begleiten."
+    
+    cashback:
+      title: "Cashback auf alle Ihre Einkäufe"
+      description: "Verdienen Sie bis zu 5% Cashback auf alle Ihre täglichen Einkäufe. Je mehr Sie Ihre Karte nutzen, desto mehr sparen Sie!"
+      stats:
+        average_yearly: "2.847€"
+        average_yearly_label: "Durchschnittl. Cashback/Jahr"
+        payment_time: "15 Tage"
+        payment_time_label: "Cashback-Auszahlung"
+      cta: "Meine Karte beantragen"
+    
+    features:
+      insurance:
+        title: "Versicherungen inklusive"
+        description: "Geschützt bis zu 500.000€ ohne zusätzliche Formalitäten."
+      
+      vip_lounges:
+        title: "VIP-Lounges an Flughäfen"
+        description: "Kostenloser Zugang zu über 1000 VIP-Lounges weltweit."
+      
+      concierge:
+        title: "24/7 Concierge-Service"
+        description: "Premium-Service rund um die Uhr für alle Ihre Bedürfnisse."
+      
+      worldwide_acceptance:
+        title: "0% Provision im Ausland"
+        description: "Zahlen Sie überall ohne Provision zu den besten Kursen."
+      
+      security:
+        title: "Verstärkte Sicherheit"
+        description: "Sofortbenachrichtigungen und Betrugsschutz."
+      
+      exclusive_offers:
+        title: "Exklusive Angebote"
+        description: "Rabatte bei Ihren bevorzugten Premium-Partnern."
+
+  # Section Application/Accès client
+  application:
+    title: "Zugang zu Ihrem Kundenbereich"
+    subtitle: "Verwalten Sie Ihre Karten, sehen Sie Ihre Transaktionen ein und stellen Sie Ihre Anträge direkt online"
+    
+    features:
+      new_card:
+        title: "Neue Karte beantragen"
+        description: "Bestellen Sie Ihre Platinum-, Gold- oder Classic-Karte direkt über Ihren persönlichen Bereich"
+      
+      manage_cards:
+        title: "Ihre Karten verwalten"
+        description: "Aktivieren, sperren, Limits konfigurieren und alle Einstellungen Ihrer Karten verwalten"
+      
+      track_expenses:
+        title: "Ihre Ausgaben verfolgen"
+        description: "Sehen Sie Ihre Transaktionen in Echtzeit ein und analysieren Sie Ihre Verbrauchsgewohnheiten"
+      
+      notifications:
+        title: "Personalisierte Benachrichtigungen"
+        description: "Erhalten Sie Benachrichtigungen für jede Transaktion und bleiben Sie über die Aktivität Ihrer Karten informiert"
+    
+    actions:
+      login: "Anmelden"
+      register: "Konto erstellen"
+    
+    demo:
+      title: "Vorschau der Benutzeroberfläche"
+      subtitle: "Entdecken Sie die Einfachheit unseres Kundenbereichs"
+      nav:
+        my_cards: "Meine Karten"
+        transactions: "Transaktionen"
+        settings: "Einstellungen"
+      card_status:
+        active: "Aktiv"
+        blocked: "Gesperrt"
+        expired: "Abgelaufen"
+      card_actions:
+        block: "Sperren"
+        limits: "Limits"
+        details: "Details"
+      stats:
+        monthly_spending: "Ausgaben diesen Monat"
+        monthly_spending_value: "2.847,50€"
+        cashback_earned: "Verdientes Cashback"
+        cashback_earned_value: "142,38€"
+    
+    help:
+      title: "Benötigen Sie Hilfe?"
+      description: "Unser Support-Team steht Ihnen zur Verfügung, um Sie bei der Nutzung Ihres Kundenbereichs zu unterstützen."
+      contact:
+        chat_label: "Live-Chat"
+        chat_hours: "24/7"
+        phone_label: "Telefon-Support"
+        phone_number: "01 47 12 34 56"
+      help_center: "Hilfezentrum"
+    
+    security:
+      title: "Garantierte Sicherheit"
+      features:
+        ssl: "256-Bit SSL-Verschlüsselung"
+        two_factor: "Zwei-Faktor-Authentifizierung"
+        monitoring: "24/7 Überwachung"
+        gdpr: "DSGVO-geschützte Daten"
+
+  # Section Candidature
+  eligibility:
+    title: "Voraussetzungen"
+    subtitle: "Prüfen Sie, ob Sie die Bedingungen für den Erhalt Ihrer Kreditkarte erfüllen"
+    
+    requirements:
+      age: "Mindestens 18 Jahre alt sein"
+      residence: "Wohnsitz in Deutschland"
+      income: "Nachweis regelmäßiger Einkünfte"
+      bank_account: "Besitz eines %company_name%-Bankkontos"
+    
+    documents:
+      title: "Erforderliche Dokumente"
+      id_card: "Gültiger Personalausweis"
+      income_proof: "Einkommensnachweise (letzte 3 Monate)"
+      address_proof: "Aktueller Wohnsitznachweis"
+      bank_statement: "Kontoauszüge (letzte 3 Monate)"
+    
+    process:
+      title: "Antragsprozess"
+      steps:
+        step1:
+          title: "Formular ausfüllen"
+          description: "Vervollständigen Sie Ihren Online-Antrag in 5 Minuten"
+          duration: "5 Min"
+        
+        step2:
+          title: "Dokumentenprüfung"
+          description: "Unsere Teams prüfen Ihre Nachweise"
+          duration: "24-48h"
+        
+        step3:
+          title: "Kreditentscheidung"
+          description: "Sofortige Antwort oder innerhalb von 2 Werktagen"
+          duration: "Sofort"
+        
+        step4:
+          title: "Kartenerhalt"
+          description: "Sichere Lieferung an Ihre Adresse"
+          duration: "3-5 Tage"
+    
+    cta: "Meinen Antrag beginnen"
+
+  # Section FAQ
+  faq:
+    title: "Häufig gestellte Fragen"
+    subtitle: "Finden Sie schnell Antworten auf Ihre Fragen zu unseren Kreditkarten"
+    
+    questions:
+      q1:
+        question: "Wie funktioniert das Cashback?"
+        answer: "Das Cashback wird automatisch jeden 15. des Monats auf Ihr Konto gutgeschrieben. Der Prozentsatz variiert je nach Karte: 1% (Classic), 3% (Gold), 5% (Platinum)."
+      
+      q2:
+        question: "Kann ich meine Karte im Ausland verwenden?"
+        answer: "Ja, alle unsere Karten werden weltweit akzeptiert. Es fallen keine zusätzlichen Gebühren in der Eurozone an und Vorzugstarife gelten außerhalb der Eurozone."
+      
+      q3:
+        question: "Wie aktiviere ich meine neue Karte?"
+        answer: "Aktivieren Sie Ihre Karte direkt über die %company_name% Mobile App oder rufen Sie die Nummer an, die in Ihrem Begleitschreiben angegeben ist."
+      
+      q4:
+        question: "Was tun bei Verlust oder Diebstahl?"
+        answer: "Kontaktieren Sie sofort unseren Kundenservice unter 3636 (24/7) oder sperren Sie Ihre Karte über die Mobile App."
+      
+      q5:
+        question: "Wie ändere ich meine PIN?"
+        answer: "Sie können Ihre PIN über den Online-Kundenbereich oder an jedem %company_name%-Geldautomaten ändern."
+      
+      q6:
+        question: "Welche Versicherungen sind enthalten?"
+        answer: "Je nach Karte: Einkaufs-, Reise-, Stornierungs-, Rücktransportversicherung. Vollständige Details finden Sie in Ihren Allgemeinen Geschäftsbedingungen."

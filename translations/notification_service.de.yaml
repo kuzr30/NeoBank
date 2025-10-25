@@ -1,0 +1,39 @@
+notification_service:
+  email_subjects:
+    account_created: "Ihr %company_name%-Konto ist bereit!"
+    account_suspended: "Vorübergehende Sperrung Ihrer %company_name%-Konten"
+    
+  email_content:
+    account_created:
+      greeting: "Herzlichen Glückwunsch %firstName%!"
+      intro: "Ihr %company_name%-Konto wurde erfolgreich erstellt."
+      account_details: "Details Ihres Kontos:"
+      account_number: "Kontonummer"
+      iban: "IBAN"
+      country: "Land"
+      access_info: "Zugang zu Ihrem Kundenbereich"
+      access_info_text: "Sie können jetzt auf Ihren Kundenbereich zugreifen, um Ihre Bankgeschäfte durchzuführen."
+      support_info: "Wenn Sie Fragen haben, steht Ihnen unser Support-Team zur Verfügung."
+      signature: "Das %company_name%-Team"
+      
+    account_suspended:
+      greeting: "Liebe(r) %s,"
+      suspension_notice: "Wir informieren Sie, dass Ihre %company_name%-Konten vorübergehend gesperrt wurden."
+      reason_security: "Diese Sicherheitsmaßnahme wurde aufgrund ungewöhnlicher Aktivitäten ergriffen."
+      next_steps: "Unser Team überprüft derzeit Ihr Konto und wird Sie innerhalb von 48 Stunden kontaktieren."
+      contact_info: "In dringenden Fällen kontaktieren Sie unseren Kundendienst."
+      signature: "Das %company_name%-Team"
+      
+  log_messages:
+    account_created_sent: "Kontoeröffnungs-E-Mail gesendet"
+    account_suspended_sent: "Kontosperrungs-E-Mail gesendet"
+    account_created_error: "Fehler beim Senden der Kontoeröffnungs-E-Mail"
+    account_suspended_error: "Fehler beim Senden der Kontosperrungs-E-Mail"
+    
+  countries:
+    FR: "Frankreich"
+    BE: "Belgien"
+    NL: "Niederlande"
+    DE: "Deutschland"
+    IT: "Italien"
+    ES: "Spanien"

@@ -1,0 +1,70 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_rib_added_notification.title', {}, 'email_rib_added_notification') }} - {{ parent() }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('email_rib_added_notification.content.page_title', {}, 'email_rib_added_notification') }}</h2>
+    
+    <p class="content-text">
+        {{ tp('email_rib_added_notification.content.greeting', {firstName: firstName}, 'email_rib_added_notification') }}
+    </p>
+    
+    <p class="content-text">
+        {{ tp('email_rib_added_notification.content.confirmation', {}, 'email_rib_added_notification') }}
+    </p>
+    
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_rib_added_notification.content.details_section.title', {}, 'email_rib_added_notification') }}</h3>
+        <table style="width: 100%; border-spacing: 0;">
+            <tr>
+                <td style="padding: 8px 0; color: #666; width: 40%;">{{ tp('email_rib_added_notification.content.details_section.account_name', {}, 'email_rib_added_notification') }}</td>
+                <td style="padding: 8px 0; font-weight: 500;">{{ accountName }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 0; color: #666;">{{ tp('email_rib_added_notification.content.details_section.bank_name', {}, 'email_rib_added_notification') }}</td>
+                <td style="padding: 8px 0; font-weight: 500;">{{ bankName }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 0; color: #666;">{{ tp('email_rib_added_notification.content.details_section.iban', {}, 'email_rib_added_notification') }}</td>
+                <td style="padding: 8px 0; font-weight: 500;">{{ maskedIban }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 0; color: #666;">{{ tp('email_rib_added_notification.content.details_section.added_date', {}, 'email_rib_added_notification') }}</td>
+                <td style="padding: 8px 0; font-weight: 500;">{{ addedDate|date('d/m/Y à H:i') }}</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #4caf50;">{{ tp('email_rib_added_notification.content.info_section.title', {}, 'email_rib_added_notification') }}</h3>
+        <p style="margin-bottom: 0;">
+            {{ tp('email_rib_added_notification.content.info_section.description', {}, 'email_rib_added_notification') }}
+        </p>
+    </div>
+    
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ tp('email_rib_added_notification.content.security_section.title', {}, 'email_rib_added_notification') }}</h3>
+        <p>{{ tp('email_rib_added_notification.content.security_section.warning', {}, 'email_rib_added_notification') }}</p>
+        <ul style="margin-bottom: 0; padding-left: 20px;">
+            {% if companyPhone %}
+                <li>{{ tp('email_rib_added_notification.content.security_section.phone_label', {}, 'email_rib_added_notification') }} {{ companyPhone }}</li>
+            {% endif %}
+            {% if companyEmail %}
+                <li>{{ tp('email_rib_added_notification.content.security_section.email_label', {}, 'email_rib_added_notification') }} {{ companyEmail }}</li>
+            {% endif %}
+        </ul>
+    </div>
+    
+    <div class="btn-container">
+        <a href="{{ url('app_login') }}" style="display: inline-block; background-color: #1976d2; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 500; margin-right: 10px;">{{ tp('email_rib_added_notification.content.buttons.view_ribs', {}, 'email_rib_added_notification') }}</a>
+        <a href="{{ url('app_login') }}" style="display: inline-block; background-color: #666; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 500;">{{ tp('email_rib_added_notification.content.buttons.access_account', {}, 'email_rib_added_notification') }}</a>
+    </div>
+
+    <p class="content-text">
+        {{ tp('email_rib_added_notification.content.footer_text', {}, 'email_rib_added_notification') }}
+    </p>
+    
+    <p class="content-text" style="margin-bottom: 0;">
+        {{ tp('email_rib_added_notification.content.help_text', {}, 'email_rib_added_notification') }}
+    </p>
+{% endblock %}

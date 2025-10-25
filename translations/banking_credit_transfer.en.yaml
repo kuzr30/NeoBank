@@ -1,0 +1,138 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_credit_transfer.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_credit_transfer:
+  # Header section
+  header:
+    title: "Internal Transfer"
+    subtitle: "Transfer between your accounts"
+    last_update: "Last update"
+
+  # Transfer sections
+  sections:
+    from: "From"
+    to: "To"
+    amount: "Amount"
+
+  # Account types
+  accounts:
+    credit_account: "Credit Account"
+    main_account: "Main Account"
+    current_account: "Your current account"
+    destination: "Destination"
+
+  # Form elements
+  form:
+    amount_placeholder: "0.00"
+    amount_currency: "€"
+    amount_help: "Maximum available: %amount% €"
+    amount_help_available: "Maximum available"
+    amount_required: "Amount is required"
+    amount_invalid: "Invalid amount"
+    hidden_sub_account: "Sub-account ID"
+    hidden_token: "CSRF Token"
+
+  # Actions
+  actions:
+    cancel: "Cancel"
+    continue: "Continue"
+    initiate_transfer: "Initiate transfer"
+    confirm_transfer: "Confirm transfer"
+
+  # Confirmation page
+  confirmation:
+    title: "Transfer Confirmation"
+    verification_required: "Verification required"
+    transfer_summary: "Transfer summary"
+    amount_label: "Amount"
+    verification_code_title: "Verification code"
+    verification_info: "A verification code has been sent to your email address."
+    code_placeholder: "000000"
+
+  # Status messages
+  messages:
+    success: "Transfer initiated successfully"
+    error: "Transfer error"
+    insufficient_funds: "Insufficient balance"
+    
+  # Form fields
+  form_fields:
+    credit_account: "Source credit account"
+    destination_account: "Destination account"
+    amount: "Amount to transfer"
+    amount_placeholder: "0.00"
+    description: "Transfer reason"
+    description_placeholder: "Optional description..."
+    available_credit: "Available credit"
+    transfer_fees: "Transfer fees"
+    
+  # Credit info
+  credit:
+    available_limit: "Available limit"
+    used_limit: "Used credit"
+    interest_rate: "Interest rate"
+    minimum_payment: "Minimum monthly payment"
+    next_payment_date: "Next payment date"
+    
+  # Transfer process
+  process:
+    step1: "Amount selection"
+    step2: "Verification"
+    step3: "Confirmation"
+    
+  # Verification
+  verification:
+    title: "Security verification"
+    code_sent: "A verification code has been sent to your email address"
+    enter_code: "Enter the verification code"
+    code_placeholder: "000000"
+    resend_code: "Resend code"
+    code_expires: "Code expires in"
+    
+  # Confirmation details
+  confirmation_details:
+    transfer_details: "Transfer details"
+    source_account: "Source account"
+    destination_account: "Destination account"
+    amount: "Amount"
+    fees: "Fees"
+    total_debit: "Total debited"
+    
+  # Form Actions
+  form_actions:
+    initiate_transfer: "Initiate transfer"
+    confirm_transfer: "Confirm transfer"
+    cancel: "Cancel"
+    back: "Back"
+    verify_code: "Verify code"
+    
+  # Validation
+  validation:
+    amount_required: "Amount is required"
+    amount_invalid: "Invalid amount"
+    amount_exceeds_limit: "Amount exceeds available limit"
+    amount_minimum: "Minimum amount is €10"
+    code_required: "Verification code is required"
+    code_invalid: "Invalid verification code"
+    code_expired: "Verification code expired"
+    
+  # Status Messages
+  status_messages:
+    no_credit_accounts: "No credit accounts available"
+    transfer_initiated: "Transfer initiated successfully"
+    code_sent_success: "Verification code sent"
+    transfer_confirmed: "Transfer confirmed successfully"
+    transfer_failed: "Transfer failed"
+    insufficient_credit: "Insufficient credit"
+    account_blocked: "Account blocked"
+    access_denied: "Access denied to this credit account"
+    
+  # Currency
+  currency: "€"
+  
+  # Time
+  time:
+    minutes: "minutes"
+    seconds: "seconds"

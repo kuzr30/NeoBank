@@ -1,0 +1,330 @@
+services:
+  # Cuentas y Tarjetas
+  accounts_cards:
+    page:
+      title: "Cuentas y Tarjetas"
+      description: "Descubra nuestras cuentas bancarias y tarjetas de crédito adaptadas a sus necesidades."
+    
+    hero:
+      title: "Cuentas y Tarjetas"
+      subtitle: "Soluciones bancarias adaptadas a todas sus necesidades"
+      cta: "Saber más"
+    
+    products:
+      title: "Nuestros Productos"
+      subtitle: "Elija la solución que mejor le convenga"
+      
+      current_account:
+        title: "Cuenta Corriente"
+        description: "La cuenta ideal para gestionar su día a día"
+        features:
+          - "Tarjeta bancaria gratuita"
+          - "Transferencias ilimitadas"
+          - "Aplicación móvil"
+        cta: "Comenzar"
+      
+      savings_account:
+        title: "Cuenta de Ahorro"
+        description: "Haga fructificar su dinero con total seguridad"
+        features:
+          - "Tasa atractiva"
+          - "Disponibilidad inmediata"
+          - "Sin comisiones"
+        cta: "Comenzar"
+      
+      credit_card:
+        title: "Tarjeta de Crédito"
+        description: "Más flexibilidad para sus compras"
+        features:
+          - "Pago diferido"
+          - "Seguro incluido"
+          - "Programas de fidelidad"
+        cta: "Comenzar"
+    
+    features:
+      title: "Por Qué Elegirnos"
+      subtitle: "Ventajas exclusivas para nuestros clientes"
+      
+      security:
+        title: "Seguridad Máxima"
+        description: "Protección 3D Secure y alertas en tiempo real"
+      
+      simple:
+        title: "Fácil de Usar"
+        description: "Interfaz intuitiva y apertura en 5 minutos"
+      
+      fast:
+        title: "Transacciones Rápidas"
+        description: "Transferencias instantáneas 24h/24 7d/7"
+      
+      support:
+        title: "Soporte Experto"
+        description: "Equipo dedicado disponible por teléfono y chat"
+    
+    comparison:
+      title: "¿Por Qué Elegir %company_name%?"
+      subtitle: "Compare nuestras ventajas con la competencia y descubra por qué más de 500 000 clientes confían en nosotros"
+      table_title: "Comparativo de Servicios Bancarios"
+      table_subtitle: "Análisis detallado de las ventajas %company_name% vs competidores tradicionales"
+      
+      features:
+        - "Funcionalidades"
+        - "Tarjeta bancaria gratuita"
+        - "Transferencias instantáneas"
+        - "Aplicación móvil avanzada"
+        - "Soporte cliente 24h/24"
+        - "Descubierto autorizado gratuito"
+        - "Tasa ahorro"
+      
+      bankit: "%company_name%"
+      competitor_a: "Banco A"
+      competitor_b: "Banco B"
+      
+      values:
+        card_free: "Gratuita"
+        transfers_free: "Gratuitas"
+        app_advanced: "Avanzada"
+        support_24h: "24h/24"
+        overdraft: "Hasta 500€"
+        savings_rate: "3.2%"
+      
+      competitor_values:
+        a:
+          card_fee: "5€/mes"
+          transfers_fee: "1€/transferencia"
+          app_quality: "Básica"
+          support_hours: "9h-17h"
+          overdraft_limit: "200€"
+          savings_rate: "1.8%"
+        b:
+          card_fee: "8€/mes"
+          transfers_fee: "✗"
+          app_quality: "Básica"
+          support_hours: "9h-18h"
+          overdraft_limit: "150€"
+          savings_rate: "2.1%"
+    
+    process:
+      title: "Apertura de Cuenta Simplificada"
+      subtitle: "Un proceso 100% digital, seguro y ultra-rápido. Su cuenta está operativa en menos de 10 minutos."
+      time: "⚡ Apertura en 10 minutos máximo"
+      
+      steps:
+        step1:
+          title: "Su Información"
+          description: "Complete sus datos personales y profesionales con total seguridad en nuestra plataforma encriptada"
+          time: "2 minutos"
+        
+        step2:
+          title: "Verificación de Identidad"
+          description: "Validación instantánea de su identidad mediante nuestra tecnología de reconocimiento facial y escaneo de documentos"
+          time: "3 minutos"
+        
+        step3:
+          title: "Validación y Activación"
+          description: "Confirmación automática y activación inmediata de su cuenta con todos los servicios incluidos"
+          time: "2 minutos"
+        
+        step4:
+          title: "Tarjeta e IBAN"
+          description: "Recepción de su tarjeta bancaria en 48h e IBAN disponible inmediatamente para sus transferencias"
+          time: "Instantáneo"
+    
+    services:
+      title: "Servicios Bancarios Premium"
+      subtitle: "Una gama completa de servicios bancarios modernos para simplificar su gestión financiera diaria"
+      
+      items:
+        payment_management:
+          title: "Gestión de Pagos"
+          description: "Todos sus medios de pago centralizados en una interfaz intuitiva y segura"
+          features:
+            - "Transferencias SEPA instantáneas gratuitas"
+            - "Débitos automáticos"
+            - "Pagos móviles Apple Pay / Google Pay"
+            - "Tarjetas virtuales temporales"
+            - "Notificaciones en tiempo real"
+        
+        financial_analysis:
+          title: "Análisis Financiero"
+          description: "Herramientas de análisis avanzadas para optimizar su gestión financiera personal"
+          features:
+            - "Categorización automática de gastos"
+            - "Gráficos e informes detallados"
+            - "Alertas presupuestarias personalizadas"
+            - "Objetivos de ahorro inteligentes"
+            - "Previsiones de tesorería"
+        
+        personalized_advice:
+          title: "Consejos Personalizados"
+          description: "Un acompañamiento a medida para todos sus proyectos financieros e inversiones"
+          features:
+            - "Consejero dedicado disponible 24h/24"
+            - "Simulaciones de crédito en tiempo real"
+            - "Consejos de inversión personalizados"
+            - "Asistencia para sus proyectos inmobiliarios"
+            - "Optimización fiscal"
+      
+      payments:
+        title: "Gestión de Pagos"
+        description: "Todos sus medios de pago centralizados en una interfaz intuitiva y segura"
+        features:
+          - "Transferencias SEPA instantáneas gratuitas"
+          - "Débitos automáticos"
+          - "Pagos móviles Apple Pay / Google Pay"
+          - "Tarjetas virtuales temporales"
+          - "Notificaciones en tiempo real"
+      
+      analysis:
+        title: "Análisis Financiero"
+        description: "Herramientas de análisis avanzadas para optimizar su gestión financiera personal"
+        features:
+          - "Categorización automática de gastos"
+          - "Gráficos e informes detallados"
+          - "Alertas presupuestarias personalizadas"
+          - "Objetivos de ahorro inteligentes"
+          - "Previsiones de tesorería"
+      
+      advice:
+        title: "Consejos Personalizados"
+        description: "Un acompañamiento a medida para todos sus proyectos financieros e inversiones"
+        features:
+          - "Consejero dedicado disponible 24h/24"
+          - "Simulaciones de crédito en tiempo real"
+          - "Consejos de inversión personalizados"
+          - "Asistencia para sus proyectos inmobiliarios"
+          - "Optimización fiscal"
+    
+    benefits:
+      title: "Ventajas Exclusivas %company_name%"
+      subtitle: "Disfrute de ventajas únicas y ofertas privilegiadas reservadas a nuestros clientes fieles"
+      
+      items:
+        instant_transactions:
+          title: "Transacciones Instantáneas"
+          description: "Transferencias y pagos procesados en menos de 3 segundos, 24h/24 y 7d/7"
+          value: "< 3 segundos"
+        
+        cashback:
+          title: "Cashback Garantizado"
+          description: "Recupere hasta 2% de cashback en todas sus compras diarias sin condición"
+          value: "Hasta 2%"
+        
+        insurance:
+          title: "Seguros Incluidos"
+          description: "Protección completa con seguro de viaje, compra y asistencia 24h/24 incluida"
+          value: "Incluidos"
+        
+        global_access:
+          title: "Acceso Mundial"
+          description: "Use su tarjeta en más de 210 países sin comisiones ocultas ni comisiones"
+          value: "210+ países"
+        
+        loyalty_program:
+          title: "Programa de Fidelidad"
+          description: "Puntos de fidelidad convertibles en ventajas y ofertas de socios exclusivos"
+          value: "Puntos VIP"
+        
+        automatic_savings:
+          title: "Ahorro Automático"
+          description: "Redondeos automáticos y transferencias programadas para ahorrar sin esfuerzo"
+          value: "Automático"
+      
+      instant:
+        title: "Transacciones Instantáneas"
+        description: "Transferencias y pagos procesados en menos de 3 segundos, 24h/24 y 7d/7"
+        value: "< 3 segundos"
+      
+      cashback:
+        title: "Cashback Garantizado"
+        description: "Recupere hasta 2% de cashback en todas sus compras diarias sin condición"
+        value: "Hasta 2%"
+      
+      insurance:
+        title: "Seguros Incluidos"
+        description: "Protección completa con seguro de viaje, compra y asistencia 24h/24 incluida"
+        value: "Incluidos"
+      
+      worldwide:
+        title: "Acceso Mundial"
+        description: "Use su tarjeta en más de 210 países sin comisiones ocultas ni comisiones"
+        value: "210+ países"
+      
+      loyalty:
+        title: "Programa de Fidelidad"
+        description: "Puntos de fidelidad convertibles en ventajas y ofertas de socios exclusivos"
+        value: "Puntos VIP"
+      
+      savings:
+        title: "Ahorro Automático"
+        description: "Redondeos automáticos y transferencias programadas para ahorrar sin esfuerzo"
+        value: "Automático"
+    
+    support:
+      title: "Soporte al Cliente de Excelencia"
+      subtitle: "Un equipo de expertos dedicado a su servicio para responder a todas sus preguntas, 24h/24 y 7d/7"
+      
+      channels:
+        live_chat:
+          title: "Chat en Vivo"
+          description: "Asistencia instantánea mediante nuestro chat integrado con agentes expertos disponibles inmediatamente"
+          availability: "24h/24 - 7d/7"
+          response_time: "Respuesta < 30 segundos"
+        
+        phone_hotline:
+          title: "Línea Telefónica"
+          description: "Servicio telefónico premium con consejeros especializados para todas sus preguntas complejas"
+          availability: "24h/24 - 7d/7"
+          response_time: "Gratuito desde Francia"
+        
+        email_form:
+          title: "Email y Formulario"
+          description: "Soporte detallado por email con respuestas personalizadas de nuestros expertos bancarios"
+          availability: "Respuesta garantizada"
+          response_time: "En 2 horas"
+        
+        interactive_faq:
+          title: "FAQ Interactivo"
+          description: "Base de conocimientos completa con búsqueda inteligente y guías paso a paso"
+          availability: "Acceso libre"
+          response_time: "Respuestas instantáneas"
+    
+    cta:
+      title: "¿Listo para Comenzar?"
+      description: "Abra su cuenta en pocos minutos y disfrute de nuestras ventajas exclusivas"
+      primary_button: "Comenzar"
+      secondary_button: "Contactarnos"
+  
+  # Ahorro e Inversiones
+  savings_investments:
+    page:
+      title: "Ahorro e Inversiones"
+      description: "Optimice su ahorro con nuestras soluciones de inversión seguras y rentables."
+  
+  # Seguros
+  insurances:
+    page:
+      title: "Seguros"
+      description: "Proteja sus bienes y su familia con nuestras soluciones de seguro completas."
+  
+  # Presupuestos
+  devis:
+    page:
+      title: "Solicitud de presupuesto - %type%"
+      description: "Solicite su presupuesto para %type% en línea. %description%"
+    
+    confirmation:
+      page:
+        title: "Confirmación - Presupuesto %numero%"
+        description: "Su solicitud de presupuesto ha sido registrada exitosamente."
+    
+    success:
+      message: "Su solicitud de presupuesto %numero% ha sido registrada. Recibirá una confirmación por email."
+    
+    error:
+      type_not_found: "Tipo de seguro no encontrado"
+      save_failed: "Ha ocurrido un error durante el registro de su solicitud. Por favor inténtelo de nuevo."
+      detailed: "Error detallado: %message%"
+      validation_failed: "El formulario contiene errores. Por favor verifique sus datos."
+      validation_error: "Error: %message%"
+      not_found: "Solicitud de presupuesto no encontrada"

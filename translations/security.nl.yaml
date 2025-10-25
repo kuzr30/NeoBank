@@ -1,0 +1,16 @@
+security:
+  activation_notice:
+    title: "Controleer uw e-mail!"
+    message: "We hebben een activatie-e-mail naar uw adres gestuurd. Klik op de link in de e-mail om uw account te activeren en %company_name% te gaan gebruiken."
+    info: "De activatielink vervalt over 24 uur. Als u de e-mail niet kunt vinden, controleer dan uw spam."
+    actions:
+      login: "Ga naar inloggen"
+      resend: "Activatie-e-mail opnieuw versturen"
+  
+  resend_activation:
+    title: "Activering opnieuw versturen"
+    subtitle: "Voer uw e-mailadres in om een nieuwe activatielink voor uw account te ontvangen."
+    email_label: "E-mailadres"
+    email_placeholder: "uw@email.com"
+    submit_button: "Activatie-e-mail opnieuw versturen"
+    back_button: "Terug"

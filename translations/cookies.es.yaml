@@ -1,0 +1,57 @@
+cookies:
+  page_title: "Política de Cookies"
+  page_description: "Información sobre el uso de cookies en nuestro sitio web"
+
+  what_are_cookies:
+    title: "¿Qué es una cookie?"
+    content: |
+      Una cookie es un pequeño archivo de texto almacenado en su ordenador, tableta o smartphone
+      cuando visita nuestro sitio web. Las cookies nos permiten mejorar su experiencia
+      de navegación y ofrecerle servicios personalizados.
+
+  types_of_cookies:
+    title: "Tipos de cookies utilizadas"
+    essential:
+      title: "Cookies esenciales"
+      content: |
+        Estas cookies son necesarias para el funcionamiento del sitio y no se pueden desactivar.
+        Permiten recordar sus preferencias de conexión y garantizar la seguridad de sus transacciones.
+    
+    performance:
+      title: "Cookies de rendimiento"
+      content: |
+        Estas cookies nos ayudan a entender cómo los visitantes utilizan nuestro sitio
+        recopilando información anónima sobre las páginas visitadas y los errores encontrados.
+    
+    functionality:
+      title: "Cookies de funcionalidad"
+      content: |
+        Estas cookies permiten al sitio recordar sus elecciones (idioma, región, nombre de usuario)
+        y ofrecerle funcionalidades mejoradas y personalizadas.
+
+  manage_cookies:
+    title: "Gestión de cookies"
+    content: |
+      Puede controlar y gestionar las cookies de varias maneras:
+      <ul>
+        <li><strong>Configuración del navegador:</strong> configure su navegador para aceptar, rechazar o eliminar cookies</li>
+        <li><strong>Herramientas online:</strong> use extensiones de navegador para bloquear cookies</li>
+        <li><strong>Preferencias del sitio:</strong> modifique sus preferencias de cookies desde su cuenta</li>
+      </ul>
+      <em>Atención:</em> La desactivación de ciertas cookies puede afectar el funcionamiento del sitio.
+
+  third_party:
+    title: "Cookies de terceros"
+    content: |
+      También utilizamos cookies de socios externos para:
+      <ul>
+        <li><strong>Google Analytics:</strong> análisis del tráfico y comportamiento de los usuarios</li>
+        <li><strong>Redes sociales:</strong> integración de botones para compartir</li>
+        <li><strong>Publicidad:</strong> difusión de publicidad dirigida (con su consentimiento)</li>
+      </ul>
+
+  contact:
+    title: "Contacto"
+    content: |
+      Para cualquier pregunta sobre nuestro uso de cookies,
+      contáctenos en la dirección %email%.

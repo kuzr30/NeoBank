@@ -1,0 +1,223 @@
+insurance:
+  # Meta tags
+  meta:
+    title: "Assurances Bancaires - Protection Complète - %company_name%"
+    description: "Découvrez nos solutions d'assurance bancaire complètes : auto, habitation, santé, voyage et plus. Protection optimale avec %company_name%."
+
+  # Hero Section
+  hero:
+    title_part1: "Votre Partenaire"
+    title_accent: "Assurance"
+    title_part2: "de Confiance"
+    description: "Économisez et comparez les devis d'assurance auto. Personnalisez votre couverture et obtenez la meilleure offre en quelques minutes."
+    email_placeholder: "Votre Email"
+    cta_button: "Obtenir un Devis"
+    support_badge: "Support Client"
+    nav:
+      auto: "Auto"
+      home: "Habitation"
+      health: "Santé"
+      life: "Vie"
+      professional: "Professionnelle"
+  
+  packages:
+    title: "Nos Formules d'Assurance"
+    subtitle: "Des solutions adaptées à vos besoins - choisissez celle qui vous convient le mieux"
+    essential:
+      title: "Couverture Essentielle"
+      description: "Protection de base pour votre tranquillité d'esprit avec un tarif abordable"
+      features:
+        - "Responsabilité civile"
+        - "Assistance dépannage"
+        - "Protection juridique"
+    standard:
+      badge: "Recommandé"
+      title: "Couverture Standard"
+      description: "Un plan équilibré offrant protection renforcée et avantages étendus"
+      features:
+        - "Tous risques collision"
+        - "Vol et incendie"
+        - "Bris de glace"
+        - "Véhicule de remplacement"
+    premium:
+      title: "Couverture Premium"
+      description: "Couverture complète avec avantages exclusifs pour une sécurité totale"
+      features:
+        - "Couverture tous risques"
+        - "Valeur à neuf 2 ans"
+        - "Assistance Europe"
+        - "Conducteur secondaire"
+    custom:
+      title: "Couverture Sur-Mesure"
+      description: "Créez votre propre plan - choisissez les garanties qui vous correspondent le mieux"
+      features:
+        - "Garanties modulables"
+        - "Tarification personnalisée"
+        - "Conseiller dédié"
+        - "Ajustements flexibles"
+
+  # Section hero originale (pour hero_assurances.html.twig)  
+  hero_banner:
+    badge: "Protection Bancaire Intégrale"
+    title: "Protégez votre patrimoine avec nos"
+    title_highlight: "assurances bancaires"
+    description: "Découvrez nos solutions d'assurance conçues spécialement pour protéger vos investissements, vos crédits et votre tranquillité d'esprit. Plus de 50 000 clients nous font confiance."
+    stats:
+      satisfaction:
+        value: "98%"
+        label: "Satisfaction client"
+      processing:
+        value: "24h"
+        label: "Traitement devis"
+      types:
+        value: "12"
+        label: "Types d'assurance"
+    actions:
+      primary: "Découvrir nos assurances"
+      secondary: "Pourquoi nous choisir"
+    cards:
+      home:
+        title: "Assurance Habitation"
+        description: "Protection complète de votre domicile"
+      loan:
+        title: "Assurance Prêt"
+        description: "Sécurisez vos remboursements"
+      auto:
+        title: "Assurance Auto"
+        description: "Roulez en toute sérénité"
+
+  # Insurance Types Section
+  types:
+    header:
+      title: "Nos Solutions d'Assurance"
+      subtitle: "Une gamme complète d'assurances adaptées à tous vos besoins, avec des tarifs compétitifs et un service client d'exception."
+    auto:
+      title: "Assurance Auto"
+      description: "Protection complète pour votre véhicule avec assistance 24h/24 et garanties étendues."
+      features:
+        - "Assistance 24h/24 et 7j/7"
+        - "Réparation chez tous nos partenaires"
+        - "Véhicule de remplacement"
+        - "Protection du conducteur"
+        - "Bris de glace inclus"
+      cta: "Obtenir un devis auto"
+      popular: "Populaire"
+    credit:
+      title: "Assurance Emprunteur"
+      description: "Protégez votre famille et vos projets en cas d'incapacité de remboursement de votre crédit."
+      features:
+        - "Couverture décès et invalidité"
+        - "Incapacité temporaire de travail"
+        - "Perte d'emploi (option)"
+        - "Tarifs préférentiels clients"
+        - "Délégation d'assurance possible"
+      cta: "Obtenir un devis crédit"
+    home:
+      title: "Assurance Habitation"
+      description: "Protégez votre logement et vos biens contre tous les risques du quotidien."
+      features:
+        - "Multirisque habitation complète"
+        - "Responsabilité civile incluse"
+        - "Assistance dépannage 24h/24"
+        - "Protection juridique"
+        - "Biens nomades couverts"
+      cta: "Obtenir un devis habitation"
+    health:
+      title: "Assurance Santé"
+      description: "Complémentaire santé adaptée à vos besoins avec un large réseau de professionnels."
+      features:
+        - "Remboursements rapides"
+        - "Tiers payant généralisé"
+        - "Téléconsultation incluse"
+        - "Médecines douces couvertes"
+        - "Optique et dentaire renforcés"
+      cta: "Obtenir un devis santé"
+    life:
+      title: "Assurance Vie"
+      description: "Constituez et transmettez votre patrimoine en optimisant votre fiscalité."
+      features:
+        - "Versements libres ou programmés"
+        - "Large choix de supports"
+        - "Avance sur contrat possible"
+        - "Fiscalité avantageuse"
+        - "Gestion libre ou pilotée"
+      cta: "Obtenir un devis vie"
+    travel:
+      title: "Assurance Voyage"
+      description: "Partez l'esprit tranquille avec notre couverture voyage complète."
+      features:
+        - "Assistance rapatriement"
+        - "Frais médicaux à l'étranger"
+        - "Annulation voyage"
+        - "Bagages et effets personnels"
+        - "Responsabilité civile"
+      cta: "Obtenir un devis voyage"
+    professional:
+      title: "Assurance Professionnelle"
+      description: "Protégez votre activité professionnelle avec nos garanties sur-mesure."
+      features:
+        - "Responsabilité civile pro"
+        - "Protection juridique"
+        - "Multirisque professionnelle"
+        - "Cyber-risques inclus"
+        - "Perte d'exploitation"
+      cta: "Obtenir un devis pro"
+    decennial:
+      title: "Responsabilité Décennale"
+      description: "Obligation légale pour tous les professionnels du bâtiment et de la construction."
+      features:
+        - "Couverture 10 ans obligatoire"
+        - "Défense et recours"
+        - "Dommages aux ouvrages"
+        - "Attestation immédiate"
+        - "Tarifs préférentiels"
+      cta: "Obtenir un devis décennale"
+
+  # Benefits Section
+  benefits:
+    title: "Pourquoi choisir nos assurances ?"
+    competitive_rates:
+      title: "Tarifs compétitifs"
+      description: "Des offres adaptées à tous les budgets, sans compromis sur la qualité de couverture."
+    support_24_7:
+      title: "Support 24/7"
+      description: "Une assistance réactive et humaine, disponible à tout moment pour vous accompagner."
+    online_management:
+      title: "Gestion 100% en ligne"
+      description: "Souscription, gestion et suivi de vos contrats directement depuis votre espace client sécurisé."
+    custom_offers:
+      title: "Offres sur-mesure"
+      description: "Des solutions personnalisées selon vos besoins, que vous soyez particulier ou professionnel."
+
+  # Process Section
+  process:
+    title: "Souscrire une assurance, c'est simple !"
+    steps:
+      choose:
+        title: "Choisissez votre type d'assurance"
+        description: "Sélectionnez le type de couverture qui correspond à vos besoins"
+      form:
+        title: "Remplissez le formulaire de devis en ligne"
+        description: "Quelques informations suffisent pour obtenir votre proposition"
+      proposal:
+        title: "Recevez une proposition personnalisée"
+        description: "Notre équipe étudie votre dossier et vous propose la meilleure offre"
+      subscribe:
+        title: "Souscrivez et soyez protégé immédiatement"
+        description: "Validation en ligne et protection effective dès signature"
+
+  # Contact CTA Section
+  contact_cta:
+    title: "Besoin d'un conseil ou d'un devis ?"
+    description: "Nos conseillers sont à votre écoute pour vous accompagner dans votre projet d'assurance."
+    button: "Contactez-nous"
+
+  # Common elements
+  common:
+    get_quote: "Obtenir un devis"
+    learn_more: "En savoir plus"
+    contact_us: "Nous contacter"
+    from: "À partir de"
+    per_month: "par mois"
+    popular: "Populaire"
+    recommended: "Recommandé"

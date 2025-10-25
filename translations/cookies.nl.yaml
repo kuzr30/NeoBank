@@ -1,0 +1,57 @@
+cookies:
+  page_title: "Cookiebeleid"
+  page_description: "Informatie over het gebruik van cookies op onze website"
+
+  what_are_cookies:
+    title: "Wat is een cookie?"
+    content: |
+      Een cookie is een klein tekstbestand dat wordt opgeslagen op uw computer, tablet of smartphone
+      wanneer u onze website bezoekt. Cookies stellen ons in staat uw browse-ervaring te verbeteren
+      en u gepersonaliseerde diensten aan te bieden.
+
+  types_of_cookies:
+    title: "Soorten gebruikte cookies"
+    essential:
+      title: "Essentiële cookies"
+      content: |
+        Deze cookies zijn noodzakelijk voor het functioneren van de website en kunnen niet worden uitgeschakeld.
+        Ze maken het mogelijk uw inlogvoorkeuren te onthouden en de veiligheid van uw transacties te waarborgen.
+    
+    performance:
+      title: "Prestatiecookies"
+      content: |
+        Deze cookies helpen ons begrijpen hoe bezoekers onze website gebruiken
+        door anonieme informatie te verzamelen over bezochte pagina's en ondervonden fouten.
+    
+    functionality:
+      title: "Functionaliteitscookies"
+      content: |
+        Deze cookies stellen de website in staat uw keuzes (taal, regio, gebruikersnaam) te onthouden
+        en u verbeterde en gepersonaliseerde functionaliteiten aan te bieden.
+
+  manage_cookies:
+    title: "Cookiebeheer"
+    content: |
+      U kunt cookies op verschillende manieren controleren en beheren:
+      <ul>
+        <li><strong>Browserinstellingen:</strong> configureer uw browser om cookies te accepteren, weigeren of verwijderen</li>
+        <li><strong>Online tools:</strong> gebruik browserextensies om cookies te blokkeren</li>
+        <li><strong>Websitevoorkeuren:</strong> wijzig uw cookievoorkeuren vanuit uw account</li>
+      </ul>
+      <em>Let op:</em> Het uitschakelen van bepaalde cookies kan de werking van de website beïnvloeden.
+
+  third_party:
+    title: "Cookies van derden"
+    content: |
+      Wij gebruiken ook cookies van externe partners voor:
+      <ul>
+        <li><strong>Google Analytics:</strong> analyse van verkeer en gebruikersgedrag</li>
+        <li><strong>Sociale netwerken:</strong> integratie van deelknoppen</li>
+        <li><strong>Reclame:</strong> vertoning van gerichte reclame (met uw toestemming)</li>
+      </ul>
+
+  contact:
+    title: "Contact"
+    content: |
+      Voor vragen betreffende ons gebruik van cookies,
+      neem contact met ons op via het adres %email%.

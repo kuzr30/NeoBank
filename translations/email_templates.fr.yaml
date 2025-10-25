@@ -1,0 +1,124 @@
+# Email KYC rejeté
+kyc_rejected:
+  title: "Vérification d'identité - Action requise"
+  greeting: "Bonjour %name%,"
+  intro: "Nous avons examiné les documents que vous avez soumis pour votre vérification d'identité (KYC). Malheureusement, nous ne pouvons pas valider votre compte pour les raisons suivantes :"
+  reasons_title: "Raisons du rejet :"
+  action_title: "Action requise"
+  action_required: "Pour finaliser l'ouverture de votre compte, veuillez vous connecter et soumettre à nouveau les documents requis en tenant compte des remarques ci-dessus."
+  custom_message_title: "IMPORTANT :"
+  login_button: "Me connecter à mon compte"
+  closing: "Nous restons à votre disposition pour toute question."
+  signature: "Cordialement,<br>L'équipe"
+
+# Email compte incomplet
+incomplete_account:
+  title: "Complétez votre profil"
+  greeting: "Bonjour %name%,"
+  intro: "Nous avons remarqué que votre profil n'est pas encore complet. Pour profiter pleinement de tous nos services bancaires, nous vous invitons à compléter les informations manquantes."
+  reasons_title: "Éléments à corriger :"
+  warning_title: "Attention"
+  warning: "Un profil complet vous permet d'accéder à l'ensemble de nos services et garantit la sécurité de votre compte."
+  action_title: "Action requise"
+  action_required: "Veuillez vous connecter pour compléter votre profil."
+  custom_message_title: "IMPORTANT :"
+  login_button: "Compléter mon profil"
+  closing: "Nous vous remercions de votre confiance."
+  signature: "Cordialement,<br>L'équipe"
+
+# Email demande de frais
+fees_inquiry:
+  title: "Information sur les frais bancaires"
+  greeting: "Bonjour %name%,"
+  intro: "Nous vous contactons concernant des frais liés à votre compte bancaire."
+  info_title: "Information importante"
+  info: "Pour plus de détails sur ces frais, veuillez vous connecter à votre espace client."
+  custom_message_title: "Informations complémentaires :"
+  login_button: "Accéder à mon compte"
+  closing: "Notre service client reste à votre disposition pour toute question."
+  signature: "Cordialement,<br>L'équipe"
+
+# Email rappel activation compte
+account_activation_reminder:
+  title: "Rappel - Activez votre compte"
+  greeting: "Bonjour %name%,"
+  intro: "Nous remarquons que vous n'avez pas encore activé votre compte bancaire."
+  warning_title: "Rappel important"
+  warning: "L'activation de votre compte est nécessaire pour accéder à tous nos services."
+  action_title: "Action requise"
+  action_required: "Veuillez vous connecter pour finaliser l'activation de votre compte."
+  custom_message_title: "IMPORTANT :"
+  login_button: "Activer mon compte"
+  closing: "Nous sommes impatients de vous compter parmi nos clients actifs."
+  signature: "Cordialement,<br>L'équipe"
+
+# Email demande de crédit incomplète
+credit_application_incomplete:
+  title: "Votre demande de crédit - Informations manquantes"
+  greeting: "Bonjour %name%,"
+  intro: "Nous avons bien reçu votre demande de crédit. Cependant, certaines informations sont manquantes pour poursuivre l'étude de votre dossier."
+  reasons_title: "Éléments manquants :"
+  warning_title: "Attention"
+  warning: "Pour traiter rapidement votre demande, nous avons besoin que vous complétiez les informations manquantes."
+  action_title: "Action requise"
+  action_required: "Veuillez vous connecter pour compléter votre demande de crédit."
+  custom_message_title: "Informations requises :"
+  login_button: "Compléter ma demande"
+  closing: "Nous étudierons votre dossier dès réception des informations complètes."
+  signature: "Cordialement,<br>L'équipe"
+
+# Email relance création de compte et validation KYC
+account_creation_follow_up:
+  title: "Suivi de votre demande - Action requise"
+  greeting: "Bonjour %name%,"
+  intro: "Nous vous confirmons la bonne réception de votre demande. Celle-ci est actuellement en cours de traitement par nos équipes."
+  
+  status_title: "Statut de votre demande"
+  status_description: "Votre demande a été reçue et une réponse a été envoyée. Afin de consulter cette réponse et suivre l'évolution de votre dossier, nous vous invitons à créer votre espace client sécurisé."
+  
+  action_required_title: "Action requise pour consulter votre réponse"
+  action_required_intro: "Pour accéder à votre espace client et consulter la réponse à votre demande, veuillez suivre ces étapes :"
+  step_1: "Créez votre compte en ligne sur notre plateforme sécurisée"
+  step_2: "Complétez votre profil avec vos informations personnelles"
+  step_3: "Validez votre identité en suivant le processus de vérification KYC"
+  
+  kyc_title: "Pourquoi la vérification d'identité (KYC) est-elle obligatoire ?"
+  kyc_intro: "La vérification KYC (Know Your Customer) est une procédure réglementaire obligatoire dans le secteur bancaire et financier. Cette démarche nous est imposée par la législation et vise à protéger tous nos clients."
+  kyc_why: "Raisons réglementaires et sécuritaires :"
+  kyc_reason_1: "Conformité aux directives européennes anti-blanchiment d'argent (LCB-FT)"
+  kyc_reason_2: "Prévention de la fraude et de l'usurpation d'identité"
+  kyc_reason_3: "Protection de vos données personnelles et de votre patrimoine"
+  kyc_reason_4: "Respect des obligations légales imposées aux établissements financiers"
+  
+  documents_title: "Documents nécessaires pour la vérification"
+  documents_intro: "Pour compléter votre vérification d'identité, vous devrez fournir :"
+  document_1: "Une pièce d'identité en cours de validité (carte d'identité, passeport ou titre de séjour)"
+  document_2: "Un justificatif de domicile récent (moins de 3 mois)"
+  document_3: "Un selfie avec votre pièce d'identité pour authentification biométrique"
+  
+  custom_message_title: "Message important de notre équipe"
+  
+  create_account_button: "Créer mon compte et valider mon identité"
+  
+  processing_time_title: "Délai de traitement"
+  processing_time_text: "Une fois votre identité validée, vous pourrez immédiatement consulter la réponse à votre demande. La vérification KYC est généralement traitée sous 24 à 48 heures ouvrées."
+  
+  closing: "Nous restons à votre entière disposition pour tout renseignement complémentaire ou assistance dans cette démarche."
+  signature: "Cordialement,<br>Le Service Clientèle<br>%company_name%"
+  
+  legal_notice: "Ce message et les pièces jointes sont confidentiels et établis à l'attention exclusive de leurs destinataires. Toute utilisation ou diffusion non autorisée est interdite. La vérification d'identité est obligatoire conformément aux dispositions de la directive (UE) 2015/849 relative à la prévention de l'utilisation du système financier aux fins de blanchiment de capitaux et de financement du terrorisme."
+
+# Email coordonnées bancaires pour virement
+payment_details:
+  greeting: "Cher(e) %name%,"
+  title: "Coordonnées bancaires pour votre règlement"
+  intro: "Nous vous transmettons par la présente les coordonnées bancaires nécessaires pour effectuer le paiement du montant indiqué ci-dessus. Veuillez trouver ci-dessous les informations du compte :"
+  bank_details_title: "Informations du compte bancaire"
+  account_holder: "Titulaire du compte"
+  iban: "IBAN"
+  bic: "BIC"
+  instant_transfer_title: "VIREMENT EN TEMPS RÉEL IMPÉRATIF"
+  instant_transfer_message: "Il est IMPÉRATIF que ce règlement soit effectué par virement en TEMPS RÉEL (ou virement instantané). Nous insistons sur la nécessité absolue d'utiliser cette option de virement instantané pour garantir la réception immédiate des fonds."
+  proof_title: "Confirmation du virement"
+  proof_message: "Dès l'exécution du transfert, nous vous prions de nous faire parvenir une copie du bordereau de virement pour confirmation."
+  support_message: "Nous vous remercions de votre diligence et de votre rapidité."

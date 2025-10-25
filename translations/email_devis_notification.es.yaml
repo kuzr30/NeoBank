@@ -1,0 +1,54 @@
+email_devis_notification:
+  title: "Nueva solicitud de presupuesto - %typeAssurance%"
+  
+  content:
+    page_title: "Nueva solicitud de presupuesto recibida"
+    
+    priority:
+      title: "Acción requerida - Tratamiento prioritario"
+      message: "Nueva solicitud de presupuesto a tratar en 24h"
+    
+    reference:
+      title: "Referencia de la solicitud"
+      number: "Número de presupuesto"
+      insurance_type: "Tipo de seguro"
+    
+    client_info:
+      title: "Información del cliente"
+      full_name: "Nombre completo"
+      contact_email: "Email de contacto"
+      phone: "Teléfono"
+      contact_preference: "Preferencia de contacto"
+      request_date: "Fecha de solicitud"
+    
+    comments:
+      title: "Comentarios del cliente"
+    
+    action_plan:
+      title: "Plan de acción recomendado"
+      telephone_priority: "1. Contacto telefónico prioritario"
+      telephone_desc: "Llamar al cliente al %telephone% (preferencia declarada)"
+      email_priority: "1. Contacto por email prioritario"
+      email_desc: "Enviar un email a %email% (preferencia declarada)"
+      appointment_priority: "1. Proponer una cita"
+      appointment_desc: "Organizar una cita en agencia (preferencia declarada)"
+      analysis: "2. Análisis personalizado"
+      analysis_desc: "Analizar el perfil y las necesidades específicas del cliente"
+      offer_prep: "3. Preparación de oferta"
+      offer_prep_desc: "Establecer una propuesta comercial personalizada"
+      crm_update: "4. Actualización CRM"
+      crm_update_desc: "Actualizar el estado y las interacciones en el sistema"
+    
+    specialized_advice:
+      title: "Consejos especializados"
+      auto_advice: "Seguro de automóvil: Preguntar el modelo del vehículo, el año de puesta en circulación, el uso previsto, y el historial de siniestros para personalizar la oferta."
+      habitation_advice: "Seguro de vivienda: Informarse sobre el tipo de vivienda, la superficie, el valor de los bienes a asegurar, y la localización para adaptar la cobertura."
+      sante_advice: "Complementario de salud: Evaluar la situación familiar, las necesidades médicas específicas, y el presupuesto disponible para proponer la fórmula óptima."
+      general_advice: "Enfoque personalizado: Adaptar su metodología comercial según el tipo de seguro solicitado y las especificidades del perfil del cliente."
+    
+    footer: "<strong>%company_name% - Sistema de gestión de presupuestos</strong><br>Notificación automática de nueva solicitud"
+
+  logs:
+    devis_notification_sent: "Notificación de nueva solicitud de presupuesto enviada al equipo comercial"
+    devis_notification_failed: "Error al enviar la notificación de presupuesto"
+    quote_request_assigned: "Solicitud de presupuesto %numeroDevis% asignada al equipo comercial"

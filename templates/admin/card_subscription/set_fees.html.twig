@@ -1,0 +1,143 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block content_title %}
+    <i class="fas fa-euro-sign"></i> Définition des frais de carte bancaire
+{% endblock %}
+
+{% block main %}
+<div class="container-fluid">
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">
+                    <i class="fas fa-info-circle"></i>
+                    Détails de la demande
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <dl class="row">
+                            <dt class="col-sm-4">Référence :</dt>
+                            <dd class="col-sm-8">{{ subscription.reference }}</dd>
+                            
+                            <dt class="col-sm-4">Client :</dt>
+                            <dd class="col-sm-8">{{ subscription.user.firstName }} {{ subscription.user.lastName }}</dd>
+                            
+                            <dt class="col-sm-4">Email :</dt>
+                            <dd class="col-sm-8">{{ subscription.user.email }}</dd>
+                            
+                            <dt class="col-sm-4">Type de carte :</dt>
+                            <dd class="col-sm-8">
+                                <span class="badge badge-info">{{ subscription.cardType|title }}</span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-md-6">
+                        <dl class="row">
+                            <dt class="col-sm-4">Marque :</dt>
+                            <dd class="col-sm-8">
+                                <span class="badge badge-secondary">{{ subscription.cardBrand|title }}</span>
+                            </dd>
+                            
+                            <dt class="col-sm-4">Statut :</dt>
+                            <dd class="col-sm-8">
+                                <span class="badge badge-warning">{{ subscription.status|title }}</span>
+                            </dd>
+                            
+                            <dt class="col-sm-4">Date demande :</dt>
+                            <dd class="col-sm-8">{{ subscription.createdAt|date('d/m/Y H:i') }}</dd>
+                            
+                            <dt class="col-sm-4">Compte :</dt>
+                            <dd class="col-sm-8">{{ subscription.account.iban }}</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">
+                    <i class="fas fa-euro-sign"></i>
+                    Configuration des frais
+                </h5>
+            </div>
+            <div class="card-body">
+                {{ form_start(form, {'attr': {'novalidate': 'novalidate', 'class': 'needs-validation'}}) }}
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group mb-3">
+                            {{ form_label(form.activationFee, 'Frais d\'activation (€)', {'label_attr': {'class': 'form-label fw-bold'}}) }}
+                            {{ form_widget(form.activationFee, {'attr': {'class': 'form-control', 'step': '0.01', 'min': '0'}}) }}
+                            {{ form_errors(form.activationFee) }}
+                            <small class="form-text text-muted">Frais uniques lors de l'activation</small>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="form-group mb-3">
+                            {{ form_label(form.monthlyFee, 'Frais mensuels (€)', {'label_attr': {'class': 'form-label fw-bold'}}) }}
+                            {{ form_widget(form.monthlyFee, {'attr': {'class': 'form-control', 'step': '0.01', 'min': '0'}}) }}
+                            {{ form_errors(form.monthlyFee) }}
+                            <small class="form-text text-muted">Frais récurrents mensuels</small>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="form-group mb-3">
+                            {{ form_label(form.dailyLimit, 'Plafond journalier (€)', {'label_attr': {'class': 'form-label fw-bold'}}) }}
+                            {{ form_widget(form.dailyLimit, {'attr': {'class': 'form-control', 'step': '0.01', 'min': '0'}}) }}
+                            {{ form_errors(form.dailyLimit) }}
+                            <small class="form-text text-muted">Limite quotidienne</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group mb-3">
+                            {{ form_label(form.monthlyLimit, 'Plafond mensuel (€)', {'label_attr': {'class': 'form-label fw-bold'}}) }}
+                            {{ form_widget(form.monthlyLimit, {'attr': {'class': 'form-control', 'step': '0.01', 'min': '0'}}) }}
+                            {{ form_errors(form.monthlyLimit) }}
+                            <small class="form-text text-muted">Limite mensuelle</small>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="form-group mb-3">
+                            {{ form_label(form.creditLimit, 'Limite de crédit (€)', {'label_attr': {'class': 'form-label fw-bold'}}) }}
+                            {{ form_widget(form.creditLimit, {'attr': {'class': 'form-control', 'step': '0.01', 'min': '0'}}) }}
+                            {{ form_errors(form.creditLimit) }}
+                            <small class="form-text text-muted">Crédit autorisé</small>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <!-- Colonne vide pour l'alignement -->
+                    </div>
+                </div>
+                
+                <div class="form-actions d-flex justify-content-between mt-4">
+                    <a href="{{ path('app_admin_dashboard') }}" 
+                       class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i>
+                        Retour au tableau de bord
+                    </a>
+                    
+                    {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary btn-lg'}}) }}
+                </div>
+                
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

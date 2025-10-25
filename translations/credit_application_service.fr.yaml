@@ -1,0 +1,12 @@
+credit_application_service:
+  validation_errors:
+    age_minor: "L'emprunteur doit être majeur"
+    age_maximum: "L'âge maximum pour un crédit est de 75 ans"
+    debt_ratio_exceeded: "Le taux d'endettement ne doit pas dépasser 33% ({debtRatio}% calculé)"
+    minimum_income: "Le revenu mensuel minimum requis est de 1000€"
+    employment_required: "Un emploi stable est requis pour obtenir un crédit"
+    
+  eligibility:
+    eligible: "Éligible au crédit"
+    not_eligible: "Non éligible au crédit"
+    debt_ratio_calculated: "Taux d'endettement calculé: {ratio}%"

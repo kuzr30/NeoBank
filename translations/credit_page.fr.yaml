@@ -1,0 +1,131 @@
+credit_page:
+  index:
+    page_title: "Nos offres de crédit"
+    page_description: "Découvrez toutes nos solutions de financement adaptées à vos besoins."
+  
+  breadcrumb:
+    credit_offers: "Nos offres de crédit"
+
+  hero:
+    highlights:
+      rate_from: "TAEG à partir de"
+      max_amount: "Montant maximum"
+      max_duration: "Durée maximum"
+    actions:
+      simulate: "Simuler mon crédit"
+      apply: "Faire une demande"
+
+  sections:
+    section_1:
+      title: "Qu'est-ce que ce crédit ?"
+      paragraph_1: "Cette solution de financement vous permet de réaliser vos projets dans les meilleures conditions."
+      paragraph_2: "Contactez nos conseillers pour obtenir des informations personnalisées adaptées à votre situation."
+
+    section_2:
+      title: "Conditions de financement"
+      features:
+        amount:
+          title: "Montant"
+          description: "De 1 000€ à 100 000€"
+          detail: "Adapté à votre projet"
+        duration:
+          title: "Durée"
+          description: "De 6 mois à 15 ans"
+          detail: "Modulable selon votre capacité"
+        rate:
+          title: "Taux"
+          description: "À partir de 3,5% TAEG*"
+          detail: "Conditions préférentielles"
+        guarantee:
+          title: "Garantie"
+          description: "Selon le montant"
+          detail: "Adaptée à votre profil"
+
+    section_3:
+      title: "Avantages de ce crédit"
+      advantages:
+        advantage_1: "<strong>Taux avantageux :</strong> Bénéficiez de conditions préférentielles"
+        advantage_2: "<strong>Flexibilité :</strong> Solution adaptée à vos besoins"
+        advantage_3: "<strong>Rapidité :</strong> Réponse rapide à votre demande"
+    
+    section_4:
+      title: "Conditions et critères"
+    
+    section_5:
+      title: "Documents nécessaires"
+
+  section_4:
+    title: "Conditions d'éligibilité"
+    requirements:
+      borrower_profile:
+        title: "Profil emprunteur"
+        item_1: "Être majeur et résider en France"
+        item_2: "Justifier de revenus réguliers"
+        item_3: "Ne pas être inscrit au FICP"
+        item_4: "Taux d'endettement inférieur à 35%"
+      general_conditions:
+        title: "Conditions générales"
+        item_1: "Âge maximum : 75 ans en fin de prêt"
+        item_2: "Domiciliation bancaire souhaitée"
+        item_3: "Assurance emprunteur possible"
+        item_4: "Frais de dossier applicables"
+
+  section_5:
+    title: "Documents nécessaires"
+    documents:
+      identity:
+        title: "Pièces d'identité"
+        item_1: "Carte nationale d'identité ou passeport"
+        item_2: "Justificatif de domicile de moins de 3 mois"
+        item_3: "Livret de famille (si marié ou pacsé)"
+      income:
+        title: "Justificatifs de revenus"
+        item_1: "3 derniers bulletins de salaire"
+        item_2: "2 derniers avis d'imposition"
+        item_3: "Contrat de travail ou attestation employeur"
+        item_4: "Relevés de compte des 3 derniers mois"
+      additional:
+        title: "Documents complémentaires"
+        item_1: "Tableau d'amortissement des crédits en cours"
+        item_2: "Justificatifs de charges (loyer, pensions...)"
+        item_3: "Devis ou factures (selon le type de crédit)"
+        item_4: "Autres documents selon votre situation"
+
+  sidebar:
+    simulation:
+      title: "Simuler votre prêt"
+      text: "Calculez en quelques clics le montant de vos mensualités et obtenez une estimation personnalisée."
+      button: "Faire une simulation"
+    help:
+      title: "Besoin d'aide ?"
+      text: "Nos conseillers sont à votre disposition pour répondre à toutes vos questions."
+      phone: company_phone
+      email: company_email
+    processing:
+      title: "Délais de traitement"
+      step_1:
+        title: "Pré-étude"
+        time: "24h"
+      step_2:
+        title: "Instruction"
+        time: "2 jours"
+      step_3:
+        title: "Accord & signature"
+        time: "1 jours"
+
+  legal:
+    warning:
+      title: "Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager."
+    details:
+      title: "Informations légales importantes"
+      taeg: "<strong>TAEG :</strong> Taux Annuel Effectif Global sous réserve d'acceptation de votre dossier."
+      amount: "<strong>Montant :</strong> Offre valable pour tout crédit compris entre 500€ et 200 000€."
+      duration: "<strong>Durée :</strong> Remboursement possible de 6 mois à 25 ans selon le type de crédit."
+      retraction: "<strong>Délai de rétractation :</strong> Vous disposez d'un délai de 14 jours pour renoncer à votre crédit après acceptation de l'offre."
+    footer: "%company_name% votre partenaire financier au quotidien. Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager."
+
+  cta:
+    title: "Prêt à concrétiser votre projet ?"
+    subtitle: "Faites votre demande de crédit en ligne ou contactez nos conseillers"
+    apply_button: "Faire ma demande"
+    simulate_button: "Simuler mon crédit"

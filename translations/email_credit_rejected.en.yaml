@@ -1,0 +1,45 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_credit_rejected.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+email_credit_rejected:
+  title: "Response to your credit application"
+  content:
+    page_title: "Response to your financing application"
+    greeting: "Hello <strong>{customerName}</strong>,"
+    decision_section:
+      title: "Decision regarding your application"
+      message: "After a thorough review of your credit file, we regret to inform you that we are unable to approve your financing application for <strong style=\"color: #d32f2f;\">{loanAmount} €</strong> at this time."
+    context_section:
+      title: "Context of this decision"
+      explanation: "This decision does not question the quality of your customer profile and may be related to various internal evaluation criteria, economic conditions, or current risk policies of our institution."
+    alternatives_section:
+      title: "Available alternative solutions"
+      revised_request:
+        title: "💼 Revised application"
+        description: "Submit a new application with a different amount or conditions"
+      personalized_advice:
+        title: "🎯 Personalized advice"
+        description: "Contact our advisors to explore other suitable financing options"
+      profile_improvement:
+        title: "📈 Profile improvement"
+        description: "Our team can assist you in optimizing your financial profile"
+    contact_section:
+      title: "Contact and support"
+      description: "Our customer service remains at your full disposal to answer your questions and assist you with your future projects."
+      button_text: "Contact an advisor"
+      phone: "Phone: %company_phone%"
+      email: "Email: hello@sedef.fr"
+      hours: "Available Monday to Friday from 9am to 6pm"
+    future_section:
+      title: "New opportunities"
+      message: "This decision is not final. Your personal and financial situations evolve, and we will be happy to reconsider a new application in the future."
+    thanks_message: "We thank you for the trust you have placed in us and hope to be able to assist you soon with your projects."
+    footer: "%company_name% - Credit Service<br>Automatic response to your financing application"
+  
+  logs:
+    sending: "Sending credit rejection notification"
+    success: "Credit rejection notification sent successfully"
+    error: "Error sending credit rejection notification"
+    send_failed: "Failed to send credit rejection notification"

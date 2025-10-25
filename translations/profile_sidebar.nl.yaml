@@ -1,0 +1,26 @@
+profile_sidebar:
+  nav:
+    profile: "Mijn Profiel"
+    edit_profile: "Profiel bewerken"
+    kyc_verification: "Identiteitsverificatie"
+    security: "Beveiliging"
+    preferences: "Voorkeuren"
+    
+  kyc_status:
+    pending: "In behandeling"
+    rejected: "!"
+    required: "Vereist"
+  menu:
+    profile: "Profiel"
+    edit: "Profiel bewerken"
+    security: "Beveiliging"
+    preferences: "Voorkeuren"
+    kyc: "Identiteitsverificatie"
+    kyc_status: "KYC-status"
+    
+  user_info:
+    member_since: "Lid sinds"
+    last_login: "Laatste aanmelding"
+    account_type: "Accounttype"
+    account_verified: "Account geverifieerd"
+    account_unverified: "Account niet geverifieerd"

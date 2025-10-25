@@ -1,0 +1,373 @@
+credit_offers_index:
+  # Generieke labels voor kredietkenmerken
+  labels:
+    amount: "Financieerbaar bedrag"
+    amount_available: "Beschikbaar bedrag"
+    amount_eco: "Eco-verantwoordelijk bedrag"
+    amount_important: "Belangrijke financiering"
+    amount_vehicle: "Voertuigfinanciering"
+    amount_work: "Werkfinanciering"
+    amount_without_justification: "Krediet zonder bewijs"
+    amount_equipment: "Uitrustingsfinanciering"
+    amount_travel: "Reisfinanciering"
+    amount_consolidation: "Optimale consolidatie"
+    amount_reserve: "Beschikbare reserve"
+    amount_company: "Bedrijfsfinanciering"
+    amount_studies: "Studiefinanciering"
+    amount_small: "Kleine bedragen"
+    amount_leasing: "Huur met aankoopoptie"
+    
+    duration: "Afbetalingsduur"
+    duration_flexible: "Flexibele duur"
+    duration_adaptable: "Aanpasbare duur"
+    duration_temporary: "Tijdelijke oplossing"
+    duration_adapted: "Aangepaste duur"
+    duration_contract: "Flexibel contract"
+    duration_flexible_repayment: "Flexibele terugbetaling"
+    duration_modular: "Modulaire duur"
+    duration_extended: "Gespreide terugbetaling"
+    duration_long: "Verlengde duur"
+    duration_business: "Zakelijke duur"
+    duration_short: "Korte duur"
+    
+    contribution: "Persoonlijke inbreng"
+    contribution_none: "Zonder inbreng"
+    
+    insurance: "Kredietverzekering"
+    insurance_travel: "Reisverzekering inbegrepen"
+    
+    guarantee: "Hypothecaire waarborg"
+    guarantee_none: "Geen waarborg"
+    guarantee_sold_property: "Waarborg op verkocht goed"
+    guarantee_parental: "Ouderlijke borg"
+    
+    usage: "Vrij gebruik"
+    usage_specialized: "Gespecialiseerd gebruik"
+    usage_versatile: "Veelzijdig gebruik"
+    
+    release: "Progressieve vrijgave"
+    
+    eco: "Eco-PTZ compatibel"
+    tax: "Fiscale voordelen"
+    
+    repayment: "Terugbetaling in fine"
+    
+    financing: "Integrale financiering"
+    vehicles: "Nieuwe en tweedehands voertuigen"
+    
+    option: "Dubbele eindoptie"
+    
+    justification: "Geen bewijs vereist"
+    speed: "Snelle vrijgave"
+    
+    partners: "Partnernetwerk"
+    partnerships: "Agentschappartnerschappen"
+    
+    savings: "Belangrijke besparingen"
+    additional: "Aanvullende liquiditeit"
+    
+    renewal: "Automatische vernieuwing"
+    freedom: "Volledig vrij gebruik"
+    access: "Meervoudige toegang"
+    
+    sectors: "Alle activiteitssectoren"
+    
+    deferment: "Uitstel van terugbetaling"
+    
+    conditions: "Vereenvoudigde voorwaarden"
+    inclusion: "Financiële inclusie"
+
+  hero:
+    badge: "Financieringsoplossingen"
+    stats:
+      taux_min: "Minimum tarief"
+      reponse: "Antwoord"
+      types: "Kredietsoorten"
+    actions:
+      simuler: "Simuleer"
+      demander: "Aanvragen"
+
+  categories:
+    header:
+      title: "Onze Financieringsoplossingen"
+      subtitle: "Concurrerende tarieven voor uw projecten"
+    
+    immobilier_habitat:
+      title: "Onroerend Goed & Wonen"
+      subtitle: "Financier uw onroerend goed patrimoine"
+      
+      credit_immobilier:
+        title: "Hypotheeklening"
+        description: "Hoofdverblijf en verhuurinvestering. Financier tot 100% van uw onroerend goed project met preferentiële voorwaarden."
+        rate: "{rate}%"
+        rate_label: "JKP*"
+        features:
+          amount: "Van 50.000€ tot 1.000.000€ om uw hoofdverblijf of verhuurinvestering te financieren."
+          duration: "Spreid uw terugbetalingen over 5 tot 30 jaar volgens uw financiële capaciteit en onroerend goed project."
+          contribution: "Een minimum eigen inbreng van 10% is vereist, inclusief notariskosten en bancaire garanties."
+          insurance: "Volledige bescherming inbegrepen voor overlijden, invaliditeit en arbeidsongeschiktheid."
+        actions:
+          learn_more: "Meer informatie"
+          apply: "Mijn aanvraag doen"
+      
+      pret_hypothecaire:
+        title: "Hypothecaire Lening"
+        description: "Garantie op uw bestaand onroerend goed. Flexibele oplossing voor al uw projecten met een goed als garantie."
+        rate: "{rate}%"
+        rate_label: "JKP*"
+        features:
+          amount: "Tussen 20.000€ en 500.000€ door gebruik te maken van uw onroerend goed als hypothecaire garantie."
+          duration: "Terugbetaling over 5 tot 25 jaar aangepast aan uw financiële situatie en doelstellingen."
+          guarantee: "Uw onroerend goed dient als garantie, waardoor preferentiële tarieven mogelijk zijn."
+          usage: "Geen gebruiksverklaring vereist - investering, werken, schuldenconsolidatie."
+        actions:
+          learn_more: "Meer informatie"
+          apply: "Mijn aanvraag doen"
+      
+      credit_travaux:
+        title: "Renovatiekrediet"
+        description: "Renovatie en woningverbetering. Transformeer uw woning naar uw wensen met aangepaste financiering."
+        rate: "{rate}%"
+        rate_label: "JKP*"
+        features:
+          amount: "Van 1.000€ tot 150.000€ voor al uw renovatie- en woningverbeteringsprojecten."
+          duration: "Flexibele terugbetaling van 6 maanden tot 15 jaar volgens de omvang van uw werken."
+          guarantee: "Krediet zonder hypotheek of borg, alleen gebaseerd op uw terugbetalingscapaciteit."
+          release: "Fondsen worden vrijgegeven naarmate uw werken vorderen."
+        actions:
+          learn_more: "Meer informatie"
+          apply: "Mijn aanvraag doen"
+      
+      amelioration_habitat:
+        title: "Woningverbetering"
+        description: "Modernisering en uitrusting. Verbeter het comfort en de energieprestaties van uw woning."
+        rate: "{rate}%"
+        rate_label: "JKP*"
+        features:
+          amount: "Tussen 500€ en 75.000€ om uw woning te moderniseren en de energie-efficiëntie te verbeteren."
+          duration: "Spreid uw betalingen over 6 maanden tot 10 jaar volgens uw budget en de aard van de verbeteringen."
+          eco: "Combineerbaar met de ecologische Nul-rentelening om uw financiering te maximaliseren."
+          tax: "Profiteer van beschikbare belastingkredieten voor de energietransitie van uw woning."
+        actions:
+          learn_more: "Meer informatie"
+          apply: "Mijn aanvraag doen"
+      
+      credit_relais:
+        title: "Overbruggingskrediet"
+        description: "Overgang tussen koop en verkoop. Koop uw nieuwe woning voordat u de oude heeft verkocht in alle sereniteit."
+        rate: "{rate}%"
+        rate_label: "JKP*"
+        features:
+          amount: "Van 50.000€ tot 2.000.000€ om de aankoop van uw nieuwe goed te vergemakkelijken voordat de oude wordt verkocht."
+          duration: "Overgangskrediet van 6 tot 24 maanden de tijd om de verkoop van uw huidige goed af te ronden."
+          repayment: "U betaalt alleen rente tijdens de duur, het kapitaal wordt terugbetaald bij verkoop."
+          guarantee: "Uw huidige woning dient als garantie om de overbruggingsfinanciering te verzekeren."
+        actions:
+          learn_more: "Meer informatie"
+          apply: "Mijn aanvraag doen"
+    
+    automobile_mobilite:
+      title: "Auto & Mobiliteit"
+      subtitle: "Financier uw voertuig en mobiliteit"
+      
+      credit_auto:
+        title: "Autokrediet"
+        description: "Nieuwe en tweedehands voertuigen. Financier uw mobiliteit met preferentiële voorwaarden en volledige service."
+        rate: "{rate}%"
+        rate_label: "JKP*"
+        features:
+          amount: "Van 5.000€ tot 100.000€ voor de aankoop van uw nieuwe of tweedehands auto met de beste voorwaarden."
+          duration: "Terugbetaling over 12 tot 96 maanden volgens uw budget en de waarde van het gekozen voertuig."
+          financing: "Mogelijkheid om tot 100% van de aankoopprijs te financieren, accessoires en verzekeringen inbegrepen."
+          vehicles: "Volledige oplossing voor alle soorten voertuigen met inruilservice inbegrepen."
+        actions:
+          learn_more: "Meer informatie"
+          apply: "Mijn aanvraag doen"
+      
+      leasing_automobile:
+        title: "Autoleasing"
+        description: "Huur met aankoopoptie. Rijd in een nieuwe auto met lagere maandlasten en een aankoopoptie."
+        rate: "{rate}%"
+        rate_label: "JKP*"
+        features:
+          amount: "Van 10.000€ tot 80.000€ om in een nieuwe auto te rijden zonder initiële aankoopverplichting."
+          duration: "Contractduur van 24 tot 60 maanden met lagere maandlasten vergeleken met een klassiek krediet."
+          contribution: "Mogelijkheid om uw leasing te beginnen met 0€ eigen inbreng volgens uw profiel en het gekozen voertuig."
+          option: "Aan het einde van het contract kiest u ervoor de auto te kopen of terug te geven in perfecte staat."
+        actions:
+          learn_more: "Meer informatie"
+          apply: "Mijn aanvraag doen"
+    
+    personnel_consommation:
+      title: "Persoonlijk & Consumptie"
+      subtitle: "Realiseer al uw persoonlijke projecten"
+      
+      credit_personnel:
+        title: "Persoonlijke Lening"
+        description: "Persoonlijke projecten zonder verantwoording. Vrij gebruik van uw krediet voor alle levensprojecten."
+        rate: "{rate}%"
+        rate_label: "JKP*"
+        features:
+          amount: "Van 1.000€ tot 75.000€ om al uw persoonlijke projecten te financieren zonder het gebruik van fondsen te hoeven verantwoorden."
+          duration: "Spreid uw betalingen over 12 tot 84 maanden volgens uw financiële capaciteit en voorkeuren."
+          justification: "Maximale eenvoud - alleen uw terugbetalingscapaciteit wordt beoordeeld."
+          speed: "Antwoord binnen 24u en onmiddellijke beschikbaarstelling van fondsen na acceptatie van het dossier."
+        actions:
+          learn_more: "Meer informatie"
+          apply: "Mijn aanvraag doen"
+      
+      credit_consommation:
+        title: "Consumptiekrediet"
+        description: "Uitrusting en consumptiegoederen. Financier uw dagelijkse aankopen met voordelige voorwaarden."
+        rate: "{rate}%"
+        rate_label: "JKP*"
+        features:
+          amount: "Van 500€ tot 35.000€ voor de aankoop van uitrustingsgoederen en gewone consumptieproducten."
+          duration: "Terugbetaling over 6 tot 60 maanden aangepast aan het type aankoop en uw maandelijks budget."
+          usage: "Krediet gewijd aan huisuitrusting, huishoudelijke apparaten, informatica en meubilair."
+          partners: "Meer dan 500 partnerswinkels om te profiteren van exclusieve aanbiedingen en betalingsfaciliteiten."
+        actions:
+          learn_more: "Meer informatie"
+          apply: "Mijn aanvraag doen"
+      
+      credit_voyage:
+        title: "Reiskrediet"
+        description: "Financier uw reizen en uitstapjes. Realiseer uw dromen van ontsnapping met een krediet speciaal ontworpen voor reizen."
+        rate: "{rate}%"
+        rate_label: "JKP*"
+        features:
+          amount: "Van 500€ tot 25.000€ om al uw projecten van ontsnapping en ontdekkingen wereldwijd te realiseren."
+          duration: "Geniet van uw vakanties en betaal rustig terug over 6 tot 60 maanden volgens uw mogelijkheden."
+          insurance: "Volledige bescherming met annuleringsverzekering, repatriëring en 24u/7d assistentie."
+          partnerships: "Profiteer van preferentiële aanbiedingen bij onze partnerreisbureau's wereldwijd."
+        actions:
+          learn_more: "Meer informatie"
+          apply: "Mijn aanvraag doen"
+      
+      regroupement_credits:
+        title: "Kredietherceniging"
+        description: "Consolideer uw bestaande kredieten. Vereenvoudig uw beheer en verminder uw maandlasten in één krediet."
+        rate: "{rate}%"
+        rate_label: "JKP*"
+        features:
+          amount: "Van 3.000€ tot 200.000€ om al uw lopende kredieten samen te voegen in één vereenvoudigde maandlast."
+          duration: "Spreid uw terugbetalingen over 12 tot 180 maanden om uw maandelijkse lasten significant te verminderen."
+          savings: "Mogelijke vermindering van uw maandlasten tot 60% dankzij heronderhandeling en verlenging."
+          additional: "Mogelijkheid om extra liquiditeit toe te voegen om nieuwe projecten te financieren."
+        actions:
+          learn_more: "Meer informatie"
+          apply: "Mijn aanvraag doen"
+      
+      credit_renouvelable:
+        title: "Revolverend Krediet"
+        description: "Beschikbare geldreserve. Een flexibele oplossing die zich vernieuwt naarmate u terugbetaalt."
+        rate: "{rate}%"
+        rate_label: "JKP*"
+        features:
+          amount: "Van 500€ tot 6.000€ permanente liquiditeit die zich automatisch herstelt naarmate u terugbetaalt."
+          renewal: "Hoe meer u terugbetaalt, hoe meer uw krediet zich herstelt voor nieuwe aankopen of onvoorziene uitgaven."
+          freedom: "Totaal vrij gebruik - geen aankoopverantwoording nodig, gebruik uw reserve wanneer u wilt, zoals u wilt."
+          access: "Beschikbaar via creditcard of bankoverschrijving, voor maximale flexibiliteit dagelijks."
+        actions:
+          learn_more: "Meer informatie"
+          apply: "Mijn aanvraag doen"
+    
+    professionnel_specialise:
+      title: "Professioneel & Gespecialiseerd"
+      subtitle: "Oplossingen toegewijd aan specifieke behoeften"
+      
+      credit_professionnel:
+        title: "Professionele Lening"
+        description: "Financiering voor professionals. Ontwikkel uw activiteit met financieringsoplossingen aangepast aan bedrijven."
+        rate: "{rate}%"
+        rate_label: "JKP*"
+        features:
+          amount: "Van 5.000€ tot 500.000€ om de ontwikkeling van uw professionele activiteit en uw investeringen te begeleiden."
+          duration: "Terugbetaling over 12 tot 84 maanden aangepast aan economische cycli en de rentabiliteit van uw bedrijf."
+          usage: "Financiering van professionele uitrusting, bedrijfsvoertuigen, werkkapitaal en liquiditeitsbehoeften."
+          sectors: "Oplossingen aangepast aan ambachtslieden, handelaars, vrije beroepen en MKB van alle gebieden."
+        actions:
+          learn_more: "Meer informatie"
+          apply: "Mijn aanvraag doen"
+      
+      credit_etudiant:
+        title: "Studentenlening"
+        description: "Financiering van hoger onderwijs. Investeer in uw toekomst met preferentiële voorwaarden."
+        rate: "{rate}%"
+        rate_label: "JKP*"
+        features:
+          amount: "Van 1.000€ tot 60.000€ om uw hoger onderwijs, schoolgeld en studentenlevenkosten te financieren."
+          duration: "Duur van 12 maanden tot 10 jaar om aan te passen aan uw toekomstige professionele situatie en inkomsten."
+          deferment: "Mogelijkheid om de terugbetaling uit te stellen tot 7 jaar tijdens de duur van uw studies."
+          guarantee: "Beveiliging van de lening door borgstelling van ouders of wettelijke voogden voor de beste voorwaarden."
+        actions:
+          learn_more: "Meer informatie"
+          apply: "Mijn aanvraag doen"
+      
+      microcredit:
+        title: "Microkrediet"
+        description: "Kleine bedragen voor specifieke projecten. Financiële inclusieoplossing voor al uw kleine projecten."
+        rate: "{rate}%"
+        rate_label: "JKP*"
+        features:
+          amount: "Van 100€ tot 5.000€ om uw lokale projecten en essentiële dagelijkse behoeften te financieren."
+          duration: "Snelle terugbetaling over 6 tot 48 maanden om langetermijnschulden te vermijden en snel uw autonomie terug te krijgen."
+          conditions: "Vereenvoudigde procedure en acceptatiecriteria aangepast aan bijzondere situaties en bescheiden inkomens."
+          inclusion: "Oplossing toegankelijk voor alle profielen, zelfs in situaties van armoede of bancaire uitsluiting."
+        actions:
+          learn_more: "Meer informatie"
+          apply: "Mijn aanvraag doen"
+
+  advantages:
+    header:
+      title: "Waarom kiezen voor %company_name%?"
+      subtitle: "De expertise en het vertrouwen van meer dan 2 miljoen klanten"
+    
+    items:
+      competitive_rates:
+        number: "01"
+        title: "Concurrerende Tarieven"
+        description: "Onze tarieven worden direct onderhandeld met onze bankpartners om u de beste marktvoorwaarden te bieden."
+      
+      express_response:
+        number: "02"
+        title: "Express Antwoord"
+        description: "Principiële overeenkomst binnen 24u dankzij ons geautomatiseerd analysesysteem en ons partnernetwerk."
+      
+      expert_support:
+        number: "03"
+        title: "Deskundige Begeleiding"
+        description: "Onze gespecialiseerde adviseurs begeleiden u van de simulatie tot de ondertekening bij de notaris."
+      
+      custom_solutions:
+        number: "04"
+        title: "Maatwerk Oplossingen"
+        description: "15 soorten kredieten aangepast aan al uw projecten, van vastgoed tot professionele behoeften."
+    
+    stats:
+      clients:
+        number: "2M+"
+        label: "Klanten"
+      
+      years:
+        number: "15+"
+        label: "Jaren"
+      
+      satisfaction:
+        number: "98%"
+        label: "Tevredenheid"
+      
+      response_time:
+        number: "24u"
+        label: "Antwoord"
+
+  cta:
+    title: "Klaar om uw project te realiseren?"
+    subtitle: "Simuleer uw krediet in 2 minuten en krijg een onmiddellijk antwoord"
+    
+    actions:
+      simulate:
+        text: "Mijn krediet simuleren"
+      
+      apply:
+        text: "Mijn aanvraag doen"

@@ -1,0 +1,111 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: regroupement_credits.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+regroupement_credits:
+  page:
+    title: "Credit Consolidation"
+    description: "Simplify your finances with our credit consolidation. A single monthly payment for all your loans."
+  
+  hero:
+    class: "credit-detail-hero--regroupement"
+    taux: "{rate}%"
+    montant: "200 000€"
+    duree: "25 years"
+    title: "Credit Consolidation"
+    subtitle: "Simplify your credit management"
+  
+  section_1:
+    title: "What is credit consolidation?"
+    content:
+      paragraph_1: "Credit consolidation consists of combining several ongoing loans (mortgage, consumer credit, credit cards) into a single credit with a unique monthly payment, generally lower."
+      paragraph_2: "This financial restructuring operation allows you to simplify your budget management, reduce your monthly payments and regain peace of mind in your personal finances."
+  
+  features:
+    title: "Consolidation features"
+    montant:
+      value: "Up to 200,000€"
+      detail: "Amount of consolidated credits"
+    duree:
+      value: "Up to 25 years"
+      detail: "Possible extension"
+    taux:
+      value: "From {rate}% APR*"
+      detail: "Optimized single rate"
+    garantie:
+      value: "Mortgage"
+      detail: "If significant amount"
+  
+  section_3:
+    title: "Benefits of consolidation"
+    advantages:
+      mensualite_unique:
+        title: "Single monthly payment"
+        description: "Only one direct debit to manage"
+      baisse_echeances:
+        title: "Reduced payments"
+        description: "Reduction up to 50% of total monthly payments"
+      tresorerie_liberee:
+        title: "Released cash flow"
+        description: "Restored purchasing power"
+      gestion_simplifiee:
+        title: "Simplified management"
+        description: "A single contact for all your credits"
+      tresorerie_supplementaire:
+        title: "Additional cash flow"
+        description: "Possibility to obtain additional funds"
+  
+  section_4:
+    title: "Eligibility conditions"
+    conditions:
+      title: "General conditions"
+      items:
+        revenus: "Regular and sufficient income"
+        credits_existants: "At least 2 ongoing credits"
+        montant_minimum: "Total minimum amount of 20,000€"
+        capacite_remboursement: "Acceptable debt ratio"
+    dossier:
+      title: "File preparation"
+      items:
+        tableaux: "Amortization schedules of existing credits"
+        assurances: "Current insurance contracts"
+        justificatifs: "Recent proof of income"
+        situation: "Complete asset situation"
+  
+  section_5:
+    title: "Required documents"
+    personnels:
+      title: "Personal documents"
+      items:
+        identite: "Identity document"
+        domicile: "Proof of residence"
+        familiale: "Family status"
+        rib: "Bank account details"
+    financiers:
+      title: "Financial proof"
+      items:
+        revenus: "Last 3 pay slips"
+        impots: "Last tax notice"
+        comptes: "Account statements for 3 months"
+        patrimoine: "Asset declaration"
+    credits:
+      title: "Existing credits"
+      items:
+        contrats: "Current loan contracts"
+        echeanciers: "Credit payment schedules"
+        assurances_contrats: "Borrower insurance contracts"
+        releves: "Latest credited account statements"
+  
+  legal:
+    details:
+      title: "Important legal information"
+      taeg: "<strong>*APR:</strong> Representative example: consolidation of 3 credits totaling 80,000€, new credit of 90,000€ over 180 months at APR of 4.8%, 180 monthly payments of 500€, total cost: 90,000€."
+      duree: "<strong>Duration:</strong> Extending the duration increases the total cost of the credit."
+      garantie: "<strong>Guarantee:</strong> Mortgage possible depending on amount and situation."
+      assurance: "<strong>Insurance:</strong> Death and disability insurance mandatory, unemployment insurance recommended."
+      reflexion: "<strong>Cooling-off period:</strong> 14-day legal withdrawal period."
+  
+  cta:
+    title: "Simplify your finances"
+    subtitle: "Regain peace of mind with credit consolidation"

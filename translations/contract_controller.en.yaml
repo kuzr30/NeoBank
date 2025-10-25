@@ -1,0 +1,8 @@
+# ENGLISH TRANSLATION - Translated from French
+# Contract controller translation file
+# Domain: contract_controller
+# Language: English (en)
+
+contract_controller:
+  errors:
+    contract_not_found: "The contract does not exist or has not been generated yet."

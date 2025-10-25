@@ -1,0 +1,328 @@
+<!--     <h3 class="simulator__error-title">{{ tp('credit_simulation.errors.title', {}, 'simulation') }}</h3>redit Simulation Error -->
+<div class="simulator__error" data-turbo-temporary>
+  <!-- Error Header -->
+  <div class="simulator__error-header">
+    {{ ux_icon('heroicons:exclamation-triangle', {'class': 'simulator__error-icon'}) }}
+    <h3 class="simulator__error-title">{{ 'credit_simulation.error.title'|trans }}</h3>
+  </div>
+
+  <!-- Error Message -->
+  <div class="simulator__error-content">
+    <p class="simulator__error-message">{{ error }}</p>
+    
+    {% if errors is defined and errors|length > 0 %}
+      <div class="simulator__error-list">
+        <h4 class="simulator__error-list-title">{{ 'credit_simulation.error.details'|trans }}</h4>
+        <ul class="simulator__error-items">
+          {% for fieldError in errors %}
+            <li class="simulator__error-item">
+              {{ ux_icon('heroicons:x-mark', {'class': 'simulator__error-item-icon'}) }}
+              <span>{{ fieldError }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- Error Actions -->
+  <div class="simulator__error-actions">
+    <button class="simulator__error-btn simulator__error-btn--primary" 
+            data-action="click->credit-simulation#resetForm">
+      {{ ux_icon('heroicons:arrow-path', {'class': 'simulator__error-btn-icon'}) }}
+      {{ 'credit_simulation.error.retry'|trans }}
+    </button>
+    
+    <a href="{{ path('app_contact') }}" class="simulator__error-btn simulator__error-btn--secondary">
+      {{ ux_icon('heroicons:chat-bubble-left-right', {'class': 'simulator__error-btn-icon'}) }}
+      {{ 'credit_simulation.error.contact_support'|trans }}
+    </a>
+  </div>
+
+  <!-- Error Tips -->
+  <div class="simulator__error-tips">
+    <div class="simulator__tips-header">
+      {{ ux_icon('heroicons:light-bulb', {'class': 'simulator__tips-icon'}) }}
+      <h4 class="simulator__tips-title">{{ 'credit_simulation.error.tips_title'|trans }}</h4>
+    </div>
+    
+    <ul class="simulator__tips-list">
+      <li class="simulator__tips-item">
+        {{ ux_icon('heroicons:check', {'class': 'simulator__tips-item-icon'}) }}
+        {{ 'credit_simulation.error.tip_amount'|trans }}
+      </li>
+      <li class="simulator__tips-item">
+        {{ ux_icon('heroicons:check', {'class': 'simulator__tips-item-icon'}) }}
+        {{ 'credit_simulation.error.tip_duration'|trans }}
+      </li>
+      <li class="simulator__tips-item">
+        {{ ux_icon('heroicons:check', {'class': 'simulator__tips-item-icon'}) }}
+        {{ 'credit_simulation.error.tip_type'|trans }}
+      </li>
+    </ul>
+  </div>
+</div>
+
+<style>
+/* ===== SIMULATOR ERROR STYLES ===== */
+.simulator__error {
+  animation: shakeIn 0.6s ease-out;
+}
+
+.simulator__error-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(239, 68, 68, 0.1) 100%);
+  border: 2px solid rgba(220, 38, 38, 0.2);
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.simulator__error-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-error);
+  flex-shrink: 0;
+}
+
+.simulator__error-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-error);
+  margin: 0;
+}
+
+/* Error Content */
+.simulator__error-content {
+  background: var(--color-surface);
+  border: 2px solid rgba(220, 38, 38, 0.1);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.simulator__error-message {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+}
+
+.simulator__error-list {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.simulator__error-list-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 0.75rem 0;
+}
+
+.simulator__error-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.simulator__error-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  padding: 0.5rem 0;
+}
+
+.simulator__error-item-icon {
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-error);
+  flex-shrink: 0;
+}
+
+/* Error Actions */
+.simulator__error-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.simulator__error-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  justify-content: center;
+}
+
+.simulator__error-btn--primary {
+  background: var(--color-error);
+  color: white;
+  border: 2px solid var(--color-error);
+}
+
+.simulator__error-btn--primary:hover {
+  background: #b91c1c;
+  border-color: #b91c1c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.simulator__error-btn--secondary {
+  background: var(--color-surface);
+  color: var(--color-text-light);
+  border: 2px solid var(--color-border);
+}
+
+.simulator__error-btn--secondary:hover {
+  background: var(--color-background);
+  border-color: var(--color-error);
+  color: var(--color-error);
+}
+
+.simulator__error-btn-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+/* Error Tips */
+.simulator__error-tips {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(251, 191, 36, 0.1) 100%);
+  border: 2px solid rgba(245, 158, 11, 0.2);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.simulator__tips-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.simulator__tips-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-accent);
+}
+
+.simulator__tips-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+.simulator__tips-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.simulator__tips-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+
+.simulator__tips-item-icon {
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-secondary);
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+/* Animations */
+@keyframes shakeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  25% {
+    opacity: 0.5;
+    transform: translateX(5px);
+  }
+  50% {
+    opacity: 0.75;
+    transform: translateX(-2px);
+  }
+  75% {
+    opacity: 0.9;
+    transform: translateX(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .simulator__error-actions {
+    flex-direction: column;
+  }
+  
+  .simulator__error-btn {
+    flex: none;
+  }
+  
+  .simulator__error-content {
+    padding: 1rem;
+  }
+  
+  .simulator__error-tips {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .simulator__error-header {
+    padding: 0.75rem;
+  }
+  
+  .simulator__error-content {
+    padding: 0.875rem;
+  }
+  
+  .simulator__error-tips {
+    padding: 0.875rem;
+  }
+  
+  .simulator__error-btn {
+    padding: 0.625rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .simulator__error-message {
+    font-size: 0.8rem;
+  }
+  
+  .simulator__tips-item {
+    font-size: 0.75rem;
+  }
+}
+</style>

@@ -1,0 +1,21 @@
+email_profile_update_notification:
+  title: "Update van uw profiel"
+  content:
+    page_title: "Update van uw profiel"
+    greeting: "Hallo {firstName},"
+    notification: "We informeren u dat uw %company_name% profiel is bijgewerkt op {updateDate}."
+    changes_section:
+      title: "Aangebrachte wijzigingen"
+      old_value: "Oude waarde: {oldValue}"
+      new_value: "Nieuwe waarde: {newValue}"
+    security_info:
+      title: "Beveiligingsinformatie"
+      warning: "Als u deze wijzigingen niet heeft aangebracht, log dan onmiddellijk in op uw account en wijzig uw wachtwoord."
+    footer: "Deze email is automatisch verzonden door %company_name%."
+  
+  # Log berichten voor de MessageHandler
+  logs:
+    sending: "Verzenden van profiel update notificatie"
+    success: "Profiel update notificatie succesvol verzonden"
+    error: "Fout bij het verzenden van profiel update notificatie"
+    send_failed: "Verzenden van profiel update notificatie mislukt"

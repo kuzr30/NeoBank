@@ -1,0 +1,48 @@
+email_credit_application_folder_admin_notification:
+  title: "Nueva solicitud de crédito - %company_name%"
+  
+  content:
+    page_title: "Nueva solicitud de crédito"
+    tagline: "Su socio bancario de confianza"
+    
+    reference_info:
+      title: "Referencia de la solicitud"
+      reference_number: "{referenceNumber}"
+      submitted_on: "Presentada el {submittedDate}"
+    
+    applicant_info:
+      title: "Información del solicitante"
+      full_name: "Nombre completo"
+      email: "Email"
+      phone: "Teléfono"
+      birth_date: "Fecha de nacimiento"
+      nationality: "Nacionalidad"
+      address: "Dirección"
+      address_format: "{address}, {postalCode} {city}, {country}"
+    
+    credit_details:
+      title: "Detalles del crédito solicitado"
+      amount: "Importe"
+      amount_value: "{amount} €"
+      credit_type: "Tipo de crédito"
+      duration: "Duración"
+      duration_months: "{duration} meses"
+      monthly_payment: "Mensualidad"
+      monthly_payment_value: "{monthlyPayment} €"
+      total_cost: "Coste total"
+      total_cost_value: "{totalCost} €"
+    
+    financial_situation:
+      title: "Situación financiera"
+      monthly_income: "Ingresos mensuales"
+      monthly_income_value: "{monthlyIncome} €"
+      monthly_expenses: "Gastos mensuales"
+      monthly_expenses_value: "{monthlyExpenses} €"
+      employment_type: "Tipo de empleo"
+      existing_loans: "Créditos existentes"
+      existing_loans_value: "{existingLoans} €"
+      dependents: "Personas a cargo"
+  
+  log:
+    admin_notification_sent: "Notificación de administrador enviada para la solicitud de crédito {referenceNumber}"
+    email_sent: "E-mail de administrador de solicitud de crédito enviado al equipo"

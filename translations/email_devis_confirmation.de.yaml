@@ -1,0 +1,52 @@
+email_devis_confirmation:
+  subject: "Bestätigung Ihrer Angebotsanfrage"
+  title: "Bestätigung Ihrer Angebotsanfrage"
+  
+  content:
+    page_title: "Angebotsanfrage bestätigt"
+    greeting: "Hallo <strong>%prenom% %nom%</strong>,"
+    
+    success:
+      title: "Anfrage erfolgreich erhalten"
+      message: "Wir haben Ihre Angebotsanfrage für %typeAssurance% erhalten. Ihr Dossier wird nun von unseren Experten bearbeitet."
+    
+    reference:
+      title: "Referenz Ihrer Anfrage"
+      number: "Angebotsnummer: %numeroDevis%"
+    
+    recap:
+      title: "Zusammenfassung Ihrer Anfrage"
+      insurance_type: "Versicherungsart"
+      contact_email: "Kontakt-E-Mail"
+      phone: "Telefon"
+      contact_preference: "Kontaktpräferenz"
+      request_date: "Anfragedatum"
+    
+    comments:
+      title: "Ihre Kommentare"
+    
+    process:
+      title: "Bearbeitungsprozess"
+      step1: "Schritt 1: Persönlicher Kontakt innerhalb von 24h via %preference%"
+      step2: "Schritt 2: Gründliche Analyse Ihres Profils und spezifischen Bedürfnisse"
+      step3: "Schritt 3: Präsentation eines personalisierten und wettbewerbsfähigen Angebots"
+    
+    contact:
+      title: "Kontaktdaten"
+      phone_service: "Telefonservice"
+      phone_number: "06 23 45 67 89"
+      email_support: "E-Mail-Support"
+      support_email: "contact@sedef.fr"
+    
+    closing_message: "Unser Team von Versicherungsspezialisten wird Sie sehr bald kontaktieren, um Ihr Dossier zu finalisieren."
+    footer: "%company_name% - Versicherungsabteilung<br>Automatische Bestätigung der Angebotsanfrage"
+
+  preferences:
+    telephone: "Telefonisch"
+    email: "Per E-Mail"
+    indifferent: "Egal"
+
+  logs:
+    devis_confirmation_sent: "Angebotsbestätigungs-E-Mail erfolgreich an %email% gesendet"
+    devis_confirmation_failed: "Fehler beim Senden der Angebotsbestätigung an %email%"
+    quote_request_processed: "Angebotsanfrage %numeroDevis% für %nom% %prenom% bearbeitet"

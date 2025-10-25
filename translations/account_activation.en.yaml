@@ -1,0 +1,32 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: account_activation.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+account_activation:
+  flash:
+    invalid_token: "Invalid activation token."
+    expired_token: "The activation token has expired. Please register again."
+    account_activated: "Your account has been successfully activated! You can now log in."
+    activation_email_sent: "A new activation email has been sent."
+    activation_email_sent_if_exists: "If your account exists and is not activated, an email has been sent."
+    email_send_error: "Error sending email. Please try again later."
+
+email_account_activation:
+  title: "Activate your %company_name% account"
+  content:
+    greeting: "Hello {firstName},"
+    intro: "Welcome to %company_name%! We are delighted to have you as one of our customers."
+    activation_required:
+      title: "🔐 Activation required"
+      description: "To secure your account and access all our banking services, please activate your account by clicking the button below."
+    button_text: "Activate my account"
+    warning:
+      title: "⚠️ Important"
+      description: "This activation link expires in {expirationTime}. If the link has expired, you can request a new link from the login page."
+    manual_link: "If the button doesn't work, copy and paste this link into your browser:"
+    success:
+      title: "✅ Next steps"
+      description: "Once your account is activated, you will be able to access your secure customer area and enjoy all our banking services."
+    security_notice: "🛡️ For security reasons, if you did not create an account with %company_name%, please ignore this email."
+    signature: "The %company_name% team<br><strong>Your trusted banking partner</strong>"

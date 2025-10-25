@@ -1,0 +1,103 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: credit_simulation.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+credit_simulation:
+  # Credit types section
+  credit_types:
+    immobilier:
+      label: "Real Estate Credit"
+      description: "Financing for purchasing your main or secondary residence"
+    auto:
+      label: "Auto Credit" 
+      description: "Financing for purchasing a new or used vehicle"
+    consommation:
+      label: "Consumer Credit"
+      description: "Credit to finance your personal projects"
+    travaux:
+      label: "Home Improvement Credit"
+      description: "Financing for your renovation and improvement work"
+    professionnel:
+      label: "Business Credit"
+      description: "Financing for your professional projects"
+    personal:
+      label: "Personal Credit" 
+      description: "Personal credit without usage justification"
+    home_improvement:
+      label: "Home Improvement/Renovation Credit"
+      description: "Specialized credit for your home improvement work"
+    debt_consolidation:
+      label: "Debt Consolidation"
+      description: "Consolidation of your current credits"
+    mortgage:
+      label: "Mortgage Credit"
+      description: "Real estate loan for acquiring your property"
+    renouvelable:
+      label: "Revolving Credit"
+      description: "Money reserve permanently available"
+    etudiant:
+      label: "Student Loan"
+      description: "Financing for your higher education"
+    relais:
+      label: "Bridging Loan"
+      description: "Temporary financing solution during a purchase-sale"
+    microcredit:
+      label: "Microcredit"
+      description: "Small amounts to finance your projects"
+    leasing:
+      label: "Leasing"
+      description: "Rental with purchase option"
+    voyage:
+      label: "Travel Credit"
+      description: "Financing for your travels and vacations"
+
+  # Duration options
+  durations:
+    twelve_months: "12 months"
+    twenty_four_months: "24 months"
+    thirty_six_months: "36 months"
+    forty_eight_months: "48 months"
+    sixty_months: "60 months"
+    seventy_two_months: "72 months"
+    eighty_four_months: "84 months"
+    ninety_six_months: "96 months"
+    one_hundred_twenty_months: "120 months"
+    one_hundred_eighty_months: "180 months"
+    two_hundred_forty_months: "240 months"
+    three_hundred_months: "300 months"
+
+  # Duration units
+  duration_units:
+    months: "months"
+    years: "years"
+    immobilier:
+      label: "Real Estate Credit"
+      description: "Financing for purchasing real estate"
+    auto:
+      label: "Auto Credit"
+      description: "Financing for purchasing a vehicle"
+    consommation:
+      label: "Consumer Credit"
+      description: "Credit for your personal projects"
+    travaux:
+      label: "Home Improvement Credit"
+      description: "Financing for your renovation work"
+    professionnel:
+      label: "Business Credit"
+      description: "Credit for your professional projects"
+    personal:
+      label: "Personal Loan"
+      description: "Loan without usage justification"
+    debt_consolidation:
+      label: "Debt Consolidation"
+      description: "Consolidation of your existing credits"
+    mortgage:
+      label: "Mortgage Credit"
+      description: "Financing for purchasing real estate"
+    renouvelable:
+      label: "Revolving Credit"
+      description: "Reusable money reserve at will"
+    microcredit:
+      label: "Personal Microcredit"
+      description: "Small amounts for people excluded from traditional banking credit"

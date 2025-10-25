@@ -1,0 +1,11 @@
+{% if field.value is not empty %}
+    <div class="transfer-codes">
+        {% for code in field.value %}
+            <span class="badge badge-{% if code.status == 'pending' %}warning{% elseif code.status == 'validated' %}success{% else %}secondary{% endif %} me-1">
+                Code {{ code.codeOrder }}: {{ code.codeValue }}
+            </span>
+        {% endfor %}
+    </div>
+{% else %}
+    <span class="text-muted">Aucun code généré</span>
+{% endif %}

@@ -1,0 +1,109 @@
+travaux:
+  page:
+    title: "Verbouwingskrediet"
+    description: "Renoveer en richt uw woning in met ons verbouwingskrediet. Financier al uw verbeteringsprojecten."
+  
+  hero:
+    class: "credit-detail-hero--travaux"
+    taux: "3,2%"
+    montant: "100 000€"
+    duree: "15 jaar"
+    title: "Verbouwingskrediet"
+    subtitle: "Transformeer uw woning"
+  
+  section_1:
+    title: "Wat is een verbouwingskrediet?"
+    content:
+      paragraph_1: "Het verbouwingskrediet financiert al uw inrichtings-, renovatie- en verbeteringsprojecten voor uw woning: keuken, badkamer, isolatie, verwarming, uitbreiding, zwembad..."
+      paragraph_2: "Deze specifiek voor woningen ontworpen oplossing profiteert van preferentiële voorwaarden en kan worden aangepast aan het ritme van uw werkzaamheden met een progressieve vrijgave van fondsen."
+  
+  features:
+    title: "Kenmerken van het verbouwingskrediet"
+    montant:
+      value: "Tot 100 000€"
+      detail: "Volgens de omvang van de werkzaamheden"
+    duree:
+      value: "Van 1 tot 15 jaar"
+      detail: "Looptijd aangepast aan het project"
+    taux:
+      value: "Vanaf 3,2% JTKS*"
+      detail: "Preferentieel tarief voor verbouwingen"
+    garantie:
+      value: "Volgens bedrag"
+      detail: "Hypotheek indien nodig"
+  
+  section_3:
+    title: "Voordelen van de renovatiekrediet"
+    advantage_1:
+      title: "Voordelig tarief"
+      content: "Preferentiële voorwaarden voor verbeteringswerken"
+    advantage_2:
+      title: "Aangepaste vrijgave"
+      content: "Fondsen vrijgegeven volgens de voortgang van de werken"
+    advantage_3:
+      title: "Alle projecten"
+      content: "Renovatie, uitbreiding, inrichting, uitrusting"
+    advantage_4:
+      title: "Meerwaarde"
+      content: "Aanzienlijke waardestijging van uw patrimonie"
+    advantage_5:
+      title: "Begeleiding"
+      content: "Advies om uw project te optimaliseren"
+  
+  section_4:
+    title: "Geschiktheidsvoorwaarden"
+    conditions:
+      title: "Projectvoorwaarden"
+      condition_1: "Werken aan hoofd- of tweede woning"
+      condition_2: "Gedetailleerde offertes van gekwalificeerde bedrijven"
+      condition_3: "Respect voor bouwstandaarden"
+      condition_4: "Bestuurlijke machtigingen indien noodzakelijk"
+    documents:
+      title: "Bewijsstukken"
+      document_1: "Facturen of offertes van professionals"
+      document_2: "Recente inkomstenbewijzen"
+      document_3: "Eigendomstitel of huurcontract"
+      document_4: "Bankafschriften van de laatste 3 maanden"
+  
+  section_5:
+    title: "Benodigde documenten"
+    personal:
+      title: "Persoonlijke documenten"
+      document_1: "Identiteits- en woonbewijzen"
+      document_2: "3 laatste loonbriefjes"
+      document_3: "Belastingaanslag"
+      document_4: "Rekeningafschriften"
+    property:
+      title: "Onroerend goed"
+      document_1: "Eigendomstitel"
+      document_2: "Onroerende voorheffing"
+      document_3: "Woningverzekering"
+      document_4: "Woningplannen"
+    project:
+      title: "Project werken"
+      document_1: "Gedetailleerde ondertekende offertes"
+      document_2: "Beschrijving van de werken"
+      document_3: "Bestuurlijke machtigingen"
+      document_4: "Voorlopige planning"
+  
+  legal:
+    title: "Belangrijke juridische informatie"
+    taeg:
+      title: "*TAEG"
+      content: "Representatief voorbeeld: voor een renovatiekrediet van 40.000€ over 10 jaar aan TAEG van 3,2%, betaalt u 120 maandelijkse termijnen van 387€, zijnde een totaal bedrag van 46.440€ (kredietkosten: 6.440€)."
+    deblocage:
+      title: "Vrijgave"
+      content: "Fondsen vrijgegeven geleidelijk bij voorlegging van betaalde facturen."
+    travaux:
+      title: "Werken"
+      content: "Verplichting om de werken uit te voeren conform de offertes."
+    garanties:
+      title: "Garanties"
+      content: "Hypotheek mogelijk volgens het bedrag, voorrecht van geldverlener."
+    assurance:
+      title: "Verzekering"
+      content: "Overlijdens-invaliditeitsverzekering aanbevolen."
+  
+  cta:
+    title: "Geef leven aan uw werkzaamhedenprojecten"
+    subtitle: "Renoveer en verbeter uw woning met ons toegewijde krediet"

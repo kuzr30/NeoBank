@@ -1,0 +1,28 @@
+transfer_notification_service:
+  email_subjects:
+    transfer_created: "Virement créé - En attente de validation"
+    code_added: "Nouveau code de validation disponible"
+    code_validated: "Code de validation confirmé"
+    ready_for_execution: "Virement prêt à être exécuté"
+    transfer_executed: "Virement exécuté avec succès"
+    transfer_rejected: "Virement refusé"
+    transfer_expired: "Virement expiré"
+    transfer_cancelled: "Virement annulé"
+    user_blocked: "Compte temporairement bloqué"
+    code_expired: "Code de validation expiré"
+    
+  from_name: "%company_name% - Service Virements"
+    
+  log_messages:
+    transfer_creation_sent: "Notification de création de virement envoyée"
+    transfer_creation_failed: "Échec de l'envoi de la notification de création de virement"
+    code_added_sent: "Notification d'ajout de code envoyée"
+    code_added_failed: "Échec de l'envoi de la notification d'ajout de code"
+    transfer_executed_sent: "Notification d'exécution de virement envoyée"
+    transfer_executed_failed: "Échec de l'envoi de la notification d'exécution"
+    transfer_rejected_sent: "Notification de refus de virement envoyée"
+    transfer_rejected_failed: "Échec de l'envoi de la notification de refus"
+    transfer_expired_sent: "Notification d'expiration de virement envoyée"
+    transfer_expired_failed: "Échec de l'envoi de la notification d'expiration"
+    transfer_cancelled_sent: "Notification d'annulation de virement envoyée"
+    transfer_cancelled_failed: "Échec de l'envoi de la notification d'annulation"

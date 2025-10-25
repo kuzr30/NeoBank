@@ -1,0 +1,90 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ 'email_devis_approval.subject'|trans({}, 'email_devis_approval') }}{% endblock %}
+
+{% block content %}
+    <!-- En-tête principal -->
+    <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-radius: 12px; padding: 30px; text-align: center; margin-bottom: 30px;">
+        <h1 style="color: white; margin: 0; font-size: 26px; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            {{ 'email_devis_approval.content.page_title'|trans({}, 'email_devis_approval') }}
+        </h1>
+        <p style="color: #bbf7d0; margin: 15px 0 0 0; font-size: 16px; font-weight: 500;">
+            {{ company_name() }} - {{ 'email_devis_approval.content.department'|trans({}, 'email_devis_approval') }}
+        </p>
+    </div>
+    
+    <!-- Salutation -->
+    <div style="margin-bottom: 25px;">
+        <p style="font-size: 18px; color: #1f2937; margin: 0; font-weight: 500;">
+            {{ 'email_devis_approval.content.greeting'|trans({'%prenom%': demande.prenom, '%nom%': demande.nom}, 'email_devis_approval')|raw }}
+        </p>
+    </div>
+
+    <!-- Message d'approbation -->
+    <div style="background: #f0fdf4; border-left: 4px solid #10b981; padding: 20px; margin-bottom: 30px; border-radius: 8px;">
+        <p style="margin: 0; color: #065f46; font-size: 16px; line-height: 1.6; font-weight: 600;">
+            {{ 'email_devis_approval.content.approval_message'|trans({'%typeAssurance%': demande.typeAssurance.getLabel()|trans({}, 'enums')}, 'email_devis_approval') }}
+        </p>
+    </div>
+
+    <!-- Numéro de référence -->
+    <div style="text-align: center; margin-bottom: 30px;">
+        <p style="margin: 0 0 10px 0; color: #6b7280; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+            {{ 'email_devis_approval.content.reference.title'|trans({}, 'email_devis_approval') }}
+        </p>
+        <div style="background: #10b981; color: white; padding: 15px 30px; border-radius: 8px; display: inline-block; font-size: 20px; font-weight: 700; letter-spacing: 2px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            {{ demande.numeroDevis }}
+        </div>
+    </div>
+
+    <!-- Prochaines étapes -->
+    <div style="background: #fef3c7; border: 1px solid #fcd34d; border-radius: 12px; padding: 25px; margin-bottom: 30px;">
+        <h3 style="margin: 0 0 20px 0; color: #92400e; font-size: 18px; font-weight: 600;">
+            {{ 'email_devis_approval.content.next_steps.title'|trans({}, 'email_devis_approval') }}
+        </h3>
+        <div style="space-y: 15px;">
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                <div style="background: #f59e0b; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; font-size: 14px;">1</div>
+                <p style="margin: 0; color: #92400e; font-size: 15px; font-weight: 500;">
+                    {{ 'email_devis_approval.content.next_steps.step1'|trans({}, 'email_devis_approval') }}
+                </p>
+            </div>
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                <div style="background: #f59e0b; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; font-size: 14px;">2</div>
+                <p style="margin: 0; color: #92400e; font-size: 15px; font-weight: 500;">{{ 'email_devis_approval.content.next_steps.step2'|trans({}, 'email_devis_approval') }}</p>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <div style="background: #f59e0b; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; font-size: 14px;">3</div>
+                <p style="margin: 0; color: #92400e; font-size: 15px; font-weight: 500;">{{ 'email_devis_approval.content.next_steps.step3'|trans({}, 'email_devis_approval') }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Informations de contact -->
+    <div style="background: #dbeafe; border: 1px solid #93c5fd; border-radius: 12px; padding: 25px; margin-bottom: 30px;">
+        <h3 style="margin: 0 0 20px 0; color: #1e40af; font-size: 18px; font-weight: 600;">
+            {{ 'email_devis_approval.content.contact.title'|trans({}, 'email_devis_approval') }}
+        </h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="flex: 1; min-width: 250px;">
+                <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+                    <h4 style="margin: 0 0 10px 0; color: #1e40af; font-size: 16px; font-weight: 600;">{{ 'email_devis_approval.content.contact.phone_service'|trans({}, 'email_devis_approval') }}</h4>
+                    <p style="margin: 0; color: #1e40af; font-size: 18px; font-weight: 700;">{{ company_phone() }}</p>
+                </div>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+                <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+                    <h4 style="margin: 0 0 10px 0; color: #1e40af; font-size: 16px; font-weight: 600;">{{ 'email_devis_approval.content.contact.email_support'|trans({}, 'email_devis_approval') }}</h4>
+                    <p style="margin: 0; color: #1e40af; font-size: 18px; font-weight: 700;">{{ company_email() }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message de clôture -->
+    <div style="text-align: center; margin-bottom: 30px;">
+        <p style="font-size: 16px; color: #374151; line-height: 1.6; margin: 0;">
+            {{ 'email_devis_approval.content.closing_message'|trans({}, 'email_devis_approval') }}
+        </p>
+    </div>
+{% endblock %}

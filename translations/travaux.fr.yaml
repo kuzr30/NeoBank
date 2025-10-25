@@ -1,0 +1,109 @@
+travaux:
+  page:
+    title: "Crédit Travaux"
+    description: "Rénovez et aménagez votre logement avec notre crédit travaux. Financez tous vos projets d'amélioration."
+  
+  hero:
+    class: "credit-detail-hero--travaux"
+    taux: "3,2%"
+    montant: "100 000€"
+    duree: "15 ans"
+    title: "Crédit Travaux"
+    subtitle: "Transformez votre habitat"
+  
+  section_1:
+    title: "Qu'est-ce qu'un crédit travaux ?"
+    content:
+      paragraph_1: "Le crédit travaux finance tous vos projets d'aménagement, de rénovation et d'amélioration de votre logement : cuisine, salle de bain, isolation, chauffage, extension, piscine..."
+      paragraph_2: "Solution spécialement conçue pour l'habitat, il bénéficie de conditions préférentielles et peut être adapté au rythme de vos travaux avec un déblocage progressif des fonds."
+  
+  features:
+    title: "Caractéristiques du crédit travaux"
+    montant:
+      value: "Jusqu'à 100 000€"
+      detail: "Selon l'ampleur des travaux"
+    duree:
+      value: "De 1 à 15 ans"
+      detail: "Durée adaptée au projet"
+    taux:
+      value: "À partir de 3,2% TAEG*"
+      detail: "Taux préférentiel travaux"
+    garantie:
+      value: "Selon montant"
+      detail: "Hypothèque si nécessaire"
+  
+  section_3:
+    title: "Avantages du crédit travaux"
+    advantage_1:
+      title: "Taux avantageux"
+      content: "Conditions préférentielles pour les travaux d'amélioration"
+    advantage_2:
+      title: "Déblocage adapté"
+      content: "Fonds libérés selon l'avancement des travaux"
+    advantage_3:
+      title: "Tous projets"
+      content: "Rénovation, extension, aménagement, équipement"
+    advantage_4:
+      title: "Plus-value"
+      content: "Valorisation significative de votre patrimoine"
+    advantage_5:
+      title: "Accompagnement"
+      content: "Conseil pour optimiser votre projet"
+  
+  section_4:
+    title: "Conditions d'éligibilité"
+    conditions:
+      title: "Conditions du projet"
+      condition_1: "Travaux sur résidence principale ou secondaire"
+      condition_2: "Devis détaillés d'entreprises qualifiées"
+      condition_3: "Respect des normes de construction"
+      condition_4: "Autorisations administratives si nécessaire"
+    documents:
+      title: "Pièces justificatives"
+      document_1: "Factures ou devis des professionnels"
+      document_2: "Justificatifs de revenus récents"
+      document_3: "Titre de propriété ou contrat de location"
+      document_4: "Relevés bancaires des 3 derniers mois"
+  
+  section_5:
+    title: "Documents nécessaires"
+    personal:
+      title: "Documents personnels"
+      document_1: "Justificatifs d'identité et domicile"
+      document_2: "3 derniers bulletins de salaire"
+      document_3: "Avis d'imposition"
+      document_4: "Relevés de comptes"
+    property:
+      title: "Bien immobilier"
+      document_1: "Titre de propriété"
+      document_2: "Taxe foncière"
+      document_3: "Assurance habitation"
+      document_4: "Plans du logement"
+    project:
+      title: "Projet travaux"
+      document_1: "Devis détaillés signés"
+      document_2: "Descriptif des travaux"
+      document_3: "Autorisations administratives"
+      document_4: "Planning prévisionnel"
+  
+  legal:
+    title: "Informations légales importantes"
+    taeg:
+      title: "*TAEG"
+      content: "Exemple représentatif : pour un crédit travaux de 40 000€ sur 10 ans au TAEG de 3,2%, vous remboursez 120 mensualités de 387€, soit un montant total de 46 440€ (coût du crédit : 6 440€)."
+    deblocage:
+      title: "Déblocage"
+      content: "Fonds libérés au fur et à mesure sur présentation des factures acquittées."
+    travaux:
+      title: "Travaux"
+      content: "Obligation de réaliser les travaux conformément aux devis."
+    garanties:
+      title: "Garanties"
+      content: "Hypothèque possible selon le montant, privilège de prêteur de deniers."
+    assurance:
+      title: "Assurance"
+      content: "Assurance décès-invalidité recommandée."
+  
+  cta:
+    title: "Donnez vie à vos projets travaux"
+    subtitle: "Rénovez et améliorez votre logement avec notre crédit dédié"

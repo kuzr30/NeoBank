@@ -1,0 +1,47 @@
+email_contract_ready:
+  title: "Uw kredietcontract is klaar - Handtekening vereist"
+  content:
+    page_title: "Uw gepersonaliseerde contract is klaar"
+    greeting: "Hallo,"
+    contract_finalized:
+      title: "Contract afgerond door onze experts"
+      description: "Uitstekend nieuws! Uw kredietcontract is afgerond door ons juridisch team en is nu klaar voor ondertekening. Onze adviseurs hebben uw dossier met zorg voorbereid."
+    contract_details:
+      title: "Contract details"
+      contract_number: "Contractnummer: {contractNumber}"
+      document_info: "Document voorbereid door onze juridische specialisten in beveiligd PDF-formaat"
+    signature_process:
+      title: "Ondertekeningsproces"
+      step_1:
+        title: "1. Download"
+        description: "Het contract ophalen als bijlage van deze email"
+      step_2:
+        title: "2. Grondige lezing"
+        description: "Alle contractuele clausules en voorwaarden zorgvuldig bestuderen"
+      step_3:
+        title: "3. Volledige ondertekening"
+        description: "De laatste pagina ondertekenen en elke pagina van het document paraferen"
+      step_4:
+        title: "4. Veilige terugzending"
+        description: "Het contract naar ons terugsturen via email, post of depot op kantoor"
+    return_methods:
+      title: "Manieren om het ondertekende contract terug te sturen"
+      email_secure: "Beveiligde email"
+      email_description: "Scan of foto van professionele kwaliteit"
+      postal_mail: "Postale verzending"
+      postal_description: "Aangetekende verzending naar onze diensten"
+      agency_deposit: "Depot op kantoor"
+      agency_description: "Directe overhandiging in onze kantoren"
+    express_processing:
+      title: "Express verwerking"
+      processing_time: "Verwerkingstijd: 24-48u werkdagen"
+      processing_description: "Zodra we uw ondertekende contract ontvangen, zal ons team de definitieve validatie uitvoeren en zal onze boekhoudkundige dienst de fondsen rechtstreeks op uw bankrekening storten."
+    support_text: "Voor vragen over uw contract of het ondertekeningsproces blijven onze gespecialiseerde adviseurs tot uw beschikking."
+    footer: "%company_name% - Kredietafdeling<br>Melding van contract klaar voor ondertekening"
+  
+  # Log berichten voor de MessageHandler
+  logs:
+    sending: "Verzenden van contract klaar notificatie"
+    success: "Contract klaar notificatie succesvol verzonden"
+    error: "Fout bij het verzenden van contract klaar notificatie"
+    send_failed: "Verzenden van contract klaar notificatie mislukt"

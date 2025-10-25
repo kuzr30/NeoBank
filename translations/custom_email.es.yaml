@@ -1,0 +1,24 @@
+# SPANISH TRANSLATION
+# Original file: custom_email.fr.yaml
+# Generated on: 2025-10-11
+
+custom_email:
+  title: "Mensaje personalizado"
+  content:
+    attachments:
+      title: "Archivos adjuntos"
+      count_single: "Este mensaje contiene {count} archivo adjunto."
+      count_plural: "Este mensaje contiene {count} archivos adjuntos."
+    footer:
+      sent_by: "Este correo electrónico le fue enviado por el equipo de {company_name}."
+      sender: "Remitente: {sender_name}"
+  
+  # Mensajes de registro para MessageHandler
+  logs:
+    sending: "Enviando correo personalizado"
+    success: "Correo personalizado enviado con éxito"
+    error: "Error al enviar el correo personalizado"
+    not_found: "Correo personalizado no encontrado"
+    already_sent: "Correo personalizado ya enviado"
+    attachment_not_found: "Archivo adjunto no encontrado"
+    send_failed: "Fallo al enviar el correo personalizado"

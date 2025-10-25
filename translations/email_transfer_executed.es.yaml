@@ -1,0 +1,37 @@
+email_transfer_executed:
+  title: "Transferencia ejecutada con éxito"
+  
+  content:
+    page_title: "Transferencia realizada con éxito"
+    greeting: "¡Felicitaciones {firstName}!"
+    
+    transaction_completed:
+      title: "Transacción finalizada"
+      description: "Su transferencia ha sido ejecutada con éxito. Todos los códigos de validación han sido confirmados y la transferencia de fondos ha sido efectuada según sus instrucciones."
+    
+    execution_details:
+      title: "Detalles de la ejecución"
+      reference: "Referencia transferencia"
+      amount: "Importe transferido"
+      amount_value: "{amount} €"
+      beneficiary_account: "Cuenta beneficiaria"
+      transfer_reason: "Motivo de la transferencia"
+      execution_date: "Fecha de ejecución"
+      executed_at: "{executedAt}"
+    
+    account_update:
+      title: "Actualización de sus cuentas"
+      description: "El importe ha sido debitado de su cuenta principal. Puede consultar sus movimientos y su saldo actualizado en su espacio bancario en línea."
+    
+    banking_access:
+      title: "Acceder a sus cuentas"
+      view_banking_button: "Ver mi espacio bancario"
+      check_instruction: "Consulte sus movimientos y saldos actualizados"
+    
+    security_thanks: "Gracias por su confianza. Su transacción se ha desarrollado en condiciones óptimas de seguridad."
+    
+    footer: "<strong>%company_name% - Servicio Transferencias</strong><br>Confirmación automática de ejecución de transferencia"
+  
+  log:
+    transfer_executed: "Transferencia {transferId} ejecutada con éxito por un importe de {amount}€"
+    email_sent: "Correo de confirmación de ejecución enviado a {userEmail}"

@@ -1,0 +1,100 @@
+{# Macro pour les méta tags SEO #}
+{% macro seo_meta_tags(seoMeta) %}
+    <!-- SEO Meta Tags Essentiels -->
+    <meta name="description" content="{{ seoMeta.description }}">
+    <meta name="keywords" content="{{ seoMeta.keywords }}">
+    <meta name="author" content="{{ seoMeta.author }}">
+    <meta name="publisher" content="{{ seoMeta.publisher }}">
+    <meta name="robots" content="{{ seoMeta.robots }}">
+    <meta name="language" content="{{ app.request.locale }}">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    
+    <!-- URL Canonique -->
+    {% if seoMeta.canonical is defined %}
+    <link rel="canonical" href="{{ seoMeta.canonical }}">
+    {% endif %}
+    
+    <!-- Hreflang pour le multilingue -->
+    {% if seoMeta.hreflang is defined %}
+        {% for locale, url in seoMeta.hreflang %}
+    <link rel="alternate" hreflang="{{ locale }}" href="{{ url }}">
+        {% endfor %}
+    {% endif %}
+{% endmacro %}
+
+{# Macro pour Open Graph #}
+{% macro open_graph_tags(seoMeta) %}
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="{{ seoMeta.type ?? 'website' }}">
+    <meta property="og:title" content="{{ seoMeta.title }}">
+    <meta property="og:description" content="{{ seoMeta.description }}">
+    <meta property="og:image" content="{{ seoMeta.image ?? 'https://sedef.fr/logo.png' }}">
+    <meta property="og:image:alt" content="{{ seoMeta.imageAlt ?? 'Logo SEDEF BANK' }}">
+    <meta property="og:url" content="{{ seoMeta.canonical ?? app.request.uri }}">
+    <meta property="og:site_name" content="SEDEF BANK">
+    <meta property="og:locale" content="{{ app.request.locale }}_{{ app.request.locale|upper }}">
+    {% if seoMeta.hreflang is defined %}
+        {% for locale, url in seoMeta.hreflang %}
+            {% if locale != app.request.locale %}
+    <meta property="og:locale:alternate" content="{{ locale }}_{{ locale|upper }}">
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    
+    <!-- Article spécifique -->
+    {% if seoMeta.type == 'article' %}
+    <meta property="article:author" content="{{ seoMeta.author }}">
+    <meta property="article:publisher" content="https://sedef.fr">
+        {% if seoMeta.datePublished is defined %}
+    <meta property="article:published_time" content="{{ seoMeta.datePublished }}">
+        {% endif %}
+        {% if seoMeta.dateModified is defined %}
+    <meta property="article:modified_time" content="{{ seoMeta.dateModified }}">
+        {% endif %}
+        {% if seoMeta.section is defined %}
+    <meta property="article:section" content="{{ seoMeta.section }}">
+        {% endif %}
+        {% if seoMeta.tags is defined %}
+            {% for tag in seoMeta.tags %}
+    <meta property="article:tag" content="{{ tag }}">
+            {% endfor %}
+        {% endif %}
+    {% endif %}
+{% endmacro %}
+
+{# Macro pour Twitter Cards #}
+{% macro twitter_card_tags(seoMeta) %}
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="{{ seoMeta.twitterCard ?? 'summary_large_image' }}">
+    <meta name="twitter:site" content="{{ seoMeta.twitterHandle ?? '@sedefbank' }}">
+    <meta name="twitter:creator" content="{{ seoMeta.twitterHandle ?? '@sedefbank' }}">
+    <meta name="twitter:title" content="{{ seoMeta.title }}">
+    <meta name="twitter:description" content="{{ seoMeta.description }}">
+    <meta name="twitter:image" content="{{ seoMeta.image ?? 'https://sedef.fr/logo.png' }}">
+    <meta name="twitter:image:alt" content="{{ seoMeta.imageAlt ?? 'Logo SEDEF BANK' }}">
+    <meta name="twitter:url" content="{{ seoMeta.canonical ?? app.request.uri }}">
+    
+    <!-- App spécifique si vous avez une app mobile -->
+    {% if seoMeta.appId is defined %}
+    <meta name="twitter:app:name:iphone" content="SEDEF BANK">
+    <meta name="twitter:app:id:iphone" content="{{ seoMeta.appId.ios }}">
+    <meta name="twitter:app:name:googleplay" content="SEDEF BANK">
+    <meta name="twitter:app:id:googleplay" content="{{ seoMeta.appId.android }}">
+    {% endif %}
+{% endmacro %}
+
+{# Macro pour JSON-LD #}
+{% macro json_ld_script(jsonLdData) %}
+<script type="application/ld+json">
+{{ jsonLdData|json_encode|raw }}
+</script>
+{% endmacro %}
+
+{# Macro pour les breadcrumbs JSON-LD #}
+{% macro breadcrumb_json_ld(breadcrumbs) %}
+    {% if breadcrumbs is defined and breadcrumbs|length > 0 %}
+{{ _self.json_ld_script(seo_breadcrumb(breadcrumbs)) }}
+    {% endif %}
+{% endmacro %}

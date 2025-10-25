@@ -1,0 +1,31 @@
+email_card_subscription_created:
+  title: "Demande de carte bancaire enregistrée"
+  
+  content:
+    page_title: "Votre demande de carte a été enregistrée"
+    greeting: "Cher(e) %firstName% %lastName%,"
+    
+    confirmation:
+      title: "Demande enregistrée avec succès"
+      description: "Nous avons bien reçu votre demande de carte bancaire. Elle est actuellement en cours d'examen par nos équipes."
+    
+    card_details:
+      title: "Détails de votre demande"
+      type: "Type de carte"
+      reference: "Référence de la demande"
+      request_date: "Date de la demande"
+    
+    next_steps:
+      title: "Prochaines étapes"
+      step1: "Examen de votre dossier par nos équipes (2-3 jours ouvrés)"
+      step2: "Validation administrative et vérification des conditions"
+      step3: "Notification par email du résultat de l'examen"
+    
+    timeline:
+      title: "Suivi de votre demande"
+      access_button: "Accéder à mon espace"
+      processing_time: "Délai de traitement habituel : 2 à 3 jours ouvrés"
+    
+    assistance: "Notre service clientèle reste à votre disposition pour toute question concernant votre demande."
+    
+    footer: "Cet email a été envoyé automatiquement par votre banque. <br><strong>Merci de votre confiance.</strong>"

@@ -1,0 +1,137 @@
+help_center_contact:
+  page:
+    title: "Contactarnos"
+    breadcrumb: "Inicio > Centro de Ayuda > Contactarnos"
+  
+  hero:
+    title: "Contáctenos"
+    subtitle: "Estamos aquí para ayudarle. Encuentre la mejor manera de contactarnos según sus necesidades."
+    
+  contact_methods:
+    title: "Medios de Contacto"
+    
+    phone:
+      title: "Teléfono"
+      subtitle: "Hable directamente con nuestros asesores"
+      number: "Teléfono"
+      hours: "Lun-Vie: 8h00-18h00, Sáb: 9h00-13h00"
+      description: "Para sus preguntas urgentes y consejos personalizados"
+      
+    chat:
+      title: "Chat en Directo"
+      subtitle: "Conversación instantánea con un agente"
+      status_online: "En línea"
+      status_offline: "Desconectado"
+      hours: "Lun-Vie: 8h00-20h00"
+      description: "Respuesta rápida para sus preguntas habituales"
+      button_start: "Iniciar el chat"
+      
+    email:
+      title: "Email"
+      subtitle: "Envíenos un mensaje detallado"
+      address: "Email"
+      response_time: "Respuesta en 24h"
+      description: "Para sus solicitudes complejas que requieren documentos"
+      
+    branch:
+      title: "Agencias"
+      subtitle: "Cita en persona"
+      button_find: "Encontrar una agencia"
+      description: "Consejos personalizados y servicios completos"
+      
+  contact_form:
+    title: "Formulario de Contacto"
+    subtitle: "Déjenos un mensaje y le responderemos rápidamente"
+    
+    fields:
+      subject: "Asunto"
+      name: "Nombre completo"
+      email: "Email"
+      phone: "Teléfono (opcional)"
+      category: "Categoría"
+      message: "Mensaje"
+      attachment: "Archivo adjunto (opcional)"
+      
+    categories:
+      general: "Pregunta general"
+      account: "Gestión de cuenta"
+      card: "Tarjetas bancarias"
+      transfer: "Transferencias"
+      credit: "Créditos"
+      insurance: "Seguros"
+      technical: "Problema técnico"
+      
+    placeholders:
+      subject: "Resumen de su solicitud"
+      name: "Su nombre y apellido"
+      email: "su.email@ejemplo.com"
+      phone: "+34 xxx xx xx xx"
+      message: "Describa su solicitud en detalle..."
+      
+    buttons:
+      send: "Enviar el mensaje"
+      clear: "Borrar"
+      
+    validation:
+      required: "Este campo es obligatorio"
+      email_invalid: "Formato de email inválido"
+      message_min: "El mensaje debe contener al menos 10 caracteres"
+      
+    success:
+      title: "¡Mensaje enviado!"
+      message: "Hemos recibido bien su mensaje. Le responderemos lo antes posible."
+      reference: "Referencia"
+      
+  emergency:
+    title: "Urgencias"
+    subtitle: "En caso de problema urgente con su cuenta"
+    
+    card_lost:
+      title: "Tarjeta perdida/robada"
+      number: "+32 2 987 65 43"
+      description: "Disponible 24h/24, 7d/7"
+      
+    fraud:
+      title: "Fraude sospechado"
+      number: "+32 2 987 65 44"
+      description: "Línea directa segura"
+      
+    account_blocked:
+      title: "Cuenta bloqueada"
+      number: "+32 2 987 65 45"
+      description: "Asistencia inmediata"
+      
+  faq:
+    title: "Preguntas Frecuentes"
+    subtitle: "Quizá su respuesta se encuentre aquí"
+    button_view: "Ver todas las FAQ"
+    
+  social:
+    title: "Redes Sociales"
+    subtitle: "Síganos para las últimas noticias"
+    facebook: "Facebook"
+    twitter: "Twitter"
+    linkedin: "LinkedIn"
+    instagram: "Instagram"
+    
+  office_hours:
+    title: "Horarios de Apertura"
+    
+    customer_service:
+      title: "Servicio al Cliente"
+      hours:
+        monday_friday: "Lunes - Viernes: 8h00 - 18h00"
+        saturday: "Sábado: 9h00 - 13h00"
+        sunday: "Domingo: Cerrado"
+        
+    technical_support:
+      title: "Soporte Técnico"
+      hours:
+        monday_friday: "Lunes - Viernes: 8h00 - 20h00"
+        saturday: "Sábado: 9h00 - 17h00"
+        sunday: "Domingo: 10h00 - 16h00"
+        
+    emergency:
+      title: "Urgencias"
+      hours:
+        always: "24h/24, 7d/7"

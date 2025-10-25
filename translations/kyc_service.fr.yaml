@@ -1,0 +1,13 @@
+exceptions:
+  submission_already_exists: "Une soumission KYC est déjà en cours ou approuvée pour cet utilisateur."
+  invalid_status: "Statut de soumission KYC invalide"
+  user_not_found: "Utilisateur introuvable"
+  documents_required: "Des documents sont requis pour la soumission KYC"
+
+log_messages:
+  submission_created: "Soumission KYC créée"
+  submission_approved: "Soumission KYC approuvée"
+  submission_rejected: "Soumission KYC rejetée"
+  document_uploaded: "Document KYC téléchargé avec succès"
+  validation_completed: "Validation KYC terminée"
+  status_updated: "Statut KYC mis à jour"

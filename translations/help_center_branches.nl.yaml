@@ -1,0 +1,123 @@
+help_center_branches:
+  page:
+    title: "Onze Kantoren - Helpcentrum %company_name%"
+    
+  hero:
+    title: "Vind Uw %company_name% Kantoor"
+    subtitle: "Ontdek onze kantoren bij u in de buurt en profiteer van onze persoonlijke diensten"
+    
+  sections:
+    main_title: "Onze Kantoren Tot Uw Dienst"
+    
+    locator:
+      title: "Kantoorzoeker"
+      description: "Vind het kantoor het dichtstbij uw woning of werkplek"
+      search_placeholder: "Voer uw stad of postcode in"
+      map_title: "Kaart van Kantoren"
+      
+    services:
+      title: "Diensten op Kantoor"
+      description: "Ontdek alle beschikbare diensten in onze kantoren"
+      items:
+        consultation:
+          title: "Persoonlijk Advies"
+          description: "Ontmoet onze adviseurs voor uw financiële projecten"
+          details: "Privégesprekken voor kredieten, sparen, verzekeringen en investeringen. Afspraak maken online of telefonisch."
+        account_opening:
+          title: "Rekening Openen"
+          description: "Open uw rekening direct op kantoor"
+          details: "Volledige assistentie bij het openen van alle soorten rekeningen met onmiddellijke validatie van uw documenten."
+        cash_services:
+          title: "Contante Diensten"
+          description: "Stortingen, opnames en wisselkantoor"
+          details: "24/7 geldautomaten, loketten voor grote biljetten, wisselservice voor vreemde valuta."
+        safe_deposit:
+          title: "Kluizen"
+          description: "Verhuur van beveiligde kluizen"
+          details: "Verschillende maten beschikbaar, beveiligde toegang met dubbele authenticatie, verzekering inbegrepen."
+        business_services:
+          title: "Zakelijke Diensten"
+          description: "Oplossingen toegewijd aan professionals"
+          details: "Gespecialiseerde begeleiding voor ondernemers, professionele financiering, betalingsoplossingen."
+        digital_assistance:
+          title: "Digitale Hulp"
+          description: "Training voor online en mobiele diensten"
+          details: "Gratis workshops om de mobiele app en online diensten onder de knie te krijgen, gepersonaliseerde assistentie."
+          
+    branches:
+      title: "Onze Hoofdkantoren"
+      description: "Vind de informatie van onze hoofdkantoren"
+      
+      brussels_center:
+        name: "%company_name% Brussel Centrum"
+        address: "Eugène Flageyplein 25, 1050 Brussel"
+        phone: "02 123 45 10"
+        hours:
+          monday_friday: "Ma-Vr : 9u00 - 17u00"
+          saturday: "Za : 9u00 - 12u00"
+          sunday: "Zo : Gesloten"
+        services: "Alle diensten • Kluizen • Investeringsadvies"
+        parking: "Gratis klantenparkeren 2u"
+        
+      antwerp:
+        name: "%company_name% Antwerpen"
+        address: "Meir 78, 2000 Antwerpen"
+        phone: "03 234 56 20"
+        hours:
+          monday_friday: "Ma-Vr : 9u00 - 17u00"
+          saturday: "Za : 9u00 - 12u00"
+          sunday: "Zo : Gesloten"
+        services: "Alle diensten • Bedrijfsdiensten • Digitale training"
+        parking: "Betaald parkeren in de buurt"
+        
+      ghent:
+        name: "%company_name% Gent"
+        address: "Korenlei 12, 9000 Gent"
+        phone: "09 345 67 30"
+        hours:
+          monday_friday: "Ma-Vr : 9u00 - 17u00"
+          saturday: "Za : 9u00 - 12u00"
+          sunday: "Zo : Gesloten"
+        services: "Alle diensten • Vermogensadvies • Valutawissel"
+        parking: "Voetgangerszone - Parking Vrijdagmarkt"
+        
+      liege:
+        name: "%company_name% Luik"
+        address: "Sint-Lambertusplein 41, 4000 Luik"
+        phone: "04 456 78 40"
+        hours:
+          monday_friday: "Ma-Vr : 9u00 - 17u00"
+          saturday: "Za : 9u00 - 12u00"
+          sunday: "Zo : Gesloten"
+        services: "Alle diensten • Gespecialiseerde kredieten • Verzekeringen"
+        parking: "Parking Opera op 2 min"
+        
+    appointment:
+      title: "Afspraak Maken"
+      description: "Reserveer een tijdslot met onze adviseurs"
+      online_booking: "Online Reservering"
+      phone_booking: "Telefonisch : Téléphone"
+      reasons:
+        - "Investeringsadvies"
+        - "Kredietaanvraag"
+        - "Rekening openen"
+        - "Verzekering en voorziening"
+        - "Bedrijfsdiensten"
+        - "Digitale training"
+        
+    accessibility:
+      title: "Toegankelijkheid"
+      description: "Onze kantoren zijn toegankelijk voor iedereen"
+      features:
+        wheelchair: "Toegang voor gehandicapten in al onze kantoren"
+        hearing: "Magnetische lussen voor slechthorenden"
+        visual: "Tactische geleiding en bewegwijzering in braille"
+        assistance: "Personeel getraind in de ontvangst van mensen met een handicap"
+        
+    contact:
+      title: "Contact en Noodgevallen"
+      description: "Hulp nodig? Neem contact met ons op"
+      emergency_line: "24/7 Noodlijn : Téléphone"
+      customer_service: "Klantenservice : Téléphone"
+      email: "Email"
+      chat: "Online chat beschikbaar op onze website"

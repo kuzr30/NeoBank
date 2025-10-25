@@ -1,0 +1,36 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_kyc_approved.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+email_kyc_approved:
+  title: "Identity verification approved - %company_name%"
+  
+  content:
+    page_title: "Congratulations %firstName%!"
+    
+    success:
+      title: "Identity verification approved"
+      message: "Your identity verification (KYC) has been <strong>successfully approved</strong>."
+    
+    services_intro: "You now have access to all our banking services:"
+    
+    services_list:
+      - "Account management"
+      - "Bank card orders"
+      - "Wire transfers"
+      - "Savings products"
+      - "🏠 Credit applications"
+      - "Insurance"
+    
+    dashboard_button: "Access my banking services"
+    
+    admin_note:
+      title: "💬 Team note"
+    
+    closing: "Thank you for your trust and welcome to %company_name%!<br><strong>The %company_name% team</strong>"
+
+  logs:
+    kyc_approved_sent: "KYC approval email sent successfully to %email%"
+    kyc_approved_failed: "Error sending KYC approval to %email%"
+    kyc_status_updated: "KYC status updated for %firstName% %lastName% - Approved"

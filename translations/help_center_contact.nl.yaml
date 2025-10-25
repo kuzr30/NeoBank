@@ -1,0 +1,137 @@
+help_center_contact:
+  page:
+    title: "Contact Opnemen"
+    breadcrumb: "Home > Helpcentrum > Contact Opnemen"
+  
+  hero:
+    title: "Neem contact met ons op"
+    subtitle: "We zijn er om u te helpen. Vind de beste manier om contact met ons op te nemen volgens uw behoeften."
+    
+  contact_methods:
+    title: "Contactmogelijkheden"
+    
+    phone:
+      title: "Telefoon"
+      subtitle: "Praat rechtstreeks met onze adviseurs"
+      number: "Téléphone"
+      hours: "Ma-Vr: 8u00-18u00, Za: 9u00-13u00"
+      description: "Voor uw urgente vragen en persoonlijk advies"
+      
+    chat:
+      title: "Live Chat"
+      subtitle: "Directe gesprek met een agent"
+      status_online: "Online"
+      status_offline: "Offline"
+      hours: "Ma-Vr: 8u00-20u00"
+      description: "Snelle reactie voor uw gewone vragen"
+      button_start: "Start chat"
+      
+    email:
+      title: "E-mail"
+      subtitle: "Stuur ons een gedetailleerd bericht"
+      address: "Email"
+      response_time: "Reactie binnen 24u"
+      description: "Voor uw complexe verzoeken die documenten vereisen"
+      
+    branch:
+      title: "Kantoren"
+      subtitle: "Persoonlijke afspraak"
+      button_find: "Vind een kantoor"
+      description: "Persoonlijk advies en volledige diensten"
+      
+  contact_form:
+    title: "Contactformulier"
+    subtitle: "Laat ons een bericht achter en we antwoorden snel"
+    
+    fields:
+      subject: "Onderwerp"
+      name: "Volledige naam"
+      email: "E-mail"
+      phone: "Telefoon (optioneel)"
+      category: "Categorie"
+      message: "Bericht"
+      attachment: "Bijlage (optioneel)"
+      
+    categories:
+      general: "Algemene vraag"
+      account: "Rekeningbeheer"
+      card: "Bankkaarten"
+      transfer: "Overschrijvingen"
+      credit: "Kredieten"
+      insurance: "Verzekeringen"
+      technical: "Technisch probleem"
+      
+    placeholders:
+      subject: "Samenvatting van uw verzoek"
+      name: "Uw voor- en achternaam"
+      email: "uw.email@voorbeeld.com"
+      phone: "+32 xxx xx xx xx"
+      message: "Beschrijf uw verzoek in detail..."
+      
+    buttons:
+      send: "Verstuur bericht"
+      clear: "Wissen"
+      
+    validation:
+      required: "Dit veld is verplicht"
+      email_invalid: "Ongeldig e-mailformaat"
+      message_min: "Het bericht moet minstens 10 tekens bevatten"
+      
+    success:
+      title: "Bericht verzonden!"
+      message: "We hebben uw bericht goed ontvangen. We antwoorden zo snel mogelijk."
+      reference: "Referentie"
+      
+  emergency:
+    title: "Noodgevallen"
+    subtitle: "Bij urgente problemen met uw rekening"
+    
+    card_lost:
+      title: "Kaart verloren/gestolen"
+      number: "+32 2 987 65 43"
+      description: "Beschikbaar 24u/24, 7d/7"
+      
+    fraud:
+      title: "Vermoeden van fraude"
+      number: "+32 2 987 65 44"
+      description: "Beveiligde directe lijn"
+      
+    account_blocked:
+      title: "Rekening geblokkeerd"
+      number: "+32 2 987 65 45"
+      description: "Onmiddellijke hulp"
+      
+  faq:
+    title: "Veelgestelde Vragen"
+    subtitle: "Misschien vindt u hier uw antwoord"
+    button_view: "Bekijk alle FAQ's"
+    
+  social:
+    title: "Sociale Media"
+    subtitle: "Volg ons voor het laatste nieuws"
+    facebook: "Facebook"
+    twitter: "Twitter"
+    linkedin: "LinkedIn"
+    instagram: "Instagram"
+    
+  office_hours:
+    title: "Openingstijden"
+    
+    customer_service:
+      title: "Klantendienst"
+      hours:
+        monday_friday: "Maandag - Vrijdag: 8u00 - 18u00"
+        saturday: "Zaterdag: 9u00 - 13u00"
+        sunday: "Zondag: Gesloten"
+        
+    technical_support:
+      title: "Technische Ondersteuning"
+      hours:
+        monday_friday: "Maandag - Vrijdag: 8u00 - 20u00"
+        saturday: "Zaterdag: 9u00 - 17u00"
+        sunday: "Zondag: 10u00 - 16u00"
+        
+    emergency:
+      title: "Noodgevallen"
+      hours:
+        always: "Beschikbaar 24u/24, 7d/7"

@@ -1,0 +1,22 @@
+email_card_ready:
+  title: "Uw bankkaart is klaar!"
+  subtitle: "Uw nieuwe kaart is nu beschikbaar"
+  greeting: "Hallo %firstname%,"
+  main_message: "Uitstekend nieuws! Uw bankkaart is aangemaakt en is nu beschikbaar in uw klantruimte."
+
+  card_details_title: "Details van uw kaart"
+  card_type_label: "Type"
+  card_brand_label: "Merk"
+  card_number_label: "Nummer"
+  card_status_label: "Status"
+  card_status_active: "Actief"
+
+  what_you_can_do_title: "U kunt nu:"
+  action_1: "De details van uw kaart bekijken in uw klantruimte"
+  action_2: "Online betalingen uitvoeren"
+  action_3: "Uw limieten en instellingen beheren"
+
+  physical_card_title: "Fysieke kaart onderweg"
+  physical_card_message: "Uw fysieke kaart wordt binnen 3-5 werkdagen naar uw adres gestuurd."
+
+  cta_button: "Naar mijn klantruimte"

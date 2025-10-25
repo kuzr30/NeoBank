@@ -1,0 +1,15 @@
+file_upload_service:
+  exceptions:
+    upload_error: "Fout bij het uploaden van bestand: {error}"
+    
+  validation_errors:
+    invalid_file_type: "Bestandstype niet toegestaan. Alleen PDF en afbeeldingen (JPG, PNG) zijn toegestaan."
+    file_too_large: "Het bestand is te groot (max 10MB)."
+    upload_failed: "Fout bij het uploaden van het bestand."
+    
+  file_sizes:
+    bytes: "B"
+    kilobytes: "KB" 
+    megabytes: "MB"
+    gigabytes: "GB"
+    file_not_found: "0 B"

@@ -1,0 +1,106 @@
+microcredit:
+  page:
+    title: "Microcrédito"
+    description: "Solución de financiación accesible con nuestro microcrédito. Importes adaptados a pequeños proyectos personales o profesionales."
+  
+  hero:
+    class: "credit-detail-hero--microcredit"
+    taux: "{rate}%"
+    montant: "5 000€"
+    duree: "5 años"
+    title: "Microcrédito"
+    subtitle: "Financiación accesible para sus pequeños proyectos"
+  
+  section_1:
+    title: "¿Qué es un microcrédito?"
+    content:
+      paragraph_1: "El microcrédito es una solución de financiación destinada a personas que no tienen acceso al crédito bancario tradicional. Financia proyectos personales o profesionales de pequeña cuantía."
+      paragraph_2: "Acompañado de un sistema de asesoramiento y seguimiento, el microcrédito favorece la inclusión financiera y permite materializar proyectos esenciales como la compra de un vehículo para el trabajo o la creación de una microempresa."
+  
+  features:
+    title: "Características del microcrédito"
+    montant:
+      value: "De 300€ a 5 000€"
+      detail: "Importes adaptados a las necesidades"
+    duree:
+      value: "De 6 meses a 5 años"
+      detail: "Duración flexible"
+    taux:
+      value: "Desde {rate}% TAE*"
+      detail: "Tipo social ventajoso"
+    garantie:
+      value: "Fondo de garantía"
+      detail: "O aval solidario"
+  
+  section_3:
+    title: "Ventajas del microcrédito"
+    advantages:
+      accessibilite:
+        title: "Accesibilidad"
+        description: "Abierto al público excluido del crédito tradicional"
+      accompagnement:
+        title: "Acompañamiento"
+        description: "Asesoramiento y seguimiento personalizado del proyecto"
+      taux_modere:
+        title: "Tipo moderado"
+        description: "Condiciones preferenciales con vocación social"
+      projets_varies:
+        title: "Proyectos variados"
+        description: "Personal, profesional o de inserción"
+      pas_frais:
+        title: "Sin gastos"
+        description: "Sin gastos de expediente ni penalizaciones"
+  
+  section_4:
+    title: "Condiciones y proyectos elegibles"
+    conditions:
+      title: "Condiciones de elegibilidad"
+      items:
+        exclusion: "Exclusión del crédito bancario tradicional"
+        projet: "Proyecto viable y coherente"
+        situation: "Situación social precaria"
+        accompagnement: "Acompañamiento aceptado"
+    projets:
+      title: "Tipos de proyectos"
+      items:
+        vehicule: "Compra de vehículo para el trabajo"
+        entreprise: "Creación de microempresa"
+        formation: "Formación profesional"
+        equipement: "Equipamiento doméstico esencial"
+  
+  section_5:
+    title: "Documentos necesarios"
+    personnelle:
+      title: "Situación personal"
+      items:
+        identite: "Documento de identidad"
+        domicile: "Justificante de domicilio"
+        ressources: "Justificantes de ingresos"
+        attestations: "Certificados de situación"
+    projet:
+      title: "Proyecto a financiar"
+      items:
+        descriptif: "Descripción detallada del proyecto"
+        devis: "Presupuestos o facturas proforma"
+        financement: "Plan de financiación"
+        echeancier: "Calendario de pagos previsto"
+    accompagnement:
+      title: "Acompañamiento"
+      items:
+        avis: "Opinión del acompañante social"
+        dossier: "Expediente de presentación"
+        engagement: "Compromiso de seguimiento"
+        references: "Referencias del proyecto"
+  
+  legal:
+    details:
+      title: "Información legal importante"
+      taeg: "<strong>*TAE:</strong> Ejemplo representativo: para un microcrédito de 2 000€ a 36 meses al TAE del 7,5%, usted reembolsa 36 mensualidades de 63€, es decir un importe total de 2 268€ (coste del crédito: 268€)."
+      eligibilite: "<strong>Elegibilidad:</strong> Reservado a personas en situación de precariedad o exclusión bancaria."
+      accompagnement: "<strong>Acompañamiento:</strong> Seguimiento obligatorio por un trabajador social o una asociación."
+      garantie: "<strong>Garantía:</strong> Fondo de garantía solidaria, no se requiere aval personal."
+      finalite: "<strong>Finalidad:</strong> Uso estrictamente conforme al proyecto declarado."
+  
+  cta:
+    title: "Materialice su proyecto"
+    subtitle: "Benefíciese de una financiación accesible con nuestro microcrédito"

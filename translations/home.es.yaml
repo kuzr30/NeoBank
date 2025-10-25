@@ -1,0 +1,422 @@
+# Página de inicio - Español
+page_title: "Banking - Su banco digital de confianza"
+# Sección Hero
+hero:
+  title: "Su socio financiero"
+  subtitle: "para cada etapa de su vida"
+  description: "Descubra un banco que se adapta a sus necesidades. Desde transacciones diarias hasta grandes proyectos, estamos ahí para acompañarle."
+  cards:
+    payments: "Pagos"
+    savings: "Ahorro"
+    investments: "Inversiones"
+    savings_plus: "Ahorro+"
+    premium_card: "Tarjeta Premium"
+    balance: "Saldo"
+  stats:
+    clients: "Clientes satisfechos"
+    satisfaction: "Puntuación satisfacción"
+    support: "Soporte al cliente"
+# Sección Servicios
+services:
+  badge: "Nuestras Soluciones Bancarias"
+  title: "Servicios a medida"
+  title_accent: "para todos sus proyectos"
+  subtitle: "Una oferta completa para todas sus necesidades financieras"
+  description: "Descubra nuestra gama completa de productos y servicios bancarios, diseñados para responder a todas sus necesidades financieras con la seguridad y experiencia de un banco autorizado."
+  
+  account:
+    title: "Cuentas y Tarjetas"
+    description: "Cuenta corriente, cuenta de ahorro, tarjeta bancaria premium. Soluciones adaptadas a su perfil con comisiones transparentes."
+    features:
+      foreign_fees: "Tarjeta sin comisiones en el extranjero"
+      overdraft: "Descubierto autorizado hasta 1000€"
+      mobile_app: "Aplicación móvil intuitiva"
+    cta: "Más información"
+    regulatory: "Sujeto a aceptación de su expediente. Ver condiciones en oficina."
+  savings:
+    title: "Ahorro e Inversiones"
+    description: "Haga crecer su dinero con nuestras soluciones de ahorro e inversión seguras y eficientes."
+    badge: "El más popular"
+    features:
+      savings_accounts: "Cuenta Ahorro A, LDDS, PEL"
+      life_insurance: "Seguro de vida hasta 3,2% neto"
+      pea: "PEA con comisiones reducidas"
+    cta: "Simular mi ahorro"
+    regulatory: "Los rendimientos pasados no prejuzgan los rendimientos futuros. Capital no garantizado."
+  credit:
+    title: "Créditos y Préstamos"
+    description: "Realice sus proyectos con nuestras soluciones de financiamiento ventajosas: inmobiliario, auto, obras, personal."
+    features:
+      mortgage: "Crédito inmobiliario desde 1,2% TAE"
+      auto_loan: "Crédito auto hasta 75 000€"
+      quick_response: "Respuesta en 48h"
+    cta: "Hacer una simulación"
+    regulatory: "Un crédito le compromete y debe ser reembolsado. Verifique sus capacidades de reembolso antes de comprometerse."
+  insurance:
+    title: "Seguros"
+    description: "Proteja lo que más le importa con nuestros seguros de hogar, auto, salud y previsión."
+    features:
+      home_insurance: "Seguro de hogar desde 8€/mes"
+      auto_bonus: "Auto: bonus-malus conservado"
+      assistance: "Asistencia 24h/24 incluida"
+    cta: "Obtener un presupuesto"
+    regulatory: "ORIAS nº 12 345 678. Ver condiciones generales. Tarifas indicativas."
+  professional:
+    title: "Servicios Profesionales"
+    description: "Soluciones bancarias dedicadas a emprendedores, profesionales liberales y empresas. Acompañamiento personalizado para su actividad."
+    features:
+      business_account: "Cuenta profesional sin gastos de mantenimiento"
+      payment_terminal: "Terminal de pago ofrecido"
+      dedicated_advisor: "Asesor de empresa dedicado"
+    cta: "Descubrir la oferta Pro"
+    regulatory: "Oferta reservada a profesionales. Criterios de elegibilidad en agencia."
+  private:
+    title: "Private Banking"
+    description: "Servicio de excepción para una clientela exigente. Asesoramiento patrimonial personalizado y gestión privada."
+    badge: "Premium"
+    features:
+      dedicated_advisor: "Asesor en gestión de patrimonio dedicado"
+      vip_access: "Acceso a salones VIP de aeropuertos"
+      concierge: "Conserjería premium 24h/24"
+    cta: "Concertar cita"
+    regulatory: "Servicio reservado a patrimonios superiores a 500 000€. Condiciones particulares."
+compliance:
+  credit_institution: "Establecimiento de crédito autorizado por la ACPR"
+  bank_control: "Sometido al control del Banco de Francia - Código APE 6419Z"
+  insurance_intermediary: "Intermediario en seguros"
+  orias_registration: "Matriculado en ORIAS bajo el nº 12 345 678 - www.orias.fr"
+
+# Credit Section
+credit:
+  badge: "Soluciones de Financiación"
+  title: "Realice sus proyectos con nuestras"
+  title_accent: "soluciones de crédito"
+  description: "Del sueño de la casa a la compra de un coche, pasando por sus proyectos personales, le acompañamos con soluciones de financiación a medida."
+  features:
+    response_48h: "Respuesta en 48h"
+    response_48h_desc: "Estudio de su expediente y respuesta de principio en 48h laborables"
+    attractive_rates: "Tipos atractivos"
+    attractive_rates_desc: "Beneficiese de nuestros mejores tipos negociados según su perfil"
+    expert_support: "Acompañamiento experto"
+    expert_support_desc: "Nuestros asesores especializados le guían en cada etapa"
+  cta:
+    simulate: "Simular mi crédito"
+    contact_advisor: "Hablar con un asesor"
+  types:
+    mortgage:
+      title: "Crédito Inmobiliario"
+      amount: "De 50 000€ a 1 500 000€"
+      rate_from: "TAE desde"
+      rate: "1,45%"
+      features:
+        - "Compra residencia principal/secundaria"
+        - "Inversión inmobiliaria"
+        - "Reagrupación de créditos"
+        - "Obras de mejora"
+    
+    auto:
+      title: "Crédito Auto"
+      amount: "De 3 000€ a 100 000€"
+      rate_from: "TAE desde"
+      rate: "2,9%"
+      features:
+        - "Vehículo nuevo o de ocasión"
+        - "Moto, autocaravana"
+        - "Financiación al 100%"
+        - "Seguro opcional"
+    personal:
+      title: "Crédito Personal"
+      amount: "De 3 000€ a 75 000€"
+      rate_from: "TAE desde"
+      rate: "4,5%"
+      features:
+        - "Proyectos personales"
+        - "Obras de renovación"
+        - "Boda, viaje"
+        - "Sin justificante"
+    works:
+      title: "Crédito Obras"
+      amount: "De 5 000€ a 75 000€"
+      rate_from: "TAE desde"
+      rate: "3,2%"
+      features:
+        - "Renovación energética"
+        - "Ampliación, acondicionamiento"
+        - "Piscina, jardín"
+        - "Eco-préstamo disponible"
+  process:
+    title: "Su crédito en 4 etapas simples"
+    steps:
+      simulation:
+        title: "Simulación"
+        description: "Estime su capacidad de endeudamiento y sus mensualidades en línea"
+      application:
+        title: "Expediente"
+        description: "Constituya su expediente con la ayuda de nuestros asesores"
+      study:
+        title: "Estudio"
+        description: "Nuestro comité estudia su solicitud en 48h laborables"
+      disbursement:
+        title: "Desbloqueo"
+        description: "Firma y desbloqueo rápido de los fondos"
+  button: "Simular"
+  legal:
+    main: "Un crédito le compromete y debe ser reembolsado. Verifique sus capacidades de reembolso antes de comprometerse."
+    details:
+      - "Ejemplos de TAE a título indicativo - Condiciones tarifarias en vigor el 01/01/2025"
+      - "Sujeto a aceptación de su expediente por nuestros servicios"
+      - "Ofertas sometidas a las condiciones generales disponibles en agencia"
+# Offers Section
+offers:
+  badge: "Nuestras ofertas exclusivas"
+  title: "Elija la oferta que le"
+  title_accent: "corresponde"
+  description: "Soluciones bancarias adaptadas a su estilo de vida, con ventajas pensadas para simplificar su cotidiano financiero."
+  essential:
+    title: "Banking Esencial"
+    subtitle: "Su banco en el día a día"
+    price: "Gratuito"
+    period: "/ mes"
+    features:
+      feature1: "Cuenta corriente sin gastos"
+      feature2: "Tarjeta bancaria clásica"
+      feature3: "Aplicación móvil completa"
+      feature4: "Transferencias SEPA ilimitadas"
+      feature5: "Atención al cliente en línea"
+    cta: "Abrir una cuenta"
+  premium:
+    title: "Banking Premium"
+    subtitle: "Privilegios y ventajas"
+    price: "9,90€"
+    period: "/ mes"
+    badge: "POPULAR"
+    features:
+      feature1: "Todo de la oferta Esencial"
+      feature2: "Tarjeta premium con seguros"
+      feature3: "Descubierto autorizado 1500€"
+      feature4: "Asesor asignado"
+      feature5: "Acceso salones VIP aeropuertos"
+    cta: "Pasar a Premium"
+  private:
+    title: "Banking Private"
+    subtitle: "Excelencia y a medida"
+    price: "Según presupuesto"
+    period: ""
+    features:
+      feature1: "Gestión de patrimonio"
+      feature2: "Asesor privado dedicado"
+      feature3: "Productos de inversión exclusivos"
+      feature4: "Servicios de conserjería 24h/7d"
+      feature5: "Tarifas preferenciales"
+    cta: "Tomar contacto"
+  comparison:
+    title: "Comparación detallada de nuestras ofertas"
+    table:
+      headers:
+        services: "Servicios"
+        essential: "Esencial"
+        premium: "Premium"
+        private: "Private"
+      rows:
+        account_fees:
+          label: "Gastos de cuenta"
+          essential: "Gratuito"
+          premium: "9,90€/mes"
+          private: "29,90€/mes"
+        bank_card:
+          label: "Tarjeta bancaria"
+          essential: "Visa Classic"
+          premium: "Visa Premier"
+          private: "World Elite"
+        overdraft:
+          label: "Descubierto autorizado"
+          essential: "500€"
+          premium: "1 500€"
+          private: "5 000€"
+        savings_rate:
+          label: "Tipo de ahorro"
+          essential: "0,5%"
+          premium: "2,5%"
+          private: "3,5%"
+        support:
+          label: "Atención al cliente"
+          essential: "En línea"
+          premium: "Asesor asignado"
+          private: "Gestor privado"
+        insurance:
+          label: "Seguros incluidos"
+          essential: "-"
+          premium: "Viaje y Compra"
+          private: "Premium y Familia"
+# Digital Banking Section (Trust)
+digital:
+  badge: "100% Banco Móvil"
+  title: "Gestione su dinero"
+  title_accent: "donde quiera que esté"
+  description: "Nuestra aplicación móvil pone todos los servicios bancarios esenciales en su bolsillo. Transferencias, consultas, ahorro: todo se vuelve simple e inmediato."
+  features:
+    contactless_payment: "Pago sin contacto"
+    contactless_payment_desc: "Apple Pay, Google Pay y Samsung Pay integrados para sus compras cotidianas"
+    instant_transfers: "Transferencias instantáneas"
+    instant_transfers_desc: "Envíe dinero en pocos segundos, 24h/24 y 7d/7"
+    smart_analysis: "Análisis inteligente"
+    smart_analysis_desc: "Siga sus gastos por categoría con gráficos detallados"
+  app_stores:
+    title: "Descargar la aplicación"
+    app_store: "App Store"
+    google_play: "Google Play"
+    available_on: "Disponible en"
+    download_on: "Descargar en"
+  phone:
+    balance: "Saldo disponible"
+    amount: "2 847,32€"
+    transfer: "Transferir"
+    top_up: "Recargar"
+    pay: "Pagar"
+  floating_cards:
+    virtual_card: "Tarjeta virtual"
+    real_time_alerts: "Alertas en tiempo real"
+  transactions:
+    example_1:
+      name: "Bio Supermercado"
+      date: "Hoy"
+      amount: "-42,50€"
+    example_2:
+      name: "Café Central"
+      date: "Ayer"
+      amount: "-4,80€"
+# Engagement Section
+engagement:
+  badge: "Compromiso y Responsabilidad"
+  title: "Un banco que se compromete"
+  title_accent: "por un futuro sostenible"
+  description: "En %company_name%, nos comprometemos cada día por un mundo más sostenible. Nuestras acciones por el medio ambiente, la solidaridad y la innovación están en el corazón de nuestros valores y de nuestra promesa a las generaciones futuras."
+  # Environmental Card
+  environment:
+    title: "Medio Ambiente y Ecología"
+    description: "Financiamos la transición ecológica y apoyamos los proyectos verdes para luchar contra el cambio climático."
+    stats:
+      green_financing: "2,8M€"
+      green_financing_label: "Financiaciones verdes"
+      co2_reduction: "-35%"
+      co2_reduction_label: "Emisiones CO2"
+    actions:
+      action1: "🌱 100% energía verde para nuestras oficinas"
+      action2: "🚗 Parque automovilístico eléctrico para nuestros equipos"
+      action3: "📄 Desmaterialización de documentos"
+      action4: "♾️ Reciclaje y reducción de residuos"
+  # Social Card
+  social:
+    title: "Solidaridad y Sociedad"
+    description: "Apoyamos la economía social y solidaria y favorecemos la inclusión financiera para todos."
+    stats:
+      ess_companies: "450"
+      ess_companies_label: "Empresas ESS financiadas"
+      microcredit_beneficiaries: "15K"
+      microcredit_beneficiaries_label: "Beneficiarios de microcrédito"
+    actions:
+      action1: "🤝 Apoyo a asociaciones locales"
+      action2: "💡 Educación financiera de jóvenes"
+      action3: "🏠 Programas de vivienda accesible"
+      action4: "🌍 Apoyo a ONG internacionales"
+  # Innovation Card
+  innovation:
+    title: "Innovación y Tecnología"
+    description: "Invertimos en nuevas tecnologías para ofrecerle mejores servicios bancarios y una experiencia de cliente mejorada."
+    stats:
+      accessibility_satisfaction: "98%"
+      accessibility_satisfaction_label: "Satisfacción accesibilidad"
+      digital_investment: "12M€"
+      digital_investment_label: "Inversión digital"
+    actions:
+      action1: "📱 Aplicación móvil innovadora"
+      action2: "🔒 Seguridad reforzada y ciberseguridad"
+      action3: "🤖 Inteligencia artificial para el asesoramiento"
+      action4: "♿ Servicios accesibles a personas discapacitadas"
+  # Partnerships Section
+  partnerships:
+    title: "Nuestras Alianzas para el Impacto"
+    partners:
+      wwf:
+        name: "WWF Francia"
+        description: "Protección de la biodiversidad"
+      unicef:
+        name: "UNICEF"
+        description: "Educación y protección de la infancia"
+      habitat_humanisme:
+        name: "Habitat & Humanismo"
+        description: "Vivienda social e inserción"
+      france_active:
+        name: "Francia Activa"
+        description: "Financiación solidaria y emprendimiento"
+  # International Banks Section
+  international_banks:
+    title: "Nuestros Socios Internacionales"
+    subtitle: "Confían en nosotros los bancos líderes mundiales"
+  # CTA Section
+  cta:
+    title: "Unáse a nuestro enfoque responsable"
+    description: "Descubra cómo %company_name% le acompaña en sus proyectos sostenibles"
+    buttons:
+      csr_report: "Informe RSE 2024"
+      green_products: "Productos Verdes"
+# Simulation Section (CTA)
+simulation:
+  badge: "Simulación en Línea"
+  title: "Realice su proyecto"
+  title_accent: "en pocos clics"
+  description: "Estime su capacidad de endeudamiento, simule sus mensualidades o calcule sus inversiones. Nuestras herramientas le guían en todos sus proyectos financieros."
+  # Mortgage Card
+  mortgage:
+    title: "Crédito Inmobiliario"
+    description: "Simule su crédito inmobiliario y descubra su capacidad de endeudamiento"
+    features:
+      personalized_rate: "Tipo personalizado"
+      immediate_response: "Respuesta inmediata"
+      no_commitment: "Sin compromiso"
+    button: "Simular mi crédito"
+  # Consumer Credit Card
+  consumer:
+    title: "Crédito Consumo"
+    description: "Financie sus proyectos personales con condiciones ventajosas"
+    features:
+      amount_range: "De 1 000€ a 75 000€"
+      flexible_repayment: "Reembolso flexible"
+      quick_disbursement: "Desbloqueo rápido"
+    button: "Calcular mis mensualidades"
+  # Savings Card
+  savings:
+    title: "Ahorro e Inversiones"
+    description: "Optimice sus inversiones según su perfil y sus objetivos"
+    features:
+      personalized_advice: "Asesoramiento personalizado"
+      automatic_diversification: "Diversificación automática"
+      optimized_taxation: "Fiscalidad optimizada"
+    button: "Optimizar mi ahorro"
+  # Bottom CTA
+  cta:
+    title: "¿Necesita un acompañamiento personalizado?"
+    description: "Nuestros asesores están ahí para guiarle en sus proyectos más importantes"
+    buttons:
+      appointment: "Concertar cita"
+      chat: "Chat en línea"
+    contact_info:
+      customer_service:
+        title: "Atención al cliente"
+        phone: "09 69 39 30 00 (llamada gratuita)"
+      hours:
+        title: "Horarios"
+        schedule: "Lun-Vie 8h-20h, Sáb 9h-17h"
+  # Legal Disclaimer
+  legal:
+    title: "Menciones importantes:"
+    disclaimer: "Las simulaciones presentadas se dan únicamente a título indicativo y no tienen ningún valor contractual. Se basan en las tarifas vigentes en la fecha de simulación. El acuerdo de crédito está sujeto al estudio de su expediente por el banco."
+    mortgage_credit:
+      title: "Crédito inmobiliario:"
+      details: "TAE a partir del 1,45% a 20 años. Coste del crédito: 1 000 000€ para un crédito de 250 000€. Coste total del crédito: 322 500€."
+    consumer_credit:
+      title: "Crédito consumo:"
+      details: "TAE fijo del 1,9% al 2,9% según perfil. Un crédito le compromete y debe ser reembolsado. Verifique sus capacidades de reembolso antes de comprometerse."
+    investments:
+      title: "Inversiones:"
+      details: "Los rendimientos pasados no prejuzgan los rendimientos futuros. Las inversiones pueden presentar un riesgo de pérdida del capital."

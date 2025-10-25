@@ -1,0 +1,176 @@
+<!-- Main Dashboard Content -->
+<section class="banking__content">
+    
+    <!-- Account Header -->
+    <div class="banking__operations-header">
+        {% if accounts is defined and accounts|length > 0 %}
+            {% set mainAccount = accounts[0] %}
+            <div class="banking__account-info">
+                <h2 class="banking__account-title">{{ tp('banking_accounts.header.main_account', [], 'banking_accounts') }}</h2>
+                <div class="banking__account-details">
+                    <span>{{ tp('banking_accounts.header.account_number', [], 'banking_accounts') }} {{ mainAccount.accountNumber }}</span>
+
+                    <span>{{ tp('banking_accounts.header.iban', [], 'banking_accounts') }}: {{ mainAccount.iban }}</span>
+                    <span>{{ tp('banking_accounts.header.currency', [], 'banking_accounts') }}: {{ mainAccount.currency }}</span>
+                </div>
+            </div>
+            <div class="banking__balance-display">
+                <div class="banking__balance-main">{{ mainAccount.balance|number_format(2, ',', ' ') }} €</div>
+                <div class="banking__balance-available">{{ tp('banking_accounts.header.available_balance', [], 'banking_accounts') }}: {{ mainAccount.balance|number_format(2, ',', ' ') }} €</div>
+            </div>
+        {% else %}
+            <div class="banking__account-info">
+                <h2 class="banking__account-title">{{ tp('banking_accounts.header.no_account', [], 'banking_accounts') }}</h2>
+                <div class="banking__account-details">{{ tp('banking_accounts.header.no_account_message', [], 'banking_accounts') }}</div>
+            </div>
+            <div class="banking__balance-display">
+                <div class="banking__balance-main">0,00 €</div>
+                <div class="banking__balance-available">{{ tp('banking_accounts.header.no_balance', [], 'banking_accounts') }}</div>
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Account Filters and Tools -->
+    <div class="banking__filters">
+        <div class="banking__filter-group">
+            <select class="banking__filter-select">
+                <option>{{ tp('banking_accounts.filters.all_operations', [], 'banking_accounts') }}</option>
+                <option>{{ tp('banking_accounts.filters.transfers', [], 'banking_accounts') }}</option>
+                <option>{{ tp('banking_accounts.filters.direct_debits', [], 'banking_accounts') }}</option>
+                <option>{{ tp('banking_accounts.filters.card_payments', [], 'banking_accounts') }}</option>
+                <option>{{ tp('banking_accounts.filters.checks', [], 'banking_accounts') }}</option>
+            </select>
+            
+            <input type="date" class="banking__filter-date" value="{{ "now"|date('Y-m-d') }}">
+            
+            <button class="banking__filter-btn">
+                {{ ux_icon('heroicons:funnel', {'class': 'banking__filter-icon'}) }}
+                {{ tp('banking_accounts.filters.filter_button', [], 'banking_accounts') }}
+            </button>
+        </div>
+        
+        <div class="banking__tools">
+            <button class="banking__tool-btn">
+                {{ ux_icon('heroicons:arrow-down-tray', {'class': 'banking__tool-icon'}) }}
+                {{ tp('banking_accounts.filters.download', [], 'banking_accounts') }}
+            </button>
+            <button class="banking__tool-btn">
+                {{ ux_icon('heroicons:printer', {'class': 'banking__tool-icon'}) }}
+                {{ tp('banking_accounts.filters.print', [], 'banking_accounts') }}
+            </button>
+        </div>
+    </div>
+
+    <!-- Operations Table -->
+    <div class="banking__operations">
+        <table class="banking__table">
+            <thead class="banking__table-head">
+                <tr>
+                    <th class="banking__table-th">{{ tp('banking_accounts.table.date', [], 'banking_accounts') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_accounts.table.operation', [], 'banking_accounts') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_accounts.table.debit', [], 'banking_accounts') }}</th>
+                    <th class="banking__table-th">{{ tp('banking_accounts.table.credit', [], 'banking_accounts') }}</th>
+                </tr>
+            </thead>
+            <tbody class="banking__table-body">
+                {% if all_transactions is defined and all_transactions|length > 0 %}
+                    {% for transaction in all_transactions %}
+                        <tr class="banking__table-row">
+                            <td class="banking__table-td">
+                                {% if transaction.createdAt is defined %}
+                                    {{ transaction.createdAt|date('d/m/Y') }}
+                                {% else %}
+                                    {{ transaction.getCreatedAt()|date('d/m/Y') }}
+                                {% endif %}
+                            </td>
+                            <td class="banking__table-td">
+                                <div class="banking__operation-detail">
+                                    <div class="banking__operation-name">
+                                        {% if transaction.isTransfer is defined and transaction.isTransfer %}
+                                            {{ transaction.description }}
+                                            {% if transaction.status != 'completed' %}
+                                                <span class="banking__status banking__status--{{ transaction.status }}">
+                                                    {% if transaction.status == 'pending' %}{{ tp('banking_accounts.status.pending', [], 'banking_accounts') }}
+                                                    {% elseif transaction.status == 'executing' %}{{ tp('banking_accounts.status.executing', [], 'banking_accounts') }}
+                                                    {% elseif transaction.status == 'cancelled' %}{{ tp('banking_accounts.status.cancelled', [], 'banking_accounts') }}
+                                                    {% elseif transaction.status == 'blocked' %}{{ tp('banking_accounts.status.blocked', [], 'banking_accounts') }}
+                                                    {% else %}{{ transaction.status|upper }}
+                                                    {% endif %}
+                                                </span>
+                                            {% endif %}
+                                        {% else %}
+                                            {% if transaction.description is defined %}
+                                                {% set description = transaction.description %}
+                                            {% elseif transaction.getDescription() %}
+                                                {% set description = transaction.getDescription() %}
+                                            {% else %}
+                                                {% set category = transaction.category is defined ? transaction.category : transaction.getCategory() %}
+                                                {% set description = category|upper %}
+                                            {% endif %}
+                                            
+                                            {# Traduire les descriptions de transfert de crédit #}
+                                            {% if description == 'credit_to_main_debit' %}
+                                                {{ tp('banking_accounts.descriptions.credit_to_main_debit', [], 'banking_accounts') }}
+                                            {% elseif description == 'credit_to_main_credit' %}
+                                                {{ tp('banking_accounts.descriptions.credit_to_main_credit', [], 'banking_accounts') }}
+                                            {% elseif description == 'transaction_descriptions.credit_release' %}
+                                                {{ tp('banking_accounts.descriptions.credit_release', [], 'banking_accounts') }}
+                                            {% elseif description == 'Virement du crédit vers compte principal' %}
+                                                {{ tp('banking_accounts.descriptions.credit_to_main_debit', [], 'banking_accounts') }}
+                                            {% elseif description == 'Virement reçu du crédit' %}
+                                                {{ tp('banking_accounts.descriptions.credit_to_main_credit', [], 'banking_accounts') }}
+                                            {% else %}
+                                                {{ description }}
+                                            {% endif %}
+                                        {% endif %}
+                                    </div>
+                                    <div class="banking__operation-ref">
+                                        {% if transaction.reference is defined %}
+                                            {{ tp('banking_accounts.table.reference', [], 'banking_accounts') }}: {{ transaction.reference }}
+                                        {% else %}
+                                            {{ tp('banking_accounts.table.reference', [], 'banking_accounts') }}: {{ transaction.getReference() }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="banking__table-td">
+                                {% set transactionType = transaction.type is defined ? transaction.type : transaction.getType() %}
+                                {% set transactionAmount = transaction.amount is defined ? transaction.amount : transaction.getAmount() %}
+                                {% if transactionType == 'debit' %}
+                                    <span class="banking__amount--debit">{{ transactionAmount|number_format(2, ',', ' ') }} €</span>
+                                {% endif %}
+                            </td>
+                            <td class="banking__table-td">
+                                {% if transactionType == 'credit' %}
+                                    <span class="banking__amount--credit">{{ transactionAmount|number_format(2, ',', ' ') }} €</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr class="banking__table-row">
+                        <td colspan="4" class="banking__table-td text-center" style="padding: 2rem;">
+                            <div class="banking__empty-state">
+                                {{ ux_icon('heroicons:circle-stack', {'class': 'banking__empty-icon'}) }}
+                                <p>{{ tp('banking_accounts.empty_state.no_transactions', [], 'banking_accounts') }}</p>
+                                <small>{{ tp('banking_accounts.empty_state.no_transactions_message', [], 'banking_accounts') }}</small>
+                            </div>
+                        </td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="banking__pagination">
+        <span class="banking__page-info">
+            {% if all_transactions is defined %}
+                {{ tp('banking_pagination.page_info', {current: 1, pageCount: 1, totalCount: all_transactions|length}, 'banking_pagination') }}
+            {% else %}
+                {{ tp('banking_accounts.pagination.no_operations', [], 'banking_accounts') }}
+            {% endif %}
+        </span>
+    </div>
+
+</section>

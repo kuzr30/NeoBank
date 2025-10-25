@@ -1,0 +1,123 @@
+help_center_branches:
+  page:
+    title: "Nos Agences - Centre d'Aide %company_name%"
+    
+  hero:
+    title: "Trouvez Votre Agence %company_name%"
+    subtitle: "Découvrez nos agences près de chez vous et profitez de nos services personnalisés"
+    
+  sections:
+    main_title: "Nos Agences à Votre Service"
+    
+    locator:
+      title: "Localisateur d'Agences"
+      description: "Trouvez l'agence la plus proche de votre domicile ou lieu de travail"
+      search_placeholder: "Entrez votre ville ou code postal"
+      map_title: "Carte des Agences"
+      
+    services:
+      title: "Services en Agence"
+      description: "Découvrez tous les services disponibles dans nos agences"
+      items:
+        consultation:
+          title: "Conseil Personnalisé"
+          description: "Rencontrez nos conseillers pour vos projets financiers"
+          details: "Entretiens privés pour crédits, épargne, assurances et investissements. Prise de rendez-vous en ligne ou par téléphone."
+        account_opening:
+          title: "Ouverture de Compte"
+          description: "Ouvrez votre compte directement en agence"
+          details: "Assistance complète pour l'ouverture de tous types de comptes avec validation immédiate de vos documents."
+        cash_services:
+          title: "Services Espèces"
+          description: "Dépôts, retraits et change de devises"
+          details: "Distributeurs automatiques 24/7, guichets pour grosses coupures, service de change pour devises étrangères."
+        safe_deposit:
+          title: "Coffres-Forts"
+          description: "Location de coffres-forts sécurisés"
+          details: "Différentes tailles disponibles, accès sécurisé avec double authentification, assurance incluse."
+        business_services:
+          title: "Services Entreprises"
+          description: "Solutions dédiées aux professionnels"
+          details: "Accompagnement spécialisé pour créateurs d'entreprise, financement professionnel, solutions de paiement."
+        digital_assistance:
+          title: "Aide Numérique"
+          description: "Formation aux services en ligne et mobiles"
+          details: "Ateliers gratuits pour maîtriser l'application mobile et les services en ligne, assistance personnalisée."
+          
+    branches:
+      title: "Nos Principales Agences"
+      description: "Retrouvez les informations de nos agences principales"
+      
+      brussels_center:
+        name: "%company_name% Bruxelles Centre"
+        address: "Place Eugène Flagey 25, 1050 Bruxelles"
+        phone: "02 123 45 10"
+        hours:
+          monday_friday: "Lun-Ven : 9h00 - 17h00"
+          saturday: "Sam : 9h00 - 12h00"
+          sunday: "Dim : Fermé"
+        services: "Tous services • Coffres-forts • Conseil investissement"
+        parking: "Parking client gratuit 2h"
+        
+      antwerp:
+        name: "%company_name% Anvers"
+        address: "Meir 78, 2000 Anvers"
+        phone: "03 234 56 20"
+        hours:
+          monday_friday: "Lun-Ven : 9h00 - 17h00"
+          saturday: "Sam : 9h00 - 12h00"
+          sunday: "Dim : Fermé"
+        services: "Tous services • Services entreprises • Formation numérique"
+        parking: "Parking payant à proximité"
+        
+      ghent:
+        name: "%company_name% Gand"
+        address: "Korenlei 12, 9000 Gand"
+        phone: "09 345 67 30"
+        hours:
+          monday_friday: "Lun-Ven : 9h00 - 17h00"
+          saturday: "Sam : 9h00 - 12h00"
+          sunday: "Dim : Fermé"
+        services: "Tous services • Conseil patrimoine • Change devises"
+        parking: "Zone piétonne - Parking Vrijdagmarkt"
+        
+      liege:
+        name: "%company_name% Liège"
+        address: "Place Saint-Lambert 41, 4000 Liège"
+        phone: "04 456 78 40"
+        hours:
+          monday_friday: "Lun-Ven : 9h00 - 17h00"
+          saturday: "Sam : 9h00 - 12h00"
+          sunday: "Dim : Fermé"
+        services: "Tous services • Crédits spécialisés • Assurances"
+        parking: "Parking Opéra à 2 min"
+        
+    appointment:
+      title: "Prendre Rendez-vous"
+      description: "Réservez un créneau avec nos conseillers"
+      online_booking: "Réservation en Ligne"
+      phone_booking: "Par Téléphone : Téléphone"
+      reasons:
+        - "Conseil en investissement"
+        - "Demande de crédit"
+        - "Ouverture de compte"
+        - "Assurance et prévoyance"
+        - "Services entreprise"
+        - "Formation numérique"
+        
+    accessibility:
+      title: "Accessibilité"
+      description: "Nos agences sont accessibles à tous"
+      features:
+        wheelchair: "Accès handicapés dans toutes nos agences"
+        hearing: "Boucles magnétiques pour malentendants"
+        visual: "Guidage tactile et signalétique en braille"
+        assistance: "Personnel formé à l'accueil des personnes en situation de handicap"
+        
+    contact:
+      title: "Contact et Urgences"
+      description: "Besoin d'aide ? Contactez-nous"
+      emergency_line: "Ligne d'Urgence 24/7 : Téléphone"
+      customer_service: "Service Client : Téléphone"
+      email: "Email"
+      chat: "Chat en ligne disponible sur notre site"

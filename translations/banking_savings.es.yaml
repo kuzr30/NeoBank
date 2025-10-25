@@ -1,0 +1,64 @@
+banking_savings:
+  header:
+    title: "Ahorro e Inversiones"
+    subtitle: "Gestione sus productos de ahorro"
+    last_update: "Última actualización:"
+    total_savings: "Ahorro total"
+  
+  products:
+    livret_a: "Cuenta de Ahorro A"
+    pea: "Plan de Ahorro en Acciones"
+    term_deposit: "Depósito a Plazo"
+  
+  labels:
+    ceiling: "Límite máximo"
+    available: "Disponible"
+    interests_2025: "Intereses 2025"
+    plus_minus_value: "+/- valor"
+    performance_ytd: "Rendimiento YTD"
+    maturity: "Vencimiento"
+    remaining_duration: "Duración restante"
+    expected_interests: "Intereses previstos"
+    days: "días"
+  
+  actions:
+    fund: "Depositar"
+    withdraw: "Retirar"
+    invest: "Invertir"
+    arbitrate: "Arbitrar"
+    blocked: "Bloqueado"
+    details: "Detalles"
+  
+  opportunities:
+    section_title: "Oportunidades de ahorro"
+    section_subtitle: "Descubra nuestros productos para optimizar su ahorro"
+    pel_title: "Plan de Ahorro Vivienda"
+    pel_description: "Prepare su proyecto inmobiliario con una tasa garantizada"
+    pel_rate: "2,20% + prima del Estado"
+    youth_savings_title: "Cuenta Ahorro Joven"
+    youth_savings_description: "Para jóvenes de 12-25 años, una cuenta con condiciones ventajosas"
+    youth_savings_rate: "3,50% netos de impuestos"
+    life_insurance_title: "Seguro de Vida"
+    life_insurance_description: "Construya su patrimonio con nuestro contrato multifondo"
+    life_insurance_rate: "Rendimiento atractivo"
+    discover_button: "Descubrir"
+  
+  movements:
+    section_title: "Últimos movimientos"
+    table_headers:
+      date: "Fecha"
+      product: "Producto"
+      operation: "Operación"
+      amount: "Monto"
+      new_balance: "Nuevo saldo"
+      actions: "Acciones"
+    operations:
+      transfer_from_checking: "Transferencia desde Cuenta Corriente"
+      interest_capitalization: "Capitalización de intereses"
+      stock_purchase: "Compra de acciones LVMH"
+      livret_a_interests: "Intereses Cuenta Ahorro A"
+  
+  pagination:
+    previous: "Anterior"
+    next: "Siguiente"
+    page_info: "Página %current% de %total% (%count% movimientos)"

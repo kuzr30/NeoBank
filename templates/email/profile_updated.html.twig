@@ -1,0 +1,49 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_profile_updated.title', {}, 'email_profile_updated') }} - {{ parent() }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('email_profile_updated.content.page_title', {}, 'email_profile_updated') }}</h2>
+    
+    <p class="content-text">
+        {{ tp('email_profile_updated.content.greeting', {firstName: user.firstName, lastName: user.lastName}, 'email_profile_updated') }}
+    </p>
+    
+    <p class="content-text">
+        {{ tp('email_profile_updated.content.notification', {}, 'email_profile_updated') }}
+    </p>
+    
+    {% if changes|length > 0 %}
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_profile_updated.content.changes_section.title', {}, 'email_profile_updated') }}</h3>
+        <ul style="margin-bottom: 0; padding-left: 20px;">
+            {% for change in changes %}
+                <li>{{ change }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ tp('email_profile_updated.content.security_info.title', {}, 'email_profile_updated') }}</h3>
+        <p style="margin-bottom: 0;">
+            {{ tp('email_profile_updated.content.security_info.warning', {}, 'email_profile_updated') }}
+        </p>
+    </div>
+    
+    <p class="content-text">
+        {{ tp('email_profile_updated.content.help_text', {}, 'email_profile_updated') }}
+    </p>
+    
+    <div class="btn-container">
+        <a href="{{ url('profile_index') }}" style="display: inline-block; background-color: #1976d2; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 500;">{{ tp('email_profile_updated.content.view_profile_button', {}, 'email_profile_updated') }}</a>
+    </div>
+    
+    <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #e0e0e0; font-size: 12px; color: #666;">
+        {{ tp('email_profile_updated.content.modification_date', {updateDate: updateDate|date('d/m/Y à H:i:s')}, 'email_profile_updated') }}
+    </div>
+    
+    <p class="content-text" style="margin-bottom: 0;">
+        {{ tp('email_profile_updated.content.footer', {}, 'email_profile_updated')|raw }}
+    </p>
+{% endblock %}

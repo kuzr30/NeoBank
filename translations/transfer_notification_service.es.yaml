@@ -1,0 +1,28 @@
+transfer_notification_service:
+  email_subjects:
+    transfer_created: "Transferencia creada - En espera de validación"
+    code_added: "Nuevo código de validación disponible"
+    code_validated: "Código de validación confirmado"
+    ready_for_execution: "Transferencia lista para ser ejecutada"
+    transfer_executed: "Transferencia ejecutada exitosamente"
+    transfer_rejected: "Transferencia rechazada"
+    transfer_expired: "Transferencia expirada"
+    transfer_cancelled: "Transferencia cancelada"
+    user_blocked: "Cuenta temporalmente bloqueada"
+    code_expired: "Código de validación expirado"
+    
+  from_name: "%company_name% - Servicio de Transferencias"
+    
+  log_messages:
+    transfer_creation_sent: "Notificación de creación de transferencia enviada"
+    transfer_creation_failed: "Fallo en el envío de la notificación de creación de transferencia"
+    code_added_sent: "Notificación de adición de código enviada"
+    code_added_failed: "Fallo en el envío de la notificación de adición de código"
+    transfer_executed_sent: "Notificación de ejecución de transferencia enviada"
+    transfer_executed_failed: "Fallo en el envío de la notificación de ejecución"
+    transfer_rejected_sent: "Notificación de rechazo de transferencia enviada"
+    transfer_rejected_failed: "Fallo en el envío de la notificación de rechazo"
+    transfer_expired_sent: "Notificación de expiración de transferencia enviada"
+    transfer_expired_failed: "Fallo en el envío de la notificación de expiración"
+    transfer_cancelled_sent: "Notificación de cancelación de transferencia enviada"
+    transfer_cancelled_failed: "Fallo en el envío de la notificación de cancelación"

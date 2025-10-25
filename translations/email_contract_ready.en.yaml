@@ -1,0 +1,52 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_contract_ready.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+email_contract_ready:
+  title: "Your credit contract is ready - Signature required"
+  content:
+    page_title: "Your personalized contract is ready"
+    greeting: "Hello,"
+    contract_finalized:
+      title: "Contract finalized by our experts"
+      description: "Excellent news! Your credit contract has been finalized by our legal team and is now ready for signature. Our advisors have carefully prepared your file."
+    contract_details:
+      title: "Contract details"
+      contract_number: "Contract number: {contractNumber}"
+      document_info: "Document prepared by our legal specialists in secure PDF format"
+    signature_process:
+      title: "Signature process"
+      step_1:
+        title: "1. Download"
+        description: "Retrieve the contract attached to this email"
+      step_2:
+        title: "2. Thorough reading"
+        description: "Carefully study all clauses and contractual conditions"
+      step_3:
+        title: "3. Complete signature"
+        description: "Sign the last page and initial each page of the document"
+      step_4:
+        title: "4. Secure return"
+        description: "Return the contract to us by email, mail or agency deposit"
+    return_methods:
+      title: "Methods for returning the signed contract"
+      email_secure: "Secure email"
+      email_description: "Professional quality scan or photo"
+      postal_mail: "Postal mail"
+      postal_description: "Registered mail to our services"
+      agency_deposit: "Agency deposit"
+      agency_description: "Direct delivery to our offices"
+    express_processing:
+      title: "Express processing"
+      processing_time: "Processing time: 24-48 business hours"
+      processing_description: "Upon receipt of your signed contract, our team will proceed with final validation and our accounting service will transfer the funds directly to your bank account."
+    support_text: "For any questions regarding your contract or the signature process, our specialized advisors remain at your disposal."
+    footer: "%company_name% - Credit Department<br>Contract ready to sign notification"
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Sending contract ready notification"
+    success: "Contract ready notification sent successfully"
+    error: "Error sending contract ready notification"
+    send_failed: "Failed to send contract ready notification"

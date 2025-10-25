@@ -1,0 +1,66 @@
+help_center_complaints:
+  # Breadcrumb
+  breadcrumb:
+    home: "Accueil"
+    support: "Support"
+    complaints: "Réclamations"
+  
+  # Hero section
+  title: "Réclamations"
+  subtitle: "Votre satisfaction est notre priorité. Nous traitons chaque réclamation avec sérieux et transparence."
+  
+  # Process section
+  process:
+    title: "Processus de Réclamation"
+    subtitle: "Comment nous traitons vos réclamations"
+    
+    step1:
+      title: "Dépôt de la réclamation"
+      description: "Soumettez votre réclamation via le formulaire en ligne ou directement en agence"
+      
+    step2:
+      title: "Accusé de réception"
+      description: "Confirmation sous 2 jours ouvrables avec attribution d'un numéro de suivi"
+      
+    step3:
+      title: "Analyse et traitement"
+      description: "Examen approfondi de votre dossier par nos spécialistes qualifiés"
+      
+    step4:
+      title: "Résolution et réponse"
+      description: "Réponse détaillée et solution proposée sous 15 jours ouvrables maximum"
+  
+  # Contact section
+  contact:
+    title: "Nous Contacter"
+    subtitle: "Plusieurs moyens pour nous faire part de vos préoccupations"
+    
+    phone:
+      title: "Par Téléphone"
+      hours: "Du lundi au vendredi de 8h à 18h"
+      
+    email:
+      title: "Par Email"
+      response_time: "Réponse sous 48h"
+      
+    branch:
+      title: "En Agence"
+      address: "Adresse"
+      hours: "Du lundi au vendredi de 9h à 17h"
+  
+  # Tracking section
+  tracking:
+    title: "Suivi de votre réclamation"
+    subtitle: "Entrez votre numéro de référence pour connaître l'état d'avancement"
+    placeholder: "Ex: REF-2024-123456"
+    search: "Rechercher"
+    searching: "Recherche en cours..."
+    
+    status:
+      received: "Réclamation reçue"
+      in_progress: "En cours de traitement"
+      resolved: "Résolue"
+      
+    error:
+      empty: "Veuillez saisir un numéro de suivi"
+      invalid: "Le numéro de suivi doit contenir au moins 5 caractères"

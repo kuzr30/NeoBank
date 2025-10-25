@@ -1,0 +1,45 @@
+legal_notices:
+  page_title: "Mentions Légales"
+  page_description: "Informations légales et obligations réglementaires de %company_name%"
+
+  company_info:
+    title: "Informations sur l'entreprise"
+    content: |
+      <strong>Raison sociale :</strong> %company_name%<br>
+      <strong>Adresse :</strong> %company_address%<br>
+      <strong>Téléphone :</strong> %company_phone%<br>
+      <strong>Email :</strong> %company_email%<br>
+      <strong>SIRET :</strong> %company_siret%<br>
+      <strong>Site web :</strong> %company_website%
+
+  hosting:
+    title: "Hébergement"
+    content: |
+      Ce site est hébergé par <strong>%hosting_provider%</strong><br>
+      Adresse : %hosting_address%<br>
+      Site web : %hosting_website%
+
+  intellectual_property:
+    title: "Propriété intellectuelle"
+    content: |
+      L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle.
+      Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
+
+  liability:
+    title: "Responsabilité"
+    content: |
+      Les informations contenues sur ce site sont aussi précises que possible et le site remis à jour à différentes périodes de l'année.
+      Cependant, des erreurs ou omissions peuvent survenir. L'internaute devra donc s'assurer de l'exactitude des informations auprès de %company_name%,
+      et signaler toutes modifications du site qu'il jugerait utile.
+
+  gdpr:
+    title: "Protection des données personnelles"
+    content: |
+      En application de la loi n°78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés (RGPD),
+      les utilisateurs disposent d'un droit d'accès, de rectification, de suppression et d'opposition de leurs données personnelles.
+      Ce droit s'exerce auprès de %company_name% à l'adresse %company_email%.
+
+  contact:
+    title: "Contact"
+    content: |
+      Pour toute question concernant ces mentions légales, vous pouvez nous contacter à l'adresse %email%.

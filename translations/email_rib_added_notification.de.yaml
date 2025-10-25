@@ -1,0 +1,32 @@
+email_rib_added_notification:
+  title: "Neue Bankverbindung hinzugefügt"
+  content:
+    page_title: "Neue Bankverbindung zu Ihrem Konto hinzugefügt"
+    greeting: "Hallo {firstName},"
+    confirmation: "Wir bestätigen, dass eine neue Bankverbindung erfolgreich zu Ihrem %company_name%-Konto hinzugefügt wurde."
+    details_section:
+      title: "Details der hinzugefügten Bankverbindung"
+      account_name: "Kontoname:"
+      bank_name: "Bank:"
+      iban: "IBAN:"
+      added_date: "Hinzufügungsdatum:"
+    info_section:
+      title: "Wichtige Information"
+      description: "Ihre neue Bankverbindung ist jetzt in Ihrem Kundenbereich verfügbar und kann für Ihre Überweisungen und Bankgeschäfte verwendet werden."
+    security_section:
+      title: "Sicherheit"
+      warning: "Falls Sie diese Hinzufügung nicht veranlasst haben, kontaktieren Sie umgehend unseren Kundenservice:"
+      phone_label: "Telefon:"
+      email_label: "E-Mail:"
+    buttons:
+      view_ribs: "Meine Bankverbindungen anzeigen"
+      access_account: "Zu meinem Konto"
+    footer_text: "Diese Sicherheitsbenachrichtigung wird Ihnen automatisch gesendet, um Sie über Änderungen an Ihrem Konto zu informieren."
+    help_text: "Falls Sie Fragen haben, zögern Sie nicht, uns zu kontaktieren."
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Versendung der Bankverbindungs-Hinzufügungs-Benachrichtigung"
+    success: "Bankverbindungs-Hinzufügungs-Benachrichtigung erfolgreich versendet"
+    error: "Fehler beim Versenden der Bankverbindungs-Hinzufügungs-Benachrichtigung"
+    send_failed: "Versenden der Bankverbindungs-Hinzufügungs-Benachrichtigung fehlgeschlagen"

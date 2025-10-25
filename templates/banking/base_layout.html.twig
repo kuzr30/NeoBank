@@ -1,0 +1,405 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% if content_template is defined and content_template %}{{ parent() }}{% else %}Banking - SEDEF BANK{% endif %}{% endblock %}
+
+{% block body %}
+<div class="banking" data-controller="banking-tabs" data-banking-tabs-active-tab-value="{{ activeTab|default('comptes') }}" data-banking-tabs-base-url-value="/banking">
+    <!-- Top Navigation Bar -->
+    <nav class="banking__navbar">
+        <div class="banking__navbar-container">
+            <div class="banking__nav-left">
+                <div class="banking__user-info">
+                    <div class="banking__user-avatar">{{ user.firstName|first|upper }}{{ user.lastName|first|upper }}</div>
+                    <div class="banking__user-details">
+                        <span class="banking__user-name">{{ user.firstName }} {{ user.lastName }}</span>
+                        <span class="banking__user-status">{{ tp('banking_base_layout.user.status', [], 'banking_base_layout') }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="banking__nav-center">
+                <div class="banking__nav-tabs">
+                    <a href="{{ path('banking_comptes') }}" class="banking__nav-tab {% if activeTab|default('comptes') == 'comptes' %}banking__nav-tab--active{% endif %}">{{ tp('banking_base_layout.navigation.tabs.accounts', [], 'banking_base_layout') }}</a>
+                    <a href="{{ path('app_banking_card_index') }}" class="banking__nav-tab {% if activeTab|default('') == 'cartes' %}banking__nav-tab--active{% endif %}">{{ tp('banking_base_layout.navigation.tabs.cards', [], 'banking_base_layout') }}</a>
+                    <a href="{{ path('banking_virements') }}" class="banking__nav-tab {% if activeTab|default('') == 'virements' %}banking__nav-tab--active{% endif %}">{{ tp('banking_base_layout.navigation.tabs.transfers', [], 'banking_base_layout') }}</a>
+                    <a href="{{ path('banking_ribs_index') }}" class="banking__nav-tab {% if activeTab|default('') == 'ribs' or activeTab|default('') == 'rib_new' or activeTab|default('') == 'rib_show' %}banking__nav-tab--active{% endif %}">{{ tp('banking_base_layout.navigation.tabs.rib_iban', [], 'banking_base_layout') }}</a>
+                    <a href="{{ path('banking_credits') }}" class="banking__nav-tab {% if activeTab|default('') == 'credits' %}banking__nav-tab--active{% endif %}">{{ tp('banking_base_layout.navigation.tabs.credits', [], 'banking_base_layout') }}</a>
+                    <a href="{{ path('banking_assurances') }}" class="banking__nav-tab {% if activeTab|default('') == 'assurances' %}banking__nav-tab--active{% endif %}">{{ tp('banking_base_layout.navigation.tabs.insurance', [], 'banking_base_layout') }}</a>
+                </div>
+            </div>
+            <div class="banking__nav-right">
+                <div class="banking__nav-actions">
+                    <button class="banking__nav-btn" title="{{ tp('banking_base_layout.user.notifications', [], 'banking_base_layout') }}">
+                        {{ ux_icon('heroicons:bell', {'class': 'banking__nav-icon'}) }}
+                        <span class="banking__nav-badge">3</span>
+                    </button>
+                    <div class="banking__nav-divider"></div>
+                    <div class="banking__nav-profile">
+                        <button class="banking__nav-btn banking__nav-btn--profile" title="{{ tp('banking_base_layout.user.profile_menu', [], 'banking_base_layout') }}">
+                            {{ ux_icon('heroicons:user-circle', {'class': 'banking__nav-icon'}) }}
+                        </button>
+                        <div class="banking__nav-dropdown">
+                            <a href="{{ path('profile_index') }}" class="banking__nav-dropdown-item">
+                                {{ ux_icon('heroicons:user', {'class': 'banking__nav-dropdown-icon'}) }}
+                                {{ tp('banking_base_layout.profile_menu.my_profile', [], 'banking_base_layout') }}
+                            </a>
+                            <a href="{{ path('profile_preferences') }}" class="banking__nav-dropdown-item">
+                                {{ ux_icon('heroicons:cog-6-tooth', {'class': 'banking__nav-dropdown-icon'}) }}
+                                {{ tp('banking_base_layout.profile_menu.preferences', [], 'banking_base_layout') }}
+                            </a>
+                            <a href="{{ path('profile_security') }}" class="banking__nav-dropdown-item">
+                                {{ ux_icon('heroicons:shield-check', {'class': 'banking__nav-dropdown-icon'}) }}
+                                {{ tp('banking_base_layout.profile_menu.security', [], 'banking_base_layout') }}
+                            </a>
+                            <div class="banking__nav-dropdown-divider"></div>
+                            <a href="{{ path('app_logout') }}" class="banking__nav-dropdown-item banking__nav-dropdown-item--danger">
+                                {{ ux_icon('heroicons:arrow-right-on-rectangle', {'class': 'banking__nav-dropdown-icon'}) }}
+                                {{ tp('banking_base_layout.profile_menu.logout', [], 'banking_base_layout') }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="banking__main">
+        {% block banking_content %}
+            {% if content_template is defined and content_template %}
+                {% include content_template %}
+            {% endif %}
+        {% endblock %}
+    </main>
+</div>
+
+<style>
+/* Navigation Styles */
+.banking__navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.banking__navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+}
+
+.banking__nav-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.banking__user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.banking__user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.banking__user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.banking__user-name {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.banking__user-status {
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+.banking__nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.banking__nav-tabs {
+    display: flex;
+    gap: 8px;
+}
+
+.banking__nav-tab {
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: #6c757d;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.banking__nav-tab:hover {
+    color: #495057;
+    background: #f8f9fa;
+}
+
+.banking__nav-tab--active {
+    color: #667eea;
+    background: #f0f2ff;
+    font-weight: 600;
+}
+
+.banking__nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.banking__nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.banking__nav-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.banking__nav-btn:hover {
+    background: #f8f9fa;
+}
+
+.banking__nav-icon {
+    width: 20px;
+    height: 20px;
+    color: #6c757d;
+}
+
+.banking__nav-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: #e74c3c;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banking__nav-divider {
+    width: 1px;
+    height: 24px;
+    background: #e9ecef;
+    margin: 0 8px;
+}
+
+.banking__nav-profile {
+    position: relative;
+}
+
+.banking__nav-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 8px 0;
+    min-width: 200px;
+    display: none;
+    z-index: 1000;
+}
+
+.banking__nav-profile:hover .banking__nav-dropdown {
+    display: block;
+}
+
+.banking__nav-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: #495057;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.banking__nav-dropdown-item:hover {
+    background: #f8f9fa;
+}
+
+.banking__nav-dropdown-item--danger {
+    color: #e74c3c;
+}
+
+.banking__nav-dropdown-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.banking__nav-dropdown-divider {
+    height: 1px;
+    background: #e9ecef;
+    margin: 8px 0;
+}
+
+.banking__main {
+    min-height: calc(100vh - 64px);
+    background: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+    .banking__main {
+        min-height: calc(100vh - 120px); /* Hauteur ajustée pour navigation en colonne */
+    }
+}
+
+@media (max-width: 480px) {
+    .banking__main {
+        min-height: calc(100vh - 110px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .banking__navbar-container {
+        padding: 0 20px;
+    }
+    
+    .banking__nav-tabs {
+        gap: 8px;
+    }
+    
+    .banking__nav-tab {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banking__navbar-container {
+        padding: 0 16px;
+        flex-direction: column;
+        gap: 12px;
+        height: auto;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    
+    .banking__nav-left {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .banking__nav-center {
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    .banking__nav-tabs {
+        gap: 4px;
+        min-width: max-content;
+        padding: 0 4px;
+    }
+    
+    .banking__nav-tab {
+        padding: 8px 12px;
+        font-size: 13px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    
+    .banking__nav-right {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .banking__user-details {
+        display: none;
+    }
+    
+    .banking__user-avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banking__navbar-container {
+        padding: 0 12px;
+        gap: 8px;
+    }
+    
+    .banking__nav-tab {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+    
+    .banking__user-name {
+        font-size: 13px;
+    }
+    
+    .banking__nav-btn {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .banking__nav-icon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .banking__nav-badge {
+        width: 14px;
+        height: 14px;
+        font-size: 9px;
+        top: 4px;
+        right: 4px;
+    }
+    
+    .banking__nav-dropdown {
+        min-width: 180px;
+        right: -10px;
+    }
+    
+    .banking__nav-dropdown-item {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+}
+</style>
+{% endblock %}

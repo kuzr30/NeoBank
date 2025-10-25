@@ -1,0 +1,41 @@
+email_credit_application_confirmation:
+  title: "Confirmation de votre demande de crédit"
+  
+  content:
+    page_title: "Demande de crédit confirmée"
+    subtitle: "Votre demande a été reçue et est en cours de traitement"
+    
+    greeting: "Bonjour %customerName%,"
+    introduction: "Nous avons bien reçu votre demande de crédit et nous vous remercions de nous avoir fait confiance. Votre dossier est maintenant en cours d'examen par nos conseillers spécialisés."
+    
+    summary:
+      title: "Récapitulatif de votre demande"
+      request_number: "Numéro de demande :"
+      amount_requested: "Montant demandé :"
+      request_date: "Date de demande :"
+      status: "Statut :"
+      status_value: "En cours d'examen"
+    
+    next_steps:
+      title: "Prochaines étapes"
+      step1: "Examen de votre dossier par nos conseillers (24-48h)"
+      step2: "Vérification des informations et documents"
+      step3: "Décision de financement sous 3-5 jours ouvrés"
+      step4: "Notification par email et/ou téléphone"
+    
+    track_button: "Consulter ma demande"
+    
+    help_section:
+      title: "Besoin d'aide ?"
+      intro: "Notre équipe de conseillers est à votre disposition pour toute question :"
+      phone: "<strong>Téléphone :</strong> %company_phone% (Lun-Ven 9h-18h)"
+      email: "<strong>Email :</strong> credit@sedef.fr"
+      chat: "<strong>Chat en ligne :</strong> Disponible sur notre site web"
+    
+    important_note: "<strong>Important :</strong> Conservez cet email comme preuve de votre demande. Vous pouvez suivre l'avancement de votre dossier à tout moment en cliquant sur le lien ci-dessus."
+    disclaimer: "Cet email a été envoyé automatiquement, merci de ne pas y répondre directement."
+
+  logs:
+    credit_application_confirmed: "Confirmation de demande de crédit envoyée à %email%"
+    credit_application_failed: "Erreur lors de l'envoi de confirmation de crédit à %email%"
+    credit_application_submitted: "Demande de crédit #%applicationId% soumise par %customerName%"

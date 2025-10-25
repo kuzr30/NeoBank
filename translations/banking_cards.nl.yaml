@@ -1,0 +1,357 @@
+banking_cards:
+  # Management section
+  management:
+    # Header section
+    header:
+      title: "Mijn Bankkaarten"
+      subtitle: "Beheer van uw kaarten"
+      last_update: "Laatste update"
+      request_card: "Kaart aanvragen"
+
+    # Card details
+    cards:
+      card_active: "Kaart actief"
+      checking_account: "Betaalrekening"
+      visa_classic: "Visa Classic Kaart"
+      mastercard_gold: "Mastercard Gold"
+
+    # Card actions
+    actions:
+      view_details: "Details bekijken"
+      settings: "Instellingen"
+      block_card: "Kaart blokkeren"
+
+    # Recent transactions
+    transactions:
+      title: "Laatste transacties per kaart"
+      all_cards: "Alle kaarten"
+      
+    # Transaction table
+    table:
+      date: "Datum"
+      card: "Kaart"
+      merchant: "Handelaar"
+      amount: "Bedrag"
+      status: "Status"
+      actions: "Acties"
+
+    # Transaction details
+    merchant:
+      online_purchase: "Online aankoop"
+
+    # Status
+    status:
+      validated: "Gevalideerd"
+      pending: "In behandeling"
+      cancelled: "Geannuleerd"
+
+    # Pagination
+    pagination:
+      previous: "Vorige"
+      next: "Volgende"
+      page_info: "Pagina %d van %d (%d transacties)"
+
+  # Meta tags
+  meta:
+    credit_card:
+      title: "%company_name% Creditcard"
+      description: "Profiteer van onze creditcards met exclusieve voordelen, loyaliteitsprogramma's en inbegrepen verzekeringen."
+  
+  # Hero sectie
+  hero:
+    title: "Creditcard"
+    subtitle: "Ontdek onze premium creditcards met exclusieve voordelen. Cashback tot 5%, gratis reizen, verzekeringen inbegrepen en nog veel meer."
+    
+    features:
+      cashback:
+        title: "Cashback tot 5%"
+      insurance:
+        title: "Reisverzekeringen inbegrepen"
+      worldwide:
+        title: "Wereldwijd geaccepteerd"
+    
+    actions:
+      choose_card: "Kies mijn kaart"
+      apply: "Aanvraag indienen"
+    
+    card:
+      type: "PLATINUM"
+      number: "**** **** **** 8742"
+      holder_label: "HOUDER"
+      holder_name: "ELVAN METER"
+      expiry_label: "VERV."
+      expiry_date: "12/28"
+    
+    stats:
+      clients: "500K+"
+      clients_label: "Tevreden klanten"
+      rating: "4.9★"
+      rating_label: "Gemiddelde waardering"
+      fees: "€0"
+      fees_label: "Kosten eerste jaar"
+
+  # Kaarttypen sectie
+  card_types:
+    title: "Kies de kaart die bij u past"
+    subtitle: "Drie kaartniveaus ontworpen om aan te sluiten bij uw levensstijl en financiële behoeften. Elke kaart biedt exclusieve voordelen."
+    
+    classic:
+      badge: "Ideaal om te beginnen"
+      name: "%company_name% Classic"
+      price: "€0"
+      period: "per maand"
+      card_type: "Classic"
+      card_number: "•••• •••• •••• 1234"
+      features:
+        - "1% cashback op al uw aankopen"
+        - "Aankoopverzekering inbegrepen"
+        - "Contactloos betalen"
+        - "Beheer via mobiele app"
+      cta: "Deze kaart aanvragen"
+    
+    gold:
+      badge: "Meest populair"
+      name: "%company_name% Gold"
+      price: "€4"
+      period: "per maand"
+      card_type: "Gold"
+      card_number: "•••• •••• •••• 5678"
+      features:
+        - "3% cashback op al uw aankopen"
+        - "Internationale reisverzekering"
+        - "Toegang tot VIP lounges luchthavens"
+        - "24/7 conciërgeservice"
+        - "Gratis opnames wereldwijd"
+      cta: "Deze kaart aanvragen"
+    
+    platinum:
+      badge: "Exclusief premium"
+      name: "%company_name% Platinum"
+      price: "€12"
+      period: "per maand"
+      card_type: "Platinum"
+      card_number: "•••• •••• •••• 9012"
+      features:
+        - "5% cashback op al uw aankopen"
+        - "Premium wereldwijde verzekering"
+        - "Onbeperkte toegang VIP lounges"
+        - "Premium 24/7 conciërgeservice"
+        - "Toegewijde accountmanager"
+        - "Onbeperkt plafond"
+      cta: "Deze kaart aanvragen"
+    
+    comparison:
+      title: "Vergelijkingstabel"
+      
+      table:
+        headers:
+          features: "Voordelen"
+          classic: "Classic"
+          gold: "Gold"
+          platinum: "Platinum"
+        
+        rows:
+          cashback_rate:
+            label: "Cashback percentage"
+            classic: "1%"
+            gold: "3%"
+            platinum: "5%"
+          
+          travel_insurance:
+            label: "Reisverzekering"
+            gold: true
+            platinum: true
+          
+          vip_lounges:
+            label: "VIP lounges"
+            gold: "2 toegangen/jaar"
+            platinum: "Onbeperkt"
+          
+          concierge:
+            label: "Conciërgeservice"
+            gold: true
+            platinum: "Premium"
+          
+          monthly_limit:
+            label: "Maandelijks plafond"
+            classic: "€5.000"
+            gold: "€15.000"
+            platinum: "Onbeperkt"
+
+  # Voordelen sectie
+  benefits:
+    title: "Exclusieve voordelen en diensten"
+    subtitle: "Geniet van uitzonderlijke voordelen ontworpen om uw dagelijks leven te verrijken en u te begeleiden in al uw projecten."
+    
+    cashback:
+      title: "Cashback op al uw aankopen"
+      description: "Verdien tot 5% cashback op al uw dagelijkse aankopen. Hoe meer u uw kaart gebruikt, hoe meer u bespaart!"
+      stats:
+        average_yearly: "€2.847"
+        average_yearly_label: "Gemiddelde cashback/jaar"
+        payment_time: "15 dagen"
+        payment_time_label: "Cashback uitbetaling"
+      cta: "Mijn kaart aanvragen"
+    
+    features:
+      insurance:
+        title: "Verzekeringen inbegrepen"
+        description: "Beschermd tot €500.000 zonder extra formaliteiten."
+      
+      vip_lounges:
+        title: "VIP lounges luchthavens"
+        description: "Gratis toegang tot meer dan 1000 VIP lounges wereldwijd."
+      
+      concierge:
+        title: "24/7 conciërgeservice"
+        description: "Premium service 24/7 beschikbaar voor al uw behoeften."
+      
+      worldwide_acceptance:
+        title: "0% commissie in het buitenland"
+        description: "Betaal overal zonder commissie met de beste tarieven."
+      
+      security:
+        title: "Versterkte beveiliging"
+        description: "Onmiddellijke meldingen en anti-fraude bescherming."
+      
+      exclusive_offers:
+        title: "Exclusieve aanbiedingen"
+        description: "Kortingen bij uw favoriete premium partners."
+
+  # Applicatie/Klantentoegang sectie
+  application:
+    title: "Toegang tot uw klantportaal"
+    subtitle: "Beheer uw kaarten, bekijk uw transacties en doe uw aanvragen direct online"
+    
+    features:
+      new_card:
+        title: "Nieuwe kaart aanvragen"
+        description: "Bestel uw Platinum, Gold of Classic kaart direct vanuit uw persoonlijke ruimte"
+      
+      manage_cards:
+        title: "Uw kaarten beheren"
+        description: "Activeer, blokkeer, configureer limieten en beheer alle instellingen van uw kaarten"
+      
+      track_expenses:
+        title: "Uitgaven volgen"
+        description: "Bekijk uw transacties in real-time en analyseer uw bestedingsgewoonten"
+      
+      notifications:
+        title: "Gepersonaliseerde meldingen"
+        description: "Ontvang waarschuwingen voor elke transactie en blijf op de hoogte van de activiteit van uw kaarten"
+    
+    actions:
+      login: "Inloggen"
+      register: "Account aanmaken"
+    
+    demo:
+      title: "Interface preview"
+      subtitle: "Ontdek de eenvoud van ons klantportaal"
+      nav:
+        my_cards: "Mijn kaarten"
+        transactions: "Transacties"
+        settings: "Instellingen"
+      card_status:
+        active: "Actief"
+        blocked: "Geblokkeerd"
+        expired: "Verlopen"
+      card_actions:
+        block: "Blokkeren"
+        limits: "Limieten"
+        details: "Details"
+      stats:
+        monthly_spending: "Uitgaven deze maand"
+        monthly_spending_value: "€2.847,50"
+        cashback_earned: "Verdiende cashback"
+        cashback_earned_value: "€142,38"
+    
+    help:
+      title: "Hulp nodig?"
+      description: "Ons supportteam is beschikbaar om u te begeleiden bij het gebruik van uw klantportaal."
+      contact:
+        chat_label: "Live chat"
+        chat_hours: "24/7"
+        phone_label: "Telefonische ondersteuning"
+        phone_number: "01 47 12 34 56"
+      help_center: "Helpcentrum"
+    
+    security:
+      title: "Gegarandeerde veiligheid"
+      features:
+        ssl: "SSL 256-bits versleuteling"
+        two_factor: "Twee-factor authenticatie"
+        monitoring: "24/7 monitoring"
+        gdpr: "GDPR beschermde gegevens"
+
+  # Aanvraag sectie
+  eligibility:
+    title: "Geschiktheidsvoorwaarden"
+    subtitle: "Controleer of u voldoet aan de voorwaarden om uw creditcard te krijgen"
+    
+    requirements:
+      age: "Minimaal 18 jaar oud zijn"
+      residence: "Wonen in metropolitaan Frankrijk"
+      income: "Reguliere inkomsten aantonen"
+      bank_account: "Een %company_name% bankrekening hebben"
+    
+    documents:
+      title: "Benodigde documenten"
+      id_card: "Geldig identiteitsbewijs"
+      income_proof: "Inkomstenbewijzen (laatste 3 maanden)"
+      address_proof: "Recent adresbewijs"
+      bank_statement: "Bankafschriften (laatste 3 maanden)"
+    
+    process:
+      title: "Aanvraagproces"
+      steps:
+        step1:
+          title: "Formulier invullen"
+          description: "Voltooi uw online aanvraag in 5 minuten"
+          duration: "5 min"
+        
+        step2:
+          title: "Documentverificatie"
+          description: "Onze teams verifiëren uw bewijsstukken"
+          duration: "24-48u"
+        
+        step3:
+          title: "Kredietbeslissing"
+          description: "Onmiddellijk antwoord of binnen 2 werkdagen"
+          duration: "Onmiddellijk"
+        
+        step4:
+          title: "Kaart ontvangen"
+          description: "Veilige levering aan uw huis"
+          duration: "3-5 dagen"
+    
+    cta: "Mijn aanvraag starten"
+
+  # FAQ sectie
+  faq:
+    title: "Veelgestelde vragen"
+    subtitle: "Vind snel antwoorden op uw vragen over onze creditcards"
+    
+    questions:
+      q1:
+        question: "Hoe werkt cashback?"
+        answer: "Cashback wordt automatisch elke 15e van de maand op uw rekening bijgeschreven. Het percentage varieert per kaart: 1% (Classic), 3% (Gold), 5% (Platinum)."
+      
+      q2:
+        question: "Kan ik mijn kaart in het buitenland gebruiken?"
+        answer: "Ja, al onze kaarten worden wereldwijd geaccepteerd. Geen extra kosten binnen de Eurozone en preferentiële tarieven buiten de Eurozone."
+      
+      q3:
+        question: "Hoe activeer ik mijn nieuwe kaart?"
+        answer: "Activeer uw kaart direct vanuit de %company_name% mobiele app of bel het nummer dat in uw begeleidende brief staat."
+      
+      q4:
+        question: "Wat te doen bij verlies of diefstal?"
+        answer: "Neem onmiddellijk contact op met onze klantenservice op 3636 (24/7) of blokkeer uw kaart via de mobiele app."
+      
+      q5:
+        question: "Hoe wijzig ik mijn pincode?"
+        answer: "U kunt uw pincode wijzigen vanuit het online klantportaal of bij elke %company_name% geldautomaat."
+      
+      q6:
+        question: "Welke verzekeringen zijn inbegrepen?"
+        answer: "Afhankelijk van uw kaart: aankoopverzekering, reis-, annulerings-, repatriëringsverzekering. Volledige details beschikbaar in uw algemene voorwaarden."

@@ -1,0 +1,12 @@
+profile_controller:
+  flash:
+    password_changed: "Votre mot de passe a été modifié avec succès."
+    profile_updated: "Votre profil a été mis à jour avec succès."
+    email_change_initiated: "Un email de confirmation a été envoyé à {email}. Veuillez cliquer sur le lien pour confirmer votre nouvelle adresse email."
+    
+  security_activities:
+    login_success: "Connexion réussie"
+    login_failed: "Tentative de connexion échouée"
+    password_changed: "Mot de passe modifié"
+    profile_updated: "Profil mis à jour"
+    account_locked: "Compte verrouillé"

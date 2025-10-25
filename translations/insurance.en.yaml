@@ -1,0 +1,228 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: insurance.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+insurance:
+  # Meta tags
+  meta:
+    title: "Bank Insurance - Complete Protection - %company_name%"
+    description: "Discover our comprehensive bank insurance solutions: auto, home, health, travel and more. Optimal protection with %company_name%."
+
+  # Hero Section
+  hero:
+    title_part1: "Your Trusted"
+    title_accent: "Insurance"
+    title_part2: "Partner"
+    description: "Save and compare auto insurance quotes. Customize your coverage and get the best offer in minutes."
+    email_placeholder: "Your Email"
+    cta_button: "Get a Quote"
+    support_badge: "Customer Support"
+    nav:
+      auto: "Auto"
+      home: "Home"
+      health: "Health"
+      life: "Life"
+      professional: "Professional"
+  
+  packages:
+    title: "Our Insurance Packages"
+    subtitle: "Solutions tailored to your needs - choose the one that suits you best"
+    essential:
+      title: "Essential Coverage"
+      description: "Basic protection for your peace of mind at an affordable price"
+      features:
+        - "Civil liability"
+        - "Breakdown assistance"
+        - "Legal protection"
+    standard:
+      badge: "Recommended"
+      title: "Standard Coverage"
+      description: "A balanced plan offering enhanced protection and extended benefits"
+      features:
+        - "All-risk collision"
+        - "Theft and fire"
+        - "Glass breakage"
+        - "Replacement vehicle"
+    premium:
+      title: "Premium Coverage"
+      description: "Complete coverage with exclusive benefits for total security"
+      features:
+        - "All-risk coverage"
+        - "New value 2 years"
+        - "Europe assistance"
+        - "Secondary driver"
+    custom:
+      title: "Custom Coverage"
+      description: "Create your own plan - choose the coverage that suits you best"
+      features:
+        - "Modular coverage"
+        - "Personalized pricing"
+        - "Dedicated advisor"
+        - "Flexible adjustments"
+
+  # Original hero section (for hero_assurances.html.twig)  
+  hero_banner:
+    badge: "Comprehensive Bank Protection"
+    title: "Protect your assets with our"
+    title_highlight: "bank insurance"
+    description: "Discover our insurance solutions specially designed to protect your investments, your credits and your peace of mind. Over 50,000 customers trust us."
+    stats:
+      satisfaction:
+        value: "98%"
+        label: "Customer satisfaction"
+      processing:
+        value: "24h"
+        label: "Quote processing"
+      types:
+        value: "12"
+        label: "Insurance types"
+    actions:
+      primary: "Discover our insurance"
+      secondary: "Why choose us"
+    cards:
+      home:
+        title: "Home Insurance"
+        description: "Complete protection for your home"
+      loan:
+        title: "Loan Insurance"
+        description: "Secure your repayments"
+      auto:
+        title: "Auto Insurance"
+        description: "Drive with complete peace of mind"
+
+  # Insurance Types Section
+  types:
+    header:
+      title: "Our Insurance Solutions"
+      subtitle: "A complete range of insurance tailored to all your needs, with competitive rates and exceptional customer service."
+    auto:
+      title: "Auto Insurance"
+      description: "Complete protection for your vehicle with 24/7 assistance and extended coverage."
+      features:
+        - "24/7 assistance"
+        - "Repair at all our partners"
+        - "Replacement vehicle"
+        - "Driver protection"
+        - "Glass breakage included"
+      cta: "Get an auto quote"
+      popular: "Popular"
+    credit:
+      title: "Borrower Insurance"
+      description: "Protect your family and your projects in case of inability to repay your credit."
+      features:
+        - "Death and disability coverage"
+        - "Temporary work incapacity"
+        - "Job loss (option)"
+        - "Preferential customer rates"
+        - "Insurance delegation possible"
+      cta: "Get a credit quote"
+    home:
+      title: "Home Insurance"
+      description: "Protect your home and belongings against all daily risks."
+      features:
+        - "Complete multi-risk home insurance"
+        - "Civil liability included"
+        - "24/7 breakdown assistance"
+        - "Legal protection"
+        - "Mobile belongings covered"
+      cta: "Get a home quote"
+    health:
+      title: "Health Insurance"
+      description: "Supplementary health insurance tailored to your needs with a wide network of professionals."
+      features:
+        - "Fast reimbursements"
+        - "Widespread third-party payment"
+        - "Teleconsultation included"
+        - "Complementary medicine covered"
+        - "Enhanced optical and dental"
+      cta: "Get a health quote"
+    life:
+      title: "Life Insurance"
+      description: "Build and transfer your assets while optimizing your taxation."
+      features:
+        - "Free or scheduled payments"
+        - "Wide choice of investment vehicles"
+        - "Advance on contract possible"
+        - "Advantageous taxation"
+        - "Self-managed or managed"
+      cta: "Get a life quote"
+    travel:
+      title: "Travel Insurance"
+      description: "Travel with peace of mind with our comprehensive travel coverage."
+      features:
+        - "Repatriation assistance"
+        - "Medical expenses abroad"
+        - "Trip cancellation"
+        - "Luggage and personal effects"
+        - "Civil liability"
+      cta: "Get a travel quote"
+    professional:
+      title: "Professional Insurance"
+      description: "Protect your professional activity with our custom coverage."
+      features:
+        - "Professional civil liability"
+        - "Legal protection"
+        - "Professional multi-risk"
+        - "Cyber-risks included"
+        - "Loss of earnings"
+      cta: "Get a pro quote"
+    decennial:
+      title: "Ten-Year Liability"
+      description: "Legal obligation for all building and construction professionals."
+      features:
+        - "Mandatory 10-year coverage"
+        - "Defense and recourse"
+        - "Damage to works"
+        - "Immediate certificate"
+        - "Preferential rates"
+      cta: "Get a decennial quote"
+
+  # Benefits Section
+  benefits:
+    title: "Why choose our insurance?"
+    competitive_rates:
+      title: "Competitive rates"
+      description: "Offers tailored to all budgets, without compromising on coverage quality."
+    support_24_7:
+      title: "24/7 Support"
+      description: "Responsive and human assistance, available at all times to support you."
+    online_management:
+      title: "100% online management"
+      description: "Subscription, management and monitoring of your contracts directly from your secure customer area."
+    custom_offers:
+      title: "Custom offers"
+      description: "Personalized solutions according to your needs, whether you are an individual or a professional."
+
+  # Process Section
+  process:
+    title: "Subscribing to insurance is simple!"
+    steps:
+      choose:
+        title: "Choose your insurance type"
+        description: "Select the type of coverage that matches your needs"
+      form:
+        title: "Fill out the online quote form"
+        description: "Just a few pieces of information to get your proposal"
+      proposal:
+        title: "Receive a personalized proposal"
+        description: "Our team reviews your file and offers you the best deal"
+      subscribe:
+        title: "Subscribe and be protected immediately"
+        description: "Online validation and effective protection upon signing"
+
+  # Contact CTA Section
+  contact_cta:
+    title: "Need advice or a quote?"
+    description: "Our advisors are here to support you with your insurance project."
+    button: "Contact us"
+
+  # Common elements
+  common:
+    get_quote: "Get a quote"
+    learn_more: "Learn more"
+    contact_us: "Contact us"
+    from: "From"
+    per_month: "per month"
+    popular: "Popular"
+    recommended: "Recommended"

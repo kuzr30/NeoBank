@@ -1,0 +1,147 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ 'email_devis_confirmation.subject'|trans({}, 'email_devis_confirmation') }}{% endblock %}
+
+{% block content %}
+    <!-- En-tête principal -->
+    <div style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); border-radius: 12px; padding: 30px; text-align: center; margin-bottom: 30px;">
+        <h1 style="color: white; margin: 0; font-size: 26px; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            {{ 'email_devis_confirmation.content.page_title'|trans({}, 'email_devis_confirmation') }}
+        </h1>
+        <p style="color: #e0e7ff; margin: 15px 0 0 0; font-size: 16px; font-weight: 500;">
+            {{ company_name() }} - {{ 'email_devis_confirmation.content.department'|trans({}, 'email_devis_confirmation') }}
+        </p>
+    </div>
+    
+    <!-- Salutation -->
+    <div style="margin-bottom: 25px;">
+        <p style="font-size: 18px; color: #1f2937; margin: 0; font-weight: 500;">
+            {{ 'email_devis_confirmation.content.greeting'|trans({'%prenom%': demande.prenom, '%nom%': demande.nom}, 'email_devis_confirmation')|raw }}
+        </p>
+    </div>
+
+    <!-- Message de confirmation -->
+    <div style="background: #f0fdf4; border-left: 4px solid #10b981; padding: 20px; margin-bottom: 30px; border-radius: 8px;">
+        <p style="margin: 0; color: #065f46; font-size: 16px; line-height: 1.6;">
+            {{ 'email_devis_confirmation.content.success.message'|trans({'%typeAssurance%': demande.typeAssurance.getLabel()|trans({}, 'enums')}, 'email_devis_confirmation') }}
+        </p>
+    </div>
+
+    <!-- Numéro de référence -->
+    <div style="text-align: center; margin-bottom: 30px;">
+        <p style="margin: 0 0 10px 0; color: #6b7280; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+            {{ 'email_devis_confirmation.content.reference.title'|trans({}, 'email_devis_confirmation') }}
+        </p>
+        <div style="background: #1e40af; color: white; padding: 15px 30px; border-radius: 8px; display: inline-block; font-size: 20px; font-weight: 700; letter-spacing: 2px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            {{ demande.numeroDevis }}
+        </div>
+    </div>
+
+    <!-- Récapitulatif -->
+    <div style="background: white; border: 2px solid #e5e7eb; border-radius: 12px; overflow: hidden; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+        <div style="background: #f8fafc; padding: 20px; border-bottom: 1px solid #e5e7eb;">
+            <h2 style="margin: 0; color: #1f2937; font-size: 18px; font-weight: 600;">
+                {{ 'email_devis_confirmation.content.recap.title'|trans({}, 'email_devis_confirmation') }}
+            </h2>
+        </div>
+        <div style="padding: 0;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <td style="padding: 20px; font-weight: 600; color: #6b7280; width: 30%; border-bottom: 1px solid #f3f4f6; background: #f9fafb;">{{ 'email_devis_confirmation.content.recap.insurance_type'|trans({}, 'email_devis_confirmation') }}</td>
+                    <td style="padding: 20px; color: #1f2937; border-bottom: 1px solid #f3f4f6; font-weight: 500;">
+                        {{ demande.typeAssurance.getLabel()|trans({}, 'enums') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 20px; font-weight: 600; color: #6b7280; border-bottom: 1px solid #f3f4f6; background: #f9fafb;">{{ 'email_devis_confirmation.content.recap.contact_email'|trans({}, 'email_devis_confirmation') }}</td>
+                    <td style="padding: 20px; color: #1f2937; border-bottom: 1px solid #f3f4f6;">{{ demande.email }}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 20px; font-weight: 600; color: #6b7280; border-bottom: 1px solid #f3f4f6; background: #f9fafb;">{{ 'email_devis_confirmation.content.recap.phone'|trans({}, 'email_devis_confirmation') }}</td>
+                    <td style="padding: 20px; color: #1f2937; border-bottom: 1px solid #f3f4f6;">{{ demande.telephone }}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 20px; font-weight: 600; color: #6b7280; border-bottom: 1px solid #f3f4f6; background: #f9fafb;">{{ 'email_devis_confirmation.content.recap.contact_preference'|trans({}, 'email_devis_confirmation') }}</td>
+                    <td style="padding: 20px; color: #1f2937; border-bottom: 1px solid #f3f4f6;">
+                        <span style="background: #dbeafe; color: #1e40af; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 600;">
+                            {% if demande.preferenceContact == 'telephone' %}
+                                {{ 'email_devis_confirmation.preferences.telephone'|trans({}, 'email_devis_confirmation') }}
+                            {% elseif demande.preferenceContact == 'email' %}
+                                {{ 'email_devis_confirmation.preferences.email'|trans({}, 'email_devis_confirmation') }}
+                            {% else %}
+                                {{ 'email_devis_confirmation.preferences.indifferent'|trans({}, 'email_devis_confirmation') }}
+                            {% endif %}
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 20px; font-weight: 600; color: #6b7280; background: #f9fafb;">{{ 'email_devis_confirmation.content.recap.request_date'|trans({}, 'email_devis_confirmation') }}</td>
+                    <td style="padding: 20px; color: #1f2937; font-weight: 500;">{{ demande.createdAt|date('d/m/Y') }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+    <!-- Processus de traitement -->
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 25px; margin-bottom: 30px;">
+        <h3 style="margin: 0 0 20px 0; color: #166534; font-size: 18px; font-weight: 600;">
+            {{ 'email_devis_confirmation.content.process.title'|trans({}, 'email_devis_confirmation') }}
+        </h3>
+        <div style="space-y: 15px;">
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                <div style="background: #10b981; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; font-size: 14px;">1</div>
+                <p style="margin: 0; color: #166534; font-size: 15px; font-weight: 500;">
+                    {% set preference_label = demande.preferenceContact == 'telephone' ? 'email_devis_confirmation.preferences.telephone'|trans({}, 'email_devis_confirmation') : 
+                        (demande.preferenceContact == 'email' ? 'email_devis_confirmation.preferences.email'|trans({}, 'email_devis_confirmation') : 
+                        'email_devis_confirmation.preferences.indifferent'|trans({}, 'email_devis_confirmation')) %}
+                    {{ 'email_devis_confirmation.content.process.step1'|trans({'%preference%': preference_label|lower}, 'email_devis_confirmation') }}
+                </p>
+            </div>
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                <div style="background: #10b981; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; font-size: 14px;">2</div>
+                <p style="margin: 0; color: #166534; font-size: 15px; font-weight: 500;">{{ 'email_devis_confirmation.content.process.step2'|trans({}, 'email_devis_confirmation') }}</p>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <div style="background: #10b981; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; font-size: 14px;">3</div>
+                <p style="margin: 0; color: #166534; font-size: 15px; font-weight: 500;">{{ 'email_devis_confirmation.content.process.step3'|trans({}, 'email_devis_confirmation') }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Informations de contact -->
+    <div style="background: #fef9c3; border: 1px solid #fcd34d; border-radius: 12px; padding: 25px; margin-bottom: 30px;">
+        <h3 style="margin: 0 0 20px 0; color: #92400e; font-size: 18px; font-weight: 600;">
+            {{ 'email_devis_confirmation.content.contact.title'|trans({}, 'email_devis_confirmation') }}
+        </h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="flex: 1; min-width: 250px;">
+                <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+                    <h4 style="margin: 0 0 10px 0; color: #92400e; font-size: 16px; font-weight: 600;">{{ 'email_devis_confirmation.content.contact.phone_service'|trans({}, 'email_devis_confirmation') }}</h4>
+                    <p style="margin: 0; color: #1e40af; font-size: 18px; font-weight: 700;">{{ company_phone() }}</p>
+                </div>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+                <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+                    <h4 style="margin: 0 0 10px 0; color: #92400e; font-size: 16px; font-weight: 600;">{{ 'email_devis_confirmation.content.contact.email_support'|trans({}, 'email_devis_confirmation') }}</h4>
+                    <p style="margin: 0; color: #1e40af; font-size: 18px; font-weight: 700;">{{ company_email() }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message de clôture -->
+    <div style="text-align: center; margin-bottom: 30px;">
+        <p style="font-size: 16px; color: #374151; line-height: 1.6; margin: 0;">
+            {{ 'email_devis_confirmation.content.closing_message'|trans({}, 'email_devis_confirmation') }}
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <div style="background: #f8fafc; padding: 20px; border-radius: 8px; text-align: center; border-top: 3px solid #1e40af;">
+        <p style="margin: 0; color: #6b7280; font-size: 14px;">
+            {{ 'email_devis_confirmation.content.footer'|trans({'%company_name%': company_name()}, 'email_devis_confirmation')|raw }}
+        </p>
+    </div>
+{% endblock %}

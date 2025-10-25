@@ -1,0 +1,109 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_credit_application_folder_admin_notification.title', {}, 'email_credit_application_folder_admin_notification') }} {% endblock %}
+
+{% block tagline %}{{ tp('email_credit_application_folder_admin_notification.content.tagline', {}, 'email_credit_application_folder_admin_notification') }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('email_credit_application_folder_admin_notification.content.page_title', {}, 'email_credit_application_folder_admin_notification') }}</h2>
+    
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_credit_application_folder_admin_notification.content.reference_info.title', {}, 'email_credit_application_folder_admin_notification') }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            <strong>{{ tp('email_credit_application_folder_admin_notification.content.reference_info.reference_number', {referenceNumber: creditApplication.referenceNumber}, 'email_credit_application_folder_admin_notification') }}</strong><br>
+            {{ tp('email_credit_application_folder_admin_notification.content.reference_info.submitted_on', {submittedDate: creditApplication.createdAt|date('d/m/Y à H:i')}, 'email_credit_application_folder_admin_notification') }}
+        </p>
+    </div>
+
+    <h3 class="content-subtitle">{{ tp('email_credit_application_folder_admin_notification.content.applicant_info.title', {}, 'email_credit_application_folder_admin_notification') }}</h3>
+    
+    <table class="data-table">
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_admin_notification.content.applicant_info.full_name', {}, 'email_credit_application_folder_admin_notification') }}</strong></td>
+            <td>{{ creditApplication.firstName }} {{ creditApplication.lastName }}</td>
+        </tr>
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_admin_notification.content.applicant_info.email', {}, 'email_credit_application_folder_admin_notification') }}</strong></td>
+            <td>{{ creditApplication.email }}</td>
+        </tr>
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_admin_notification.content.applicant_info.phone', {}, 'email_credit_application_folder_admin_notification') }}</strong></td>
+            <td>{{ creditApplication.phone }}</td>
+        </tr>
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_admin_notification.content.applicant_info.birth_date', {}, 'email_credit_application_folder_admin_notification') }}</strong></td>
+            <td>{{ creditApplication.birthDate|date('d/m/Y') }}</td>
+        </tr>
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_admin_notification.content.applicant_info.nationality', {}, 'email_credit_application_folder_admin_notification') }}</strong></td>
+            <td>{{ creditApplication.nationality|country_name(locale|default('fr')) }}</td>
+        </tr>
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_admin_notification.content.applicant_info.address', {}, 'email_credit_application_folder_admin_notification') }}</strong></td>
+            <td>{{ tp('email_credit_application_folder_admin_notification.content.applicant_info.address_format', {
+                address: creditApplication.address,
+                postalCode: creditApplication.postalCode,
+                city: creditApplication.city,
+                country: creditApplication.country|country_name(locale|default('fr'))
+            }, 'email_credit_application_folder_admin_notification') }}</td>
+        </tr>
+    </table>
+
+    <hr class="divider">
+
+    <h3 class="content-subtitle">{{ tp('email_credit_application_folder_admin_notification.content.credit_details.title', {}, 'email_credit_application_folder_admin_notification') }}</h3>
+    
+    <table class="data-table">
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_admin_notification.content.credit_details.amount', {}, 'email_credit_application_folder_admin_notification') }}</strong></td>
+            <td style="color: #1976d2; font-weight: 700; font-size: 18px;">{{ tp('email_credit_application_folder_admin_notification.content.credit_details.amount_value', {amount: creditApplication.loanAmount|number_format(2, ',', ' ')}, 'email_credit_application_folder_admin_notification') }}</td>
+        </tr>
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_admin_notification.content.credit_details.credit_type', {}, 'email_credit_application_folder_admin_notification') }}</strong></td>
+            <td>{{ creditApplication.creditType.value }}</td>
+        </tr>
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_admin_notification.content.credit_details.duration', {}, 'email_credit_application_folder_admin_notification') }}</strong></td>
+            <td>{{ tp('email_credit_application_folder_admin_notification.content.credit_details.duration_months', {duration: creditApplication.duration}, 'email_credit_application_folder_admin_notification') }}</td>
+        </tr>
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_admin_notification.content.credit_details.monthly_payment', {}, 'email_credit_application_folder_admin_notification') }}</strong></td>
+            <td>{{ tp('email_credit_application_folder_admin_notification.content.credit_details.monthly_payment_value', {monthlyPayment: creditApplication.monthlyPayment|number_format(2, ',', ' ')}, 'email_credit_application_folder_admin_notification') }}</td>
+        </tr>
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_admin_notification.content.credit_details.total_cost', {}, 'email_credit_application_folder_admin_notification') }}</strong></td>
+            <td>{{ tp('email_credit_application_folder_admin_notification.content.credit_details.total_cost_value', {totalCost: creditApplication.totalCost|number_format(2, ',', ' ')}, 'email_credit_application_folder_admin_notification') }}</td>
+        </tr>
+    </table>
+
+    <hr class="divider">
+
+    <h3 class="content-subtitle">{{ tp('email_credit_application_folder_admin_notification.content.financial_situation.title', {}, 'email_credit_application_folder_admin_notification') }}</h3>
+    
+    <table class="data-table">
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_admin_notification.content.financial_situation.monthly_income', {}, 'email_credit_application_folder_admin_notification') }}</strong></td>
+            <td style="color: #2e7d32; font-weight: 600;">{{ tp('email_credit_application_folder_admin_notification.content.financial_situation.monthly_income_value', {monthlyIncome: creditApplication.monthlyIncome|number_format(2, ',', ' ')}, 'email_credit_application_folder_admin_notification') }}</td>
+        </tr>
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_admin_notification.content.financial_situation.monthly_expenses', {}, 'email_credit_application_folder_admin_notification') }}</strong></td>
+            <td style="color: #f57c00; font-weight: 600;">{{ tp('email_credit_application_folder_admin_notification.content.financial_situation.monthly_expenses_value', {monthlyExpenses: creditApplication.monthlyExpenses|number_format(2, ',', ' ')}, 'email_credit_application_folder_admin_notification') }}</td>
+        </tr>
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_admin_notification.content.financial_situation.employment_type', {}, 'email_credit_application_folder_admin_notification') }}</strong></td>
+            <td>{{ creditApplication.employmentType }}</td>
+        </tr>
+        {% if creditApplication.existingLoans %}
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_admin_notification.content.financial_situation.existing_loans', {}, 'email_credit_application_folder_admin_notification') }}</strong></td>
+            <td style="color: #f44336; font-weight: 600;">{{ tp('email_credit_application_folder_admin_notification.content.financial_situation.existing_loans_value', {existingLoans: creditApplication.existingLoans|number_format(2, ',', ' ')}, 'email_credit_application_folder_admin_notification') }}</td>
+        </tr>
+        {% endif %}
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_admin_notification.content.financial_situation.dependents', {}, 'email_credit_application_folder_admin_notification') }}</strong></td>
+            <td>{{ creditApplication.dependents }}</td>
+        </tr>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,185 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
+parameters:
+    # Configuration pour le système de traduction professionnel
+    locale: 'fr'
+    app.locales: ['fr', 'nl', 'de', 'es']
+    app.fallback_locale: 'fr'
+    
+    # Configuration des emails
+    app.mailer.from_email: '%env(MAILER_FROM_EMAIL)%'
+    app.mailer.from_name: '%env(MAILER_FROM_NAME)%'
+    app.admin_email: '%env(ADMIN_EMAIL)%'
+    
+    # Email par défaut pour les notifications (utilise la même variable que MAILER_FROM_EMAIL)
+    app.notification.from_email: '%env(MAILER_FROM_EMAIL)%'
+    
+    # URL de base de l'application
+    app.url: '%env(APP_URL)%'
+    
+    # Répertoire des uploads
+    uploads_directory: '%kernel.project_dir%/public/uploads'
+    
+    # Configuration SEO
+    app.seo.site_domain: '%env(SITE_DOMAIN)%'
+    app.seo.site_name: '%env(SITE_NAME)%'
+    app.seo.default_title: '%env(DEFAULT_SEO_TITLE)%'
+    app.seo.default_description: '%env(DEFAULT_SEO_DESCRIPTION)%'
+    app.seo.default_keywords: '%env(DEFAULT_SEO_KEYWORDS)%'
+    app.seo.twitter_handle: '%env(TWITTER_HANDLE)%'
+    app.seo.company_email: '%env(COMPANY_EMAIL)%'
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+
+    # Configuration du MessageHandler pour les emails
+    App\MessageHandler\DevisEmailMessageHandler:
+        arguments:
+            $adminEmail: '%app.admin_email%'
+            $mailerFromEmail: '%app.mailer.from_email%'
+            $mailerFromName: '%app.mailer.from_name%'
+            
+    # Configuration du MessageHandler pour les notifications de création de compte
+    App\MessageHandler\AccountCreatedNotificationMessageHandler:
+        arguments:
+            $mailerFromEmail: '%app.mailer.from_email%'
+            $mailerFromName: '%app.mailer.from_name%'
+            
+    # Configuration du MessageHandler pour les emails d'approbation de devis
+    App\MessageHandler\DevisApprovalEmailMessageHandler:
+        arguments:
+            $mailerFromEmail: '%app.mailer.from_email%'
+            $mailerFromName: '%app.mailer.from_name%'
+
+    # Configuration du MessageHandler pour les virements crédit
+    App\MessageHandler\SendCreditTransferVerificationCodeMessageHandler:
+        arguments:
+            $fromEmail: '%app.mailer.from_email%'
+            $fromName: '%app.mailer.from_name%'
+
+    # Service CardSubscriptionService rendu public pour les tests
+    App\Service\CardSubscriptionService:
+        public: true
+
+    # CustomEmailCrudController avec le répertoire uploads
+    App\Controller\Admin\CustomEmailCrudController:
+        arguments:
+            $uploadsDirectory: '%uploads_directory%'
+
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones
+
+    # Configuration automatique des EventSubscribers
+    App\EventSubscriber\:
+        resource: '../src/EventSubscriber/*'
+        tags: ['kernel.event_subscriber']
+
+    # Service de traduction professionnel avec injection moderne
+    App\Service\ProfessionalTranslationService:
+        arguments:
+            $defaultLocale: '%locale%'
+
+    # Service de routing localisé
+    App\Service\LocalizedRoutingService: ~
+
+    # Extension Twig pour les traductions
+    App\Twig\TranslationExtension:
+        tags: ['twig.extension']
+        
+    # Service pour injecter les paramètres de l'entreprise dans tous les templates
+    App\Service\CompanySettingsGlobalService:
+        tags: ['twig.extension']
+
+    # Alias pour compatibilité avec l'ancien service
+    App\Service\TranslationService: '@App\Service\ProfessionalTranslationService'
+
+    # Services d'email professionnels
+    App\Service\EmailService:
+        arguments:
+            $defaultFromEmail: '%env(MAILER_FROM_EMAIL)%'
+            $defaultFromName: '%env(MAILER_FROM_NAME)%'
+
+    App\Service\EmailHelperService: ~
+
+    # Service de notification avec injection de l'email par défaut
+    App\Service\NotificationService:
+        arguments:
+            $defaultFromEmail: '%app.notification.from_email%'
+
+    # Service de notification des cartes avec injection de l'email par défaut
+    App\Service\CardNotificationService:
+        arguments:
+            $defaultFromEmail: '%app.notification.from_email%'
+            $defaultFromName: '%app.mailer.from_name%'
+
+    # Services bancaires
+    App\Service\AccountCreationService: ~
+    App\Service\TransactionValidatorService: ~
+
+    # Service de workflow de crédit
+    App\Service\CreditWorkflowService:
+        arguments:
+            $fromEmail: '%app.mailer.from_email%'
+            $adminEmail: '%app.admin_email%'
+            $projectDir: '%kernel.project_dir%'
+
+    # Event Listeners
+    App\EventListener\KycApprovedListener:
+        tags:
+            - { name: doctrine.orm.entity_listener, event: postUpdate, entity: App\Entity\KycSubmission }
+
+    # Message handlers pour les emails asynchrones
+    App\MessageHandler\WelcomeEmailMessageHandler: ~
+    App\MessageHandler\PasswordResetEmailMessageHandler: ~
+    App\MessageHandler\BankingNotificationEmailMessageHandler: ~
+    App\MessageHandler\GenericEmailMessageHandler: ~
+    App\MessageHandler\ProfileUpdateNotificationEmailMessageHandler: ~
+    App\MessageHandler\EmailVerificationMessageHandler: ~
+
+    # Service SEO principal
+    App\Service\SeoService:
+        arguments:
+            $siteDomain: '%app.seo.site_domain%'
+            $siteName: '%app.seo.site_name%'
+            $defaultSeoTitle: '%app.seo.default_title%'
+            $defaultSeoDescription: '%app.seo.default_description%'
+            $defaultSeoKeywords: '%app.seo.default_keywords%'
+            $twitterHandle: '%app.seo.twitter_handle%'
+            $companyEmail: '%app.seo.company_email%'
+
+    # Extension Twig pour le SEO
+    App\Twig\SeoExtension:
+        tags: ['twig.extension']
+
+    # EventListener pour le sitemap
+    App\EventListener\SitemapListener:
+        tags: ['kernel.event_listener']
+
+    # Service de gestion des contrats de souscription
+    App\Service\ContractSubscriptionService:
+        arguments:
+            $appUrl: '%app.url%'
+            $defaultFromEmail: '%app.notification.from_email%'
+            $defaultFromName: '%app.mailer.from_name%'
+    App\MessageHandler\PasswordChangeNotificationEmailMessageHandler: ~
+    App\MessageHandler\RibAddedNotificationMessageHandler: ~
+
+    # Service d'export UserData
+    App\Service\UserDataExportService:
+        arguments:
+            $projectDir: '%kernel.project_dir%'

@@ -1,0 +1,82 @@
+banking_transfers:
+  header:
+    title: "Overschrijvingen"
+    subtitle: "Voer overschrijvingen uit naar uw geregistreerde rekeningen"
+    last_updated: "Laatste update: %datetime%"
+    new_transfer: "Nieuwe overschrijving"
+  
+  active_transfers:
+    title: "Lopende overschrijvingen"
+    transfer_to: "Overschrijving naar %account%"
+    status:
+      pending: "In afwachting"
+      executing: "Wordt uitgevoerd"
+    validation_code_required: "In afwachting van validatiecode"
+    actions:
+      enter_code: "Code invoeren"
+      view_details: "Details bekijken"
+  
+  beneficiaries:
+    title: "Mijn begunstigden"
+    iban_label: "IBAN:"
+    empty_state:
+      title: "Geen begunstigde rekeningen geregistreerd"
+      description: "Voeg RIB-rekeningen toe om overschrijvingen te kunnen uitvoeren"
+      add_rib_button: "RIB toevoegen"
+  
+  actions:
+    one_time:
+      title: "Eenmalige overschrijving"
+      description: "Een unieke overschrijving naar een begunstigde uitvoeren"
+      button: "Uitvoeren"
+    
+    recurring:
+      title: "Permanente overschrijving"
+      description: "Een terugkerende automatische overschrijving programmeren"
+      button: "Programmeren"
+    
+    instant:
+      title: "Onmiddellijke overschrijving"
+      description: "Overschrijving uitgevoerd in enkele seconden"
+      button: "Verzenden"
+    
+    add_beneficiary:
+      title: "Nieuwe begunstigde"
+      description: "Een nieuwe overschrijvingsbestemming toevoegen"
+      button: "Toevoegen"
+  
+  filters:
+    all_transfers: "Alle overschrijvingen"
+    sent_transfers: "Verzonden overschrijvingen"
+    received_transfers: "Ontvangen overschrijvingen"
+    recurring_transfers: "Permanente overschrijvingen"
+    instant_transfers: "Onmiddellijke overschrijvingen"
+    all_accounts: "Alle rekeningen"
+    account_checking: "Betaalrekening ****8547"
+    account_savings: "Spaarrekening A ****2143"
+    filter_button: "Filteren"
+    export_button: "Exporteren"
+  
+  table:
+    headers:
+      date: "Datum"
+      type: "Type"
+      beneficiary_sender: "Begunstigde / Afzender"
+      reason: "Reden"
+      amount: "Bedrag"
+      status: "Status"
+      actions: "Acties"
+    
+    transfer_types:
+      received: "Ontvangen"
+      sent: "Verzonden"
+      internal: "Intern"
+      instant: "Onmiddellijk"
+    
+    status:
+      executed: "Uitgevoerd"
+  
+  pagination:
+    previous: "Vorige"
+    next: "Volgende"
+    page_info: "Pagina %current% van %total% (%count% overschrijvingen)"

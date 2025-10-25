@@ -1,0 +1,11 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_services.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_services:
+  # Meta tags
+  meta:
+    mobile_app:
+      title: "%company_name% Mobile App"
+      description: "Discover our %company_name% mobile app: account management, transfers, and much more from your smartphone."

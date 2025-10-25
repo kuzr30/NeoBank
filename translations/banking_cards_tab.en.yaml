@@ -1,0 +1,97 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_cards_tab.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_cards_tab:
+  # Main section
+  main:
+    title: "Subscribe to a bank card"
+    subtitle: "The best card for your daily needs"
+
+  # User card section
+  user_card:
+    my_card: "My card"
+    daily_limit: "Daily limit"
+    undefined: "Undefined"
+    
+    # Card statuses
+    status:
+      active: "Active"
+      blocked: "Blocked"
+      expired: "Expired"
+      pending: "Pending"
+    
+    # Card actions
+    actions:
+      block_temporarily: "Block temporarily"
+      report_lost: "Report opposition"
+
+  # Pending subscription section
+  subscription_pending:
+    title: "Application in progress"
+    request_date: "Application made on"
+    
+    # Status badges
+    status:
+      contract_pending: "Contract in preparation"
+      contract_ready: "Contract ready"
+      contract_signed: "Contract signed"
+      card_production: "Card in production"
+      pending: "Pending validation"
+    
+    # Subscription details
+    details:
+      card_type: "Card type"
+      monthly_fee: "Monthly fee"
+      request_date: "Request date"
+      signed_on: "Signed on"
+    
+    # Actions
+    actions:
+      sign_contract: "Sign contract"
+      download_contract: "Download PDF contract"
+    
+    # Messages
+    messages:
+      contract_expires: "Your contract expires on"
+      contract_expired_text: "Your contract has expired. A new subscription request will be necessary."
+
+  # Card types
+  card_types:
+    classic:
+      name: "Classic Card"
+      badge: "Ideal for beginners"
+      price: "Free"
+      period: "the first year"
+    
+    gold:
+      name: "Gold Card"
+      badge: "Most popular"
+      price: "5€"
+      period: "per month"
+    
+    platinum:
+      name: "Platinum Card"
+      badge: "Premium"
+      price: "15€"
+      period: "per month"
+
+  # Additional information
+  info:
+    security:
+      title: "Guaranteed security"
+      text: "All our cards are equipped with the latest security technologies and are protected against fraud."
+    
+    delivery:
+      title: "Fast delivery"
+      text: "Receive your new card within 3 to 5 business days directly to your home."
+    
+    support:
+      title: "24/7 support"
+      text: "Our team is available 24/7 to help you in case of problems with your card."
+
+  # Additional statuses
+  status:
+    cancelled: "Cancelled"
+    account_label: "Account"

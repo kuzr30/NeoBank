@@ -1,0 +1,47 @@
+card_subscription:
+  # Beantragungsseite
+  subscribe:
+    title: "Bankkarte beantragen"
+    subtitle: "Füllen Sie das Formular aus, um Ihre neue Bankkarte zu erhalten"
+    
+    # Schritte
+    steps:
+      account: "Schritt 1: Wählen Sie Ihr Konto"
+      brand: "Schritt 2: Wählen Sie die Marke"
+      service_level: "Schritt 3: Wählen Sie das Service-Level"
+    
+    # Marken
+    brands:
+      visa:
+        title: "VISA"
+        description: "Weltweit akzeptiert"
+      mastercard:
+        title: "MASTERCARD"
+        description: "Internationales Premium-Netzwerk"
+    
+    # Kartentypen
+    card_types:
+      classic:
+        title: "CLASSIC"
+        features:
+          - "Kontaktlose Zahlungen"
+          - "Kostenlose Abhebungen"
+          - "Basis-Einkaufsversicherung"
+        price: "Kostenlos"
+      gold:
+        title: "GOLD"
+        features:
+          - "Alle Classic-Vorteile"
+          - "Reiseversicherung"
+          - "1% Cashback"
+          - "24/7 Hilfe"
+        price: "5€/Monat"
+      platinum:
+        title: "PLATINUM"
+        features:
+          - "Alle Gold-Vorteile"
+          - "Privater Concierge"
+          - "2% Cashback"
+          - "Premium-Versicherung"
+          - "Flughafen-Lounges"
+        price: "15€/Monat"

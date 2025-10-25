@@ -1,0 +1,13 @@
+exceptions:
+  submission_already_exists: "Eine KYC-Einreichung ist bereits in Bearbeitung oder für diesen Benutzer genehmigt."
+  invalid_status: "Ungültiger KYC-Einreichungsstatus"
+  user_not_found: "Benutzer nicht gefunden"
+  documents_required: "Dokumente sind für die KYC-Einreichung erforderlich"
+
+log_messages:
+  submission_created: "KYC-Einreichung erstellt"
+  submission_approved: "KYC-Einreichung genehmigt"
+  submission_rejected: "KYC-Einreichung abgelehnt"
+  document_uploaded: "KYC-Dokument erfolgreich hochgeladen"
+  validation_completed: "KYC-Validierung abgeschlossen"
+  status_updated: "KYC-Status aktualisiert"

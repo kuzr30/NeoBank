@@ -1,0 +1,53 @@
+email_devis_confirmation:
+  subject: "Bevestiging van uw offerteaanvraag"
+  title: "Bevestiging van uw offerteaanvraag"
+  
+  content:
+    page_title: "Offerteaanvraag bevestigd"
+    department: "Verzekeringen Afdeling"
+    greeting: "Hallo <strong>%prenom% %nom%</strong>,"
+    
+    success:
+      title: "Aanvraag succesvol ontvangen"
+      message: "We hebben uw offerteaanvraag voor %typeAssurance% ontvangen. Uw dossier wordt nu behandeld door onze experts."
+    
+    reference:
+      title: "Referentie van uw aanvraag"
+      number: "Offertenummer: %numeroDevis%"
+    
+    recap:
+      title: "Samenvatting van uw aanvraag"
+      insurance_type: "Verzekeringstype"
+      contact_email: "Contact e-mail"
+      phone: "Telefoon"
+      contact_preference: "Contactvoorkeur"
+      request_date: "Aanvraagdatum"
+    
+    comments:
+      title: "Uw opmerkingen"
+    
+    process:
+      title: "Behandelingsproces"
+      step1: "Stap 1: Persoonlijk contact binnen 24u via %preference%"
+      step2: "Stap 2: Grondige analyse van uw profiel en specifieke behoeften"
+      step3: "Stap 3: Presentatie van een gepersonaliseerd en competitief aanbod"
+    
+    contact:
+      title: "Contactgegevens"
+      phone_service: "Telefonische service"
+      phone_number: "%company_phone%"
+      email_support: "Ondersteuning per e-mail"
+      support_email: "contact@sedef.fr"
+    
+    closing_message: "Ons team van verzekeringsspecialisten zal u zeer binnenkort contacteren om uw dossier af te ronden."
+    footer: "%company_name% - Verzekeringen Afdeling<br>Automatische bevestiging van offerteaanvraag"
+
+  preferences:
+    telephone: "Telefonisch"
+    email: "Per e-mail"
+    indifferent: "Maakt niet uit"
+
+  logs:
+    devis_confirmation_sent: "Offertebevestigings-e-mail succesvol verzonden naar %email%"
+    devis_confirmation_failed: "Fout bij het verzenden van offertebevestiging naar %email%"
+    quote_request_processed: "Offerteaanvraag %numeroDevis% verwerkt voor %nom% %prenom%"

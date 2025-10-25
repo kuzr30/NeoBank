@@ -1,0 +1,29 @@
+email_kyc_submission_confirmation:
+  title: "KYC-indieningsbevestiging - %company_name%"
+  
+  content:
+    page_title: "KYC-indieningsbevestiging"
+    greeting: "Hallo <strong>%firstName%</strong>,"
+    
+    success:
+      title: "Dossier goed ontvangen"
+      message: "We bevestigen de goede ontvangst van uw identiteitsverificatiedossier (KYC)."
+    
+    processing_info: "Ons team zal uw documenten zo snel mogelijk onderzoeken. U wordt per e-mail geïnformeerd zodra uw dossier is behandeld."
+    
+    track_button: "Mijn aanvraag volgen"
+    
+    documents:
+      title: "Ingediende documenten"
+      intro: "Ter herinnering, de volgende documenten zijn ingediend:"
+    
+    questions:
+      title: "💬 Vragen?"
+      message: "Als u vragen heeft over uw aanvraag, aarzel dan niet om contact op te nemen met onze klantenservice."
+    
+    closing: "Met vriendelijke groet,<br><strong>Het %company_name% team</strong>"
+
+  logs:
+    kyc_submission_confirmed: "KYC-indieningsbevestiging verzonden naar %email%"
+    kyc_submission_failed: "Fout bij het verzenden van KYC-bevestiging naar %email%"
+    kyc_documents_received: "KYC-documenten ontvangen voor %firstName% %lastName%"

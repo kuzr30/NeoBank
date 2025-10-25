@@ -1,0 +1,53 @@
+email_devis_confirmation:
+  subject: "Confirmation de votre demande de devis"
+  title: "Confirmation de votre demande de devis"
+  
+  content:
+    page_title: "Demande de devis confirmée"
+    department: "Département Assurances"
+    greeting: "Bonjour <strong>%prenom% %nom%</strong>,"
+    
+    success:
+      title: "Demande reçue avec succès"
+      message: "Nous avons bien reçu votre demande de devis pour %typeAssurance%. Votre dossier est maintenant en cours de traitement par nos experts."
+    
+    reference:
+      title: "Référence de votre demande"
+      number: "Numéro de devis : %numeroDevis%"
+    
+    recap:
+      title: "Récapitulatif de votre demande"
+      insurance_type: "Type d'assurance"
+      contact_email: "Email de contact"
+      phone: "Téléphone"
+      contact_preference: "Préférence de contact"
+      request_date: "Date de demande"
+    
+    comments:
+      title: "Vos commentaires"
+    
+    process:
+      title: "Processus de traitement"
+      step1: "Étape 1 : Contact personnalisé sous 24h via %preference%"
+      step2: "Étape 2 : Analyse approfondie de votre profil et besoins spécifiques"
+      step3: "Étape 3 : Présentation d'une offre personnalisée et compétitive"
+    
+    contact:
+      title: "Coordonnées de contact"
+      phone_service: "Service téléphonique"
+      phone_number: "06 23 45 67 89"
+      email_support: "Support par email"
+      support_email: "contact@sedef.fr"
+    
+    closing_message: "Notre équipe de spécialistes en assurance vous contactera très prochainement pour finaliser votre dossier."
+    footer: "{{ company_name() }} - Département Assurances<br>Confirmation automatique de demande de devis"
+
+  preferences:
+    telephone: "Par téléphone"
+    email: "Par email"
+    indifferent: "Indifférent"
+
+  logs:
+    devis_confirmation_sent: "Email de confirmation de devis envoyé avec succès à %email%"
+    devis_confirmation_failed: "Erreur lors de l'envoi de la confirmation de devis à %email%"
+    quote_request_processed: "Demande de devis %numeroDevis% traitée pour %nom% %prenom%"

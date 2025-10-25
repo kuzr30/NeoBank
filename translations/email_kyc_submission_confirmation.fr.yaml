@@ -1,0 +1,29 @@
+email_kyc_submission_confirmation:
+  title: "Confirmation de soumission KYC - %company_name%"
+  
+  content:
+    page_title: "Confirmation de soumission KYC"
+    greeting: "Bonjour <strong>%firstName%</strong>,"
+    
+    success:
+      title: "Dossier bien reçu"
+      message: "Nous vous confirmons la bonne réception de votre dossier de vérification d'identité (KYC)."
+    
+    processing_info: "Notre équipe va examiner vos documents dans les plus brefs délais. Vous serez notifié(e) par email dès que votre dossier aura été traité."
+    
+    track_button: "Suivre ma demande"
+    
+    documents:
+      title: "Documents soumis"
+      intro: "Pour rappel, les documents suivants ont été soumis :"
+    
+    questions:
+      title: "💬 Questions ?"
+      message: "Si vous avez des questions concernant votre demande, n'hésitez pas à contacter notre service client."
+    
+    closing: "Bien cordialement,<br><strong>L'équipe %company_name%</strong>"
+
+  logs:
+    kyc_submission_confirmed: "Confirmation de soumission KYC envoyée à %email%"
+    kyc_submission_failed: "Erreur lors de l'envoi de confirmation KYC à %email%"
+    kyc_documents_received: "Documents KYC reçus pour %firstName% %lastName%"

@@ -1,0 +1,19 @@
+email_devis_approval:
+  subject: "¡Su solicitud de seguro ha sido aprobada!"
+  content:
+    page_title: "Solicitud de seguro aprobada"
+    department: "Servicio de Seguros"
+    greeting: "Estimado/a %prenom% %nom%,"
+    approval_message: "Tenemos el placer de informarle que su solicitud de seguro %typeAssurance% ha sido aprobada por nuestro equipo."
+    reference:
+      title: "Número de referencia"
+    next_steps:
+      title: "Próximos pasos"
+      step1: "Nuestro consejero se pondrá en contacto con usted en las próximas 48h para finalizar su contrato"
+      step2: "Prepare sus documentos de identidad y justificantes"
+      step3: "Firme su contrato y disfrute de su cobertura"
+    contact:
+      title: "¿Necesita ayuda?"
+      phone_service: "Servicio telefónico"
+      email_support: "Soporte por email"
+    closing_message: "Gracias por su confianza. Nuestro equipo se complace en acompañarle en esta nueva etapa."

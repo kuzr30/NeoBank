@@ -1,0 +1,82 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_card_subscription_rejected.title', {}, 'email_card_subscription_rejected') }} - {{ parent() }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('email_card_subscription_rejected.content.page_title', {}, 'email_card_subscription_rejected') }}</h2>
+    
+    <p class="content-text">
+        {{ tp('email_card_subscription_rejected.content.greeting', {firstName: user.firstName, lastName: user.lastName}, 'email_card_subscription_rejected') }}
+    </p>
+
+    <div class="error-box">
+        <h3 style="margin-top: 0; color: #d32f2f;">{{ tp('email_card_subscription_rejected.content.rejection.title', {}, 'email_card_subscription_rejected') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #ffebee; border-left: 4px solid #d32f2f; border-radius: 6px;">
+                    <p style="margin: 0; color: #000000;">
+                        {{ tp('email_card_subscription_rejected.content.rejection.description', {cardType: subscription.cardBrand|title ~ ' ' ~ subscription.cardType|title}, 'email_card_subscription_rejected') }}
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ tp('email_card_subscription_rejected.content.details.title', {}, 'email_card_subscription_rejected') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #fff8e1; border-radius: 6px;">
+                    <div style="margin-bottom: 12px;">
+                        <strong style="color: #f57c00;">{{ tp('email_card_subscription_rejected.content.details.reference', {}, 'email_card_subscription_rejected') }}</strong><br>
+                        <span style="color: #424242; font-family: monospace;">{{ subscription.reference }}</span>
+                    </div>
+                    <div>
+                        <strong style="color: #f57c00;">{{ tp('email_card_subscription_rejected.content.details.reason', {}, 'email_card_subscription_rejected') }}</strong><br>
+                        <span style="color: #424242;">{{ subscription.rejectionReason ?? tp('email_card_subscription_rejected.content.details.reason_not_specified', {}, 'email_card_subscription_rejected') }}</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_card_subscription_rejected.content.next_steps.title', {}, 'email_card_subscription_rejected') }}</h3>
+        <table style="width: 100%; border-spacing: 0; background: white; border-radius: 6px;">
+            <tr>
+                <td style="padding: 16px 20px; background: #f8f9fa; border-radius: 6px;">
+                    <ul style="margin: 0; padding-left: 20px; color: #000000;">
+                        <li style="margin-bottom: 8px;">{{ tp('email_card_subscription_rejected.content.next_steps.option1', {}, 'email_card_subscription_rejected') }}</li>
+                        <li style="margin-bottom: 8px;">{{ tp('email_card_subscription_rejected.content.next_steps.option2', {}, 'email_card_subscription_rejected') }}</li>
+                        <li style="margin-bottom: 0;">{{ tp('email_card_subscription_rejected.content.next_steps.option3', {}, 'email_card_subscription_rejected') }}</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_card_subscription_rejected.content.support.title', {}, 'email_card_subscription_rejected') }}</h3>
+        <table style="width: 100%; border-spacing: 12px 0;">
+            <tr>
+                <td style="padding: 0; text-align: center;">
+                    <a href="{{ url('app_banking_card_index', {'_locale': user.language ?? 'fr'}) }}" 
+                       style="display: block; background: linear-gradient(135deg, #1976d2 0%, #2196f3 100%); color: white; text-decoration: none; padding: 16px 24px; border-radius: 8px; font-weight: 600; text-align: center; box-shadow: 0 3px 6px rgba(25, 118, 210, 0.4); font-size: 16px;">
+                        {{ tp('email_card_subscription_rejected.content.support.contact_button', {}, 'email_card_subscription_rejected') }}
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <p style="margin: 15px 0 0; font-size: 14px; color: #666; text-align: center;">
+            {{ tp('email_card_subscription_rejected.content.support.instruction', {}, 'email_card_subscription_rejected') }}
+        </p>
+    </div>
+
+    <p class="content-text">
+        {{ tp('email_card_subscription_rejected.content.apologize', {}, 'email_card_subscription_rejected') }}
+    </p>
+
+    <p class="footer-text">
+        {{ tp('email_card_subscription_rejected.content.footer', {}, 'email_card_subscription_rejected')|raw }}
+    </p>
+{% endblock %}

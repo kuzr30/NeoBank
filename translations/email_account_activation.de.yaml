@@ -1,0 +1,25 @@
+email_account_activation:
+  title: "Aktivieren Sie Ihr %company_name%-Konto"
+  content:
+    greeting: "Aktivieren Sie Ihr Konto, {firstName}!"
+    intro: "Vielen Dank für Ihre Anmeldung bei <strong>%company_name%</strong>. Um Ihre Registrierung abzuschließen und Ihr Konto zu sichern, müssen wir Ihre E-Mail-Adresse verifizieren."
+    activation_required:
+      title: "Aktivierung erforderlich"
+      description: "Klicken Sie auf die Schaltfläche unten, um Ihr Konto zu aktivieren und Zugang zu all unseren Bankdienstleistungen zu erhalten."
+    button_text: "Mein Konto aktivieren"
+    warning:
+      title: "⏰ Temporärer Link"
+      description: "Dieser Aktivierungslink ist nur <strong>24 Stunden</strong> gültig. Nach Ablauf dieser Frist müssen Sie eine neue Registrierungsanfrage stellen."
+    manual_link: "Falls die Schaltfläche nicht funktioniert, können Sie diesen Link kopieren und in Ihren Browser einfügen:"
+    success:
+      title: "Nach der Aktivierung"
+      description: "Sobald Ihr Konto aktiviert ist, erhalten Sie eine Willkommens-E-Mail und können sich sofort in Ihren persönlichen %company_name%-Bereich einloggen."
+    security_notice: "Falls Sie diese Registrierung nicht vorgenommen haben, ignorieren Sie diese E-Mail. Ohne Aktivierung wird kein Konto erstellt."
+    signature: "Mit freundlichen Grüßen,<br><strong>Das %company_name%-Team</strong>"
+  
+  # Messages de log pour le MessageHandler
+  logs:
+    sending: "Versendung der Kontoaktivierungs-E-Mail"
+    success: "Aktivierungs-E-Mail erfolgreich versendet"
+    error: "Fehler beim Versenden der Aktivierungs-E-Mail"
+    send_failed: "Versenden der Aktivierungs-E-Mail fehlgeschlagen"

@@ -1,0 +1,42 @@
+banking_transfer:
+  # Meta tags
+  meta:
+    title: "Nueva transferencia - %company_name%"
+    description: "Realice una transferencia bancaria con total seguridad con %company_name%"
+
+  # Navigation
+  nav:
+    dashboard: "Panel de control"
+    transfers: "Transferencias"
+    logout: "Cerrar sesión"
+
+  # Process Steps
+  steps:
+    details: "Detalles"
+    validation: "Validación"
+    confirmation: "Confirmación"
+
+  # Form Header
+  form:
+    title: "Nueva transferencia"
+    subtitle: "Transfiera dinero a una cuenta beneficiaria"
+
+  # Account Info
+  account:
+    available_balance: "Saldo disponible:"
+
+  # Form Fields
+  fields:
+    destination_account: "Cuenta beneficiaria"
+    amount: "Monto"
+    amount_placeholder: "0,00"
+    description: "Descripción (opcional)"
+    description_placeholder: "Motivo de la transferencia..."
+
+  # Actions
+  actions:
+    cancel: "Cancelar"
+    continue: "Continuar"
+
+  # Currency
+  currency: "€"

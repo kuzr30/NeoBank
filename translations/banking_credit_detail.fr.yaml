@@ -1,0 +1,56 @@
+banking_credit_detail:
+  # Meta tags
+  meta:
+    title: "Détails du crédit - %company_name%"
+    description: "Consultez les détails de votre demande de crédit"
+
+  # Page headers
+  page:
+    title: "Détails du crédit"
+    detail_title: "Détails de votre crédit du"
+    back_to_credits: "Retour aux crédits"
+    
+  # Sidebar - using banking_dashboard translations
+  sidebar:
+    my_accounts: "Mes Comptes"
+    quick_actions: "Actions Rapides"
+    no_account: "Aucun compte"
+    contact_advisor: "Contactez votre conseiller"
+    this_month: "ce mois"
+    
+  # Quick actions - using banking_dashboard translations
+  actions:
+    transfer: "Virement"
+    card_opposition: "Opposition carte"
+    rib_iban: "RIB/IBAN"
+    contact_us: "Nous contacter"
+    
+  # Credit details
+  credit:
+    application_number: "Demande n°"
+    accorded_amount: "Montant accordé"
+    duration: "Durée"
+    monthly_payment: "Mensualité"
+    total_cost: "Coût total du crédit"
+    beneficiary: "Bénéficiaire"
+    months: "mois"
+    
+  # Credit actions
+  credit_actions:
+    view_contract: "Voir le contrat"
+    download: "Télécharger"
+    
+  # Amortization table
+  amortization:
+    title: "Tableau d'amortissement"
+    subtitle: "Détail des {count} mensualités de votre crédit"
+    table:
+      month: "Mois"
+      date: "Date"
+      monthly_payment: "Mensualité"
+      principal: "Capital"
+      interest: "Intérêts"
+      remaining_capital: "Capital restant"
+      
+  # Currency
+  currency: "€"

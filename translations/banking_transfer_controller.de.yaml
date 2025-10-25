@@ -1,0 +1,24 @@
+# Traductions pour Banking/TransferController
+flash:
+  # Messages d'erreur
+  account_blocked_transfers: "Ihr Konto ist für Überweisungen gesperrt. Kontaktieren Sie die Verwaltung."
+  account_blocked: "Ihr Konto ist gesperrt. Kontaktieren Sie die Verwaltung."
+  no_source_account: "Kein Quellkonto verfügbar, um eine Überweisung durchzuführen."
+  invalid_security_token: "Ungültiger Sicherheitstoken."
+  transfer_cannot_be_cancelled: "Diese Überweisung kann nicht mehr storniert werden."
+  validation_error: "Fehler bei der Validierung: %error%."
+  cancellation_error: "Fehler bei der Stornierung: %error%."
+  invalid_validation_code: "Der eingegebene Validierungscode ist falsch."
+  
+  # Messages d'avertissement
+  register_beneficiary_first: "Sie müssen zuerst ein Empfängerkonto (IBAN) registrieren, um eine Überweisung durchzuführen."
+  kyc_required_transfers: "Sie müssen Ihre Identitätsprüfung (KYC) abschließen, um auf Überweisungen zugreifen zu können."
+  
+  # Messages d'information
+  transfer_no_longer_pending: "Diese Überweisung wartet nicht mehr auf Validierung."
+  transfer_in_progress: "Ihre Überweisung wird ausgeführt."
+  
+  # Messages de succès
+  transfer_cancelled_success: "Überweisung erfolgreich storniert."
+  transfer_created_success: "Überweisung erfolgreich erstellt und wartet auf Validierung."
+  transfer_validation_success: "Code erfolgreich validiert."

@@ -1,0 +1,44 @@
+email_kyc_submission_admin_notification:
+  title: "Nieuwe KYC-indiening te onderzoeken - %company_name% Admin"
+  tagline: "%company_name% Administratie"
+  
+  content:
+    page_title: "Nieuwe identiteitsverificatieaanvraag"
+    greeting: "Hallo <strong>%firstName%</strong>,"
+    
+    priority:
+      title: "Onderzoek vereist - Normale prioriteit"
+      message: "Een nieuwe KYC (Know Your Customer) verificatieaanvraag is ingediend door een klant en vereist uw validatie voor volledige activering van bankdiensten."
+    
+    client_profile:
+      title: "Klantprofiel"
+      identity: "Identiteit"
+      email: "E-mailadres"
+      account_status: "Accountstatus"
+      pending_status: "Wachtend op verificatie"
+      submission_date: "Indieningsdatum"
+    
+    documents:
+      title: "Door de klant verstrekte documenten"
+      downloaded_status: "Gedownload"
+    
+    actions:
+      title: "Beschikbare acties"
+      examine_request: "Aanvraag onderzoeken"
+      kyc_dashboard: "KYC-dashboard"
+      processing_time: "Aanbevolen verwerkingstijd: <strong>24-48 uur</strong>"
+    
+    checklist:
+      title: "Verificatie checklist"
+      verify_authenticity: "□ Echtheid van identiteitsdocumenten verifiëren"
+      check_consistency: "□ Consistentie van persoonlijke informatie controleren"
+      regulatory_checks: "□ Regelgevingscontroles AML/KYC uitvoeren"
+      document_decision: "□ Beslissing documenteren in het beheersysteem"
+    
+    support_info: "Voor vragen betreffende deze verificatieprocedure, neem contact op met het compliance team."
+    footer: "<strong>%company_name% - Compliance Afdeling</strong><br>Automatische melding van KYC-beheersysteem"
+
+  logs:
+    kyc_admin_notification_sent: "KYC-adminmelding verzonden voor indiening van %firstName% %lastName%"
+    kyc_admin_notification_failed: "Fout bij het verzenden van KYC-adminmelding"
+    kyc_pending_review: "KYC-indiening van %firstName% %lastName% wacht op onderzoek"

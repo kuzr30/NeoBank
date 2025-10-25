@@ -1,0 +1,1116 @@
+/* Cards Component - BEM CSS */
+
+/* Block: card-section */
+.card-section {
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.card-section__header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.card-section__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-section__subtitle {
+    font-size: 1rem;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.card-section__icon {
+    font-size: 1.5rem;
+    color: #3b82f6;
+}
+
+/* User Cards Section */
+.user-cards-section {
+    margin-bottom: 3rem;
+}
+
+.user-cards-section__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Available Cards Section */
+.available-cards-section {
+    margin-bottom: 3rem;
+}
+
+.available-cards-section__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Card Types Grid */
+.card-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Card Type Component */
+.card-type {
+    position: relative;
+    background: #ffffff;
+    border: 2px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card-type:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: #3b82f6;
+}
+
+.card-type--featured {
+    border-color: #f59e0b;
+    background: linear-gradient(135deg, #fffbeb, #ffffff);
+    transform: scale(1.05);
+}
+
+.card-type--featured:hover {
+    transform: scale(1.05) translateY(-8px);
+}
+
+/* Badge */
+.card-type__badge {
+    position: absolute;
+    top: -10px;
+    right: 1rem;
+    background: #3b82f6;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-type__badge--popular {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.card-type__badge--premium {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+/* Card Preview */
+.card-type__preview {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card-type__card {
+    width: 280px;
+    height: 176px;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-type__card--classic {
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+}
+
+.card-type__card--gold {
+    background: linear-gradient(135deg, #d4af37, #ffd700);
+}
+
+.card-type__card--platinum {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+}
+
+.card-type__card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-type__card-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.card-type__card-logo i {
+    font-size: 1.25rem;
+}
+
+.card-type__card-type {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: right;
+}
+
+.card-type__card-chip {
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card-type__chip {
+    width: 40px;
+    height: 30px;
+    background: linear-gradient(45deg, #ffd700, #f0c814);
+    border-radius: 4px;
+    position: relative;
+}
+
+.card-type__chip::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    background: linear-gradient(135deg, #f0c814, #ffd700);
+    border-radius: 2px;
+}
+
+.card-type__card-number {
+    color: white;
+    font-family: 'Courier New', monospace;
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* Card Content */
+.card-type__content {
+    text-align: center;
+}
+
+.card-type__name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.card-type__price {
+    margin-bottom: 1.5rem;
+}
+
+.card-type__amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3b82f6;
+}
+
+.card-type__period {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-left: 0.5rem;
+}
+
+.card-type__features {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.card-type__feature {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+
+.card-type__feature i {
+    color: #10b981;
+    font-size: 1rem;
+}
+
+.card-type__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+}
+
+.card-type__cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.card-type__cta--featured {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.card-type__cta--featured:hover {
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+}
+
+/* Block: bank-card (for existing user cards) */
+.bank-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    color: white;
+    position: relative;
+    margin-bottom: 1rem;
+    min-height: 12rem;
+    overflow: hidden;
+}
+
+.bank-card--visa {
+    background: linear-gradient(135deg, #1a365d 0%, #2d5aa0 100%);
+}
+
+.bank-card--mastercard {
+    background: linear-gradient(135deg, #eb4d4b 0%, #6c5ce7 100%);
+}
+
+.bank-card--blocked {
+    opacity: 0.6;
+    position: relative;
+}
+
+.bank-card--blocked::after {
+    content: "BLOQUÉE";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    background: rgba(239, 68, 68, 0.9);
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1.125rem;
+    letter-spacing: 2px;
+}
+
+.bank-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.bank-card__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.bank-card__brand-icon {
+    font-size: 1.5rem;
+}
+
+.bank-card__status {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.bank-card__status--active {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+}
+
+.bank-card__status--blocked {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+.bank-card__status--expired {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+}
+
+.bank-card__number {
+    font-family: 'Courier New', monospace;
+    font-size: 1.125rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.bank-card__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.bank-card__info {
+    display: flex;
+    gap: 1rem;
+}
+
+.bank-card__label {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    margin-bottom: 0.25rem;
+}
+
+.bank-card__value {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.bank-card__actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.bank-card__action {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.bank-card__action:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+    color: white;
+    text-decoration: none;
+}
+
+.bank-card__action--danger {
+    background: rgba(239, 68, 68, 0.8);
+    border-color: rgba(239, 68, 68, 0.6);
+}
+
+.bank-card__action--danger:hover {
+    background: rgba(239, 68, 68, 1);
+}
+
+.bank-card__action--warning {
+    background: rgba(245, 158, 11, 0.8);
+    border-color: rgba(245, 158, 11, 0.6);
+}
+
+.bank-card__action--warning:hover {
+    background: rgba(245, 158, 11, 1);
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Card Info Section */
+.card-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e5e7eb;
+}
+
+.card-info__item {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.card-info__icon {
+    font-size: 2.5rem;
+    color: #3b82f6;
+    margin-bottom: 1rem;
+}
+
+.card-info__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.card-info__text {
+    color: #6b7280;
+    line-height: 1.6;
+    font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-section {
+        padding: 1rem;
+    }
+    
+    .card-section__title {
+        font-size: 1.5rem;
+    }
+    
+    .card-types-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .card-type--featured {
+        transform: none;
+    }
+    
+    .card-type--featured:hover {
+        transform: translateY(-8px);
+    }
+    
+    .card-type__card {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .bank-card__actions {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    
+    .bank-card__action {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-section__header {
+        text-align: left;
+    }
+    
+    .card-section__title {
+        font-size: 1.25rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    
+    .card-type__badge {
+        position: static;
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+    
+    .card-type__card {
+        height: 140px;
+        padding: 1rem;
+    }
+    
+    .card-type__card-number {
+        font-size: 1rem;
+    }
+}
+
+/* Subscription Form Styles */
+.selected-card-info {
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.selected-card-info__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.selected-card-info__title i {
+    color: #10b981;
+}
+
+.selected-card-preview {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.selected-card-details h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.selected-card-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.selected-card-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+
+.selected-card-benefits i {
+    color: #10b981;
+    font-size: 1rem;
+}
+
+.subscription-form {
+    background: #ffffff;
+    border: 2px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.subscription-form__form {
+    margin-bottom: 2rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group--full {
+    grid-column: 1 / -1;
+}
+
+.form-group__label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-group__label i {
+    color: #3b82f6;
+}
+
+.form-group__select,
+.form-group__textarea {
+    padding: 0.75rem;
+    border: 2px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    transition: border-color 0.3s ease;
+    background: #ffffff;
+}
+
+.form-group__select:focus,
+.form-group__textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-group__help {
+    font-size: 0.75rem;
+    color: #6b7280;
+    line-height: 1.4;
+}
+
+.selected-card-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 0.5rem;
+}
+
+.selected-card-type__badge {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.badge {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge--classic {
+    background: #3b82f6;
+    color: white;
+}
+
+.badge--gold {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+}
+
+.badge--platinum {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: white;
+}
+
+.price {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.change-card-type {
+    color: #3b82f6;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: color 0.3s ease;
+}
+
+.change-card-type:hover {
+    color: #1d4ed8;
+    text-decoration: none;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.radio-option {
+    position: relative;
+}
+
+.radio-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.radio-option__label {
+    display: block;
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.radio-option input[type="radio"]:checked + .radio-option__label {
+    border-color: #3b82f6;
+    background: #eff6ff;
+}
+
+.radio-option__title {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+}
+
+.radio-option__description {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #e5e7eb;
+}
+
+.form-actions__submit {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.form-actions__submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.form-actions__cancel {
+    color: #6b7280;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: color 0.3s ease;
+    font-size: 0.875rem;
+}
+
+.form-actions__cancel:hover {
+    color: #374151;
+    text-decoration: none;
+}
+
+.subscription-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e5e7eb;
+}
+
+.subscription-info__section {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e2e8f0;
+}
+
+.subscription-info__title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.subscription-info__title i {
+    color: #3b82f6;
+}
+
+.subscription-info__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.subscription-info__list li {
+    font-size: 0.875rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.subscription-info__list li::before {
+    content: '•';
+    color: #3b82f6;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Card Info Summary */
+.card-info-summary {
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.875rem;
+}
+
+.info-value {
+    color: #1f2937;
+    font-size: 0.875rem;
+}
+
+/* Affichage du compte */
+.account-display {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.account-display__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.account-display__number {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #212529;
+}
+
+.account-display__type {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.account-display__balance {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #28a745;
+}
+
+/* Alerte d'erreur */
+.alert {
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.alert--error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+@media (max-width: 768px) {
+    .selected-card-preview {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .form-actions__submit {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Banking Subscription Page Styles */
+.banking-subscription-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem 0;
+}
+
+.banking-subscription-page .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.subscription-header {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.breadcrumb__link {
+    color: #3b82f6;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb__link:hover {
+    color: #1d4ed8;
+    text-decoration: none;
+}
+
+.breadcrumb__separator {
+    color: #9ca3af;
+}
+
+.breadcrumb__current {
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.subscription-header__content {
+    text-align: center;
+}
+
+.subscription-header__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.subscription-header__title i {
+    color: #3b82f6;
+}
+
+.subscription-header__subtitle {
+    font-size: 1.125rem;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.subscription-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Override card-section styles for the subscription page */
+.subscription-content .card-section {
+    background: transparent;
+    box-shadow: none;
+    margin-bottom: 0;
+}
+
+.subscription-content .card-section__header {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .banking-subscription-page {
+        padding: 1rem 0;
+    }
+    
+    .subscription-header {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .subscription-header__title {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .breadcrumb {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

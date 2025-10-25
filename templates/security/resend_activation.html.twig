@@ -1,0 +1,241 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'security.resend_activation.title'|trans({}, 'security') }} - SEDEF BANK{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+     
+        .resend-activation-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .activation-form-container {
+            max-width: 500px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+            padding: 48px;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        .activation-form-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--color-primary);
+        }
+
+        .activation-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .activation-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 28px;
+        }
+
+        .activation-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .activation-subtitle {
+            font-size: 16px;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        .activation-form-group {
+            margin-bottom: 24px;
+        }
+
+        .activation-form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #374151;
+            font-size: 14px;
+            letter-spacing: 0.025em;
+        }
+
+        .activation-form-input {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: all 0.2s ease;
+            background: #fafafa;
+        }
+
+        .activation-form-input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: #ffffff;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .activation-btn {
+            width: 100%;
+            padding: 16px 24px;
+            background: var(--color-primary);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .activation-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .activation-btn:hover::before {
+            left: 100%;
+        }
+
+        .activation-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .activation-btn:active {
+            transform: translateY(0);
+        }
+
+        .activation-btn--secondary {
+            background: #f8f9fa;
+            color: #6b7280;
+            border: 2px solid #e5e7eb;
+        }
+
+        .activation-btn--secondary:hover {
+            background: #ffffff;
+            border-color: #d1d5db;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .activation-btn-icon {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .resend-activation-page {
+                padding: 16px;
+            }
+            
+            .activation-form-container {
+                padding: 32px 24px;
+            }
+            
+            .activation-title {
+                font-size: 24px;
+            }
+            
+            .activation-icon {
+                width: 56px;
+                height: 56px;
+                font-size: 24px;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+
+<div class="resend-activation-page">
+    <div class="activation-form-container">
+        <div class="activation-header">
+            <div class="activation-icon">
+                📧
+            </div>
+            <h1 class="activation-title">{{ 'security.resend_activation.title'|trans({}, 'security') }}</h1>
+            <p class="activation-subtitle">
+                {{ 'security.resend_activation.subtitle'|trans({}, 'security') }}
+            </p>
+        </div>
+        
+        <form method="post">
+            <div class="activation-form-group">
+                <label for="email" class="activation-form-label">{{ 'security.resend_activation.email_label'|trans({}, 'security') }}</label>
+                <input type="email" 
+                       id="email" 
+                       name="email" 
+                       class="activation-form-input" 
+                       placeholder="{{ 'security.resend_activation.email_placeholder'|trans({}, 'security') }}"
+                       required>
+            </div>
+            
+            <button type="submit" class="activation-btn">
+                <svg class="activation-btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                </svg>
+                {{ 'security.resend_activation.submit_button'|trans({}, 'security') }}
+            </button>
+            
+            <a href="{{ path('app_account_activation_notice', {'_locale': app.request.locale}) }}" class="activation-btn activation-btn--secondary">
+                <svg class="activation-btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                </svg>
+                {{ 'security.resend_activation.back_button'|trans({}, 'security') }}
+            </a>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

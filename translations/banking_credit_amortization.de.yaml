@@ -1,0 +1,31 @@
+banking_credit_amortization:
+  header:
+    title: "Tilgungsplan"
+  
+  navigation:
+    back_to_credits: "Zurück zu den Krediten"
+  
+  loan_info:
+    initial_amount: "Anfangsbetrag"
+    interest_rate: "Zinssatz"
+    duration: "Laufzeit"
+    monthly_payment: "Monatsrate"
+    months: "Monate"
+  
+  summary:
+    remaining_capital: "Verbleibendes Kapital"
+    remaining_payments: "Verbleibende Raten"
+  
+  table:
+    title: "Detaillierter Tilgungsplan"
+    payment_number: "Rate"
+    date: "Datum"
+    monthly_payment: "Monatsrate"
+    principal: "Kapital"
+    interest: "Zinsen"
+    remaining_balance: "Verbleibendes Kapital"
+    total: "Gesamt"
+  
+  actions:
+    print: "Drucken"
+    export_pdf: "PDF exportieren"

@@ -1,0 +1,345 @@
+credit_contract:
+  # Dokumenttitel
+  title: "Kreditvertrag Nr. %reference_number%"
+  
+  # Kopfzeile
+  header:
+    repeated_header: "Kopfzeile auf jeder Seite wiederholt"
+    logo_alt: "%company_name% Logo"
+    contract_number: "Vertrag Nr.%reference_number%"
+    
+  # Fußzeile
+  footer:
+    company_description: "Finanzierungsgesellschaft zugelassen von der ACPR (Behörde für Aufsicht und Abwicklung)"
+    headquarters: "Geschäftssitz"
+    country: "Frankreich"
+    phone: "Tel"
+    email: "Email"
+    credit_warning: "EIN KREDIT VERPFLICHTET SIE UND MUSS ZURÜCKGEZAHLT WERDEN. PRÜFEN SIE IHRE RÜCKZAHLUNGSFÄHIGKEIT, BEVOR SIE SICH VERPFLICHTEN."
+    confidential_notice: "Vertrauliches Dokument - Jede Vervielfältigung ist ohne schriftliche Genehmigung streng verboten"
+    
+  # Hauptinhalt
+  main:
+    detailed_info_first_page: "Detaillierte Informationen erste Seite"
+    logo_alt: "%company_name% Logo"
+    document_title_comment: "Dokumenttitel"
+    
+  # Vertragstitel nach Typ
+  contract_titles:
+    immobilier: "IMMOBILIENKREDITVERTRAG"
+    auto: "AUTOKREDITVERTRAG"
+    consommation: "VERBRAUCHERKREDITVERTRAG"
+    travaux: "BAUWERKSKREDITVERTRAG"
+    professionnel: "GESCHÄFTSKREDITVERTRAG"
+    personal: "PERSÖNLICHER DARLEHENSVERTRAG"
+    home_improvement: "WOHNUNGSVERBESSERUNGSKREDITVERTRAG"
+    debt_consolidation: "KREDITKONSOLIDIERUNGSVERTRAG"
+    mortgage: "HYPOTHEKENKREDITVERTRAG"
+    renouvelable: "REVOLVIERENDER KREDITVERTRAG"
+    etudiant: "STUDIENKREDITVERTRAG"
+    relais: "ÜBERBRÜCKUNGSKREDITVERTRAG"
+    microcredit: "MIKROKREDITVERTRAG"
+    leasing: "LEASINGVERTRAG"
+    voyage: "REISEKREDITVERTRAG"
+    default: "PERSÖNLICHER DARLEHENSVERTRAG"
+    
+  # Kapitel I - Vertragsparteien
+  chapter_one:
+    title: "Kapitel I - Die Vertragsparteien"
+    lender_header: "Der Kreditgeber"
+    borrower_header: "Der Kreditnehmer"
+    company_type: "Finanzierungsgesellschaft"
+    share_capital: "Grundkapital: %amount% €"
+    head_office: "Geschäftssitz:"
+    represented_by: "Vertreten durch seinen Geschäftsführer"
+    hereinafter_lender: "Nachfolgend genannt \"Der Kreditgeber\""
+    hereinafter_borrower: "Nachfolgend genannt \"Der Kreditnehmer\""
+    residing_at: "Wohnhaft in:"
+    address_not_provided: "[Adresse nicht angegeben]"
+    postal_code_city: "[Postleitzahl] [Stadt]"
+    profession: "Beruf: %job_title%"
+    born_on: "Geboren am: %birth_date%"
+    phone: "Telefon: %phone%"
+    email: "Email: %email%"
+    parties_agreed: "Die Parteien haben folgendes vereinbart und festgelegt"
+    
+  # Kapitel II - Gegenstand und Art des Vertrags
+  chapter_two:
+    title: "Kapitel II - Gegenstand und Art des Vertrags"
+    article_1_title: "Artikel 1 - Gegenstand des Vertrags"
+    article_1_intro: "Der Kreditgeber gewährt dem Kreditnehmer, der akzeptiert, einen"
+    credit_types:
+      immobilier: "Immobilienkredit"
+      auto: "Autokredit"
+      consommation: "Verbraucherkredit"
+      travaux: "Bauwerkskredit"
+      professionnel: "Geschäftskredit"
+      personal: "persönliches Darlehen"
+      home_improvement: "Kredit für Wohnungsverbesserung"
+      debt_consolidation: "Kreditkonsolidierung"
+      mortgage: "Hypothekenkredit"
+      renouvelable: "revolvierender Kredit"
+      etudiant: "Studienkredit"
+      relais: "Überbrückungskredit"
+      microcredit: "Mikrokredit"
+      leasing: "Leasing"
+      voyage: "Reisekredit"
+      default: "persönliches Darlehen"
+    article_1_suffix: "mit Zinsen in einem nachfolgend festgelegten Betrag."
+    article_1_regulation: "Dieses Darlehen unterliegt den Bestimmungen des Bürgerlichen Gesetzbuchs (Artikel 1905 bis 1914) und des Verbraucherschutzgesetzes."
+    article_1_purpose: "Dieses Darlehen dient dazu, das Konto des Kreditnehmers im Rahmen eines persönlichen Investitionsprojekts auszugleichen."
+    
+    article_2_title: "Artikel 2 - Rechtliche Art"
+    article_2_nature: "Es handelt sich um einen persönlichen Darlehensvertrag mit bestimmter Laufzeit, zu festem Zinssatz, rückzahlbar in konstanten monatlichen Raten."
+    article_2_commitment: "Dieser Vertrag stellt eine feste und endgültige Verpflichtung beider Parteien dar."
+    article_2_funds_purpose: "Verwendungszweck der Mittel:"
+    article_2_funds_restriction: "Die zur Verfügung gestellten Mittel dürfen nicht für illegale, spekulative oder gegen die öffentliche Ordnung verstoßende Zwecke verwendet werden."
+    
+    article_3_title: "Artikel 3 - Erklärungen und Garantien des Kreditnehmers"
+    article_3_intro: "Der Kreditnehmer erklärt und garantiert, dass:"
+    article_3_declaration_1: "Alle bei der Kreditanfrage bereitgestellten Informationen richtig und vollständig sind."
+    article_3_declaration_2: "Er über die rechtliche Befugnis verfügt, die für diese Verpflichtung erforderlich ist."
+    article_3_declaration_3: "Er sich nicht in einer Situation der Überschuldung oder eines Insolvenzverfahrens befindet."
+    article_3_declaration_4: "Kein Bankverbot oder Eintragung gegen ihn besteht."
+    article_3_declaration_5: "Seine finanzielle Situation es ihm ermöglicht, die Raten dieses Darlehens zu erfüllen."
+    
+  # Kapitel III - Finanzielle Bedingungen
+  chapter_three:
+    title: "Kapitel III - Finanzielle Bedingungen des Darlehens"
+    table_characteristics: "Merkmale"
+    table_values: "Werte"
+    table_observations: "Bemerkungen"
+    
+    credit_type_label: "Kredittyp"
+    credit_type_observation: "Art der Finanzierung"
+    loan_amount_label: "Betrag des geliehenen Kapitals"
+    loan_amount_observation: "Zur Verfügung gestelltes Kapital"
+    loan_duration_label: "Laufzeit des Darlehens"
+    loan_duration_observation: "Monatliche Raten"
+    interest_rate_label: "Nominaler Zinssatz"
+    interest_rate_observation: "Fester Zinssatz"
+    annual_rate: "% pro Jahr"
+    global_rate_label: "Effektiver Jahreszins (EJZ)"
+    global_rate_observation: "Inklusive aller Pflichtkosten"
+    insurance_label: "Fakultative Versicherung"
+    insurance_available: "Auf Anfrage verfügbar"
+    insurance_observation: "Tod/Invalidität/Arbeitsunfähigkeit"
+    monthly_payment_label: "Betrag der monatlichen Raten"
+    constant_payments: "konstante Raten"
+    total_cost_label: "Gesamtkosten des Kredits"
+    total_cost_observation: "Zinsen über die Gesamtlaufzeit"
+    
+    table_credit_types:
+      immobilier: "Immobilienkredit"
+      auto: "Autokredit"
+      consommation: "Verbraucherkredit"
+      travaux: "Bauwerkskredit"
+      professionnel: "Geschäftskredit"
+      personal: "Persönliches Darlehen"
+      home_improvement: "Wohnungsverbesserungskredit"
+      debt_consolidation: "Kreditkonsolidierung"
+      mortgage: "Hypothekenkredit"
+      renouvelable: "Revolvierender Kredit"
+      etudiant: "Studienkredit"
+      relais: "Überbrückungskredit"
+      microcredit: "Mikrokredit"
+      leasing: "Leasing"
+      voyage: "Reisekredit"
+      default: "Persönliches Darlehen"
+      
+    article_3_title: "Artikel 3 - Aufschiebende Bedingungen"
+    article_3_intro: "Dieser Vertrag wird unter folgenden aufschiebenden Bedingungen geschlossen:"
+    condition_1: "Überprüfung und Validierung der Identität des Kreditnehmers und seiner rechtlichen Befugnis."
+    condition_2: "Überprüfung der vom Kreditnehmer angegebenen finanziellen Situation (Gehaltsabrechnungen, Steuerbescheide, Kontoauszüge)."
+    condition_3: "Keine Eintragung im FICP (Datei der Zwischenfälle bei der Rückzahlung von Krediten an Privatpersonen)."
+    condition_4: "Kein Bankverbot oder Maßnahmen des Schutzes, der Reorganisation oder der gerichtlichen Liquidation."
+    condition_5: "Bestellung der geforderten Sicherheiten, gegebenenfalls."
+    condition_6: "Einhaltung der gesetzlichen Widerrufsfrist von 14 Tagen."
+    conditions_important: "Wichtig:"
+    conditions_nullity: "Die Nichtverwirklichung einer dieser Bedingungen führt zur automatischen Nichtigkeit des Vertrags ohne Entschädigung beider Seiten."
+    
+    article_4_title: "Artikel 4 - Modalitäten der Bereitstellung"
+    article_4_intro: "Vorbehaltlich der Verwirklichung der oben genannten aufschiebenden Bedingungen wird der Betrag von %amount% € dem Bankkonto des Kreditnehmers innerhalb von maximal 3 Werktagen nach folgendem gutgeschrieben:"
+    article_4_condition_1: "Endgültige Unterzeichnung dieses Vertrags durch beide Parteien"
+    article_4_condition_2: "Erhalt aller erforderlichen Belege"
+    article_4_condition_3: "Effektive Bestellung der geforderten Sicherheiten"
+    article_4_usage: "Der Kreditnehmer verpflichtet sich, diese Mittel gemäß dem erklärten Zweck des Darlehens zu verwenden."
+    payment_methods: "Modalitäten des Einzugs:"
+    sepa_payment: "Automatischer SEPA-Einzug am %day% jedes Monats. Bei unzureichender Deckung wird eine Zwischenfallgebühr von 20 € berechnet."
+    bank_account_label: "Für Einzüge bestimmtes Bankkonto:"
+    bank_establishment: "Bankinstitut:"
+    iban_label: "IBAN:"
+    iban_placeholder: "DE__ ____ ____ ____ ____ ____ ___ (Bei Unterzeichnung auszufüllen)"
+    bank_maintenance: "Der Kreditnehmer verpflichtet sich, dieses Bankkonto aktiv und ausreichend gedeckt zu halten, um die Einzüge zu den vereinbarten Fälligkeiten zu ermöglichen."
+    lender_right: "Der Kreditgeber behält sich das Recht vor, die Bereitstellung von Mitteln bei Nichteinhaltung der Vertragsbedingungen zu verweigern."
+    
+    insurance_title: "Artikel 4 - Kreditnehmerversicherung"
+    insurance_general_principle: "4.1 - Allgemeines Prinzip"
+    insurance_coverage: "Die Kreditnehmerversicherung deckt die Risiken von Tod, vorübergehender vollständiger Arbeitsunfähigkeit (VVA), dauerhafter vollständiger Invalidität (DVI) und dauerhafter teilweiser Invalidität (DTI) ab. Diese Deckung schützt den Kreditnehmer und seine Rechtsnachfolger bei Unmöglichkeit der Rückzahlung aufgrund dieser Ereignisse."
+    insurance_choice: "4.2 - Wahl des Kreditnehmers"
+    insurance_question: "Möchten Sie eine Kreditnehmerversicherung abschließen, um die Rückzahlung Ihres Kredits zu garantieren?"
+    
+    insurance_decision_title: "IHRE ENTSCHEIDUNG:"
+    insurance_decision_intro: "Mit Kenntnis der Sachlage, nach vollständiger Information:"
+    insurance_yes: "JA, ich schließe eine Kreditnehmerversicherung ab"
+    insurance_no: "NEIN, ich lehne die Versicherung in voller Kenntnis der Risiken ab"
+    insurance_legal_info: "Rechtliche Information:"
+    insurance_legal_text: "Gemäß dem Lagarde-Gesetz haben Sie das Recht, Ihren Versicherer frei zu wählen. Sie können auch jedes Jahr am Jahrestag die Versicherung wechseln (Hamon-Gesetz)."
+    
+  # Kapitel IV - Rückzahlungsmodalitäten
+  chapter_four:
+    title: "Kapitel IV - Rückzahlungsmodalitäten"
+    repayment_schedule: "Tilgungsplan"
+    repayment_item_1: "Das Darlehen wird durch %duration% konstante monatliche Raten von je %amount% € getilgt."
+    repayment_item_2: "Die erste Rate wird am %first_date% eingezogen."
+    repayment_item_3: "Die letzte Rate wird am %last_date% eingezogen."
+    repayment_item_4: "Der Einzug erfolgt automatisch vom durch den Kreditnehmer bestimmten Bankkonto per SEPA-Mandat."
+    repayment_item_5: "Bei Ablehnung des Einzugs wird der Kreditnehmer innerhalb von 48 Stunden informiert und muss seine Situation innerhalb von 10 Werktagen regulieren."
+    repayment_item_6: "Eine Zwischenfallgebühr von 20 € wird für jeden abgelehnten Einzug wegen unzureichender Deckung berechnet."
+    
+    early_repayment_title: "Vorzeitige Rückzahlung"
+    early_repayment_right: "Der Kreditnehmer hat die Möglichkeit, das verbleibende Kapital ganz oder teilweise vorzeitig zurückzuzahlen."
+    early_repayment_minimum: "Teilweise vorzeitige Rückzahlungen können nicht unter %amount% € liegen, es sei denn, es handelt sich um den Saldo des Darlehens."
+    early_repayment_indemnity: "Eine Vorfälligkeitsentschädigung kann erhoben werden, gleich einem Quartal Zinsen des zurückgezahlten Betrags, ohne %rate%% des verbleibenden Kapitals überschreiten zu können."
+    
+  # Kapitel V - Verpflichtungen und Garantien
+  chapter_five:
+    title: "Kapitel V - Verpflichtungen und Garantien"
+    borrower_obligations_title: "Verpflichtungen des Kreditnehmers"
+    obligation_1: "Den vereinbarten Tilgungsplan gewissenhaft einhalten."
+    obligation_2: "Den Kreditgeber unverzüglich über jede Änderung seiner persönlichen, beruflichen oder finanziellen Situation informieren."
+    obligation_3: "Eine Versicherung aufrechterhalten, die die Risiken von Tod und Invalidität abdeckt, falls abgeschlossen."
+    obligation_4: "Keine anderen Darlehen ohne vorherige Zustimmung des Kreditgebers eingehen, wenn der Gesamtbetrag 33% der Nettoeinkünfte überschreitet."
+    obligation_5: "Ein aktives und ausreichend gedecktes Bankkonto für automatische Einzüge unterhalten."
+    obligation_6: "Jede Adressänderung innerhalb von 30 Tagen schriftlich per Einschreiben mitteilen."
+    
+    guarantees_title: "Geforderte Garantien"
+    guarantees_intro: "Um die ordnungsgemäße Rückzahlung dieses Darlehens zu garantieren, kann der Kreditnehmer verpflichtet werden, gemäß den vom Kreditgeber festgelegten Bedingungen zu stellen:"
+    guarantee_1: "Eine Bank- oder Personalbürgschaft in Höhe von 10% des geliehenen Betrags, also %amount% €."
+    guarantee_2: "Diese Garantie wird von einem zugelassenen Finanzinstitut oder einem vom Kreditgeber akzeptierten solventen Dritten erbracht."
+    
+  # Kapitel VI - Fälle der Fälligkeit und Sanktionen
+  chapter_six:
+    title: "Kapitel VI - Fälle der Fälligkeit und Sanktionen"
+    early_demandability_title: "Vorzeitige Fälligkeit"
+    early_demandability_intro: "Alle vom Kreditnehmer geschuldeten Beträge werden sofort fällig, ohne vorherige Mahnung, in folgenden Fällen:"
+    demandability_1: "Nichtzahlung einer Rate zu ihrem Termin;"
+    demandability_2: "Nichterfüllung einer der vertraglichen Verpflichtungen;"
+    demandability_3: "Falsche Erklärung oder Verschweigung wichtiger Informationen;"
+    demandability_4: "Insolvenzverfahren (Sanierung, gerichtliche Liquidation);"
+    demandability_5: "Tod des Kreditnehmers (außer gegenteilige Bestimmungen);"
+    demandability_6: "Erhebliche Situationsänderung ohne vorherige Information."
+    
+    penalties_title: "Strafen und Entschädigungen"
+    delay_penalty: "Verzugsstrafe: %rate%% pro Monat Verzug auf die geschuldeten Beträge."
+    recovery_penalty: "Pauschalentschädigung für Einziehung: 20 € pro unbezahlte Rate."
+    early_demandability_penalty: "Vorzeitige Fälligkeitsentschädigung: %rate%% des verbleibenden Kapitals."
+    
+  # Kapitel VII - Verschiedene Bestimmungen
+  chapter_seven:
+    title: "Kapitel VII - Verschiedene Bestimmungen"
+    domicile_title: "Domizilwahl"
+    domicile_intro: "Für die Ausführung der vorliegenden und ihrer Folgen wählen die Parteien Domizil:"
+    lender_domicile: "Der Kreditgeber:"
+    borrower_domicile: "Der Kreditnehmer:"
+    address_not_provided: "[Adresse nicht angegeben]"
+    
+    # Verbleibende Abschnitte und abschließende Anerkennungen
+    acknowledgment_title: "Ich habe Kenntnis genommen von:"
+    acknowledgment_1: "Den Modalitäten der vorzeitigen Rückzahlung"
+    acknowledgment_2: "Den Folgen eines Zahlungsausfalls"
+    acknowledgment_3: "Den Kontakten bei finanziellen Schwierigkeiten"
+    acknowledgment_4: "Ich akzeptiere alle Bedingungen dieses Vertrags"
+    
+    # Unterschriften
+    borrower_signature: "Der Kreditnehmer"
+    lender_signature: "Der Kreditgeber"
+    general_director: "Der Geschäftsführer"
+    duly_authorized: "Ordnungsgemäß bevollmächtigt für die vorliegenden"
+    signature_date: "Datum: ____/____/________"
+    signature_mention: "Unterschrift vorangestellt mit der Erwähnung"
+    signature_approval: "\"Gelesen und genehmigt, einverstanden\""
+    
+    preteur: "Der Kreditgeber"
+    emprunteur: "Der Kreditnehmer"
+    directeur_general: "Der Geschäftsführer"
+    habilite: "Ordnungsgemäß bevollmächtigt für die vorliegenden"
+    
+    # Bankinformationen
+    code_bic: "BIC-Code:"
+    completer_signature: "(Bei Unterzeichnung auszufüllen)"
+    informations_sepa: "Diese Informationen werden bei der Unterzeichnung des Vertrags oder durch separates SEPA-Mandat ausgefüllt."
+    
+    # Kosten und Rechte
+    frais_enregistrement: "Die Kosten und Rechte für die Registrierung dieses Vertrags belaufen sich auf %montant% und gehen zu Lasten des Kreditnehmers."
+    frais_recouvrement: "Die Einziehungskosten bei Zahlungsausfall werden ebenfalls vom Kreditnehmer getragen."
+    
+    # Recht und Gerichtsbarkeit
+    contrat_droit_francais: "Dieser Vertrag unterliegt französischem Recht."
+    competence_tribunaux: "Bei Streitigkeiten und nach Ausschöpfung des gütlichen Weges wird ausschließliche Zuständigkeit den Gerichten von Paris zugesprochen."
+    
+    # Mediation und DSGVO
+    mediation_title: "Mediation:"
+    mediation_content: "Vor jedem gerichtlichen Vorgehen verpflichten sich die Parteien, eine gütliche Lösung zu suchen. Der Kreditnehmer kann den Mediator der ACPR oder den Bankmediator der ASF anrufen."
+    rgpd_title: "Schutz personenbezogener Daten (DSGVO)"
+    rgpd_intro: "Gemäß der Datenschutz-Grundverordnung (DSGVO) und dem Gesetz über Informatik und Freiheiten:"
+    rgpd_donnees_collectees: "Die gesammelten Daten sind für die Vertragserfüllung und die gesetzlichen Verpflichtungen des Kreditgebers erforderlich."
+    rgpd_transmission: "Sie können an Kontrollorgane übermittelt werden (ACPR, Banque de France, FICP, FCC)."
+    rgpd_droits_emprunteur: "Der Kreditnehmer verfügt über ein Recht auf Zugang, Berichtigung, Löschung und Übertragbarkeit seiner Daten."
+    rgpd_conservation: "Die Daten werden 10 Jahre nach Beendigung des Vertrags aufbewahrt."
+    
+    # Widerrufsrecht
+    retractation_title: "WIDERRUFSRECHT (Artikel L.311-15 bis L.311-18 des Verbraucherschutzgesetzes)"
+    retractation_important: "WICHTIG:"
+    retractation_delai: "Der Kreditnehmer verfügt über eine Frist von 14 Kalendertagen, um sein Widerrufsrecht ohne Grund oder Strafe auszuüben."
+    retractation_debut: "Diese Frist läuft ab dem Datum der Unterzeichnung dieses Vertrags."
+    retractation_notification: "Der Widerruf muss per Einschreiben mit Rückschein an die Adresse des Kreditgebers gemeldet werden."
+    retractation_restitution: "Bei Widerruf verpflichtet sich der Kreditnehmer, die bereits gezahlten Mittel innerhalb von 30 Tagen zurückzuerstatten, erhöht um die aufgelaufenen Zinsen zum vertraglichen Satz."
+    
+    # Andere Bestimmungen
+    modification_echeances: "Der Betrag der Raten (vorbehaltlich der Annahme durch den Kreditgeber)"
+    cession_creance_title: "Forderungsabtretung:"
+    cession_creance_content: "Der Kreditgeber behält sich das Recht vor, seine Forderungen ganz oder teilweise an einen Dritten abzutreten (Finanzinstitut, Inkassounternehmen usw.), vorbehaltlich vorheriger Information des Kreditnehmers per Einschreiben mit Rückschein, mindestens 30 Tage vor der tatsächlichen Abtretung."
+    cession_information: "Bei Abtretung wird der Kreditnehmer über die Kontaktdaten des neuen Gläubigers und die Rückzahlungsmodalitäten informiert, die unverändert bleiben, außer bei anderslautender Vereinbarung."
+    frais_modification_title: "Änderungskosten:"
+    frais_modification_content: "Jede Änderung dieses Vertrags führt zu Bearbeitungskosten von 50 € zu Lasten des Kreditnehmers, außer gesetzliche Bestimmung anders."
+    
+    # Schlussklausel
+    contrat_effet: "Dieser Vertrag tritt ab seiner Unterzeichnung durch beide Parteien in Kraft. Der Kreditnehmer verfügt über eine gesetzliche Widerrufsfrist und muss alle Bedingungen zur Kenntnis nehmen, bevor er sich endgültig verpflichtet."
+    
+    # Abschnitt Beschwerde und Änderung
+    procedure_reclamation: "Beschwerdeverfahren"
+    service_clientele_title: "Kundenservice:"
+    service_clientele_content: "Bei Schwierigkeiten kontaktieren Sie unseren Kundenservice unter %phone% oder per Email: %email%"
+    mediation_persistant: "Mediation: Bei anhaltendem Streit können Sie die Association Française des Sociétés Financières (ASF) anrufen"
+    modification_contrat: "Jede Änderung dieses Vertrags muss Gegenstand einer schriftlichen Ergänzung sein, von beiden Parteien unterzeichnet und datiert."
+    duree_pret_modification: "Die Laufzeit des Darlehens (Verlängerung oder Verkürzung)"
+    modalites_remboursement: "Die Rückzahlungsmodalitäten"
+    garanties_apportees: "Die erbrachten Garantien"
+    
+    # Kapitel VIII
+    chapitre_huit_title: "Kapitel VIII - Modalitäten der Unterzeichnung und des Inkrafttretens"
+    conditions_validite_title: "Gültigkeitsbedingungen:"
+    conditions_validite_content: "Die elektronische oder handschriftliche Unterschrift gilt als vollständige und ganze Annahme der Vertragsbedingungen. Kein Vorbehalt kann nach der Unterzeichnung gemacht werden."
+    fait_a_paris: "Aufgesetzt in PARIS, am %date%, in zwei (2) Originalexemplaren"
+    delai_retractation_consommation: "Gemäß den Bestimmungen des Verbraucherschutzgesetzes verfügt der Kreditnehmer über eine Widerrufsfrist von 14 vollen Kalendertagen ab der Unterzeichnung dieses Vertrags."
+    contact_difficultes: "Bei finanziellen Schwierigkeiten bleiben Sie nicht isoliert. Es gibt Lösungen. Kontaktieren Sie Ihren Berater oder die Banque de France (www.banque-france.fr) für kostenlose Begleitung."
+    apres_connaissance: "Nach Kenntnisnahme der allgemeinen Bedingungen"
+    remis_chaque_partie: "Wovon eines jeder Partei übergeben wurde, die anerkennt, es erhalten zu haben"
+    et_particulieres: "und besonderen Bedingungen dieses Vertrags"
+    signature_directeur_alt: "Unterschrift Geschäftsführer"
+    information_surendettement: "INFORMATION ÜBERSCHULDUNG:"
+    current_date: "Datum: %date%"
+    
+    # Textes en dur ligne 867
+    droit_applicable_juridiction_title: "Anwendbares Recht und Gerichtsbarkeit"
+    
+    # Textes en dur ligne 909
+    modification_contrat_title: "Vertragsänderung"
+    
+    # Autres traductions ajoutées
+    frais_et_droits_title: "Kosten und Rechte"
+    contact_dpo: "Kontakt Datenschutzbeauftragter: %email%"
+    modifications_portent_sur: "Die Änderungen können insbesondere betreffen:"
+    points_accueil_banque_france: "Empfangsstellen Banque de France:"
+    numero_banque_france: "0 811 901 801 (Preis eines Ortsgesprächs)"

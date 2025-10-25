@@ -1,0 +1,6 @@
+banking_pagination:
+  previous: "Précédent"
+  next: "Suivant"
+  page_info: "Page %current% sur %pageCount% (%totalCount% éléments au total)"
+  current_page: "Page courante"
+  page_number: "Page %page%"

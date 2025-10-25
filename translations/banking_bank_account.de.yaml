@@ -1,0 +1,91 @@
+banking_bank_account:
+  # Index page
+  index:
+    title: "Meine IBAN"
+    subtitle: "Verwaltung Ihrer Bankverbindungen"
+    
+    # Empty state
+    empty:
+      title: "Keine IBAN registriert"
+      text: "Fügen Sie Ihre IBAN hinzu, um Überweisungen zu erleichtern und Geld einfacher zu erhalten."
+      add_first: "Meine erste IBAN hinzufügen"
+    
+    # Card actions
+    actions:
+      view_details: "Details anzeigen"
+      edit: "Bearbeiten"
+      delete: "Löschen"
+      confirm_delete: "Sind Sie sicher, dass Sie diese IBAN löschen möchten?"
+    
+    # Card details
+    details:
+      added_on: "Hinzugefügt am"
+
+  # New RIB page
+  new:
+    title: "Neue IBAN hinzufügen"
+    subtitle: "Registrieren Sie Ihre Bankverbindungen, um Überweisungen zu erleichtern und Geld zu erhalten."
+    
+    # Form labels and placeholders
+    form:
+      account_name:
+        label: "Kontoname"
+        placeholder: "z.B.: Hauptkonto, Sparkonto..."
+        help: "Geben Sie diesem Konto einen beschreibenden Namen, um es leicht zu erkennen."
+      
+      bank_name:
+        label: "Bankname"
+        placeholder: "z.B.: Deutsche Bank, Commerzbank..."
+      
+      iban:
+        label: "IBAN"
+        placeholder: "DE89 3704 0044 0532 0130 00"
+        help: "Geben Sie Ihre europäische IBAN ein. Leerzeichen werden automatisch entfernt."
+    
+    # Actions
+    actions:
+      cancel: "Abbrechen"
+      save: "IBAN speichern"
+
+  # Show RIB page
+  show:
+    title: "IBAN-Details"
+    back_to_list: "Zurück zur Liste"
+    
+    # Sections
+    sections:
+      account_info: "Kontoinformationen"
+      technical_info: "Technische Informationen"
+    
+    # Details
+    details:
+      account_title: "Kontobezeichnung"
+      bank: "Bank"
+      iban: "IBAN"
+      country: "Land"
+      added_date: "Hinzufügungsdatum"
+      last_modified: "Letzte Änderung"
+      copy: "Kopieren"
+      copied: "Kopiert!"
+      european: "Europäisch"
+      delete_rib: "Diese IBAN löschen"
+    
+    # Countries
+    countries:
+      FR: "Frankreich"
+      DE: "Deutschland"
+      IT: "Italien"
+      ES: "Spanien"
+      BE: "Belgien"
+      NL: "Niederlande"
+      AT: "Österreich"
+      CH: "Schweiz"
+      LU: "Luxemburg"
+      PT: "Portugal"
+      IE: "Irland"
+      GB: "Vereinigtes Königreich"
+
+  # Common elements
+  common:
+    page_title_new: "IBAN hinzufügen"
+    confirm_delete: "Sind Sie sicher, dass Sie diese IBAN löschen möchten?"

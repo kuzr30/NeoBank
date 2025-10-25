@@ -1,0 +1,106 @@
+amelioration_habitat:
+  page:
+    title: "Crédit Amélioration Habitat"
+    description: "Financez tous vos travaux d'amélioration de l'habitat avec notre crédit dédié. Taux avantageux et déblocage progressif."
+
+  hero:
+    title: "Crédit Amélioration Habitat"
+    subtitle: "Transformez votre logement selon vos envies"
+    values:
+      taux: "{rate}% TAEG*"
+      montant: "120 000€"
+      duree: "20 ans"
+
+  section_1:
+    title: "Qu'est-ce qu'un crédit amélioration habitat ?"
+    content:
+      paragraph_1: "Le crédit amélioration habitat vous permet de financer tous vos projets d'embellissement et de modernisation de votre logement. Que ce soit pour rénover, agrandir ou améliorer le confort de votre maison."
+      paragraph_2: "Cette solution flexible s'adapte à tous vos besoins : de la simple rénovation d'une pièce aux grands travaux d'extension ou de mise aux normes énergétiques."
+
+  features:
+    montant: "De 2 000€ à 120 000€"
+    montant_detail: "Selon l'ampleur de vos travaux"
+    duree: "De 1 an à 20 ans"
+    duree_detail: "Durée adaptée à votre budget"
+    taux: "À partir de {rate}% TAEG*"
+    taux_detail: "Taux préférentiel habitat"
+    garantie: "Hypothèque ou caution"
+    garantie_detail: "Selon le montant emprunté"
+
+  advantages:
+    taux_avantageux:
+      title: "Taux avantageux :"
+      text: "Conditions préférentielles pour l'amélioration de l'habitat"
+    usage_specialise:
+      title: "Usage spécialisé :"
+      text: "Financement dédié aux travaux d'amélioration"
+    deblocage_progressif:
+      title: "Déblocage progressif :"
+      text: "Fonds libérés au fur et à mesure des travaux"
+    accompagnement:
+      title: "Accompagnement :"
+      text: "Conseil personnalisé pour vos projets"
+    plus_value:
+      title: "Plus-value :"
+      text: "Valorisation de votre patrimoine immobilier"
+
+  requirements:
+    conditions_emprunteur:
+      title: "Conditions emprunteur"
+      items:
+        proprietaire: "Être propriétaire du logement à améliorer"
+        revenus: "Justifier de revenus stables"
+        endettement: "Taux d'endettement inférieur à 35%"
+        incidents: "Pas d'inscription aux fichiers d'incidents"
+    conditions_projet:
+      title: "Conditions du projet"
+      items:
+        travaux: "Travaux sur résidence principale ou secondaire"
+        devis: "Devis détaillés des entreprises"
+        normes: "Respect des normes en vigueur"
+        professionnels: "Travaux réalisés par des professionnels"
+
+  documents:
+    dossier_personnel:
+      title: "Dossier personnel"
+      items:
+        piece: "Pièce d'identité en cours de validité"
+        domicile: "Justificatif de domicile récent"
+        bulletins: "3 derniers bulletins de salaire"
+        avis: "Avis d'imposition sur le revenu"
+    justificatifs_patrimoniaux:
+      title: "Justificatifs patrimoniaux"
+      items:
+        titre: "Titre de propriété du bien"
+        taxe: "Taxe foncière de l'année en cours"
+        releves: "Relevés de comptes bancaires"
+        tableau: "Tableau d'amortissement des crédits en cours"
+    documents_travaux:
+      title: "Documents travaux"
+      items:
+        devis: "Devis détaillés des entreprises"
+        permis: "Permis de construire si nécessaire"
+        plans: "Plans et descriptifs des travaux"
+        attestations: "Attestations d'assurance des entreprises"
+
+  legal:
+    title: "Informations légales importantes"
+    taeg:
+      title: "*TAEG :"
+      text: "Exemple représentatif : pour un crédit amélioration habitat de 60 000€ sur 15 ans au TAEG de 3,1%, vous remboursez 180 mensualités de 416€, soit un montant total de 74 880€ (coût du crédit : 14 880€)."
+    deblocage:
+      title: "Déblocage :"
+      text: "Les fonds sont débloqués progressivement selon l'avancement des travaux sur présentation des factures."
+    travaux:
+      title: "Travaux :"
+      text: "Obligation de réaliser les travaux déclarés dans un délai de 2 ans."
+    garanties:
+      title: "Garanties :"
+      text: "Hypothèque ou caution selon le montant et la durée du prêt."
+    retractation:
+      title: "Délai de rétractation :"
+      text: "Vous disposez d'un délai de 14 jours pour renoncer à votre crédit après acceptation de l'offre."
+
+  cta:
+    title: "Transformez votre habitat"
+    subtitle: "Financez vos projets d'amélioration avec notre crédit dédié"

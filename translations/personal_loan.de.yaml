@@ -1,0 +1,105 @@
+personal_loan:
+  page:
+    title: "Privatkredit"
+    description: "Finanzieren Sie alle Ihre persönlichen Projekte mit unserem Privatkredit. Flexible Lösung ohne Verwendungsnachweis."
+  
+  hero:
+    class: "credit-detail-hero--personal"
+    taux: "5,2%"
+    montant: "50 000€"
+    duree: "10 ans"
+    title: "Privatkredit"
+    subtitle: "Finanzieren Sie alle Ihre Projekte ohne Nachweis"
+  
+  section_1:
+    title: "Was ist ein Privatkredit?"
+    content:
+      paragraph_1: "Der Privatkredit ist ein zweckungebundener Kredit, der es Ihnen ermöglicht, alle Ihre Projekte zu finanzieren, ohne die Verwendung der Mittel rechtfertigen zu müssen: Fahrzeug, Ausstattung, Hochzeit, Reise oder jede andere Ausgabe."
+      paragraph_2: "Als flexible und schnelle Finanzierungslösung bietet er Ihnen völlige Verwendungsfreiheit und profitiert gleichzeitig von vorteilhaften Konditionen und einer an Ihr Budget angepassten Rückzahlung."
+  
+  features:
+    title: "Merkmale des Kredits"
+    montant:
+      value: "Bis zu 50 000€"
+      detail: "Je nach Ihrem Einkommen"
+    duree:
+      value: "Von 12 Monaten bis 10 Jahren"
+      detail: "Modulierbare Laufzeit"
+    taux:
+      value: "Ab {rate}% effektiver Jahreszins*"
+      detail: "Vorteilhafter Festzins"
+    garantie:
+      value: "Ohne Garantie"
+      detail: "Nur auf Unterschrift"
+  
+  section_3:
+    title: "Vorteile des Privatkredits"
+    advantages:
+      liberte:
+        title: "Völlige Freiheit"
+        description: "Keine Rechtfertigung der Mittelverwendung"
+      rapidite:
+        title: "Schnelle Antwort"
+        description: "Entscheidung innerhalb von maximal 48 Stunden"
+      deblocage:
+        title: "Sofortige Freigabe"
+        description: "Mittel verfügbar ab Annahme"
+      taux_fixe:
+        title: "Festzins"
+        description: "Konstante Monatsraten über die gesamte Laufzeit"
+      remboursement:
+        title: "Vorzeitige Rückzahlung"
+        description: "Möglich ohne Strafe"
+  
+  section_4:
+    title: "Förderfähigkeitsbedingungen"
+    profil:
+      title: "Kreditnehmerprofil"
+      items:
+        majeur: "Volljährig sein und in Frankreich wohnen"
+        revenus: "Regelmäßiges Einkommen nachweisen"
+        ficp: "Nicht im FICP eingetragen sein"
+        endettement: "Verschuldungsgrad unter 35%"
+    conditions:
+      title: "Allgemeine Bedingungen"
+      items:
+        age: "Höchstalter: 75 Jahre bei Kreditende"
+        domiciliation: "Kontoführung erwünscht"
+        assurance: "Kreditnehmerversicherung möglich"
+        frais: "Bearbeitungsgebühren anwendbar"
+  
+  section_5:
+    title: "Erforderliche Unterlagen"
+    identite:
+      title: "Ausweisdokumente"
+      items:
+        carte: "Personalausweis oder Reisepass"
+        domicile: "Wohnsitznachweis weniger als 3 Monate alt"
+        famille: "Familienbuch (wenn verheiratet oder verpartnert)"
+    revenus:
+      title: "Einkommensnachweise"
+      items:
+        salaires: "3 letzte Gehaltsabrechnungen"
+        impots: "2 letzte Steuerbescheide"
+        contrat: "Arbeitsvertrag oder Arbeitgeberbescheinigung"
+        rib: "Kontoverbindung des Führungskontos"
+    bancaires:
+      title: "Bankdokumente"
+      items:
+        releves: "3 letzte Kontoauszüge"
+        credits: "Nachweise anderer laufender Kredite"
+        amortissement: "Tilgungspläne bestehender Darlehen"
+        charges: "Nachweise laufender Ausgaben"
+  
+  legal:
+    details:
+      title: "Wichtige rechtliche Informationen"
+      taeg: "<strong>*Effektiver Jahreszins:</strong> Repräsentatives Beispiel: Für einen Privatkredit von 15 000€ über 4 Jahre zum effektiven Jahreszins von 5,2% zahlen Sie 48 Monatsraten von 347€, also einen Gesamtbetrag von 16 656€ (Kreditkosten: 1 656€)."
+      simplicite: "<strong>Einfachheit:</strong> Einfacher Antrag und schnelle Antwort innerhalb von 48 Arbeitsstunden."
+      flexibilite: "<strong>Flexibilität:</strong> Vorzeitige Rückzahlung ohne Gebühren oder Strafen möglich."
+      retractation: "<strong>Widerrufsfrist:</strong> Sie haben eine Frist von 14 Tagen, um nach Annahme des Angebots von Ihrem Kredit zurückzutreten."
+      utilisation: "<strong>Freie Verwendung:</strong> Keine Rechtfertigung der Mittelverwendung erforderlich."
+  
+  cta:
+    title: "Benötigen Sie eine schnelle Finanzierung?"
+    subtitle: "Erhalten Sie Ihren Privatkredit ganz einfach"

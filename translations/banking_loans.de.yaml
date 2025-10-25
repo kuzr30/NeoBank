@@ -1,0 +1,100 @@
+banking_loans:
+  # Meta tags
+  meta:
+    title: "Meine Darlehen - %company_name%"
+    description: "Verwalten Sie Ihre Darlehen und Kredite mit %company_name%"
+
+  # Navigation
+  nav:
+    dashboard: "Dashboard"
+    loans: "Darlehen"
+    loan_detail: "Darlehensdetail"
+    back: "Zurück"
+
+  # Page headers
+  page:
+    title: "Meine Darlehen"
+    subtitle: "Verwalten und überprüfen Sie alle Ihre laufenden Darlehen"
+    loan_detail_title: "Darlehensdetail"
+    
+  # Loan info
+  loan:
+    amount: "Geliehener Betrag"
+    remaining_balance: "Verbleibendes Kapital"
+    monthly_payment: "Monatsrate"
+    interest_rate: "Zinssatz"
+    duration: "Gesamtlaufzeit"
+    remaining_duration: "Verbleibende Laufzeit"
+    start_date: "Startdatum"
+    end_date: "Voraussichtliches Enddatum"
+    next_payment_date: "Nächste Fälligkeit"
+    payment_day: "Abbuchungstag"
+    loan_type: "Darlehensart"
+    status: "Status"
+    account: "Zugehöriges Konto"
+    
+  # Loan types
+  types:
+    personal: "Privatdarlehen"
+    mortgage: "Immobiliendarlehen"
+    auto: "Autodarlehen"
+    student: "Studentendarlehen"
+    business: "Geschäftsdarlehen"
+    consumer: "Verbraucherkredit"
+    bridge: "Überbrückungskredit"
+    renovation: "Renovierungsdarlehen"
+    
+  # Status
+  status:
+    active: "Aktiv"
+    completed: "Zurückgezahlt"
+    suspended: "Ausgesetzt"
+    in_default: "In Verzug"
+    early_repayment: "Vorzeitige Rückzahlung"
+    
+  # Payment info
+  payment:
+    payment_number: "Rate Nr."
+    payment_date: "Zahlungsdatum"
+    amount: "Betrag"
+    principal: "Kapital"
+    interest: "Zinsen"
+    remaining_balance: "Verbleibendes Kapital"
+    status: "Status"
+    
+  # Payment status
+  payment_status:
+    paid: "Bezahlt"
+    pending: "Ausstehend"
+    overdue: "Überfällig"
+    failed: "Fehlgeschlagen"
+    
+  # Actions
+  actions:
+    view_details: "Details anzeigen"
+    view_payments: "Raten anzeigen"
+    view_amortization: "Tilgungsplan anzeigen"
+    make_payment: "Zahlung durchführen"
+    early_repayment: "Vorzeitige Rückzahlung"
+    download_statement: "Kontoauszug herunterladen"
+    contact_advisor: "Berater kontaktieren"
+    
+  # Amortization table
+  amortization:
+    title: "Tilgungsplan"
+    payment_number: "Nr."
+    date: "Datum"
+    payment: "Rate"
+    principal: "Kapital"
+    interest: "Zinsen"
+    remaining: "Verbleibendes Kapital"
+    
+  # Messages
+  messages:
+    no_loans: "Keine laufenden Darlehen"
+    access_denied: "Zugriff auf dieses Darlehen verweigert"
+    payment_success: "Zahlung erfolgreich durchgeführt"
+    payment_failed: "Zahlung fehlgeschlagen"
+    
+  # Currency
+  currency: "€"

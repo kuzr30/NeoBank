@@ -1,0 +1,255 @@
+{% extends '@EasyAdmin/crud/detail.html.twig' %}
+
+{% block body_class %}{{ parent() }} kyc-detail-clean{% endblock %}
+
+{% block content_title %}
+    <div class="d-flex align-items-center">
+        <i class="fas fa-user-check text-primary me-3"></i>
+        <h1 class="content-title mb-0">Demande KYC #{{ entity.id }}</h1>
+    </div>
+{% endblock %}
+
+{% block main %}
+    <div class="kyc-clean-layout">
+        <div class="row g-4">
+            <!-- Informations principales -->
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-light border-0 py-3">
+                        <h5 class="mb-0">
+                            <i class="fas fa-user me-2 text-muted"></i>
+                            Informations du demandeur
+                        </h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="info-item">
+                                    <span class="label">Nom complet</span>
+                                    <span class="value">{{ entity.user.firstName }} {{ entity.user.lastName }}</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-item">
+                                    <span class="label">Email</span>
+                                    <span class="value">{{ entity.user.email }}</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-item">
+                                    <span class="label">Date de soumission</span>
+                                    <span class="value">{{ entity.submittedAt|date('d/m/Y à H:i') }}</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-item">
+                                    <span class="label">Statut</span>
+                                    <span class="value">
+                                        {% set badge_class = 'secondary' %}
+                                        {% if entity.status == 'pending' %}
+                                            {% set badge_class = 'warning' %}
+                                        {% elseif entity.status == 'approved' %}
+                                            {% set badge_class = 'success' %}
+                                        {% elseif entity.status == 'rejected' %}
+                                            {% set badge_class = 'danger' %}
+                                        {% endif %}
+                                        <span class="badge bg-{{ badge_class }} fs-6">{{ entity.status|title }}</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Documents -->
+                <div class="card border-0 shadow-sm mt-4">
+                    <div class="card-header bg-light border-0 py-3">
+                        <h5 class="mb-0">
+                            <i class="fas fa-files me-2 text-muted"></i>
+                            Documents fournis
+                        </h5>
+                    </div>
+                    <div class="card-body p-4">
+                        {% if entity.documents|length > 0 %}
+                            {% for document in entity.documents %}
+                                <div class="document-card mb-3">
+                                    <div class="card border-light shadow-sm">
+                                        <div class="card-body p-4">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="document-info">
+                                                    <h6 class="mb-2 text-primary">{{ document|kyc_document_type_label }}</h6>
+                                                    <div class="text-muted small">
+                                                        <div class="mb-1">
+                                                            <i class="fas fa-file-alt me-2"></i>{{ document.originalName }}
+                                                        </div>
+                                                        <div class="mb-1">
+                                                            <i class="fas fa-weight me-2"></i>{{ document.formattedFileSize }}
+                                                        </div>
+                                                        <div>
+                                                            <i class="fas fa-calendar me-2"></i>{{ document.uploadedAt|date('d/m/Y H:i') }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="document-action">
+                                                    <a href="/uploads/kyc_documents/{{ document.filename }}" 
+                                                       class="btn btn-outline-primary btn-sm px-3" 
+                                                       target="_blank"
+                                                       title="Visualiser le document">
+                                                        <i class="fas fa-eye me-1"></i> Visualiser
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <div class="alert alert-info border-0 shadow-sm">
+                                <i class="fas fa-info-circle me-2"></i>
+                                Aucun document n'a été uploadé pour cette soumission KYC.
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions et statut -->
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-light border-0 py-3">
+                        <h5 class="mb-0">
+                            <i class="fas fa-cogs me-2 text-muted"></i>
+                            Actions administratives
+                        </h5>
+                    </div>
+                    <div class="card-body p-4">
+                        {% if entity.isPending %}
+                            <div class="d-grid gap-2">
+                                <a href="{{ ea_url().setController('App\\Controller\\Admin\\KycSubmissionCrudController').setAction('approve').setEntityId(entity.id) }}" 
+                                   class="btn btn-success">
+                                    <i class="fas fa-check me-2"></i>Approuver
+                                </a>
+                                <a href="{{ ea_url().setController('App\\Controller\\Admin\\KycSubmissionCrudController').setAction('reject').setEntityId(entity.id) }}" 
+                                   class="btn btn-danger">
+                                    <i class="fas fa-times me-2"></i>Rejeter
+                                </a>
+                            </div>
+                        {% else %}
+                            <div class="alert alert-info border-0">
+                                <i class="fas fa-info-circle me-2"></i>
+                                Cette demande a déjà été traitée.
+                            </div>
+                        {% endif %}
+
+                        {% if entity.processedAt %}
+                            <hr class="my-4">
+                            <div class="processing-info">
+                                <h6 class="mb-3">Informations de traitement</h6>
+                                <div class="info-item mb-2">
+                                    <span class="label">Traité le</span>
+                                    <span class="value">{{ entity.processedAt|date('d/m/Y à H:i') }}</span>
+                                </div>
+                                {% if entity.processedBy %}
+                                    <div class="info-item">
+                                        <span class="label">Traité par</span>
+                                        <span class="value">{{ entity.processedBy.firstName }} {{ entity.processedBy.lastName }}</span>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+
+                        {% if entity.adminNotes %}
+                            <hr class="my-4">
+                            <div class="admin-notes">
+                                <h6 class="mb-3">Notes administratives</h6>
+                                <div class="alert alert-light border-0">
+                                    {{ entity.adminNotes|nl2br }}
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block body_javascript %}
+    {{ parent() }}
+    <style>
+        .kyc-detail-clean {
+            background-color: #f8f9fa;
+        }
+
+        .kyc-clean-layout {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+
+        .info-item .label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #6c757d;
+            margin-bottom: 0.25rem;
+        }
+
+        .info-item .value {
+            font-size: 1rem;
+            color: #212529;
+            font-weight: 500;
+        }
+
+        .document-card .card {
+            border: 1px solid #e9ecef;
+            transition: all 0.2s ease;
+        }
+
+        .document-card .card:hover {
+            border-color: #0d6efd;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15) !important;
+        }
+
+        .document-info h6 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .document-action .btn {
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .document-action .btn:hover {
+            transform: scale(1.02);
+        }
+
+        .card {
+            border-radius: 12px;
+        }
+
+        .card-header {
+            border-radius: 12px 12px 0 0 !important;
+        }
+
+        .btn {
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .processing-info .info-item {
+            margin-bottom: 0.75rem;
+        }
+
+        .admin-notes .alert {
+            background-color: #f8f9fa;
+            font-size: 0.9rem;
+        }
+    </style>
+{% endblock %}

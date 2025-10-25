@@ -1,0 +1,105 @@
+personal_loan:
+  page:
+    title: "Prêt Personnel"
+    description: "Financez tous vos projets personnels avec notre prêt personnel. Solution flexible sans justification d'usage."
+  
+  hero:
+    class: "credit-detail-hero--personal"
+    taux: "5,2%"
+    montant: "50 000€"
+    duree: "10 ans"
+    title: "Prêt Personnel"
+    subtitle: "Financez tous vos projets sans justification"
+  
+  section_1:
+    title: "Qu'est-ce qu'un prêt personnel ?"
+    content:
+      paragraph_1: "Le prêt personnel est un crédit non affecté qui vous permet de financer tous vos projets sans avoir à justifier l'utilisation des fonds : véhicule, équipement, mariage, voyage ou toute autre dépense."
+      paragraph_2: "Solution de financement flexible et rapide, il vous offre une totale liberté d'usage tout en bénéficiant de conditions avantageuses et d'un remboursement adapté à votre budget."
+  
+  features:
+    title: "Caractéristiques du prêt"
+    montant:
+      value: "Jusqu'à 50 000€"
+      detail: "Selon vos revenus"
+    duree:
+      value: "De 12 mois à 10 ans"
+      detail: "Durée modulable"
+    taux:
+      value: "À partir de {rate}% TAEG*"
+      detail: "Taux fixe avantageux"
+    garantie:
+      value: "Sans garantie"
+      detail: "Sur signature uniquement"
+  
+  section_3:
+    title: "Avantages du prêt personnel"
+    advantages:
+      liberte:
+        title: "Liberté totale"
+        description: "Aucune justification d'utilisation des fonds"
+      rapidite:
+        title: "Réponse rapide"
+        description: "Décision sous 48h maximum"
+      deblocage:
+        title: "Déblocage immédiat"
+        description: "Fonds disponibles dès l'acceptation"
+      taux_fixe:
+        title: "Taux fixe"
+        description: "Mensualités constantes sur toute la durée"
+      remboursement:
+        title: "Remboursement anticipé"
+        description: "Possible sans pénalité"
+  
+  section_4:
+    title: "Conditions d'éligibilité"
+    profil:
+      title: "Profil emprunteur"
+      items:
+        majeur: "Être majeur et résider en France"
+        revenus: "Justifier de revenus réguliers"
+        ficp: "Ne pas être inscrit au FICP"
+        endettement: "Taux d'endettement inférieur à 35%"
+    conditions:
+      title: "Conditions générales"
+      items:
+        age: "Âge maximum : 75 ans en fin de prêt"
+        domiciliation: "Domiciliation bancaire souhaitée"
+        assurance: "Assurance emprunteur possible"
+        frais: "Frais de dossier applicables"
+  
+  section_5:
+    title: "Documents nécessaires"
+    identite:
+      title: "Pièces d'identité"
+      items:
+        carte: "Carte nationale d'identité ou passeport"
+        domicile: "Justificatif de domicile de moins de 3 mois"
+        famille: "Livret de famille (si marié ou pacsé)"
+    revenus:
+      title: "Justificatifs de revenus"
+      items:
+        salaires: "3 derniers bulletins de salaire"
+        impots: "2 derniers avis d'imposition"
+        contrat: "Contrat de travail ou attestation employeur"
+        rib: "RIB du compte de domiciliation"
+    bancaires:
+      title: "Documents bancaires"
+      items:
+        releves: "3 derniers relevés de compte"
+        credits: "Justificatifs d'autres crédits en cours"
+        amortissement: "Tableau d'amortissement des prêts existants"
+        charges: "Justificatifs de charges courantes"
+  
+  legal:
+    details:
+      title: "Informations légales importantes"
+      taeg: "<strong>*TAEG :</strong> Exemple représentatif : pour un prêt personnel de 15 000€ sur 4 ans au TAEG de 5,2%, vous remboursez 48 mensualités de 347€, soit un montant total de 16 656€ (coût du crédit : 1 656€)."
+      simplicite: "<strong>Simplicité :</strong> Dossier simple et réponse rapide sous 48h ouvrées."
+      flexibilite: "<strong>Flexibilité :</strong> Remboursement anticipé possible sans frais ni pénalité."
+      retractation: "<strong>Délai de rétractation :</strong> Vous disposez d'un délai de 14 jours pour renoncer à votre crédit après acceptation de l'offre."
+      utilisation: "<strong>Utilisation libre :</strong> Aucune justification d'emploi des fonds n'est requise."
+  
+  cta:
+    title: "Besoin d'un financement rapide ?"
+    subtitle: "Obtenez votre prêt personnel en toute simplicité"

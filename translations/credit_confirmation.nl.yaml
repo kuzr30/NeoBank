@@ -1,0 +1,68 @@
+# Vertaalbestand voor krediet bevestigingspagina's
+# Domein: credit_confirmation
+# Compatibel met bestaande projectarchitectuur %company_name%
+
+# === BEVESTIGINGSPAGINA ===
+confirmation:
+  title: "Aanvraag bevestigd!"
+  subtitle: "Uw kredietaanvraag is succesvol ingediend"
+  icon_success: "✓"
+  
+  reference:
+    label: "Referentienummer"
+    
+  details:
+    loan_amount_label: "Gevraagd bedrag"
+    duration_label: "Looptijd"
+    monthly_payment_label: "Geschatte maandlasten"
+    credit_type_label: "Type krediet"
+    email_label: "Contact email"
+    
+  timeline:
+    title: "Volgende stappen"
+    steps:
+      confirmation_sent: "Bevestiging verzonden per email"
+      review_process: "Beoordeling van uw dossier (24-48u)"
+      decision_notification: "Beslissing notificatie"
+      contract_signing: "Ondertekening van het contract"
+      funds_disbursement: "Uitbetaling van de middelen"
+      
+  actions:
+    back_to_home: "Terug naar startpagina"
+    new_application: "Nieuwe aanvraag"
+    
+  notices:
+    title: "Belangrijke informatie:"
+    email_sent: "Een bevestigingsmail is verzonden naar {email}"
+    keep_reference: "Bewaar uw referentienummer om uw aanvraag te volgen"
+    contact_info: "Ons team neemt binnen 48 uur contact met u op voor de vervolgstappen"
+    no_fees: "Er worden geen kosten in rekening gebracht vóór definitieve acceptatie van uw dossier"
+
+# === CONTRACT STATUS ===
+contract_status:
+  title: "Contract status"
+  contract_number: "Contract: {number}"
+  amount_info: "Bedrag: {amount} €"
+  duration_info: "Looptijd: {duration} {unit}"
+  current_status: "Huidige status:"
+  
+  timeline:
+    approved: "Aanvraag goedgekeurd"
+    approved_desc: "Uw kredietaanvraag is bestudeerd en goedgekeurd."
+    contract_sent: "Contract gegenereerd en verzonden"
+    contract_sent_desc: "Het kredietcontract is gegenereerd en verzonden per email."
+    contract_signed: "Ondertekening van het contract"
+    contract_signed_pending: "Wachtend op uw ondertekening."
+    contract_signed_completed: "Contract ondertekend en ontvangen."
+    contract_validated: "Administratieve validatie"
+    contract_validated_pending: "Validatie in behandeling door ons team (24-48u)."
+    contract_validated_completed: "Contract gevalideerd door het administratieve team."
+    contract_validated_waiting: "Wachtend op ondertekening van het contract."
+    funds_disbursed: "Uitbetaling van de middelen"
+    funds_disbursed_completed: "De middelen zijn gestort op uw rekening."
+    funds_disbursed_pending: "Uitbetaling in behandeling..."
+    funds_disbursed_waiting: "Wachtend op validatie van het contract."
+    
+  actions:
+    download_contract: "Download ondertekend contract"
+    back_to_dashboard: "Terug naar dashboard"

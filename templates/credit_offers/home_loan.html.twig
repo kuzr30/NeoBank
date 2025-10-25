@@ -1,0 +1,145 @@
+{% extends 'credit_offers/credit_page_structure.html.twig' %}
+
+{% set page_title = tp('home_loan.page.title', [], 'home_loan') %}
+{% set page_description = tp('home_loan.page.description', [], 'home_loan') %}
+{% set hero_class = tp('home_loan.hero.class', [], 'home_loan') %}
+
+{% block taux_value %}{{ credit_rate('immobilier') }}%{% endblock %}
+{% block montant_value %}{{ tp('home_loan.hero.montant', [], 'home_loan') }}{% endblock %}
+{% block duree_value %}{{ tp('home_loan.hero.duree', [], 'home_loan') }}{% endblock %}
+
+{% block hero_title %}{{ tp('home_loan.hero.title', [], 'home_loan') }}{% endblock %}
+{% block hero_subtitle %}{{ tp('home_loan.hero.subtitle', [], 'home_loan') }}{% endblock %}
+
+{% block section_1_title %}{{ tp('home_loan.section_1.title', [], 'home_loan') }}{% endblock %}
+
+{% block section_2_title %}{{ tp('home_loan.features.title', [], 'home_loan') }}{% endblock %}
+{% block section_3_title %}{{ tp('home_loan.section_3.title', [], 'home_loan') }}{% endblock %}
+{% block section_4_title %}{{ tp('home_loan.section_4.title', [], 'home_loan') }}{% endblock %}
+{% block section_5_title %}{{ tp('home_loan.section_5.title', [], 'home_loan') }}{% endblock %}
+
+{% block section_1_content %}
+<p>{{ tp('home_loan.section_1.content.paragraph_1', [], 'home_loan') }}</p>
+<p>{{ tp('home_loan.section_1.content.paragraph_2', [], 'home_loan') }}</p>
+{% endblock %}
+
+{% block feature_montant %}{{ tp('home_loan.features.montant.value', [], 'home_loan') }}{% endblock %}
+{% block feature_montant_detail %}{{ tp('home_loan.features.montant.detail', [], 'home_loan') }}{% endblock %}
+{% block feature_duree %}{{ tp('home_loan.features.duree.value', [], 'home_loan') }}{% endblock %}
+{% block feature_duree_detail %}{{ tp('home_loan.features.duree.detail', [], 'home_loan') }}{% endblock %}
+{% block feature_taux %}{{ tp('home_loan.features.taux.value', [], 'home_loan')|replace({'{rate}': credit_rate('immobilier')})|raw }}{% endblock %}
+{% block feature_taux_detail %}{{ tp('home_loan.features.taux.detail', [], 'home_loan') }}{% endblock %}
+{% block feature_garantie %}{{ tp('home_loan.features.garantie.value', [], 'home_loan') }}{% endblock %}
+{% block feature_garantie_detail %}{{ tp('home_loan.features.garantie.detail', [], 'home_loan') }}{% endblock %}
+
+{% block section_3_content %}
+<ul class="credit-detail-advantages">
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('home_loan.section_3.advantages.taux_fixe.title', [], 'home_loan') }} :</strong> {{ tp('home_loan.section_3.advantages.taux_fixe.description', [], 'home_loan') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('home_loan.section_3.advantages.duree_longue.title', [], 'home_loan') }} :</strong> {{ tp('home_loan.section_3.advantages.duree_longue.description', [], 'home_loan') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('home_loan.section_3.advantages.prets_aides.title', [], 'home_loan') }} :</strong> {{ tp('home_loan.section_3.advantages.prets_aides.description', [], 'home_loan') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('home_loan.section_3.advantages.modulation.title', [], 'home_loan') }} :</strong> {{ tp('home_loan.section_3.advantages.modulation.description', [], 'home_loan') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('home_loan.section_3.advantages.transfert.title', [], 'home_loan') }} :</strong> {{ tp('home_loan.section_3.advantages.transfert.description', [], 'home_loan') }}</span>
+    </li>
+</ul>
+{% endblock %}
+
+{% block section_4_content %}
+<div class="credit-detail-requirements">
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('home_loan.section_4.emprunteur.title', [], 'home_loan') }}</h3>
+        <ul>
+            <li>{{ tp('home_loan.section_4.emprunteur.items.premiere_acquisition', [], 'home_loan') }}</li>
+            <li>{{ tp('home_loan.section_4.emprunteur.items.revenus', [], 'home_loan') }}</li>
+            <li>{{ tp('home_loan.section_4.emprunteur.items.apport', [], 'home_loan') }}</li>
+            <li>{{ tp('home_loan.section_4.emprunteur.items.endettement', [], 'home_loan') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('home_loan.section_4.bien.title', [], 'home_loan') }}</h3>
+        <ul>
+            <li>{{ tp('home_loan.section_4.bien.items.residence_principale', [], 'home_loan') }}</li>
+            <li>{{ tp('home_loan.section_4.bien.items.normes', [], 'home_loan') }}</li>
+            <li>{{ tp('home_loan.section_4.bien.items.diagnostic', [], 'home_loan') }}</li>
+            <li>{{ tp('home_loan.section_4.bien.items.assurance_habitation', [], 'home_loan') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block section_5_content %}
+<div class="credit-detail-documents">
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('home_loan.section_5.dossier_personnel.title', [], 'home_loan') }}</h3>
+        <ul>
+            <li>{{ tp('home_loan.section_5.dossier_personnel.items.identite', [], 'home_loan') }}</li>
+            <li>{{ tp('home_loan.section_5.dossier_personnel.items.revenus', [], 'home_loan') }}</li>
+            <li>{{ tp('home_loan.section_5.dossier_personnel.items.impots', [], 'home_loan') }}</li>
+            <li>{{ tp('home_loan.section_5.dossier_personnel.items.comptes', [], 'home_loan') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('home_loan.section_5.projet_immobilier.title', [], 'home_loan') }}</h3>
+        <ul>
+            <li>{{ tp('home_loan.section_5.projet_immobilier.items.compromis', [], 'home_loan') }}</li>
+            <li>{{ tp('home_loan.section_5.projet_immobilier.items.financement', [], 'home_loan') }}</li>
+            <li>{{ tp('home_loan.section_5.projet_immobilier.items.diagnostics', [], 'home_loan') }}</li>
+            <li>{{ tp('home_loan.section_5.projet_immobilier.items.assurance_emprunteur', [], 'home_loan') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('home_loan.section_5.apport_garanties.title', [], 'home_loan') }}</h3>
+        <ul>
+            <li>{{ tp('home_loan.section_5.apport_garanties.items.justificatifs_apport', [], 'home_loan') }}</li>
+            <li>{{ tp('home_loan.section_5.apport_garanties.items.evaluation', [], 'home_loan') }}</li>
+            <li>{{ tp('home_loan.section_5.apport_garanties.items.acte_notarie', [], 'home_loan') }}</li>
+            <li>{{ tp('home_loan.section_5.apport_garanties.items.conditions_suspensives', [], 'home_loan') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block legal_details %}
+<div class="credit-legal-notice__details">
+    <h4>{{ tp('home_loan.legal.details.title', [], 'home_loan') }}</h4>
+    <ul>
+        <li>{{ tp('home_loan.legal.details.taeg', [], 'home_loan')|raw }}</li>
+        <li>{{ tp('home_loan.legal.details.garantie', [], 'home_loan')|raw }}</li>
+        <li>{{ tp('home_loan.legal.details.assurance', [], 'home_loan')|raw }}</li>
+        <li>{{ tp('home_loan.legal.details.condition_suspensive', [], 'home_loan')|raw }}</li>
+        <li>{{ tp('home_loan.legal.details.delai_reflexion', [], 'home_loan')|raw }}</li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block cta_title %}{{ tp('home_loan.cta.title', [], 'home_loan') }}{% endblock %}
+{% block cta_subtitle %}{{ tp('home_loan.cta.subtitle', [], 'home_loan') }}{% endblock %}
+
+{% block custom_styles %}
+{{ parent() }}
+<style>
+/* Specific color for home loan */
+.credit-detail-hero--home-loan {
+    background: 
+        linear-gradient(135deg, rgba(30, 64, 175, 0.4) 0%, rgba(30, 58, 138, 0.6) 100%),
+        url('/images/614fc0f9d0.jpg') center/cover no-repeat;
+}
+
+.credit-detail-hero--home-loan .credit-highlight__value {
+    color: #93c5fd;
+}
+</style>
+{% endblock %}

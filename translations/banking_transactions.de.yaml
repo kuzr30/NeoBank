@@ -1,0 +1,90 @@
+banking_transactions:
+  # Meta tags
+  meta:
+    title: "Meine Transaktionen - %company_name%"
+    description: "Sehen Sie den Verlauf Ihrer Transaktionen mit %company_name% ein"
+
+  # Navigation
+  nav:
+    dashboard: "Dashboard"
+    transactions: "Transaktionen"
+    transaction_detail: "Transaktionsdetails"
+    back: "Zurück"
+
+  # Page headers
+  page:
+    title: "Meine Transaktionen"
+    subtitle: "Sehen Sie den Verlauf aller Ihrer Transaktionen ein"
+    transaction_detail_title: "Transaktionsdetails"
+    
+  # Transaction info
+  transaction:
+    amount: "Betrag"
+    date: "Datum"
+    time: "Uhrzeit"
+    description: "Beschreibung"
+    type: "Typ"
+    status: "Status"
+    account: "Konto"
+    reference: "Referenz"
+    balance_after: "Saldo nach Transaktion"
+    recipient: "Empfänger"
+    sender: "Absender"
+    
+  # Transaction types
+  types:
+    transfer: "Überweisung"
+    payment: "Zahlung"
+    withdrawal: "Auszahlung"
+    deposit: "Einzahlung"
+    fee: "Gebühren"
+    interest: "Zinsen"
+    refund: "Rückerstattung"
+    direct_debit: "Lastschrift"
+    card_payment: "Kartenzahlung"
+    
+  # Status
+  status:
+    completed: "Abgeschlossen"
+    pending: "Ausstehend"
+    cancelled: "Storniert"
+    failed: "Fehlgeschlagen"
+    processing: "In Bearbeitung"
+    
+  # Filters
+  filters:
+    title: "Filter"
+    date_range: "Zeitraum"
+    transaction_type: "Transaktionstyp"
+    amount_min: "Mindestbetrag"
+    amount_max: "Höchstbetrag"
+    account_filter: "Konto"
+    apply_filters: "Filter anwenden"
+    clear_filters: "Filter löschen"
+    
+  # Actions
+  actions:
+    view_details: "Details anzeigen"
+    download_receipt: "Beleg herunterladen"
+    export_transactions: "Transaktionen exportieren"
+    search: "Suchen"
+    
+  # Date ranges
+  date_ranges:
+    today: "Heute"
+    this_week: "Diese Woche"
+    this_month: "Dieser Monat"
+    last_month: "Letzter Monat"
+    last_3_months: "Letzte 3 Monate"
+    last_6_months: "Letzte 6 Monate"
+    this_year: "Dieses Jahr"
+    custom: "Benutzerdefinierter Zeitraum"
+    
+  # Messages
+  messages:
+    no_transactions: "Keine Transaktionen gefunden"
+    loading: "Transaktionen werden geladen..."
+    export_success: "Export erfolgreich"
+    
+  # Currency
+  currency: "€"

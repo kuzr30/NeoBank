@@ -1,0 +1,91 @@
+travel_loan:
+  page_title: "Reisekredit"
+  page_description: "Finanzieren Sie Ihre Reiseträume in aller Ruhe."
+  
+  advantages:
+    -
+      title: "Ersparnisse geschützt:"
+      description: "Bewahren Sie Ihre Ersparnisse für Unvorhergesehenes auf"
+    -
+      title: "Sofortige Freigabe:"
+      description: "Mittel schnell verfügbar für Buchungen"
+    -
+      title: "Alle Reisen:"
+      description: "Urlaub, Flitterwochen, persönliche Geschäftsreisen"
+    -
+      title: "Verwendungsfreiheit:"
+      description: "Transport, Unterkunft, Aktivitäten, Ausrüstung"
+    -
+      title: "Reiseversicherung:"
+      description: "Möglichkeit der Stornierungs-/Abbruchdeckung"
+  conditions:
+    octroi:
+      title: "Bewilligungsbedingungen"
+      items:
+        - "Volljährig sein und in Frankreich wohnen"
+        - "Regelmäßiges Einkommen nachweisen"
+        - "Gesunde finanzielle Situation"
+        - "Definiertes Reiseprojekt"
+    utilisation:
+      title: "Empfohlene Verwendung"
+      items:
+        - "Außergewöhnliche oder wichtige Reise"
+        - "Erhaltung der Notfallersparnisse"
+        - "Gut definiertes Reisebudget"
+        - "Gesicherte Rückzahlungsfähigkeit"
+  cta:
+    subtitle: Finanzieren Sie Ihre Reiseträume mit unserem speziellen Kredit
+    title: Entdecken Sie die Welt
+  documents:
+    financiere:
+      title: "Finanzielle Situation"
+      items:
+        - "3 letzte Gehaltsabrechnungen"
+        - "Letzter Steuerbescheid"
+        - "Kontoauszüge"
+        - "Nachweise anderer Einkommen"
+    identite:
+      title: "Identität und Wohnsitz"
+      items:
+        - "Personalausweis oder Reisepass"
+        - "Aktueller Wohnsitznachweis"
+        - "Familienbuch falls zutreffend"
+    projet:
+      title: "Reiseprojekt"
+      items:
+        - "Kostenvoranschlag Reisebüro"
+        - "Vorläufige Buchungen"
+        - "Reisebeschreibung"
+        - "Detailliertes Budget"
+  features:
+    montant: "Bis zu 25.000€"
+    montant_detail: "Für all Ihre Reiseprojekte"
+    duree: "Von 12 Monaten bis 7 Jahre"
+    duree_detail: "Komfortable Rückzahlung"
+    taux: "Ab {rate}% effektiver Jahreszins*"
+    taux_detail: "Wettbewerbsfähiger Reisezinssatz"
+    garantie: "Ohne Sicherheit"
+    garantie_detail: "Finanzierung auf Unterschrift"
+  hero:
+    subtitle: Verwirklichen Sie Ihre Fluchtträume
+    title: Reisekredit
+  legal:
+    title: "Wichtige rechtliche Informationen"
+    details:
+      - "*Effektiver Jahreszins: Repräsentatives Beispiel: für einen Reisekredit von 8.000€ über 48 Monate zum effektiven Jahreszins von 5,2% zahlen Sie 48 monatliche Raten von 185€ zurück, also einen Gesamtbetrag von 8.880€ (Kreditkosten: 880€)."
+      - "Verwendung: Mittel ausschließlich zur Finanzierung der angegebenen Reise bestimmt."
+      - "Reiseversicherung: Abschluss empfohlen zur Deckung von Stornorisiken."
+      - "Vorzeitige Rückzahlung: Ohne Strafe ab 10.000€ möglich."
+      - "Widerrufsfrist: 14 Tage zum Verzicht auf den Kredit ohne Begründung."
+  meta:
+    description: Finanzieren Sie Ihren Urlaub und Traumreisen mit unserem Reisekredit. Reisen Sie beruhigt mit angepassten Konditionen.
+    title: Reisekredit
+  section_1:
+    content:
+    - Der Reisekredit ermöglicht es Ihnen, Ihren Urlaub, Flitterwochen, Weltreisen oder außergewöhnliche Ausflüge zu finanzieren, ohne Ihre Notfallersparnisse anzugreifen.
+    - Als Finanzierungslösung für Freizeit und Wohlbefinden bietet er Ihnen die Möglichkeit, einzigartige Erfahrungen zu machen und dabei Ihr finanzielles Gleichgewicht zu wahren.
+    title: Was ist ein Reisekredit?
+  values:
+    duree: 7 Jahre
+    montant: 25.000€
+    taux: 5,2%

@@ -1,0 +1,44 @@
+banking_credit_application_detail:
+  header:
+    title: "Detalles de la solicitud de crédito"
+    reference: "Solicitud n°%reference%"
+    amount_label: "Importe solicitado"
+  
+  navigation:
+    back_to_credits: "Volver a los créditos"
+  
+  credit_info:
+    title: "Información del crédito"
+    type: "Tipo de crédito"
+    loan_amount: "Importe solicitado"
+    duration: "Duración"
+    monthly_payment: "Mensualidad calculada"
+    total_cost: "Coste total del crédito"
+    months: "meses"
+    years: "años"
+  
+  personal_info:
+    title: "Información personal"
+    full_name: "Nombre completo"
+    email: "Email"
+    phone: "Teléfono"
+    birth_date: "Fecha de nacimiento"
+  
+  financial_situation:
+    title: "Situación financiera"
+    monthly_income: "Ingresos mensuales"
+    monthly_expenses: "Gastos mensuales"
+    employer: "Empleador"
+    job_title: "Puesto"
+  
+  application_tracking:
+    title: "Seguimiento de la solicitud"
+    current_status: "Estado actual"
+    application_date: "Fecha de solicitud"
+    last_update: "Última actualización"
+    notes: "Notas"
+  
+  actions:
+    view_amortization: "Ver el cuadro de amortización"
+    view_contract: "Ver el contrato"
+    download_contract: "Descargar el contrato"

@@ -1,0 +1,40 @@
+email_credit_transfer_verification:
+  title: "Code de vérification - Virement crédit"
+  content:
+    page_title: "Validation de virement requis"
+    greeting: "Bonjour <strong>{userName}</strong>,"
+    detection_section:
+      title: "Demande de virement détectée"
+      message: "Vous avez demandé un virement depuis votre compte crédit. Pour sécuriser cette opération, veuillez valider avec le code de vérification ci-dessous."
+    verification_section:
+      title: "Code de vérification sécurisé"
+      code_label: "Code de validation"
+      expiry: "Expire dans 10 minutes"
+    transaction_details:
+      title: "Détails de la transaction"
+      source_account: "Compte source"
+      destination_account: "Compte destination"
+      principal_account: "Compte Principal"
+      amount_label: "Montant à transférer"
+    security_section:
+      title: "Sécurité"
+      validity: "Ce code est valable pendant 10 minutes uniquement"
+      confidentiality: "Confidentialité absolue"
+      confidentiality_description: "Ne partagez jamais ce code avec qui que ce soit"
+      unauthorized_transaction: "Transaction non autorisée"
+      warning: "Si vous n'êtes pas à l'origine de cette demande, contactez immédiatement notre service client."
+      phone: "Téléphone : %company_phone%"
+      urgency: "Disponible 24h/24 pour les urgences"
+    support_text: "Pour toute question concernant cette opération de virement, notre service sécurité reste à votre disposition."
+    instructions_section:
+      title: "Instructions"
+      step_1: "Saisissez ce code sur la page de validation"
+      step_2: "Le virement sera traité immédiatement après validation"
+      step_3: "Un email de confirmation vous sera envoyé"
+    footer: "Email automatique de sécurité <br>Service Virements - Validation requise"
+  
+  logs:
+    sending: "Envoi de code de vérification virement"
+    success: "Code de vérification virement envoyé avec succès"
+    error: "Erreur lors de l'envoi de code de vérification virement"
+    send_failed: "Échec de l'envoi de code de vérification virement"

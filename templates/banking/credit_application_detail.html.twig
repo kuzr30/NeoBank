@@ -1,0 +1,501 @@
+{% extends 'banking/dashboard.html.twig' %}
+
+{% block title %}{{ tp('banking_credit_application_detail.header.title', [], 'banking_credit_application_detail') }} - SEDEF BANK{% endblock %}
+
+{% block banking_content %}
+    <div class="banking__header">
+        <div class="banking__header-content">
+            <h1 class="banking__header-title">{{ tp('banking_credit_application_detail.header.title', [], 'banking_credit_application_detail') }}</h1>
+            <a href="{{ path('banking_credits') }}" class="banking__back-btn">
+                {{ ux_icon('heroicons:arrow-left', {'class': 'banking__back-icon'}) }}
+                {{ tp('banking_credit_application_detail.navigation.back_to_credits', [], 'banking_credit_application_detail') }}
+            </a>
+        </div>
+    </div>
+
+    <div class="banking__content">
+        <div class="banking__credit-detail-container">
+            <!-- En-tête de la demande -->
+            <div class="banking__credit-detail-header">
+                <div class="banking__credit-detail-icon banking__credit-detail-icon--{{ creditApplication.creditType.value }}">
+                    {% if creditApplication.creditType.value == 'mortgage' %}
+                        {{ ux_icon('heroicons:home', {'class': 'banking__credit-detail-icon-svg'}) }}
+                    {% elseif creditApplication.creditType.value == 'auto' %}
+                        {{ ux_icon('heroicons:truck', {'class': 'banking__credit-detail-icon-svg'}) }}
+                    {% else %}
+                        {{ ux_icon('heroicons:credit-card', {'class': 'banking__credit-detail-icon-svg'}) }}
+                    {% endif %}
+                </div>
+                <div class="banking__credit-detail-info">
+                    <h2 class="banking__credit-detail-title">{{ tp(creditApplication.creditType.getLabel(), [], 'credit_simulation') }}</h2>
+                    <p class="banking__credit-detail-reference">{{ tp('banking_credit_application_detail.header.reference', {reference: creditApplication.referenceNumber}, 'banking_credit_application_detail') }}</p>
+                    <div class="banking__credit-detail-status {{ creditApplication.status.getBadgeClass() }}">
+                        <span class="banking__credit-detail-status-text">{{ tp(creditApplication.status.getLabel(), [], 'enums') }}</span>
+                    </div>
+                </div>
+                <div class="banking__credit-detail-amount">
+                    <span class="banking__credit-detail-amount-value">{{ creditApplication.loanAmount|number_format(2, ',', ' ') }} €</span>
+                    <span class="banking__credit-detail-amount-label">{{ tp('banking_credit_application_detail.header.amount_label', [], 'banking_credit_application_detail') }}</span>
+                </div>
+            </div>
+
+            <!-- Informations principales -->
+            <div class="banking__credit-detail-grid">
+                <div class="banking__credit-detail-card">
+                    <h3 class="banking__credit-detail-card-title">{{ tp('banking_credit_application_detail.credit_info.title', [], 'banking_credit_application_detail') }}</h3>
+                    <div class="banking__credit-detail-fields">
+                        <div class="banking__credit-detail-field">
+                            <span class="banking__credit-detail-field-label">{{ tp('banking_credit_application_detail.credit_info.type', [], 'banking_credit_application_detail') }}</span>
+                            <span class="banking__credit-detail-field-value">{{ tp(creditApplication.creditType.getLabel(), [], 'credit_simulation') }}</span>
+                        </div>
+                        <div class="banking__credit-detail-field">
+                            <span class="banking__credit-detail-field-label">{{ tp('banking_credit_application_detail.credit_info.loan_amount', [], 'banking_credit_application_detail') }}</span>
+                            <span class="banking__credit-detail-field-value">{{ creditApplication.loanAmount|number_format(2, ',', ' ') }} €</span>
+                        </div>
+                        <div class="banking__credit-detail-field">
+                            <span class="banking__credit-detail-field-label">{{ tp('banking_credit_application_detail.credit_info.duration', [], 'banking_credit_application_detail') }}</span>
+                            <span class="banking__credit-detail-field-value">{{ creditApplication.duration }} {{ creditApplication.durationUnit.value == 'months' ? tp('banking_credit_application_detail.credit_info.months', [], 'banking_credit_application_detail') : tp('banking_credit_application_detail.credit_info.years', [], 'banking_credit_application_detail') }}</span>
+                        </div>
+                        {% if creditApplication.monthlyPayment %}
+                        <div class="banking__credit-detail-field">
+                            <span class="banking__credit-detail-field-label">{{ tp('banking_credit_application_detail.credit_info.monthly_payment', [], 'banking_credit_application_detail') }}</span>
+                            <span class="banking__credit-detail-field-value">{{ creditApplication.monthlyPayment|number_format(2, ',', ' ') }} €</span>
+                        </div>
+                        {% endif %}
+                        {% if creditApplication.totalCost %}
+                        <div class="banking__credit-detail-field">
+                            <span class="banking__credit-detail-field-label">{{ tp('banking_credit_application_detail.credit_info.total_cost', [], 'banking_credit_application_detail') }}</span>
+                            <span class="banking__credit-detail-field-value">{{ creditApplication.totalCost|number_format(2, ',', ' ') }} €</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="banking__credit-detail-card">
+                    <h3 class="banking__credit-detail-card-title">{{ tp('banking_credit_application_detail.personal_info.title', [], 'banking_credit_application_detail') }}</h3>
+                    <div class="banking__credit-detail-fields">
+                        <div class="banking__credit-detail-field">
+                            <span class="banking__credit-detail-field-label">{{ tp('banking_credit_application_detail.personal_info.full_name', [], 'banking_credit_application_detail') }}</span>
+                            <span class="banking__credit-detail-field-value">{{ creditApplication.firstName }} {{ creditApplication.lastName }}</span>
+                        </div>
+                        <div class="banking__credit-detail-field">
+                            <span class="banking__credit-detail-field-label">{{ tp('banking_credit_application_detail.personal_info.email', [], 'banking_credit_application_detail') }}</span>
+                            <span class="banking__credit-detail-field-value">{{ creditApplication.email }}</span>
+                        </div>
+                        <div class="banking__credit-detail-field">
+                            <span class="banking__credit-detail-field-label">{{ tp('banking_credit_application_detail.personal_info.phone', [], 'banking_credit_application_detail') }}</span>
+                            <span class="banking__credit-detail-field-value">{{ creditApplication.phone }}</span>
+                        </div>
+                        <div class="banking__credit-detail-field">
+                            <span class="banking__credit-detail-field-label">{{ tp('banking_credit_application_detail.personal_info.birth_date', [], 'banking_credit_application_detail') }}</span>
+                            <span class="banking__credit-detail-field-value">{{ creditApplication.birthDate|date('d/m/Y') }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                {% if creditApplication.monthlyIncome or creditApplication.monthlyExpenses %}
+                <div class="banking__credit-detail-card">
+                    <h3 class="banking__credit-detail-card-title">{{ tp('banking_credit_application_detail.financial_situation.title', [], 'banking_credit_application_detail') }}</h3>
+                    <div class="banking__credit-detail-fields">
+                        {% if creditApplication.monthlyIncome %}
+                        <div class="banking__credit-detail-field">
+                            <span class="banking__credit-detail-field-label">{{ tp('banking_credit_application_detail.financial_situation.monthly_income', [], 'banking_credit_application_detail') }}</span>
+                            <span class="banking__credit-detail-field-value">{{ creditApplication.monthlyIncome|number_format(2, ',', ' ') }} €</span>
+                        </div>
+                        {% endif %}
+                        {% if creditApplication.monthlyExpenses %}
+                        <div class="banking__credit-detail-field">
+                            <span class="banking__credit-detail-field-label">{{ tp('banking_credit_application_detail.financial_situation.monthly_expenses', [], 'banking_credit_application_detail') }}</span>
+                            <span class="banking__credit-detail-field-value">{{ creditApplication.monthlyExpenses|number_format(2, ',', ' ') }} €</span>
+                        </div>
+                        {% endif %}
+                        {% if creditApplication.employer %}
+                        <div class="banking__credit-detail-field">
+                            <span class="banking__credit-detail-field-label">{{ tp('banking_credit_application_detail.financial_situation.employer', [], 'banking_credit_application_detail') }}</span>
+                            <span class="banking__credit-detail-field-value">{{ creditApplication.employer }}</span>
+                        </div>
+                        {% endif %}
+                        {% if creditApplication.jobTitle %}
+                        <div class="banking__credit-detail-field">
+                            <span class="banking__credit-detail-field-label">{{ tp('banking_credit_application_detail.financial_situation.job_title', [], 'banking_credit_application_detail') }}</span>
+                            <span class="banking__credit-detail-field-value">{{ creditApplication.jobTitle }}</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
+
+                <div class="banking__credit-detail-card">
+                    <h3 class="banking__credit-detail-card-title">{{ tp('banking_credit_application_detail.application_tracking.title', [], 'banking_credit_application_detail') }}</h3>
+                    <div class="banking__credit-detail-fields">
+                        <div class="banking__credit-detail-field">
+                            <span class="banking__credit-detail-field-label">{{ tp('banking_credit_application_detail.application_tracking.current_status', [], 'banking_credit_application_detail') }}</span>
+                            <span class="banking__credit-detail-field-value">
+                                <span class="banking__status-badge {{ creditApplication.status.getBadgeClass() }}">
+                                    {{ tp(creditApplication.status.getLabel(), [], 'enums') }}
+                                </span>
+                            </span>
+                        </div>
+                        <div class="banking__credit-detail-field">
+                            <span class="banking__credit-detail-field-label">{{ tp('banking_credit_application_detail.application_tracking.application_date', [], 'banking_credit_application_detail') }}</span>
+                            <span class="banking__credit-detail-field-value">{{ creditApplication.createdAt|date('d/m/Y à H:i') }}</span>
+                        </div>
+                        {% if creditApplication.updatedAt != creditApplication.createdAt %}
+                        <div class="banking__credit-detail-field">
+                            <span class="banking__credit-detail-field-label">{{ tp('banking_credit_application_detail.application_tracking.last_update', [], 'banking_credit_application_detail') }}</span>
+                            <span class="banking__credit-detail-field-value">{{ creditApplication.updatedAt|date('d/m/Y à H:i') }}</span>
+                        </div>
+                        {% endif %}
+                        {% if creditApplication.notes %}
+                        <div class="banking__credit-detail-field">
+                            <span class="banking__credit-detail-field-label">{{ tp('banking_credit_application_detail.application_tracking.notes', [], 'banking_credit_application_detail') }}</span>
+                            <span class="banking__credit-detail-field-value">{{ creditApplication.notes }}</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="banking__credit-detail-actions">
+                {% if creditApplication.status.value == 'funds_disbursed' %}
+                    <a href="{{ path('banking_credit_application_amortization', {id: creditApplication.id}) }}" class="banking__btn banking__btn--primary">
+                        {{ ux_icon('heroicons:chart-bar', {'class': 'banking__btn-icon'}) }}
+                        {{ tp('banking_credit_application_detail.actions.view_amortization', [], 'banking_credit_application_detail') }}
+                    </a>
+                {% endif %}
+                
+                {% if creditApplication.contractPath %}
+                    <a href="{{ path('contract_view', {id: creditApplication.id}) }}" class="banking__btn banking__btn--secondary" target="_blank">
+                        {{ ux_icon('heroicons:document-text', {'class': 'banking__btn-icon'}) }}
+                        {{ tp('banking_credit_application_detail.actions.view_contract', [], 'banking_credit_application_detail') }}
+                    </a>
+                    <a href="{{ path('contract_download', {id: creditApplication.id}) }}" class="banking__btn banking__btn--outline">
+                        {{ ux_icon('heroicons:arrow-down-tray', {'class': 'banking__btn-icon'}) }}
+                        {{ tp('banking_credit_application_detail.actions.download_contract', [], 'banking_credit_application_detail') }}
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.banking__credit-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.banking__credit-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+.banking__credit-detail-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0066cc;
+}
+
+.banking__credit-detail-icon-svg {
+    width: 32px;
+    height: 32px;
+    color: white;
+}
+
+.banking__credit-detail-info {
+    flex: 1;
+}
+
+.banking__credit-detail-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 8px 0;
+}
+
+.banking__credit-detail-reference {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin: 0 0 12px 0;
+}
+
+.banking__credit-detail-status {
+    display: inline-block;
+}
+
+/* Status Styles */
+.banking__status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.banking__status--completed {
+    background: rgba(39, 174, 96, 0.1);
+    color: #27ae60;
+}
+
+.banking__status--processing {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+
+.banking__status--pending {
+    background: rgba(149, 165, 166, 0.1);
+    color: #95a5a6;
+}
+
+.banking__status--rejected {
+    background: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+}
+
+.banking__status--contract {
+    background: rgba(52, 152, 219, 0.1);
+    color: #3498db;
+}
+
+.banking__status--signed {
+    background: rgba(155, 89, 182, 0.1);
+    color: #9b59b6;
+}
+
+.banking__status--validated {
+    background: rgba(46, 204, 113, 0.1);
+    color: #2ecc71;
+}
+
+.banking__status--disbursed {
+    background: rgba(22, 160, 133, 0.1);
+    color: #16a085;
+}
+
+.banking__status--requires-docs {
+    background: rgba(230, 126, 34, 0.1);
+    color: #e67e22;
+}
+
+.banking__status--cancelled {
+    background: rgba(127, 140, 141, 0.1);
+    color: #7f8c8d;
+}
+
+.banking__credit-detail-amount {
+    text-align: right;
+}
+
+.banking__credit-detail-amount-value {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #0066cc;
+    margin-bottom: 4px;
+}
+
+.banking__credit-detail-amount-label {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.banking__credit-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.banking__credit-detail-card {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.banking__credit-detail-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #e1e8ed;
+    padding-bottom: 12px;
+}
+
+.banking__credit-detail-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.banking__credit-detail-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banking__credit-detail-field-label {
+    font-size: 14px;
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+.banking__credit-detail-field-value {
+    font-size: 14px;
+    color: #2c3e50;
+    font-weight: 600;
+    text-align: right;
+}
+
+.banking__credit-detail-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.banking__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.banking__btn--primary {
+    background: #0066cc;
+    color: white;
+    border: 1px solid #0066cc;
+}
+
+.banking__btn--primary:hover {
+    background: #0052a3;
+    border-color: #0052a3;
+}
+
+.banking__btn--secondary {
+    background: #27ae60;
+    color: white;
+    border: 1px solid #27ae60;
+}
+
+.banking__btn--secondary:hover {
+    background: #229954;
+    border-color: #229954;
+}
+
+.banking__btn--outline {
+    background: transparent;
+    color: #0066cc;
+    border: 1px solid #0066cc;
+}
+
+.banking__btn--outline:hover {
+    background: #0066cc;
+    color: white;
+}
+
+.banking__btn-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.banking__status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.banking__status-badge--pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.banking__status-badge--approved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.banking__status-badge--contract_sent {
+    background: #cce5ff;
+    color: #004085;
+}
+
+.banking__status-badge--contract_signed {
+    background: #e7f3ff;
+    color: #0066cc;
+}
+
+.banking__status-badge--contract_validated {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.banking__status-badge--funds_disbursed {
+    background: #d4edda;
+    color: #155724;
+}
+
+.banking__status-badge--rejected {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.banking__back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.banking__back-btn:hover {
+    color: #0052a3;
+}
+
+.banking__back-icon {
+    width: 16px;
+    height: 16px;
+}
+
+@media (max-width: 768px) {
+    .banking__credit-detail-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .banking__credit-detail-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .banking__credit-detail-field {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    
+    .banking__credit-detail-field-value {
+        text-align: left;
+    }
+}
+</style>
+{% endblock %}

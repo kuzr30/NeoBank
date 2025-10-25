@@ -1,0 +1,165 @@
+
+<header class="header" data-controller="mobile-menu">
+  <div class="header-container">
+    <div class="header-content">
+      <!-- Logo -->
+      <div>
+        <a href="{{ path('home_index', {_locale: app.request.locale}) }}" class="logo">
+          <div class="logo-container">
+            <div class="logo-icon">
+              <img src="{{ asset('images/logo.png') }}" alt="Banking Logo" class="logo-image">
+            </div>
+            <span class="logo-text">SEDEF BANK</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation Desktop -->
+      <nav class="nav-desktop">
+        
+        <div class="nav-dropdown">
+          <a href="{{ path('services_savings_investments', {_locale: app.request.locale}) }}" class="nav-link">
+            {{ ux_icon('heroicons:building-library', {'class': 'nav-icon'}) }}
+            {{ t('nav.services') }}
+            {{ ux_icon('heroicons:chevron-down', {'class': 'nav-chevron'}) }}
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="{{ path('services_accounts_cards', {_locale: app.request.locale}) }}" class="nav-dropdown-link">{{ 'footer.services.accounts_cards'|trans }}</a>
+            <a href="{{ path('services_savings_investments', {_locale: app.request.locale}) }}" class="nav-dropdown-link">{{ 'footer.services.savings_investments'|trans }}</a>
+            <a href="{{ path('services_insurances', {_locale: app.request.locale}) }}" class="nav-dropdown-link">{{ 'footer.services.insurance'|trans }}</a>
+          </div>
+        </div>
+        
+        <div class="nav-dropdown">
+          <a href="{{ path('banking_credit_card', {_locale: app.request.locale}) }}" class="nav-link">
+            {{ ux_icon('heroicons:device-phone-mobile', {'class': 'nav-icon'}) }}
+            {{ t('nav.mobile') }}
+            {{ ux_icon('heroicons:chevron-down', {'class': 'nav-chevron'}) }}
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="{{ path('banking_mobile_app', {_locale: app.request.locale}) }}" class="nav-dropdown-link">{{ t('nav.mobile_app') }}</a>
+            <a href="{{ path('banking_credit_card', {_locale: app.request.locale}) }}" class="nav-dropdown-link">{{ t('nav.credit_card') }}</a>
+      
+          </div>
+        </div>
+        
+        <div class="nav-dropdown">
+          <a href="{{ path('credit_offers_index', {_locale: app.request.locale}) }}" class="nav-link">
+            {{ ux_icon('heroicons:currency-dollar', {'class': 'nav-icon'}) }}
+            {{ t('nav.loans') }}
+            {{ ux_icon('heroicons:chevron-down', {'class': 'nav-chevron'}) }}
+          </a>
+          <div class="nav-dropdown-menu">
+            
+            <a href="{{ path('credit_offers_index', {_locale: app.request.locale}) }}" class="nav-dropdown-link">{{ t('nav.our_credit_offers') }}</a>
+            <a href="{{ path('credit_offers_personal_loan', {_locale: app.request.locale}) }}" class="nav-dropdown-link">{{ t('nav.personal_loan') }}</a>
+            <a href="{{ path('credit_offers_travel_loan', {_locale: app.request.locale}) }}" class="nav-dropdown-link">{{ t('nav.travel_loan') }}</a>
+            <a href="{{ path('credit_offers_auto_loan', {_locale: app.request.locale}) }}" class="nav-dropdown-link">{{ t('nav.auto_loan') }}</a>
+            <a href="{{ path('credit_offers_home_loan', {_locale: app.request.locale}) }}" class="nav-dropdown-link">{{ t('nav.home_loan') }}</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- CTA & Mobile Menu -->
+      <div class="header-actions">
+        <!-- CTA Button -->
+        <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="cta-button">
+          {{ t('buttons.apply') }}
+          {{ ux_icon('heroicons:arrow-right', {'class': 'cta-icon'}) }}
+        </a>
+        
+        <!-- Mobile menu button -->
+        <button class="mobile-menu-btn" data-action="click->mobile-menu#toggle" data-mobile-menu-target="hamburger">
+          <div class="hamburger">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-overlay" data-mobile-menu-target="overlay" data-action="click->mobile-menu#close"></div>
+  
+  <div class="mobile-menu" data-mobile-menu-target="menu">
+    <div class="mobile-menu-content">
+      <!-- Mobile Header -->
+      <div class="mobile-header">
+        <div class="logo-container">
+          <div class="logo-icon">
+            <img src="{{ asset('images/logo.png') }}" alt="SEDEF BANK Logo" class="logo-image">
+          </div>
+          <span class="logo-text">SEDEF BANK</span>
+        </div>
+        <button class="mobile-close" data-action="click->mobile-menu#close">
+          {{ ux_icon('heroicons:x-mark', {'class': 'mobile-close-icon'}) }}
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <nav class="mobile-nav">
+        <div class="mobile-nav-list">
+
+          
+          <div class="mobile-nav-dropdown" data-controller="mobile-dropdown">
+            <button class="mobile-nav-link mobile-nav-toggle" data-action="click->mobile-dropdown#toggle">
+              {{ ux_icon('heroicons:building-library', {'class': 'mobile-nav-icon'}) }}
+              <span class="mobile-nav-text">{{ t('nav.services') }}</span>
+              <span class="mobile-nav-chevron" data-mobile-dropdown-target="chevron">
+                {{ ux_icon('heroicons:chevron-down', {'class': 'mobile-nav-chevron-icon'}) }}
+              </span>
+            </button>
+            <div class="mobile-nav-submenu" data-mobile-dropdown-target="submenu">
+              <a href="{{ path('services_accounts_cards', {_locale: app.request.locale}) }}" class="mobile-nav-sublink">{{ 'footer.services.accounts_cards'|trans }}</a>
+              <a href="{{ path('services_savings_investments', {_locale: app.request.locale}) }}" class="mobile-nav-sublink">{{ 'footer.services.savings_investments'|trans }}</a>
+              <a href="{{ path('services_insurances', {_locale: app.request.locale}) }}" class="mobile-nav-sublink">{{ 'footer.services.insurance'|trans }}</a>
+            </div>
+          </div>
+          
+          <div class="mobile-nav-dropdown" data-controller="mobile-dropdown">
+            <button class="mobile-nav-link mobile-nav-toggle" data-action="click->mobile-dropdown#toggle">
+              {{ ux_icon('heroicons:device-phone-mobile', {'class': 'mobile-nav-icon'}) }}
+              <span class="mobile-nav-text">{{ t('nav.mobile') }}</span>
+              <span class="mobile-nav-chevron" data-mobile-dropdown-target="chevron">
+                {{ ux_icon('heroicons:chevron-down', {'class': 'mobile-nav-chevron-icon'}) }}
+              </span>
+            </button>
+            <div class="mobile-nav-submenu" data-mobile-dropdown-target="submenu">
+              <a href="{{ path('banking_mobile_app', {_locale: app.request.locale}) }}" class="mobile-nav-sublink">{{ t('nav.mobile_app') }}</a>
+              <a href="{{ path('banking_credit_card', {_locale: app.request.locale}) }}" class="mobile-nav-sublink">{{ t('nav.credit_card') }}</a>
+    
+            </div>
+          </div>
+          
+          <div class="mobile-nav-dropdown" data-controller="mobile-dropdown">
+            <button class="mobile-nav-link mobile-nav-toggle" data-action="click->mobile-dropdown#toggle">
+              {{ ux_icon('heroicons:currency-dollar', {'class': 'mobile-nav-icon'}) }}
+              <span class="mobile-nav-text">{{ t('nav.loans') }}</span>
+              <span class="mobile-nav-chevron" data-mobile-dropdown-target="chevron">
+                {{ ux_icon('heroicons:chevron-down', {'class': 'mobile-nav-chevron-icon'}) }}
+              </span>
+            </button>
+            <div class="mobile-nav-submenu" data-mobile-dropdown-target="submenu">
+              <a href="{{ path('credit_simulation_index', {_locale: app.request.locale}) }}" class="mobile-nav-sublink">{{ t('nav.credit_simulation') }}</a>
+              <a href="{{ path('credit_offers_index', {_locale: app.request.locale}) }}" class="mobile-nav-sublink">{{ t('nav.our_credit_offers') }}</a>
+              <a href="{{ path('credit_offers_personal_loan', {_locale: app.request.locale}) }}" class="mobile-nav-sublink">{{ t('nav.personal_loan') }}</a>
+              <a href="{{ path('credit_offers_travel_loan', {_locale: app.request.locale}) }}" class="mobile-nav-sublink">{{ t('nav.travel_loan') }}</a>
+              <a href="{{ path('credit_offers_auto_loan', {_locale: app.request.locale}) }}" class="mobile-nav-sublink">{{ t('nav.auto_loan') }}</a>
+              <a href="{{ path('credit_offers_home_loan', {_locale: app.request.locale}) }}" class="mobile-nav-sublink">{{ t('nav.home_loan') }}</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile CTA -->
+      <div class="mobile-cta">
+        <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="mobile-cta-button">
+          {{ t('buttons.apply') }}
+          {{ ux_icon('heroicons:arrow-right', {'class': 'cta-icon'}) }}
+        </a>
+      </div>
+    </div>
+  </div>
+</header>

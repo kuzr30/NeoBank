@@ -1,0 +1,119 @@
+# Fichier de traduction pour CardConditionEnum
+# Domaine: CardConditionEnum
+# Langue: Français (fr)
+
+CardConditionEnum:
+  # Types de cartes - Labels
+  labels:
+    classic: "Carte Classic"
+    gold: "Carte Gold"
+    platinum: "Carte Platinum"
+  
+  # Types de cartes - Descriptions marketing
+  descriptions:
+    classic: "Carte idéale pour débuter avec des services essentiels"
+    gold: "Carte premium avec assurances et cashback inclus"
+    platinum: "Carte prestige avec services exclusifs et conciergerie"
+  
+  # Informations générales
+  info:
+    title: "Gammes de cartes bancaires"
+    subtitle: "Des services adaptés à chaque profil"
+    
+  # Frais annuels
+  annual_fees:
+    classic: "Gratuite"
+    gold: "60€/an"
+    platinum: "180€/an"
+    
+  # Conditions détaillées
+  conditions:
+    classic:
+      title: "CONDITIONS PARTICULIÈRES - CARTE CLASSIC"
+      pricing:
+        title: "TARIFICATION"
+        annual_fee: "Cotisation annuelle : Gratuite la première année, puis 24€/an"
+        withdrawal_eurozone: "Retrait en zone euro : Gratuit (3 par mois), puis 1€"
+        foreign_payment: "Paiement en devises : 2% de commission"
+      limits:
+        title: "PLAFONDS"
+        daily_withdrawal: "Retrait quotidien : 500€"
+        monthly_payment: "Paiement mensuel : 2 000€"
+      services:
+        title: "SERVICES INCLUS"
+        insurance: "Assurance achats : 500€"
+        support: "Assistance téléphonique 24h/7j"
+        
+    gold:
+      title: "CONDITIONS PARTICULIÈRES - CARTE GOLD"
+      pricing:
+        title: "TARIFICATION"
+        annual_fee: "Cotisation annuelle : 60€"
+        withdrawal_worldwide: "Retraits gratuits dans le monde entier"
+        payment_eurozone: "Paiements sans commission en zone euro"
+      limits:
+        title: "PLAFONDS"
+        daily_withdrawal: "Retrait quotidien : 1 000€"
+        monthly_payment: "Paiement mensuel : 5 000€"
+        revolving_credit: "Crédit revolving : 2 000€"
+      services:
+        title: "SERVICES INCLUS"
+        travel_insurance: "Assurance voyage internationale"
+        cashback: "Cashback 1% sur tous les achats"
+        concierge: "Conciergerie téléphonique"
+        purchase_insurance: "Assurance achats : 2 000€"
+        
+    platinum:
+      title: "CONDITIONS PARTICULIÈRES - CARTE PLATINUM"
+      pricing:
+        title: "TARIFICATION"
+        annual_fee: "Cotisation annuelle : 180€"
+        global_services: "Tous services gratuits dans le monde entier"
+        exchange_rates: "Taux de change préférentiels"
+      limits:
+        title: "PLAFONDS"
+        daily_withdrawal: "Retrait quotidien : 2 500€"
+        monthly_payment: "Paiement mensuel : 10 000€"
+        revolving_credit: "Crédit revolving : 5 000€"
+      services:
+        title: "SERVICES PREMIUM"
+        premium_travel: "Assurance voyage premium + famille"
+        premium_cashback: "Cashback 2% sur tous les achats"
+        vip_access: "Accès salons VIP aéroports"
+        premium_concierge: "Conciergerie premium 24h/24"
+        premium_insurance: "Assurance achats : 5 000€"
+        ticket_service: "Service de rachat de billets d'avion"
+  
+  # Limites par type
+  limits:
+    classic:
+      daily: "500€"
+      monthly: "2 000€"
+    gold:
+      daily: "1 000€"
+      monthly: "5 000€"
+      credit: "2 000€"
+    platinum:
+      daily: "2 500€"
+      monthly: "10 000€"
+      credit: "5 000€"
+      
+  # Messages pour les formulaires
+  form:
+    placeholder: "Choisissez votre gamme de carte"
+    help: "La gamme détermine les services et limites de votre carte"
+    
+  # Avantages principaux
+  key_benefits:
+    classic:
+      - "Carte sans frais la première année"
+      - "Services bancaires essentiels"
+      - "Assistance 24h/7j"
+    gold:
+      - "Retraits gratuits worldwide"
+      - "Cashback sur vos achats"
+      - "Assurance voyage incluse"
+    platinum:
+      - "Services premium exclusifs"
+      - "Conciergerie dédiée"
+      - "Accès salons VIP"

@@ -1,0 +1,100 @@
+banking_loans:
+  # Meta tags
+  meta:
+    title: "Mis préstamos - %company_name%"
+    description: "Gestione sus préstamos y créditos con %company_name%"
+
+  # Navigation
+  nav:
+    dashboard: "Panel de control"
+    loans: "Préstamos"
+    loan_detail: "Detalle del préstamo"
+    back: "Volver"
+
+  # Page headers
+  page:
+    title: "Mis préstamos"
+    subtitle: "Consulte y gestione todos sus préstamos en curso"
+    loan_detail_title: "Detalle del préstamo"
+    
+  # Loan info
+  loan:
+    amount: "Monto prestado"
+    remaining_balance: "Capital pendiente"
+    monthly_payment: "Cuota mensual"
+    interest_rate: "Tasa de interés"
+    duration: "Duración total"
+    remaining_duration: "Duración restante"
+    start_date: "Fecha de inicio"
+    end_date: "Fecha de finalización prevista"
+    next_payment_date: "Próximo vencimiento"
+    payment_day: "Día de débito"
+    loan_type: "Tipo de préstamo"
+    status: "Estado"
+    account: "Cuenta asociada"
+    
+  # Loan types
+  types:
+    personal: "Préstamo personal"
+    mortgage: "Préstamo hipotecario"
+    auto: "Préstamo automotriz"
+    student: "Préstamo estudiantil"
+    business: "Préstamo comercial"
+    consumer: "Crédito de consumo"
+    bridge: "Crédito puente"
+    renovation: "Préstamo de mejoras"
+    
+  # Status
+  status:
+    active: "Activo"
+    completed: "Pagado"
+    suspended: "Suspendido"
+    in_default: "En mora"
+    early_repayment: "Pago anticipado"
+    
+  # Payment info
+  payment:
+    payment_number: "Cuota nº"
+    payment_date: "Fecha de pago"
+    amount: "Monto"
+    principal: "Capital"
+    interest: "Intereses"
+    remaining_balance: "Capital restante"
+    status: "Estado"
+    
+  # Payment status
+  payment_status:
+    paid: "Pagado"
+    pending: "Pendiente"
+    overdue: "Vencido"
+    failed: "Fallido"
+    
+  # Actions
+  actions:
+    view_details: "Ver detalles"
+    view_payments: "Ver cuotas"
+    view_amortization: "Ver tabla de amortización"
+    make_payment: "Realizar pago"
+    early_repayment: "Pago anticipado"
+    download_statement: "Descargar estado"
+    contact_advisor: "Contactar asesor"
+    
+  # Amortization table
+  amortization:
+    title: "Tabla de amortización"
+    payment_number: "Nº"
+    date: "Fecha"
+    payment: "Cuota"
+    principal: "Capital"
+    interest: "Intereses"
+    remaining: "Capital restante"
+    
+  # Messages
+  messages:
+    no_loans: "Ningún préstamo en curso"
+    access_denied: "Acceso denegado a este préstamo"
+    payment_success: "Pago realizado con éxito"
+    payment_failed: "Fallo en el pago"
+    
+  # Currency
+  currency: "€"

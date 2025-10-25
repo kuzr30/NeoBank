@@ -1,0 +1,22 @@
+email_profile_updated:
+  title: "Update van uw profiel"
+  content:
+    page_title: "Profiel update"
+    greeting: "Hallo {firstName} {lastName},"
+    notification: "We informeren u dat uw %company_name% profiel succesvol is bijgewerkt."
+    changes_section:
+      title: "Aangebrachte wijzigingen"
+    security_info:
+      title: "Beveiligingsinformatie"
+      warning: "Als u deze wijzigingen niet heeft aangebracht, neem dan onmiddellijk contact op met onze klantenservice. Uw veiligheid is onze prioriteit."
+    help_text: "Als u vragen heeft over deze wijzigingen, aarzel dan niet om contact met ons op te nemen."
+    view_profile_button: "Bekijk mijn profiel"
+    modification_date: "Datum van wijziging: {updateDate}"
+    footer: "Deze email is automatisch verzonden door Nom de l'entreprise.<br>Voor vragen, neem contact met ons op via Email"
+  
+  # Log berichten voor de MessageHandler
+  logs:
+    sending: "Verzenden van profiel update bevestiging"
+    success: "Profiel update bevestiging succesvol verzonden"
+    error: "Fout bij het verzenden van profiel update bevestiging"
+    send_failed: "Verzenden van profiel update bevestiging mislukt"

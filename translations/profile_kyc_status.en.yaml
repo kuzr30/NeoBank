@@ -1,0 +1,57 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: profile_kyc_status.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+profile_kyc_status:
+  page:
+    title: "My identity verification status"
+  
+  header:
+    title: "My KYC request details"
+  
+  info:
+    request_status: "Request status"
+    submitted_on: "Submitted on"
+  
+  status_badges:
+    pending: "Pending validation"
+    approved: "Approved"
+    rejected: "Rejected"
+  
+  timeline:
+    title: "Request tracking"
+    documents_submitted: "Documents submitted"
+    under_review: "Under review"
+    under_review_message: "Our team is reviewing your documents..."
+    approved: "Request approved"
+    rejected: "Request rejected"
+    processed_by: "By"
+  
+  documents:
+    title: "Documents submitted"
+    sent_on: "Sent on"
+  
+  admin_notes:
+    title: "Notes from our team"
+  
+  actions:
+    back: "Back"
+    resubmit_documents: "Submit new documents"
+    access_banking: "Access my banking services"
+  
+  status:
+    pending:
+      title: "Verification in progress"
+      message: "Your request is being reviewed by our team. You will be notified by email as soon as the verification is complete."
+      estimated_time: "Estimated waiting time: 24-48 hours"
+    
+    approved:
+      title: "Verification approved"
+      message: "Congratulations! Your identity has been successfully verified. You now have access to all our services."
+      completion_date: "Approval date"
+    
+    rejected:
+      title: "Verification rejected"
+      message: "Your verification request has been rejected. Please review the notes below and submit new documents."
+      reason: "Reason for rejection"

@@ -1,0 +1,7 @@
+kyc_document:
+  types:
+    identity: "Ausweisdokument"
+    income_proof: "Einkommensnachweis"
+    address_proof: "Wohnsitznachweis"
+    selfie: "Selfie"
+    unknown: "Unbekanntes Dokument"

@@ -1,0 +1,140 @@
+enums:
+  # Credit Application Status
+  credit_application_status:
+    pending: "In afwachting"
+    approved: "Goedgekeurd"
+    rejected: "Geweigerd"
+    in_progress: "In behandeling"
+    in_review: "In onderzoek"
+    contract_sent: "Contract verzonden"
+    contract_signed: "Contract getekend"
+    contract_validated: "Contract gevalideerd"
+    funds_disbursed: "Fondsen uitgekeerd"
+    requires_documents: "Documenten vereist"
+    cancelled: "Geannuleerd"
+
+  # Account Status
+  account_status:
+    active: "Actief"
+    suspended: "Opgeschort"
+    closed: "Gesloten"
+    pending: "In afwachting"
+
+  # Account Type
+  account_type:
+    checking: "Zichtrekening"
+    savings: "Spaarrekening"
+    credit: "Kredietrekening"
+    business: "Zakelijke Rekening"
+    loan: "Leningrekening"
+
+  # Transaction Status
+  transaction_status:
+    pending: "In afwachting"
+    completed: "Voltooid"
+    failed: "Mislukt"
+    cancelled: "Geannuleerd"
+
+  # Transaction Type
+  transaction_type:
+    debit: "Debet"
+    credit: "Credit"
+    deposit: "Storting"
+    withdrawal: "Opname"
+    transfer: "Overschrijving"
+    payment: "Betaling"
+    fee: "Kosten"
+    interest: "Rente"
+
+  # Transaction Category
+  transaction_category:
+    transfer: "Overschrijving"
+    deposit: "Storting"
+    withdrawal: "Opname"
+    payment: "Betaling"
+    fee: "Kosten"
+    interest: "Rente"
+    loan_payment: "Leningafbetaling"
+    card_payment: "Kaartbetaling"
+    direct_debit: "Automatische incasso"
+    check: "Cheque"
+    cash: "Contant geld"
+    online_payment: "Online betaling"
+    refund: "Terugbetaling"
+    salary: "Salaris"
+    rent: "Huur"
+    groceries: "Boodschappen"
+    transport: "Transport"
+    entertainment: "Vrije tijd"
+    healthcare: "Gezondheid"
+    education: "Onderwijs"
+    utilities: "Rekeningen"
+    shopping: "Aankopen"
+    other: "Overige"
+
+  # Duration Unit
+  duration_unit:
+    days: "dagen"
+    weeks: "weken"
+    months: "maanden"
+    years: "jaren"
+
+  # Duration
+  duration:
+    short: "Korte termijn"
+    medium: "Middellange termijn"
+    long: "Lange termijn"
+
+  # Assurance Type
+  assurance_type:
+    auto:
+      label: "Autoverzekering"
+      description: "Volledige bescherming voor uw voertuig met 24/7 bijstand"
+    habitation:
+      label: "Woonverzekering"
+      description: "Allrisk woonverzekering voor eigenaren en huurders"
+    sante:
+      label: "Aanvullende Zorgverzekering"
+      description: "Aanvullende zorgverzekering met geoptimaliseerde vergoedingen"
+    vie:
+      label: "Levensverzekering"
+      description: "Fiscaal geoptimaliseerd sparen en nalaten"
+    pret:
+      label: "Kredielverzekering"
+      description: "Beveilig uw hypotheeklening"
+    voyage:
+      label: "Reisverzekering"
+      description: "Reis met een gerust hart met wereldwijde dekking"
+    pro:
+      label: "Bedrijfsverzekering"
+      description: "Volledige bescherming voor uw zakelijke activiteit"
+    cyber:
+      label: "Cyberverzekering"
+      description: "Bescherming tegen cyberaanvallen en datalekken"
+    decennale:
+      label: "Tienjarige Aansprakelijkheid"
+      description: "Verplicht voor bouwprofessionals"
+    rc:
+      label: "Burgerlijke Aansprakelijkheid"
+      description: "Bescherming tegen schade toegebracht aan derden"
+    flotte:
+      label: "Vlootverzekering"
+      description: "Verzekering voor bedrijfswagenpark"
+    garage:
+      label: "Garageverzekering"
+      description: "Bescherming voor autoprofessionals"
+
+  # Contrat Assurance Status  
+  contrat_assurance_status:
+    actif:
+      label: "Actief"
+      description: "Contract lopend en operationeel"
+    suspendu:
+      label: "Opgeschort"
+      description: "Contract tijdelijk opgeschort"
+    resilie:
+      label: "Opgezegd"
+      description: "Contract definitief opgezegd"
+    expire:
+      label: "Verlopen"
+      description: "Contract vervallen"

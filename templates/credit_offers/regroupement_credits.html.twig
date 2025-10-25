@@ -1,0 +1,147 @@
+{% extends 'credit_offers/credit_page_structure.html.twig' %}
+
+{% set seo_title = tp('regroupement_credits.page.title', [], 'regroupement_credits') %}
+{% set page_title = tp('regroupement_credits.page.title', [], 'regroupement_credits') %}
+{% set seo_description = tp('regroupement_credits.page.description', [], 'regroupement_credits') %}
+{% set hero_class = 'credit-detail-hero--regroupement' %}
+
+{% block taux_value %}{{ credit_rate('debt_consolidation') }}%{% endblock %}
+{% block montant_value %}{{ tp('regroupement_credits.hero.montant', [], 'regroupement_credits') }}{% endblock %}
+{% block duree_value %}{{ tp('regroupement_credits.hero.duree', [], 'regroupement_credits') }}{% endblock %}
+
+{% block hero_title %}{{ tp('regroupement_credits.hero.title', [], 'regroupement_credits') }}{% endblock %}
+{% block hero_subtitle %}{{ tp('regroupement_credits.hero.subtitle', [], 'regroupement_credits') }}{% endblock %}
+
+{% block section_1_title %}{{ tp('regroupement_credits.section_1.title', [], 'regroupement_credits') }}{% endblock %}
+
+{% block section_1_content %}
+<p>{{ tp('regroupement_credits.section_1.content.paragraph_1', [], 'regroupement_credits') }}</p>
+<p>{{ tp('regroupement_credits.section_1.content.paragraph_2', [], 'regroupement_credits') }}</p>
+{% endblock %}
+
+{% block feature_montant %}{{ tp('regroupement_credits.features.montant.value', [], 'regroupement_credits') }}{% endblock %}
+{% block feature_montant_detail %}{{ tp('regroupement_credits.features.montant.detail', [], 'regroupement_credits') }}{% endblock %}
+{% block feature_duree %}{{ tp('regroupement_credits.features.duree.value', [], 'regroupement_credits') }}{% endblock %}
+{% block feature_duree_detail %}{{ tp('regroupement_credits.features.duree.detail', [], 'regroupement_credits') }}{% endblock %}
+{% block feature_taux %}{{ tp('regroupement_credits.features.taux.value', [], 'regroupement_credits')|replace({'{rate}': credit_rate('regroupement')})|raw }}{% endblock %}
+{% block feature_taux_detail %}{{ tp('regroupement_credits.features.taux.detail', [], 'regroupement_credits') }}{% endblock %}
+{% block feature_garantie %}{{ tp('regroupement_credits.features.garantie.value', [], 'regroupement_credits') }}{% endblock %}
+{% block feature_garantie_detail %}{{ tp('regroupement_credits.features.garantie.detail', [], 'regroupement_credits') }}{% endblock %}
+
+{% block section_3_title %}{{ tp('regroupement_credits.section_3.title', [], 'regroupement_credits') }}{% endblock %}
+
+{% block section_3_content %}
+<ul class="credit-detail-advantages">
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('regroupement_credits.section_3.advantages.mensualite_unique.title', [], 'regroupement_credits') }} :</strong> {{ tp('regroupement_credits.section_3.advantages.mensualite_unique.description', [], 'regroupement_credits') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('regroupement_credits.section_3.advantages.baisse_echeances.title', [], 'regroupement_credits') }} :</strong> {{ tp('regroupement_credits.section_3.advantages.baisse_echeances.description', [], 'regroupement_credits') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('regroupement_credits.section_3.advantages.tresorerie_liberee.title', [], 'regroupement_credits') }} :</strong> {{ tp('regroupement_credits.section_3.advantages.tresorerie_liberee.description', [], 'regroupement_credits') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('regroupement_credits.section_3.advantages.gestion_simplifiee.title', [], 'regroupement_credits') }} :</strong> {{ tp('regroupement_credits.section_3.advantages.gestion_simplifiee.description', [], 'regroupement_credits') }}</span>
+    </li>
+    <li class="credit-detail-advantage">
+        <span class="credit-detail-advantage__icon">{{ ux_icon('heroicons:check', {'class': 'credit-detail-advantage__icon-svg'}) }}</span>
+        <span class="credit-detail-advantage__text"><strong>{{ tp('regroupement_credits.section_3.advantages.tresorerie_supplementaire.title', [], 'regroupement_credits') }} :</strong> {{ tp('regroupement_credits.section_3.advantages.tresorerie_supplementaire.description', [], 'regroupement_credits') }}</span>
+    </li>
+</ul>
+{% endblock %}
+
+{% block section_4_title %}{{ tp('regroupement_credits.section_4.title', [], 'regroupement_credits') }}{% endblock %}
+
+{% block section_4_content %}
+<div class="credit-detail-requirements">
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('regroupement_credits.section_4.conditions.title', [], 'regroupement_credits') }}</h3>
+        <ul>
+            <li>{{ tp('regroupement_credits.section_4.conditions.items.credits_existants', [], 'regroupement_credits') }}</li>
+            <li>{{ tp('regroupement_credits.section_4.conditions.items.montant_minimum', [], 'regroupement_credits') }}</li>
+            <li>{{ tp('regroupement_credits.section_4.conditions.items.revenus', [], 'regroupement_credits') }}</li>
+            <li>{{ tp('regroupement_credits.section_4.conditions.items.capacite_remboursement', [], 'regroupement_credits') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-requirement">
+        <h3>{{ tp('regroupement_credits.section_4.dossier.title', [], 'regroupement_credits') }}</h3>
+        <ul>
+            <li>{{ tp('regroupement_credits.section_4.dossier.items.tableaux', [], 'regroupement_credits') }}</li>
+            <li>{{ tp('regroupement_credits.section_4.dossier.items.assurances', [], 'regroupement_credits') }}</li>
+            <li>{{ tp('regroupement_credits.section_4.dossier.items.justificatifs', [], 'regroupement_credits') }}</li>
+            <li>{{ tp('regroupement_credits.section_4.dossier.items.situation', [], 'regroupement_credits') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block section_5_title %}{{ tp('regroupement_credits.section_5.title', [], 'regroupement_credits') }}{% endblock %}
+
+{% block section_5_content %}
+<div class="credit-detail-documents">
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('regroupement_credits.section_5.personnels.title', [], 'regroupement_credits') }}</h3>
+        <ul>
+            <li>{{ tp('regroupement_credits.section_5.personnels.items.identite', [], 'regroupement_credits') }}</li>
+            <li>{{ tp('regroupement_credits.section_5.personnels.items.domicile', [], 'regroupement_credits') }}</li>
+            <li>{{ tp('regroupement_credits.section_5.personnels.items.familiale', [], 'regroupement_credits') }}</li>
+            <li>{{ tp('regroupement_credits.section_5.personnels.items.rib', [], 'regroupement_credits') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('regroupement_credits.section_5.financiers.title', [], 'regroupement_credits') }}</h3>
+        <ul>
+            <li>{{ tp('regroupement_credits.section_5.financiers.items.revenus', [], 'regroupement_credits') }}</li>
+            <li>{{ tp('regroupement_credits.section_5.financiers.items.impots', [], 'regroupement_credits') }}</li>
+            <li>{{ tp('regroupement_credits.section_5.financiers.items.comptes', [], 'regroupement_credits') }}</li>
+            <li>{{ tp('regroupement_credits.section_5.financiers.items.patrimoine', [], 'regroupement_credits') }}</li>
+        </ul>
+    </div>
+    <div class="credit-detail-document-category">
+        <h3>{{ tp('regroupement_credits.section_5.credits.title', [], 'regroupement_credits') }}</h3>
+        <ul>
+            <li>{{ tp('regroupement_credits.section_5.credits.items.contrats', [], 'regroupement_credits') }}</li>
+            <li>{{ tp('regroupement_credits.section_5.credits.items.echeanciers', [], 'regroupement_credits') }}</li>
+            <li>{{ tp('regroupement_credits.section_5.credits.items.assurances_contrats', [], 'regroupement_credits') }}</li>
+            <li>{{ tp('regroupement_credits.section_5.credits.items.releves', [], 'regroupement_credits') }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block legal_details %}
+<div class="credit-legal-notice__details">
+    <h4>{{ tp('regroupement_credits.legal.details.title', [], 'regroupement_credits') }}</h4>
+    <ul>
+        <li>{{ tp('regroupement_credits.legal.details.taeg', [], 'regroupement_credits')|raw }}</li>
+        <li>{{ tp('regroupement_credits.legal.details.duree', [], 'regroupement_credits')|raw }}</li>
+        <li>{{ tp('regroupement_credits.legal.details.garantie', [], 'regroupement_credits')|raw }}</li>
+        <li>{{ tp('regroupement_credits.legal.details.assurance', [], 'regroupement_credits')|raw }}</li>
+        <li>{{ tp('regroupement_credits.legal.details.reflexion', [], 'regroupement_credits')|raw }}</li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block cta_title %}{{ tp('regroupement_credits.cta.title', [], 'regroupement_credits') }}{% endblock %}
+{% block cta_subtitle %}{{ tp('regroupement_credits.cta.subtitle', [], 'regroupement_credits') }}{% endblock %}
+
+{% block custom_styles %}
+{{ parent() }}
+<style>
+/* Specific color for credit consolidation */
+.credit-detail-hero--regroupement {
+    background: 
+        linear-gradient(135deg, rgba(147, 51, 234, 0.4) 0%, rgba(126, 34, 206, 0.6) 100%),
+        url('/images/c022abe815.jpg') center/cover no-repeat;
+}
+
+.credit-detail-hero--regroupement .credit-highlight__value {
+    color: #d8b4fe;
+}
+</style>
+{% endblock %}

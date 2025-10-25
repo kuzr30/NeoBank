@@ -1,0 +1,45 @@
+legal_notices:
+  page_title: "Impressum"
+  page_description: "Rechtliche Informationen und regulatorische Verpflichtungen von %company_name%"
+
+  company_info:
+    title: "Unternehmensinformationen"
+    content: |
+      <strong>Firmenname:</strong> %company_name%<br>
+      <strong>Adresse:</strong> %company_address%<br>
+      <strong>Telefon:</strong> %company_phone%<br>
+      <strong>E-Mail:</strong> %company_email%<br>
+      <strong>SIRET:</strong> %company_siret%<br>
+      <strong>Website:</strong> %company_website%
+
+  hosting:
+    title: "Hosting"
+    content: |
+      Diese Website wird gehostet von <strong>%hosting_provider%</strong><br>
+      Adresse: %hosting_address%<br>
+      Website: %hosting_website%
+
+  intellectual_property:
+    title: "Geistiges Eigentum"
+    content: |
+      Diese gesamte Website unterliegt der französischen und internationalen Gesetzgebung zu Urheberrechten und geistigem Eigentum.
+      Alle Vervielfältigungsrechte sind vorbehalten, einschließlich für herunterladbare Dokumente und ikonografische und fotografische Darstellungen.
+
+  liability:
+    title: "Haftung"
+    content: |
+      Die Informationen auf dieser Website sind so genau wie möglich und die Website wird zu verschiedenen Zeiten des Jahres aktualisiert.
+      Es können jedoch Fehler oder Auslassungen auftreten. Der Internetnutzer muss daher die Richtigkeit der Informationen bei %company_name% überprüfen,
+      und alle Änderungen der Website melden, die er für nützlich hält.
+
+  gdpr:
+    title: "Schutz personenbezogener Daten"
+    content: |
+      In Anwendung des Gesetzes Nr. 78-17 vom 6. Januar 1978 über Informatik, Dateien und Freiheiten (DSGVO),
+      haben Benutzer das Recht auf Zugang, Berichtigung, Löschung und Widerspruch ihrer personenbezogenen Daten.
+      Dieses Recht wird bei %company_name% unter der Adresse %company_email% ausgeübt.
+
+  contact:
+    title: "Kontakt"
+    content: |
+      Für Fragen zu diesem Impressum können Sie uns unter der Adresse %email% kontaktieren.

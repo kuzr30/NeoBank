@@ -1,0 +1,580 @@
+# Archivo de traducción profesional para las etapas de solicitud de crédito
+# Dominio: credit_step_forms
+# Compatible con la arquitectura existente del proyecto %company_name%
+
+# === METADATOS Y CONFIGURACIÓN ===
+meta:
+  version: "1.0.0"
+  description: "Traducciones para los formularios de solicitud de crédito multi-etapas"
+  last_updated: "2025-09-09"
+  compatibility: "Symfony 7+ con ProfessionalTranslationService"
+
+# === VALIDACIÓN JAVASCRIPT ===
+js:
+  validation:
+    required: "Este campo es obligatorio"
+    email: "Email inválido"
+    phone: "Número de teléfono inválido"
+    postal: "Código postal inválido"
+    min: "Valor mínimo: %value%"
+    max: "Valor máximo: %value%"
+
+# === ETAPA 1: INFORMACIÓN PERSONAL ===
+step1:
+  title: "Información personal"
+  subtitle: "Complete sus datos personales"
+  description: "Esta información nos permitirá procesar su solicitud de crédito"
+  section_title: "Su información personal"
+  
+  fields:
+    # Información básica
+    firstname:
+      label: "Nombre"
+      placeholder: "Su nombre"
+      help: "Ingrese su nombre tal como aparece en sus documentos oficiales"
+      errors:
+        required: "El nombre es obligatorio"
+        min_length: "El nombre debe contener al menos 2 caracteres"
+        max_length: "El nombre no puede exceder 50 caracteres"
+        invalid_format: "El nombre solo puede contener letras, espacios, guiones y apóstrofes"
+    
+    lastname:
+      label: "Apellido"
+      placeholder: "Su apellido"
+      help: "Ingrese su apellido tal como aparece en sus documentos oficiales"
+      errors:
+        required: "El apellido es obligatorio"
+        min_length: "El apellido debe contener al menos 2 caracteres"
+        max_length: "El apellido no puede exceder 50 caracteres"
+        invalid_format: "El apellido solo puede contener letras, espacios, guiones y apóstrofes"
+    
+    email:
+      label: "Dirección de correo electrónico"
+      placeholder: "su.email@ejemplo.com"
+      help: "Use una dirección de correo electrónico válida donde podamos contactarle"
+      errors:
+        required: "La dirección de correo electrónico es obligatoria"
+        invalid: "Por favor ingrese una dirección de correo electrónico válida"
+    
+    phone:
+      label: "Número de teléfono"
+      placeholder: "+34 1 23 45 67 89"
+      help: "Ingrese su número de teléfono móvil o fijo"
+      errors:
+        required: "El número de teléfono es obligatorio"
+        invalid: "Por favor ingrese un número de teléfono válido"
+    
+    birth_date:
+      label: "Fecha de nacimiento"
+      placeholder: "dd/mm/aaaa"
+      help: "Debe ser mayor de edad para solicitar un crédito"
+      errors:
+        required: "La fecha de nacimiento es obligatoria"
+        invalid: "Por favor ingrese una fecha válida"
+        age_restriction: "Debe ser mayor de edad para solicitar un crédito"
+    
+    nationality:
+      label: "Nacionalidad"
+      placeholder: "Seleccione su nacionalidad"
+      help: "Su nacionalidad actual"
+      errors:
+        required: "La nacionalidad es obligatoria"
+      choices:
+        french: "Española"
+        eu: "Europea (UE)"
+        non_eu: "Fuera de la UE"
+    
+    marital_status:
+      label: "Estado civil"
+      placeholder: "Seleccione su situación"
+      help: "Su situación familiar actual"
+      errors:
+        required: "El estado civil es obligatorio"
+        invalid: "Estado civil inválido"
+      choices:
+        single: "Soltero/a"
+        married: "Casado/a"
+        divorced: "Divorciado/a"
+        widowed: "Viudo/a"
+        cohabiting: "En unión libre"
+        pacs: "En pareja de hecho"
+    
+    dependents:
+      label: "Número de personas a cargo"
+      placeholder: "Seleccione el número"
+      help: "Hijos u otras personas bajo su responsabilidad financiera"
+      errors:
+        required: "El número de personas a cargo es obligatorio"
+        invalid_range: "El número de personas a cargo debe estar entre 0 y 20"
+      choices:
+        none: "Ninguna"
+        one: "1"
+        two: "2" 
+        three: "3"
+        four: "4"
+        five_plus: "5 o más"
+
+  # Dirección
+  address_section:
+    title: "Su dirección de residencia"
+    
+    address:
+      label: "Dirección completa"
+      placeholder: "123 Calle de la Paz"
+      help: "Su dirección de residencia principal"
+      errors:
+        required: "La dirección es obligatoria"
+        min_length: "La dirección debe contener al menos 5 caracteres"
+        max_length: "La dirección no puede exceder 255 caracteres"
+    
+    city:
+      label: "Ciudad"
+      placeholder: "Madrid"
+      help: "Su ciudad de residencia"
+      errors:
+        required: "La ciudad es obligatoria"
+        min_length: "El nombre de la ciudad debe contener al menos 2 caracteres"
+        max_length: "El nombre de la ciudad no puede exceder 100 caracteres"
+    
+    postal_code:
+      label: "Código postal"
+      placeholder: "28000"
+      help: "Código postal español (5 dígitos)"
+      errors:
+        required: "El código postal es obligatorio"
+        invalid: "El código postal debe contener 5 dígitos"
+    
+    country:
+      label: "País"
+      placeholder: "Seleccione su país"
+      help: "País de residencia"
+      errors:
+        required: "El país es obligatorio"
+    
+    housing_type:
+      label: "Tipo de vivienda"
+      placeholder: "Seleccione su situación de vivienda"
+      help: "Su situación de vivienda actual"
+      errors:
+        required: "El tipo de vivienda es obligatorio"
+        invalid: "Tipo de vivienda inválido"
+      choices:
+        owner: "Propietario/a"
+        tenant: "Inquilino/a"
+        family: "Alojado en familia"
+        social: "Vivienda social"
+        other: "Otro"
+
+# === ETAPA 2: SITUACIÓN FINANCIERA ===
+step2:
+  title: "Situación financiera"
+  subtitle: "Complete su situación profesional y financiera"
+  description: "Esta información nos ayudará a evaluar su capacidad de reembolso"
+  section_title: "Su situación financiera"
+  
+  # Sección empleo
+  employment_section:
+    title: "Su situación profesional"
+    
+    monthly_income:
+      label: "Ingresos mensuales netos"
+      placeholder: "Monto en €"
+      help: "Sus ingresos netos mensuales (después de cargas sociales e impuestos)"
+      errors:
+        required: "Los ingresos mensuales son obligatorios"
+        min_value: "El ingreso mensual mínimo requerido es de 1000€"
+        invalid: "Por favor ingrese un monto válido"
+    
+    employment_type:
+      label: "Tipo de empleo"
+      placeholder: "Seleccione su estatus profesional"
+      help: "Su estatus profesional actual"
+      errors:
+        required: "El tipo de empleo es obligatorio"
+        invalid: "Tipo de empleo inválido"
+      choices:
+        employee: "Empleado/a indefinido"
+        employee_cdd: "Empleado/a temporal"
+        civil_servant: "Funcionario/a"
+        freelancer: "Trabajador independiente"
+        entrepreneur: "Director de empresa"
+        retired: "Jubilado/a"
+        unemployed: "Sin empleo"
+        student: "Estudiante"
+    
+    employer:
+      label: "Nombre del empleador"
+      placeholder: "Nombre de su empresa"
+      help: "El nombre de su empleador o empresa"
+      errors:
+        max_length: "El nombre del empleador no puede exceder 255 caracteres"
+    
+    job_title:
+      label: "Título del puesto"
+      placeholder: "Su función"
+      help: "Su título o función en la empresa"
+      errors:
+        max_length: "El título del puesto no puede exceder 255 caracteres"
+    
+    employment_start_date:
+      label: "Fecha de inicio del empleo"
+      placeholder: "dd/mm/aaaa"
+      help: "Fecha de inicio de su empleo actual"
+      errors:
+        invalid: "Por favor ingrese una fecha válida"
+
+  # Sección financiera
+  financial_section:
+    title: "Sus gastos y compromisos"
+    
+    monthly_expenses:
+      label: "Gastos mensuales"
+      placeholder: "Importe en €"
+      help: "Sus gastos mensuales (alquiler, facturas, alimentación, etc.)"
+      errors:
+        required: "Los gastos mensuales son obligatorios"
+        min_value: "Los gastos no pueden ser negativos"
+        invalid: "Por favor ingrese un importe válido"
+    
+    existing_loans:
+      label: "Créditos en curso"
+      placeholder: "Importe mensual total en €"
+      help: "Importe total mensual de sus créditos en curso (opcional)"
+      errors:
+        min_value: "El importe no puede ser negativo"
+        invalid: "Por favor ingrese un importe válido"
+
+  fields:
+    # Situación profesional (estructura antigua - conservar para compatibilidad)
+    monthly_income:
+      label: "Ingresos mensuales netos"
+      placeholder: "Importe en €"
+      help: "Sus ingresos netos mensuales (después de cargas sociales e impuestos)"
+      errors:
+        required: "Los ingresos mensuales son obligatorios"
+        min_value: "El ingreso mensual mínimo requerido es de 1000€"
+        invalid: "Por favor ingrese un importe válido"
+    
+    employment_type:
+      label: "Tipo de empleo"
+      placeholder: "Seleccione su estatus profesional"
+      help: "Su estatus profesional actual"
+      errors:
+        required: "El tipo de empleo es obligatorio"
+        invalid: "Tipo de empleo inválido"
+      choices:
+        employee: "Empleado/a indefinido"
+        employee_cdd: "Empleado/a temporal"
+        civil_servant: "Funcionario/a"
+        freelancer: "Trabajador independiente"
+        entrepreneur: "Director de empresa"
+        retired: "Jubilado/a"
+        unemployed: "Sin empleo"
+        student: "Estudiante"
+    
+    employer:
+      label: "Nombre del empleador"
+      placeholder: "Nombre de su empresa"
+      help: "El nombre de su empleador o empresa"
+      errors:
+        max_length: "El nombre del empleador no puede exceder 255 caracteres"
+    
+    job_title:
+      label: "Título del puesto"
+      placeholder: "Su función"
+      help: "Su título o función en la empresa"
+      errors:
+        max_length: "El título del puesto no puede exceder 255 caracteres"
+    
+    employment_start_date:
+      label: "Fecha de inicio del empleo"
+      placeholder: "dd/mm/aaaa"
+      help: "Fecha de inicio de su empleo actual"
+      errors:
+        invalid: "Por favor ingrese una fecha válida"
+
+    # Gastos y compromisos
+    monthly_expenses:
+      label: "Gastos mensuales"
+      placeholder: "Importe en €"
+      help: "Sus gastos mensuales (alquiler, facturas, alimentación, etc.)"
+      errors:
+        required: "Los gastos mensuales son obligatorios"
+        min_value: "Los gastos no pueden ser negativos"
+        invalid: "Por favor ingrese un importe válido"
+    
+    existing_loans:
+      label: "Créditos en curso"
+      placeholder: "Importe mensual total en €"
+      help: "Importe total mensual de sus créditos en curso (opcional)"
+      errors:
+        min_value: "El importe no puede ser negativo"
+        invalid: "Por favor ingrese un importe válido"
+
+# === ETAPA 3: CONFIGURACIÓN DEL CRÉDITO ===
+step3:
+  title: "Configuración del crédito"
+  subtitle: "Defina los parámetros de su crédito"
+  description: "Configure su crédito según sus necesidades y visualice la simulación"
+  section_title: "Parámetros de su crédito"
+  
+  # Configuración del crédito
+  credit_configuration:
+    title: "Parámetros del crédito"
+    
+    loan_amount:
+      label: "Monto del crédito deseado"
+      placeholder: "Mínimo 3000€"
+      help: "El monto que desea solicitar"
+      errors:
+        required: "El monto del crédito es obligatorio"
+        min_value: "El monto mínimo es de 3000€"
+        max_value: "El monto máximo es de 30 000 000€"
+        invalid_range: "El monto del crédito debe estar entre 3000€ y 30 000 000€"
+        invalid: "Por favor ingrese un monto válido"
+    
+    credit_type:
+      label: "Tipo de crédito"
+      placeholder: "Seleccione el tipo de crédito"
+      help: "El tipo de crédito que corresponde a su proyecto"
+      errors:
+        required: "El tipo de crédito es obligatorio"
+      choices:
+        immobilier: "Crédito Inmobiliario"
+        auto: "Crédito Auto"
+        consommation: "Crédito al Consumo"
+        travaux: "Crédito Obras"
+        professionnel: "Crédito Profesional"
+        personal: "Crédito Personal"
+    
+    duration:
+      label: "Duración del crédito en meses"
+      placeholder: "Mínimo 2 meses"
+      help: "La duración de reembolso deseada"
+      errors:
+        required: "La duración del crédito es obligatoria"
+        min_value: "La duración mínima es de 2 meses"
+        max_value: "La duración máxima es de 360 meses (30 años)"
+        invalid: "Por favor ingrese una duración válida"
+
+  # Resultados de simulación
+  simulation_section:
+    title: "Su simulación personalizada"
+    subtitle: "Calculada en tiempo real"
+    
+    monthly_payment:
+      label: "Mensualidad estimada"
+      placeholder: "0 €"
+      help: "Mensualidad calculada automáticamente"
+      suffix: "€/mes"
+    
+    total_cost:
+      label: "Costo total del crédito"
+      placeholder: "0 €"
+      help: "Costo total incluyendo los intereses"
+      suffix: "€"
+
+  # Resumen para simulación
+  summary:
+    loan_amount_requested: "Capital solicitado"
+    taeg: "TAEG"
+    total_interests: "Intereses totales"
+    payoff_date: "Fecha de fin de reembolso"
+
+  # Pie de página etapa 3
+  footer:
+    guarantee_text: "Simulación gratuita y sin compromiso."
+    legal_notice: "Un crédito le compromete y debe ser reembolsado. Verifique sus capacidades de reembolso antes de comprometerse."
+
+# === CONSENTIMIENTOS FINALES ===
+consents:
+  title: "Consentimientos y validación"
+  section_title: "Aceptación de las condiciones"
+  
+  terms_accepted:
+    label: "Acepto las condiciones generales de uso"
+    text: "Certifico haber leído y aceptado las condiciones generales de uso y venta"
+    link_text: "Leer las condiciones generales"
+    errors:
+      required: "Debe aceptar las condiciones generales para continuar"
+  
+  data_processing_accepted:
+    label: "Acepto el tratamiento de mis datos personales"
+    text: "Acepto que mis datos personales sean tratados en el marco de mi solicitud de crédito"
+    link_text: "Política de confidencialidad"
+    errors:
+      required: "Debe aceptar el tratamiento de sus datos personales"
+  
+  marketing_accepted:
+    label: "Acepto recibir ofertas comerciales (opcional)"
+    text: "Acepto recibir información sobre los productos y servicios del banco"
+    help: "Podrá darse de baja en cualquier momento"
+
+# === RESUMEN ===
+summary:
+  title: "Resumen de su solicitud"
+  subtitle: "Verifique la información antes de enviar su solicitud"
+  page_title: "Resumen - Solicitud de crédito"
+  
+  # Sección destacada
+  highlight:
+    title: "Su crédito"
+    monthly_payment_text: "Mensualidad de"
+    duration_text: "durante {duration} meses"
+  
+  # Secciones
+  personal_info:
+    title: "Información personal"
+    full_name: "Nombre completo"
+    email: "Email"
+    phone: "Teléfono"
+    age: "Edad"
+    age_suffix: "años"
+    address: "Dirección"
+  
+  financial_info:
+    title: "Situación financiera"
+    monthly_income: "Ingresos mensuales"
+    monthly_expenses: "Gastos mensuales"
+    existing_loans: "Créditos en curso"
+    remaining_income: "Resto para vivir"
+  
+  credit_details:
+    title: "Detalles del crédito"
+    credit_type: "Tipo de crédito"
+    interest_rate: "Tasa de interés"
+    duration: "Duración"
+    duration_months: "{duration} meses"
+    total_cost: "Costo total del crédito"
+    total_amount: "Importe total a reembolsar"
+  
+  # Acciones
+  actions:
+    modify: "← Modificar mi solicitud"
+    confirm: "✓ Confirmar mi solicitud"
+  
+  # Aviso legal
+  legal_notice: "Esta simulación es indicativa. Las condiciones definitivas se determinarán después del estudio de su expediente. Un crédito le compromete y debe ser reembolsado. Verifique sus capacidades de reembolso antes de comprometerse."
+  important: "Importante:"
+
+# === NAVEGACIÓN Y ACCIONES ===
+navigation:
+  title: "Solicitud de crédito"
+  previous: "Etapa anterior"
+  next: "Etapa siguiente"
+  submit: "Enviar mi solicitud"
+  back_to_step: "Volver a la etapa {step}"
+  step_progress: "Etapa {current} de {total}"
+  continue: "Continuar"
+  save_draft: "Guardar borrador"
+
+# === MENSAJES DEL SISTEMA ===
+messages:
+  step_completed: "Etapa completada con éxito"
+  step_validation_failed: "Por favor corrija los errores antes de continuar"
+  form_errors: "Por favor corrija {count} error{count, plural, =1 {} other {es}} en el formulario"
+  loading: "Cargando..."
+  calculation_in_progress: "Calculando su simulación..."
+  data_saved: "Sus datos han sido guardados"
+  technical_error: "Ha ocurrido un error técnico. Por favor inténtelo de nuevo."
+
+# === TEXTOS DE AYUDA E INFORMACIÓN ===
+help:
+  why_personal_info: "¿Por qué necesitamos esta información?"
+  personal_info_explanation: "Esta información es necesaria para el estudio de su expediente y está protegida según la reglamentación RGPD."
+  
+  why_financial_info: "¿Por qué esta información financiera?"
+  financial_info_explanation: "Estos datos nos permiten evaluar su capacidad de reembolso y proponerle un crédito adaptado."
+  
+  simulation_accuracy: "Precisión de la simulación"
+  simulation_explanation: "Esta simulación es indicativa. Las condiciones definitivas se confirmarán después del estudio completo de su expediente."
+
+# === VALIDACIÓN Y ERRORES ===
+validation:
+  step_incomplete: "Esta etapa no está completa"
+  required_field: "Este campo es obligatorio"
+  invalid_format: "El formato ingresado no es válido"
+  value_too_low: "El valor ingresado es demasiado bajo"
+  value_too_high: "El valor ingresado es demasiado alto"
+  
+# === UTILIDADES ===
+common:
+  optional: "(opcional)"
+  required: "(obligatorio)"
+  currency_symbol: "€"
+  months_suffix: "meses"
+  per_month: "/mes"
+  total: "Total"
+  estimated: "Estimado"
+
+# === ANÁLISIS DE CAPACIDAD DE PRÉSTAMO ===
+capacity_analysis:
+  title: "Análisis de su capacidad de préstamo"
+  income_label: "Ingresos netos mensuales"
+  total_expenses_label: "Gastos totales"
+  remaining_income_label: "Resto para vivir"
+  debt_ratio_label: "Tasa de endeudamiento"
+  max_payment_label: "Capacidad de préstamo estimada"
+
+# === TIPOS DE CRÉDITO ===
+credit_types:
+  immobilier:
+    label: "Crédito Inmobiliario"
+    description: "Financiación para la compra de un bien inmobiliario (residencia principal, secundaria o inversión de alquiler)"
+  auto:
+    label: "Crédito Automotriz"
+    description: "Financiación para la compra de un vehículo nuevo o usado"
+  consommation:
+    label: "Crédito al Consumo"
+    description: "Crédito para financiar sus proyectos personales (vacaciones, electrodomésticos, etc.)"
+  travaux:
+    label: "Crédito Obras"
+    description: "Financiación para sus proyectos de renovación y mejora del hábitat"
+  professionnel:
+    label: "Crédito Profesional"
+    description: "Financiación para sus necesidades profesionales e inversiones empresariales"
+  personal:
+    label: "Crédito Personal"
+    description: "Crédito sin justificante de uso para todos sus proyectos personales"
+  home_improvement:
+    label: "Crédito Obras/Renovación"
+    description: "Financiación especializada para la mejora y renovación de su hábitat"
+  debt_consolidation:
+    label: "Reunificación de Créditos"
+    description: "Agrupación de sus créditos existentes en una sola mensualidad más ventajosa"
+  mortgage:
+    label: "Crédito Inmobiliario"
+    description: "Préstamo hipotecario para la adquisición de su residencia principal o secundaria"
+  renouvelable:
+    label: "Crédito Renovable"
+    description: "Reserva de dinero disponible y renovable según sus necesidades"
+  etudiant:
+    label: "Crédito Estudiantil"
+    description: "Financiación para sus estudios con condiciones preferenciales"
+  relais:
+    label: "Crédito Puente"
+    description: "Solución temporal mientras espera la venta de su bien inmobiliario actual"
+  microcredit:
+    label: "Microcrédito"
+    description: "Pequeño crédito para financiar sus proyectos de bajo monto"
+  leasing:
+    label: "Leasing"
+    description: "Alquiler con opción de compra para vehículos y equipos"
+  voyage:
+    label: "Crédito Viaje"
+    description: "Financiación para sus vacaciones y viajes de ensueño"
+
+  # Sección de consentimiento para la etapa 3
+  consent:
+    terms_accepted:
+      label: "Acepto las condiciones generales"
+      errors:
+        required: "Debe aceptar las condiciones generales para continuar"
+    
+    data_processing_accepted:
+      label: "Acepto el tratamiento de mis datos personales"
+      errors:
+        required: "Debe aceptar el tratamiento de sus datos personales para continuar"
+    
+    marketing_accepted:
+      label: "Acepto recibir comunicaciones de marketing (opcional)"

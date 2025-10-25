@@ -1,0 +1,113 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: help_center_faq.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+help_center_faq:
+  page:
+    title: "Frequently Asked Questions - %company_name% Help Center"
+    
+  hero:
+    title: "Frequently Asked Questions"
+    subtitle: "Quickly find answers to the most common questions"
+    search:
+      placeholder: "Search in FAQs..."
+      
+  sections:
+    main_title: "Question Categories"
+    
+    banking:
+      title: "Banking and Accounts"
+      questions:
+        account_creation:
+          question: "How to open an account with %company_name%?"
+          answer: "You can open an account online in just a few minutes. You just need to provide a valid ID and proof of address."
+        account_types:
+          question: "What types of accounts do you offer?"
+          answer: "We offer checking accounts, savings accounts, business accounts, and youth accounts with specific benefits."
+        fees:
+          question: "What are your banking fees?"
+          answer: "Our fees are transparent and competitive. Check our detailed fee schedule on our website or contact an advisor."
+        mobile_app:
+          question: "How to download the mobile app?"
+          answer: "The %company_name% app is available for free on the App Store and Google Play. Search for '%company_name%' and download the official app."
+          
+    transfers:
+      title: "Transfers and Payments"
+      questions:
+        domestic_transfer:
+          question: "How to make a domestic transfer?"
+          answer: "Log in to your customer area or use the mobile app. Select 'Transfers' and follow the guided steps."
+        international_transfer:
+          question: "Can I make international transfers?"
+          answer: "Yes, we offer SEPA and international transfers with preferential rates for our premium customers."
+        transfer_limits:
+          question: "What are the transfer limits?"
+          answer: "Limits vary by account type. By default: €3000/day for online transfers, customizable according to your needs."
+        payment_cards:
+          question: "How to order a new card?"
+          answer: "Go to your customer area, 'My cards' section, and click 'Order a card'. Delivery takes 5-7 business days."
+          
+    security:
+      title: "Security and Authentication"
+      questions:
+        two_factor:
+          question: "How to enable two-factor authentication?"
+          answer: "In your security settings, enable the '2FA' option. You can use an authentication app or SMS."
+        password_reset:
+          question: "I forgot my password, what should I do?"
+          answer: "Click 'Forgot password' on the login page. You will receive an email to reset your password."
+        account_blocked:
+          question: "My account is blocked, how to unlock it?"
+          answer: "Immediately contact our customer service at Phone or via online chat to unlock your account quickly."
+        fraud_prevention:
+          question: "How do you protect against fraud?"
+          answer: "We use advanced detection systems, SSL encryption, and 24/7 monitoring to protect your transactions."
+          
+    credits:
+      title: "Loans and Financing"
+      questions:
+        credit_application:
+          question: "How to apply for a loan?"
+          answer: "Use our online simulator to estimate your borrowing capacity, then submit your application with the required documents."
+        credit_types:
+          question: "What types of loans do you offer?"
+          answer: "Personal loan, auto loan, mortgage, home improvement loan, and professional financing solutions."
+        approval_time:
+          question: "How long for a loan response?"
+          answer: "Response in principle within 48h for personal loans, 7-15 days for mortgages depending on case complexity."
+        early_repayment:
+          question: "Can I repay my loan early?"
+          answer: "Yes, early repayment is possible with preferential conditions detailed in your loan contract."
+          
+    technical:
+      title: "Technical Support"
+      questions:
+        app_issues:
+          question: "The app is not working, what to do?"
+          answer: "Check your internet connection, restart the app, or update it. If the problem persists, contact support."
+        browser_compatibility:
+          question: "Which browsers are compatible?"
+          answer: "Chrome, Firefox, Safari, Edge in their recent versions. Avoid Internet Explorer for an optimal experience."
+        data_security:
+          question: "Is my data secure?"
+          answer: "Absolutely. We comply with GDPR, encrypt all data, and never share your personal information."
+        maintenance:
+          question: "When do maintenance periods occur?"
+          answer: "Scheduled maintenance generally takes place on Sunday between 2 AM and 6 AM, with prior notification."
+          
+    contact:
+      title: "Contact and Branches"
+      questions:
+        customer_service:
+          question: "How to contact customer service?"
+          answer: "Phone: Phone (7/7, 8 AM-8 PM), Online chat on the website, Email: Email"
+        branch_appointment:
+          question: "How to make an appointment at a branch?"
+          answer: "Book online via your customer area, by phone, or directly at the branch according to your availability."
+        complaint:
+          question: "How to file a complaint?"
+          answer: "Complaint form in your customer area, by mail, or with your regular advisor."
+        opening_hours:
+          question: "What are the opening hours?"
+          answer: "Mon-Fri: 9 AM-5 PM, Sat: 9 AM-12 PM. Extended hours for some branches. Check specific hours on our website."

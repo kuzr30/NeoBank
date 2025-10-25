@@ -1,0 +1,106 @@
+regroupement_credits:
+  page:
+    title: "Kreditumschuldung"
+    description: "Vereinfachen Sie Ihre Finanzen mit unserer Kreditumschuldung. Eine einzige Monatsrate für alle Ihre Darlehen."
+  
+  hero:
+    class: "credit-detail-hero--regroupement"
+    taux: "{rate}%"
+    montant: "200 000€"
+    duree: "25 ans"
+    title: "Kreditumschuldung"
+    subtitle: "Vereinfachen Sie die Verwaltung Ihrer Kredite"
+  
+  section_1:
+    title: "Was ist eine Kreditumschuldung?"
+    content:
+      paragraph_1: "Die Kreditumschuldung besteht darin, mehrere laufende Darlehen (Immobilien, Verbrauch, Kreditkarten) in einem einzigen Kredit mit einer einzigen, meist niedrigeren Monatsrate zu vereinen."
+      paragraph_2: "Diese finanzielle Umstrukturierungsmaßnahme ermöglicht es, die Verwaltung Ihres Budgets zu vereinfachen, Ihre Monatsraten zu reduzieren und Ruhe in Ihre persönlichen Finanzen zurückzubringen."
+  
+  features:
+    title: "Merkmale der Umschuldung"
+    montant:
+      value: "Bis zu 200 000€"
+      detail: "Betrag der umgeschuldeten Kredite"
+    duree:
+      value: "Bis zu 25 Jahre"
+      detail: "Verlängerung möglich"
+    taux:
+      value: "Ab {rate}% effektiver Jahreszins*"
+      detail: "Optimierter Einheitssatz"
+    garantie:
+      value: "Hypothek"
+      detail: "Bei hohem Betrag"
+  
+  section_3:
+    title: "Vorteile der Umschuldung"
+    advantages:
+      mensualite_unique:
+        title: "Einzige Monatsrate"
+        description: "Nur noch eine einzige Abbuchung zu verwalten"
+      baisse_echeances:
+        title: "Senkung der Raten"
+        description: "Reduzierung der Gesamtmonatsraten um bis zu 50%"
+      tresorerie_liberee:
+        title: "Freigesetzte Liquidität"
+        description: "Wiederhergestellte Kaufkraft"
+      gestion_simplifiee:
+        title: "Vereinfachte Verwaltung"
+        description: "Ein einziger Ansprechpartner für alle Ihre Kredite"
+      tresorerie_supplementaire:
+        title: "Zusätzliche Liquidität"
+        description: "Möglichkeit, zusätzliche Mittel zu erhalten"
+  
+  section_4:
+    title: "Förderfähigkeitsbedingungen"
+    conditions:
+      title: "Allgemeine Bedingungen"
+      items:
+        revenus: "Regelmäßiges und ausreichendes Einkommen"
+        credits_existants: "Mindestens 2 laufende Kredite"
+        montant_minimum: "Mindestgesamtbetrag von 20 000€"
+        capacite_remboursement: "Akzeptabler Verschuldungsgrad"
+    dossier:
+      title: "Antragsstellung"
+      items:
+        tableaux: "Tilgungspläne der bestehenden Kredite"
+        assurances: "Laufende Versicherungsverträge"
+        justificatifs: "Aktuelle Einkommensnachweise"
+        situation: "Vollständige Vermögenssituation"
+  
+  section_5:
+    title: "Erforderliche Unterlagen"
+    personnels:
+      title: "Persönliche Dokumente"
+      items:
+        identite: "Personalausweis"
+        domicile: "Wohnsitznachweis"
+        familiale: "Familienstand"
+        rib: "Kontoverbindung des Hauptkontos"
+    financiers:
+      title: "Finanzielle Nachweise"
+      items:
+        revenus: "3 letzte Gehaltsabrechnungen"
+        impots: "Letzter Steuerbescheid"
+        comptes: "Kontoauszüge über 3 Monate"
+        patrimoine: "Vermögenserklärung"
+    credits:
+      title: "Bestehende Kredite"
+      items:
+        contrats: "Laufende Darlehensverträge"
+        echeanciers: "Tilgungspläne der Kredite"
+        assurances_contrats: "Kreditnehmerversicherungsverträge"
+        releves: "Letzte Auszüge der kreditierten Konten"
+  
+  legal:
+    details:
+      title: "Wichtige rechtliche Informationen"
+      taeg: "<strong>*Effektiver Jahreszins:</strong> Repräsentatives Beispiel: Umschuldung von 3 Krediten in Höhe von insgesamt 80 000€, neuer Kredit von 90 000€ über 180 Monate zum effektiven Jahreszins von 4,8%, 180 Monatsraten von 500€, Gesamtkosten: 90 000€."
+      duree: "<strong>Laufzeit:</strong> Die Verlängerung der Laufzeit erhöht die Gesamtkosten des Kredits."
+      garantie: "<strong>Garantie:</strong> Hypothek je nach Betrag und Situation möglich."
+      assurance: "<strong>Versicherung:</strong> Todesfall-Invaliditätsversicherung obligatorisch, Arbeitslosigkeitsversicherung empfohlen."
+      reflexion: "<strong>Bedenkzeit:</strong> 14 Tage gesetzliche Widerrufsfrist."
+  
+  cta:
+    title: "Vereinfachen Sie Ihre Finanzen"
+    subtitle: "Finden Sie Ruhe mit einer Kreditumschuldung zurück"

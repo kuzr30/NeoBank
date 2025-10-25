@@ -1,0 +1,48 @@
+email_credit_application_folder_admin_notification:
+  title: "Nieuwe kredietaanvraag - %company_name%"
+  
+  content:
+    page_title: "Nieuwe kredietaanvraag"
+    tagline: "Uw vertrouwde bankpartner"
+    
+    reference_info:
+      title: "Referentie van de aanvraag"
+      reference_number: "{referenceNumber}"
+      submitted_on: "Ingediend op {submittedDate}"
+    
+    applicant_info:
+      title: "Informatie van de aanvrager"
+      full_name: "Volledige naam"
+      email: "E-mail"
+      phone: "Telefoon"
+      birth_date: "Geboortedatum"
+      nationality: "Nationaliteit"
+      address: "Adres"
+      address_format: "{address}, {postalCode} {city}, {country}"
+    
+    credit_details:
+      title: "Details van het aangevraagde krediet"
+      amount: "Bedrag"
+      amount_value: "{amount} €"
+      credit_type: "Type krediet"
+      duration: "Duur"
+      duration_months: "{duration} maanden"
+      monthly_payment: "Maandelijkse betaling"
+      monthly_payment_value: "{monthlyPayment} €"
+      total_cost: "Totale kosten"
+      total_cost_value: "{totalCost} €"
+    
+    financial_situation:
+      title: "Financiële situatie"
+      monthly_income: "Maandelijks inkomen"
+      monthly_income_value: "{monthlyIncome} €"
+      monthly_expenses: "Maandelijkse uitgaven"
+      monthly_expenses_value: "{monthlyExpenses} €"
+      employment_type: "Type werk"
+      existing_loans: "Bestaande leningen"
+      existing_loans_value: "{existingLoans} €"
+      dependents: "Ten laste komende personen"
+  
+  log:
+    admin_notification_sent: "Admin notificatie verzonden voor kredietaanvraag {referenceNumber}"
+    email_sent: "Admin e-mail kredietaanvraag verzonden naar het team"

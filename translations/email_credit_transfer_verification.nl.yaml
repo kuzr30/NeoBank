@@ -1,0 +1,40 @@
+email_credit_transfer_verification:
+  title: "Verificatiecode - Krediet overschrijving"
+  content:
+    page_title: "Overschrijvingsvalidatie vereist"
+    greeting: "Hallo <strong>{userName}</strong>,"
+    detection_section:
+      title: "Overschrijvingsaanvraag gedetecteerd"
+      message: "U heeft een overschrijving vanaf uw kredietrekening aangevraagd. Om deze operatie te beveiligen, gelieve valideren met onderstaande verificatiecode."
+    verification_section:
+      title: "Beveiligde verificatiecode"
+      code_label: "Validatiecode"
+      expiry: "Verloopt over 10 minuten"
+    transaction_details:
+      title: "Transactiedetails"
+      source_account: "Bronrekening"
+      destination_account: "Bestemmingsrekening"
+      principal_account: "Hoofdrekening"
+      amount_label: "Over te maken bedrag"
+    security_section:
+      title: "Beveiliging"
+      validity: "Deze code is slechts 10 minuten geldig"
+      confidentiality: "Absolute vertrouwelijkheid"
+      confidentiality_description: "Deel deze code nooit met iemand anders"
+      unauthorized_transaction: "Niet-geautoriseerde transactie"
+      warning: "Als u deze aanvraag niet heeft gedaan, neem dan onmiddellijk contact op met onze klantenservice."
+      phone: "Telefoon: %company_phone%"
+      urgency: "24/7 beschikbaar voor noodgevallen"
+    support_text: "Voor vragen betreffende deze overschrijvingsoperatie staat onze beveiligingsdienst tot uw beschikking."
+    instructions_section:
+      title: "Instructies"
+      step_1: "Voer deze code in op de validatiepagina"
+      step_2: "De overschrijving wordt onmiddellijk verwerkt na validatie"
+      step_3: "Een bevestigingsmail wordt naar u verzonden"
+    footer: "Automatische beveiligingsmail <br>Overschrijvingsservice - Validatie vereist"
+  
+  logs:
+    sending: "Verzenden van overschrijving verificatiecode"
+    success: "Overschrijving verificatiecode succesvol verzonden"
+    error: "Fout bij het verzenden van overschrijving verificatiecode"
+    send_failed: "Verzenden van overschrijving verificatiecode mislukt"

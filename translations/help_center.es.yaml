@@ -1,0 +1,56 @@
+help_center:
+  page:
+    title: "Centro de Ayuda - %company_name%"
+    meta:
+      description: "Encuentre rápidamente las respuestas a sus preguntas sobre nuestros servicios bancarios"
+  
+  hero:
+    title: "Centro de Ayuda"
+    subtitle: "Encuentre rápidamente las respuestas a sus preguntas sobre nuestros servicios bancarios"
+    search:
+      placeholder: "Buscar en la ayuda..."
+  
+  sections:
+    main_title: "¿Cómo podemos ayudarle?"
+    
+    accounts_cards:
+      title: "Cuentas y Tarjetas"
+      description: "Gestión de sus cuentas, tarjetas bancarias, transferencias y pagos"
+      links:
+        balance: "Consultar mi saldo"
+        transfers: "Hacer una transferencia"
+    
+    security:
+      title: "Seguridad"
+      description: "Protección de sus datos y consejos de seguridad bancaria"
+      links:
+        authentication: "Autenticación fuerte"
+        fraud: "Informar un fraude"
+    
+    contact:
+      title: "Contacto"
+      description: "Diferentes medios para contactarnos según sus necesidades"
+      links:
+        chat: "Chat online"
+        appointment: "Pedir cita"
+    
+    services:
+      title: "Servicios Online"
+      description: "Ayuda para usar nuestra plataforma bancaria online"
+      links:
+        login: "Conectarse"
+        settings: "Parámetros cuenta"
+    
+    credits_savings:
+      title: "Créditos y Ahorro"
+      description: "Informaciones sobre nuestros productos de crédito y ahorro"
+      links:
+        simulation: "Simular un crédito"
+        savings: "Productos de ahorro"
+    
+    documents:
+      title: "Documentos"
+      description: "Acceso y gestión de sus documentos bancarios"
+      links:
+        rib: "Descargar un RIB"
+        statements: "Mis extractos"

@@ -1,0 +1,581 @@
+# ENGLISH TRANSLATION - Translated from French
+# Professional translation file for credit application steps
+# Domain: credit_step_forms
+# Compatible with existing %company_name% project architecture
+
+# === METADATA AND CONFIGURATION ===
+meta:
+  version: "1.0.0"
+  description: "Translations for multi-step credit application forms"
+  last_updated: "2025-09-09"
+  compatibility: "Symfony 7+ with ProfessionalTranslationService"
+
+# === JAVASCRIPT VALIDATION ===
+js:
+  validation:
+    required: "This field is required"
+    email: "Invalid email"
+    phone: "Invalid phone number"
+    postal: "Invalid postal code"
+    min: "Minimum value: %value%"
+    max: "Maximum value: %value%"
+
+# === STEP 1: PERSONAL INFORMATION ===
+step1:
+  title: "Personal information"
+  subtitle: "Enter your personal data"
+  description: "This information will allow us to process your credit application"
+  section_title: "Your personal information"
+  
+  fields:
+    # Informations de base
+    firstname:
+      label: "First name"
+      placeholder: "Your first name"
+      help: "Enter your first name as it appears on your official documents"
+      errors:
+        required: "First name is required"
+        min_length: "First name must contain at least 2 characters"
+        max_length: "First name cannot exceed 50 characters"
+        invalid_format: "First name can only contain letters, spaces, hyphens and apostrophes"
+    
+    lastname:
+      label: "Last name"
+      placeholder: "Your last name"
+      help: "Enter your last name as it appears on your official documents"
+      errors:
+        required: "Last name is required"
+        min_length: "Last name must contain at least 2 characters"
+        max_length: "Last name cannot exceed 50 characters"
+        invalid_format: "Last name can only contain letters, spaces, hyphens and apostrophes"
+    
+    email:
+      label: "Email address"
+      placeholder: "your.email@example.com"
+      help: "Use a valid email address where we can contact you"
+      errors:
+        required: "Email address is required"
+        invalid: "Please enter a valid email address"
+    
+    phone:
+      label: "Phone number"
+      placeholder: "%company_phone%"
+      help: "Enter your mobile or landline phone number"
+      errors:
+        required: "Phone number is required"
+        invalid: "Please enter a valid phone number"
+    
+    birth_date:
+      label: "Date of birth"
+      placeholder: "dd/mm/yyyy"
+      help: "You must be of legal age to apply for credit"
+      errors:
+        required: "Date of birth is required"
+        invalid: "Please enter a valid date"
+        age_restriction: "You must be of legal age to apply for credit"
+    
+    nationality:
+      label: "Nationality"
+      placeholder: "Select your nationality"
+      help: "Your current nationality"
+      errors:
+        required: "Nationality is required"
+      choices:
+        french: "French"
+        eu: "European (EU)"
+        non_eu: "Non-EU"
+    
+    marital_status:
+      label: "Marital status"
+      placeholder: "Select your status"
+      help: "Your current marital status"
+      errors:
+        required: "Marital status is required"
+        invalid: "Invalid marital status"
+      choices:
+        single: "Single"
+        married: "Married"
+        divorced: "Divorced"
+        widowed: "Widowed"
+        cohabiting: "Cohabiting"
+        pacs: "Civil partnership"
+    
+    dependents:
+      label: "Number of dependents"
+      placeholder: "Select the number"
+      help: "Children or other people financially dependent on you"
+      errors:
+        required: "Number of dependents is required"
+        invalid_range: "Number of dependents must be between 0 and 20"
+      choices:
+        none: "None"
+        one: "1"
+        two: "2" 
+        three: "3"
+        four: "4"
+        five_plus: "5 or more"
+
+  # Address
+  address_section:
+    title: "Your residential address"
+    
+    address:
+      label: "Complete address"
+      placeholder: "123 Peace Street"
+      help: "Your main residential address"
+      errors:
+        required: "Address is required"
+        min_length: "Address must contain at least 5 characters"
+        max_length: "Address cannot exceed 255 characters"
+    
+    city:
+      label: "City"
+      placeholder: "Paris"
+      help: "Your city of residence"
+      errors:
+        required: "City is required"
+        min_length: "City name must contain at least 2 characters"
+        max_length: "City name cannot exceed 100 characters"
+    
+    postal_code:
+      label: "Postal code"
+      placeholder: "75000"
+      help: "French postal code (5 digits)"
+      errors:
+        required: "Postal code is required"
+        invalid: "Postal code must contain 5 digits"
+    
+    country:
+      label: "Country"
+      placeholder: "Select your country"
+      help: "Country of residence"
+      errors:
+        required: "Country is required"
+    
+    housing_type:
+      label: "Housing type"
+      placeholder: "Select your housing situation"
+      help: "Your current housing situation"
+      errors:
+        required: "Housing type is required"
+        invalid: "Invalid housing type"
+      choices:
+        owner: "Owner"
+        tenant: "Tenant"
+        family: "Living with family"
+        social: "Social housing"
+        other: "Other"
+
+# === STEP 2: FINANCIAL SITUATION ===
+step2:
+  title: "Financial situation"
+  subtitle: "Provide your professional and financial situation"
+  description: "This information will help us assess your repayment capacity"
+  section_title: "Your financial situation"
+  
+  # Employment section
+  employment_section:
+    title: "Your professional situation"
+    
+    monthly_income:
+      label: "Monthly net income"
+      placeholder: "Amount in €"
+      help: "Your monthly net income (after social charges and taxes)"
+      errors:
+        required: "Monthly income is required"
+        min_value: "Minimum monthly income required is €1000"
+        invalid: "Please enter a valid amount"
+    
+    employment_type:
+      label: "Employment type"
+      placeholder: "Select your professional status"
+      help: "Your current professional status"
+      errors:
+        required: "Employment type is required"
+        invalid: "Invalid employment type"
+      choices:
+        employee: "Permanent employee"
+        employee_cdd: "Fixed-term employee"
+        civil_servant: "Civil servant"
+        freelancer: "Self-employed"
+        entrepreneur: "Business owner"
+        retired: "Retired"
+        unemployed: "Unemployed"
+        student: "Student"
+    
+    employer:
+      label: "Employer name"
+      placeholder: "Your company name"
+      help: "The name of your employer or company"
+      errors:
+        max_length: "Employer name cannot exceed 255 characters"
+    
+    job_title:
+      label: "Job title"
+      placeholder: "Your function"
+      help: "Your title or function in the company"
+      errors:
+        max_length: "Job title cannot exceed 255 characters"
+    
+    employment_start_date:
+      label: "Employment start date"
+      placeholder: "dd/mm/yyyy"
+      help: "Start date of your current employment"
+      errors:
+        invalid: "Please enter a valid date"
+
+  # Financial section
+  financial_section:
+    title: "Your charges and commitments"
+    
+    monthly_expenses:
+      label: "Monthly expenses"
+      placeholder: "Amount in €"
+      help: "Your monthly expenses (rent, bills, food, etc.)"
+      errors:
+        required: "Monthly expenses are required"
+        min_value: "Expenses cannot be negative"
+        invalid: "Please enter a valid amount"
+    
+    existing_loans:
+      label: "Current loans"
+      placeholder: "Total monthly amount in €"
+      help: "Total monthly amount of your current loans (optional)"
+      errors:
+        min_value: "Amount cannot be negative"
+        invalid: "Please enter a valid amount"
+
+  fields:
+    # Professional situation (old structure - kept for compatibility)
+    monthly_income:
+      label: "Monthly net income"
+      placeholder: "Amount in €"
+      help: "Your monthly net income (after social charges and taxes)"
+      errors:
+        required: "Monthly income is required"
+        min_value: "Minimum monthly income required is €1000"
+        invalid: "Please enter a valid amount"
+    
+    employment_type:
+      label: "Employment type"
+      placeholder: "Select your professional status"
+      help: "Your current professional status"
+      errors:
+        required: "Employment type is required"
+        invalid: "Invalid employment type"
+      choices:
+        employee: "Permanent employee"
+        employee_cdd: "Fixed-term employee"
+        civil_servant: "Civil servant"
+        freelancer: "Self-employed"
+        entrepreneur: "Business owner"
+        retired: "Retired"
+        unemployed: "Unemployed"
+        student: "Student"
+    
+    employer:
+      label: "Employer name"
+      placeholder: "Your company name"
+      help: "The name of your employer or company"
+      errors:
+        max_length: "Employer name cannot exceed 255 characters"
+    
+    job_title:
+      label: "Job title"
+      placeholder: "Your function"
+      help: "Your title or function in the company"
+      errors:
+        max_length: "Job title cannot exceed 255 characters"
+    
+    employment_start_date:
+      label: "Employment start date"
+      placeholder: "dd/mm/yyyy"
+      help: "Start date of your current employment"
+      errors:
+        invalid: "Please enter a valid date"
+
+    # Charges and commitments
+    monthly_expenses:
+      label: "Monthly expenses"
+      placeholder: "Amount in €"
+      help: "Your monthly expenses (rent, bills, food, etc.)"
+      errors:
+        required: "Monthly expenses are required"
+        min_value: "Expenses cannot be negative"
+        invalid: "Please enter a valid amount"
+    
+    existing_loans:
+      label: "Current loans"
+      placeholder: "Total monthly amount in €"
+      help: "Total monthly amount of your current loans (optional)"
+      errors:
+        min_value: "Amount cannot be negative"
+        invalid: "Please enter a valid amount"
+
+# === STEP 3: CREDIT CONFIGURATION ===
+step3:
+  title: "Credit configuration"
+  subtitle: "Define your credit parameters"
+  description: "Configure your credit according to your needs and view the simulation"
+  section_title: "Your credit parameters"
+  
+  # Credit configuration
+  credit_configuration:
+    title: "Credit parameters"
+    
+    loan_amount:
+      label: "Desired credit amount"
+      placeholder: "Minimum €3000"
+      help: "The amount you want to borrow"
+      errors:
+        required: "Credit amount is required"
+        min_value: "Minimum amount is €3000"
+        max_value: "Maximum amount is €30,000,000"
+        invalid_range: "Credit amount must be between €3000 and €30,000,000"
+        invalid: "Please enter a valid amount"
+    
+    credit_type:
+      label: "Credit type"
+      placeholder: "Select the credit type"
+      help: "The type of credit that matches your project"
+      errors:
+        required: "Credit type is required"
+      choices:
+        immobilier: "Real Estate Credit"
+        auto: "Auto Credit"
+        consommation: "Consumer Credit"
+        travaux: "Home Improvement Credit"
+        professionnel: "Business Credit"
+        personal: "Personal Credit"
+    
+    duration:
+      label: "Credit duration in months"
+      placeholder: "Minimum 2 months"
+      help: "The desired repayment duration"
+      errors:
+        required: "Credit duration is required"
+        min_value: "Minimum duration is 2 months"
+        max_value: "Maximum duration is 360 months (30 years)"
+        invalid: "Please enter a valid duration"
+
+  # Simulation results
+  simulation_section:
+    title: "Your personalized simulation"
+    subtitle: "Calculated in real time"
+    
+    monthly_payment:
+      label: "Estimated monthly payment"
+      placeholder: "0 €"
+      help: "Monthly payment calculated automatically"
+      suffix: "€/month"
+    
+    total_cost:
+      label: "Total credit cost"
+      placeholder: "0 €"
+      help: "Total cost including interest"
+      suffix: "€"
+
+  # Summary for simulation
+  summary:
+    loan_amount_requested: "Requested capital"
+    taeg: "APR"
+    total_interests: "Total interest"
+    payoff_date: "Repayment end date"
+
+  # Step 3 footer
+  footer:
+    guarantee_text: "Free simulation with no commitment."
+    legal_notice: "A credit commits you and must be repaid. Check your repayment capacity before committing."
+
+# === FINAL CONSENTS ===
+consents:
+  title: "Consents and validation"
+  section_title: "Acceptance of conditions"
+  
+  terms_accepted:
+    label: "I accept the general terms and conditions"
+    text: "I certify that I have read and accepted the general terms and conditions of use and sale"
+    link_text: "Read the general conditions"
+    errors:
+      required: "You must accept the general conditions to continue"
+  
+  data_processing_accepted:
+    label: "I accept the processing of my personal data"
+    text: "I accept that my personal data be processed in the context of my credit application"
+    link_text: "Privacy policy"
+    errors:
+      required: "You must accept the processing of your personal data"
+  
+  marketing_accepted:
+    label: "I accept to receive commercial offers (optional)"
+    text: "I accept to receive information about the bank's products and services"
+    help: "You can unsubscribe at any time"
+
+# === SUMMARY ===
+summary:
+  title: "Summary of your application"
+  subtitle: "Check the information before submitting your application"
+  page_title: "Summary - Credit application"
+  
+  # Highlight section
+  highlight:
+    title: "Your credit"
+    monthly_payment_text: "Monthly payment of"
+    duration_text: "over {duration} months"
+  
+  # Sections
+  personal_info:
+    title: "Personal information"
+    full_name: "Full name"
+    email: "Email"
+    phone: "Phone"
+    age: "Age"
+    age_suffix: "years old"
+    address: "Address"
+  
+  financial_info:
+    title: "Financial situation"
+    monthly_income: "Monthly income"
+    monthly_expenses: "Monthly expenses"
+    existing_loans: "Current loans"
+    remaining_income: "Remaining income"
+  
+  credit_details:
+    title: "Credit details"
+    credit_type: "Credit type"
+    interest_rate: "Interest rate"
+    duration: "Duration"
+    duration_months: "{duration} months"
+    total_cost: "Total credit cost"
+    total_amount: "Total amount to repay"
+  
+  # Actions
+  actions:
+    modify: "← Modify my application"
+    confirm: "✓ Confirm my application"
+  
+  # Legal notice
+  legal_notice: "This simulation is indicative. Final conditions will be determined after review of your file. A credit commits you and must be repaid. Check your repayment capacity before committing."
+  important: "Important:"
+
+# === NAVIGATION AND ACTIONS ===
+navigation:
+  title: "Credit application"
+  previous: "Previous step"
+  next: "Next step"
+  submit: "Submit my application"
+  back_to_step: "Back to step {step}"
+  step_progress: "Step {current} of {total}"
+  continue: "Continue"
+  save_draft: "Save draft"
+
+# === SYSTEM MESSAGES ===
+messages:
+  step_completed: "Step completed successfully"
+  step_validation_failed: "Please correct errors before continuing"
+  form_errors: "Please correct {count} error{count, plural, =1 {} other {s}} in the form"
+  loading: "Loading..."
+  calculation_in_progress: "Calculating your simulation..."
+  data_saved: "Your data has been saved"
+  technical_error: "A technical error occurred. Please try again."
+
+# === HELP TEXTS AND INFORMATION ===
+help:
+  why_personal_info: "Why do we need this information?"
+  personal_info_explanation: "This information is necessary for reviewing your file and is protected according to GDPR regulations."
+  
+  why_financial_info: "Why this financial information?"
+  financial_info_explanation: "This data allows us to assess your repayment capacity and offer you suitable credit."
+  
+  simulation_accuracy: "Simulation accuracy"
+  simulation_explanation: "This simulation is indicative. Final conditions will be confirmed after complete review of your file."
+
+# === VALIDATION AND ERRORS ===
+validation:
+  step_incomplete: "This step is not complete"
+  required_field: "This field is required"
+  invalid_format: "The entered format is not valid"
+  value_too_low: "The entered value is too low"
+  value_too_high: "The entered value is too high"
+  
+# === UTILITIES ===
+common:
+  optional: "(optional)"
+  required: "(required)"
+  currency_symbol: "€"
+  months_suffix: "months"
+  per_month: "/month"
+  total: "Total"
+  estimated: "Estimated"
+
+# === BORROWING CAPACITY ANALYSIS ===
+capacity_analysis:
+  title: "Analysis of your borrowing capacity"
+  income_label: "Monthly net income"
+  total_expenses_label: "Total expenses"
+  remaining_income_label: "Remaining income"
+  debt_ratio_label: "Debt ratio"
+  max_payment_label: "Estimated borrowing capacity"
+
+# === CREDIT TYPES ===
+credit_types:
+  immobilier:
+    label: "Real Estate Credit"
+    description: "Financing for purchasing real estate (main residence, secondary residence or rental investment)"
+  auto:
+    label: "Auto Credit"
+    description: "Financing for purchasing a new or used vehicle"
+  consommation:
+    label: "Consumer Credit"
+    description: "Credit to finance your personal projects (vacations, appliances, etc.)"
+  travaux:
+    label: "Home Improvement Credit"
+    description: "Financing for your renovation and home improvement projects"
+  professionnel:
+    label: "Business Credit"
+    description: "Financing for your professional needs and business investments"
+  personal:
+    label: "Personal Credit"
+    description: "Credit without usage justification for all your personal projects"
+  home_improvement:
+    label: "Home Improvement/Renovation Credit"
+    description: "Specialized financing for improvement and renovation of your home"
+  debt_consolidation:
+    label: "Debt Consolidation"
+    description: "Consolidation of your existing credits into a single more advantageous monthly payment"
+  mortgage:
+    label: "Mortgage Credit"
+    description: "Mortgage loan for acquiring your main or secondary residence"
+  renouvelable:
+    label: "Revolving Credit"
+    description: "Available and renewable money reserve according to your needs"
+  etudiant:
+    label: "Student Credit"
+    description: "Financing for your studies with preferential conditions"
+  relais:
+    label: "Bridging Credit"
+    description: "Temporary solution while waiting for the sale of your current real estate"
+  microcredit:
+    label: "Microcredit"
+    description: "Small credit to finance your low-amount projects"
+  leasing:
+    label: "Leasing"
+    description: "Rental with purchase option for vehicles and equipment"
+  voyage:
+    label: "Travel Credit"
+    description: "Financing for your vacations and dream trips"
+
+  # Consent section for step 3
+  consent:
+    terms_accepted:
+      label: "I accept the general conditions"
+      errors:
+        required: "You must accept the general conditions to continue"
+    
+    data_processing_accepted:
+      label: "I accept the processing of my personal data"
+      errors:
+        required: "You must accept the processing of your personal data to continue"
+    
+    marketing_accepted:
+      label: "I accept to receive marketing communications (optional)"

@@ -1,0 +1,223 @@
+insurance:
+  # Meta tags
+  meta:
+    title: "Bankverzekeringen - Volledige Bescherming - %company_name%"
+    description: "Ontdek onze complete bankverzekeringsoplossingen: auto, woning, gezondheid, reis en meer. Optimale bescherming met %company_name%."
+
+  # Hero Section
+  hero:
+    title_part1: "Uw Vertrouwde"
+    title_accent: "Verzekerings"
+    title_part2: "Partner"
+    description: "Bespaar en vergelijk autoverzekeringen. Personaliseer uw dekking en krijg de beste aanbieding binnen enkele minuten."
+    email_placeholder: "Uw E-mail"
+    cta_button: "Offerte Aanvragen"
+    support_badge: "Klantenservice"
+    nav:
+      auto: "Auto"
+      home: "Woning"
+      health: "Gezondheid"
+      life: "Leven"
+      professional: "Professioneel"
+  
+  packages:
+    title: "Onze Verzekeringsformules"
+    subtitle: "Op maat gemaakte oplossingen - kies degene die het beste bij u past"
+    essential:
+      title: "Essentiële Dekking"
+      description: "Basisbescherming voor uw gemoedsrust tegen een betaalbare prijs"
+      features:
+        - "Wettelijke aansprakelijkheid"
+        - "Pechbijstand"
+        - "Rechtsbijstand"
+    standard:
+      badge: "Aanbevolen"
+      title: "Standaard Dekking"
+      description: "Een uitgebalanceerd plan met versterkte bescherming en uitgebreide voordelen"
+      features:
+        - "Alle risico's botsing"
+        - "Diefstal en brand"
+        - "Glasbreuk"
+        - "Vervangend voertuig"
+    premium:
+      title: "Premium Dekking"
+      description: "Volledige dekking met exclusieve voordelen voor totale zekerheid"
+      features:
+        - "Alle risico's dekking"
+        - "Nieuwwaarde 2 jaar"
+        - "Hulpverlening Europa"
+        - "Tweede bestuurder"
+    custom:
+      title: "Dekking op Maat"
+      description: "Creëer uw eigen plan - kies de garanties die het beste bij u passen"
+      features:
+        - "Modulaire garanties"
+        - "Gepersonaliseerde prijzen"
+        - "Toegewijde adviseur"
+        - "Flexibele aanpassingen"
+
+  # Section hero originale (pour hero_assurances.html.twig)  
+  hero_banner:
+    badge: "Integrale Bankbescherming"
+    title: "Bescherm uw vermogen met onze"
+    title_highlight: "bankverzekeringen"
+    description: "Ontdek onze verzekeringsoplossingen speciaal ontworpen om uw investeringen, uw kredieten en uw gemoedsrust te beschermen. Meer dan 50.000 klanten vertrouwen ons."
+    stats:
+      satisfaction:
+        value: "98%"
+        label: "Klanttevredenheid"
+      processing:
+        value: "24u"
+        label: "Offerte verwerking"
+      types:
+        value: "12"
+        label: "Verzekerings types"
+    actions:
+      primary: "Ontdek onze verzekeringen"
+      secondary: "Waarom ons kiezen"
+    cards:
+      home:
+        title: "Woningverzekering"
+        description: "Volledige bescherming van uw woning"
+      loan:
+        title: "Kredietverzekering"
+        description: "Beveilig uw terugbetalingen"
+      auto:
+        title: "Autoverzekering"
+        description: "Rijd met gemoedsrust"
+
+  # Insurance Types Section
+  types:
+    header:
+      title: "Onze Verzekeringsoplossingen"
+      subtitle: "Een volledig gamma van verzekeringen aangepast aan al uw behoeften, met concurrerende tarieven en uitzonderlijke klantenservice."
+    auto:
+      title: "Autoverzekering"
+      description: "Volledige bescherming voor uw voertuig met 24/7 bijstand en uitgebreide garanties."
+      features:
+        - "24/7 bijstand"
+        - "Herstel bij al onze partners"
+        - "Vervangvoertuig"
+        - "Bestuurdersbescherming"
+        - "Glasbreuk inbegrepen"
+      cta: "Autoofferte verkrijgen"
+      popular: "Populair"
+    credit:
+      title: "Kredietverzekering"
+      description: "Bescherm uw familie en uw projecten bij arbeidsongeschiktheid voor kredietterugbetaling."
+      features:
+        - "Dekking overlijden en invaliditeit"
+        - "Tijdelijke arbeidsongeschiktheid"
+        - "Werkloosheid (optie)"
+        - "Voordelige tarieven klanten"
+        - "Verzekeringsdelegatie mogelijk"
+      cta: "Kredietofferte verkrijgen"
+    home:
+      title: "Woningverzekering"
+      description: "Bescherm uw woning en uw goederen tegen alle dagelijkse risico's."
+      features:
+        - "Volledige multirisque woning"
+        - "Burgerlijke aansprakelijkheid inbegrepen"
+        - "24/7 pechverhelping"
+        - "Rechtsbijstand"
+        - "Mobiele goederen gedekt"
+      cta: "Woningofferte verkrijgen"
+    health:
+      title: "Ziekteverzekering"
+      description: "Aanvullende ziekteverzekering aangepast aan uw behoeften met een breed netwerk van professionals."
+      features:
+        - "Snelle terugbetalingen"
+        - "Algemene derde betalende"
+        - "Teleconsultatie inbegrepen"
+        - "Zachte geneeskunde gedekt"
+        - "Versterkte optiek en tandheelkunde"
+      cta: "Gezondheidsofferte verkrijgen"
+    life:
+      title: "Levensverzekering"
+      description: "Vorm en draag uw vermogen over door uw fiscaliteit te optimaliseren."
+      features:
+        - "Vrije of geprogrammeerde stortingen"
+        - "Brede keuze aan ondersteuning"
+        - "Voorschot op contract mogelijk"
+        - "Voordelige fiscaliteit"
+        - "Vrije of begeleide beheer"
+      cta: "Levensofferte verkrijgen"
+    travel:
+      title: "Reisverzekering"
+      description: "Vertrek met gemoedsrust met onze volledige reisdekking."
+      features:
+        - "Repatriëring bijstand"
+        - "Medische kosten in het buitenland"
+        - "Reis annulering"
+        - "Bagage en persoonlijke spullen"
+        - "Burgerlijke aansprakelijkheid"
+      cta: "Reisofferte verkrijgen"
+    professional:
+      title: "Beroepsverzekering"
+      description: "Bescherm uw professionele activiteit met onze op maat gemaakte garanties."
+      features:
+        - "Professionele burgerlijke aansprakelijkheid"
+        - "Rechtsbijstand"
+        - "Multirisque professioneel"
+        - "Cyberrisico's inbegrepen"
+        - "Exploitatieverlies"
+      cta: "Professionele offerte verkrijgen"
+    decennial:
+      title: "Tienjarige Aansprakelijkheid"
+      description: "Wettelijke verplichting voor alle professionals in de bouw en constructie."
+      features:
+        - "Verplichte 10-jarige dekking"
+        - "Verdediging en verhaal"
+        - "Schade aan werken"
+        - "Onmiddellijke attestatie"
+        - "Voordelige tarieven"
+      cta: "Tienjarige offerte verkrijgen"
+
+  # Benefits Section
+  benefits:
+    title: "Waarom onze verzekeringen kiezen?"
+    competitive_rates:
+      title: "Concurrerende tarieven"
+      description: "Aanbiedingen aangepast aan alle budgetten, zonder compromissen over de kwaliteit van de dekking."
+    support_24_7:
+      title: "24/7 Ondersteuning"
+      description: "Reactieve en menselijke bijstand, altijd beschikbaar om u te begeleiden."
+    online_management:
+      title: "100% online beheer"
+      description: "Abonnement, beheer en opvolging van uw contracten rechtstreeks vanaf uw beveiligde klantruimte."
+    custom_offers:
+      title: "Op maat gemaakte aanbiedingen"
+      description: "Gepersonaliseerde oplossingen volgens uw behoeften, of u nu particulier of professional bent."
+
+  # Process Section
+  process:
+    title: "Een verzekering afsluiten is eenvoudig!"
+    steps:
+      choose:
+        title: "Kies uw type verzekering"
+        description: "Selecteer het type dekking dat overeenkomt met uw behoeften"
+      form:
+        title: "Vul het online offerteformulier in"
+        description: "Enkele informatie volstaat om uw voorstel te verkrijgen"
+      proposal:
+        title: "Ontvang een gepersonaliseerd voorstel"
+        description: "Ons team bestudeert uw dossier en stelt u het beste aanbod voor"
+      subscribe:
+        title: "Sluit af en word onmiddellijk beschermd"
+        description: "Online validatie en effectieve bescherming vanaf ondertekening"
+
+  # Contact CTA Section
+  contact_cta:
+    title: "Advies of offerte nodig?"
+    description: "Onze adviseurs luisteren naar u om u te begeleiden in uw verzekeringsproject."
+    button: "Contacteer ons"
+
+  # Common elements
+  common:
+    get_quote: "Offerte verkrijgen"
+    learn_more: "Meer informatie"
+    contact_us: "Contact opnemen"
+    from: "Vanaf"
+    per_month: "per maand"
+    popular: "Populair"
+    recommended: "Aanbevolen"

@@ -1,0 +1,37 @@
+email_transfer_executed:
+  title: "Virement exécuté avec succès"
+  
+  content:
+    page_title: "Virement réalisé avec succès"
+    greeting: "Félicitations {firstName} !"
+    
+    transaction_completed:
+      title: "Transaction finalisée"
+      description: "Votre virement a été exécuté avec succès. Tous les codes de validation ont été confirmés et le transfert de fonds a été effectué selon vos instructions."
+    
+    execution_details:
+      title: "Détails de l'exécution"
+      reference: "Référence virement"
+      amount: "Montant transféré"
+      amount_value: "{amount} €"
+      beneficiary_account: "Compte bénéficiaire"
+      transfer_reason: "Motif du virement"
+      execution_date: "Date d'exécution"
+      executed_at: "{executedAt}"
+    
+    account_update:
+      title: "Mise à jour de vos comptes"
+      description: "Le montant a été débité de votre compte principal. Vous pouvez consulter vos mouvements et votre solde mis à jour dans votre espace bancaire en ligne."
+    
+    banking_access:
+      title: "Accéder à vos comptes"
+      view_banking_button: "Voir mon espace bancaire"
+      check_instruction: "Consultez vos mouvements et soldes mis à jour"
+    
+    security_thanks: "Merci de votre confiance. Votre transaction s'est déroulée dans des conditions optimales de sécurité."
+    
+    footer: "<strong>%company_name% - Service Virements</strong><br>Confirmation automatique d'exécution de virement"
+  
+  log:
+    transfer_executed: "Virement {transferId} exécuté avec succès pour un montant de {amount}€"
+    email_sent: "E-mail de confirmation d'exécution envoyé à {userEmail}"

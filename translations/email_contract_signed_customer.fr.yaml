@@ -1,0 +1,26 @@
+email_contract_signed_customer:
+  title: "Confirmation de signature de contrat"
+  subject: "Confirmation de signature de contrat - %referenceNumber%"
+  content:
+    confirmation:
+      title: "Votre contrat a été signé avec succès !"
+      description: "Cher(e) %customerName%, nous confirmons que votre contrat de crédit a été signé et reçu par nos services."
+    contract_details:
+      title: "Détails de votre contrat"
+      reference_number: "Numéro de référence"
+      loan_amount: "Montant du prêt"
+      status_label: "Statut"
+      status_value: "Signé"
+    next_steps:
+      title: "Prochaines étapes"
+      description: "Votre dossier suit maintenant le processus de validation administrative :"
+      validation: "Vérification et validation de votre contrat par nos équipes"
+      processing: "Traitement administratif et finalisation"
+      disbursement: "Déblocage des fonds sur votre compte"
+    important_info:
+      title: "Information importante"
+      description: "Le déblocage des fonds aura lieu sous 24-48h ouvrables après validation administrative."
+    cta:
+      button_text: "Consulter mon dossier"
+    footer:
+      regards: "Cordialement,"

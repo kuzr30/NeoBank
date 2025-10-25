@@ -1,0 +1,108 @@
+credit_renouvelable:
+  page:
+    title: "Hernieuwbaar Krediet"
+    description: "Geldreserve beschikbaar op elk moment met ons hernieuwbaar krediet. Flexibiliteit en gebruiksvrijheid gegarandeerd."
+  
+  hero:
+    class: "credit-detail-hero--renouvelable"
+    taux: "{rate}%"
+    montant: "15 000€"
+    duree: "Permanent"
+    title: "Hernieuwbaar Krediet"
+    subtitle: "Uw beschikbare geldreserve"
+  
+  section_1:
+    title: "Wat is een hernieuwbaar krediet?"
+    content:
+      paragraph_1: "Het hernieuwbaar krediet, ook revolving krediet genoemd, stelt een geldreserve ter beschikking die u op elk moment kunt gebruiken, naar gelang uw behoeften, zonder rechtvaardiging."
+      paragraph_2: "Naarmate u terugbetaalt, wordt uw reserve automatisch aangevuld. U betaalt alleen rente over de werkelijk gebruikte bedragen."
+  
+  section_2:
+    title: "Kredietkenmerken"
+  
+  features:
+    montant:
+      value: "Van 500€ tot 15 000€"
+      detail: "Moduleerbare reserve"
+    duree:
+      value: "Permanente duur"
+      detail: "Jaarlijks hernieuwbaar"
+    taux:
+      value: "Vanaf {rate}% JAOP*"
+      detail: "Op gebruikte bedragen"
+    garantie:
+      value: "Zonder waarborg"
+      detail: "Alleen op handtekening"
+  
+  section_3:
+    title: "Voordelen van hernieuwbaar krediet"
+    advantages:
+      disponibilite:
+        title: "Onmiddellijke beschikbaarheid"
+        description: "Fondsen 24/7 toegankelijk via kaart of overschrijving"
+      reconstruction:
+        title: "Automatische aanvulling"
+        description: "Reserve die zich aanvult met uw terugbetalingen"
+      pas_interets:
+        title: "Geen rente indien ongebruikt"
+        description: "Geen kosten zolang u de reserve niet gebruikt"
+      remboursement:
+        title: "Flexibele terugbetaling"
+        description: "Laag minimumbedrag, mogelijkheid tot vervroegde terugbetaling"
+      carte:
+        title: "Kredietkaart"
+        description: "Gebruik via bijbehorende bankkaart"
+  
+  section_4:
+    title: "Voorwaarden en gebruikscriteria"
+    conditions:
+      title: "Toekenningsvoorwaarden"
+      items:
+        majeur: "Meerderjarig zijn en wonen in Frankrijk"
+        revenus: "Regelmatige inkomsten aantonen"
+        surendettement: "Niet in een situatie van overmatige schulden verkeren"
+        interdiction: "Geen bankverbod"
+    
+    criteres:
+      title: "Gebruikscriteria"
+      items:
+        usage: "Verantwoordelijk gebruik aanbevolen"
+        impulsifs: "Impulsaankopen vermijden"
+        plan: "Een terugbetalingsplan voorzien"
+        surveiller: "Het saldo regelmatig controleren"
+  
+  section_5:
+    title: "Benodigde bewijsstukken"
+    identite:
+      title: "Identiteitsbewijzen"
+      items:
+        carte: "Identiteitskaart of paspoort"
+        domicile: "Recent woonplaatsbewijs"
+        rib: "Rekeningnummer"
+    
+    revenus:
+      title: "Inkomstenbewijzen"
+      items:
+        bulletins: "3 laatste loonstroken"
+        avis: "Laatste belastingaangifte"
+        attestation: "Werkgeversattest indien nodig"
+    
+    bancaires:
+      title: "Bankinformatie"
+      items:
+        releves: "Recente rekeninguittreksels"
+        credits: "Bewijzen van andere kredieten"
+        patrimoine: "Vermogensverklaring"
+  
+  legal:
+    title: "Belangrijke juridische informatie"
+    details:
+      taeg: "JAOP : Representatief voorbeeld: voor een reserve van 3 000€ permanent gebruikt aan 6,9% JAOP, met een terugbetaling van 90€/maand, is de terugbetalingsduur 40 maanden voor een totale kost van 597€."
+      utilisation: "Gebruik : Let op dat u dit krediet niet gebruikt voor terugkerende gewone uitgaven."
+      remboursement: "Terugbetaling : Minimummaandbedrag van 3% van het gebruikte kapitaal of minimum 15€."
+      renouvellement: "Hernieuwing : Jaarlijks onderzoek van uw situatie en hernieuwing onder voorwaarden."
+      resiliation: "Opzegging : Op elk moment mogelijk, terugbetaling van het verschuldigde saldo verplicht."
+  
+  cta:
+    title: "Stel uw reserve samen"
+    subtitle: "Beschik over een flexibele financieringsoplossing met ons hernieuwbaar krediet"

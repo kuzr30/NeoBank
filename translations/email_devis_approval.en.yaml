@@ -1,0 +1,19 @@
+email_devis_approval:
+  subject: "Your insurance application has been approved!"
+  content:
+    page_title: "Insurance Application Approved"
+    department: "Insurance Services"
+    greeting: "Dear %prenom% %nom%,"
+    approval_message: "We are pleased to inform you that your %typeAssurance% insurance application has been approved by our team."
+    reference:
+      title: "Reference Number"
+    next_steps:
+      title: "Next Steps"
+      step1: "Our advisor will contact you within 48 hours to finalize your contract"
+      step2: "Prepare your identity documents and supporting evidence"
+      step3: "Sign your contract and enjoy your coverage"
+    contact:
+      title: "Need Help?"
+      phone_service: "Phone Service"
+      email_support: "Email Support"
+    closing_message: "Thank you for your trust. Our team looks forward to accompanying you in this new step."

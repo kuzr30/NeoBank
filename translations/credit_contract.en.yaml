@@ -1,0 +1,356 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: credit_contract.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+credit_contract:
+  # Document title
+  title: "Loan Contract No. %reference_number%"
+  
+  # Header
+  header:
+    repeated_header: "Header repeated on each page"
+    logo_alt: "%company_name% Logo"
+    contract_number: "Contract No.%reference_number%"
+    
+  # Footer
+  footer:
+    company_description: "Financing Company approved by ACPR (Prudential Control and Resolution Authority)"
+    headquarters: "Head Office"
+    country: "France"
+    phone: "Tel"
+    email: "Email"
+    credit_warning: "A CREDIT COMMITS YOU AND MUST BE REPAID. CHECK YOUR REPAYMENT CAPACITY BEFORE COMMITTING."
+    confidential_notice: "Confidential document - Any reproduction is strictly prohibited without written authorization"
+    
+  # Main content
+  main:
+    detailed_info_first_page: "Detailed information first page"
+    logo_alt: "%company_name% Logo"
+    document_title_comment: "Document title"
+    
+  # Contract titles by type
+  contract_titles:
+    immobilier: "MORTGAGE CONTRACT"
+    auto: "AUTO LOAN CONTRACT"
+    consommation: "CONSUMER CREDIT CONTRACT"
+    travaux: "HOME IMPROVEMENT LOAN CONTRACT"
+    professionnel: "BUSINESS LOAN CONTRACT"
+    personal: "PERSONAL LOAN CONTRACT"
+    home_improvement: "HOME IMPROVEMENT CREDIT CONTRACT"
+    debt_consolidation: "DEBT CONSOLIDATION CONTRACT"
+    mortgage: "MORTGAGE CREDIT CONTRACT"
+    renouvelable: "REVOLVING CREDIT CONTRACT"
+    etudiant: "STUDENT LOAN CONTRACT"
+    relais: "BRIDGING CREDIT CONTRACT"
+    microcredit: "MICROCREDIT CONTRACT"
+    leasing: "LEASE CONTRACT"
+    voyage: "TRAVEL CREDIT CONTRACT"
+    default: "PERSONAL LOAN CONTRACT"
+    
+  # Chapter I - Contracting Parties
+  chapter_one:
+    title: "Chapter I - The Contracting Parties"
+    lender_header: "The Lender"
+    borrower_header: "The Borrower"
+    company_type: "Financing Company"
+    share_capital: "Share capital: %amount% €"
+    head_office: "Head Office:"
+    represented_by: "Represented by its Chief Executive Officer"
+    hereinafter_lender: "Hereinafter referred to as \"The Lender\""
+    hereinafter_borrower: "Hereinafter referred to as \"The Borrower\""
+    residing_at: "Residing at:"
+    address_not_provided: "[Address not provided]"
+    postal_code_city: "[Postal Code] [City]"
+    profession: "Profession: %job_title%"
+    born_on: "Born on: %birth_date%"
+    phone: "Phone: %phone%"
+    email: "Email: %email%"
+    parties_agreed: "The parties hereto have agreed and settled as follows"
+    
+  # Chapter II - Object and Nature of Contract
+  chapter_two:
+    title: "Chapter II - Object and Nature of Contract"
+    article_1_title: "Article 1 - Object of Contract"
+    article_1_intro: "The Lender grants to the Borrower, who accepts, a"
+    credit_types:
+      immobilier: "mortgage loan"
+      auto: "auto loan"
+      consommation: "consumer credit"
+      travaux: "home improvement loan"
+      professionnel: "business loan"
+      personal: "personal loan"
+      home_improvement: "home improvement credit"
+      debt_consolidation: "debt consolidation credit"
+      mortgage: "mortgage credit"
+      renouvelable: "revolving credit"
+      etudiant: "student loan"
+      relais: "bridging loan"
+      microcredit: "microcredit"
+      leasing: "lease"
+      voyage: "travel credit"
+      default: "personal loan"
+    article_1_suffix: "with interest of an amount set forth below."
+    article_1_regulation: "This loan is governed by the provisions of the Civil Code (articles 1905 to 1914) and the Consumer Code."
+    article_1_purpose: "This loan is intended to balance the borrower's account as part of a personal investment project."
+    
+    article_2_title: "Article 2 - Legal Nature"
+    article_2_nature: "This is a fixed-term personal loan contract, at a fixed rate, repayable in constant monthly installments."
+    article_2_commitment: "This contract constitutes a firm and final commitment of both parties."
+    article_2_funds_purpose: "Purpose of funds:"
+    article_2_funds_restriction: "The funds made available cannot be used for illegal, speculative purposes or contrary to public order."
+    
+    article_3_title: "Article 3 - Declarations and Guarantees of the Borrower"
+    article_3_intro: "The Borrower declares and guarantees that:"
+    article_3_declaration_1: "All information provided when applying for credit is accurate and complete."
+    article_3_declaration_2: "He has the legal capacity necessary to enter into this commitment."
+    article_3_declaration_3: "He is not in a situation of over-indebtedness or collective proceedings."
+    article_3_declaration_4: "There is no banking ban or filing against him."
+    article_3_declaration_5: "His financial situation allows him to honor the installments of this loan."
+    
+  # Chapter III - Financial Conditions
+  chapter_three:
+    title: "Chapter III - Financial Conditions of the Loan"
+    table_characteristics: "Characteristics"
+    table_values: "Values"
+    table_observations: "Observations"
+    
+    credit_type_label: "Credit type"
+    credit_type_observation: "Nature of financing"
+    loan_amount_label: "Borrowed capital amount"
+    loan_amount_observation: "Capital made available"
+    loan_duration_label: "Loan duration"
+    loan_duration_observation: "Monthly installments"
+    interest_rate_label: "Nominal interest rate"
+    interest_rate_observation: "Fixed rate"
+    annual_rate: "% per year"
+    global_rate_label: "Annual Percentage Rate (APR)"
+    global_rate_observation: "Includes all mandatory fees"
+    insurance_label: "Optional insurance"
+    insurance_available: "Available on request"
+    insurance_observation: "Death/Disability/Incapacity"
+    monthly_payment_label: "Monthly payment amount"
+    constant_payments: "constant installments"
+    total_cost_label: "Total cost of credit"
+    total_cost_observation: "Interest over total duration"
+    
+    table_credit_types:
+      immobilier: "Mortgage Loan"
+      auto: "Auto Loan"
+      consommation: "Consumer Credit"
+      travaux: "Home Improvement Loan"
+      professionnel: "Business Loan"
+      personal: "Personal Loan"
+      home_improvement: "Home Improvement Credit"
+      debt_consolidation: "Debt Consolidation"
+      mortgage: "Mortgage Credit"
+      renouvelable: "Revolving Credit"
+      etudiant: "Student Loan"
+      relais: "Bridging Loan"
+      microcredit: "Microcredit"
+      leasing: "Lease"
+      voyage: "Travel Credit"
+      default: "Personal Loan"
+      
+    article_3_title: "Article 3 - Suspensive Conditions"
+    article_3_intro: "This contract is concluded under the following suspensive conditions:"
+    condition_1: "Verification and validation of the Borrower's identity and legal capacity."
+    condition_2: "Verification of the financial situation declared by the Borrower (pay slips, tax notices, bank statements)."
+    condition_3: "Absence of registration in FICP (File of Credit Repayment Incidents to Individuals)."
+    condition_4: "Absence of banking ban or safeguard, recovery or judicial liquidation measures."
+    condition_5: "Constitution of requested guarantees, if applicable."
+    condition_6: "Compliance with the legal withdrawal period of 14 days."
+    conditions_important: "Important:"
+    conditions_nullity: "The non-fulfillment of one of these conditions results in automatic nullity of the contract without compensation on either side."
+    
+    article_4_title: "Article 4 - Terms of Availability"
+    article_4_intro: "Subject to the fulfillment of the above suspensive conditions, the sum of %amount% € will be credited to the Borrower's bank account within a maximum period of 3 working days after:"
+    article_4_condition_1: "Final signature of this contract by both parties"
+    article_4_condition_2: "Receipt of all required supporting documents"
+    article_4_condition_3: "Effective constitution of requested guarantees"
+    article_4_usage: "The Borrower undertakes to use these funds in accordance with the declared purpose of the loan."
+    payment_methods: "Collection methods:"
+    sepa_payment: "Automatic SEPA direct debit on the %day% of each month. In case of insufficient funds, an incident fee of €20 will be charged."
+    bank_account_label: "Bank account designated for direct debits:"
+    bank_establishment: "Banking establishment:"
+    iban_label: "IBAN:"
+    iban_placeholder: "FR__ ____ ____ ____ ____ ____ ___ (To be completed upon signing)"
+    bank_maintenance: "The Borrower undertakes to maintain this bank account active and sufficiently funded to allow direct debits at the agreed deadlines."
+    lender_right: "The Lender reserves the right to refuse the provision of funds in case of non-compliance with contract conditions."
+    
+    insurance_title: "Article 4 - Borrower Insurance"
+    insurance_general_principle: "4.1 - General principle"
+    insurance_coverage: "Borrower insurance covers the risks of death, total temporary incapacity for work (TTI), total permanent disability (TPD) and partial permanent disability (PPD). This coverage protects the Borrower and his beneficiaries in case of inability to repay due to these events."
+    insurance_choice: "4.2 - Borrower's Choice"
+    insurance_question: "Do you wish to take out borrower insurance to guarantee the repayment of your credit?"
+    
+    insurance_decision_title: "YOUR DECISION:"
+    insurance_decision_intro: "Knowingly, after complete information:"
+    insurance_yes: "YES, I take out borrower insurance"
+    insurance_no: "NO, I refuse insurance with full knowledge of the risks"
+    insurance_legal_info: "Legal information:"
+    insurance_legal_text: "In accordance with the Lagarde law, you have the right to freely choose your insurer. You can also change insurance each year on the anniversary date (Hamon law)."
+    
+  # Chapter IV - Repayment Terms
+  chapter_four:
+    title: "Chapter IV - Repayment Terms"
+    repayment_schedule: "Repayment Schedule"
+    repayment_item_1: "The loan will be amortized by means of %duration% constant monthly payments of %amount% € each."
+    repayment_item_2: "The first installment will be debited on %first_date%."
+    repayment_item_3: "The last installment will be debited on %last_date%."
+    repayment_item_4: "The debit will be made automatically from the bank account designated by the Borrower via SEPA mandate."
+    repayment_item_5: "In case of debit rejection, the Borrower will be informed within 48h and must regularize his situation within 10 working days."
+    repayment_item_6: "An incident fee of €20 will be charged for each rejected debit due to insufficient funds."
+    
+    early_repayment_title: "Early Repayment"
+    early_repayment_right: "The Borrower has the option to repay early, in whole or in part, the remaining capital due."
+    early_repayment_minimum: "Partial early repayments cannot be less than %amount% €, unless it is the loan balance."
+    early_repayment_indemnity: "An early repayment indemnity may be collected, equal to one quarter's interest on the sum repaid, without exceeding %rate%% of the remaining capital due."
+    
+  # Chapter V - Obligations and Guarantees
+  chapter_five:
+    title: "Chapter V - Obligations and Guarantees"
+    borrower_obligations_title: "Borrower's Obligations"
+    obligation_1: "Scrupulously respect the agreed repayment schedule."
+    obligation_2: "Immediately inform the Lender of any change in his personal, professional or financial situation."
+    obligation_3: "Maintain insurance covering death and disability risks if subscribed."
+    obligation_4: "Not contract other loans without prior agreement from the Lender if the total amount exceeds 33% of net income."
+    obligation_5: "Keep an active and funded bank account for automatic debits."
+    obligation_6: "Inform by registered mail any change of address within 30 days."
+    
+    guarantees_title: "Required Guarantees"
+    guarantees_intro: "In order to guarantee the proper repayment of this loan, the Borrower may be required to constitute, according to conditions defined by the Lender:"
+    guarantee_1: "A bank or personal guarantee of an amount equivalent to 10% of the borrowed amount, i.e. %amount% €."
+    guarantee_2: "This guarantee will be delivered by an approved financial institution or by a solvent third party accepted by the Lender."
+    
+  # Chapter VI - Early Demandability and Sanctions
+  chapter_six:
+    title: "Chapter VI - Cases of Demandability and Sanctions"
+    early_demandability_title: "Early Demandability"
+    early_demandability_intro: "All sums due by the Borrower will become immediately due, without prior notice, in the following cases:"
+    demandability_1: "Non-payment of an installment at its due date;"
+    demandability_2: "Default in the performance of one of the contractual obligations;"
+    demandability_3: "False declaration or concealment of important information;"
+    demandability_4: "Collective proceedings (recovery, judicial liquidation);"
+    demandability_5: "Death of the Borrower (unless otherwise provided);"
+    demandability_6: "Significant change of situation without prior information."
+    
+    penalties_title: "Penalties and Indemnities"
+    delay_penalty: "Late penalty: %rate%% per month of delay on sums due."
+    recovery_penalty: "Flat-rate recovery indemnity: €20 per unpaid installment."
+    early_demandability_penalty: "Early demandability indemnity: %rate%% of remaining capital due."
+    
+  # Chapter VII - Various Provisions
+  chapter_seven:
+    title: "Chapter VII - Various Provisions"
+    domicile_title: "Election of Domicile"
+    domicile_intro: "For the execution of these presents and their consequences, the parties elect domicile:"
+    lender_domicile: "The Lender:"
+    borrower_domicile: "The Borrower:"
+    address_not_provided: "[Address not provided]"
+    
+    # Remaining sections and final acknowledgments
+    acknowledgment_title: "I have acknowledged:"
+    acknowledgment_1: "The terms of early repayment"
+    acknowledgment_2: "The consequences of default"
+    acknowledgment_3: "The contacts in case of financial difficulty"
+    acknowledgment_4: "I accept all the conditions of this contract"
+    
+    # Signatures
+    borrower_signature: "The Borrower"
+    lender_signature: "The Lender"
+    general_director: "The Chief Executive Officer"
+    duly_authorized: "Duly authorized for the purposes hereof"
+    signature_date: "Date: ____/____/________"
+    signature_mention: "Signature preceded by the mention"
+    signature_approval: "\"Read and approved, good for agreement\""
+    
+    preteur: "The Lender"
+    emprunteur: "The Borrower"
+    directeur_general: "The Chief Executive Officer"
+    habilite: "Duly authorized for the purposes hereof"
+    
+    # Banking information
+    code_bic: "BIC Code:"
+    completer_signature: "(To be completed upon signing)"
+    informations_sepa: "This information will be completed upon signing the contract or by separate SEPA mandate."
+    
+    # Fees and rights
+    frais_enregistrement: "The fees and registration duties of this contract amount to %montant% and are borne by the Borrower."
+    frais_recouvrement: "Recovery fees in case of unpaid amounts will also be borne by the Borrower."
+    
+    # Law and jurisdiction
+    contrat_droit_francais: "This contract is subject to French law."
+    competence_tribunaux: "In case of dispute, and after exhaustion of amicable channels, exclusive jurisdiction is attributed to the courts of Paris."
+    
+    # Mediation and GDPR
+    mediation_title: "Mediation:"
+    mediation_content: "Before any legal recourse, the parties undertake to seek an amicable solution. The Borrower can refer to the ACPR mediator or the banking mediator of the ASF."
+    rgpd_title: "Personal Data Protection (GDPR)"
+    rgpd_intro: "In accordance with the General Data Protection Regulation (GDPR) and the Data Protection Act:"
+    rgpd_donnees_collectees: "The data collected is necessary for the execution of the contract and the legal obligations of the Lender."
+    rgpd_transmission: "They may be transmitted to control bodies (ACPR, Bank of France, FICP, FCC)."
+    rgpd_droits_emprunteur: "The Borrower has a right of access, rectification, deletion and portability of his data."
+    rgpd_conservation: "Data is kept for 10 years after contract termination."
+    
+    # Right of withdrawal
+    retractation_title: "RIGHT OF WITHDRAWAL (Articles L.311-15 to L.311-18 of the Consumer Code)"
+    retractation_important: "IMPORTANT:"
+    retractation_delai: "The Borrower has a period of 14 calendar days to exercise his right of withdrawal without reason or penalty."
+    retractation_debut: "This period runs from the date of signature of this contract."
+    retractation_notification: "Withdrawal must be notified by registered letter with acknowledgment of receipt to the Lender's address."
+    retractation_restitution: "In case of withdrawal, the Borrower undertakes to return the funds already paid within 30 days, plus accrued interest at the contractual rate."
+    
+    # Other provisions
+    modification_echeances: "The amount of installments (subject to Lender acceptance)"
+    cession_creance_title: "Assignment of claim:"
+    cession_creance_content: "The Lender reserves the right to assign all or part of his claims to a third party (financial institution, collection company, etc.), with prior information to the Borrower by registered letter with acknowledgment of receipt, at least 30 days before the effective assignment."
+    cession_information: "In case of assignment, the Borrower will be informed of the coordinates of the new creditor and the repayment terms which will remain unchanged unless otherwise agreed."
+    frais_modification_title: "Modification fees:"
+    frais_modification_content: "Any amendment to this contract will give rise to processing fees of €50 to be borne by the Borrower, unless otherwise provided by law."
+    
+    # Final clause
+    contrat_effet: "This contract takes effect upon its signature by both parties. The Borrower has a legal withdrawal period and must be aware of all conditions before making a final commitment."
+    
+    # Section complaint and modification
+    procedure_reclamation: "Complaint Procedure"
+    service_clientele_title: "Customer Relations Service:"
+    service_clientele_content: "In case of difficulty, contact our customer service at %phone% or by email: %email%"
+    mediation_persistant: "Mediation: In case of persistent dispute, you can refer to the French Association of Financial Companies (ASF)"
+    modification_contrat: "Any modification of this contract must be the subject of a written amendment, signed by both parties and dated."
+    duree_pret_modification: "The loan duration (extension or reduction)"
+    modalites_remboursement: "The repayment terms"
+    garanties_apportees: "The guarantees provided"
+    
+    # Chapter VIII
+    chapitre_huit_title: "Chapter VIII - Signature Terms and Taking Effect"
+    conditions_validite_title: "Validity conditions:"
+    conditions_validite_content: "Electronic or handwritten signature constitutes full and complete acceptance of the contract terms. No reservation may be made after signature."
+    fait_a_paris: "Done in PARIS, on %date%, in two (2) original copies"
+    delai_retractation_consommation: "In accordance with the provisions of the Consumer Code, the Borrower has a withdrawal period of 14 full calendar days from the signature of this contract."
+    contact_difficultes: "In case of financial difficulties, do not remain isolated. Solutions exist. Contact your advisor or the Bank of France (www.banque-france.fr) for free support."
+    apres_connaissance: "After taking cognizance of the general"
+    remis_chaque_partie: "One delivered to each party who acknowledges having received it"
+    et_particulieres: "and particular conditions of this contract"
+    signature_directeur_alt: "Chief Executive Officer Signature"
+    information_surendettement: "OVER-INDEBTEDNESS INFORMATION:"
+    current_date: "Date: %date%"
+    
+    # Hard-coded texts line 883
+    contact_dpo: "DPO Contact: %email%"
+    
+    # Hard-coded texts line 859
+    frais_et_droits_title: "Fees and Rights"
+    
+    # Hard-coded texts line 911
+    modifications_portent_sur: "Modifications may relate in particular to:"
+    
+    # Hard-coded texts line 940
+    points_accueil_banque_france: "Bank of France reception points:"
+    numero_banque_france: "0 811 901 801 (price of a local call)"
+    
+    # Hard-coded texts line 867
+    droit_applicable_juridiction_title: "Applicable Law and Jurisdiction"
+    
+    # Hard-coded texts line 909
+    modification_contrat_title: "Contract Modification"

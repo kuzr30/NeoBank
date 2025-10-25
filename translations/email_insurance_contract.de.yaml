@@ -1,0 +1,33 @@
+email_insurance_contract:
+    title: "Ihr Versicherungsvertrag insuranceType"
+    
+    content:
+        page_title: "Ihr Versicherungsvertrag insuranceType"
+        greeting: "Hallo customerName,"
+        
+        contract_ready:
+            title: "Ihr Vertrag ist bereit!"
+            description: "Bitte finden Sie Ihren Versicherungsvertrag %insuranceType% im Anhang. Dieses offizielle Dokument bestätigt Ihren Versicherungsschutz."
+        
+        contract_details:
+            title: "Details Ihres Vertrags"
+            contract_number: "Vertrag Nr. %contractNumber%"
+            insurance_type: "Versicherungsart"
+            monthly_premium: "Monatliche Prämie"
+            activation_date: "Aktivierungsdatum"
+            status: "Status"
+        
+        important_info:
+            title: "Wichtige Informationen"
+            point_1: "Dieser Vertrag tritt ab dem genannten Aktivierungsdatum in Kraft"
+            point_2: "Ihre monatliche Prämie wird jeden Monat automatisch abgebucht"
+            point_3: "Sie haben ein Widerrufsrecht von 14 Kalendertagen"
+            point_4: "Bewahren Sie dieses Dokument sorgfältig auf, es wird im Schadensfall benötigt"
+        
+        questions:
+            title: "Fragen?"
+            description: "Unser Team steht Ihnen für alle Fragen zu Ihrem Versicherungsvertrag zur Verfügung."
+            contact_email: "Kontaktieren Sie uns: %company_email%"
+        
+        closing: "Wir danken Ihnen für Ihr Vertrauen und stehen Ihnen gerne zur Verfügung."
+        signature: "Mit freundlichen Grüßen,<br><strong>Das %company_name% Team</strong>"

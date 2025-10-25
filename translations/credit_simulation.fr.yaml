@@ -1,0 +1,98 @@
+credit_simulation:
+  # Credit types section
+  credit_types:
+    immobilier:
+      label: "Crédit Immobilier"
+      description: "Financement pour l'achat de votre résidence principale ou secondaire"
+    auto:
+      label: "Crédit Auto" 
+      description: "Financement pour l'achat d'un véhicule neuf ou d'occasion"
+    consommation:
+      label: "Crédit à la Consommation"
+      description: "Crédit pour financer vos projets personnels"
+    travaux:
+      label: "Crédit Travaux"
+      description: "Financement pour vos travaux de rénovation et d'amélioration"
+    professionnel:
+      label: "Crédit Professionnel"
+      description: "Financement pour vos projets professionnels"
+    personal:
+      label: "Crédit Personnel" 
+      description: "Crédit personnel sans justificatif d'utilisation"
+    home_improvement:
+      label: "Crédit Travaux/Rénovation"
+      description: "Crédit spécialisé pour vos travaux d'amélioration du logement"
+    debt_consolidation:
+      label: "Rachat de Crédit"
+      description: "Regroupement de vos crédits en cours"
+    mortgage:
+      label: "Crédit Immobilier"
+      description: "Prêt immobilier pour l'acquisition de votre bien"
+    renouvelable:
+      label: "Crédit Renouvelable"
+      description: "Réserve d'argent disponible en permanence"
+    etudiant:
+      label: "Prêt Étudiant"
+      description: "Financement pour vos études supérieures"
+    relais:
+      label: "Prêt Relais"
+      description: "Solution de financement temporaire lors d'un achat-vente"
+    microcredit:
+      label: "Microcrédit"
+      description: "Petits montants pour financer vos projets"
+    leasing:
+      label: "Leasing"
+      description: "Location avec option d'achat"
+    voyage:
+      label: "Crédit Voyage"
+      description: "Financement pour vos voyages et vacances"
+
+  # Duration options
+  durations:
+    twelve_months: "12 mois"
+    twenty_four_months: "24 mois"
+    thirty_six_months: "36 mois"
+    forty_eight_months: "48 mois"
+    sixty_months: "60 mois"
+    seventy_two_months: "72 mois"
+    eighty_four_months: "84 mois"
+    ninety_six_months: "96 mois"
+    one_hundred_twenty_months: "120 mois"
+    one_hundred_eighty_months: "180 mois"
+    two_hundred_forty_months: "240 mois"
+    three_hundred_months: "300 mois"
+
+  # Duration units
+  duration_units:
+    months: "mois"
+    years: "années"
+    immobilier:
+      label: "Crédit Immobilier"
+      description: "Financement pour l'achat d'un bien immobilier"
+    auto:
+      label: "Crédit Auto"
+      description: "Financement pour l'achat d'un véhicule"
+    consommation:
+      label: "Crédit à la Consommation"
+      description: "Crédit pour vos projets personnels"
+    travaux:
+      label: "Crédit Travaux"
+      description: "Financement pour vos travaux de rénovation"
+    professionnel:
+      label: "Crédit Professionnel"
+      description: "Crédit pour vos projets professionnels"
+    personal:
+      label: "Prêt Personnel"
+      description: "Prêt sans justificatif d'utilisation"
+    debt_consolidation:
+      label: "Rachat de Crédit"
+      description: "Regroupement de vos crédits existants"
+    mortgage:
+      label: "Crédit Immobilier"
+      description: "Financement pour l'achat d'un bien immobilier"
+    renouvelable:
+      label: "Crédit Renouvelable"
+      description: "Réserve d'argent réutilisable à volonté"
+    microcredit:
+      label: "Microcrédit Personnel"
+      description: "Petits montants pour personnes exclues du crédit bancaire classique"

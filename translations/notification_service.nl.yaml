@@ -1,0 +1,39 @@
+notification_service:
+  email_subjects:
+    account_created: "Uw %company_name% account is klaar!"
+    account_suspended: "Tijdelijke opschorting van uw %company_name% accounts"
+    
+  email_content:
+    account_created:
+      greeting: "Gefeliciteerd %firstName%!"
+      intro: "Uw %company_name% account is succesvol aangemaakt."
+      account_details: "Details van uw account:"
+      account_number: "Accountnummer"
+      iban: "IBAN"
+      country: "Land"
+      access_info: "Toegang tot uw klantenportaal"
+      access_info_text: "U kunt nu inloggen op uw klantenportaal om uw bankzaken te beheren."
+      support_info: "Als u vragen heeft, staat ons supportteam voor u klaar."
+      signature: "Het %company_name% team"
+      
+    account_suspended:
+      greeting: "Beste %s,"
+      suspension_notice: "Wij informeren u dat uw %company_name% accounts tijdelijk zijn opgeschort."
+      reason_security: "Deze veiligheidsmaatregel is genomen vanwege ongebruikelijke activiteit."
+      next_steps: "Ons team controleert momenteel uw account en neemt binnen 48 uur contact met u op."
+      contact_info: "In geval van spoed kunt u contact opnemen met onze klantenservice."
+      signature: "Het %company_name% team"
+      
+  log_messages:
+    account_created_sent: "Email voor account aanmaak verzonden"
+    account_suspended_sent: "Email voor account opschorting verzonden"
+    account_created_error: "Fout bij verzenden email account aanmaak"
+    account_suspended_error: "Fout bij verzenden email account opschorting"
+    
+  countries:
+    FR: "Frankrijk"
+    BE: "België"
+    NL: "Nederland"
+    DE: "Duitsland"
+    IT: "Italië"
+    ES: "Spanje"

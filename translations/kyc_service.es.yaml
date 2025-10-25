@@ -1,0 +1,13 @@
+exceptions:
+  submission_already_exists: "Ya existe una presentación KYC en curso o aprobada para este usuario."
+  invalid_status: "Estado de presentación KYC inválido"
+  user_not_found: "Usuario no encontrado"
+  documents_required: "Se requieren documentos para la presentación KYC"
+
+log_messages:
+  submission_created: "Presentación KYC creada"
+  submission_approved: "Presentación KYC aprobada"
+  submission_rejected: "Presentación KYC rechazada"
+  document_uploaded: "Documento KYC subido con éxito"
+  validation_completed: "Validación KYC terminada"
+  status_updated: "Estado KYC actualizado"

@@ -1,0 +1,52 @@
+# ENGLISH TRANSLATION - Translated from French
+# Bank card subscription translation file
+# Domain: card_subscription
+# Language: English (en)
+
+card_subscription:
+  # Subscription page
+  subscribe:
+    title: "Subscribe to a bank card"
+    subtitle: "Complete the form to receive your new bank card"
+    
+    # Steps
+    steps:
+      account: "Step 1: Select your account"
+      brand: "Step 2: Choose the brand"
+      service_level: "Step 3: Choose the service level"
+    
+    # Brands
+    brands:
+      visa:
+        title: "VISA"
+        description: "Accepted worldwide"
+      mastercard:
+        title: "MASTERCARD"
+        description: "Premium international network"
+    
+    # Card types
+    card_types:
+      classic:
+        title: "CLASSIC"
+        features:
+          - "Contactless payments"
+          - "Free withdrawals"
+          - "Basic purchase insurance"
+        price: "Free"
+      gold:
+        title: "GOLD"
+        features:
+          - "All Classic benefits"
+          - "Travel insurance"
+          - "1% Cashback"
+          - "24/7 assistance"
+        price: "5€/month"
+      platinum:
+        title: "PLATINUM"
+        features:
+          - "All Gold benefits"
+          - "Private concierge"
+          - "2% Cashback"
+          - "Premium insurance"
+          - "Airport lounges"
+        price: "15€/month"

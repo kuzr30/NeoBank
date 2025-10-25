@@ -1,0 +1,52 @@
+transfer_manager:
+  exceptions:
+    account_blocked: "Su cuenta está bloqueada. Contacte la administración."
+    transfer_expired: "Esta transferencia ha expirado."
+    transfer_not_cancellable: "Esta transferencia no puede ser cancelada."
+    transfer_not_validatable: "Esta transferencia no puede ser validada."
+    transfer_not_blockable: "Esta transferencia no puede ser bloqueada."
+    transfer_not_blocked: "Esta transferencia no está bloqueada."
+    
+  user_messages:
+    account_blocked: "Su cuenta está bloqueada. Contacte la administración."
+    transfer_expired: "Esta transferencia ha expirado."
+    code_expired: "Este código ya no puede ser validado (demasiados intentos fallidos)."
+    code_validated_success: "Código validado exitosamente. Transferencia en curso de ejecución."
+    account_blocked_attempts: "Cuenta bloqueada después de demasiados intentos fallidos. Contacte la administración."
+    no_pending_code: "Ningún código pendiente. Genere primero un código."
+    transfer_completed: "¡Transferencia terminada exitosamente!"
+    next_code_needed: "Código validado. Genere el próximo código para continuar."
+    
+  admin_notes:
+    blocked_after_attempts: "Cuenta bloqueada después de 9 intentos de validación incorrectos"
+    
+  log_messages:
+    transfer_initiated: "Nueva transferencia iniciada con débito inmediato"
+    code_added: "Código agregado a la transferencia"
+    code_validated_success: "Código validado exitosamente"
+    code_attempt_failed: "Intento de código fallido"
+    transfer_executed: "Transferencia ejecutada exitosamente"
+    transfer_execution_failed: "Fallo de la ejecución de la transferencia"
+    user_unblocked: "Usuario desbloqueado"
+    code_expired_next_requested: "Código expirado - solicitud del código siguiente"
+    cancellation_started: "Inicio cancelación transferencia"
+    amount_recredited: "Monto reacreditado tras cancelación"
+    transfer_cancelled: "Transferencia cancelada exitosamente"
+    transfer_blocked: "Transferencia bloqueada por el servicio de transferencia"
+    transfer_unblocked: "Transferencia desbloqueada por administrador"
+    admin_validation_simulated: "Validación simulada por la administración"
+    
+  transaction_notes:
+    money_debited_on_init: "Dinero ya debitado durante la iniciación"
+    money_always_debited_comment: "SIEMPRE reacreditar el monto porque el dinero es SIEMPRE debitado durante la iniciación"
+
+  validation:
+    amount_must_be_positive: "El monto debe ser un número positivo."
+    insufficient_credit_amount: "Monto insuficiente en la cuenta de crédito."
+  
+  errors:
+    sub_account_not_found: "Subcuenta de crédito no encontrada"
+    no_pending_transfer: "Ninguna transferencia pendiente."
+    verification_code_expired: "Código de verificación expirado."
+    verification_code_invalid: "Código de verificación inválido."
+    insufficient_amount: "Monto insuficiente"

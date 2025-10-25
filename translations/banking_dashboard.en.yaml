@@ -1,0 +1,64 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_dashboard.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_dashboard:
+  # Meta tags
+  meta:
+    title: "Online Banking - %company_name%"
+    description: "Banking dashboard - Manage your accounts, transfers and banking services"
+
+  # Navigation tabs
+  nav:
+    accounts: "Accounts"
+    cards: "Cards"
+    transfers: "Transfers"
+    ribs: "RIB/IBAN"
+    savings: "Savings"
+    credits: "Credits"
+    insurance: "Insurance"
+
+  # User info
+  user:
+    status: "Individual Customer"
+    status_business: "Business Customer"
+    status_premium: "Premium Customer"
+
+  # Sidebar
+  sidebar:
+    my_accounts: "My Accounts"
+    quick_actions: "Quick Actions"
+    
+  # Account types
+  accounts:
+    main_account: "Main Account"
+    credit_account: "Credit Account"
+    card_account: "Card Account"
+    savings_account: "Savings Account"
+    insurance_account: "Insurance Account"
+    no_account: "No account"
+    
+  # Account status
+  status:
+    available_credit: "Available credit"
+    card_balance: "Card balance"
+    savings_built: "Savings built"
+    insurance_provision: "Insurance provision"
+    contact_advisor: "Contact your advisor"
+    this_month: "this month"
+    
+  # Quick actions
+  actions:
+    transfer: "Transfer"
+    card_opposition: "Card block"
+    rib_iban: "RIB/IBAN"
+    contact_us: "Contact us"
+    
+  # Messages
+  messages:
+    loading: "Loading..."
+    no_data: "No data available"
+    
+  # Currency
+  currency: "€"

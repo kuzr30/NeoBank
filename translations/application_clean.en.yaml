@@ -1,0 +1,273 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: application_clean.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+credit_application:
+  messages:
+    step_completed: "Step completed"
+    complete_previous_steps: "Please complete the previous steps"
+    complete_all_steps: "All steps must be completed"
+    form_errors: "Please correct {count} error{plural} in the form."
+    application_submitted: "Your application has been submitted successfully"
+    confirmation_not_found: "Confirmation not found"
+    technical_error: "A technical error occurred. Please try again."
+
+  steps:
+    step1:
+      title: "Personal information"
+      subtitle: "Enter your personal data"
+      description: "This information will allow us to process your loan application"
+      personal_info:
+        title: "Basic information"
+        first_name:
+          label: "First name"
+          placeholder: "Your first name"
+          help: "Enter your first name as it appears on your official documents"
+          errors:
+            required: "First name is required"
+            min_length: "First name must contain at least 2 characters"
+            max_length: "First name cannot exceed 50 characters"
+            invalid_format: "First name can only contain letters, spaces, hyphens and apostrophes"
+        last_name:
+          label: "Last name"
+          placeholder: "Your last name"
+          help: "Enter your last name as it appears on your official documents"
+          errors:
+            required: "Last name is required"
+            min_length: "Last name must contain at least 2 characters"
+            max_length: "Last name cannot exceed 50 characters"
+            invalid_format: "Last name can only contain letters, spaces, hyphens and apostrophes"
+        email:
+          label: "Email address"
+          placeholder: "your.email@example.com"
+          help: "Use a valid email address where we can contact you"
+          errors:
+            required: "Email address is required"
+            invalid: "Please enter a valid email address"
+        phone_number:
+          label: "Phone number"
+          placeholder: "%company_phone%"
+          help: "Enter your mobile or landline phone number"
+          errors:
+            required: "Phone number is required"
+            invalid: "Please enter a valid phone number"
+        birth_date:
+          label: "Date of birth"
+          help: "Select your date of birth (you must be of age)"
+          errors:
+            required: "Date of birth is required"
+            underage: "You must be of age to apply for a loan"
+        nationality:
+          label: "Nationality"
+          placeholder: "Select your nationality"
+          help: "Indicate your current nationality"
+          choices:
+            french: "French"
+            eu: "European Union"
+            non_eu: "Outside European Union"
+          errors:
+            required: "Nationality is required"
+        birth_country:
+          label: "Country of birth"
+          placeholder: "France"
+          help: "Indicate the country where you were born"
+          errors:
+            required: "Country of birth is required"
+        birth_city:
+          label: "City of birth"
+          placeholder: "Paris"
+          help: "Indicate the city where you were born"
+          errors:
+            required: "City of birth is required"
+
+    step2:
+      title: "Address and residence"
+      subtitle: "Information about your place of residence"
+      description: "We need to know your current address"
+      address_info:
+        address:
+          label: "Address"
+          placeholder: "123 Republic Street"
+          help: "Enter your complete residential address"
+          errors:
+            required: "Address is required"
+            min_length: "Address must contain at least 5 characters"
+        postal_code:
+          label: "Postal code"
+          placeholder: "75001"
+          help: "Enter the postal code of your city of residence"
+          errors:
+            required: "Postal code is required"
+            invalid_format: "Postal code must be in French format (5 digits)"
+        city:
+          label: "City"
+          placeholder: "Paris"
+          help: "Indicate the city where you currently reside"
+          errors:
+            required: "City is required"
+        country:
+          label: "Country"
+          placeholder: "France"
+          errors:
+            required: "Country is required"
+
+    step3:
+      title: "Professional situation"
+      subtitle: "Information about your employment and income"
+      description: "This information helps us assess your repayment capacity"
+      professional_info:
+        employment_status:
+          label: "Professional status"
+          choices:
+            employee: "Employee"
+            self_employed: "Self-employed"
+            retired: "Retired"
+            unemployed: "Unemployed"
+            student: "Student"
+          errors:
+            required: "Professional status is required"
+        company_name:
+          label: "Employer name"
+          placeholder: "Your company name"
+          errors:
+            required: "Employer name is required"
+        monthly_income:
+          label: "Net monthly income"
+          placeholder: "3000"
+          help: "Enter your net monthly income in euros"
+          errors:
+            required: "Monthly income is required"
+            min_value: "Amount must be greater than 0"
+
+    step4:
+      title: "Banking information"
+      subtitle: "Your current bank"
+      description: "Information about your main bank account"
+      banking_info:
+        current_bank:
+          label: "Current bank"
+          placeholder: "Your bank name"
+          errors:
+            required: "Bank name is required"
+        account_duration:
+          label: "Account age"
+          choices:
+            less_than_1_year: "Less than one year"
+            between_1_and_3_years: "Between 1 and 3 years"
+            more_than_3_years: "More than 3 years"
+          errors:
+            required: "Account age is required"
+
+    credit_details:
+      title: "Credit details"
+      subtitle: "Information about your request"
+      description: "Specify the amount and duration of your loan"
+      credit_info:
+        amount:
+          label: "Desired amount"
+          placeholder: "Amount in euros"
+          help: "Enter the loan amount you wish to obtain"
+          errors:
+            required: "The amount is required"
+            min: "The minimum amount is €1,000"
+            max: "The maximum amount is €120,000"
+        duration:
+          label: "Desired duration"
+          placeholder: "Duration in months"
+          help: "Choose the loan duration"
+          errors:
+            required: "The duration is required"
+            min: "The minimum duration is 12 months"
+            max: "The maximum duration is 240 months"
+
+  navigation:
+    back: "Back"
+    next: "Next"
+    previous: "Previous"
+    submit: "Submit application"
+    title: "Loan application"
+    step_progress: "Step {current} of {total}"
+    continue: "Continue"
+
+  summary:
+    title: "Summary of your application"
+    sections:
+      personal: "Personal information"
+      address: "Address"
+      professional: "Professional situation"
+      banking: "Banking information"
+      credit: "Credit details"
+
+  common:
+    months: "months"
+
+  confirmation:
+    title: "Application submitted successfully"
+    subtitle: "We have received your loan application"
+    reference: "Your application reference"
+    reference_text: "Please keep this reference number carefully: {reference}"
+    summary:
+      title: "Summary of your application"
+      amount: "Requested amount: {amount} €"
+      duration: "Duration: {duration} months"
+      monthly_payment: "Estimated monthly payment: {payment} €"
+    next_steps:
+      title: "Next steps"
+      step1:
+        title: "Application received"
+        description: "Your application has been registered and is being processed"
+        time: "Now"
+      step2:
+        title: "Review of your file"
+        description: "Our experts are analyzing your application"
+        time: "Within 24h"
+      step3:
+        title: "Contact"
+        description: "An advisor will contact you to finalize your file"
+        time: "Within 48h"
+      step4:
+        title: "Contract finalization"
+        description: "Signature and implementation of your loan"
+        time: "Within 7 days"
+
+  actions:
+    new_simulation: "New simulation"
+    print: "Print"
+
+  forms:
+    personal_info:
+      title: "Personal information"
+    address_info:
+      title: "Address"
+    professional_info:
+      title: "Professional situation"
+    banking_info:
+      title: "Banking information"
+    bank_validation:
+      title: "Bank validation"
+    consents:
+      title: "Consents"
+
+navigation:
+  home: "Home"
+  simulation: "Simulation"
+  application: "Application"
+  about: "About"
+  contact: "Contact"
+  language: "English"
+
+buttons:
+  next: "Next"
+  previous: "Previous"
+  submit: "Submit"
+  cancel: "Cancel"
+  back_home: "Back to home"
+  start_application: "Start application"
+
+general:
+  loading: "Loading..."
+  optional: "Optional"
+  required: "Required"
+  "True": "Yes"
+  "False": "No"

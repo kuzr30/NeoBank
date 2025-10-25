@@ -1,0 +1,17 @@
+# ENGLISH TRANSLATION - Translated from French
+# Credit application service translation file
+# Domain: credit_application_service
+# Language: English (en)
+
+credit_application_service:
+  validation_errors:
+    age_minor: "The borrower must be of legal age"
+    age_maximum: "The maximum age for a credit is 75 years"
+    debt_ratio_exceeded: "The debt ratio must not exceed 33% ({debtRatio}% calculated)"
+    minimum_income: "The minimum monthly income required is 1000€"
+    employment_required: "Stable employment is required to obtain credit"
+    
+  eligibility:
+    eligible: "Eligible for credit"
+    not_eligible: "Not eligible for credit"
+    debt_ratio_calculated: "Debt ratio calculated: {ratio}%"

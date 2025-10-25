@@ -1,0 +1,105 @@
+credit_professionnel:
+  page:
+    title: "Crédit Professionnel"
+    description: "Développez votre activité avec notre crédit professionnel. Solutions adaptées aux besoins des entreprises et professionnels."
+
+  hero:
+    title: "Crédit Professionnel"
+    subtitle: "Développez votre activité"
+    values:
+      taux: "{rate}%"
+      montant: "500 000€"
+      duree: "15 ans"
+
+  section_1:
+    title: "Qu'est-ce qu'un crédit professionnel ?"
+    content:
+      paragraph_1: "Le crédit professionnel vous accompagne dans le développement de votre activité : financement d'équipements, véhicules utilitaires, travaux de locaux, besoin en fonds de roulement ou acquisition de parts sociales."
+      paragraph_2: "Solution flexible adaptée aux professionnels, artisans, commerçants et PME, avec des conditions préférentielles pour soutenir votre croissance."
+
+  features:
+    montant: "Jusqu'à 500 000€"
+    montant_detail: "Selon le projet professionnel"
+    duree: "De 2 à 15 ans"
+    duree_detail: "Durée adaptée à l'investissement"
+    taux: "À partir de {rate}% TAEG*"
+    taux_detail: "Taux préférentiel professionnel"
+    garantie: "Hypothèque ou nantissement"
+    garantie_detail: "Selon le montant"
+
+  advantages:
+    taux_preferentiel:
+      title: "Taux préférentiel :"
+      text: "Conditions avantageuses pour les professionnels"
+    accompagnement:
+      title: "Accompagnement :"
+      text: "Conseiller dédié aux professionnels"
+    souplesse:
+      title: "Souplesse :"
+      text: "Modulation des échéances selon l'activité"
+    deblocage_rapide:
+      title: "Déblocage rapide :"
+      text: "Fonds disponibles sous 15 jours"
+    deductibilite:
+      title: "Déductibilité :"
+      text: "Intérêts déductibles fiscalement"
+
+  requirements:
+    conditions_activite:
+      title: "Conditions d'activité"
+      items:
+        creation: "Entreprise créée depuis plus de 2 ans"
+        declaration: "Activité déclarée et en règle"
+        chiffre_affaires: "Chiffre d'affaires régulier"
+        difficultes: "Pas de difficultés financières"
+    criteres_financiers:
+      title: "Critères financiers"
+      items:
+        capacite: "Capacité de remboursement démontrée"
+        fonds_propres: "Fonds propres suffisants"
+        apport: "Apport personnel minimum 20%"
+        garanties: "Garanties à proposer"
+
+  documents:
+    title: "Documents nécessaires"
+    entreprise:
+      title: "Documents de l'entreprise"
+      kbis: "Kbis de moins de 3 mois"
+      statuts: "Statuts de la société"
+      bilans: "3 derniers bilans comptables"
+      liasse_fiscale: "Liasse fiscale complète"
+      situation_banque: "Relevés bancaires des 6 derniers mois"
+    dirigeant:
+      title: "Documents du dirigeant"
+      identite: "Pièce d'identité du dirigeant"
+      revenus: "Justificatifs de revenus"
+      patrimoine: "Déclaration de patrimoine"
+      releves: "Relevés de comptes personnels"
+    projet:
+      title: "Projet d'investissement"
+      plan_financement: "Plan de financement détaillé"
+      devis: "Devis des fournisseurs"
+      business_plan: "Business plan sur 3 ans"
+      garanties: "Garanties proposées"
+
+  legal:
+    title: "Informations légales importantes"
+    taeg:
+      title: "TAEG :"
+      text: "Exemple représentatif : pour un crédit professionnel de 100 000€ sur 10 ans au TAEG de 3,8%, vous remboursez 120 mensualités de 1 017€, soit un montant total de 122 040€ (coût du crédit : 22 040€)."
+    garanties:
+      title: "Garanties :"
+      text: "Hypothèque, nantissement ou caution selon le montant et la durée."
+    assurance:
+      title: "Assurance :"
+      text: "Assurance homme-clé recommandée pour sécuriser le prêt."
+    fiscalite:
+      title: "Fiscalité :"
+      text: "Intérêts d'emprunt déductibles du résultat imposable."
+    remboursement:
+      title: "Remboursement :"
+      text: "Possibilité de modulation selon la saisonnalité de l'activité."
+
+  cta:
+    title: "Dynamisez votre entreprise"
+    subtitle: "Financez vos projets professionnels avec notre crédit dédié"

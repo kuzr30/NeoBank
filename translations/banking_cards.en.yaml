@@ -1,0 +1,362 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: banking_cards.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+banking_cards:
+  # Management section
+  management:
+    # Header section
+    header:
+      title: "My Bank Cards"
+      subtitle: "Manage your cards"
+      last_update: "Last update"
+      request_card: "Request a card"
+
+    # Card details
+    cards:
+      card_active: "Active card"
+      checking_account: "Checking Account"
+      visa_classic: "Visa Classic Card"
+      mastercard_gold: "Mastercard Gold"
+
+    # Card actions
+    actions:
+      view_details: "View details"
+      settings: "Settings"
+      block_card: "Block card"
+
+    # Recent transactions
+    transactions:
+      title: "Recent card transactions"
+      all_cards: "All cards"
+      
+    # Transaction table
+    table:
+      date: "Date"
+      card: "Card"
+      merchant: "Merchant"
+      amount: "Amount"
+      status: "Status"
+      actions: "Actions"
+
+    # Transaction details
+    merchant:
+      online_purchase: "Online purchase"
+
+    # Status
+    status:
+      validated: "Validated"
+      pending: "Pending"
+      cancelled: "Cancelled"
+
+    # Pagination
+    pagination:
+      previous: "Previous"
+      next: "Next"
+      page_info: "Page %d of %d (%d transactions)"
+
+  # Meta tags
+  meta:
+    credit_card:
+      title: "%company_name% Credit Card"
+      description: "Enjoy our credit cards with exclusive benefits, loyalty programs and included insurance."
+  
+  # Section Hero
+  hero:
+    title: "Credit Card"
+    subtitle: "Discover our premium credit cards with exclusive benefits. Cashback up to 5%, free travel, included insurance and much more."
+    
+    features:
+      cashback:
+        title: "Cashback up to 5%"
+      insurance:
+        title: "Travel insurance included"
+      worldwide:
+        title: "Accepted worldwide"
+    
+    actions:
+      choose_card: "Choose my card"
+      apply: "Apply"
+    
+    card:
+      type: "PLATINUM"
+      number: "**** **** **** 8742"
+      holder_label: "CARDHOLDER"
+      holder_name: "MARIE DUBOIS"
+      expiry_label: "EXP."
+      expiry_date: "12/28"
+    
+    stats:
+      clients: "500K+"
+      clients_label: "Satisfied customers"
+      rating: "4.9★"
+      rating_label: "Average rating"
+      fees: "€0"
+      fees_label: "First year fees"
+
+  # Section Types de cartes
+  card_types:
+    title: "Choose the card that suits you"
+    subtitle: "Three card levels designed to adapt to your lifestyle and financial needs. Each card offers exclusive benefits."
+    
+    classic:
+      badge: "Perfect for beginners"
+      name: "%company_name% Classic"
+      price: "€0"
+      period: "per month"
+      card_type: "Classic"
+      card_number: "•••• •••• •••• 1234"
+      features:
+        - "1% cashback on all your purchases"
+        - "Purchase insurance included"
+        - "Contactless payments"
+        - "Management from mobile app"
+      cta: "Request this card"
+    
+    gold:
+      badge: "Most popular"
+      name: "%company_name% Gold"
+      price: "€4"
+      period: "per month"
+      card_type: "Gold"
+      card_number: "•••• •••• •••• 5678"
+      features:
+        - "3% cashback on all your purchases"
+        - "International travel insurance"
+        - "VIP airport lounge access"
+        - "24/7 concierge service"
+        - "Free withdrawals worldwide"
+      cta: "Request this card"
+    
+    platinum:
+      badge: "Exclusive premium"
+      name: "%company_name% Platinum"
+      price: "€15"
+      period: "per month"
+      card_type: "Platinum"
+      card_number: "•••• •••• •••• 9012"
+      features:
+        - "5% cashback on all your purchases"
+        - "Premium worldwide insurance"
+        - "Unlimited VIP lounge access"
+        - "Premium 24/7 concierge service"
+        - "Dedicated account manager"
+        - "Unlimited ceiling"
+      cta: "Request this card"
+    
+    comparison:
+      title: "Comparison table"
+      
+      table:
+        headers:
+          features: "Benefits"
+          classic: "Classic"
+          gold: "Gold"
+          platinum: "Platinum"
+        
+        rows:
+          cashback_rate:
+            label: "Cashback rate"
+            classic: "1%"
+            gold: "3%"
+            platinum: "5%"
+          
+          travel_insurance:
+            label: "Travel insurance"
+            gold: true
+            platinum: true
+          
+          vip_lounges:
+            label: "VIP lounges"
+            gold: "2 access/year"
+            platinum: "Unlimited"
+          
+          concierge:
+            label: "Concierge service"
+            gold: true
+            platinum: "Premium"
+          
+          monthly_limit:
+            label: "Monthly limit"
+            classic: "€5,000"
+            gold: "€15,000"
+            platinum: "Unlimited"
+
+  # Section Avantages
+  benefits:
+    title: "Exclusive benefits and services"
+    subtitle: "Enjoy exceptional benefits designed to enrich your daily life and support you in all your projects."
+    
+    cashback:
+      title: "Cashback on all your purchases"
+      description: "Earn up to 5% cashback on all your daily purchases. The more you use your card, the more you save!"
+      stats:
+        average_yearly: "€2,847"
+        average_yearly_label: "Average cashback/year"
+        payment_time: "15 days"
+        payment_time_label: "Cashback payment"
+      cta: "Request my card"
+    
+    features:
+      insurance:
+        title: "Insurance included"
+        description: "Protected up to €500,000 without additional procedures."
+      
+      vip_lounges:
+        title: "VIP airport lounges"
+        description: "Free access to over 1000 VIP lounges worldwide."
+      
+      concierge:
+        title: "24/7 concierge service"
+        description: "Premium service available 24/7 for all your needs."
+      
+      worldwide_acceptance:
+        title: "0% commission abroad"
+        description: "Pay anywhere without commission with the best rates."
+      
+      security:
+        title: "Enhanced security"
+        description: "Instant notifications and anti-fraud protection."
+      
+      exclusive_offers:
+        title: "Exclusive offers"
+        description: "Discounts at your favorite premium partners."
+
+  # Section Application/Accès client
+  application:
+    title: "Access your customer area"
+    subtitle: "Manage your cards, view your transactions, and make requests directly online"
+    
+    features:
+      new_card:
+        title: "Request a new card"
+        description: "Order your Platinum, Gold or Classic card directly from your personal area"
+      
+      manage_cards:
+        title: "Manage your cards"
+        description: "Activate, block, configure limits and manage all your card settings"
+      
+      track_expenses:
+        title: "Track your expenses"
+        description: "View your transactions in real time and analyze your spending habits"
+      
+      notifications:
+        title: "Personalized notifications"
+        description: "Receive alerts for each transaction and stay informed about your card activity"
+    
+    actions:
+      login: "Log in"
+      register: "Create account"
+    
+    demo:
+      title: "Interface preview"
+      subtitle: "Discover the simplicity of our customer area"
+      nav:
+        my_cards: "My cards"
+        transactions: "Transactions"
+        settings: "Settings"
+      card_status:
+        active: "Active"
+        blocked: "Blocked"
+        expired: "Expired"
+      card_actions:
+        block: "Block"
+        limits: "Limits"
+        details: "Details"
+      stats:
+        monthly_spending: "This month's spending"
+        monthly_spending_value: "€2,847.50"
+        cashback_earned: "Cashback earned"
+        cashback_earned_value: "€142.38"
+    
+    help:
+      title: "Need help?"
+      description: "Our support team is available to assist you with using your customer area."
+      contact:
+        chat_label: "Live chat"
+        chat_hours: "24/7"
+        phone_label: "Phone support"
+        phone_number: "01 47 12 34 56"
+      help_center: "Help center"
+    
+    security:
+      title: "Guaranteed security"
+      features:
+        ssl: "256-bit SSL encryption"
+        two_factor: "Two-factor authentication"
+        monitoring: "24/7 monitoring"
+        gdpr: "GDPR protected data"
+
+  # Section Candidature
+  eligibility:
+    title: "Eligibility conditions"
+    subtitle: "Check if you meet the requirements to get your credit card"
+    
+    requirements:
+      age: "Be at least 18 years old"
+      residence: "Reside in metropolitan France"
+      income: "Justify regular income"
+      bank_account: "Have a %company_name% account"
+    
+    documents:
+      title: "Required documents"
+      id_card: "Valid ID card"
+      income_proof: "Income proof (last 3 months)"
+      address_proof: "Recent proof of address"
+      bank_statement: "Bank statements (last 3 months)"
+    
+    process:
+      title: "Application process"
+      steps:
+        step1:
+          title: "Form completion"
+          description: "Complete your online application in 5 minutes"
+          duration: "5 min"
+        
+        step2:
+          title: "Document verification"
+          description: "Our teams verify your documents"
+          duration: "24-48h"
+        
+        step3:
+          title: "Credit decision"
+          description: "Immediate response or within 2 business days"
+          duration: "Immediate"
+        
+        step4:
+          title: "Card delivery"
+          description: "Secure delivery to your home"
+          duration: "3-5 days"
+    
+    cta: "Start my application"
+
+  # Section FAQ
+  faq:
+    title: "Frequently asked questions"
+    subtitle: "Quickly find answers to your questions about our credit cards"
+    
+    questions:
+      q1:
+        question: "How does cashback work?"
+        answer: "Cashback is automatically credited to your account on the 15th of each month. The percentage varies according to your card: 1% (Classic), 3% (Gold), 5% (Platinum)."
+      
+      q2:
+        question: "Can I use my card abroad?"
+        answer: "Yes, all our cards are accepted worldwide. No additional fees are applied in the Euro zone and preferential rates apply outside the Euro zone."
+      
+      q3:
+        question: "How do I activate my new card?"
+        answer: "Activate your card directly from the %company_name% mobile app or call the number indicated in your accompanying letter."
+      
+      q4:
+        question: "What to do in case of loss or theft?"
+        answer: "Immediately contact our customer service at 3636 (24/7) or block your card from the mobile app."
+      
+      q5:
+        question: "How do I change my PIN code?"
+        answer: "You can change your PIN code from the online customer area or at any %company_name% ATM."
+      
+      q6:
+        question: "What insurance is included?"
+        answer: "Depending on your card: purchase insurance, travel, cancellation, repatriation. Full details available in your general terms and conditions."

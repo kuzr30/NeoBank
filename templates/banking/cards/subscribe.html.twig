@@ -1,0 +1,260 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Demander une nouvelle carte{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .card-type-option {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .card-type-option:hover {
+            border-color: #007bff;
+            box-shadow: 0 4px 8px rgba(0,123,255,0.2);
+        }
+        .card-type-option.selected {
+            border-color: #007bff;
+            background-color: #f8f9ff;
+        }
+        .brand-logo {
+            width: 60px;
+            height: auto;
+        }
+        .card-preview {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            min-height: 200px;
+            position: relative;
+        }
+        .card-preview.visa {
+            background: linear-gradient(135deg, #1a365d 0%, #2d5aa0 100%);
+        }
+        .card-preview.mastercard {
+            background: linear-gradient(135deg, #eb4d4b 0%, #6c5ce7 100%);
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="mb-0">
+                        <i class="fas fa-credit-card"></i> {{ tp('card_subscription.subscribe.title', [], 'card_subscription') }}
+                    </h2>
+                    <small>{{ tp('card_subscription.subscribe.subtitle', [], 'card_subscription') }}</small>
+                </div>
+                
+                <div class="card-body">
+                    {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+                    
+                    <!-- Sélection du compte -->
+                    <div class="mb-4">
+                        <h5><i class="fas fa-university"></i> {{ tp('card_subscription.subscribe.steps.account', [], 'card_subscription') }}</h5>
+                        {{ form_row(form.account) }}
+                    </div>
+                    
+                    <hr>
+                    
+                    <!-- Sélection de la marque -->
+                    <div class="mb-4">
+                        <h5><i class="fas fa-tags"></i> {{ tp('card_subscription.subscribe.steps.brand', [], 'card_subscription') }}</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card-type-option" data-brand="visa">
+                                    <div class="text-center">
+                                        <i class="fab fa-cc-visa fa-3x text-primary mb-3"></i>
+                                        <h6>{{ tp('card_subscription.subscribe.brands.visa.title', [], 'card_subscription') }}</h6>
+                                        <small class="text-muted">{{ tp('card_subscription.subscribe.brands.visa.description', [], 'card_subscription') }}</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-type-option" data-brand="mastercard">
+                                    <div class="text-center">
+                                        <i class="fab fa-cc-mastercard fa-3x text-warning mb-3"></i>
+                                        <h6>{{ tp('card_subscription.subscribe.brands.mastercard.title', [], 'card_subscription') }}</h6>
+                                        <small class="text-muted">{{ tp('card_subscription.subscribe.brands.mastercard.description', [], 'card_subscription') }}</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{ form_row(form.cardBrand, {'attr': {'style': 'display: none;'}}) }}
+                    </div>
+                    
+                    <hr>
+                    
+                    <!-- Sélection du type -->
+                    <div class="mb-4">
+                        <h5><i class="fas fa-star"></i> {{ tp('card_subscription.subscribe.steps.service_level', [], 'card_subscription') }}</h5>
+                        
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card-type-option" data-type="classic">
+                                    <div class="text-center">
+                                        <i class="fas fa-credit-card fa-2x text-secondary mb-2"></i>
+                                        <h6>{{ tp('card_subscription.subscribe.card_types.classic.title', [], 'card_subscription') }}</h6>
+                                        <ul class="list-unstyled small text-start">
+                                            {% for feature in tp('card_subscription.subscribe.card_types.classic.features', [], 'card_subscription') %}
+                                                <li><i class="fas fa-check text-success"></i> {{ feature }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                        <strong class="text-primary">{{ tp('card_subscription.subscribe.card_types.classic.price', [], 'card_subscription') }}</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card-type-option" data-type="gold">
+                                    <div class="text-center">
+                                        <i class="fas fa-credit-card fa-2x text-warning mb-2"></i>
+                                        <h6>{{ tp('card_subscription.subscribe.card_types.gold.title', [], 'card_subscription') }}</h6>
+                                        <ul class="list-unstyled small text-start">
+                                            <li><i class="fas fa-check text-success"></i> Tous les services Classic</li>
+                                            <li><i class="fas fa-check text-success"></i> Assurance voyage</li>
+                                            <li><i class="fas fa-check text-success"></i> Assistance 24/7</li>
+                                            <li><i class="fas fa-check text-success"></i> Plafonds élevés</li>
+                                        </ul>
+                                        <strong class="text-warning">5€/mois</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card-type-option" data-type="platinum">
+                                    <div class="text-center">
+                                        <i class="fas fa-credit-card fa-2x text-dark mb-2"></i>
+                                        <h6>PLATINUM</h6>
+                                        <ul class="list-unstyled small text-start">
+                                            <li><i class="fas fa-check text-success"></i> Tous les services Gold</li>
+                                            <li><i class="fas fa-check text-success"></i> Conciergerie</li>
+                                            <li><i class="fas fa-check text-success"></i> Accès salons aéroports</li>
+                                            <li><i class="fas fa-check text-success"></i> Cashback premium</li>
+                                        </ul>
+                                        <strong class="text-dark">15€/mois</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{ form_row(form.cardType, {'attr': {'style': 'display: none;'}}) }}
+                    </div>
+                    
+                    <!-- Aperçu de la carte -->
+                    <div class="card-preview" id="cardPreview" style="display: none;">
+                        <div class="row align-items-center h-100">
+                            <div class="col-8">
+                                <h4 id="previewBrand">VOTRE CARTE</h4>
+                                <div style="font-family: 'Courier New', monospace; font-size: 1.3em; letter-spacing: 3px; margin: 20px 0;">
+                                    •••• •••• •••• ••••
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <small>EXPIRE FIN</small><br>
+                                        <strong>{{ "now"|date_modify("+3 years")|date("m/Y") }}</strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <small>TYPE</small><br>
+                                        <strong id="previewType">CLASSIC</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 text-end">
+                                <i id="previewIcon" class="fab fa-cc-visa fa-4x"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <!-- Motif optionnel -->
+                    <div class="mb-4">
+                        {{ form_row(form.reason) }}
+                    </div>
+                    
+                    <!-- Conditions -->
+                    <div class="alert alert-info">
+                        <h6><i class="fas fa-info-circle"></i> Informations importantes</h6>
+                        <ul class="mb-0">
+                            <li>Votre demande sera examinée sous 2-3 jours ouvrables</li>
+                            <li>Vous recevrez un email de confirmation avec le numéro de suivi</li>
+                            <li>La carte sera livrée sous 5-7 jours ouvrables après approbation</li>
+                            <li>L'activation se fait par téléphone ou dans notre app mobile</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Boutons -->
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="{{ path('app_card_subscription_index') }}" class="btn btn-outline-secondary">
+                            <i class="fas fa-arrow-left"></i> Retour
+                        </a>
+                        {{ form_widget(form.submit) }}
+                    </div>
+                    
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const brandOptions = document.querySelectorAll('[data-brand]');
+    const typeOptions = document.querySelectorAll('[data-type]');
+    const brandField = document.querySelector('#card_subscription_cardBrand');
+    const typeField = document.querySelector('#card_subscription_cardType');
+    const preview = document.getElementById('cardPreview');
+    const previewBrand = document.getElementById('previewBrand');
+    const previewType = document.getElementById('previewType');
+    const previewIcon = document.getElementById('previewIcon');
+    
+    // Gestion sélection marque
+    brandOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            brandOptions.forEach(o => o.classList.remove('selected'));
+            this.classList.add('selected');
+            const brand = this.dataset.brand;
+            brandField.value = brand;
+            updatePreview();
+        });
+    });
+    
+    // Gestion sélection type
+    typeOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            typeOptions.forEach(o => o.classList.remove('selected'));
+            this.classList.add('selected');
+            const type = this.dataset.type;
+            typeField.value = type;
+            updatePreview();
+        });
+    });
+    
+    function updatePreview() {
+        const selectedBrand = brandField.value;
+        const selectedType = typeField.value;
+        
+        if (selectedBrand && selectedType) {
+            preview.style.display = 'block';
+            preview.className = 'card-preview ' + selectedBrand;
+            previewBrand.textContent = selectedBrand.toUpperCase();
+            previewType.textContent = selectedType.toUpperCase();
+            
+            if (selectedBrand === 'visa') {
+                previewIcon.className = 'fab fa-cc-visa fa-4x';
+            } else if (selectedBrand === 'mastercard') {
+                previewIcon.className = 'fab fa-cc-mastercard fa-4x';
+            }
+        }
+    }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,43 @@
+# ENGLISH TRANSLATION - Translated from French
+# Bank card conditions translation file
+# Domain: card_conditions
+# Language: English (en)
+
+card_conditions:
+  # General information
+  title: "Card Terms and Conditions"
+  subtitle: "Detailed conditions for using your bank card"
+  
+  # Classic card conditions
+  classic:
+    title: "Classic Card Conditions"
+    annual_fee: "Free first year, then 24€/year"
+    daily_limit: "Daily withdrawal limit: 500€"
+    monthly_limit: "Monthly payment limit: 2,000€"
+    foreign_fees: "Foreign transaction fee: 2%"
+    
+  # Gold card conditions  
+  gold:
+    title: "Gold Card Conditions"
+    annual_fee: "60€/year"
+    daily_limit: "Daily withdrawal limit: 1,000€"
+    monthly_limit: "Monthly payment limit: 5,000€"
+    foreign_fees: "Foreign transaction fee: 1.5%"
+    insurance: "Travel insurance included"
+    
+  # Platinum card conditions
+  platinum:
+    title: "Platinum Card Conditions"
+    annual_fee: "180€/year"
+    daily_limit: "Daily withdrawal limit: 2,500€"
+    monthly_limit: "Monthly payment limit: 10,000€"
+    foreign_fees: "No foreign transaction fees"
+    premium_services: "Premium concierge services included"
+    
+  # General terms
+  general:
+    validity: "Card validity: 3 years"
+    replacement: "Replacement in case of loss/theft: 15€"
+    opposition: "Card blocking: Free 24/7"
+    contactless: "Contactless payments up to 50€"
+

@@ -1,0 +1,119 @@
+# Archivo de traducción para CardConditionEnum
+# Dominio: CardConditionEnum
+# Idioma: Español (es)
+
+CardConditionEnum:
+  # Types de cartes - Labels
+  labels:
+    classic: "Tarjeta Classic"
+    gold: "Tarjeta Gold"
+    platinum: "Tarjeta Platinum"
+  
+  # Types de cartes - Descriptions marketing
+  descriptions:
+    classic: "Tarjeta ideal para empezar con servicios esenciales"
+    gold: "Tarjeta premium con seguros y cashback incluidos"
+    platinum: "Tarjeta de prestigio con servicios exclusivos y conciergerie"
+  
+  # Informations générales
+  info:
+    title: "Gamas de tarjetas bancarias"
+    subtitle: "Servicios adaptados a cada perfil"
+    
+  # Frais annuels
+  annual_fees:
+    classic: "Gratuita"
+    gold: "60€/año"
+    platinum: "180€/año"
+    
+  # Conditions détaillées
+  conditions:
+    classic:
+      title: "CONDICIONES PARTICULARES - TARJETA CLASSIC"
+      pricing:
+        title: "TARIFAS"
+        annual_fee: "Cuota anual: Gratuita el primer año, luego 24€/año"
+        withdrawal_eurozone: "Retirada en zona euro: Gratuita (3 al mes), luego 1€"
+        foreign_payment: "Pago en divisas: 2% de comisión"
+      limits:
+        title: "LÍMITES"
+        daily_withdrawal: "Retirada diaria: 500€"
+        monthly_payment: "Pago mensual: 2.000€"
+      services:
+        title: "SERVICIOS INCLUIDOS"
+        insurance: "Seguro de compras: 500€"
+        support: "Asistencia telefónica 24h/7d"
+        
+    gold:
+      title: "CONDICIONES PARTICULARES - TARJETA GOLD"
+      pricing:
+        title: "TARIFAS"
+        annual_fee: "Cuota anual: 60€"
+        withdrawal_worldwide: "Retiradas gratuitas en todo el mundo"
+        payment_eurozone: "Pagos sin comisión en zona euro"
+      limits:
+        title: "LÍMITES"
+        daily_withdrawal: "Retirada diaria: 1.000€"
+        monthly_payment: "Pago mensual: 5.000€"
+        revolving_credit: "Crédito renovable: 2.000€"
+      services:
+        title: "SERVICIOS INCLUIDOS"
+        travel_insurance: "Seguro de viaje internacional"
+        cashback: "Cashback 1% en todas las compras"
+        concierge: "Conciergerie telefónica"
+        purchase_insurance: "Seguro de compras: 2.000€"
+        
+    platinum:
+      title: "CONDICIONES PARTICULARES - TARJETA PLATINUM"
+      pricing:
+        title: "TARIFAS"
+        annual_fee: "Cuota anual: 180€"
+        global_services: "Todos los servicios gratuitos en todo el mundo"
+        exchange_rates: "Tipos de cambio preferenciales"
+      limits:
+        title: "LÍMITES"
+        daily_withdrawal: "Retirada diaria: 2.500€"
+        monthly_payment: "Pago mensual: 10.000€"
+        revolving_credit: "Crédito renovable: 5.000€"
+      services:
+        title: "SERVICIOS PREMIUM"
+        premium_travel: "Seguro de viaje premium + familia"
+        premium_cashback: "Cashback 2% en todas las compras"
+        vip_access: "Acceso salas VIP aeropuertos"
+        premium_concierge: "Conciergerie premium 24h/24"
+        premium_insurance: "Seguro de compras: 5.000€"
+        ticket_service: "Servicio de recompra de billetes de avión"
+  
+  # Limites par type
+  limits:
+    classic:
+      daily: "500€"
+      monthly: "2.000€"
+    gold:
+      daily: "1.000€"
+      monthly: "5.000€"
+      credit: "2.000€"
+    platinum:
+      daily: "2.500€"
+      monthly: "10.000€"
+      credit: "5.000€"
+      
+  # Messages pour les formulaires
+  form:
+    placeholder: "Elija su gama de tarjeta"
+    help: "La gama determina los servicios y límites de su tarjeta"
+    
+  # Avantages principaux
+  key_benefits:
+    classic:
+      - "Tarjeta sin comisiones el primer año"
+      - "Servicios bancarios esenciales"
+      - "Asistencia 24h/7d"
+    gold:
+      - "Retiradas gratuitas en todo el mundo"
+      - "Cashback en sus compras"
+      - "Seguro de viaje incluido"
+    platinum:
+      - "Servicios premium exclusivos"
+      - "Conciergerie dedicada"
+      - "Acceso salas VIP"

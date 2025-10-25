@@ -1,0 +1,21 @@
+card_opposition:
+  # Noodpagina
+  emergency:
+    title: "Noodbetwisting"
+    subtitle: "Blokkeer uw kaart onmiddellijk"
+    select_card: "Selecteer uw kaart:"
+    reason_label: "Reden:"
+    submit_button: "KAART ONMIDDELLIJK BLOKKEREN"
+    
+  # Betwisting aanmaken
+  create:
+    title: "Betwistingsverklaring"
+    form_subtitle: "Formulier voor betwisting van bankkaart"
+    
+  # Index
+  index:
+    title: "Betwistingsbeheer"
+    active_cards: "Actieve kaarten"
+    opposition_history: "Betwistingsgeschiedenis"
+    no_active_cards: "Geen actieve kaarten"
+    no_opposition_history: "Geen betwistingsgeschiedenis"

@@ -1,0 +1,106 @@
+home_loan:
+  page:
+    title: "Prêt Accession"
+    description: "Devenez propriétaire avec notre prêt accession. Financez votre résidence principale dans les meilleures conditions."
+  
+  hero:
+    class: "credit-detail-hero--home-loan"
+    taux: "3,5%"
+    montant: "400 000€"
+    duree: "25 ans"
+    title: "Prêt Accession"
+    subtitle: "Devenez propriétaire de votre résidence principale"
+  
+  section_1:
+    title: "Qu'est-ce qu'un prêt accession ?"
+    content:
+      paragraph_1: "Le prêt accession vous permet de devenir propriétaire de votre résidence principale. Il finance l'acquisition d'un logement neuf ou ancien, avec ou sans travaux de rénovation."
+      paragraph_2: "Crédit immobilier à long terme avec des conditions avantageuses, il s'accompagne de garanties solides et peut être complété par des prêts aidés selon votre situation."
+  
+  features:
+    title: "Caractéristiques du prêt"
+    montant:
+      value: "Jusqu'à 400 000€"
+      detail: "Selon la valeur du bien"
+    duree:
+      value: "Jusqu'à 25 ans"
+      detail: "Remboursement à long terme"
+    taux:
+      value: "À partir de {rate}% TAEG*"
+      detail: "Taux fixe avantageux"
+    garantie:
+      value: "Hypothèque"
+      detail: "Sur le bien financé"
+  
+  section_3:
+    title: "Avantages du prêt accession"
+    advantages:
+      taux_fixe:
+        title: "Taux fixe"
+        description: "Sécurité avec un taux invariable sur toute la durée"
+      duree_longue:
+        title: "Durée longue"
+        description: "Mensualités réduites avec un étalement jusqu'à 25 ans"
+      prets_aides:
+        title: "Prêts aidés"
+        description: "Cumul possible avec PTZ, prêt Action Logement..."
+      modulation:
+        title: "Modulation"
+        description: "Adaptation des échéances selon l'évolution de vos revenus"
+      transfert:
+        title: "Transfert possible"
+        description: "En cas de revente et rachat dans les 2 ans"
+  
+  section_4:
+    title: "Conditions d'éligibilité"
+    emprunteur:
+      title: "Conditions emprunteur"
+      items:
+        premiere_acquisition: "Première acquisition ou non propriétaire depuis 2 ans"
+        revenus: "Revenus stables et suffisants"
+        apport: "Apport personnel minimum 10%"
+        endettement: "Taux d'endettement inférieur à 35%"
+    bien:
+      title: "Conditions du bien"
+      items:
+        residence_principale: "Résidence principale obligatoire"
+        normes: "Respect des normes de construction"
+        diagnostic: "Diagnostic énergétique favorable"
+        assurance_habitation: "Assurance habitation souscrite"
+  
+  section_5:
+    title: "Documents nécessaires"
+    dossier_personnel:
+      title: "Dossier personnel"
+      items:
+        identite: "Pièces d'identité"
+        revenus: "Justificatifs de revenus (3 mois)"
+        impots: "Avis d'imposition"
+        comptes: "Relevés de comptes"
+    projet_immobilier:
+      title: "Projet immobilier"
+      items:
+        compromis: "Compromis de vente signé"
+        financement: "Plan de financement"
+        diagnostics: "Diagnostics immobiliers"
+        assurance_emprunteur: "Assurance emprunteur"
+    apport_garanties:
+      title: "Apport et garanties"
+      items:
+        justificatifs_apport: "Justificatifs d'apport personnel"
+        evaluation: "Évaluation du bien"
+        acte_notarie: "Acte notarié préliminaire"
+        conditions_suspensives: "Conditions suspensives"
+  
+  legal:
+    details:
+      title: "Informations légales importantes"
+      taeg: "<strong>*TAEG :</strong> Exemple représentatif : pour un prêt accession de 250 000€ sur 20 ans au TAEG de 3,5%, vous remboursez 240 mensualités de 1 448€, soit un montant total de 347 520€ (coût du crédit : 97 520€)."
+      garantie: "<strong>Garantie :</strong> Hypothèque de 1er rang sur le bien financé, inscription aux hypothèques."
+      assurance: "<strong>Assurance :</strong> Assurance décès-invalidité obligatoire, chômage en option."
+      condition_suspensive: "<strong>Condition suspensive :</strong> Clause d'obtention du prêt dans le compromis de vente obligatoire."
+      delai_reflexion: "<strong>Délai de réflexion :</strong> 10 jours minimum avant acceptation définitive de l'offre de prêt."
+  
+  cta:
+    title: "Concrétisez votre projet immobilier"
+    subtitle: "Devenez propriétaire avec notre prêt accession avantageux"

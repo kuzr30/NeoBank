@@ -1,0 +1,12 @@
+transaction_validator_service:
+  exceptions:
+    positive_amount_required: "Der Transaktionsbetrag muss positiv sein."
+    
+  user_messages:
+    empty_account_debit: "Ihr Konto hat ein Guthaben von 0 €. Bitte füllen Sie Ihr Konto auf, bevor Sie diese Operation durchführen."
+    insufficient_funds: "Unzureichendes Guthaben. Ihr aktuelles Guthaben beträgt {currentBalance} € und Sie versuchen {amount} € zu belasten."
+    
+  log_messages:
+    empty_account_attempt: "Versuch der Belastung eines leeren Kontos"
+    negative_balance_attempt: "Versuch der Belastung mit negativem Saldo"
+    debit_validation_success: "Belastungsvalidierung erfolgreich"

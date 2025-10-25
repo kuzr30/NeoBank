@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouveau contrat signé</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .alert-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .alert-icon {
+            font-size: 2rem;
+            color: #856404;
+        }
+        
+        .info-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: #4a5568;
+        }
+        
+        .info-value {
+            color: #2d3748;
+        }
+        
+        .action-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 10px 10px 10px 0;
+            transition: background-color 0.2s ease;
+        }
+        
+        .action-button:hover {
+            background: #5a67d8;
+        }
+        
+        .action-button.secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        
+        .action-button.secondary:hover {
+            background: #cbd5e0;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .signature-info {
+            background: #e6fffa;
+            border: 1px solid #9ae6b4;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .priority-high {
+            background: #fed7d7;
+            border-color: #feb2b2;
+            color: #c53030;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+            
+            .action-button {
+                display: block;
+                text-align: center;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏦 SEDEF BANK - Administration</h1>
+            <h2>Nouveau contrat signé</h2>
+        </div>
+        
+        <div class="content">
+            <div class="alert-box priority-high">
+                <span class="alert-icon">🚨</span>
+                <div>
+                    <strong>Action requise :</strong> Un nouveau contrat de souscription de carte a été signé et nécessite votre validation administrative.
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h3>� Informations du client</h3>
+                <div class="info-grid">
+                    <span class="info-label">Nom complet :</span>
+                    <span class="info-value">{{ contract.cardSubscription.user.firstName }} {{ contract.cardSubscription.user.lastName }}</span>
+                    
+                    <span class="info-label">Email :</span>
+                    <span class="info-value">{{ contract.cardSubscription.user.email }}</span>
+                    
+                    <span class="info-label">Téléphone :</span>
+                    <span class="info-value">{{ contract.cardSubscription.user.phoneNumber|default('Non renseigné') }}</span>
+                    
+                    <span class="info-label">Date d'inscription :</span>
+                    <span class="info-value">{{ contract.cardSubscription.user.createdAt|date('d/m/Y à H:i') }}</span>
+                    
+                    <span class="info-label">Compte associé :</span>
+                    <span class="info-value">{{ contract.cardSubscription.account.accountNumber }}</span>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h3>📋 Détails du contrat</h3>
+                <div class="info-grid">
+                    <span class="info-label">Référence :</span>
+                    <span class="info-value"><strong>{{ contract.reference }}</strong></span>
+                    
+                    <span class="info-label">Type de carte :</span>
+                    <span class="info-value">{{ contract.cardTypeDisplayName }}</span>
+                    
+                    <span class="info-label">Marque :</span>
+                    <span class="info-value">{{ contract.cardBrandDisplayName }}</span>
+                    
+                    <span class="info-label">Frais d'activation :</span>
+                    <span class="info-value">
+                        {% if contract.cardSubscription.activationFee and contract.cardSubscription.activationFee > 0 %}
+                            {{ contract.cardSubscription.activationFee }}€
+                        {% else %}
+                            Gratuits
+                        {% endif %}
+                    </span>
+                    
+                    <span class="info-label">Frais mensuels :</span>
+                    <span class="info-value">{{ contract.cardSubscription.monthlyFee ? contract.cardSubscription.monthlyFee ~ '€' : 'N/A' }}</span>
+                    
+                    <span class="info-label">Plafond quotidien :</span>
+                    <span class="info-value">{{ contract.cardSubscription.dailyLimit ? contract.cardSubscription.dailyLimit ~ '€' : 'N/A' }}</span>
+                    
+                    <span class="info-label">Plafond mensuel :</span>
+                    <span class="info-value">{{ contract.cardSubscription.monthlyLimit ? contract.cardSubscription.monthlyLimit ~ '€' : 'N/A' }}</span>
+                    
+                    <span class="info-label">Date de création :</span>
+                    <span class="info-value">{{ contract.createdAt|date('d/m/Y à H:i') }}</span>
+                    
+                    <span class="info-label">Date de signature :</span>
+                    <span class="info-value">{{ contract.signedAt|date('d/m/Y à H:i') }}</span>
+                </div>
+            </div>
+            
+            <div class="signature-info">
+                <h4>✍️ Informations de signature</h4>
+                <p><strong>Signature électronique :</strong> Réalisée le {{ contract.signedAt|date('d/m/Y à H:i') }}</p>
+                <p><strong>Adresse IP :</strong> {{ contract.signerIp }}</p>
+                <p><strong>Navigateur :</strong> {{ contract.signerUserAgent|default('Non disponible')|slice(0, 80) }}{% if contract.signerUserAgent|length > 80 %}...{% endif %}</p>
+            </div>
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <h3>🎯 Actions disponibles</h3>
+                <p style="margin-bottom: 20px;">Choisissez l'action à effectuer pour ce contrat :</p>
+                
+                <a href="{{ absolute_url(path('app_admin_dashboard_card_subscription_detail', {entityId: contract.cardSubscription.id})) }}" class="action-button">
+                    👁️ Voir la souscription en détail
+                </a>
+                
+                <a href="{{ absolute_url(path('app_admin_dashboard_card_subscription_index')) }}" class="action-button secondary">
+                    📋 Gérer les souscriptions
+                </a>
+                
+                <br>
+                
+                <a href="{{ absolute_url(path('card_contract_download', {reference: contract.reference})) }}" class="action-button secondary">
+                    📄 Télécharger le contrat PDF
+                </a>
+                
+                <a href="{{ absolute_url(path('app_admin_dashboard')) }}" class="action-button secondary">
+                    🏠 Tableau de bord admin
+                </a>
+            </div>
+            
+            <div style="background: #fffbeb; border: 1px solid #fbbf24; border-radius: 8px; padding: 15px; margin: 20px 0;">
+                <p style="margin: 0; color: #92400e;">
+                    <strong>⚠️ Rappel :</strong> Vous avez <strong>48 heures ouvrées</strong> pour traiter cette demande selon nos engagements de service client.
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Cet email a été envoyé automatiquement par le système SEDEF BANK.</p>
+            <p>Pour toute question technique, contactez l'équipe de développement.</p>
+            <p style="margin-top: 15px; font-size: 0.8rem; color: #999;">
+                © {{ 'now'|date('Y') }} SEDEF BANK - Tous droits réservés
+            </p>
+        </div>
+    </div>
+</body>
+</html>

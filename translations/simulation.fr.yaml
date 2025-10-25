@@ -1,0 +1,219 @@
+# Traductions pour la simulation de crédit - Français
+credit_simulation:
+  title: "Simulateur de crédit"
+  subtitle: "Calculez votre crédit en quelques clics"
+  amortization_title: "Tableau d'amortissement"
+  
+  # Hero Section
+  hero:
+    title: "Simulateur de crédit"
+    subtitle: "Obtenez votre estimation en 2 minutes"
+    description: "Calculez vos mensualités et découvrez les meilleures conditions pour votre projet"
+    disclaimer: "Simulation gratuite et sans engagement"
+
+  # Formulaire
+  form:
+    amount:
+      label: "Montant du crédit"
+      help: "Montant souhaité entre 1 000 € et 500 000 €"
+      placeholder: "Ex: 50 000"
+      currency: "€"
+    
+    credit_type:
+      label: "Type de crédit"
+      help: "Sélectionnez le type de crédit adapté à votre projet"
+      placeholder: "Choisissez un type de crédit"
+    duration:
+      label: "Durée du crédit"
+      help: "Durée de remboursement souhaitée"
+      placeholder: "Sélectionnez une durée"
+    duration_unit:
+      label: "Unité de durée"
+      help: "Mois ou années"
+    rate_info: "Taux indicatif :"
+    calculate_button: "Calculer ma mensualité"
+    calculating: "Calcul en cours..."
+  # Types de crédit
+  credit_types:
+    immobilier:
+      label: "Crédit Immobilier"
+      description: "Financement pour l'achat d'un bien immobilier"
+    auto:
+      label: "Crédit Auto"
+      description: "Financement pour l'achat d'un véhicule"
+    consommation:
+      label: "Crédit à la Consommation"
+      description: "Crédit pour vos projets personnels"
+    travaux:
+      label: "Crédit Travaux"
+      description: "Financement pour vos travaux de rénovation"
+    professionnel:
+      label: "Crédit Professionnel"
+      description: "Crédit pour vos projets professionnels"
+    personal:
+      label: "Prêt Personnel"
+      description: "Prêt sans justificatif d'utilisation"
+    home_improvement:
+      label: "Crédit Travaux/Rénovation"
+    debt_consolidation:
+      label: "Rachat de Crédit"
+      description: "Regroupement de vos crédits existants"
+    mortgage:
+      label: "Prêt Hypothécaire"
+      description: "Crédit garanti par une hypothèque"
+    renouvelable:
+      label: "Crédit Renouvelable"
+      description: "Réserve d'argent réutilisable à volonté"
+    etudiant:
+      label: "Prêt Étudiant"
+      description: "Financement des études supérieures"
+    relais:
+      label: "Prêt Relais"
+      description: "Avance de fonds en attendant la vente d'un bien immobilier"
+    microcredit:
+      label: "Microcrédit Personnel"
+      description: "Petits montants pour personnes exclues du crédit bancaire classique"
+    leasing:
+      label: "Crédit-bail (Leasing)"
+      description: "Location avec option d'achat (voiture, matériel professionnel)"
+    voyage:
+      label: "Crédit Voyage"
+      description: "Financement pour vos projets de voyage"
+  # Unités de durée
+  duration_units:
+    months: "Mois"
+    years: "Années"
+  # Durées
+  durations:
+    twelve_months: "12 mois"
+    twenty_four_months: "24 mois" 
+    thirty_six_months: "3 ans"
+    forty_eight_months: "4 ans"
+    sixty_months: "5 ans"
+    seventy_two_months: "6 ans"
+    eighty_four_months: "7 ans"
+    ninety_six_months: "8 ans"
+    one_hundred_twenty_months: "10 ans"
+    one_hundred_eighty_months: "15 ans"
+    two_hundred_forty_months: "20 ans"
+    three_hundred_months: "25 ans"
+  # Résultats
+  results:
+    title: "Votre simulation"
+    success_title: "Simulation réussie !"
+    monthly_payment: "Mensualité"
+    total_amount: "Montant total"
+    total_interest: "Coût du crédit"
+    rate: "Taux appliqué"
+    duration: "Durée"
+    summary:
+      title: "Récapitulatif"
+      amount_borrowed: "Montant emprunté"
+      monthly_payment: "Mensualité"
+      duration: "Durée"
+      rate: "Taux"
+      total_cost: "Montant total à rembourser"
+      total_interest: "Intérêts"
+      insurance_rate: "Taux assurance"
+      insurance_monthly: "dont assurance"
+      interest_monthly: "dont intérêts"
+      insurance_total: "dont assurance"
+      interest_total: "dont intérêts"
+      per_month: "/mois"
+      per_year: "/an"
+    actions:
+      apply: "Faire une demande"
+      modify: "Modifier la simulation"
+      amortization_table: "Voir le tableau d'amortissement"
+      save: "Sauvegarder"
+      share: "Partager"
+  # Tableau d'amortissement
+  amortization:
+    title: "Tableau d'amortissement"
+    subtitle: "Détail du remboursement mois par mois"
+    back_to_simulation: "Retour à la simulation"
+    summary:
+      amount_borrowed: "Capital emprunté"
+      monthly_payment: "Mensualité"
+      total_interest: "Total des intérêts"
+      total_amount: "Montant total"
+    table:
+      month: "Mois"
+      payment: "Mensualité"
+      interest: "Intérêts"
+      principal: "Capital"
+      balance: "Capital restant"
+      print: "Imprimer"
+      download: "Télécharger"
+      back: "Retour"
+      show_amortization: "Voir le tableau d'amortissement"
+      apply_now: "Faire une demande"
+  # Messages d'erreur
+  errors:
+    title: "Erreur de simulation"
+    invalid_data: "Données invalides. Veuillez vérifier votre saisie."
+    amount_required: "Le montant est obligatoire"
+    amount_too_low: "Le montant minimum est de 1 000 €"
+    amount_too_high: "Le montant maximum est de 500 000 €"
+    duration_required: "La durée est obligatoire"
+    duration_too_low: "La durée minimum est de 12 mois"
+    duration_too_high: "La durée maximum dépend du type de crédit"
+    credit_type_required: "Le type de crédit est obligatoire"
+    invalid_credit_type: "Type de crédit invalide"
+    calculation_error: "Erreur lors du calcul"
+    actions:
+      retry: "Réessayer"
+      modify: "Modifier les paramètres"
+    tips:
+      title: "Conseils"
+      tip1: "Vérifiez que le montant est compris entre 1 000 € et 500 000 €"
+      tip2: "Assurez-vous que la durée est adaptée au type de crédit"
+      tip3: "Contactez un conseiller pour des montants importants"
+      tip4: "Consultez nos conditions générales pour plus d'informations"
+  # Messages légaux
+  legal:
+    title: "Informations légales"
+    text: "Cette simulation est fournie à titre indicatif. Les taux et conditions définitifs seront déterminés lors de votre demande de crédit, sous réserve d'acceptation de votre dossier."
+    credit_warning: "Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager."
+    licensed_bank: "Établissement de crédit agréé"
+    insurance_broker: "Courtier en assurance"
+    badges:
+      acpr: "Agréé ACPR"
+      guarantee_fund: "Fonds de garantie"
+      security: "Transactions sécurisées"
+  # Messages de validation
+  validation:
+    processing: "Traitement en cours..."
+    success: "Simulation calculée avec succès"
+    time_estimate: "Temps estimé : 2 minutes"
+  # Messages JavaScript
+  js:
+    errors:
+      incomplete_fields: "Veuillez remplir tous les champs correctement."
+      calculation_error: "Erreur lors du calcul de la simulation"
+      invalid_amount: "Le montant saisi est invalide"
+      invalid_duration: "La durée saisie est invalide"
+      
+    currency:
+      symbol: "€"
+      per_month: "€/mois"
+    formatting:
+      zero_value: "0"
+      zero_currency: "0€"
+      zero_per_month: "0€/mois"
+    console:
+      connected: "Contrôleur de simulation de crédit connecté"
+      calculation_data: "Calcul:"
+      calculation_error: "Erreur lors du calcul:"
+      requesting_rate: "Demande de taux personnalisé en cours..."
+      contact_advisor: "Contactez un conseiller pour obtenir un taux personnalisé"
+    # CTA Section
+  cta:
+    view_amortization_table: "Voir le tableau d'amortissement"
+    apply_for_credit: "Faire ma demande"
+    monthly_details: "Détail mensuel de votre remboursement"
+  
+  # Termes communs
+  common:
+    months: "mois"
+    years: "ans"

@@ -1,0 +1,30 @@
+general:
+  title: "Se ha producido un error"
+  subtitle: "Nos disculpamos por las molestias causadas"
+  back_to_homepage: "Volver al inicio"
+  back_button: "Volver"
+
+error_404:
+  title: "Página no encontrada"
+  subtitle: "La página que busca no existe o ha sido movida"
+  message: "Es posible que la dirección haya sido mal introducida o que la página haya sido eliminada."
+
+error_403:
+  title: "Acceso prohibido"
+  subtitle: "No tiene autorización para acceder a esta página"
+  message: "Este recurso requiere permisos particulares que usted no posee."
+
+error_500:
+  title: "Error interno del servidor"
+  subtitle: "Se ha producido un error técnico"
+  message: "Nuestros equipos técnicos han sido alertados y trabajan para resolver este problema."
+
+suggestions:
+  title: "¿Qué puede hacer?"
+  check_url: "Verifique la dirección URL"
+  go_home: "Vuelva a la página de inicio"
+  contact_support: "Contacte nuestro soporte"
+  try_later: "Inténtelo más tarde"
+  check_permissions: "Verifique sus permisos de acceso"
+  login_authorized: "Conéctese con una cuenta autorizada"
+  refresh_page: "Actualizar la página"

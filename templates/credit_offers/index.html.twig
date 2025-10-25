@@ -1,0 +1,716 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ page_title }} - {{ parent() }}{% endblock %}
+
+{% block meta_description %}{{ page_description }}{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/credit_offers_page.css') }}">
+{% endblock %}
+{% block body %}
+<div class="credit-offers-page">
+    <!-- Hero Section -->
+    <section class="credit-hero">
+        <div class="credit-hero__container">
+            <div class="credit-hero__content">
+                <div class="credit-hero__badge">
+                    <span class="credit-hero__badge-dot"></span>
+                    <span>{{ tp('credit_offers_index.hero.badge', [], 'credit_offers_index') }}</span>
+                </div>
+                <h1 class="credit-hero__title">{{ page_title }}</h1>
+                <p class="credit-hero__subtitle">{{ page_description }}</p>
+                
+                <div class="credit-hero__stats">
+                    <div class="credit-hero__stat">
+                        <div class="credit-hero__stat-number">1,5%</div>
+                        <div class="credit-hero__stat-label">{{ tp('credit_offers_index.hero.stats.taux_min', [], 'credit_offers_index') }}</div>
+                    </div>
+                    <div class="credit-hero__stat">
+                        <div class="credit-hero__stat-number">24h</div>
+                        <div class="credit-hero__stat-label">{{ tp('credit_offers_index.hero.stats.reponse', [], 'credit_offers_index') }}</div>
+                    </div>
+                    <div class="credit-hero__stat">
+                        <div class="credit-hero__stat-number">15</div>
+                        <div class="credit-hero__stat-label">{{ tp('credit_offers_index.hero.stats.types', [], 'credit_offers_index') }}</div>
+                    </div>
+                </div>
+
+                <div class="credit-hero__actions">
+                    <a href="{{ path('credit_simulation_index', {_locale: app.request.locale}) }}" class="credit-hero__cta credit-hero__cta--primary">
+                        {{ ux_icon('heroicons:calculator', {'class': 'credit-hero__cta-icon'}) }}
+                        {{ tp('credit_offers_index.hero.actions.simuler', [], 'credit_offers_index') }}
+                    </a>
+                    <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-hero__cta credit-hero__cta--secondary">
+                        {{ ux_icon('heroicons:document-text', {'class': 'credit-hero__cta-icon'}) }}
+                        {{ tp('credit_offers_index.hero.actions.demander', [], 'credit_offers_index') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credit Categories -->
+    <section class="credit-categories">
+        <div class="credit-categories__container">
+            <div class="credit-categories__header">
+                <h2 class="credit-categories__title">{{ tp('credit_offers_index.categories.header.title', [], 'credit_offers_index') }}</h2>
+                <p class="credit-categories__subtitle">
+                    {{ tp('credit_offers_index.categories.header.subtitle', [], 'credit_offers_index') }}
+                </p>
+            </div>
+
+            <!-- Immobilier & Habitat -->
+            <div class="credit-category">
+                <div class="credit-category__header">
+                    <div class="credit-category__icon">
+                        {{ ux_icon('heroicons:home', {'class': 'credit-category__icon-svg'}) }}
+                    </div>
+                    <div class="credit-category__info">
+                        <h3 class="credit-category__title">{{ tp('credit_offers_index.categories.immobilier_habitat.title', [], 'credit_offers_index') }}</h3>
+                        <p class="credit-category__subtitle">{{ tp('credit_offers_index.categories.immobilier_habitat.subtitle', [], 'credit_offers_index') }}</p>
+                    </div>
+                </div>
+                
+                <div class="credit-category__grid">
+                    <div class="credit-item">
+                        <div class="credit-item__header">
+                            <div class="credit-item__content">
+                                <h4 class="credit-item__title">{{ tp('credit_offers_index.categories.immobilier_habitat.credit_immobilier.title', [], 'credit_offers_index') }}</h4>
+                                <p class="credit-item__description">{{ tp('credit_offers_index.categories.immobilier_habitat.credit_immobilier.description', [], 'credit_offers_index') }}</p>
+                            </div>
+                            <div class="credit-item__rate">
+                                <span class="credit-item__rate-value">{{ tp('credit_offers_index.categories.immobilier_habitat.credit_immobilier.rate', [], 'credit_offers_index')|replace({'{rate}': credit_rate('immobilier')})|raw }}</span>
+                                <span class="credit-item__rate-label">{{ tp('credit_offers_index.categories.immobilier_habitat.credit_immobilier.rate_label', [], 'credit_offers_index') }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="credit-item__content-text">
+                            <p>{{ ux_icon('heroicons:banknotes', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.amount', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.credit_immobilier.features.amount', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:clock', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.duration', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.credit_immobilier.features.duration', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:calculator', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.contribution', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.credit_immobilier.features.contribution', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:shield-check', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.insurance', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.credit_immobilier.features.insurance', [], 'credit_offers_index') }}</span></p>
+                        </div>
+                        
+                        <div class="credit-item__footer">
+                            <div class="credit-item__actions">
+                                <a href="{{ path('credit_offers_home_loan', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--secondary">
+                                    {{ tp('credit_offers_index.categories.immobilier_habitat.credit_immobilier.actions.learn_more', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:arrow-right', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                                <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--primary">
+                                    {{ tp('credit_offers_index.categories.immobilier_habitat.credit_immobilier.actions.apply', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:paper-airplane', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="credit-item">
+                        <div class="credit-item__header">
+                            <div class="credit-item__content">
+                                <h4 class="credit-item__title">{{ tp('credit_offers_index.categories.immobilier_habitat.pret_hypothecaire.title', [], 'credit_offers_index') }}</h4>
+                                <p class="credit-item__description">{{ tp('credit_offers_index.categories.immobilier_habitat.pret_hypothecaire.description', [], 'credit_offers_index') }}</p>
+                            </div>
+                            <div class="credit-item__rate">
+                                <span class="credit-item__rate-value">{{ tp('credit_offers_index.categories.immobilier_habitat.pret_hypothecaire.rate', [], 'credit_offers_index')|replace({'{rate}': credit_rate('hypothecaire')})|raw }}</span>
+                                <span class="credit-item__rate-label">{{ tp('credit_offers_index.categories.immobilier_habitat.pret_hypothecaire.rate_label', [], 'credit_offers_index') }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="credit-item__content-text">
+                            <p>{{ ux_icon('heroicons:banknotes', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.amount_available', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.pret_hypothecaire.features.amount', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:clock', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.duration_flexible', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.pret_hypothecaire.features.duration', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:home', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.guarantee', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.pret_hypothecaire.features.guarantee', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:check-circle', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.usage', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.pret_hypothecaire.features.usage', [], 'credit_offers_index') }}</span></p>
+                        </div>
+                        
+                        <div class="credit-item__footer">
+                            <div class="credit-item__actions">
+                                <a href="{{ path('credit_offers_hypothecaire', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--secondary">
+                                    {{ tp('credit_offers_index.categories.immobilier_habitat.pret_hypothecaire.actions.learn_more', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:arrow-right', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                                <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--primary">
+                                    {{ tp('credit_offers_index.categories.immobilier_habitat.pret_hypothecaire.actions.apply', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:paper-airplane', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="credit-item">
+                        <div class="credit-item__header">
+                            <div class="credit-item__content">
+                                <h4 class="credit-item__title">{{ tp('credit_offers_index.categories.immobilier_habitat.credit_travaux.title', [], 'credit_offers_index') }}</h4>
+                                <p class="credit-item__description">{{ tp('credit_offers_index.categories.immobilier_habitat.credit_travaux.description', [], 'credit_offers_index') }}</p>
+                            </div>
+                            <div class="credit-item__rate">
+                                <span class="credit-item__rate-value">{{ tp('credit_offers_index.categories.immobilier_habitat.credit_travaux.rate', [], 'credit_offers_index')|replace({'{rate}': credit_rate('travaux')})|raw }}</span>
+                                <span class="credit-item__rate-label">{{ tp('credit_offers_index.categories.immobilier_habitat.credit_travaux.rate_label', [], 'credit_offers_index') }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="credit-item__content-text">
+                            <p>{{ ux_icon('heroicons:banknotes', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.amount_work', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.credit_travaux.features.amount', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:clock', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.duration_adaptable', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.credit_travaux.features.duration', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:x-circle', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.guarantee_none', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.credit_travaux.features.guarantee', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:arrows-right-left', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.release', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.credit_travaux.features.release', [], 'credit_offers_index') }}</span></p>
+                        </div>
+                        
+                        <div class="credit-item__footer">
+                            <div class="credit-item__actions">
+                                <a href="{{ path('credit_offers_travaux', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--secondary">
+                                    {{ tp('credit_offers_index.categories.immobilier_habitat.credit_travaux.actions.learn_more', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:arrow-right', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                                <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--primary">
+                                    {{ tp('credit_offers_index.categories.immobilier_habitat.credit_travaux.actions.apply', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:paper-airplane', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="credit-item">
+                        <div class="credit-item__header">
+                            <div class="credit-item__content">
+                                <h4 class="credit-item__title">{{ tp('credit_offers_index.categories.immobilier_habitat.amelioration_habitat.title', [], 'credit_offers_index') }}</h4>
+                                <p class="credit-item__description">{{ tp('credit_offers_index.categories.immobilier_habitat.amelioration_habitat.description', [], 'credit_offers_index') }}</p>
+                            </div>
+                            <div class="credit-item__rate">
+                                <span class="credit-item__rate-value">{{ tp('credit_offers_index.categories.immobilier_habitat.amelioration_habitat.rate', [], 'credit_offers_index')|replace({'{rate}': credit_rate('amelioration')})|raw }}</span>
+                                <span class="credit-item__rate-label">{{ tp('credit_offers_index.categories.immobilier_habitat.amelioration_habitat.rate_label', [], 'credit_offers_index') }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="credit-item__content-text">
+                            <p>{{ ux_icon('heroicons:banknotes', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.amount_eco', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.amelioration_habitat.features.amount', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:clock', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.duration_flexible', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.amelioration_habitat.features.duration', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('mdi:leaf', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.eco', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.amelioration_habitat.features.eco', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:receipt-percent', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.tax', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.amelioration_habitat.features.tax', [], 'credit_offers_index') }}</span></p>
+                        </div>
+                        
+                        <div class="credit-item__footer">
+                            <div class="credit-item__actions">
+                                <a href="{{ path('credit_offers_amelioration_habitat', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--secondary">
+                                    {{ tp('credit_offers_index.categories.immobilier_habitat.amelioration_habitat.actions.learn_more', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:arrow-right', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                                <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--primary">
+                                    {{ tp('credit_offers_index.categories.immobilier_habitat.amelioration_habitat.actions.apply', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:paper-airplane', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="credit-item">
+                        <div class="credit-item__header">
+                            <div class="credit-item__content">
+                                <h4 class="credit-item__title">{{ tp('credit_offers_index.categories.immobilier_habitat.credit_relais.title', [], 'credit_offers_index') }}</h4>
+                                <p class="credit-item__description">{{ tp('credit_offers_index.categories.immobilier_habitat.credit_relais.description', [], 'credit_offers_index') }}</p>
+                            </div>
+                            <div class="credit-item__rate">
+                                <span class="credit-item__rate-value">{{ tp('credit_offers_index.categories.immobilier_habitat.credit_relais.rate', [], 'credit_offers_index')|replace({'{rate}': credit_rate('relais')})|raw }}</span>
+                                <span class="credit-item__rate-label">{{ tp('credit_offers_index.categories.immobilier_habitat.credit_relais.rate_label', [], 'credit_offers_index') }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="credit-item__content-text">
+                            <p>{{ ux_icon('heroicons:banknotes', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.amount_important', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.credit_relais.features.amount', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:clock', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.duration_temporary', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.credit_relais.features.duration', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:arrow-trending-up', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.repayment', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.credit_relais.features.repayment', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:home', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.guarantee_sold_property', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.immobilier_habitat.credit_relais.features.guarantee', [], 'credit_offers_index') }}</span></p>
+                        </div>
+                        
+                        <div class="credit-item__footer">
+                            <div class="credit-item__actions">
+                                <a href="{{ path('credit_offers_credit_relais', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--secondary">
+                                    {{ tp('credit_offers_index.categories.immobilier_habitat.credit_relais.actions.learn_more', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:arrow-right', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                                <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--primary">
+                                    {{ tp('credit_offers_index.categories.immobilier_habitat.credit_relais.actions.apply', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:paper-airplane', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Automobile & Mobilité -->
+            <div class="credit-category">
+                <div class="credit-category__header">
+                    <div class="credit-category__icon credit-category__icon--auto">
+                        {{ ux_icon('heroicons:truck', {'class': 'credit-category__icon-svg'}) }}
+                    </div>
+                    <div class="credit-category__info">
+                        <h3 class="credit-category__title">{{ tp('credit_offers_index.categories.automobile_mobilite.title', [], 'credit_offers_index') }}</h3>
+                        <p class="credit-category__subtitle">{{ tp('credit_offers_index.categories.automobile_mobilite.subtitle', [], 'credit_offers_index') }}</p>
+                    </div>
+                </div>
+                
+                <div class="credit-category__grid">
+                    <div class="credit-item">
+                        <div class="credit-item__header">
+                            <div class="credit-item__content">
+                                <h4 class="credit-item__title">{{ tp('credit_offers_index.categories.automobile_mobilite.credit_auto.title', [], 'credit_offers_index') }}</h4>
+                                <p class="credit-item__description">{{ tp('credit_offers_index.categories.automobile_mobilite.credit_auto.description', [], 'credit_offers_index') }}</p>
+                            </div>
+                            <div class="credit-item__rate">
+                                <span class="credit-item__rate-value">{{ tp('credit_offers_index.categories.automobile_mobilite.credit_auto.rate', [], 'credit_offers_index')|replace({'{rate}': credit_rate('auto')})|raw }}</span>
+                                <span class="credit-item__rate-label">{{ tp('credit_offers_index.categories.automobile_mobilite.credit_auto.rate_label', [], 'credit_offers_index') }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="credit-item__content-text">
+                            <p>{{ ux_icon('heroicons:banknotes', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.amount_vehicle', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.automobile_mobilite.credit_auto.features.amount', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:clock', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.duration_adapted', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.automobile_mobilite.credit_auto.features.duration', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:chart-bar', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.financing', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.automobile_mobilite.credit_auto.features.financing', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:truck', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.vehicles', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.automobile_mobilite.credit_auto.features.vehicles', [], 'credit_offers_index') }}</span></p>
+                        </div>
+                        
+                        <div class="credit-item__footer">
+                            <div class="credit-item__actions">
+                                <a href="{{ path('credit_offers_auto_loan', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--secondary">
+                                    {{ tp('credit_offers_index.categories.automobile_mobilite.credit_auto.actions.learn_more', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:arrow-right', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                                <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--primary">
+                                    {{ tp('credit_offers_index.categories.automobile_mobilite.credit_auto.actions.apply', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:paper-airplane', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="credit-item">
+                        <div class="credit-item__header">
+                            <div class="credit-item__content">
+                                <h4 class="credit-item__title">{{ tp('credit_offers_index.categories.automobile_mobilite.leasing_automobile.title', [], 'credit_offers_index') }}</h4>
+                                <p class="credit-item__description">{{ tp('credit_offers_index.categories.automobile_mobilite.leasing_automobile.description', [], 'credit_offers_index') }}</p>
+                            </div>
+                            <div class="credit-item__rate">
+                                <span class="credit-item__rate-value">{{ tp('credit_offers_index.categories.automobile_mobilite.leasing_automobile.rate', [], 'credit_offers_index')|replace({'{rate}': credit_rate('leasing')})|raw }}</span>
+                                <span class="credit-item__rate-label">{{ tp('credit_offers_index.categories.automobile_mobilite.leasing_automobile.rate_label', [], 'credit_offers_index') }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="credit-item__content-text">
+                            <p>{{ ux_icon('heroicons:banknotes', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.amount_leasing', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.automobile_mobilite.leasing_automobile.features.amount', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:clock', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.duration_contract', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.automobile_mobilite.leasing_automobile.features.duration', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:x-circle', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.contribution_none', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.automobile_mobilite.leasing_automobile.features.contribution', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:arrows-right-left', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.option', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.automobile_mobilite.leasing_automobile.features.option', [], 'credit_offers_index') }}</span></p>
+                        </div>
+                        
+                        <div class="credit-item__footer">
+                            <div class="credit-item__actions">
+                                <a href="{{ path('credit_offers_leasing_automobile', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--secondary">
+                                    {{ tp('credit_offers_index.categories.automobile_mobilite.leasing_automobile.actions.learn_more', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:arrow-right', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                                <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--primary">
+                                    {{ tp('credit_offers_index.categories.automobile_mobilite.leasing_automobile.actions.apply', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:paper-airplane', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personnel & Consommation -->
+            <div class="credit-category">
+                <div class="credit-category__header">
+                    <div class="credit-category__icon credit-category__icon--personal">
+                        {{ ux_icon('heroicons:user', {'class': 'credit-category__icon-svg'}) }}
+                    </div>
+                    <div class="credit-category__info">
+                        <h3 class="credit-category__title">{{ tp('credit_offers_index.categories.personnel_consommation.title', [], 'credit_offers_index') }}</h3>
+                        <p class="credit-category__subtitle">{{ tp('credit_offers_index.categories.personnel_consommation.subtitle', [], 'credit_offers_index') }}</p>
+                    </div>
+                </div>
+                
+                <div class="credit-category__grid">
+                    <div class="credit-item">
+                        <div class="credit-item__header">
+                            <div class="credit-item__content">
+                                <h4 class="credit-item__title">{{ tp('credit_offers_index.categories.personnel_consommation.credit_personnel.title', [], 'credit_offers_index') }}</h4>
+                                <p class="credit-item__description">{{ tp('credit_offers_index.categories.personnel_consommation.credit_personnel.description', [], 'credit_offers_index') }}</p>
+                            </div>
+                            <div class="credit-item__rate">
+                                <span class="credit-item__rate-value">{{ tp('credit_offers_index.categories.personnel_consommation.credit_personnel.rate', [], 'credit_offers_index')|replace({'{rate}': credit_rate('personnel')})|raw }}</span>
+                                <span class="credit-item__rate-label">{{ tp('credit_offers_index.categories.personnel_consommation.credit_personnel.rate_label', [], 'credit_offers_index') }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="credit-item__content-text">
+                            <p>{{ ux_icon('heroicons:banknotes', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.amount_without_justification', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.credit_personnel.features.amount', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:clock', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.duration_flexible_repayment', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.credit_personnel.features.duration', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:document-minus', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.justification', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.credit_personnel.features.justification', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:bolt', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.speed', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.credit_personnel.features.speed', [], 'credit_offers_index') }}</span></p>
+                        </div>
+                        
+                        <div class="credit-item__footer">
+                            <div class="credit-item__actions">
+                                <a href="{{ path('credit_offers_personal_loan', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--secondary">
+                                    {{ tp('credit_offers_index.categories.personnel_consommation.credit_personnel.actions.learn_more', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:arrow-right', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                                <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--primary">
+                                    {{ tp('credit_offers_index.categories.personnel_consommation.credit_personnel.actions.apply', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:paper-airplane', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="credit-item">
+                        <div class="credit-item__header">
+                            <div class="credit-item__content">
+                                <h4 class="credit-item__title">{{ tp('credit_offers_index.categories.personnel_consommation.credit_consommation.title', [], 'credit_offers_index') }}</h4>
+                                <p class="credit-item__description">{{ tp('credit_offers_index.categories.personnel_consommation.credit_consommation.description', [], 'credit_offers_index') }}</p>
+                            </div>
+                            <div class="credit-item__rate">
+                                <span class="credit-item__rate-value">{{ tp('credit_offers_index.categories.personnel_consommation.credit_consommation.rate', [], 'credit_offers_index')|replace({'{rate}': credit_rate('consommation')})|raw }}</span>
+                                <span class="credit-item__rate-label">{{ tp('credit_offers_index.categories.personnel_consommation.credit_consommation.rate_label', [], 'credit_offers_index') }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="credit-item__content-text">
+                            <p>{{ ux_icon('heroicons:banknotes', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.amount_equipment', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.credit_consommation.features.amount', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:clock', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.duration_modular', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.credit_consommation.features.duration', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:cog', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.usage_specialized', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.credit_consommation.features.usage', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:building-storefront', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.partners', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.credit_consommation.features.partners', [], 'credit_offers_index') }}</span></p>
+                        </div>
+                        
+                        <div class="credit-item__footer">
+                            <div class="credit-item__actions">
+                                <a href="{{ path('credit_offers_credit_consommation', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--secondary">
+                                    {{ tp('credit_offers_index.categories.personnel_consommation.credit_consommation.actions.learn_more', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:arrow-right', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                                <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--primary">
+                                    {{ tp('credit_offers_index.categories.personnel_consommation.credit_consommation.actions.apply', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:paper-airplane', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="credit-item">
+                        <div class="credit-item__header">
+                            <div class="credit-item__content">
+                                <h4 class="credit-item__title">{{ tp('credit_offers_index.categories.personnel_consommation.credit_voyage.title', [], 'credit_offers_index') }}</h4>
+                                <p class="credit-item__description">{{ tp('credit_offers_index.categories.personnel_consommation.credit_voyage.description', [], 'credit_offers_index') }}</p>
+                            </div>
+                            <div class="credit-item__rate">
+                                <span class="credit-item__rate-value">{{ tp('credit_offers_index.categories.personnel_consommation.credit_voyage.rate', [], 'credit_offers_index')|replace({'{rate}': credit_rate('voyage')})|raw }}</span>
+                                <span class="credit-item__rate-label">{{ tp('credit_offers_index.categories.personnel_consommation.credit_voyage.rate_label', [], 'credit_offers_index') }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="credit-item__content-text">
+                            <p>{{ ux_icon('heroicons:banknotes', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.amount_travel', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.credit_voyage.features.amount', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:clock', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.duration_extended', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.credit_voyage.features.duration', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:shield-check', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.insurance_travel', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.credit_voyage.features.insurance', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:globe-alt', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.partnerships', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.credit_voyage.features.partnerships', [], 'credit_offers_index') }}</span></p>
+                        </div>
+                        
+                        <div class="credit-item__footer">
+                            <div class="credit-item__actions">
+                                <a href="{{ path('credit_offers_travel_loan', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--secondary">
+                                    {{ tp('credit_offers_index.categories.personnel_consommation.credit_voyage.actions.learn_more', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:arrow-right', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                                <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--primary">
+                                    {{ tp('credit_offers_index.categories.personnel_consommation.credit_voyage.actions.apply', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:paper-airplane', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="credit-item">
+                        <div class="credit-item__header">
+                            <div class="credit-item__content">
+                                <h4 class="credit-item__title">{{ tp('credit_offers_index.categories.personnel_consommation.regroupement_credits.title', [], 'credit_offers_index') }}</h4>
+                                <p class="credit-item__description">{{ tp('credit_offers_index.categories.personnel_consommation.regroupement_credits.description', [], 'credit_offers_index') }}</p>
+                            </div>
+                            <div class="credit-item__rate">
+                                <span class="credit-item__rate-value">{{ tp('credit_offers_index.categories.personnel_consommation.regroupement_credits.rate', [], 'credit_offers_index')|replace({'{rate}': credit_rate('regroupement')})|raw }}</span>
+                                <span class="credit-item__rate-label">{{ tp('credit_offers_index.categories.personnel_consommation.regroupement_credits.rate_label', [], 'credit_offers_index') }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="credit-item__content-text">
+                            <p>{{ ux_icon('heroicons:banknotes', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.amount_consolidation', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.regroupement_credits.features.amount', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:clock', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.duration_long', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.regroupement_credits.features.duration', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:arrow-trending-down', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.savings', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.regroupement_credits.features.savings', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:plus-circle', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.additional', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.regroupement_credits.features.additional', [], 'credit_offers_index') }}</span></p>
+                        </div>
+                        
+                        <div class="credit-item__footer">
+                            <div class="credit-item__actions">
+                                <a href="{{ path('credit_offers_regroupement_credits', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--secondary">
+                                    {{ tp('credit_offers_index.categories.personnel_consommation.regroupement_credits.actions.learn_more', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:arrow-right', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                                <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--primary">
+                                    {{ tp('credit_offers_index.categories.personnel_consommation.regroupement_credits.actions.apply', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:paper-airplane', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="credit-item">
+                        <div class="credit-item__header">
+                            <div class="credit-item__content">
+                                <h4 class="credit-item__title">{{ tp('credit_offers_index.categories.personnel_consommation.credit_renouvelable.title', [], 'credit_offers_index') }}</h4>
+                                <p class="credit-item__description">{{ tp('credit_offers_index.categories.personnel_consommation.credit_renouvelable.description', [], 'credit_offers_index') }}</p>
+                            </div>
+                            <div class="credit-item__rate">
+                                <span class="credit-item__rate-value">{{ tp('credit_offers_index.categories.personnel_consommation.credit_renouvelable.rate', [], 'credit_offers_index')|replace({'{rate}': credit_rate('renouvelable')})|raw }}</span>
+                                <span class="credit-item__rate-label">{{ tp('credit_offers_index.categories.personnel_consommation.credit_renouvelable.rate_label', [], 'credit_offers_index') }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="credit-item__content-text">
+                            <p>{{ ux_icon('heroicons:banknotes', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.amount_reserve', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.credit_renouvelable.features.amount', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:arrow-path', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.renewal', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.credit_renouvelable.features.renewal', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:check-circle', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.freedom', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.credit_renouvelable.features.freedom', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:credit-card', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.access', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.personnel_consommation.credit_renouvelable.features.access', [], 'credit_offers_index') }}</span></p>
+                        </div>
+                        
+                        <div class="credit-item__footer">
+                            <div class="credit-item__actions">
+                                <a href="{{ path('credit_offers_credit_renouvelable', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--secondary">
+                                    {{ tp('credit_offers_index.categories.personnel_consommation.credit_renouvelable.actions.learn_more', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:arrow-right', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                                <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--primary">
+                                    {{ tp('credit_offers_index.categories.personnel_consommation.credit_renouvelable.actions.apply', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:paper-airplane', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professionnel & Spécialisé -->
+            <div class="credit-category">
+                <div class="credit-category__header">
+                    <div class="credit-category__icon credit-category__icon--business">
+                        {{ ux_icon('heroicons:briefcase', {'class': 'credit-category__icon-svg'}) }}
+                    </div>
+                    <div class="credit-category__info">
+                        <h3 class="credit-category__title">{{ tp('credit_offers_index.categories.professionnel_specialise.title', [], 'credit_offers_index') }}</h3>
+                        <p class="credit-category__subtitle">{{ tp('credit_offers_index.categories.professionnel_specialise.subtitle', [], 'credit_offers_index') }}</p>
+                    </div>
+                </div>
+                
+                <div class="credit-category__grid">
+                    <div class="credit-item">
+                        <div class="credit-item__header">
+                            <div class="credit-item__content">
+                                <h4 class="credit-item__title">{{ tp('credit_offers_index.categories.professionnel_specialise.credit_professionnel.title', [], 'credit_offers_index') }}</h4>
+                                <p class="credit-item__description">{{ tp('credit_offers_index.categories.professionnel_specialise.credit_professionnel.description', [], 'credit_offers_index') }}</p>
+                            </div>
+                            <div class="credit-item__rate">
+                                <span class="credit-item__rate-value">{{ tp('credit_offers_index.categories.professionnel_specialise.credit_professionnel.rate', [], 'credit_offers_index')|replace({'{rate}': credit_rate('professionnel')})|raw }}</span>
+                                <span class="credit-item__rate-label">{{ tp('credit_offers_index.categories.professionnel_specialise.credit_professionnel.rate_label', [], 'credit_offers_index') }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="credit-item__content-text">
+                            <p>{{ ux_icon('heroicons:banknotes', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.amount_company', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.professionnel_specialise.credit_professionnel.features.amount', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:clock', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.duration_business', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.professionnel_specialise.credit_professionnel.features.duration', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:cog', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.usage_versatile', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.professionnel_specialise.credit_professionnel.features.usage', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:briefcase', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.sectors', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.professionnel_specialise.credit_professionnel.features.sectors', [], 'credit_offers_index') }}</span></p>
+                        </div>
+                        
+                        <div class="credit-item__footer">
+                            <div class="credit-item__actions">
+                                <a href="{{ path('credit_offers_credit_professionnel', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--secondary">
+                                    {{ tp('credit_offers_index.categories.professionnel_specialise.credit_professionnel.actions.learn_more', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:arrow-right', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                                <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--primary">
+                                    {{ tp('credit_offers_index.categories.professionnel_specialise.credit_professionnel.actions.apply', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:paper-airplane', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="credit-item">
+                        <div class="credit-item__header">
+                            <div class="credit-item__content">
+                                <h4 class="credit-item__title">{{ tp('credit_offers_index.categories.professionnel_specialise.credit_etudiant.title', [], 'credit_offers_index') }}</h4>
+                                <p class="credit-item__description">{{ tp('credit_offers_index.categories.professionnel_specialise.credit_etudiant.description', [], 'credit_offers_index') }}</p>
+                            </div>
+                            <div class="credit-item__rate">
+                                <span class="credit-item__rate-value">{{ tp('credit_offers_index.categories.professionnel_specialise.credit_etudiant.rate', [], 'credit_offers_index')|replace({'{rate}': credit_rate('etudiant')})|raw }}</span>
+                                <span class="credit-item__rate-label">{{ tp('credit_offers_index.categories.professionnel_specialise.credit_etudiant.rate_label', [], 'credit_offers_index') }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="credit-item__content-text">
+                            <p>{{ ux_icon('heroicons:banknotes', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.amount_studies', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.professionnel_specialise.credit_etudiant.features.amount', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:clock', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.duration_extended', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.professionnel_specialise.credit_etudiant.features.duration', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:pause-circle', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.deferment', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.professionnel_specialise.credit_etudiant.features.deferment', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:user-group', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.guarantee_parental', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.professionnel_specialise.credit_etudiant.features.guarantee', [], 'credit_offers_index') }}</span></p>
+                        </div>
+                        
+                        <div class="credit-item__footer">
+                            <div class="credit-item__actions">
+                                <a href="{{ path('credit_offers_credit_etudiant', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--secondary">
+                                    {{ tp('credit_offers_index.categories.professionnel_specialise.credit_etudiant.actions.learn_more', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:arrow-right', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                                <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--primary">
+                                    {{ tp('credit_offers_index.categories.professionnel_specialise.credit_etudiant.actions.apply', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:paper-airplane', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="credit-item">
+                        <div class="credit-item__header">
+                            <div class="credit-item__content">
+                                <h4 class="credit-item__title">{{ tp('credit_offers_index.categories.professionnel_specialise.microcredit.title', [], 'credit_offers_index') }}</h4>
+                                <p class="credit-item__description">{{ tp('credit_offers_index.categories.professionnel_specialise.microcredit.description', [], 'credit_offers_index') }}</p>
+                            </div>
+                            <div class="credit-item__rate">
+                                <span class="credit-item__rate-value">{{ tp('credit_offers_index.categories.professionnel_specialise.microcredit.rate', [], 'credit_offers_index')|replace({'{rate}': credit_rate('micro')})|raw }}</span>
+                                <span class="credit-item__rate-label">{{ tp('credit_offers_index.categories.professionnel_specialise.microcredit.rate_label', [], 'credit_offers_index') }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="credit-item__content-text">
+                            <p>{{ ux_icon('heroicons:banknotes', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.amount_small', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.professionnel_specialise.microcredit.features.amount', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:clock', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.duration_short', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.professionnel_specialise.microcredit.features.duration', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:document-check', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.conditions', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.professionnel_specialise.microcredit.features.conditions', [], 'credit_offers_index') }}</span></p>
+                            <p>{{ ux_icon('heroicons:heart', {'class': 'credit-item__content-text-icon'}) }}<span><strong>{{ tp('credit_offers_index.labels.inclusion', [], 'credit_offers_index') }} :</strong> {{ tp('credit_offers_index.categories.professionnel_specialise.microcredit.features.inclusion', [], 'credit_offers_index') }}</span></p>
+                        </div>
+                        
+                        <div class="credit-item__footer">
+                            <div class="credit-item__actions">
+                                <a href="{{ path('credit_offers_microcredit', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--secondary">
+                                    {{ tp('credit_offers_index.categories.professionnel_specialise.microcredit.actions.learn_more', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:arrow-right', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                                <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-item__action credit-item__action--primary">
+                                    {{ tp('credit_offers_index.categories.professionnel_specialise.microcredit.actions.apply', [], 'credit_offers_index') }}
+                                    {{ ux_icon('heroicons:paper-airplane', {'class': 'credit-item__action-icon'}) }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="credit-advantages">
+        <div class="credit-advantages__container">
+            <div class="credit-advantages__header">
+                <h2 class="credit-advantages__title">{{ tp('credit_offers_index.advantages.header.title', [], 'credit_offers_index') }}</h2>
+                <p class="credit-advantages__subtitle">
+                    {{ tp('credit_offers_index.advantages.header.subtitle', [], 'credit_offers_index') }}
+                </p>
+            </div>
+
+            <div class="credit-advantages__grid">
+                <div class="credit-advantage">
+                    <div class="credit-advantage__number">{{ tp('credit_offers_index.advantages.items.competitive_rates.number', [], 'credit_offers_index') }}</div>
+                    <div class="credit-advantage__content">
+                        <h3 class="credit-advantage__title">{{ tp('credit_offers_index.advantages.items.competitive_rates.title', [], 'credit_offers_index') }}</h3>
+                        <p class="credit-advantage__description">
+                            {{ tp('credit_offers_index.advantages.items.competitive_rates.description', [], 'credit_offers_index') }}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="credit-advantage">
+                    <div class="credit-advantage__number">{{ tp('credit_offers_index.advantages.items.express_response.number', [], 'credit_offers_index') }}</div>
+                    <div class="credit-advantage__content">
+                        <h3 class="credit-advantage__title">{{ tp('credit_offers_index.advantages.items.express_response.title', [], 'credit_offers_index') }}</h3>
+                        <p class="credit-advantage__description">
+                            {{ tp('credit_offers_index.advantages.items.express_response.description', [], 'credit_offers_index') }}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="credit-advantage">
+                    <div class="credit-advantage__number">{{ tp('credit_offers_index.advantages.items.expert_support.number', [], 'credit_offers_index') }}</div>
+                    <div class="credit-advantage__content">
+                        <h3 class="credit-advantage__title">{{ tp('credit_offers_index.advantages.items.expert_support.title', [], 'credit_offers_index') }}</h3>
+                        <p class="credit-advantage__description">
+                            {{ tp('credit_offers_index.advantages.items.expert_support.description', [], 'credit_offers_index') }}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="credit-advantage">
+                    <div class="credit-advantage__number">{{ tp('credit_offers_index.advantages.items.custom_solutions.number', [], 'credit_offers_index') }}</div>
+                    <div class="credit-advantage__content">
+                        <h3 class="credit-advantage__title">{{ tp('credit_offers_index.advantages.items.custom_solutions.title', [], 'credit_offers_index') }}</h3>
+                        <p class="credit-advantage__description">
+                            {{ tp('credit_offers_index.advantages.items.custom_solutions.description', [], 'credit_offers_index') }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="credit-advantages__stats">
+                <div class="credit-advantages__stat">
+                    <div class="credit-advantages__stat-number">{{ tp('credit_offers_index.advantages.stats.clients.number', [], 'credit_offers_index') }}</div>
+                    <div class="credit-advantages__stat-label">{{ tp('credit_offers_index.advantages.stats.clients.label', [], 'credit_offers_index') }}</div>
+                </div>
+                <div class="credit-advantages__stat">
+                    <div class="credit-advantages__stat-number">{{ tp('credit_offers_index.advantages.stats.years.number', [], 'credit_offers_index') }}</div>
+                    <div class="credit-advantages__stat-label">{{ tp('credit_offers_index.advantages.stats.years.label', [], 'credit_offers_index') }}</div>
+                </div>
+                <div class="credit-advantages__stat">
+                    <div class="credit-advantages__stat-number">{{ tp('credit_offers_index.advantages.stats.satisfaction.number', [], 'credit_offers_index') }}</div>
+                    <div class="credit-advantages__stat-label">{{ tp('credit_offers_index.advantages.stats.satisfaction.label', [], 'credit_offers_index') }}</div>
+                </div>
+                <div class="credit-advantages__stat">
+                    <div class="credit-advantages__stat-number">{{ tp('credit_offers_index.advantages.stats.response_time.number', [], 'credit_offers_index') }}</div>
+                    <div class="credit-advantages__stat-label">{{ tp('credit_offers_index.advantages.stats.response_time.label', [], 'credit_offers_index') }}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="credit-cta">
+        <div class="credit-cta__container">
+            <div class="credit-cta__content">
+                <h2 class="credit-cta__title">{{ tp('credit_offers_index.cta.title', [], 'credit_offers_index') }}</h2>
+                <p class="credit-cta__subtitle">
+                    {{ tp('credit_offers_index.cta.subtitle', [], 'credit_offers_index') }}
+                </p>
+                
+                <div class="credit-cta__actions">
+                    <a href="{{ path('credit_simulation_index', {_locale: app.request.locale}) }}" class="credit-cta__button credit-cta__button--primary">
+                        {{ ux_icon('heroicons:calculator', {'class': 'credit-cta__button-icon'}) }}
+                        {{ tp('credit_offers_index.cta.actions.simulate.text', [], 'credit_offers_index') }}
+                    </a>
+                    <a href="{{ path('credit_application_start', {_locale: app.request.locale}) }}" class="credit-cta__button credit-cta__button--secondary">
+                        {{ ux_icon('heroicons:document-text', {'class': 'credit-cta__button-icon'}) }}
+                        {{ tp('credit_offers_index.cta.actions.apply.text', [], 'credit_offers_index') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

@@ -1,0 +1,121 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block title %}{{ tp('email_credit_application_folder_customer_confirmation.title', {}, 'email_credit_application_folder_customer_confirmation') }}{% endblock %}
+
+{% block content %}
+    <h2 class="content-title">{{ tp('email_credit_application_folder_customer_confirmation.content.page_title', {}, 'email_credit_application_folder_customer_confirmation') }}</h2>
+    
+    <p class="content-text">
+        {{ tp('email_credit_application_folder_customer_confirmation.content.greeting', {firstName: creditApplication.firstName, lastName: creditApplication.lastName}, 'email_credit_application_folder_customer_confirmation') }}
+    </p>
+
+    <p class="content-text">
+        {{ tp('email_credit_application_folder_customer_confirmation.content.received_message', {}, 'email_credit_application_folder_customer_confirmation') }}
+    </p>
+
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #2e7d32;">{{ tp('email_credit_application_folder_customer_confirmation.content.reference_section.title', {}, 'email_credit_application_folder_customer_confirmation') }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            <strong style="font-size: 20px; color: #2e7d32;">{{ tp('email_credit_application_folder_customer_confirmation.content.reference_section.reference_number', {referenceNumber: creditApplication.referenceNumber}, 'email_credit_application_folder_customer_confirmation') }}</strong>
+        </p>
+    </div>
+
+    <h3 class="content-subtitle">{{ tp('email_credit_application_folder_customer_confirmation.content.request_details.title', {}, 'email_credit_application_folder_customer_confirmation') }}</h3>
+    
+    <table class="data-table">
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_customer_confirmation.content.request_details.requested_amount', {}, 'email_credit_application_folder_customer_confirmation') }}</strong></td>
+            <td style="color: #1976d2; font-weight: 700; font-size: 18px;">{{ tp('email_credit_application_folder_customer_confirmation.content.request_details.amount_value', {amount: creditApplication.loanAmount|number_format(2, ',', ' ')}, 'email_credit_application_folder_customer_confirmation') }}</td>
+        </tr>
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_customer_confirmation.content.request_details.credit_type', {}, 'email_credit_application_folder_customer_confirmation') }}</strong></td>
+            <td>{{ creditApplication.creditType.value }}</td>
+        </tr>
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_customer_confirmation.content.request_details.duration', {}, 'email_credit_application_folder_customer_confirmation') }}</strong></td>
+            <td>{{ tp('email_credit_application_folder_customer_confirmation.content.request_details.duration_months', {duration: creditApplication.duration}, 'email_credit_application_folder_customer_confirmation') }}</td>
+        </tr>
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_customer_confirmation.content.request_details.estimated_monthly', {}, 'email_credit_application_folder_customer_confirmation') }}</strong></td>
+            <td style="color: #2e7d32; font-weight: 600;">{{ tp('email_credit_application_folder_customer_confirmation.content.request_details.monthly_value', {monthlyPayment: creditApplication.monthlyPayment|number_format(2, ',', ' ')}, 'email_credit_application_folder_customer_confirmation') }}</td>
+        </tr>
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_customer_confirmation.content.request_details.total_cost', {}, 'email_credit_application_folder_customer_confirmation') }}</strong></td>
+            <td>{{ tp('email_credit_application_folder_customer_confirmation.content.request_details.total_cost_value', {totalCost: creditApplication.totalCost|number_format(2, ',', ' ')}, 'email_credit_application_folder_customer_confirmation') }}</td>
+        </tr>
+    </table>
+
+    <hr class="divider">
+
+    <h3 class="content-subtitle">{{ tp('email_credit_application_folder_customer_confirmation.content.your_information.title', {}, 'email_credit_application_folder_customer_confirmation') }}</h3>
+    
+    <table class="data-table">
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_customer_confirmation.content.your_information.email', {}, 'email_credit_application_folder_customer_confirmation') }}</strong></td>
+            <td>{{ creditApplication.email }}</td>
+        </tr>
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_customer_confirmation.content.your_information.phone', {}, 'email_credit_application_folder_customer_confirmation') }}</strong></td>
+            <td>{{ creditApplication.phone }}</td>
+        </tr>
+        <tr>
+            <td><strong>{{ tp('email_credit_application_folder_customer_confirmation.content.your_information.address', {}, 'email_credit_application_folder_customer_confirmation') }}</strong></td>
+            <td>{{ tp('email_credit_application_folder_customer_confirmation.content.your_information.address_format', {
+                address: creditApplication.address,
+                postalCode: creditApplication.postalCode,
+                city: creditApplication.city
+            }, 'email_credit_application_folder_customer_confirmation') }}</td>
+        </tr>
+    </table>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0; color: #1976d2;">{{ tp('email_credit_application_folder_customer_confirmation.content.next_steps.title', {}, 'email_credit_application_folder_customer_confirmation') }}</h3>
+        <ul style="margin: 0; padding-left: 20px; color: #000000;">
+            <li style="margin-bottom: 8px;">{{ tp('email_credit_application_folder_customer_confirmation.content.next_steps.step1', {}, 'email_credit_application_folder_customer_confirmation') }}</li>
+            <li style="margin-bottom: 8px;">{{ tp('email_credit_application_folder_customer_confirmation.content.next_steps.step2', {}, 'email_credit_application_folder_customer_confirmation')|raw }}</li>
+            <li style="margin-bottom: 0;">{{ tp('email_credit_application_folder_customer_confirmation.content.next_steps.step3', {}, 'email_credit_application_folder_customer_confirmation') }}</li>
+        </ul>
+    </div>
+
+    <div class="success-box">
+        <h3 style="margin-top: 0; color: #2e7d32;">{{ tp('email_credit_application_folder_customer_confirmation.content.account_section.title', {}, 'email_credit_application_folder_customer_confirmation') }}</h3>
+        <p style="margin-bottom: 15px; color: #000000;">
+            {{ tp('email_credit_application_folder_customer_confirmation.content.account_section.login_info', {}, 'email_credit_application_folder_customer_confirmation') }}
+        </p>
+        <ul style="margin: 15px 0; padding-left: 20px; color: #000000;">
+            <li style="margin-bottom: 8px;">{{ tp('email_credit_application_folder_customer_confirmation.content.account_section.existing_account', {}, 'email_credit_application_folder_customer_confirmation')|raw }}</li>
+            <li style="margin-bottom: 15px;">{{ tp('email_credit_application_folder_customer_confirmation.content.account_section.new_account', {}, 'email_credit_application_folder_customer_confirmation')|raw }}</li>
+        </ul>
+        <p style="margin-bottom: 10px; color: #000000; font-weight: 600;">
+            {{ tp('email_credit_application_folder_customer_confirmation.content.account_section.benefits', {}, 'email_credit_application_folder_customer_confirmation') }}
+        </p>
+        <ul style="margin: 10px 0 20px 0; padding-left: 20px; color: #000000;">
+            <li style="margin-bottom: 5px;">{{ tp('email_credit_application_folder_customer_confirmation.content.account_section.benefit1', {}, 'email_credit_application_folder_customer_confirmation') }}</li>
+            <li style="margin-bottom: 5px;">{{ tp('email_credit_application_folder_customer_confirmation.content.account_section.benefit2', {}, 'email_credit_application_folder_customer_confirmation') }}</li>
+            <li style="margin-bottom: 0;">{{ tp('email_credit_application_folder_customer_confirmation.content.account_section.benefit3', {}, 'email_credit_application_folder_customer_confirmation') }}</li>
+        </ul>
+        {% set userLocale = locale|default('fr') %}
+        {% set supportedLocales = ['fr', 'de', 'nl', 'en', 'es'] %}
+        {% set finalLocale = userLocale in supportedLocales ? userLocale : 'fr' %}
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="{{ url('app_login.' ~ finalLocale) }}" style="display: inline-block; margin: 0 10px; padding: 12px 25px; background-color: #1976d2; color: white; text-decoration: none; border-radius: 5px; font-weight: 600;">
+                {{ tp('email_credit_application_folder_customer_confirmation.content.account_section.login_button', {}, 'email_credit_application_folder_customer_confirmation') }}
+            </a>
+            <a href="{{ url('app_register.' ~ finalLocale) }}" style="display: inline-block; margin: 0 10px; padding: 12px 25px; background-color: #2e7d32; color: white; text-decoration: none; border-radius: 5px; font-weight: 600;">
+                {{ tp('email_credit_application_folder_customer_confirmation.content.account_section.register_button', {}, 'email_credit_application_folder_customer_confirmation') }}
+            </a>
+        </div>
+    </div>
+
+    <div class="warning-box">
+        <h3 style="margin-top: 0; color: #f57c00;">{{ tp('email_credit_application_folder_customer_confirmation.content.questions_section.title', {}, 'email_credit_application_folder_customer_confirmation') }}</h3>
+        <p style="margin-bottom: 0; color: #000000;">
+            {{ tp('email_credit_application_folder_customer_confirmation.content.questions_section.contact_info', {referenceNumber: creditApplication.referenceNumber}, 'email_credit_application_folder_customer_confirmation')|raw }}
+        </p>
+    </div>
+
+    <p class="content-text" style="margin-bottom: 0;">
+        {{ tp('email_credit_application_folder_customer_confirmation.content.signature', {}, 'email_credit_application_folder_customer_confirmation')|raw }}
+    </p>
+{% endblock %}

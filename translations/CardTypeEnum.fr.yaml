@@ -1,0 +1,41 @@
+# Fichier de traduction pour CardTypeEnum
+# Domaine: CardTypeEnum
+# Langue: Français (fr)
+
+CardTypeEnum:
+  # Types de cartes - Labels
+  labels:
+    debit: "Carte de débit"
+    credit: "Carte de crédit" 
+    prepaid: "Carte prépayée"
+  
+  # Types de cartes - Descriptions
+  descriptions:
+    debit: "Débitée directement sur votre compte"
+    credit: "Avec facilité de paiement"
+    prepaid: "Rechargeable selon vos besoins"
+  
+  # Informations complémentaires
+  info:
+    title: "Types de cartes bancaires"
+    subtitle: "Choisissez le type de carte qui vous convient"
+    
+  # Messages pour les formulaires
+  form:
+    placeholder: "Sélectionnez un type de carte"
+    help: "Le type de carte détermine son mode de fonctionnement"
+    
+  # Avantages par type
+  advantages:
+    debit:
+      - "Contrôle total de vos dépenses"
+      - "Pas de risque d'endettement"
+      - "Utilisation immédiate"
+    credit:
+      - "Facilité de paiement"
+      - "Crédit renouvelable"
+      - "Remboursement flexible"
+    prepaid:
+      - "Maîtrise parfaite du budget"
+      - "Pas de découvert possible"
+      - "Idéale pour les cadeaux"

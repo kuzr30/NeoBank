@@ -1,0 +1,22 @@
+login:
+  title: "Anmeldung zu Ihrem Konto"
+  subtitle: "Greifen Sie sicher auf Ihre Bankdienstleistungen zu"
+  email_label: "E-Mail-Adresse"
+  email_placeholder: "ihre.email@beispiel.com"
+  password_label: "Passwort"
+  password_placeholder: "••••••••"
+  remember_me: "Angemeldet bleiben"
+  login_button: "Anmelden"
+  forgot_password: "Passwort vergessen?"
+  create_account: "Konto erstellen"
+  no_account: "Sie haben noch kein Konto?"
+  security_ssl: "SSL Sicher"
+  security_data: "Daten geschützt"
+  security_support: "Support 24/7"
+  back_home: "Zurück zur Startseite"
+  invalid_credentials: "E-Mail oder Passwort falsch"
+
+errors:
+  email_required: "Die E-Mail ist erforderlich"
+  email_invalid: "Die E-Mail ist nicht gültig"
+  password_required: "Das Passwort ist erforderlich"

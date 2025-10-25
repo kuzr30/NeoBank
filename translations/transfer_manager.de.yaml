@@ -1,0 +1,52 @@
+transfer_manager:
+  exceptions:
+    account_blocked: "Ihr Konto ist gesperrt. Kontaktieren Sie die Verwaltung."
+    transfer_expired: "Diese Überweisung ist abgelaufen."
+    transfer_not_cancellable: "Diese Überweisung kann nicht storniert werden."
+    transfer_not_validatable: "Diese Überweisung kann nicht validiert werden."
+    transfer_not_blockable: "Diese Überweisung kann nicht blockiert werden."
+    transfer_not_blocked: "Diese Überweisung ist nicht blockiert."
+    
+  user_messages:
+    account_blocked: "Ihr Konto ist gesperrt. Kontaktieren Sie die Verwaltung."
+    transfer_expired: "Diese Überweisung ist abgelaufen."
+    code_expired: "Dieser Code kann nicht mehr validiert werden (zu viele fehlgeschlagene Versuche)."
+    code_validated_success: "Code erfolgreich validiert. Überweisung wird ausgeführt."
+    account_blocked_attempts: "Konto nach zu vielen fehlgeschlagenen Versuchen gesperrt. Kontaktieren Sie die Verwaltung."
+    no_pending_code: "Kein Code ausstehend. Generieren Sie zuerst einen Code."
+    transfer_completed: "Überweisung erfolgreich abgeschlossen!"
+    next_code_needed: "Code validiert. Generieren Sie den nächsten Code zum Fortfahren."
+    
+  admin_notes:
+    blocked_after_attempts: "Konto nach 9 falschen Validierungsversuchen gesperrt"
+    
+  log_messages:
+    transfer_initiated: "Neue Überweisung mit sofortiger Belastung initiiert"
+    code_added: "Code zur Überweisung hinzugefügt"
+    code_validated_success: "Code erfolgreich validiert"
+    code_attempt_failed: "Code-Versuch fehlgeschlagen"
+    transfer_executed: "Überweisung erfolgreich ausgeführt"
+    transfer_execution_failed: "Ausführung der Überweisung fehlgeschlagen"
+    user_unblocked: "Benutzer entsperrt"
+    code_expired_next_requested: "Code abgelaufen - Anfrage für nächsten Code"
+    cancellation_started: "Stornierung der Überweisung begonnen"
+    amount_recredited: "Betrag aufgrund Stornierung wieder gutgeschrieben"
+    transfer_cancelled: "Überweisung erfolgreich storniert"
+    transfer_blocked: "Überweisung vom Überweisungsservice blockiert"
+    transfer_unblocked: "Überweisung vom Admin entsperrt"
+    admin_validation_simulated: "Validierung von der Verwaltung simuliert"
+    
+  transaction_notes:
+    money_debited_on_init: "Geld bereits bei Initiierung belastet"
+    money_always_debited_comment: "IMMER den Betrag wieder gutschreiben, da das Geld IMMER bei der Initiierung belastet wird"
+
+  validation:
+    amount_must_be_positive: "Der Betrag muss eine positive Zahl sein."
+    insufficient_credit_amount: "Unzureichender Betrag auf dem Kreditkonto."
+  
+  errors:
+    sub_account_not_found: "Kredit-Unterkonto nicht gefunden"
+    no_pending_transfer: "Keine ausstehenden Überweisungen."
+    verification_code_expired: "Verifizierungscode abgelaufen."
+    verification_code_invalid: "Verifizierungscode ungültig."
+    insufficient_amount: "Unzureichender Betrag"

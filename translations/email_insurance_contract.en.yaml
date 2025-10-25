@@ -1,0 +1,41 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_insurance_contract.fr.yaml
+# Generated on: 2025-09-30 14:06:20
+
+email_insurance_contract:
+    title: "Your insuranceType insurance contract"
+    
+    content:
+        page_title: "Your insuranceType insurance contract"
+        greeting: "Hello customerName,"
+
+        contract_ready:
+            title: "Your contract is ready!"
+            description: "Please find attached your insuranceType insurance contract. This official document confirms your coverage."
+        
+        contract_details:
+            title: "Your contract details"
+            contract_number: "Contract no. contractNumber"
+            insurance_type: "Insurance type"
+            monthly_premium: "Monthly premium"
+            activation_date: "Activation date"
+            status: "Status"
+        
+        important_info:
+            title: "Important information"
+            point_1: "This contract takes effect from the activation date mentioned"
+            point_2: "Your monthly premium will be automatically deducted each month"
+            point_3: "You have a cooling-off period of 14 calendar days"
+            point_4: "Keep this document safe, it will be required in case of a claim"
+        
+        questions:
+            title: "Questions?"
+            description: "Our team is at your disposal for any questions regarding your insurance contract."
+            footer:
+            company_info: "company_name"
+            contact_email: "Email: company_email"
+            privacy_notice: "This email and attached documents may contain confidential information. If you are not the intended recipient, please inform us immediately and destroy this email."
+        
+        closing: "We thank you for your trust and remain at your disposal."
+        signature: "Best regards,<br><strong>The %company_name% team</strong>"

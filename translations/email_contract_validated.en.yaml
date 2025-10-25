@@ -1,0 +1,26 @@
+# ENGLISH TRANSLATION - Translated from French
+# TODO: Translate all French text to English
+# Original file: email_contract_validated.fr.yaml
+# Generated on: 2025-09-30 14:06:19
+
+email_contract_validated:
+  title: "Contract validated"
+  content:
+    page_title: "Your contract has been validated!"
+    greeting: "Hello <strong>%customerName%</strong>,"
+    validation_section:
+      title: "Validation confirmed"
+      message: "Excellent news! Your credit contract <strong>%contractNumber%</strong> has been validated by our team."
+    contract_details:
+      title: "Contract details"
+      number: "Contract number"
+      amount: "Loan amount"
+    next_steps:
+      title: "Next steps"
+      message: "Your file is now being finalized. Our teams are preparing the fund disbursement. You will receive a notification as soon as the funds are available in your account."
+    access_account: "Access my account"
+    thanks_message: "Thank you for your trust!"
+    footer: "The %company_name% team<br><em>This is an automatic email, please do not reply.</em>"
+  logs:
+    success: "Contract validation email sent successfully to %email% for contract %contractNumber% (locale: %locale%)"
+    error: "Error sending contract validation email for contract %contractNumber%: %error%"

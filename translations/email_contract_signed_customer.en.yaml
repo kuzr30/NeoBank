@@ -1,0 +1,26 @@
+email_contract_signed_customer:
+  title: "Contract Signing Confirmation"
+  subject: "Contract Signing Confirmation - %referenceNumber%"
+  content:
+    confirmation:
+      title: "Your contract has been signed successfully!"
+      description: "Dear %customerName%, we confirm that your credit contract has been signed and received by our services."
+    contract_details:
+      title: "Your Contract Details"
+      reference_number: "Reference Number"
+      loan_amount: "Loan Amount"
+      status_label: "Status"
+      status_value: "Signed"
+    next_steps:
+      title: "Next Steps"
+      description: "Your file now follows the administrative validation process:"
+      validation: "Verification and validation of your contract by our teams"
+      processing: "Administrative processing and finalization"
+      disbursement: "Fund disbursement to your account"
+    important_info:
+      title: "Important Information"
+      description: "Fund disbursement will occur within 24-48 business hours after administrative validation."
+    cta:
+      button_text: "View my file"
+    footer:
+      regards: "Kind regards,"

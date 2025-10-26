@@ -23,13 +23,13 @@
 }
 
 .welcome-notification {
-    border-left: 4px solid var(--color-primary);
+    border-left: 4px solid var(--color-accent);
 }
 
 .welcome-content {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: var(--spacing-md);
 }
 
 .welcome-icon {
@@ -81,9 +81,9 @@
     display: inline-block;
     width: 1rem;
     height: 1rem;
-    border: 2px solid rgba(59, 130, 246, 0.3);
-    border-radius: 50%;
-    border-top-color: var(--color-primary);
+    border: 2px solid rgba(var(--color-accent-rgb), 0.3);
+    border-radius: var(--radius-full);
+    border-top-color: var(--color-accent);
     animation: spin 1s linear infinite;
 }
 
@@ -106,7 +106,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, var(--color-white-alpha-20), transparent);
     transition: left 0.5s;
 }
 
@@ -133,11 +133,11 @@
     .action-card,
     .shortcut-item {
         box-shadow: none !important;
-        border: 1px solid #ccc !important;
+        border: 1px solid var(--color-border) !important;
     }
     
     .action-card--primary {
-        background: #f3f4f6 !important;
-        color: #1f2937 !important;
+        background: var(--color-gray-100) !important;
+        color: var(--color-text) !important;
     }
 }

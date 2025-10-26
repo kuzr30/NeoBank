@@ -9,9 +9,9 @@
 
 /* Top Navigation Bar */
 .banking__navbar {
-    background: #ffffff;
-    border-bottom: 1px solid #e1e8ed;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    background: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
     position: sticky;
     top: 0;
     margin-top: 2px;
@@ -20,7 +20,7 @@
 .banking__navbar-container {
     max-width: 80%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 var(--spacing-lg);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,15 +35,15 @@
 .banking__user-info {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: var(--spacing-md);
 }
 
 .banking__user-avatar {
     width: 40px;
     height: 40px;
-    background: #0066cc;
-    color: white;
-    border-radius: 50%;
+    background: var(--color-banking-blue);
+    color: var(--color-background);
+    border-radius: var(--radius-full);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,13 +58,13 @@
 
 .banking__user-name {
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--color-text);
     font-size: 14px;
 }
 
 .banking__user-status {
     font-size: 12px;
-    color: #7f8c8d;
+    color: var(--color-text-light);
 }
 
 .banking__nav-center {
@@ -80,25 +80,25 @@
 }
 
 .banking__nav-tab {
-    color: #7f8c8d;
+    color: var(--color-text-light);
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
-    padding: 8px 0;
+    padding: var(--spacing-sm) 0;
     border-bottom: 2px solid transparent;
-    transition: all 0.2s ease;
+    transition: all var(--transition-base);
 }
 
 .banking__nav-tab--active,
 .banking__nav-tab:hover {
-    color: #0066cc;
-    border-bottom-color: #0066cc;
+    color: var(--color-banking-blue);
+    border-bottom-color: var(--color-banking-blue);
 }
 
 .banking__nav-right {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: var(--spacing-sm);
 }
 
 .banking__nav-btn {
@@ -106,32 +106,32 @@
     height: 40px;
     border: none;
     background: transparent;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background 0.2s ease;
+    transition: background var(--transition-base);
     position: relative;
 }
 
 .banking__nav-btn:hover {
-    background: #f8f9fa;
+    background: var(--color-gray-50);
 }
 
 .banking__nav-icon {
     width: 20px;
     height: 20px;
-    color: #7f8c8d;
+    color: var(--color-text-light);
 }
 
 .banking__notification-badge {
     position: absolute;
-    top: 8px;
-    right: 8px;
-    background: #e74c3c;
-    color: white;
-    border-radius: 50%;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    background: var(--color-banking-red);
+    color: var(--color-background);
+    border-radius: var(--radius-full);
     width: 16px;
     height: 16px;
     font-size: 10px;
@@ -144,30 +144,30 @@
 /* Main Content Layout */
 .banking__main {
     flex: 1;
-    background: #f5f7fa;
+    background: var(--color-background-light);
 }
 
 .banking__container {
     max-width: 80%;
     margin: 0 auto;
-    padding: 24px 20px;
+    padding: var(--spacing-lg) var(--spacing-lg);
     display: grid;
     grid-template-columns: 280px 1fr;
-    gap: 24px;
+    gap: var(--spacing-lg);
 }
 
 /* Sidebar */
 .banking__sidebar {
-    background: #ffffff;
-    border-radius: 8px;
-    border: 1px solid #e1e8ed;
+    background: var(--color-background);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
     height: fit-content;
     overflow: hidden;
 }
 
 .banking__sidebar-section {
-    padding: 20px;
-    border-bottom: 1px solid #e1e8ed;
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .banking__sidebar-section:last-child {
@@ -177,81 +177,81 @@
 .banking__sidebar-title {
     font-size: 14px;
     font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 16px;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
 }
 
 .banking__account-list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: var(--spacing-md);
 }
 
 .banking__account-item {
-    padding: 16px;
-    border: 1px solid #e1e8ed;
-    border-radius: 6px;
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all var(--transition-base);
 }
 
 .banking__account-item--active,
 .banking__account-item:hover {
-    border-color: #0066cc;
-    background: #f8fbff;
+    border-color: var(--color-banking-blue);
+    background: rgba(var(--color-accent-rgb), 0.05);
 }
 
 .banking__account-header {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
-    gap: 8px;
+    margin-bottom: var(--spacing-sm);
+    gap: var(--spacing-sm);
 }
 
 .banking__account-icon {
     width: 16px;
     height: 16px;
-    color: #7f8c8d;
+    color: var(--color-text-light);
     flex-shrink: 0;
 }
 
 .banking__account-icon--credit {
-    color: #e74c3c;
+    color: var(--color-banking-red);
 }
 
 .banking__account-icon--card {
-    color: #9b59b6;
+    color: var(--color-banking-purple);
 }
 
 .banking__account-icon--savings {
-    color: #27ae60;
+    color: var(--color-banking-green);
 }
 
 .banking__account-icon--insurance {
-    color: #3498db;
+    color: var(--color-info);
 }
 
 .banking__account-name {
     font-weight: 600;
     font-size: 13px;
-    color: #2c3e50;
+    color: var(--color-text);
     flex: 1;
 }
 
 .banking__account-number {
     font-size: 11px;
-    color: #7f8c8d;
-    font-family: monospace;
+    color: var(--color-text-light);
+    font-family: var(--font-family-mono);
     margin-left: auto;
 }
 
 .banking__account-item--main {
-    border-left: 3px solid #0066cc;
+    border-left: 3px solid var(--color-banking-blue);
 }
 
 .banking__account-item--sub {
-    margin-left: 12px;
-    border-left: 2px solid #e1e8ed;
+    margin-left: var(--spacing-md);
+    border-left: 2px solid var(--color-border);
     position: relative;
 }
 
@@ -262,68 +262,68 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(to bottom, transparent 0%, #e1e8ed 20%, #e1e8ed 80%, transparent 100%);
+    background: linear-gradient(to bottom, transparent 0%, var(--color-border) 20%, var(--color-border) 80%, transparent 100%);
 }
 
 .banking__account-balance {
     font-weight: 700;
     font-size: 16px;
-    color: #2c3e50;
+    color: var(--color-text);
     margin-bottom: 4px;
 }
 
 .banking__account-status {
     font-size: 11px;
-    color: #7f8c8d;
+    color: var(--color-text-light);
 }
 
 .banking__account-status--positive {
-    color: #27ae60;
+    color: var(--color-banking-green);
 }
 
 .banking__quick-actions {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: var(--spacing-sm);
 }
 
 .banking__quick-btn {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 12px;
-    border: 1px solid #e1e8ed;
-    border-radius: 6px;
-    background: #ffffff;
-    color: #2c3e50;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-background);
+    color: var(--color-text);
     font-size: 13px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all var(--transition-base);
 }
 
 .banking__quick-btn:hover {
-    border-color: #0066cc;
-    background: #f8fbff;
+    border-color: var(--color-banking-blue);
+    background: rgba(var(--color-accent-rgb), 0.05);
 }
 
 .banking__quick-icon {
     width: 16px;
     height: 16px;
-    color: #0066cc;
+    color: var(--color-banking-blue);
 }
 
 /* Main Content Area */
 .banking__content {
-    background: #ffffff;
-    border-radius: 8px;
-    border: 1px solid #e1e8ed;
+    background: var(--color-background);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
     overflow: hidden;
 }
 
 .banking__operations-header {
-    padding: 24px;
-    background: #ffffff;
-    border-bottom: 1px solid #e1e8ed;
+    padding: var(--spacing-lg);
+    background: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -332,15 +332,15 @@
 .banking__account-title {
     font-size: 20px;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--color-text);
     margin-bottom: 4px;
 }
 
 .banking__account-details {
     display: flex;
-    gap: 16px;
+    gap: var(--spacing-md);
     font-size: 13px;
-    color: #7f8c8d;
+    color: var(--color-text-light);
 }
 
 .banking__balance-display {
@@ -350,20 +350,20 @@
 .banking__balance-main {
     font-size: 28px;
     font-weight: 700;
-    color: #2c3e50;
+    color: var(--color-text);
     margin-bottom: 4px;
 }
 
 .banking__balance-available {
     font-size: 13px;
-    color: #7f8c8d;
+    color: var(--color-text-light);
 }
 
 /* Filters and Tools */
 .banking__filters {
-    padding: 16px 24px;
-    background: #f8f9fa;
-    border-bottom: 1px solid #e1e8ed;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--color-gray-50);
+    border-bottom: 1px solid var(--color-border);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -371,18 +371,18 @@
 
 .banking__filter-group {
     display: flex;
-    gap: 12px;
+    gap: var(--spacing-md);
     align-items: center;
 }
 
 .banking__filter-select,
 .banking__filter-date {
-    padding: 8px 12px;
-    border: 1px solid #e1e8ed;
-    border-radius: 4px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
     font-size: 13px;
-    background: #ffffff;
-    color: #2c3e50;
+    background: var(--color-background);
+    color: var(--color-text);
 }
 
 .banking__filter-btn,
@@ -390,20 +390,20 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    padding: 8px 12px;
-    border: 1px solid #e1e8ed;
-    border-radius: 4px;
-    background: #ffffff;
-    color: #2c3e50;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-background);
+    color: var(--color-text);
     font-size: 13px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all var(--transition-base);
 }
 
 .banking__filter-btn:hover,
 .banking__tool-btn:hover {
-    border-color: #0066cc;
-    background: #f8fbff;
+    border-color: var(--color-banking-blue);
+    background: rgba(var(--color-accent-rgb), 0.05);
 }
 
 .banking__filter-icon,
@@ -414,7 +414,7 @@
 
 .banking__tools {
     display: flex;
-    gap: 8px;
+    gap: var(--spacing-sm);
 }
 
 /* Operations Table */
@@ -428,49 +428,49 @@
 }
 
 .banking__table-head {
-    background: #f8f9fa;
+    background: var(--color-gray-50);
 }
 
 .banking__table-th {
-    padding: 16px 24px;
+    padding: var(--spacing-md) var(--spacing-lg);
     text-align: left;
     font-size: 12px;
     font-weight: 600;
-    color: #7f8c8d;
+    color: var(--color-text-light);
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    border-bottom: 1px solid #e1e8ed;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .banking__table-row {
-    border-bottom: 1px solid #f1f3f4;
-    transition: background 0.2s ease;
+    border-bottom: 1px solid var(--color-border-light);
+    transition: background var(--transition-base);
 }
 
 .banking__table-row:hover {
-    background: #f8f9fa;
+    background: var(--color-gray-50);
 }
 
 .banking__table-row--clickable {
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all var(--transition-base);
 }
 
 .banking__table-row--clickable:hover {
-    background: #e3f2fd;
+    background: rgba(var(--color-accent-rgb), 0.05);
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-sm);
 }
 
 .banking__table-row--clickable:active {
     transform: translateY(0);
-    background: #bbdefb;
+    background: rgba(var(--color-accent-rgb), 0.1);
 }
 
 .banking__table-td {
-    padding: 16px 24px;
+    padding: var(--spacing-md) var(--spacing-lg);
     font-size: 14px;
-    color: #2c3e50;
+    color: var(--color-text);
     vertical-align: top;
 }
 
@@ -482,21 +482,21 @@
 
 .banking__operation-name {
     font-weight: 500;
-    color: #2c3e50;
+    color: var(--color-text);
 }
 
 .banking__operation-ref {
     font-size: 12px;
-    color: #7f8c8d;
+    color: var(--color-text-light);
 }
 
 .banking__amount--credit {
-    color: #27ae60;
+    color: var(--color-banking-green);
     font-weight: 600;
 }
 
 .banking__amount--debit {
-    color: #e74c3c;
+    color: var(--color-banking-red);
     font-weight: 600;
 }
 

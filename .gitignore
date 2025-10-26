@@ -22,3 +22,14 @@
 ###> uploads ###
 /public/uploads/
 ###< uploads ###
+
+###> IDE and documentation ###
+.idea/
+.vscode/
+FINAL_STEP.md
+QUICKSTART_REFACTORING.md
+REFACTORING_CHANGELOG.md
+Todo.md
+Readme.md
+COLOR_SYSTEM.md
+###< IDE and documentation ###

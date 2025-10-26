@@ -1,0 +1,214 @@
+# Konfiguration der lokalisierten Routen - Deutsch
+
+routes:
+  # Hauptrouten
+  home: ''
+  home_index: ''
+
+  # Authentifizierung
+  login: anmelden
+  logout: abmelden
+  app_login: anmelden
+  app_logout: abmelden
+  register: registrieren
+  app_register: registrieren
+
+  # Passwort zurücksetzen
+  app_forgot_password_request: passwort-vergessen
+  app_check_email: passwort-vergessen/email-pruefen
+  app_reset_password: passwort-vergessen/zuruecksetzen
+
+  # Kreditsimulation
+  credit_simulation: kredit-simulation
+  credit_simulation_index: kredit-simulation
+  credit_simulation_calculate: kredit-simulation/berechnen
+  credit_simulation_result: kredit-simulation/ergebnis
+  credit_simulation_amortization_table: kredit-simulation/tilgungsplan
+
+  # Kreditantrag
+  credit_application: kreditantrag
+  credit_application_start: mein-kreditantrag
+  credit_application_step: mein-kreditantrag/schritt
+  credit_application_summary: mein-kreditantrag/zusammenfassung
+  credit_application_submit: mein-kreditantrag/einreichen
+  credit_application_confirmation: mein-kreditantrag/bestaetigung
+
+  # Kontoaktivierung
+  app_account_activation_notice: aktivierungsbenachrichtigung
+  app_account_activation: konto-aktivieren
+  app_resend_activation: aktivierung-erneut-senden
+
+  # Kreditangebote
+  credit_offers_index: kreditangebote
+  credit_offers_personal_loan: kreditangebote/privatkredit
+  credit_offers_travel_loan: kreditangebote/reisekredit
+  credit_offers_auto_loan: kreditangebote/autokredit
+  credit_offers_home_loan: kreditangebote/immobilienkredit
+  credit_offers_hypothecaire: kreditangebote/hypothek
+  credit_offers_travaux: kreditangebote/renovierung
+  credit_offers_amelioration_habitat: kreditangebote/wohnungsverbesserung
+  credit_offers_credit_relais: kreditangebote/ueberbrueckungskredit
+  credit_offers_leasing_automobile: kreditangebote/autoleasing
+  credit_offers_credit_consommation: kreditangebote/verbraucherkredit
+  credit_offers_regroupement_credits: kreditangebote/umschuldung
+  credit_offers_credit_renouvelable: kreditangebote/revolvierender-kredit
+  credit_offers_credit_professionnel: kreditangebote/geschaeftskredit
+  credit_offers_credit_etudiant: kreditangebote/studentenkredit
+  credit_offers_microcredit: kreditangebote/mikrokredit
+
+  # Dienste
+  services_accounts_cards: dienste/konten-karten
+  services_savings_investments: dienste/sparen-investitionen
+  services_insurances: dienste/versicherungen
+  services_devis_form: dienste/versicherungen/angebot
+  services_devis_confirmation: dienste/versicherungen/angebot/bestaetigung
+
+  # Banking Mobile
+  banking_mobile_app: mobile-banking/mobile-app
+  banking_credit_card: mobile-banking/kreditkarte
+
+  # Banking Dashboard
+  banking_dashboard: banking/dashboard
+  banking_comptes: banking/konten
+  banking_cartes: banking/karten
+  banking_virements: banking/ueberweisungen
+  banking_epargne: banking/sparen
+  banking_credits: banking/kredite
+  banking_assurances: banking/versicherungen
+  banking_ribs: banking/meine-beguenstigten
+
+  # Banking - Konten
+  banking_accounts: banking/konten
+  banking_account_detail: banking/konten
+
+  # Banking - Karten
+  banking_cards: banking/karten
+  app_banking_card_index: banking/karten
+  app_banking_card_subscription_classic: banking/karten/abonnieren/classic
+  app_banking_card_subscription_gold: banking/karten/abonnieren/gold
+  app_banking_card_subscription_platinum: banking/karten/abonnieren/platinum
+  app_banking_card_subscription_show: banking/karten/abonnieren
+  app_banking_card_subscription_cancel: banking/karten/abonnieren/stornieren
+  app_banking_card_subscription_status: banking/karten/abonnieren/status
+
+  # Banking - Kartensperrung
+  app_card_opposition_index: banking/karten/sperrung
+  app_card_opposition_create: banking/karten/sperrung/karte
+  app_card_opposition_show: banking/karten/sperrung/sperrung
+  app_card_opposition_emergency: banking/karten/sperrung/notfall
+  app_card_opposition_status: banking/karten/sperrung/sperrung/status
+
+  # Banking - Kredite
+  banking_credits_detailed: banking/kredite
+  banking_credit_detail: banking/kredite
+  banking_credit_application_detail: banking/kredite/antrag
+  banking_credit_amortization: banking/kredite
+  banking_credit_simulation: banking/kredite/simulation/neu
+  banking_credit_application: banking/kredite/antrag/neu
+
+  # Banking - Kreditüberweisungen
+  banking_credit_transfer_form: banking/kredit-ueberweisung/formular
+  banking_credit_transfer_initiate: banking/kredit-ueberweisung/initialisieren
+  banking_credit_transfer_confirm: banking/kredit-ueberweisung/bestaetigen
+
+  # Banking - Darlehen
+  banking_loans: banking/darlehen
+  banking_loan_detail: banking/darlehen
+
+  # Banking - RIB/Begünstigte
+  banking_ribs_index: banking/meine-beguenstigten
+  banking_rib_new: banking/meine-beguenstigten/neu
+  banking_rib_show: banking/meine-beguenstigten
+  banking_rib_delete: banking/meine-beguenstigten
+
+  # Banking - Transaktionen
+  banking_transactions: banking/transaktionen
+
+  # Banking - Überweisungen
+  banking_transfers: banking/ueberweisungen
+  banking_transfer_new: banking/ueberweisungen/neu
+  banking_transfer_validate: banking/ueberweisungen/{id}/validieren
+  banking_transfer_details: banking/ueberweisungen/{id}/details
+  banking_transfer_cancel: banking/ueberweisungen/{id}/stornieren
+
+  # Verträge
+  contract_download: vertraege/herunterladen
+  contract_view: vertraege/ansehen
+  contract_signature: vertraege/unterschrift
+  contract_sign_process: vertraege/unterschrift/unterschreiben
+  contract_signature_success: vertraege/unterschrift/erfolg
+  card_contract_download: vertraege/karte/herunterladen
+
+  # Profil
+  profile_index: profil
+  profile_edit: profil/bearbeiten
+  profile_security: profil/sicherheit
+  profile_security_change_password: profil/sicherheit/passwort-aendern
+  profile_preferences: profil/einstellungen
+
+  # KYC
+  kyc_index: profil/kyc
+  kyc_submit: profil/kyc/einreichen
+  kyc_status: profil/kyc/status
+
+  # Fehler
+  error_404: fehler/seite-nicht-gefunden
+  error_403: fehler/zugriff-verweigert
+  error_500: fehler/serverfehler
+  error_generic: fehler
+
+  # Support
+  support_help_center: hilfe/hilfezentrum
+  support_contact: kontakt
+  support_branches: filialen
+  support_faq: haeufige-fragen
+  support_security: sicherheit
+  support_complaints: beschwerden
+
+  # Rechtliches
+  legal_notices: rechtliche-hinweise
+  legal_terms: allgemeine-geschaeftsbedingungen
+  legal_privacy: datenschutzerklaerung
+  legal_cookies: cookies
+
+segments:
+  banking: banking
+  dashboard: dashboard
+  comptes: konten
+  cartes: karten
+  virements: ueberweisungen
+  transactions: transaktionen
+  epargne: sparen
+  credits: kredite
+  assurances: versicherungen
+  prets: darlehen
+  nouveau: neu
+  modifier: bearbeiten
+  valider: validieren
+  annuler: stornieren
+  details: details
+  credit: kredit
+  simulation: simulation
+  demande: antrag
+  offres: angebote
+  profil: profil
+  securite: sicherheit
+  preferences: einstellungen
+  kyc: kyc
+  mes-beneficiaires: meine-beguenstigten
+  souscrire: abonnieren
+  opposition: sperrung
+  urgence: notfall
+  statut: status
+  contrats: vertraege
+  signature: unterschrift
+  telecharger: herunterladen
+  voir: ansehen
+  aide: hilfe
+  contact: kontakt
+  agences: filialen
+  faq: haeufige-fragen
+  reclamations: beschwerden
+  mentions-legales: rechtliche-hinweise
+  confidentialite: datenschutzerklaerung
+  cookies: cookies

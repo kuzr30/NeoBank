@@ -5,6 +5,7 @@ namespace App\EventSubscriber;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
+use Symfony\Component\HttpKernel\Event\ExceptionEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
 /**
@@ -23,8 +24,11 @@ class LocaleSubscriber implements EventSubscriberInterface
     public static function getSubscribedEvents(): array
     {
         return [
-            // Priorité élevée pour s'exécuter avant les autres listeners
-            KernelEvents::REQUEST => [['onKernelRequest', 20]],
+            // Priorité 25 pour s'exécuter AVANT LocaleRedirectSubscriber (qui était à 20)
+            // Ordre garanti: LocaleSubscriber(25) → LocaleRouteSubscriber(16) → TranslationSubscriber(15)
+            KernelEvents::REQUEST => [['onKernelRequest', 25]],
+            // Gestion des exceptions pour préserver la locale
+            KernelEvents::EXCEPTION => [['onKernelException', 10]],
         ];
     }
 
@@ -99,5 +103,31 @@ class LocaleSubscriber implements EventSubscriberInterface
     public static function getDefaultLocale(): string
     {
         return self::DEFAULT_LOCALE;
+    }
+
+    /**
+     * Gère les exceptions pour préserver la locale dans les pages d'erreur
+     * Fusionné depuis ExceptionLocaleSubscriber
+     */
+    public function onKernelException(ExceptionEvent $event): void
+    {
+        $request = $event->getRequest();
+
+        // Extraire la locale de l'URL pour les pages d'erreur
+        $pathInfo = $request->getPathInfo();
+
+        if (preg_match('#^/([a-z]{2})(/.*)?$#', $pathInfo, $matches)) {
+            $locale = $matches[1];
+
+            // Vérifier que c'est une locale supportée
+            if ($this->isLocaleSupported($locale)) {
+                // Forcer la locale pour la requête et la session
+                $request->setLocale($locale);
+
+                if ($request->hasSession()) {
+                    $request->getSession()->set('_locale', $locale);
+                }
+            }
+        }
     }
 }

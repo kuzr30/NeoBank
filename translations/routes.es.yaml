@@ -1,0 +1,214 @@
+# Configuración de rutas localizadas - Español
+
+routes:
+  # Rutas principales
+  home: ''
+  home_index: ''
+
+  # Autenticación
+  login: iniciar-sesion
+  logout: cerrar-sesion
+  app_login: iniciar-sesion
+  app_logout: cerrar-sesion
+  register: registrarse
+  app_register: registrarse
+
+  # Restablecer contraseña
+  app_forgot_password_request: olvidaste-contrasena
+  app_check_email: olvidaste-contrasena/verificar-email
+  app_reset_password: olvidaste-contrasena/restablecer
+
+  # Simulación de crédito
+  credit_simulation: simulacion-credito
+  credit_simulation_index: simulacion-credito
+  credit_simulation_calculate: simulacion-credito/calcular
+  credit_simulation_result: simulacion-credito/resultado
+  credit_simulation_amortization_table: simulacion-credito/tabla-amortizacion
+
+  # Solicitud de crédito
+  credit_application: solicitud-credito
+  credit_application_start: mi-solicitud-credito
+  credit_application_step: mi-solicitud-credito/paso
+  credit_application_summary: mi-solicitud-credito/resumen
+  credit_application_submit: mi-solicitud-credito/enviar
+  credit_application_confirmation: mi-solicitud-credito/confirmacion
+
+  # Activación de cuenta
+  app_account_activation_notice: notificacion-activacion
+  app_account_activation: activar-cuenta
+  app_resend_activation: reenviar-activacion
+
+  # Ofertas de crédito
+  credit_offers_index: ofertas-credito
+  credit_offers_personal_loan: ofertas-credito/prestamo-personal
+  credit_offers_travel_loan: ofertas-credito/prestamo-viaje
+  credit_offers_auto_loan: ofertas-credito/prestamo-auto
+  credit_offers_home_loan: ofertas-credito/prestamo-hipotecario
+  credit_offers_hypothecaire: ofertas-credito/hipotecario
+  credit_offers_travaux: ofertas-credito/renovacion
+  credit_offers_amelioration_habitat: ofertas-credito/mejora-vivienda
+  credit_offers_credit_relais: ofertas-credito/credito-puente
+  credit_offers_leasing_automobile: ofertas-credito/leasing-automovil
+  credit_offers_credit_consommation: ofertas-credito/credito-consumo
+  credit_offers_regroupement_credits: ofertas-credito/reagrupacion-creditos
+  credit_offers_credit_renouvelable: ofertas-credito/credito-renovable
+  credit_offers_credit_professionnel: ofertas-credito/credito-profesional
+  credit_offers_credit_etudiant: ofertas-credito/prestamo-estudiante
+  credit_offers_microcredit: ofertas-credito/microcredito
+
+  # Servicios
+  services_accounts_cards: servicios/cuentas-tarjetas
+  services_savings_investments: servicios/ahorros-inversiones
+  services_insurances: servicios/seguros
+  services_devis_form: servicios/seguros/cotizacion
+  services_devis_confirmation: servicios/seguros/cotizacion/confirmacion
+
+  # Banking móvil
+  banking_mobile_app: mobile-banking/aplicacion-movil
+  banking_credit_card: mobile-banking/tarjeta-credito
+
+  # Banking dashboard
+  banking_dashboard: banking/dashboard
+  banking_comptes: banking/cuentas
+  banking_cartes: banking/tarjetas
+  banking_virements: banking/transferencias
+  banking_epargne: banking/ahorros
+  banking_credits: banking/creditos
+  banking_assurances: banking/seguros
+  banking_ribs: banking/mis-beneficiarios
+
+  # Banking - Cuentas
+  banking_accounts: banking/cuentas
+  banking_account_detail: banking/cuentas
+
+  # Banking - Tarjetas
+  banking_cards: banking/tarjetas
+  app_banking_card_index: banking/tarjetas
+  app_banking_card_subscription_classic: banking/tarjetas/suscribir/classic
+  app_banking_card_subscription_gold: banking/tarjetas/suscribir/gold
+  app_banking_card_subscription_platinum: banking/tarjetas/suscribir/platinum
+  app_banking_card_subscription_show: banking/tarjetas/suscribir
+  app_banking_card_subscription_cancel: banking/tarjetas/suscribir/cancelar
+  app_banking_card_subscription_status: banking/tarjetas/suscribir/estado
+
+  # Banking - Oposición de tarjeta
+  app_card_opposition_index: banking/tarjetas/oposicion
+  app_card_opposition_create: banking/tarjetas/oposicion/tarjeta
+  app_card_opposition_show: banking/tarjetas/oposicion/oposicion
+  app_card_opposition_emergency: banking/tarjetas/oposicion/emergencia
+  app_card_opposition_status: banking/tarjetas/oposicion/oposicion/estado
+
+  # Banking - Créditos
+  banking_credits_detailed: banking/creditos
+  banking_credit_detail: banking/creditos
+  banking_credit_application_detail: banking/creditos/solicitud
+  banking_credit_amortization: banking/creditos
+  banking_credit_simulation: banking/creditos/simulacion/nueva
+  banking_credit_application: banking/creditos/solicitud/nueva
+
+  # Banking - Transferencias de crédito
+  banking_credit_transfer_form: banking/transferencia-credito/formulario
+  banking_credit_transfer_initiate: banking/transferencia-credito/iniciar
+  banking_credit_transfer_confirm: banking/transferencia-credito/confirmar
+
+  # Banking - Préstamos
+  banking_loans: banking/prestamos
+  banking_loan_detail: banking/prestamos
+
+  # Banking - RIB/Beneficiarios
+  banking_ribs_index: banking/mis-beneficiarios
+  banking_rib_new: banking/mis-beneficiarios/nuevo
+  banking_rib_show: banking/mis-beneficiarios
+  banking_rib_delete: banking/mis-beneficiarios
+
+  # Banking - Transacciones
+  banking_transactions: banking/transacciones
+
+  # Banking - Transferencias
+  banking_transfers: banking/transferencias
+  banking_transfer_new: banking/transferencias/nueva
+  banking_transfer_validate: banking/transferencias/{id}/validar
+  banking_transfer_details: banking/transferencias/{id}/detalles
+  banking_transfer_cancel: banking/transferencias/{id}/cancelar
+
+  # Contratos
+  contract_download: contratos/descargar
+  contract_view: contratos/ver
+  contract_signature: contratos/firma
+  contract_sign_process: contratos/firma/firmar
+  contract_signature_success: contratos/firma/exito
+  card_contract_download: contratos/tarjeta/descargar
+
+  # Perfil
+  profile_index: perfil
+  profile_edit: perfil/editar
+  profile_security: perfil/seguridad
+  profile_security_change_password: perfil/seguridad/cambiar-contrasena
+  profile_preferences: perfil/preferencias
+
+  # KYC
+  kyc_index: perfil/kyc
+  kyc_submit: perfil/kyc/enviar
+  kyc_status: perfil/kyc/estado
+
+  # Errores
+  error_404: error/pagina-no-encontrada
+  error_403: error/acceso-denegado
+  error_500: error/error-servidor
+  error_generic: error
+
+  # Soporte
+  support_help_center: ayuda/centro-ayuda
+  support_contact: contacto
+  support_branches: sucursales
+  support_faq: preguntas-frecuentes
+  support_security: seguridad
+  support_complaints: quejas
+
+  # Legal
+  legal_notices: avisos-legales
+  legal_terms: terminos-condiciones
+  legal_privacy: politica-privacidad
+  legal_cookies: cookies
+
+segments:
+  banking: banking
+  dashboard: dashboard
+  comptes: cuentas
+  cartes: tarjetas
+  virements: transferencias
+  transactions: transacciones
+  epargne: ahorros
+  credits: creditos
+  assurances: seguros
+  prets: prestamos
+  nouveau: nueva
+  modifier: editar
+  valider: validar
+  annuler: cancelar
+  details: detalles
+  credit: credito
+  simulation: simulacion
+  demande: solicitud
+  offres: ofertas
+  profil: perfil
+  securite: seguridad
+  preferences: preferencias
+  kyc: kyc
+  mes-beneficiaires: mis-beneficiarios
+  souscrire: suscribir
+  opposition: oposicion
+  urgence: emergencia
+  statut: estado
+  contrats: contratos
+  signature: firma
+  telecharger: descargar
+  voir: ver
+  aide: ayuda
+  contact: contacto
+  agences: sucursales
+  faq: preguntas-frecuentes
+  reclamations: quejas
+  mentions-legales: avisos-legales
+  confidentialite: politica-privacidad
+  cookies: cookies

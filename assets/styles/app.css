@@ -11,96 +11,99 @@
 :root {
   /* ========================================
      PALETTE DE COULEURS - NÉOBANQUE MODERNE
+     Design épuré et professionnel
      ======================================== */
 
-  /* Couleurs principales */
-  --color-primary: #0F172A;           /* Slate 900 - Couleur principale */
-  --color-primary-light: #1E293B;     /* Slate 800 - Primary clair */
-  --color-primary-dark: #020617;      /* Slate 950 - Primary foncé */
-  --color-primary-rgb: 15, 23, 42;    /* RGB pour transparence */
+  /* Couleurs principales - Tons neutres et sophistiqués */
+  --color-primary: #1A1D29;           /* Charcoal foncé - Couleur principale */
+  --color-primary-light: #2D3142;     /* Charcoal moyen - Primary clair */
+  --color-primary-dark: #0D0F14;      /* Presque noir - Primary foncé */
+  --color-primary-rgb: 26, 29, 41;    /* RGB pour transparence */
 
-  --color-secondary: #64748B;         /* Slate 500 - Secondaire */
-  --color-secondary-light: #94A3B8;   /* Slate 400 */
-  --color-secondary-dark: #475569;    /* Slate 600 */
+  --color-secondary: #4F5D75;         /* Gris bleuté - Secondaire */
+  --color-secondary-light: #7B8BA3;   /* Gris bleuté clair */
+  --color-secondary-dark: #3D4A5C;    /* Gris bleuté foncé */
 
-  --color-accent: #3B82F6;            /* Blue 500 - Accent principal */
-  --color-accent-light: #60A5FA;      /* Blue 400 */
-  --color-accent-dark: #2563EB;       /* Blue 600 */
-  --color-accent-rgb: 59, 130, 246;   /* RGB pour transparence */
+  --color-accent: #00D9FF;            /* Cyan électrique - Accent principal */
+  --color-accent-light: #4DE4FF;      /* Cyan clair */
+  --color-accent-dark: #00B8D9;       /* Cyan foncé */
+  --color-accent-rgb: 0, 217, 255;    /* RGB pour transparence */
 
-  /* Backgrounds */
-  --color-background: #FFFFFF;        /* Blanc pur */
-  --color-background-light: #F8FAFC;  /* Slate 50 */
-  --color-background-secondary: #F1F5F9; /* Slate 100 */
-  --color-surface: #FAFAFA;           /* Surface légèrement grise */
-  --color-hover: #F8FAFC;             /* Hover subtil */
+  /* Backgrounds - Tons clairs et aérés */
+  --color-background: #FAFBFC;        /* Blanc cassé très clair */
+  --color-background-light: #F5F7FA;  /* Gris ultra-léger */
+  --color-background-secondary: #EEF1F6; /* Gris très clair */
+  --color-surface: #FFFFFF;           /* Blanc pur pour surfaces */
+  --color-hover: #F0F3F7;             /* Hover subtil gris bleuté */
 
-  /* États et feedback */
-  --color-success: #10B981;           /* Emerald 500 - Succès */
-  --color-success-light: #34D399;     /* Emerald 400 */
-  --color-success-dark: #059669;      /* Emerald 600 */
-  --color-success-rgb: 16, 185, 129;
+  /* États et feedback - Palette vive et moderne */
+  --color-success: #00E676;           /* Vert néon - Succès */
+  --color-success-light: #69F0AE;     /* Vert clair */
+  --color-success-dark: #00C853;      /* Vert foncé */
+  --color-success-rgb: 0, 230, 118;
 
-  --color-error: #EF4444;             /* Red 500 - Erreur */
-  --color-error-light: #F87171;       /* Red 400 */
-  --color-error-dark: #DC2626;        /* Red 600 */
-  --color-error-rgb: 239, 68, 68;
+  --color-error: #FF1744;             /* Rouge vif - Erreur */
+  --color-error-light: #FF5252;       /* Rouge clair */
+  --color-error-dark: #D50000;        /* Rouge foncé */
+  --color-error-rgb: 255, 23, 68;
 
-  --color-warning: #F59E0B;           /* Amber 500 - Avertissement */
-  --color-warning-light: #FBBF24;     /* Amber 400 */
-  --color-warning-dark: #D97706;      /* Amber 600 */
-  --color-warning-rgb: 245, 158, 11;
+  --color-warning: #FFB300;           /* Ambre doré - Avertissement */
+  --color-warning-light: #FFC400;     /* Ambre clair */
+  --color-warning-dark: #FF8F00;      /* Ambre foncé */
+  --color-warning-rgb: 255, 179, 0;
 
-  --color-info: #06B6D4;              /* Cyan 500 - Information */
-  --color-info-light: #22D3EE;        /* Cyan 400 */
-  --color-info-dark: #0891B2;         /* Cyan 600 */
-  --color-info-rgb: 6, 182, 212;
+  --color-info: #00B8D4;              /* Cyan profond - Information */
+  --color-info-light: #00E5FF;        /* Cyan lumineux */
+  --color-info-dark: #0097A7;         /* Cyan sombre */
+  --color-info-rgb: 0, 184, 212;
 
-  /* Textes */
-  --color-text: #0F172A;              /* Slate 900 - Texte principal */
-  --color-text-light: #64748B;        /* Slate 500 - Texte secondaire */
-  --color-text-secondary: #64748B;    /* Slate 500 */
-  --color-text-muted: #94A3B8;        /* Slate 400 - Texte discret */
-  --color-text-disabled: #CBD5E1;     /* Slate 300 */
+  /* Textes - Hiérarchie claire */
+  --color-text: #1A1D29;              /* Charcoal - Texte principal */
+  --color-text-light: #4F5D75;        /* Gris bleuté - Texte secondaire */
+  --color-text-secondary: #7B8BA3;    /* Gris doux - Texte tertiaire */
+  --color-text-muted: #A8B2C1;        /* Gris clair - Texte discret */
+  --color-text-disabled: #D1D8E0;     /* Gris très clair - Désactivé */
 
-  /* Bordures */
-  --color-border: #E2E8F0;            /* Slate 200 - Bordure principale */
-  --color-border-light: #F1F5F9;      /* Slate 100 */
-  --color-border-dark: #CBD5E1;       /* Slate 300 */
+  /* Bordures - Subtiles et élégantes */
+  --color-border: #E4E9F0;            /* Gris bleuté clair - Bordure principale */
+  --color-border-light: #EEF1F6;      /* Bordure très claire */
+  --color-border-dark: #D1D8E0;       /* Bordure marquée */
 
-  /* Couleurs spécifiques Banking */
-  --color-banking-blue: #0066CC;      /* Bleu banking traditionnel */
-  --color-banking-green: #27AE60;     /* Vert positif */
-  --color-banking-red: #E74C3C;       /* Rouge négatif */
-  --color-banking-purple: #9B59B6;    /* Violet cartes */
-  --color-banking-orange: #F39C12;    /* Orange alertes */
+  /* Couleurs spécifiques Banking - Palette distinctive */
+  --color-banking-blue: #0091EA;      /* Bleu électrique */
+  --color-banking-green: #00C853;     /* Vert positif vif */
+  --color-banking-red: #FF1744;       /* Rouge négatif vif */
+  --color-banking-purple: #AA00FF;    /* Violet néon */
+  --color-banking-orange: #FF6D00;    /* Orange énergique */
 
-  /* Nuances de gris (échelle complète) */
-  --color-gray-50: #F9FAFB;
-  --color-gray-100: #F3F4F6;
-  --color-gray-200: #E5E7EB;
-  --color-gray-300: #D1D5DB;
-  --color-gray-400: #9CA3AF;
-  --color-gray-500: #6B7280;
-  --color-gray-600: #4B5563;
-  --color-gray-700: #374151;
-  --color-gray-800: #1F2937;
-  --color-gray-900: #111827;
+  /* Nuances de gris - Système cohérent */
+  --color-gray-50: #FAFBFC;
+  --color-gray-100: #F5F7FA;
+  --color-gray-200: #EEF1F6;
+  --color-gray-300: #E4E9F0;
+  --color-gray-400: #D1D8E0;
+  --color-gray-500: #A8B2C1;
+  --color-gray-600: #7B8BA3;
+  --color-gray-700: #4F5D75;
+  --color-gray-800: #2D3142;
+  --color-gray-900: #1A1D29;
 
   /* Overlay et ombres */
-  --color-overlay: rgba(0, 0, 0, 0.5);
-  --color-overlay-light: rgba(0, 0, 0, 0.25);
-  --color-overlay-dark: rgba(0, 0, 0, 0.75);
+  --color-overlay: rgba(26, 29, 41, 0.6);
+  --color-overlay-light: rgba(26, 29, 41, 0.3);
+  --color-overlay-dark: rgba(26, 29, 41, 0.8);
 
   /* Blanc avec transparence */
   --color-white-alpha-10: rgba(255, 255, 255, 0.1);
   --color-white-alpha-15: rgba(255, 255, 255, 0.15);
   --color-white-alpha-20: rgba(255, 255, 255, 0.2);
+  --color-white-alpha-50: rgba(255, 255, 255, 0.5);
 
   /* Noir avec transparence */
-  --color-black-alpha-5: rgba(0, 0, 0, 0.05);
-  --color-black-alpha-10: rgba(0, 0, 0, 0.1);
-  --color-black-alpha-15: rgba(0, 0, 0, 0.15);
+  --color-black-alpha-5: rgba(26, 29, 41, 0.05);
+  --color-black-alpha-10: rgba(26, 29, 41, 0.1);
+  --color-black-alpha-15: rgba(26, 29, 41, 0.15);
+  --color-black-alpha-25: rgba(26, 29, 41, 0.25);
 
   /* Typography */
   --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
@@ -114,25 +117,27 @@
   --spacing-xl: 2rem;      /* 32px */
   --spacing-2xl: 3rem;     /* 48px */
 
-  /* Border radius */
-  --radius-sm: 0.25rem;    /* 4px */
-  --radius-md: 0.5rem;     /* 8px */
-  --radius-lg: 0.75rem;    /* 12px */
-  --radius-xl: 1rem;       /* 16px */
+  /* Border radius - Design moderne */
+  --radius-sm: 0.375rem;   /* 6px */
+  --radius-md: 0.625rem;   /* 10px */
+  --radius-lg: 0.875rem;   /* 14px */
+  --radius-xl: 1.25rem;    /* 20px */
+  --radius-2xl: 1.5rem;    /* 24px */
   --radius-full: 9999px;   /* Arrondi complet */
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  /* Shadows - Ombres douces et modernes */
+  --shadow-sm: 0 2px 4px 0 rgba(26, 29, 41, 0.04);
+  --shadow-md: 0 4px 8px -2px rgba(26, 29, 41, 0.08), 0 2px 4px -1px rgba(26, 29, 41, 0.04);
+  --shadow-lg: 0 12px 24px -4px rgba(26, 29, 41, 0.1), 0 4px 8px -2px rgba(26, 29, 41, 0.05);
+  --shadow-xl: 0 24px 48px -8px rgba(26, 29, 41, 0.12), 0 8px 16px -4px rgba(26, 29, 41, 0.06);
+  --shadow-2xl: 0 32px 64px -12px rgba(26, 29, 41, 0.14), 0 12px 24px -6px rgba(26, 29, 41, 0.08);
 
-  /* Transitions */
-  --transition-fast: 150ms ease;
-  --transition-base: 200ms ease;
-  --transition-slow: 300ms ease;
+  /* Transitions - Animations fluides */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Z-index */
+  /* Z-index - Hiérarchie claire */
   --z-dropdown: 1000;
   --z-sticky: 1020;
   --z-fixed: 1030;
@@ -170,9 +175,9 @@ a {
 /* ===== TOP HEADER ===== */
 .top-header {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-  color: white;
+  color: var(--color-surface);
   font-size: 0.875rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--color-white-alpha-10);
 }
 
 .top-header-container {
@@ -222,17 +227,17 @@ a {
   display: flex;
   align-items: center;
   gap: 0.375rem;
-  color: white;
+  color: var(--color-surface);
   text-decoration: none;
   padding: 0.375rem 0.75rem;
-  border-radius: 0.375rem;
-  transition: all 0.3s ease;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-slow);
   font-weight: 500;
   opacity: 0.9;
 }
 
 .quick-link:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--color-white-alpha-15);
   opacity: 1;
   transform: translateY(-1px);
 }
@@ -251,24 +256,24 @@ a {
 .top-header__dropdown-toggle {
   background: none;
   border: none;
-  color: white;
+  color: var(--color-surface);
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.375rem;
   padding: 0.375rem 0.75rem;
-  border-radius: 0.375rem;
-  transition: background-color 0.3s ease;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-slow);
 }
 
 .top-header__dropdown-toggle:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-white-alpha-10);
 }
 
 .top-header__dropdown-icon {
   width: 0.875rem;
   height: 0.875rem;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-slow);
 }
 
 .top-header__dropdown.show .top-header__dropdown-icon {
@@ -488,13 +493,13 @@ a {
 .nav-link {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1rem;
+  gap: var(--spacing-sm);
+  padding: 0.75rem var(--spacing-md);
   color: var(--color-text);
   text-decoration: none;
   font-weight: 500;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-slow);
 }
 
 .nav-link:hover {
@@ -510,7 +515,7 @@ a {
 .nav-chevron {
   width: 1rem;
   height: 1rem;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-slow);
 }
 
 .nav-dropdown:hover .nav-chevron {
@@ -542,10 +547,10 @@ a {
 
 .nav-dropdown-link {
   display: block;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem var(--spacing-md);
   color: var(--color-text);
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all var(--transition-base);
   border-radius: 0;
 }
 
@@ -586,12 +591,12 @@ a {
 /* Mobile Menu Button */
 .mobile-menu-btn {
   display: block;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
   border: none;
   background: transparent;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-slow);
 }
 
 .mobile-menu-btn:hover {
@@ -754,7 +759,7 @@ a {
 .mobile-nav-chevron {
   width: 1rem;
   height: 1rem;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-slow);
 }
 
 .mobile-nav-submenu {
@@ -907,7 +912,7 @@ a {
 /* ===== FOOTER ===== */
 .footer {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-  color: white;
+  color: var(--color-surface);
   margin-top: auto;
 }
 
@@ -975,10 +980,10 @@ a {
 }
 
 .footer-title {
-  color: white;
+  color: var(--color-surface);
   font-size: 1.125rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-lg);
   position: relative;
 }
 

@@ -4,7 +4,7 @@
 .devis-form.was-validated .form-error-wrapper, 
 .devis-form.was-validated .form-group .form-errors, 
 .devis-form.was-validated .form-group .form-error {
-  color: #dc2626;
+  color: var(--color-error);
   font-size: 0.95em;
   margin-top: 0.25em;
   margin-bottom: 0.25em;
